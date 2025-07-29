@@ -372,3 +372,14 @@ music = {
 		}		
 	}
 }
+
+music = {
+	song = "youzu31"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
