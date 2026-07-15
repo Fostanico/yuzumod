@@ -1,0 +1,57 @@
+scripted_gui = {
+    yz_economic_gui = {
+        window_name = "Yuzusoft_economic_describe"
+        context_type = decision_category
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            #is_debug = yes
+        }
+        effects = {
+           open_yz_economic_operation_click = {
+                if = {
+                    limit = {
+                        has_country_flag = show_yz_bonds_ui
+                    }
+                    clr_country_flag = show_yz_bonds_ui
+                }
+                else = {
+                    set_country_flag = show_yz_bonds_ui
+                }
+           }
+           open_yz_invest_ui_click = {
+                if = {
+                    limit = {
+                        has_country_flag = show_yoshino_invest_ui
+                    }
+                    clr_country_flag = show_yoshino_invest_ui
+                }
+                else = {
+                    set_country_flag = show_yoshino_invest_ui
+                }
+           }
+        }
+        triggers = {
+            open_yz_economic_operation_click_enable = {
+                NOT = {
+                    has_country_flag = finished_repayment_of_bonds
+                }
+            }
+        }
+    }
+    yz_bonds_operations_gui = {
+        window_name = "yz_bonds_operations_ui"
+        context_type = player_context
+        visible = {
+            has_country_flag = show_yz_bonds_ui
+        }
+        effects = {
+            yz_bonds_ui_close_button_click = {
+                clr_country_flag = show_yz_bonds_ui
+            }
+        }
+    }                                
+}                                                      

@@ -1,0 +1,233 @@
+World_Unity_communism = {
+    World_Unity_communism_World = {
+        allowed = {
+        }
+        visible = { is_ai = no }
+        available = {
+            or = {
+                AND = {
+                    has_government = communism
+                    is_faction_leader = yes
+                    all_country = { is_in_faction_with = ROOT }
+                }
+				AND = {
+					has_government = communism
+					all_other_country = {
+						is_subject_of = ROOT
+					}
+				}
+				AND = {
+					has_government = communism
+					all_state = {
+						is_controlled_by = ROOT
+					}
+				}
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        complete_effect = {
+            add_research_slot = 1
+            set_cosmetic_tag = Unity_communism_World
+            custom_effect_tooltip = Unity_communism_World_tt
+            every_country = {
+                ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+            }
+            drop_cosmetic_tag = yes
+            set_faction_name = yuzu_Community_international
+            set_global_flag = yuzu_super_event_visible_flag
+            set_country_flag = we_unite_the_world_c
+            every_state = {
+                limit = {
+                    NOT = {
+                        is_core_of = ROOT
+                    }
+                }
+                add_core_of = ROOT
+            }
+            hidden_effect = {
+                play_song = yuzu_sing_our_moving_spring
+                news_event =  { id = World_event.1 }
+                set_cosmetic_tag = Unity_communism_World
+            }
+        }
+    }
+}
+World_Unity_fascism = {
+    World_Unity_fascism_World = {
+        allowed = {
+        }
+        visible = { is_ai = no }
+        available = {
+            or = {
+                AND = {
+                    has_government = fascism
+                    is_faction_leader = yes
+                    all_country = { is_in_faction_with = ROOT }
+                }
+				AND = {
+					has_government = fascism
+					all_other_country = {
+						is_subject_of = ROOT
+					}
+				}
+				AND = {
+					has_government = fascism
+					all_state = {
+						is_controlled_by = ROOT
+					}
+				}
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        complete_effect = {
+            add_research_slot = 1
+            set_cosmetic_tag = Unity_fascism_World
+            custom_effect_tooltip = Unity_fascism_World_tt
+            every_country = {
+                ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+            }
+            drop_cosmetic_tag = yes
+            set_faction_name = yuzu_fascism_international
+            set_global_flag = yuzu_super_event_visible_flag
+            set_country_flag = we_unite_the_world_f
+            every_state = {
+                limit = {
+                    NOT = {
+                        is_core_of = ROOT
+                    }
+                }
+                add_core_of = ROOT
+            }
+            hidden_effect = {
+                play_song = yuzu_unite_world_f
+                news_event =  { id = World_event.2 }
+                set_cosmetic_tag = Unity_fascism_World
+            }
+        }
+    }
+}
+World_Unity_democratic = {
+    World_Unity_democratic_World = {
+        allowed = {
+        }
+        visible = { is_ai = no }
+        available = {
+            or = {
+                AND = {
+                    has_government = democratic
+                    is_faction_leader = yes
+                    all_country = { is_in_faction_with = ROOT }
+                }
+				AND = {
+					has_government = democratic
+					all_other_country  = {
+						is_subject_of = ROOT
+					}
+				}
+				AND = {
+					has_government = democratic
+					all_state = {
+						is_controlled_by = ROOT
+					}
+				}
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        complete_effect = {
+            add_research_slot = 1
+            set_cosmetic_tag = Unity_democratic_World
+            custom_effect_tooltip = Unity_democratic_World_tt
+            every_country = {
+                ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+            }
+            drop_cosmetic_tag = yes
+            set_faction_name = yuzu_democratic_international
+            every_state = {
+                limit = {
+                    NOT = {
+                        is_core_of = ROOT
+                    }
+                }
+                add_core_of = ROOT
+            }
+			set_global_flag = yuzu_super_event_visible_flag
+			set_country_flag = we_unite_the_world_d
+            hidden_effect = {
+                play_song = yuzu_tsubasawokudasai
+                news_event =  { id = World_event.3 }
+                set_cosmetic_tag = Unity_democratic_World
+            }
+        }
+    }
+}
+
+World_Unity_neutrality = {
+    World_Unity_neutrality_World = {
+        allowed = {
+        }
+        visible = { is_ai = no }
+        available = {
+            or = {
+                AND = {
+                    has_government = neutrality
+                    is_faction_leader = yes
+                    all_country = { is_in_faction_with = ROOT }
+                }
+				AND = {
+					has_government = neutrality
+					all_other_country = {
+						is_subject_of = ROOT
+					}
+				}
+				AND = {
+					has_government = neutrality
+					all_state = {
+						is_controlled_by = ROOT
+					}
+				}
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        complete_effect = {
+            add_research_slot = 1
+            set_cosmetic_tag = Unity_neutrality_World
+            custom_effect_tooltip = Unity_neutrality_World_tt
+            every_country = {
+                ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+            }
+            drop_cosmetic_tag = yes
+            set_faction_name = yuzu_neutrality_international
+            every_state = {
+                limit = {
+                    NOT = {
+                        is_core_of = ROOT
+                    }
+                }
+                add_core_of = ROOT
+            }
+            hidden_effect = {
+                news_event =  { id = World_event.4 }
+                set_cosmetic_tag = Unity_neutrality_World
+                play_song = yuzu_unite_world_n
+            }
+            set_global_flag = yuzu_super_event_visible_flag
+            set_country_flag = we_unite_the_world_n
+        }
+    }
+}

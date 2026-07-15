@@ -11,7 +11,10 @@ country_event= {
     option = {
         name = yoshino_event.1.a	#去看看吗
         trigger = {
-            has_country_flag = qiyong_youzi_2
+            or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
         }
         custom_effect_tooltip = yoshino_yes	#小字
         add_stability = 0.01
@@ -27,6 +30,7 @@ country_event= {
                 generate_character = {
                     token_base = yoshino
                     name = "朝武芳乃"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -42,6 +46,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = yoshino_corps_desc
                 traits={
                     maid_fangnai_trait JAP_communist_sympathizer brilliant_strategist war_hero infantry_officer logistics_wizard marxist_academic trait_mountaineer adaptable skilled_staffer
                 }
@@ -76,6 +81,7 @@ country_event= {
                 generate_character = {
                     token_base = yoshino_1
                     name = "朝武芳乃"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -91,6 +97,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = yoshino_corps_desc
                 traits={
                     maid_fangnai_trait 
                     JAP_communist_sympathizer 

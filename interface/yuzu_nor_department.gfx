@@ -1,0 +1,85 @@
+spriteTypes = {
+	
+	#Government in Exile
+
+	
+	#柚子国的加在了这里
+	spriteType = {
+		name = "GFX_yz_button_up"
+		textureFile = "gfx/guis/yz_button_up.png"
+	}
+	spriteType = {
+		name = "GFX_yz_button_down"
+		textureFile = "gfx/guis/yz_button_down.png"
+	}
+	spriteType = {
+		name = "GFX_YZ_industry_ompression_control_ui_background"
+		textureFile = "gfx/guis/YZ_industry_ompression_control_ui_background.png"
+	}
+	spriteType = {
+		name = "GFX_kurumi_luck_mono"
+		textureFile = "gfx/guis/kurumi_luck_thing.png"
+	}
+	spriteType = {
+		name = "GFX_YZ_miliatry_party_ui_background_left"
+		textureFile = "gfx/guis/YZ_miliatry_party_ui_background_use_left.png"
+	}
+	spriteType = {
+		name = "GFX_YZ_miliatry_party_ui_buttom"
+		textureFile = "gfx/guis/YZ_miliatry_party_ui_buttom_four.png"
+		#noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_YZ_miliatry_party_ui_economy_and_strike"
+		textureFile = "gfx/guis/YZ_miliatry_party_ui_buttom_line_basket.png"
+	}
+	# 要点：注册启动界面背景、四个按钮用图以及两个 SD 彩蛋按钮用图，按钮与 SD 均依赖透明区域点击检测。 [2026-06-20] [伊尔诺/GPT5.5]
+	spriteType = {
+		name = "GFX_start_ui_origin_no_bargin"
+		textureFile = "gfx/guis/start_ui_origin_no_bargin.png"
+	}
+	spriteType = {
+		name = "GFX_start_ui_buttom_up_one"
+		textureFile = "gfx/guis/start_ui_buttom_up_one.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_start_ui_buttom_middle_one"
+		textureFile = "gfx/guis/start_ui_buttom_middle_one.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_start_ui_buttom_down_one"
+		textureFile = "gfx/guis/start_ui_buttom_down_one.png"
+		transparencecheck = yes
+	}
+	# 内容：SD 图作为 buttonType 的真实贴图使用；文件扩展名为大写 PNG，路径大小写保持与素材一致。 [2026-06-20] [伊尔诺/GPT5.5]
+	spriteType = {
+		name = "GFX_start_ui_sd_0"
+		textureFile = "gfx/guis/start_ui_sd_0.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_start_ui_sd_1"
+		textureFile = "gfx/guis/start_ui_sd_1.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_start_ui_qun_code"
+		textureFile = "gfx/guis/start_ui_qun_code.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_start_ui_nature_credits"
+		textureFile = "gfx/guis/start_ui_nature_credits.png"
+	}
+    progressbartype = {
+        name = "GFX_yz_miliatry_party_ui_progress_bar"
+        textureFile1 = "gfx/guis/YZ_miliatry_party_ui_progress_max.dds"
+        textureFile2 = "gfx/guis/YZ_miliatry_party_ui_progress_none.dds"
+        size = { x = 200 y = 20 }
+        effectFile = "gfx/FX/progress.lua"
+        horizontal = yes
+        steps = 100
+    }
+}

@@ -95,6 +95,7 @@ country_event= {
                 generate_character = {
                     token_base = Kaguya
                     name = "星河辉耶"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -107,6 +108,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = Kaguya_corps_desc
                 traits={
                     maid_kaguya_trait
                     bearer_of_artillery
@@ -164,6 +166,7 @@ country_event= {
                 generate_character = {
                     token_base = Kaguya
                     name = "星河辉耶"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -176,6 +179,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = Kaguya_corps_desc
                 traits={
                     maid_kaguya_trait
                     bearer_of_artillery
@@ -213,6 +217,7 @@ country_event= {
                 generate_character = {
                     token_base = Sairi
                     name = "三国彩里"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -225,6 +230,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = Sairi_corps_desc
                 traits={
                     maid_sairi_trait_2
                     brilliant_strategist
@@ -265,6 +271,7 @@ country_event= {
                 generate_character = {
                     token_base = WeiZi
                     name = "薇姿"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -277,6 +284,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = WeiZi_corps_desc
                     traits={
                         yz_weizi_trait
                         adaptable 
@@ -308,6 +316,7 @@ country_event= {
 				generate_character = {
 					token_base = Amane
 					name = "谷风天音"
+                    can_be_captured = no
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -320,6 +329,7 @@ country_event= {
 						is_ai = no
 					}
 					corps_commander = {
+                        desc = Amane_corps_desc
 					traits={
 						maid_amane_trait 
 						urban_assault_specialist
@@ -374,6 +384,7 @@ country_event= {
 				generate_character = {
 					token_base = Amane1
 					name = "谷风天音"
+                    can_be_captured = no
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -386,6 +397,7 @@ country_event= {
 						is_ai = no
 					}
 					corps_commander = {
+                        desc = Amane_corps_desc
 					traits={
 						yz_amane_trait_1
 					}
@@ -432,6 +444,7 @@ country_event= {
                 generate_character = {
                     token_base = Kurumi_1
                     name = "小云雀来海"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -444,6 +457,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = Kurumi_corps_desc
                     traits={
                         yz_kurumi_trait0 
                     }
@@ -465,6 +479,7 @@ country_event= {
                 generate_character = {
                     token_base = Kurumi
                     name = "小云雀来海"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -477,6 +492,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = Kurumi_corps_desc
                     traits={
                         yz_kurumi_trait 
                         
@@ -590,8 +606,10 @@ country_event= {
                 generate_character = {
                     token_base = Sairi_bad
                     name = "三国彩里？"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
+                    desc = Sairi_corps_desc
                     portraits = {
                         civilian = {
                             large = "gfx\leader\Badsairi.png"

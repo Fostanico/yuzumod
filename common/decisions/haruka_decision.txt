@@ -1,0 +1,286 @@
+Haruka_sky_mind_decision = {
+	#天意
+	sky_mind_advent = {
+		priority = 10
+		icon = GFX_decision_haruka_decision
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		fire_only_once = yes
+		days_remove = 7
+		modifier = {
+			political_power_gain = -0.2
+		}
+		remove_effect = {
+			set_country_flag = haruka_sky_mind_unlocked
+			hidden_effect = {
+				play_song = the_song_of_guanyu
+			}
+		}
+	}
+	defeat_army_must_be_sad = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			surrender_progress > 0
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+		}
+		complete_effect = {
+			add_timed_idea = {
+				idea = sad_army
+				days = 90
+			}
+		}
+	}
+	sad_army_must_have_victory = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_idea = sad_army
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+		}
+		days_remove = 90
+		modifier = {
+			army_strength_factor = -0.8
+			army_attack_factor = 0.3
+			army_defence_factor = 0.3
+			army_core_attack_factor = 0.5
+			army_core_defence_factor = 0.5
+			army_org = 10
+			army_org_regain = 0.25
+		}
+	}
+	victory_army_must_be_proud = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+			any_country = {
+				has_war_with = ROOT
+				surrender_progress < 0.2
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_war_with = ROOT
+					surrender_progress < 0.2
+				}
+				add_timed_idea = {
+					idea = proud_army
+					days = 90
+				}
+			}
+		}
+	}
+	proud_army_must_be_defeat = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+			any_country = {
+				has_idea = proud_army
+			}
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_idea = proud_army
+				}
+				add_timed_idea = {
+					idea = proud_army_must_defeat
+					days = 90
+				}
+			}
+		}
+	}
+	sky_mind_revise = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+			OR = {
+				tag = SOV
+				tag = ENG
+				tag = PRC
+				tag = CHI
+				tag = USA
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+			surrender_progress > 0.75
+			hidden_trigger = {
+				OR = {
+					has_war_with = GER
+					has_war_with = JAP
+					has_war_with = ITA
+					has_war_with = CHI
+				}
+			}
+		}
+		days_remove = 180
+		modifier = {
+			army_core_attack_factor = 1
+			army_core_defence_factor = 1
+			supply_combat_penalties_on_core_factor = -1
+		}
+	}
+	sky_mind_revise_kr = {
+		icon = GFX_decision_haruka_decision
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+			OR = {
+				tag = FRA
+				tag = ENG
+				tag = SRI
+				tag = CHI
+				tag = HND
+				tag = WCA
+			}
+			RUS = {
+				exists = yes
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+			surrender_progress > 0.75
+			hidden_trigger = {
+				OR = {
+					has_war_with = GER
+					has_war_with = AUS
+					has_war_with = RUS
+					has_war_with = JAP
+					has_war_with = ITA
+					has_war_with = SIC
+					has_war_with = USA
+					has_war_with = APG
+				}
+			}
+		}
+		days_remove = 180
+		modifier = {
+			army_core_attack_factor = 1
+			army_core_defence_factor = 1
+			supply_combat_penalties_on_core_factor = -1
+		}
+	}
+	new_three_national_road_tp = {
+		icon = GFX_decision_haruka_decision
+		cost = 100
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+		}
+		days_remove = 7
+		modifier = {
+			army_speed_factor = 2
+		}
+		days_re_enable = 30
+	}
+	star_night_action = {
+		icon = GFX_decision_haruka_decision
+		cost = 100
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+		}
+		days_remove = 14
+		modifier = {
+			land_night_attack = 0.5
+			naval_night_attack = 0.5
+			air_night_penalty = -0.5
+			army_speed_factor = 0.25
+			naval_speed_factor = 0.25
+		}
+		days_re_enable = 30
+	}
+	two_man_conspire = {
+		icon = GFX_decision_haruka_decision
+		cost = 100
+		visible = {
+			has_country_flag = haruka_sky_mind_unlocked
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			hidden_trigger = {
+				has_country_flag = have_haruka
+			}
+		}
+		days_remove = 14
+		modifier = {
+			intelligence_network_gain = 0.20
+			civilian_intel_factor = 1
+			army_intel_factor = 1
+			navy_intel_factor = 1
+			airforce_intel_factor = 1
+			intel_from_operatives_factor = 1
+			intel_from_combat_factor = 1
+		}
+	}
+}

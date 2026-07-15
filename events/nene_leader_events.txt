@@ -9,229 +9,237 @@ country_event= {
 
     option = {
         name = ningning_event.2.Z
-		add_political_power = 1
+        add_political_power = 1
         experience_army = 5
         custom_effect_tooltip = ningning_love1	#魔女服
         country_event= { id =  ningning_event.4 days = 0 }
-		hidden_effect = {
-		}
-	}
+        hidden_effect = {
+        }
+    }
 
-	option = {
-			name = ningning_event.2.X
-			add_political_power = 1
-			experience_army = 5
-			custom_effect_tooltip = ningning_love1	#制服
-			country_event= { id =  ningning_event.5 days = 0 }
-			hidden_effect = {
-			}
-		}
-	}
+    option = {
+        name = ningning_event.2.X
+        add_political_power = 1
+        experience_army = 5
+        custom_effect_tooltip = ningning_love1	#制服
+        country_event= { id =  ningning_event.5 days = 0 }
+        hidden_effect = {
+        }
+    }
+}
 
-	country_event = { 
-		id = ningning_event.4
-		title = ningning_event.4.t
-		desc = ningning_event.4.d
-		
-		is_triggered_only = yes
-		
-		option = {
-			retire_country_leader = yes
-			name = ningning_event.4.a
-			trigger = {
-				has_government = communism
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "monvningning"
-						picture = GFX_portrait_MON_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = marxism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.2.a
-			trigger = {
-				has_government = democratic
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "monvningning"
-						picture = GFX_portrait_MON_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = conservatism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.3.a
-			trigger = {
-				has_government = fascism
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "monvningning"
-						picture = GFX_portrait_MON_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = fascism_ideology
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.6.a
-			trigger = {
-				has_government = neutrality
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "monvningning"
-						picture = GFX_portrait_MON_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = despotism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	}
+country_event = {
+    id = ningning_event.4
+    title = ningning_event.4.t
+    desc = ningning_event.4.d
 
-	country_event = { 
-		id = ningning_event.5    #制服
-		title = ningning_event.5.t
-		desc = ningning_event.5.d
-		
-		is_triggered_only = yes
-		
-		option = {
-			retire_country_leader = yes
-			name = ningning_event.5.a
-			trigger = {
-				has_government = communism
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "zhifuningning"
-						picture = GFX_portrait_ADD_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = marxism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.7.a
-			trigger = {
-				has_government = democratic
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "zhifuningning"
-						picture = GFX_portrait_ADD_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = conservatism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.8.a
-			trigger = {
-				has_government = fascism
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "zhifuningning"
-						picture = GFX_portrait_ADD_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = fascism_ideology
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	
-			option = {
-			retire_country_leader = yes
-			name = ningning_event.9.a
-			trigger = {
-				has_government = neutrality
-			}
-			set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-			hidden_effect = {
-			}
-			create_country_leader = {
-						name = "zhifuningning"
-						picture = GFX_portrait_ADD_ningning
-						desc = ningning_desc
-						expire = "2095.1.1"
-						ideology = despotism
-						 traits = {
-							CZRYJZ 0721
-						}
-					}
-			}
-	}
+    is_triggered_only = yes
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.4.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "monvningning"
+            picture = GFX_portrait_MON_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = marxism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.2.a
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "monvningning"
+            picture = GFX_portrait_MON_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.3.a
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "monvningning"
+            picture = GFX_portrait_MON_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.6.a
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "monvningning"
+            picture = GFX_portrait_MON_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ningning_event.5    #制服
+    title = ningning_event.5.t
+    desc = ningning_event.5.d
+
+    is_triggered_only = yes
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.5.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "zhifuningning"
+            picture = GFX_portrait_ADD_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = marxism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.7.a
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "zhifuningning"
+            picture = GFX_portrait_ADD_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.8.a
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "zhifuningning"
+            picture = GFX_portrait_ADD_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = ningning_event.9.a
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "zhifuningning"
+            picture = GFX_portrait_ADD_ningning
+            desc = ningning_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                CZRYJZ 
+                0721
+            }
+        }
+    }
+}

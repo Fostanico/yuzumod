@@ -1,0 +1,439 @@
+scripted_gui = {
+    YZ_married_gui_button = {
+        window_name = "YZ_married_gui_button"
+        context_type = player_context
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            yuzu_married_wife_id_is_registered = yes
+            has_country_flag = havent_married
+        }
+        effects = {
+            YZ_married_gui_toggle_click = {
+                if = {
+                    limit = {
+                        has_country_flag = married_gui_vis
+                    }
+                    clr_country_flag = married_gui_vis
+                }
+                else = {
+                    set_country_flag = married_gui_vis
+                }
+            }
+        }
+    }
+
+    YZ_married_gui = {
+        window_name = "YZ_married_gui"
+        context_type = player_context
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = havent_married
+            yuzu_married_wife_id_is_registered = yes
+            has_country_flag = married_gui_vis
+        }
+
+        triggers = {
+            # 作用：五个约会共用资源门槛和按周推进的90天互斥冷却；要点：每次需要150政治点与600柚子币。署名：伊尔诺+2026-07-04+assisted by Codex
+            date_buttom_left_one_click_enabled = {
+                political_power > 149
+                check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
+                NOT = {
+                    check_variable = {
+                        yuzu_married_date_cooldown < 90
+                        tooltip = yuzu_married_date_cooldown_tt
+                    }
+                }
+            }
+            date_buttom_left_two_click_enabled = {
+                political_power > 149
+                check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
+                NOT = {
+                    check_variable = {
+                        yuzu_married_date_cooldown < 90
+                        tooltip = yuzu_married_date_cooldown_tt
+                    }
+                }
+            }
+            date_buttom_middle_click_enabled = {
+                political_power > 149
+                check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
+                NOT = {
+                    check_variable = {
+                        yuzu_married_date_cooldown < 90
+                        tooltip = yuzu_married_date_cooldown_tt
+                    }
+                }
+            }
+            date_buttom_right_one_click_enabled = {
+                political_power > 149
+                check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
+                NOT = {
+                    check_variable = {
+                        yuzu_married_date_cooldown < 90
+                        tooltip = yuzu_married_date_cooldown_tt
+                    }
+                }
+            }
+            date_buttom_right_two_click_enabled = {
+                political_power > 149
+                check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
+                NOT = {
+                    check_variable = {
+                        yuzu_married_date_cooldown < 90
+                        tooltip = yuzu_married_date_cooldown_tt
+                    }
+                }
+            }
+            # 作用：仅在当前角色已注册可切换立绘时启用换装按钮；要点：43号角色目前共有16张立绘。署名：伊尔诺+2026-06-08+assisted by Codex
+            change_clothes_buttom_click_enabled = {
+                check_variable = { wife_id = 43 }
+            }
+            # 作用：只在角色已注册且拥有可用SD数量时允许点击切换；要点：循环上限读取number_of_sd_max，新增角色无需改按钮逻辑。署名：伊尔诺+2026-06-09+assisted by Codex
+            character_sd_click_enabled = {
+                yuzu_married_wife_id_is_registered = yes
+                check_variable = { number_of_sd_max > 0 }
+            }
+
+            # 作用：为互动加入政治点成本，并限制学习在心情不足时使用；要点：各自90天冷却现按周推进。署名：伊尔诺+2026-07-04+assisted by Codex
+            interact_buttom_left_click_enabled = {
+                political_power > 99
+                NOT = {
+                    check_variable = {
+                        married_interact_kiss_cooldown < 90
+                        tooltip = yuzu_married_interaction_cooldown_tt
+                    }
+                }
+
+            }
+            interact_buttom_middle_click_enabled = {
+                political_power > 149
+                check_variable = {
+                    value_of_loving > 1
+                    tooltip = yuzu_married_study_mood_tt
+                }
+                NOT = {
+                    check_variable = {
+                        married_interact_study_cooldown < 90
+                        tooltip = yuzu_married_interaction_cooldown_tt
+                    }
+                }
+
+            }
+            interact_buttom_right_click_enabled = {
+                political_power > 124
+                NOT = {
+                    check_variable = {
+                        married_interact_play_cooldown < 90
+                        tooltip = yuzu_married_interaction_cooldown_tt
+                    }
+                }
+
+            }
+            # 作用：赠礼必须支付对应柚子币；要点：饰品500、化妆品1000、玩偶750，余额不足时按钮禁用。署名：伊尔诺+2026-06-08+assisted by Codex
+            gift_buttom_left_click_enabled = {
+                check_variable = {
+                    yz_money > 499
+                    tooltip = yuzu_married_gift_accessory_money_tt
+                }
+                NOT = {
+                    check_variable = {
+                        married_gift_accessory_cooldown < 90
+                        tooltip = yuzu_married_gift_cooldown_tt
+                    }
+                }
+
+            }
+            gift_buttom_middle_click_enabled = {
+                check_variable = {
+                    yz_money > 999
+                    tooltip = yuzu_married_gift_cosmetics_money_tt
+                }
+                NOT = {
+                    check_variable = {
+                        married_gift_cosmetics_cooldown < 90
+                        tooltip = yuzu_married_gift_cooldown_tt
+                    }
+                }
+
+            }
+            gift_buttom_right_click_enabled = {
+                check_variable = {
+                    yz_money > 749
+                    tooltip = yuzu_married_gift_doll_money_tt
+                }
+                NOT = {
+                    check_variable = {
+                        married_gift_doll_cooldown < 90
+                        tooltip = yuzu_married_gift_cooldown_tt
+                    }
+                }
+
+            }
+
+            # 作用：战时支援除支援点外还要求足够的心情、信赖和羁绊；要点：强化后成本仅小幅提高。署名：伊尔诺+2026-06-09+assisted by Codex
+            help_buttom_left_click_enabled = {
+                check_variable = {
+                    value_of_help > 17
+                    tooltip = yuzu_married_help_18_tt
+                }
+                check_variable = { value_of_loving > 3 tooltip = yuzu_married_assistance_attribute_cost_tt }
+                check_variable = { value_of_believity > 2 tooltip = yuzu_married_assistance_attribute_cost_tt }
+                check_variable = { value_of_relationship > 2 tooltip = yuzu_married_assistance_attribute_cost_tt }
+                check_variable = {
+                    yuzu_married_assistance_days < 1
+                    tooltip = yuzu_married_support_active_tt
+                }
+            }
+            help_buttom_middle_click_enabled = {
+                check_variable = {
+                    value_of_help > 22
+                    tooltip = yuzu_married_help_23_tt
+                }
+                check_variable = { value_of_loving > 2 tooltip = yuzu_married_logistics_attribute_cost_tt }
+                check_variable = { value_of_believity > 4 tooltip = yuzu_married_logistics_attribute_cost_tt }
+                check_variable = { value_of_relationship > 3 tooltip = yuzu_married_logistics_attribute_cost_tt }
+                check_variable = {
+                    yuzu_married_logistics_days < 1
+                    tooltip = yuzu_married_support_active_tt
+                }
+            }
+            help_buttom_right_click_enabled = {
+                check_variable = {
+                    value_of_help > 27
+                    tooltip = yuzu_married_help_28_tt
+                }
+                check_variable = { value_of_loving > 4 tooltip = yuzu_married_production_attribute_cost_tt }
+                check_variable = { value_of_believity > 3 tooltip = yuzu_married_production_attribute_cost_tt }
+                check_variable = { value_of_relationship > 5 tooltip = yuzu_married_production_attribute_cost_tt }
+                check_variable = {
+                    yuzu_married_production_days < 1
+                    tooltip = yuzu_married_support_active_tt
+                }
+            }
+        }
+
+        effects = {
+            # 作用：支付降低后的约会成本、启动共享冷却并触发对应事件；要点：每次扣除150政治点与600柚子币。署名：伊尔诺+2026-06-09+assisted by Codex
+            date_buttom_left_one_click = {
+                add_political_power = -150
+                subtract_from_variable = { yz_money = 600 }
+                set_variable = { yuzu_married_date_cooldown = 0 }
+                country_event = { id = YZ_date_event.1 }
+            }
+            date_buttom_left_two_click = {
+                add_political_power = -150
+                subtract_from_variable = { yz_money = 600 }
+                set_variable = { yuzu_married_date_cooldown = 0 }
+                country_event = { id = YZ_date_event.2 }
+            }
+            date_buttom_middle_click = {
+                add_political_power = -150
+                subtract_from_variable = { yz_money = 600 }
+                set_variable = { yuzu_married_date_cooldown = 0 }
+                country_event = { id = YZ_date_event.3 }
+            }
+            date_buttom_right_one_click = {
+                add_political_power = -150
+                subtract_from_variable = { yz_money = 600 }
+                set_variable = { yuzu_married_date_cooldown = 0 }
+                country_event = { id = YZ_date_event.4 }
+            }
+            date_buttom_right_two_click = {
+                add_political_power = -150
+                subtract_from_variable = { yz_money = 600 }
+                set_variable = { yuzu_married_date_cooldown = 0 }
+                country_event = { id = YZ_date_event.5 }
+            }
+            # 作用：通过改变number_of_portrait循环切换当前妻子的立绘；要点：43号角色按1至16循环，末张后回到第一张。署名：伊尔诺+2026-06-08+assisted by Codex
+            change_clothes_buttom_click = {
+                if = {
+                    limit = {
+                        check_variable = { wife_id = 43 }
+                        check_variable = { number_of_portrait > 15 }
+                    }
+                    set_variable = { number_of_portrait = 1 }
+                }
+                else = {
+                    add_to_variable = { number_of_portrait = 1 }
+                }
+            }
+            # 作用：点击SD后按当前角色的最大SD数量循环；要点：达到number_of_sd_max时回到1，并同步驱动图片与留言分流。署名：伊尔诺+2026-06-09+assisted by Codex
+            character_sd_click = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            var = number_of_sd
+                            value = number_of_sd_max
+                            compare = greater_than_or_equals
+                        }
+                    }
+                    set_variable = { number_of_sd = 1 }
+                }
+                else = {
+                    add_to_variable = { number_of_sd = 1 }
+                }
+            }
+
+            # 作用：执行互动时支付政治点并结算增强后的关系变化；要点：价格更高的互动提供更高的综合收益。署名：伊尔诺+2026-06-09+assisted by Codex
+            interact_buttom_left_click = {
+                add_political_power = -100
+                add_to_variable = { value_of_loving = 9 }
+                add_to_variable = { value_of_believity = 3 }
+                add_to_variable = { value_of_relationship = 5 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_interact_kiss_cooldown = 0 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = interact_buttom_left_effect_tt
+            }
+            interact_buttom_middle_click = {
+                add_political_power = -150
+                add_to_variable = { value_of_loving = -2 }
+                add_to_variable = { value_of_believity = 11 }
+                add_to_variable = { value_of_relationship = 10 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_interact_study_cooldown = 0 }
+                set_variable = { yuzu_married_study_days = 45 }
+                set_variable = { yuzu_married_study_research_effect = 0.05 }
+                set_variable = { yuzu_married_study_political_effect = 0.05 }
+                set_variable = { yuzu_married_study_output_effect = 0.03 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = interact_buttom_middle_effect_tt
+            }
+            interact_buttom_right_click = {
+                add_political_power = -125
+                add_to_variable = { value_of_loving = 7 }
+                add_to_variable = { value_of_believity = 4 }
+                add_to_variable = { value_of_relationship = 7 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_interact_play_cooldown = 0 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = interact_buttom_right_effect_tt
+            }
+
+            # 作用：赠礼在增加关系值前扣除柚子币；要点：500、750、1000柚子币三档的总收益严格递增。署名：伊尔诺+2026-06-09+assisted by Codex
+            gift_buttom_left_click = {
+                subtract_from_variable = { yz_money = 500 }
+                add_to_variable = { value_of_loving = 5 }
+                add_to_variable = { value_of_believity = 3 }
+                add_to_variable = { value_of_relationship = 3 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_gift_accessory_cooldown = 0 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = gift_buttom_left_effect_tt
+            }
+            gift_buttom_middle_click = {
+                subtract_from_variable = { yz_money = 1000 }
+                add_to_variable = { value_of_loving = 9 }
+                add_to_variable = { value_of_believity = 4 }
+                add_to_variable = { value_of_relationship = 5 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_gift_cosmetics_cooldown = 0 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = gift_buttom_middle_effect_tt
+            }
+            gift_buttom_right_click = {
+                subtract_from_variable = { yz_money = 750 }
+                add_to_variable = { value_of_loving = 5 }
+                add_to_variable = { value_of_believity = 5 }
+                add_to_variable = { value_of_relationship = 5 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { married_gift_doll_cooldown = 0 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = gift_buttom_right_effect_tt
+            }
+
+            # 作用：支援同时消耗战时支援与三项关系值，并给予约为原来三倍的限时效果；要点：成本只小幅提高。署名：伊尔诺+2026-06-09+assisted by Codex
+            help_buttom_left_click = {
+                add_to_variable = { value_of_help = -18 }
+                add_to_variable = { value_of_loving = -4 }
+                add_to_variable = { value_of_believity = -3 }
+                add_to_variable = { value_of_relationship = -3 }
+                clamp_variable = { var = value_of_help min = 0 max = 100 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { yuzu_married_assistance_days = 45 }
+                set_variable = { yuzu_married_assistance_political_effect = 0.18 }
+                set_variable = { yuzu_married_assistance_stability_effect = 0.045 }
+                set_variable = { yuzu_married_assistance_planning_effect = 0.18 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = help_buttom_left_effect_tt
+            }
+            help_buttom_middle_click = {
+                add_to_variable = { value_of_help = -23 }
+                add_to_variable = { value_of_loving = -3 }
+                add_to_variable = { value_of_believity = -5 }
+                add_to_variable = { value_of_relationship = -4 }
+                clamp_variable = { var = value_of_help min = 0 max = 100 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { yuzu_married_logistics_days = 30 }
+                set_variable = { yuzu_married_logistics_supply_effect = -0.18 }
+                set_variable = { yuzu_married_logistics_attrition_effect = -0.12 }
+                set_variable = { yuzu_married_logistics_speed_effect = 0.12 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = help_buttom_middle_effect_tt
+            }
+            help_buttom_right_click = {
+                add_to_variable = { value_of_help = -28 }
+                add_to_variable = { value_of_loving = -5 }
+                add_to_variable = { value_of_believity = -4 }
+                add_to_variable = { value_of_relationship = -6 }
+                clamp_variable = { var = value_of_help min = 0 max = 100 }
+                clamp_variable = { var = value_of_loving min = 0 max = 100 }
+                clamp_variable = { var = value_of_believity min = 0 max = 100 }
+                clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+                set_variable = { yuzu_married_production_days = 45 }
+                set_variable = { yuzu_married_production_output_effect = 0.12 }
+                set_variable = { yuzu_married_production_efficiency_effect = 0.18 }
+                set_variable = { yuzu_married_production_construction_effect = 0.12 }
+                yuzu_married_refresh_effect_values = yes
+                custom_effect_tooltip = help_buttom_right_effect_tt
+            }
+        }
+
+        properties = {
+            # 作用：把scripted localisation返回的GFX注册名应用到唯一立绘图层；要点：GUI无需为每张立绘建立独立控件。署名：伊尔诺+2026-06-08+assisted by Codex
+            character_portrait = {
+                image = "[YZ_married_portrait_image]"
+            }
+            # 作用：把scripted localisation返回的SD注册名应用到唯一可点击图片控件；要点：图片和留言共用number_of_sd。署名：伊尔诺+2026-06-09+assisted by Codex
+            character_sd = {
+                image = "[YZ_married_sd_image]"
+            }
+            loving_value = {
+                frame = value_of_loving
+            }
+            believity_value = {
+                frame = value_of_believity
+            }
+            relationship_value = {
+                frame = value_of_relationship
+            }
+            help_value = {
+                frame = value_of_help
+            }
+        }
+    }
+}

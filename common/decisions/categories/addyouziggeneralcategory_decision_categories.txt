@@ -1,3 +1,8 @@
+Tarot_category = {
+	icon = GFX_tarot_icon
+	scripted_gui = YZ_Tarot_gui
+	priority = 2
+}
 YZ_CORE_GROUP = {
 	icon = GFX_Category_decision
 	scripted_gui = Yz_leader_gui
@@ -5,6 +10,14 @@ YZ_CORE_GROUP = {
 	visible_when_empty = yes
 	visible = {
 		has_country_flag = YzCoreGroup_visible
+	}
+}
+X_youzu_propaganda_category = {
+	priority = 2
+	icon = SOV_propaganda
+	scripted_gui = 	yz_posters_ui_window_gui
+	visible = {
+		has_country_flag = set_YzPropaganda
 	}
 }
 qiyong_youzi_general_category = {
@@ -41,11 +54,26 @@ Megulu_industry_category = {
 }
 YZS_scientist_category = {
 	icon = GFX_Category_decision
+	visible = {
+		has_country_flag = YZS_scientist_category_show        #2025.3.29,16:02,伊尔诺
+	}
+	priority = 2
+}
+YZS_scientist_aromors_category = {
+	icon = GFX_Category_decision
+	visible = {
+		has_country_flag = yzc_armor_decision
+		has_country_flag = start_yuzu_little_car
+	}
 	priority = 2
 }
 YZS_military_academy_category = {
+	visible = {
+		has_country_flag = open_YZS_military_academy
+	}
 	icon = GFX_fumika
 	priority = 2
+	#scripted_gui = YZ_miliatry_party_ui
 }
 general_married_decision_category = {
 	icon = GFX_Category_decision
@@ -64,4 +92,110 @@ QRYleaders_category = {
 	picture = GFX_QRYleaders_decisions
 	icon = GFX_Category_decision
 	priority = 0
+}
+World_Unity_communism = {
+	picture = GFX_World_Communism
+	priority = 1000
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		or = {
+			has_country_flag = qiyong_youzi_1
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = qiyong_youzi_3
+		}
+		or = {
+		has_government = communism
+		}
+	}
+}
+World_Unity_fascism = {
+	picture = GFX_World_fascism
+	priority = 999
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		or = {
+			has_country_flag = qiyong_youzi_1
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = qiyong_youzi_3
+		}
+		has_government = fascism
+	}
+}
+World_Unity_democratic = {
+	picture = GFX_World_democratic
+	priority = 998
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		or = {
+			has_country_flag = qiyong_youzi_1
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = qiyong_youzi_3
+		}
+		has_government = democratic
+	}
+}
+World_Unity_neutrality = {
+	picture = GFX_World_neutrality
+	priority = 997
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		or = {
+			has_country_flag = qiyong_youzi_1
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = qiyong_youzi_3
+		}
+		has_government = neutrality
+	}
+}
+
+YZ_indusrty_extra_project = {
+	priority = 10
+	icon = GFX_Category_decision
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		or = {
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = qiyong_youzi_3
+			has_country_flag = qiyong_youzi_1
+		}
+		has_country_flag = have_nicola
+	}
+	scripted_gui = YZ_industry_ompression_control_ui
+}
+Miyako_steal_decision = {
+	icon = 	GFX_miyako_steal
+	priority = 9
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		has_country_flag = have_miyako
+	}
+}
+Haruka_sky_mind_decision = {
+	icon = GFX_haruka_decision
+	priority = 9
+	allowed = {
+		is_ai = no
+	}
+	visible = {
+		is_ai = no
+		has_country_flag = have_haruka
+	}
 }

@@ -1,0 +1,132 @@
+guiTypes = {
+    containerWindowType = {
+        name = "YZ_miliatry_party_ui"
+        position = {
+            x = 0
+            y = -15
+        }
+        size = {
+            width = 500
+            height = 200
+        }
+        background = {
+           name = "YZ_miliatry_party_ui_background"
+           quadTextureSprite = "GFX_YZ_miliatry_party_ui_background_left"
+		   position = {
+				x = 4
+				y = -15
+		   }
+        }
+        buttonType = {
+			name = "Yz_chief_of_staff"
+			position = { x = 44 y = 13 }
+			size = { width = 99 height = 126 }
+			scale = 0.275		
+			quadTextureSprite = "GFX_yzleader_bg"
+			pdx_tooltip = "please_change_it_by_descision"
+		}
+		  
+		iconType = { 
+			name = "Yz_cos_unknown"
+			position = { x = 34 y = 0 }
+			size = { width = 99 height = 126 }
+			scale = 0.55		
+			quadTextureSprite = "GFX_yzleader_unknown"
+			pdx_tooltip = "please_change_it_by_descision"
+		}
+		iconType = { 
+			name = "Yz_cos_people"
+			position = { x = 45 y = 13 }
+			size = { width = 99 height = 126 }
+			scale = 0.51		
+			quadTextureSprite = "GFX_yzleader_unknown"
+			pdx_tooltip = "please_change_it_by_descision"
+		}
+		iconType = { 
+			name = "Yz_cos_box"
+			position = { x = 34 y = 3 }
+			size = { width = 99 height = 126 }
+			scale = 0.55		
+			quadTextureSprite = "GFX_yzleader_box"
+			pdx_tooltip = "please_change_it_by_descision"
+			alwaystransparent = yes
+		} 
+        buttonType = {
+			name = "Yz_chief_of_staff_buttom"
+			position = { x = 34 y = 3 }
+			size = { width = 99 height = 126 }
+			scale = 0.55		
+			quadTextureSprite = "GFX_yzleader_box"
+			pdx_tooltip = "please_change_it_by_descision"
+		}
+		iconType = { 
+			name = "Yz_miliatry_party_economy_and_strike_ui"
+			position = { x = 165 y = 5 }
+			size = { width = 238 height = 136 }
+			scale = 1.1
+			quadTextureSprite = "GFX_YZ_miliatry_party_ui_economy_and_strike"
+			#pdx_tooltip = "please_change_it_by_descision"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "Yz_miliatry_party_economy_title"
+			position = {
+				x = 253
+				y = -2
+			}
+			font = "hoi_16mbs"
+			text = "柚子战争经济局"
+			maxHeight = 30
+			maxWidth = 120
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "Yz_miliatry_party_strike_title"
+			position = {
+				x = 253
+				y = 75
+			}
+			font = "hoi_16mbs"
+			text = "柚子特别行动处"
+			maxHeight = 30
+			maxWidth = 120
+			alwaystransparent = yes
+		}
+        instantTextBoxType = {
+			name = "Yz_cos_title"
+			position = { x = 28 y = 128 }
+			font = "hoi_24header"
+			text = "柚子参谋总长"
+			maxWidth = 150
+			maxHeight = 30
+			alwaystransparent = yes
+		}
+
+		#buttonType = {
+		#	name = "yz_change_cos_buttom"
+		#	text = "yz_change_cos_buttom_test"
+		#	position = {
+		#		x = 15
+		#		y = 160
+		#	}
+		#	size = {
+		#		height = 23
+		#		width = 90
+		#	}
+		#	quadTextureSprite = "GFX_YZ_miliatry_party_ui_buttom"
+		#	#frame = 1
+		#}
+		buttonType = {
+			name = "kurumi_luck_mono"
+			position = {
+				x = 425
+				y = -8
+			}
+			size = {
+				width = 75
+				height = 75
+			}
+			quadTextureSprite = "GFX_kurumi_luck_mono"
+		}
+    }   
+}

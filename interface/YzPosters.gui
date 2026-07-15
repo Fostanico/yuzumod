@@ -1,0 +1,135 @@
+@POSTER_BG_Y = -10
+@POSTER_SD_Y = 140
+@POSTER_Y = 26
+@TEXT_Y = 203
+@TEXT_Y_2 = 92
+
+guiTypes = {
+	containerWindowType = {
+		name = "yz_posters_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 270 }
+
+		iconType = {
+			name ="yz_manpower_icon"
+			position = { x = 16 y = 222 }
+			scale = 1.15
+		}
+		instantTextBoxType = {
+			name ="yzcmanpower_text"
+			position = { x = 38 y = 222 }
+			font = "hoi_16mbs"
+			text = "yzcmanpower_text"
+			format = center
+			maxWidth = 460
+		}
+
+		iconType = {
+			name ="yz_poster_bg_1"
+			position = { x = 8 y = @POSTER_BG_Y }
+			scale = 0.95
+			spriteType = "GFX_yz_poster_bg"
+		}	
+		iconType = {
+			name ="yz_poster_bg_2"
+			position = { x = 174 y = @POSTER_BG_Y }
+			scale = 0.95
+			spriteType = "GFX_yz_poster_bg"
+		}
+		iconType = {
+			name ="yz_poster_bg_3"
+			position = { x = 340 y = @POSTER_BG_Y } 
+			scale = 0.95
+			spriteType = "GFX_yz_poster_bg"
+		}
+
+		instantTextBoxType = {
+			name ="poster_yz_text_1_"
+			position = { x = 10 y = @TEXT_Y_2 }
+			font = "hoi_18mbs"
+			text = "暂无"
+			format = center
+			maxWidth = 150
+		}
+		iconType = {
+			name ="yz_poster_1"
+			position = { x = 24 y = @POSTER_Y }
+			scale = 0.95
+			#pdx_tooltip = 
+		}
+		instantTextBoxType = {
+			name ="poster_yz_text_1"
+			position = { x = 12 y = @TEXT_Y }
+			font = "hoi_18mbs"
+			text = "yz_poster_text_1"
+			format = center
+			maxWidth = 150
+		}
+
+		instantTextBoxType = {
+			name ="poster_yz_text_2_"
+			position = { x = 176 y = @TEXT_Y_2 }
+			font = "hoi_18mbs"
+			text = "暂无"
+			format = center
+			maxWidth = 150
+		}
+		iconType = {
+			name ="yz_poster_2"
+			position = { x = 188	y = @POSTER_Y }
+			scale = 0.95
+			#pdx_tooltip = 
+		}
+		instantTextBoxType = {
+			name ="poster_yz_2_text"
+			position = { x = 176 y = @TEXT_Y }
+			font = "hoi_18mbs"
+			text = "yz_poster_2_text"
+			format = center
+			maxWidth = 150
+		}
+
+		instantTextBoxType = {
+			name ="poster_yz_text_3_"
+			position = { x = 344 y = @TEXT_Y_2 }
+			font = "hoi_18mbs"
+			text = "暂无"
+			format = center
+			maxWidth = 150
+		}
+		iconType = {
+			name ="yz_poster_3"
+			position = { x = 356 y = @POSTER_Y }
+			scale = 0.95
+			#pdx_tooltip = 
+		}
+		instantTextBoxType = {
+			name ="poster_yz_3_text"
+			position = { x = 344 y = @TEXT_Y }
+			font = "hoi_18mbs"
+			text = "yz_poster_3_text"
+			format = center
+			maxWidth = 150
+		}
+
+		iconType = {
+			name ="yz_poster_sd_1"
+			position = { x = 14 y = @POSTER_SD_Y }
+			scale = 0.95
+			spriteType = "GFX_yz_poster_sd_1"
+		}
+		iconType = {
+			name ="yz_poster_sd_2"
+			position = { x = 256 y = @POSTER_SD_Y }
+			scale = 0.95
+			spriteType = "GFX_yz_poster_sd_2"
+		}
+		iconType = {
+			name ="yz_poster_sd_3"
+			position = { x = 420 y = @POSTER_SD_Y }
+			scale = 0.95
+			spriteType = "GFX_yz_poster_sd_3"
+		}
+	}
+
+}

@@ -149,6 +149,31 @@ music = {
 	file = "youzu30.ogg"
 	volume = 0.65
 }
+music = {
+	name = "youzu31"
+	file = "youzu31.ogg"
+}
+music = {
+	name = "youzu32"
+	file = "youzu32.ogg"
+}
+#夏目不是枣子姐
+music = {
+	name = "youzu33"
+	file = "youzu33.ogg"
+}
+music = {
+	name = "youzu34"
+	file = "youzu34.ogg"
+}
+music = {
+	name = "non_vult"
+	file = "non_vult.ogg"
+}
+music = {
+	name = "yuzu_Dies_irae"
+	file = "yuzu_Dies irae.ogg"
+}
 #芦花小春事件
 music = {
 	name = "koto_battle"
@@ -161,7 +186,11 @@ music = {
 	file = "youzu_ebihara_minase_song.ogg"
 	volume = 0.65
 }
-
+#玖玖瑠音乐
+music = {
+	name = "kkrsong1"
+	file = "kkrsong1.ogg"
+}
 
 music = {
 	name = "youzu_elina_owen_song"
@@ -171,5 +200,200 @@ music = {
 music = {
 	name = "youzu_mera_azusa_song"
 	file = "youzu_mera_azusa_song.ogg"
+	volume = 0.65
+}
+music = {
+	name = "amairo"
+	file = "amairo.ogg"
+	volume = 1
+}
+music = {
+	name = "blue_sky"
+	file = "blue_sky.ogg"
+	volume = 0.65
+}
+music = {
+	name = "DIVE"
+	file = "DIVE.ogg"
+	volume = 0.65
+}
+music = {
+	name = "furerufurueru"
+	file = "furerufurueru.ogg"
+	volume = 0.65
+}
+music = {
+	name = "amairo_yune"
+	file = "amairo_yune.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Michael_Jackson_Bad"
+	file = "Michael_Jackson_Bad.flac.ogg"
+	volume = 0.65
+}
+music = {
+	name = "yuzu_tsubasawokudasai"
+	file = "yuzu_tsubasawokudasai.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Call_My_Name"
+	file = "Call_My_Name.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Charge_Of_Soul"
+	file = "Charge_Of_Soul.ogg"
+	volume = 0.65
+}
+music = {
+	name = "dokomademotsuzukukonomichiwo"
+	file = "dokomademotsuzukukonomichiwo.ogg"
+	volume = 0.65
+}
+music = {
+	name = "daisuki"
+	file = "daisuki.ogg"
+	volume = 0.65
+}
+music = {
+	name = "napoleon_dark_night"
+	file = "napoleon_dark_night.ogg"
+	volume = 0.65
+}
+music = {
+	name = "scp_dear_you"
+	file = "scp_dear_you.ogg"
+	volume = 0.65
+}
+music = {
+	name = "mile_likelihood"
+	file = "mile_likelihood.ogg"
+	volume = 0.65
+}
+music = {
+	name = "yuzu_sing_our_moving_spring"
+	file = "yuzu_sing_our_moving_spring.ogg"
+	volume = 0.65
+}
+music = {
+	name = "yuzu_unite_world_n"
+	file = "yuzu_unite_world_n.ogg"
+	volume = 0.65
+}
+music = {
+	name = "yuzu_unite_world_f"
+	file = "yuzu_unite_world_f.ogg"
+	volume = 0.65
+}
+music = {
+	name = "stalin_cannon_song"
+	file = "stalin_cannon_song.ogg"
+	volume = 0.65
+}
+music = {
+	name = "noble_works_ed"
+	file = "noble_works_ed.ogg"
+	volume = 0.65
+}
+music = {
+	name = "song_of_ena"
+	file = "song_of_ena.ogg"
+	volume = 0.65
+}
+music = {
+	name = "song_of_anju"
+	file = "song_of_anju.ogg"
+	volume = 0.65
+}
+music = {
+	name = "song_of_tsukimi"
+	file = "song_of_tsukimi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "song_of_ririko"
+	file = "song_of_ririko.ogg"
+	volume = 0.65
+}
+music = {
+	name = "song_of_miku"
+	file = "song_of_miku.ogg"
+	volume = 0.65
+}
+music = {
+	name = "give_me_a_alwyas_lie"
+	file = "give_me_a_alwyas_lie.ogg"
+	volume = 0.65
+}
+music = {
+	name = "sing_our_qingchun"
+	file = "sing_our_qingchun.ogg"
+	volume = 0.65
+}
+music = {
+	name = "a_voice_from_best_future"
+	file = "a_voice_from_best_future.ogg"
+	volume = 0.65
+}
+music = {
+	name = "cross_mountain_cross_plain"
+	file = "cross_mountain_cross_plain.ogg"
+	volume = 0.65
+}
+music = {
+	name = "time_forward"
+	file = "time_forward.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Binary_Sunset"
+	file = "Binary_Sunset.ogg"
+	volume = 0.65
+}
+music = {
+	name = "ReAliZe_Piano_ver"
+	file = "ReAliZe_Piano_ver.ogg"
+	volume = 0.65
+}
+music = {
+	name = "glory_war"
+	file = "glory_war.ogg"
+	volume = 0.65
+}
+music = {
+	name = "boom_boom_talv"
+	file = "boom_boom_talv.ogg"
+	volume = 0.65
+}
+music = {
+	name = "when_that_day_really_comes"
+	file = "when_that_day_really_comes.ogg"
+	volume = 0.65
+}
+music = {
+	name = "oh_field_my_field"
+	file = "oh_field_my_field.ogg"
+	volume = 0.65
+}
+music = {
+	name = "tenshenranman_op_piano"
+	file = "tenshenranman_op_piano.ogg"
+	volume = 0.65
+}
+music = {
+	name = "fuyuno_daiyamondo"
+	file = "fuyuno_daiyamondo.ogg"
+	volume = 0.65
+}
+music = {
+	name = "battle_carry_on_violet_ver"
+	file = "battle_carry_on_violet_ver.ogg"
+	volume = 0.65
+}
+music = {
+	name = "the_song_of_guanyu"
+	file = "the_song_of_guanyu.ogg"
 	volume = 0.65
 }

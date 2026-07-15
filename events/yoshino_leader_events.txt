@@ -1,110 +1,110 @@
 add_namespace = cwfn_event
 
-country_event = { 
-	id = cwfn_event.1
-	title = cwfn_event.1.t
-	desc = cwfn_event.1.d
-	picture = GFX_cwfn_event0
-	
-	is_triggered_only = yes
-	
-	option = {
-		retire_country_leader = yes
-		name = cwfn_event.1.a
-		trigger = {
-			has_government = communism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "朝武芳乃"
-			        picture = "GFX_portrait_ADD_chaowufangnai"
-					desc = chaowufangnai_desc
-					expire = "2095.1.1"
-				    ideology = marxism
-					 traits = {
-						SZDWN
-						SZRM
-				    }
-				}
-		}
+country_event = {
+    id = cwfn_event.1
+    title = cwfn_event.1.t
+    desc = cwfn_event.1.d
+    picture = GFX_cwfn_event0
 
-		option = {
-		retire_country_leader = yes
-		name = cwfn_event.2.a
-		trigger = {
-			has_government = democratic
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "朝武芳乃"
-			        picture = "GFX_portrait_ADD_chaowufangnai"
-					desc = chaowufangnai_desc
-					expire = "2095.1.1"
-				    ideology = conservatism
-					 traits = {
-						SZDWN
-						SZRM
-				    }
-				}
-		}
+    is_triggered_only = yes
 
-		option = {
-		retire_country_leader = yes
-		name = cwfn_event.3.a
-		trigger = {
-			has_government = fascism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "朝武芳乃"
-			        picture = "GFX_portrait_ADD_chaowufangnai"
-					desc = chaowufangnai_desc
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						SZDWN
-						SZRM
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = cwfn_event.1.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "朝武芳乃"
+            picture = "GFX_portrait_ADD_chaowufangnai"
+            desc = chaowufangnai_desc
+            expire = "2095.1.1"
+            ideology = marxism
+            traits = {
+                SZDWN
+                SZRM
+            }
+        }
+    }
 
-		option = {
-		retire_country_leader = yes
-		name = cwfn_event.4.a
-		trigger = {
-			has_government = neutrality
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "朝武芳乃"
-			        picture = "GFX_portrait_ADD_chaowufangnai"
-					desc = chaowufangnai_desc
-					expire = "2095.1.1"
-				    ideology = despotism
-					 traits = {
-						SZDWN
-						SZRM
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = cwfn_event.2.a
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "朝武芳乃"
+            picture = "GFX_portrait_ADD_chaowufangnai"
+            desc = chaowufangnai_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                SZDWN
+                SZRM
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = cwfn_event.3.a
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "朝武芳乃"
+            picture = "GFX_portrait_ADD_chaowufangnai"
+            desc = chaowufangnai_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                SZDWN
+                SZRM
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = cwfn_event.4.a
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "朝武芳乃"
+            picture = "GFX_portrait_ADD_chaowufangnai"
+            desc = chaowufangnai_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                SZDWN
+                SZRM
+            }
+        }
+    }
 }

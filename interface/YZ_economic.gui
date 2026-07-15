@@ -1,0 +1,232 @@
+guiTypes = {
+    containerWindowType = {
+        name = "Yuzusoft_economic_describe"
+        position = {
+            x = 0         
+            y = 0
+        }
+        size = {
+            width = 500
+            height = 150
+        }
+        #background = {
+        #   name = "YZrecruit_BG"
+        #    quadTextureSprite = "GFX_mini_tooltip"
+        #}
+        instantTextBoxType = {
+            name = "yz_economic_department_category_describe_left"                     #上一轮债券的描述
+            position = {
+                x = 0
+                y = 0
+            }
+            font = "hoi_16mbs"
+            text = "yz_economic_department_category_describe_left_text"
+            maxHeight = 80
+            maxWidth = 250
+            pdx_tooltip = "yz_not_instand_show_explain"
+        }
+        instantTextBoxType = {
+            name = "yz_economic_department_category_describe_right"
+            position = {
+                x = 300
+                y = 0
+            }
+            font = "hoi_16mbs"
+            text = "yz_economic_department_category_describe_right_text"
+            maxHeight = 80
+            maxWidth = 250
+            pdx_tooltip = "yz_not_instand_show_explain"
+        }
+        buttonType = {                               #其实我一开始就想的是直接用按钮上显示文本，后面发现不行——2025.6.2，18：08，伊尔诺
+            name = "open_yz_economic_operation"
+            position = { 
+                x = 30
+                y = 100
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_yz_button_long"     #"GFX_yz_button_long"
+            scale = 0.6
+            #pdx_tooltip = "Yuzusoft_sour_recurit_tooltip"
+        }
+        instantTextBoxType = {
+            name = "open_yz_economic_operation_text"
+            position = { x = 25 y = 113 } 
+			font = "hoi_18mbs"
+			text = "open_yz_economic_operation_text_show"
+			maxWidth = 200
+			maxHeight = 30
+			alwaystransparent = yes
+			format = center 
+        }
+        buttonType = {
+            name = "open_yz_invest_ui"
+            position = {
+                x = 270
+                y = 100
+            }
+            size = {
+                width = 960
+                height = 540
+            }
+            quadTextureSprite = "GFX_yz_button_long"
+            scale = 0.6
+        }
+        instantTextBoxType = {
+            name = "open_yz_invest_ui_text"
+            position = { x = 265 y = 113 } 
+			font = "hoi_18mbs"
+			text = "open_yz_invest_ui_text_show"
+			maxWidth = 200
+			maxHeight = 30
+			alwaystransparent = yes
+			format = center 
+        }
+    }
+    containerWindowType = {                     #经济操作ui
+        name = "yz_bonds_operations_ui"
+        position = {
+            x = -480
+            y = -270
+        }
+        orientation = CENTER
+        size = {
+            width = 960
+            height = 540
+        }
+        background = {
+            name = "YZ_bonds_operation_ui_background"
+            quadTextureSprite = "GFX_tiled_decisions_bg_small"      #GFX_mini_bg_grey     #GFX_tiled_window_small
+        }
+        moveable = yes
+        buttonType = {                                   #关闭键
+			name = "yz_bonds_ui_close_button"
+			position = { 
+                x = -40 
+                y = 6 
+            }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+        instantTextBoxType = {                                  #标题
+            name = "yz_bonds_operations_ui_title"
+            position = {
+                x = -180
+                y = 0
+            }
+            orientation = CENTER_UP
+            maxHeight = 30
+            maxWidth = 360
+            font = "hoi_33"
+			text = "yz_bonds_operations_ui_title_text"
+            pdx_tooltip = "suggestion_for_this_yz_part"
+        }
+        instantTextBoxType = {                         #信用评级
+            name = "yz_national_credit_rating"
+            position = {
+                x = 160
+                y = 40
+            }
+            maxHeight = 30
+            maxWidth = 230
+            font = "hoi_33"
+            text = "yz_national_credit_rating_text"
+            pdx_tooltip = "yz_national_credit_rating_describe_tooltip"
+        }
+        #buttonType = {                                      #这个按钮纯是用来写信用评级的描述的
+        #   name = "yz_national_credit_rating_describe"      #仔细想想还是不用这个了——2025.6.3，17：40，伊尔诺
+        #    position = {
+        #        x = 40
+        #        y = 40
+        #    } 
+        #    size = {
+        #        width = 250
+        #        height = 40
+        #    }
+        #    quadTextureSprite = "GFX_tiled_decisions_bg_small"
+        #    buttonFont = "hoi_33"
+        #    buttonText = "yz_national_credit_rating_text"
+        #    pdx_tooltip = "yz_national_credit_rating_describe_tooltip"
+        #}
+        #buttonType = {              #纯测试用按钮
+        #    name = "test"
+        #    position = {
+        #        x = 80
+        #        y = 80
+        #    }
+        #    size = {
+        #        width = 80
+        #        height = 20
+        #    }
+        #    spriteType = "GFX_button_221x34"
+        #    buttonFont = "hoi_20b"
+        #    #quadTextureSprite = "GFX_button_221x34"
+        #}
+        instantTextBoxType = {     #工业发展度显示
+            name = "yz_weekly_show_how_much_we_developed_in_industry"
+            position = {
+                x = 480
+                y = 40
+            }
+            maxHeight = 30
+            maxWidth = 450
+            font = "hoi_33"
+            text = "yz_weekly_show_how_much_we_developed_in_industry_text"
+            pdx_tooltip = "another_yz_explain"
+        }
+        instantTextBoxType = {   #标题，就只显示“上一轮债券”
+            name = "last_bond_title"
+            position = {
+                x = 60
+                y = 80
+            }
+            maxHeight = 30
+            maxWidth = 200
+            font = "hoi_33"
+            text = "benlunzhaiquan"
+        }
+        #iconType = {                    算了——2025.6.5，15：11.伊尔诺
+        #    name = "control_real_interest_background"
+        #    position = {
+        #        x = 100
+        #        y = 120
+        #    }
+        #}
+        instantTextBoxType = {
+            name = "information_of_last_yz_bond"
+            position = {
+                x = 100
+                y = 120
+            }
+            maxHeight = 100
+            maxWidth = 270
+            font = "hoi_24header"
+            text = "information_of_last_yz_bond_text"
+        }
+        iconType = {
+            name = "control_real_interest_background"
+            position = {
+                x = 100
+                y = 220
+            }
+            spriteType = "GFX_generic_bg2"
+        }   
+        instantTextBoxType = {       #操作债券的文本
+            name = "control_real_interest_showtext"
+            position = {
+                x = 100
+                y = 220
+            }
+            maxHeight = 30
+            maxWidth = 430
+            font = "hoi_24header"
+            text = "control_real_interest_text"
+        }
+                                                                     
+    }
+}

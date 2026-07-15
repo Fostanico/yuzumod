@@ -1,0 +1,568 @@
+####### 你还没给柚子军服役呢! #######
+
+X_youzu_propaganda_category = {
+
+	yz_poster_1 = {		#绫濑演唱会
+		icon = GFX_lingnai
+		 
+		available = {
+			yz_poster_slot_available = yes		#有空闲槽位可选判定
+		}
+		days_remove = 185
+		cost = 35
+		days_re_enable = 180
+		modifier = {
+			consumer_goods_factor = -0.1
+            civilian_factory_use = 1
+            production_factory_efficiency_gain_factor = 0.15
+            industrial_capacity_factory = 0.15
+            research_speed_factor = 0.1
+            industrial_capacity_factory = 0.1
+            production_speed_buildings_factor = 0.125
+			mobilization_speed = 0.15
+			army_morale_factor = 0.1
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 8 }	#这里的数字是海报图中第n-1张（第一张是透明底）
+			yz_set_poster = yes		#显示海报
+			hidden_effect = {
+                play_song = youzu28
+            }
+            custom_effect_tooltip = {
+                localization_key = play_the_song_of_linglai_descision_effect_tooltip
+            }
+			add_to_variable = {
+				yzc_manpower_factor = 0.01
+				tooltip = yzc_manpower_factor_gain
+			}
+		}
+	}
+
+	set_YuzuSongUndDanceTroupe = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		visible = {
+			not = { has_country_flag = set_YuzuSongUndDanceTroupe_flag }
+		}
+		available = {
+			check_variable = {
+				yz_money > 200
+				tooltip = yz_money_tooltip_compare
+			}
+			custom_trigger_tooltip = {
+				tooltip = need_YuzuSongUndDanceTroupe_member_tt
+				or = {
+					has_country_flag = have_0nai
+					has_country_flag = have_yuki
+					has_country_flag = have_sumi
+					has_country_flag = have_noriko
+					has_country_flag = have_tae
+					has_country_flag = have_ebihara_minase
+					has_country_flag = have_yoshino
+					has_country_flag = have_wakana
+				}
+			}
+		}
+		cost = 15
+		remove_effect = {
+			set_country_flag = set_YuzuSongUndDanceTroupe_flag
+			add_to_variable = {
+				yzc_manpower_factor = 0.005
+				tooltip = yzc_manpower_factor_gain
+			}
+		}
+
+	}
+
+	yz_poster_2 = {			#柚子歌舞团
+		icon = GFX_decision_eng_propaganda_campaigns
+		visible = {
+			has_country_flag = set_YuzuSongUndDanceTroupe_flag
+		}
+		available = {
+			yz_poster_slot_available = yes
+			check_variable = {
+				yz_money > 200
+				tooltip = yz_money_tooltip_compare
+			}
+			check_variable = {
+				yzc_manpower_factor > 0.025
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 120
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 200
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = political_power
+				value = 45
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_200_PP_45
+		modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			breakthrough_factor = 0.05
+			org_loss_when_moving = -0.15
+			army_morale_factor = 0.15
+			army_org_factor = 0.1
+			army_speed_factor = 0.05
+			mobilization_speed = 0.1
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 2 }
+			yz_set_poster = yes
+			add_to_variable = { yz_money = -200 }
+			hidden_effect = {
+				add_political_power = -45
+			}
+			set_variable = { YuzuSongUndDanceTroupe_traget_state = 0 }
+			set_variable = { YuzuSongUndDanceTroupe_event_var = 0 }
+			if = {
+				limit = {
+					#留着给隐藏事件用
+				}
+				set_variable_to_random = {
+					var = YuzuSongUndDanceTroupe_event_var
+					max = 9.1
+					min = 0.9
+					integer = yes
+				}
+				set_country_flag = YuzuSongUndDanceTroupe_showing
+				country_event = start_event.201
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+				yzc_manpower_factor = 0.025
+				tooltip = yzc_manpower_factor_gain
+			}
+			hidden_effect = {
+				clr_country_flag = YuzuSongUndDanceTroupe_showing
+				every_state = {
+					clr_state_flag = is_YuzuSongUndDanceTroupe_modifier
+				}  
+			}
+			
+		}
+	}
+
+	yz_poster_3 = {		#娜娜米的意识形态宣传工作
+		icon = GFX_qihai
+		 
+		available = {
+			yz_poster_slot_available = yes
+		}
+		days_remove = 180
+		days_re_enable = 30
+		cost = 25
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_gain = -0.15
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 4 }
+			yz_set_poster = yes
+			country_event = start_event.22
+		}
+	}
+
+	research_yzc_new_work = {	#引进柚子社作品
+		icon = GFX_category
+		visible = {
+			not = { has_country_flag = yz_newwork_publishing }
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 300
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_300
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					not = { has_country_flag = have_researched_yzwork }
+				}
+				set_technology = {
+					tech_yz_works_equipment = 1
+				}
+				set_country_flag = have_researched_yzwork
+			}
+			set_country_flag = yz_newwork_publishing
+		}
+	}
+
+	yz_poster_4 = {		#发行新作
+		icon = GFX_category
+		visible = {
+			has_country_flag = yz_newwork_publishing
+		}
+		available = {
+			yz_poster_slot_available = yes
+			has_equipment = {
+				yz_works_equipment > 14999
+			}
+			check_variable = {
+				yz_money > 500
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		days_remove = 180
+		cost = 25
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.1
+			political_power_factor = 0.2
+			
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 9 }
+			yz_set_poster = yes
+			set_temp_variable = { temp_yz_new_works = max_manpower_k }
+			multiply_temp_variable = { temp_yz_new_works = num_of_factories }
+			multiply_temp_variable = { temp_yz_new_works = 0.01 }
+			multiply_temp_variable = { temp_yz_new_works = 0.06 }
+			set_variable = { yz_new_works = temp_yz_new_works }
+			add_equipment_to_stockpile = {
+				type = yz_works_equipment
+				amount = -15000
+				producer = JAP
+			}
+			custom_effect_tooltip = yz_new_works_income_tt
+			add_to_variable = {
+				yzc_manpower_factor = 0.025
+				tooltip = yzc_manpower_factor_gain
+			}
+			add_to_variable = {
+				yz_money = -500
+				tooltip = yz_money_tooltip_subtain
+			}
+		}
+		remove_effect = {
+			set_variable = { yz_new_works = 0 }	#这是游戏购买量
+			clr_country_flag = yz_newwork_publishing
+		}
+	}
+
+	yz_poster_5 = {		#柚子厨们，团结起来建设新国家！
+		icon = GFX_decision_generic_civil_support
+		 
+		available = {
+			yz_poster_slot_available = yes
+			check_variable = {
+				yzc_manpower_factor > 0.05
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 45
+		cost = 25
+		modifier = {
+			consumer_goods_factor = -0.125
+			repair_speed_factor = 0.3
+			production_speed_buildings_factor = 0.15
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_infrastructure_factor = 0.1
+			production_speed_rail_way_factor = 0.25
+			production_speed_supply_node_factor = 0.3
+			political_power_factor = -0.1
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 3 }
+			yz_set_poster = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				yzc_manpower_factor = 0.015
+				tooltip = yzc_manpower_factor_gain
+			}
+		}
+	}
+
+	yz_poster_6 = {		#科教兴国，人才强国
+		icon = GFX_research_up
+		 
+		available = {
+			yz_poster_slot_available = yes
+			check_variable = {
+				yzc_manpower_factor > 0.05
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 60
+		cost = 20
+		modifier = {
+			research_speed_factor = 0.25
+			local_resources_factor = 0.1
+			equipment_capture_factor = 0.1
+			
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 6 }
+			yz_set_poster = yes
+			add_timed_idea = {
+				idea = yzposter_1
+				days = 180
+			}
+		}
+	}
+
+	yz_poster_7 = {		#兵凶战危，不得已而用之
+		icon = GFX_yz_manpower3
+		visible = {
+			has_country_flag = have_youzu_army_1
+		}
+		available = {
+			yz_poster_slot_available = yes
+			has_country_flag = have_youzu_army_1
+			check_variable = {
+				yzc_manpower_factor > 0.1
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 90
+		custom_cost_trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_CP_25
+		modifier = {
+			experience_gain_army = 0.5
+			experience_gain_navy = 0.5
+			experience_gain_air = 0.5
+			training_time_army_factor = -0.1
+			conscription_factor = 0.1
+			mobilization_speed = 0.35
+			justify_war_goal_time = -0.5
+			mobilization_laws_cost_factor = -0.5
+			army_chief_cost_factor = -0.5
+			navy_chief_cost_factor = -0.5
+			air_chief_cost_factor = -0.5
+			high_command_cost_factor = -0.5
+			production_speed_infrastructure_factor = 0.2
+			production_speed_rail_way_factor = 0.35
+			production_speed_supply_node_factor = 0.75
+			supply_consumption_factor = -0.05
+			no_supply_grace = 24
+			political_power_factor = -0.25
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 12 }
+			yz_set_poster = yes
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+	}
+
+	yz_poster_8 = {		#旌旗所指，所向披靡
+		icon = GFX_yz_manpower
+		visible = {
+			or = {
+				has_country_flag = youzu_army_7
+				has_country_flag = youzu_army_8
+			}
+		}
+		available = {
+			yz_poster_slot_available = yes
+			check_variable = {
+				yzc_manpower_factor > 0.125
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 90
+		custom_cost_trigger = {
+			check_variable = {
+				var = command_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = political_power
+				value = 25
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		modifier = {
+			political_power_factor = -0.25
+			experience_gain_army_factor = 0.3
+			experience_gain_army_unit_factor = 0.25
+			offensive_war_stability_factor = 0.1
+			defensive_war_stability_factor = 0.15
+			experience_loss_factor = -0.15
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			army_org_factor = 0.1
+			land_reinforce_rate = 0.15
+			out_of_supply_factor = -0.15
+			army_core_attack_factor = 0.125
+			army_core_defence_factor = 0.125
+			weekly_casualties_war_support = 0.025
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 7 }
+			yz_set_poster = yes
+		}
+	}
+
+	yz_poster_9 = {		#英勇的游击队战士光荣无上
+		icon = GFX_decision_SWI_consolidate_council_power
+		visible = {
+			has_country_flag = have_youzu_army_3
+		}
+		available = {
+			yz_poster_slot_available = yes
+			has_war = yes
+			any_country = {
+				core_resistance = {
+					occupied_country_tag = ROOT
+					value > 0.5
+				}
+			}
+			check_variable = {
+				yzc_manpower_factor > 0.075
+				tooltip = yzc_manpower_factor_more_than_tt
+			}
+		}
+		days_remove = 180
+		days_re_enable = 30
+		cost = 30
+		modifier = {
+			resistance_target_on_our_occupied_states = 0.25
+			resistance_growth_on_our_occupied_states = 0.3
+			compliance_growth_on_our_occupied_states = -0.15
+			political_power_factor = -0.1
+			command_power_gain_mult = -0.1
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 11 }
+			yz_set_poster = yes
+			custom_effect_tooltip = yz_poster_9_tt
+			random_country = {
+				limit = {
+					has_war_with = ROOT
+				}
+				ROOT = {
+					add_intel = {
+						target = PREV.majors
+						civilian_intel = 5
+						army_intel = 5
+						navy_intel = 5
+						airforce_intel = 5
+					}
+				}
+			} 
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					not = { is_controlled_by = root }
+				}
+				random_list = {
+					10 = {	
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+							repair_speed_modifier = -0.45
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+							repair_speed_modifier = -0.45
+						}
+					}
+					10 = {
+						damage_building = {
+							type = infrastructure
+							damage = 4
+							repair_speed_modifier = -0.3
+						}
+						damage_building = {
+							type = rail_way
+							damage = 3
+							repair_speed_modifier = -0.5
+						}
+						damage_building = {
+							type = supply_node
+							damage = 3
+							repair_speed_modifier = -0.75
+						}
+					}
+				}
+			}
+		}
+	}
+
+	yz_poster_10 = {		#攻心为上，攻城为下
+		icon = GFX_decision_generic_nationalism
+		 
+		available = {
+			yz_poster_slot_available = yes
+			has_war = yes
+		}
+		days_remove = 180
+		days_re_enable = 60
+		cost = 15
+		modifier = {
+			resistance_target = -0.25
+			resistance_growth = -0.3
+			compliance_starting_value = 0.2
+			compliance_growth = 0.25
+			non_core_manpower = 0.25
+			annex_cost_factor = -0.1
+			puppet_cost_factor = -0.15
+			intel_network_gain_factor = 0.2
+			intel_from_operatives_factor = 0.35
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 5 }
+			yz_set_poster = yes
+			add_manpower = 10000
+		}
+	}
+
+	yz_poster_11 = {		#敌人奸诈，谨言慎行
+		icon = GFX_decision_onmap_recruit_operative
+		 
+		available = {
+			yz_poster_slot_available = yes
+			has_war = yes
+		}
+		days_remove = 180
+		days_re_enable = 60
+		cost = 15
+		modifier = {
+			intelligence_agency_defense = 4
+			crypto_strength = 2
+			enemy_intel_network_gain_factor_over_occupied_tag = -0.5
+			local_intel_to_enemies = -0.5
+		}
+		complete_effect = {
+			set_temp_variable = { TEMPyz_poster_icon_frame = 10 }
+			yz_set_poster = yes
+			add_manpower = 10000
+		}
+	}
+}

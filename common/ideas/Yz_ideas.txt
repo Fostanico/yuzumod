@@ -1,0 +1,584 @@
+ideas = {
+	
+	country = {
+		
+		noa_love_level_4 = {
+			picture = FRA_market_dynamism
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.03
+				stability_factor = 0.02
+			}
+		}
+
+		noa_love_level_3 = {
+
+			picture = FRA_market_dynamism
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.03
+				stability_factor = 0.01
+			}
+		}
+		
+		noa_love_level_2 = {
+
+			picture = FRA_market_dynamism
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_factor = 0.02
+				stability_factor = 0.01
+			}
+		}
+		
+		noa_love_level_1 = {
+
+			picture = FRA_market_dynamism
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_factor = 0.01
+				stability_factor = 0.01
+			}
+		}
+		
+		noa_love_level_0 = {
+
+			picture = FRA_market_dynamism
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_factor = 0.01
+			}
+		}
+
+		
+
+		Married_preparing = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		Married = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				stability_factor = 0.025
+				war_support_factor = 0.025
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.025
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				production_factory_start_efficiency_factor = 0.025
+				line_change_production_efficiency_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.025
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.05
+				global_building_slots_factor = 0.025
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.02
+				local_resources_factor = 0.05
+				political_power_gain = 0.02
+				stability_weekly = 0.001
+				war_support_factor = 0.025
+				war_support_weekly = 0.001
+				offensive_war_stability_factor = 0.05
+				defensive_war_stability_factor = 0.1
+				command_power_gain = 0.01
+				max_command_power = 10
+				resistance_target = -0.1
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_growth = -0.05
+				resistance_growth_on_our_occupied_states = 0.1
+				compliance_starting_value = 0.05
+				compliance_growth = 0.1
+				compliance_growth_on_our_occupied_states = -0.1
+			}
+		}
+
+		
+		###咖啡馆蛋糕决议
+		fruit_cake = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				command_power_gain = 0.15
+				experience_gain_army = 0.1
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.1
+			}
+		}
+
+		chocolate_donuts = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				supply_consumption_factor = -0.2
+				army_org_factor = 0.1
+			}
+		}
+
+		cream_pudding = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.25
+			}
+		}
+
+		xiangcaosongbing = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.1
+				refit_speed = 0.35
+				repair_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.25
+			}
+		}
+
+		mengbulang = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				air_ace_generation_chance_factor = 0.25
+				air_superiority_efficiency = 0.3
+				army_bonus_air_superiority_factor = 0.25
+				air_escort_efficiency = 0.1
+			}
+		}
+
+		tilamisu = {
+
+			picture = nothing ###还没做好
+
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.3
+				local_resources_factor = 0.2
+				political_power_factor = 0.15
+			}
+		}
+
+	
+
+		sairi_bad_end = {
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				political_power_factor = -0.99
+				stability_factor = -2
+				war_support_factor = 1
+				industrial_capacity_factory = 1
+				production_speed_buildings_factor = 1
+				production_factory_max_efficiency_factor = -0.95
+				production_factory_efficiency_gain_factor = -0.15
+				army_attack_factor = -0.1
+				army_defence_factor = -0.5
+				conscription_factor = 1
+				non_core_manpower = 1
+				monthly_population = -3
+			}
+		}
+
+		agricultural_mechanization = {
+			picture = GFX_idea_agricultural_mechanization
+			allowed_civil_war = {
+				is_ai = no
+			}
+
+			modifier = {
+				stability_factor = 0.025
+				monthly_population = 0.025
+				conscription_factor = 0.05
+				
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.025
+					reliability = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		bupingheng = {
+			picture = GFX_agricultural_mechanization
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		manglujianshe = {
+			picture = GFX_agricultural_mechanization
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				political_power_gain = -0.2
+			}
+		}
+
+
+
+	}
+
+	hidden_ideas = {
+		YzMilitary_fund_boost1 = {	#柚子军费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_attack_factor = 0.015
+				army_defence_factor = 0.015
+				army_speed_factor = 0.015
+				attrition = -0.01
+			}
+		}
+		YzMilitary_fund_boost2 = {	#柚子军费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				army_speed_factor = 0.03
+				attrition = -0.02
+			}
+		}
+		YzMilitary_fund_boost3 = {	#柚子军费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_attack_factor = 0.045
+				army_defence_factor = 0.045
+				army_speed_factor = 0.045
+				attrition = -0.03
+			}
+		}
+		YzMilitary_fund_boost4 = {	#柚子军费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_attack_factor = 0.065
+				army_defence_factor = 0.065
+				army_speed_factor = 0.065
+				attrition = -0.04
+			}
+		}
+		YzMilitary_fund_boost5 = {	#柚子军费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				attrition = -0.05
+			}
+		}
+
+		YzEducation_fund_boost1 = {	#柚子教育经费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				research_speed_factor = 0.025
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.025
+			}
+		}
+		YzEducation_fund_boost2 = {	#柚子教育经费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		YzEducation_fund_boost3 = {	#柚子教育经费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				research_speed_factor = 0.075
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.075
+			}
+		}
+		YzEducation_fund_boost4 = {	#柚子教育经费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		YzEducation_fund_boost5 = {	#柚子教育经费
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				research_speed_factor = 0.125
+				industrial_capacity_factory = 0.125
+				production_speed_buildings_factor = 0.125
+			}
+		}
+		
+		YzAdministration_fund_boost1 = {	#柚子行政开支
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.015
+				war_support_factor = 0.015
+				command_power_gain = 0.1
+			}
+		}
+		YzAdministration_fund_boost2 = {	#柚子行政开支
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.03
+				war_support_factor = 0.03
+				command_power_gain = 0.2
+			}
+		}
+		YzAdministration_fund_boost3 = {	#柚子行政开支
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.045
+				war_support_factor = 0.045
+				command_power_gain = 0.3
+			}
+		}
+		YzAdministration_fund_boost4 = {	#柚子行政开支
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.06
+				war_support_factor = 0.06
+				command_power_gain = 0.4
+			}
+		}
+		YzAdministration_fund_boost5 = {	#柚子行政开支
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.075
+				war_support_factor = 0.075
+				command_power_gain = 0.5
+			}
+		}
+
+		yzguozhai = { 
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.025
+			}
+		}
+		yzjiuye = {
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				conscription_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		yzjianshe = {
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		chose_noa = {		##一个判断条件而已
+
+		}
+		yz_amane1 = {
+			modifier = {
+				army_core_attack_factor = 0.5
+				army_defence_factor = 0.5
+				political_power_factor = -0.99
+				production_factory_efficiency_gain_factor = 1
+				industrial_capacity_factory = 0.25
+				production_factory_max_efficiency_factor = -0.5
+			}
+		}
+		xiongdinihaoxiang = {
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.025
+				consumer_goods_factor = 0.025
+			}
+		}
+		qingxiyubo = {
+			modifier = {
+				intel_network_gain_factor = -0.1
+				agency_upgrade_time = 0.15
+				political_power_factor = -0.1
+			}
+		}
+
+		nanami_ideology_1 = {
+			modifier = {
+				political_power_gain = -0.15
+				communism_drift = 1.5
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		nanami_ideology_2 = {
+			modifier = {
+				political_power_gain = -0.15
+				democratic_drift = 1.5
+				stability_weekly = 0.001
+			}
+		}
+		nanami_ideology_4 = {
+			modifier = {
+				political_power_gain = -0.15
+				fascism_drift = 1.5
+				war_support_weekly = 0.001
+			}
+		}
+		nanami_ideology_3 = {
+			modifier = {
+				political_power_gain = -0.15
+				neutrality_drift= 1.5
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		yzposter_1 = {
+			research_bonus = {
+				industry = 0.25
+				electronics = 0.3
+				infantry_tech = 0.2
+				armor = 0.25
+			}
+		}
+		Origin_of_youzu_culture = {
+			picture = GFX_idea_Origin_of_youzu_culture
+			rule = {
+				can_create_factions = yes
+				can_generate_female_aces = yes
+			}
+			modifier = {
+				drift_defence_factor = 0.5
+				subversive_activites_upkeep = -0.1
+			}
+		}
+	}
+
+
+}
+

@@ -1,0 +1,75 @@
+leader_traits = {
+	#玖玖瑠
+	#荷包蛋贫乳
+	HBDPR = {
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		political_power_factor = 0.5
+		research_speed_factor = 0.05
+		stability_weekly = 0.01
+		war_support_weekly = 0.01
+		command_power_gain = 1
+		max_command_power = 1000
+		experience_gain_army = 1
+		experience_gain_navy = 1
+		experience_gain_air = 1
+		offensive_war_stability_factor = 0.5
+		defensive_war_stability_factor = 0.5
+		navy_intel_to_others = -50
+		civilian_intel_to_others = -50
+		army_intel_to_others = -50
+		air_intel_to_others = -50
+		resistance_target = -0.5
+		conscription = 0.05
+		resistance_growth = -1
+
+		compliance_starting_value = 0.5
+		compliance_growth = 3
+		justify_war_goal_time = -1.5
+		surrender_limit = 1
+		opinion_gain_monthly_factor = 2.5
+	}
+	#国家计委主席
+	GJJWZX = {
+		consumer_goods_factor = -1
+		production_speed_buildings_factor = 1
+		production_factory_start_efficiency_factor = 0.5
+		line_change_production_efficiency_factor = 0.5
+		production_factory_efficiency_gain_factor = 0.5
+		production_factory_max_efficiency_factor = 0.5
+		industrial_capacity_factory = 0.75
+		industrial_capacity_dockyard = 0.75
+		production_speed_industrial_complex_factor = 0.5
+		production_speed_arms_factory_factor = 0.5
+        production_speed_supply_node_factor = 3
+        production_speed_rail_way_factor = 1
+        production_speed_infrastructure_factor = 1
+		local_resources_factor = 1.5
+		production_lack_of_resource_penalty_factor = -0.5 
+		resource_trade_cost_bonus_per_factory = 988
+		army_fuel_capacity_factor = 0.5
+		no_supply_grace = 120
+		base_fuel_gain_factor = 1
+		max_fuel_factor = 1
+		army_fuel_consumption_factor = -0.5
+		air_fuel_consumption_factor = -0.5
+		navy_fuel_consumption_factor = -0.5
+		supply_consumption_factor = -0.25
+		out_of_supply_factor = -0.5
+		attrition = -0.25
+		heat_attrition_factor = -0.25
+		winter_attrition_factor = -0.25
+		truck_attrition_factor = -0.5
+		
+	}
+	#国家科学院长
+	GJKXYZ = {
+		research_speed_factor = 1
+		military_industrial_organization_research_bonus = 0.5
+		military_industrial_organization_funds_gain = 2.5
+		military_industrial_organization_industrial_manufacturer_assign_cost = -0.9
+		production_speed_nuclear_reactor_factor = 2
+	}
+}
+
+

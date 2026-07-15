@@ -68,7 +68,7 @@ sub_units = {
 
 		priority = 610
 		ai_priority = 200
-		active = yes
+		active = no
 
 		type = {
 			mechanized
@@ -147,7 +147,7 @@ sub_units = {
 
 		priority = 610
 		ai_priority = 200
-		active = yes
+		active = no
 
 		type = {
 			mechanized
@@ -188,6 +188,8 @@ sub_units = {
 			infantry_equipment
 			mechanized_equipment
 			modern_tank_chassis
+
+
 		}
 
 		# this is what moves us and sets speed

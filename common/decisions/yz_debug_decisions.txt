@@ -1,295 +1,740 @@
 debug_yuzu_they_will_know_fear = {
-	teeeeeeeeeest = {	
-		priority = 100000
-		visible = {
-			is_debug = yes
-		}
-		complete_effect = {
-			character_list_tooltip = {
-				limit = {
-					yz_general = yes
-				}
-				random_select_amount = 1000
-			}
-			
-		}
-	}
-	get_money = {     #测试柚子资金
-	    priority = 1000000
-	    visible = {
-			is_debug = yes
-			has_country_flag = qiyong_youzi_2
-	    }
-		complete_effect = {
-			add_to_variable = {
-				yz_money = 5000
-			}
-		}
-	}
-	get_yujinjin = {    #获取柚金金
-		priority = 999999
-		visible = {
-			is_debug = yes
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			add_to_variable = {
-				Yuzu_fund = 10
-			}
-		}
-	}
-	get_power = {	##测试用加各种点数
-		priority = 100000
-		visible = {
-			is_debug = yes
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			add_political_power = 2000
-			add_war_support = 1000
-			add_command_power = 1000
-			army_experience = 1000
-			add_stability = 1000
-			add_to_variable = {
-				yz_money = 10000
-			}
-		}
-	}
+    teeeeeeeeeest = {
+        priority = 100000
+        visible = {
+            is_debug = yes
+        }
+        complete_effect = {
+            character_list_tooltip = {
+                limit = {
+                    yz_general = yes
+                }
+                random_select_amount = 1000
+            }
 
-	add_love_depth = {	##测试用加满好感
-		priority = 100000
-		visible = {
-			is_debug = yes
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			add_to_variable = {
-				love_depth = 1000
-			}
-			clamp_variable = {		#范围
-				var = love_depth
-				min = -100
-				max = 200
-			}
-		}
-	}
+        }
+    }
+    get_money = {     #测试柚子资金
+        priority = 1000000
+        visible = {
+            is_debug = yes
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = 5000
+            }
+        }
+    }
+    get_yujinjin = {    #获取柚金金
+        priority = 999999
+        visible = {
+            is_debug = yes
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                Yuzu_fund = 10
+            }
+        }
+    }
+    get_power = {	##测试用加各种点数
+        priority = 100000
+        visible = {
+            is_debug = yes
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            add_political_power = 2000
+            add_war_support = 1000
+            add_command_power = 1000
+            army_experience = 1000
+            add_stability = 1000
+            add_to_variable = {
+                yz_money = 10000
+            }
+        }
+    }
 
-	subtract_love_depth = {	##测试用清空好感
-		priority = 100000
-		visible = {
-			is_debug = yes
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			add_to_variable = {
-				love_depth = -1000
-			}
-			clamp_variable = {		#范围
-				var = love_depth
-				min = -100
-				max = 200
-			}
-		}
-	}
-	
-	
+    add_love_depth = {	##测试用加满好感
+        priority = 100000
+        visible = {
+            is_debug = yes
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                love_depth = 1000
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 500
+            }
+        }
+    }
 
-	debug_love_sana_everyday_de = {#只要有爱每天都能让她开心
-		icon = GFX_zuonai
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_trait
-					}
-					add_unit_leader_trait = maid_sana_birthday_boost1	
-					add_unit_leader_trait = maid_sana_birthday_boost2	
-					add_unit_leader_trait = maid_sana_birthday_boost3	
-					add_unit_leader_trait = maid_sana_birthday_boost4	
-					add_unit_leader_trait = maid_sana_birthday_boost5	
-					add_skill_level = 99  
-					add_logistics = 99
-					add_planning = 99
-					add_defense = 99
-					add_attack = 99
-				}
-			set_country_flag = debug_love_sana_everyday
-		}
+    subtract_love_depth = {	##测试用清空好感
+        priority = 100000
+        visible = {
+            is_debug = yes
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                love_depth = -1000
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+        }
+    }
+    I_want_to_marry_everyone = {
+        visible = {
+            is_debug = yes
+        }
+        complete_effect = {
+            clr_country_flag = havent_married
+        }
+    }
 
-	}
-	debug_sana_first = {#佐奈天下第一！
-		icon = GFX_zuonai
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-				every_army_leader = {
-					add_unit_leader_trait = maid_sana_birthday_boost1	
-					add_unit_leader_trait = maid_sana_birthday_boost2	
-					add_unit_leader_trait = maid_sana_birthday_boost3	
-					add_unit_leader_trait = maid_sana_birthday_boost4	
-					add_unit_leader_trait = maid_sana_birthday_boost5	
-					add_skill_level = 99  
-					add_logistics = 99
-					add_planning = 99
-					add_defense = 99
-					add_attack = 99
-				}
-		}
 
-	}
+    debug_love_sana_everyday_de = {#只要有爱每天都能让她开心
+        icon = GFX_zuonai
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_sana_trait
+                }
+                add_unit_leader_trait = maid_sana_birthday_boost1
+                add_unit_leader_trait = maid_sana_birthday_boost2
+                add_unit_leader_trait = maid_sana_birthday_boost3
+                add_unit_leader_trait = maid_sana_birthday_boost4
+                add_unit_leader_trait = maid_sana_birthday_boost5
+                add_skill_level = 99
+                add_logistics = 99
+                add_planning = 99
+                add_defense = 99
+                add_attack = 99
+            }
+            set_country_flag = debug_love_sana_everyday
+        }
 
-	everyone_get_all_positive_traits = {#有新角色不必要往里面加
-		icon = GFX_fumika
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-				#country_event = { id = ASHC_event.1 }
-				add_country_leader_trait = SZDWN
-				add_country_leader_trait = SZRM
-				add_country_leader_trait = mhtm
-				add_country_leader_trait = sairi_leader_trait
-				add_country_leader_trait = gtzr
-				add_country_leader_trait = CZRYJZ
-				add_country_leader_trait = 0721
-				add_country_leader_trait = JLYM
-				add_country_leader_trait = RMZL
-				add_country_leader_trait = KZB
-				add_country_leader_trait = ZXZS
-				add_country_leader_trait = JJKYDLDZ 
-				add_country_leader_trait = GTCJ
-				add_country_leader_trait = navy_Yamato_nadeshiko
-				add_country_leader_trait = renminzhihui
-				add_country_leader_trait = SZDDL
-				add_country_leader_trait = XFJC
-				add_country_leader_trait = MY
-				add_ideas = fruit_cake
-				add_ideas = chocolate_donuts
-				add_ideas = cream_pudding
-				add_ideas = xiangcaosongbing
-				add_ideas = mengbulang
-				add_ideas = tilamisu
-				add_ideas = the_fool
-				add_ideas = the_chariot
-				add_ideas = the_sun
-				add_ideas = the_death_down
-				add_ideas = judgement
-				add_ideas = justice
-				add_ideas = the_strength
-				add_ideas = temperrance
-				add_ideas = the_devil
-				add_ideas = the_emperor
-				add_ideas = the_empress
-				add_ideas = the_hanged_man
-				add_ideas = the_hermit
-				add_ideas = the_hierophant
-				add_ideas = the_high_priestess
-				add_ideas = the_lovers
-				add_ideas = the_magician
-				add_ideas = the_moon_down
-				add_ideas = the_star
-				add_ideas = the_tower_down
-				add_ideas = the_world
-				add_ideas = wheel_of_fortune
+    }
+    debug_sana_first = {#佐奈天下第一！
+        icon = GFX_zuonai
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_army_leader = {
+                add_unit_leader_trait = maid_sana_birthday_boost1
+                add_unit_leader_trait = maid_sana_birthday_boost2
+                add_unit_leader_trait = maid_sana_birthday_boost3
+                add_unit_leader_trait = maid_sana_birthday_boost4
+                add_unit_leader_trait = maid_sana_birthday_boost5
+                add_skill_level = 99
+                add_logistics = 99
+                add_planning = 99
+                add_defense = 99
+                add_attack = 99
+            }
+        }
 
-				set_country_flag  = tarot_the_fool
-				set_country_flag  = tarot_the_chariot
-				set_country_flag  = tarot_the_sun
-				set_country_flag  = tarot_death_down
-				set_country_flag  = tarot_judgement
-				set_country_flag  = tarot_justice
-				set_country_flag  = tarot_the_strength
-				set_country_flag  = tarot_temperrance
-				set_country_flag  = tarot_the_devil
-				set_country_flag  = tarot_the_emperor
-				set_country_flag  = tarot_the_empress
-				set_country_flag  = tarot_the_hanged_man
-				set_country_flag  = tarot_the_hermit
-				set_country_flag  = tarot_the_hierophant
-				set_country_flag  = tarot_high_priestess
-				set_country_flag  = tarot_the_lovers
-				set_country_flag  = tarot_the_magician
-				set_country_flag  = tarot_the_moon_down
-				set_country_flag  = tarot_the_star
-				set_country_flag  = tarot_the_tower_down
-				set_country_flag  = tarot_the_world
-				set_country_flag  = tarot_wheel_of_fortune
-				every_army_leader = {
-					add_unit_leader_trait = maid_sana_birthday_boost1	
-					add_unit_leader_trait = maid_sana_birthday_boost2	
-					add_unit_leader_trait = maid_sana_birthday_boost3	
-					add_unit_leader_trait = maid_sana_birthday_boost4	
-					add_unit_leader_trait = maid_sana_birthday_boost5
-					add_unit_leader_trait = maid_ninging_trait	
-					add_unit_leader_trait = maid_meigulu_trait	
-					add_unit_leader_trait = maid_chou_trait	
-					add_unit_leader_trait = maid_congyu_trait	
-					add_unit_leader_trait = maid_congyu_trait_1	
-					add_unit_leader_trait = maid_mozi_trait	
-					add_unit_leader_trait = maid_fangnai_trait	
-					add_unit_leader_trait = maid_fangnai2_trait 	
-					add_unit_leader_trait = maid_fangnai3_trait	
-					add_unit_leader_trait = maid_cuodao_trait	
-					add_unit_leader_trait = maid_cuodao_trait1	
-					add_unit_leader_trait = maid_cuodao_trait2	
-					add_unit_leader_trait = maid_qihai_trait	
-					add_unit_leader_trait = maid_kanna_trait	
-					add_unit_leader_trait = maid_gongping_trait	
-					add_unit_leader_trait = maid_noa_trait	
-					add_unit_leader_trait = maid_noa1_trait	
-					add_unit_leader_trait = maid_noa2_trait	
-					add_unit_leader_trait = maid_noa3_trait	
-					add_unit_leader_trait = maid_sana_trait	
-					add_unit_leader_trait = maid_zaozi_trait	
-					add_unit_leader_trait = maid_chihaya_trait_2	
-					add_unit_leader_trait = maid_chihaya_trait_3	
-					add_unit_leader_trait = maid_chihaya_trait_4	
-					add_unit_leader_trait = maid_chihaya_trait_5	
-					add_unit_leader_trait = maid_chihaya_trait	
-					add_unit_leader_trait = maid_hazuki_trait	
-					add_unit_leader_trait = maid_sairi_trait_1	
-					add_unit_leader_trait = maid_sairi_trait_2	
-					add_unit_leader_trait = maid_fumika_trait	
-					add_unit_leader_trait = maid_amane_trait	
-					add_unit_leader_trait = maid_kurumi_trait	
-					add_unit_leader_trait = maid_nozomi_trait_1	
-					add_unit_leader_trait = maid_toko_trait	
-					add_unit_leader_trait = maid_wakana_trait	
-					add_unit_leader_trait = maid_suzune_trait	
-					add_unit_leader_trait = maid_miu_trait	
-					add_unit_leader_trait = maid_masaki_trait	
-					add_unit_leader_trait = maid_Mayu_trait	
-					add_unit_leader_trait = maid_astral_boost1	
-					add_unit_leader_trait = maid_astral_boost2	
-					add_unit_leader_trait = maid_astral_boost3	
-					add_unit_leader_trait = yz_weizi_trait	
-					add_unit_leader_trait = yz_amane_trait_1	
-					add_unit_leader_trait = yz_amane_trait_2	
-					add_unit_leader_trait = maid_kotori_trait	
-					add_unit_leader_trait = maid_shirley_trait	
-					add_unit_leader_trait = married_trait	
-					add_unit_leader_trait = ATRI_trait	
-					add_unit_leader_trait = tielurenou	
-					add_unit_leader_trait = maid_tielurenou1_trait	
-					add_skill_level = 99  
-					add_logistics = 99
-					add_planning = 99
-					add_defense = 99
-					add_attack = 99
-					promote_leader = yes
-				}
-		}
-	}
+    }
+    debug_gain_unit_xp = {   #给梨乃加3000经验（测试BMI机制）——2025.8.6，16：00
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_army_leader = {
+                limit = {
+                    has_trait = ibaraki_rino_only_at_night
+                }
+                gain_xp = 3000
+                #add_skill_level = -1
+            }
+        }
+    }
+    debug_tsubasa_gain_unit_xp = {   #给城门翼加3000经验（测试BMI机制）——2026.4.29，23：26
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_army_leader = {
+                limit = {
+                    has_trait = kido_tsubasa_only_at_sun
+                }
+                gain_xp = 3000
+                #add_skill_level = -1
+            }
+        }
+    }
+    debug_nuke_liuhuangdao = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            ROOT = {
+                launch_nuke = {
+                    province = 13025
+                    use_nuke = no
+                }
+            }
+        }
+    }
+    debug_nuke_some_place = {    #选择一些地方  太好玩啦——御坂真琴 2026.4.6，19：30
+        icon = GFX_prepare_strike_ic
+        state_target = yes
+        target_root_trigger = {
+            is_debug = yes
+        }
+        target_trigger = {
+            FROM = {
+                controller = {
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    has_state_flag = we_will_be_nuke
+                    has_state_flag = we_will_be_nuke_H
+                }
+            }
+        }
+        on_map_mode = map_only
+        complete_effect = {
+            FROM = {
+                set_state_flag = we_will_be_nuke
+            }
+        }
+    }
+    debug_drop_nuke = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_state = {
+                limit = {
+                    has_state_flag = we_will_be_nuke
+                }
+                PREV = {
+                    launch_nuke = {
+                        state = PREV
+                        use_nuke = no
+                    }
+                }
+                damage_units = {
+                    state = THIS
+                    damage = 0.6
+                    ratio = yes
+                    army = yes
+                    navy = yes
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            is_core_of = ROOT
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = fallout_atomic
+                        days = 180
+                    }
+                }
+
+                clr_state_flag = we_will_be_nuke
+            }
+            #every_country = {
+            #    limit = {
+            #        has_war_with = ROOT
+            #    }
+            #    every_controlled_state = {
+            #        limit = {
+            #            has_state_flag = we_will_be_nuke
+            #        }
+            #        PREV = {
+            #            launch_nuke = {
+            #                state = PREV
+            #                use_nuke = no
+            #            }
+            #        }
+            #        damage_units = {
+            #            state = THIS
+            #            damage = 0.6
+            #            ratio = yes
+            #            army = yes
+            #            navy = yes
+            #        }
+            #        clr_state_flag = we_will_be_nuke
+            #    }
+            #}
+        }
+    }
+    debug_nuke_some_place_H = {    #选择一些地方，进行热核打击  爆！御坂真琴 2026.4.10，11：48
+        icon = GFX_prepare_strike_ic
+        state_target = yes
+        target_root_trigger = {
+            is_debug = yes
+        }
+        target_trigger = {
+            FROM = {
+                controller = {
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    has_state_flag = we_will_be_nuke
+                    has_state_flag = we_will_be_nuke_H
+                }
+            }
+        }
+        on_map_mode = map_only
+        complete_effect = {
+            FROM = {
+                set_state_flag = we_will_be_nuke_H
+            }
+        }
+    }
+    debug_drop_nuke_H = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_state = {
+                limit = {
+                    has_state_flag = we_will_be_nuke_H
+                }
+                PREV = {
+                    launch_nuke = {
+                        state = PREV
+                        use_nuke = no
+                        nuke_type = thermonuclear_bomb
+                    }
+                }
+                damage_units = {
+                    state = THIS
+                    damage = 0.9
+                    ratio = yes
+                    army = yes
+                    navy = yes
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            is_core_of = ROOT
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = fallout_atomic
+                        days = 90
+                    }
+                }
+                clr_state_flag = we_will_be_nuke_H
+            }
+        }
+    }
+    debug_change_leader_picture = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            hidden_effect = {
+                every_character = {
+                    limit = { is_country_leader = yes }
+                    ROOT = {
+                        set_variable = { we_leader_now = PREV}
+                    }
+                    save_event_target_as = yuzu_current_leader
+                    #PREV = {
+                    #    set_portrait = {              #不要试图理解这些被注释的代码是什么——2026.4.12，御坂真琴，23：39
+                    #        character = PREV
+                    #        civilian = { large ="GFX_leader_misaka_makoto" }
+                    #    }
+                    #
+                    #}
+                    #ROOT = {
+                    #    set_portrait = {
+                    #        character = PREV.GetLeader
+                    #        civilian = { large ="GFX_leader_misaka_makoto" }
+                    #    }
+                    #}
+                    ##set_portraits = {
+                    ##    civilian = {
+                    ##        large = "gfx\leader\misaka_makoto.png"
+                    ##    }
+                    ##}
+                    set_character_name = "御坂真琴"
+                }
+                meta_effect = {
+                    text = {
+                        #set_portraits = {
+                        #    character = [?we_leader_now.GetTokenKey]
+                        #    civilian = {
+                        #        large = "gfx\leader\misaka_makoto.png"
+                        #    }
+                        #}
+                        #set_portraits = {
+                        #    character = [we_leader_now.GetTokenKey]
+                        #    civilian = {
+                        #       large = "gfx\leader\misaka_makoto.png"
+                        #    }
+                        #}
+                        #set_portraits = {
+                        #    character = [we_leader_yuzu.GetTokenKey]
+                        #    civilian = {
+                        #        large = "gfx\leader\misaka_makoto.png"
+                        #    }
+                        #}
+                        #set_portraits = {
+                        #    character = [?we_leader_yuzu.GetTokenKey]
+                        #    civilian = {
+                        #        large = "gfx\leader\misaka_makoto.png"
+                        #    }
+                        #}
+                        set_portraits = {
+                            character = [we_leader_yuzu]
+                            civilian = {
+                                large = "gfx\leader\misaka_makoto.png"
+                            }
+                        }
+                        #[we_leader_yuzu] = {
+                        #    set_portrait = {
+                        #        civilian = {
+                        #            large = "gfx\leader\misaka_makoto.png"
+                        #        }
+                        #    }
+                        #}
+                        #[we_leader_now] = {
+                        #    set_portrait = {
+                        #        civilian = {
+                        #            large = "gfx\leader\misaka_makoto.png"
+                        #        }
+                        #    }
+                        #}
+                    }
+                    we_leader_yuzu = "[?ROOT.we_leader_now]"
+                    #we_leader_yuzu = [?ROOT.we_leader_now.GetTokenKey]
+                }
+
+                #set_variable = { our_leader_now = token:[event_target:yuzu_current_leader.GetTokenKey] }   #下面这些也一样
+                #meta_effect = {                            #我也不知道这些为什么要这样，我不知道是我的问题还是copilot的问题
+                #
+                #    text = {
+                #        set_variable = {
+                #            var = our_leader_now
+                #            value = ROOT.GetLeader
+                #        }
+                #        ROOT = {
+                #            set_portraits = {
+                #                character = our_leader_now
+                #                civilian = { large ="GFX_leader_misaka_makoto" }
+                #            }
+                #        }
+                #        ROOT = {
+                #            set_portraits = {
+                #                character = ROOT.GetLeader
+                #                civilian = { large ="GFX_leader_misaka_makoto" }
+                #            }
+                #        }
+                #    }
+                #
+                #}
+            }
+        }
+    }
+    debug_remove_all_trait = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_character = {
+                limit = {
+                    is_country_leader = yes
+                }
+                if = {
+                    limit = { ROOT = { has_government = communism } }
+                    remove_country_leader_role = { ideology = marxism }
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = marxism
+                            traits = { new_lenin }
+                            desc = misaka_makoto_leader_desc
+                        }
+                    }
+                }
+                if = {
+                    limit = { ROOT = { has_government = democratic } }
+                    remove_country_leader_role = { ideology = conservatism }
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = conservatism
+                            traits = { new_lenin }
+                            desc = misaka_makoto_leader_desc
+                        }
+                    }
+                }
+            }
+        }
+    }
+    debug_clean_traits_and_desc = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            every_character = {
+                limit = {
+                    is_country_leader = yes
+                }
+                clean_all_traits_and_desc = yes
+            }
+        }
+    }
+    debug_test_bianliang = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            ROOT = {
+                set_variable = { test_bianliang = token:dockyard  }
+                set_variable = { test_out_number = 10 }
+            }
+            meta_effect = {
+                text = {
+                    add_offsite_building = {
+                        type = [test_inside_bianliang]
+                        #level = ROOT.test_out_number
+                        level = test_out_number
+                    }
+                }
+                test_bumber = 10
+                test_inside_bianliang = "[?ROOT.test_bianliang]"
+            }
+        }
+    }
+    debug_ea = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            focus_EU111_QMV_result = yes
+            add_to_array = {
+                array = global.EU_passed_votes
+                value = 112
+            }
+        }
+    }
+    debug_is_nor_mode_now = {
+        visible = {
+            is_debug = yes
+            has_global_flag = mod_in_nor_mode
+        }
+        available = {
+            is_debug = yes
+            has_global_flag = mod_in_nor_mode
+        }
+        complete_effect = {
+            add_political_power = 1000
+        }
+    }
+    everyone_get_all_positive_traits = {#有新角色不必要往里面加
+        icon = GFX_fumika
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            #country_event = { id = ASHC_event.1 }
+            add_country_leader_trait = SZDWN
+            add_country_leader_trait = SZRM
+            add_country_leader_trait = mhtm
+            add_country_leader_trait = sairi_leader_trait
+            add_country_leader_trait = gtzr
+            add_country_leader_trait = CZRYJZ
+            add_country_leader_trait = 0721
+            add_country_leader_trait = JLYM
+            add_country_leader_trait = RMZL
+            add_country_leader_trait = KZB
+            add_country_leader_trait = ZXZS
+            add_country_leader_trait = JJKYDLDZ
+            add_country_leader_trait = GTCJ
+            add_country_leader_trait = navy_Yamato_nadeshiko
+            add_country_leader_trait = renminzhihui
+            add_country_leader_trait = SZDDL
+            add_country_leader_trait = XFJC
+            add_country_leader_trait = MY
+            add_ideas = fruit_cake
+            add_ideas = chocolate_donuts
+            add_ideas = cream_pudding
+            add_ideas = xiangcaosongbing
+            add_ideas = mengbulang
+            add_ideas = tilamisu
+            add_ideas = the_fool
+            add_ideas = the_chariot
+            add_ideas = the_sun
+            add_ideas = the_death_down
+            add_ideas = judgement
+            add_ideas = justice
+            add_ideas = the_strength
+            add_ideas = temperrance
+            add_ideas = the_devil
+            add_ideas = the_emperor
+            add_ideas = the_empress
+            add_ideas = the_hanged_man
+            add_ideas = the_hermit
+            add_ideas = the_hierophant
+            add_ideas = the_high_priestess
+            add_ideas = the_lovers
+            add_ideas = the_magician
+            add_ideas = the_moon_down
+            add_ideas = the_star
+            add_ideas = the_tower_down
+            add_ideas = the_world
+            add_ideas = wheel_of_fortune
+
+            set_country_flag  = tarot_the_fool
+            set_country_flag  = tarot_the_chariot
+            set_country_flag  = tarot_the_sun
+            set_country_flag  = tarot_death_down
+            set_country_flag  = tarot_judgement
+            set_country_flag  = tarot_justice
+            set_country_flag  = tarot_the_strength
+            set_country_flag  = tarot_temperrance
+            set_country_flag  = tarot_the_devil
+            set_country_flag  = tarot_the_emperor
+            set_country_flag  = tarot_the_empress
+            set_country_flag  = tarot_the_hanged_man
+            set_country_flag  = tarot_the_hermit
+            set_country_flag  = tarot_the_hierophant
+            set_country_flag  = tarot_high_priestess
+            set_country_flag  = tarot_the_lovers
+            set_country_flag  = tarot_the_magician
+            set_country_flag  = tarot_the_moon_down
+            set_country_flag  = tarot_the_star
+            set_country_flag  = tarot_the_tower_down
+            set_country_flag  = tarot_the_world
+            set_country_flag  = tarot_wheel_of_fortune
+            every_army_leader = {
+                add_unit_leader_trait = maid_sana_birthday_boost1
+                add_unit_leader_trait = maid_sana_birthday_boost2
+                add_unit_leader_trait = maid_sana_birthday_boost3
+                add_unit_leader_trait = maid_sana_birthday_boost4
+                add_unit_leader_trait = maid_sana_birthday_boost5
+                add_unit_leader_trait = maid_ninging_trait
+                add_unit_leader_trait = maid_meigulu_trait
+                add_unit_leader_trait = maid_chou_trait
+                add_unit_leader_trait = maid_congyu_trait
+                add_unit_leader_trait = maid_congyu_trait_1
+                add_unit_leader_trait = maid_mozi_trait
+                add_unit_leader_trait = maid_fangnai_trait
+                add_unit_leader_trait = maid_fangnai2_trait
+                add_unit_leader_trait = maid_fangnai3_trait
+                add_unit_leader_trait = maid_cuodao_trait
+                add_unit_leader_trait = maid_cuodao_trait1
+                add_unit_leader_trait = maid_cuodao_trait2
+                add_unit_leader_trait = maid_qihai_trait
+                add_unit_leader_trait = maid_kanna_trait
+                add_unit_leader_trait = maid_gongping_trait
+                add_unit_leader_trait = maid_noa_trait
+                add_unit_leader_trait = maid_noa1_trait
+                add_unit_leader_trait = maid_noa2_trait
+                add_unit_leader_trait = maid_noa3_trait
+                add_unit_leader_trait = maid_sana_trait
+                add_unit_leader_trait = maid_zaozi_trait
+                add_unit_leader_trait = maid_chihaya_trait_2
+                add_unit_leader_trait = maid_chihaya_trait_3
+                add_unit_leader_trait = maid_chihaya_trait_4
+                add_unit_leader_trait = maid_chihaya_trait_5
+                add_unit_leader_trait = maid_chihaya_trait
+                add_unit_leader_trait = maid_hazuki_trait
+                add_unit_leader_trait = maid_sairi_trait_1
+                add_unit_leader_trait = maid_sairi_trait_2
+                add_unit_leader_trait = maid_fumika_trait
+                add_unit_leader_trait = maid_amane_trait
+                add_unit_leader_trait = maid_kurumi_trait
+                add_unit_leader_trait = maid_nozomi_trait_1
+                add_unit_leader_trait = maid_toko_trait
+                add_unit_leader_trait = maid_wakana_trait
+                add_unit_leader_trait = maid_suzune_trait
+                add_unit_leader_trait = maid_miu_trait
+                add_unit_leader_trait = maid_masaki_trait
+                add_unit_leader_trait = maid_Mayu_trait
+                add_unit_leader_trait = maid_astral_boost1
+                add_unit_leader_trait = maid_astral_boost2
+                add_unit_leader_trait = maid_astral_boost3
+                add_unit_leader_trait = yz_weizi_trait
+                add_unit_leader_trait = yz_amane_trait_1
+                add_unit_leader_trait = yz_amane_trait_2
+                add_unit_leader_trait = maid_kotori_trait
+                add_unit_leader_trait = maid_shirley_trait
+                add_unit_leader_trait = married_trait
+                add_unit_leader_trait = ATRI_trait
+                add_unit_leader_trait = tielurenou
+                add_unit_leader_trait = maid_tielurenou1_trait
+                add_skill_level = 99
+                add_logistics = 99
+                add_planning = 99
+                add_defense = 99
+                add_attack = 99
+                promote_leader = yes
+            }
+        }
+    }
 }

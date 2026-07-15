@@ -1,0 +1,15 @@
+#柚子彩蛋是否开启
+youzu_easter_egg_rule = {
+	name = "youzu_easter_egg_rule"
+	group = "RULE_GROUP_youzu_SETUP"
+	default = {
+		name = DEFAULT
+		text = "YUZU_OPTION"
+		desc = "youzu_easter_egg_rule_off_desc"
+	}
+	option = {
+		name = youzu_easter_egg_rule_on
+		text = "youzu_easter_egg_rule_on_t"
+		desc = "youzu_easter_egg_rule_on_desc"
+	}
+}

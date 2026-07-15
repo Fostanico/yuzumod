@@ -3,5 +3,21 @@ yuzu_cultural_department_category = {
 		has_country_flag = qiyong_youzi_2
 		has_country_flag = qiyong_yuzu_culture_department
 	}
+	icon = GFX_Category_decision
 	priority = 10
+}
+yuzu_economy_department_category = {
+	priority = 3
+	icon = GFX_Category_decision
+	visible = {
+		has_country_flag = qiyong_youzi_2
+		or = {
+			has_country_flag = Yoshino_industry_five_year_yes_by_loan
+		}
+		has_country_flag = now_we_issuing_bonds
+		NOT = {
+			has_country_flag = finished_repayment_of_bonds
+			has_country_flag = yz_economy_department_category_close_flag
+		}
+	}
 }

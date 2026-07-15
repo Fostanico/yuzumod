@@ -1,0 +1,200 @@
+on_actions = {
+	# 作用：将婚后系统的兼容检查、冷却、限时效果与属性变化合并为单次每周结算；要点：天数变量每周按7推进，彻底移除婚后每日on_action。署名：伊尔诺+2026-07-04+assisted by Codex
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = havent_married
+					yuzu_married_wife_id_is_registered = yes
+				}
+
+				# 作用：为旧存档补齐本轮新增的学习与汇总变量；要点：以学习天数变量为哨兵，仅在缺失时执行一次。署名：伊尔诺+2026-06-08+assisted by Codex
+				if = {
+					limit = {
+						NOT = {
+							has_variable = yuzu_married_study_days
+						}
+					}
+					set_variable = { yuzu_married_study_days = 0 }
+					set_variable = { yuzu_married_study_research_effect = 0 }
+					set_variable = { yuzu_married_study_political_effect = 0 }
+					set_variable = { yuzu_married_study_output_effect = 0 }
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = yuzu_married_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = yuzu_married_dynamic_modifier
+					}
+				}
+
+				# 作用：为旧存档补齐立绘序号变量；要点：缺失时默认显示当前妻子的第一张立绘。署名：伊尔诺+2026-06-08+assisted by Codex
+				if = {
+					limit = {
+						NOT = {
+							has_variable = number_of_portrait
+						}
+					}
+					set_variable = { number_of_portrait = 1 }
+				}
+
+				# 作用：为旧存档补齐SD序号与角色专属上限；要点：当前43号角色为7张，非法序号自动回退第一张。署名：伊尔诺+2026-06-09+assisted by Codex
+				if = {
+					limit = {
+						NOT = {
+							has_variable = number_of_sd
+						}
+					}
+					set_variable = { number_of_sd = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { wife_id = 43 }
+						NOT = {
+							has_variable = number_of_sd_max
+						}
+					}
+					set_variable = { number_of_sd_max = 7 }
+				}
+				if = {
+					limit = {
+						OR = {
+							check_variable = { number_of_sd < 1 }
+							check_variable = {
+								var = number_of_sd
+								value = number_of_sd_max
+								compare = greater_than
+							}
+						}
+					}
+					set_variable = { number_of_sd = 1 }
+				}
+
+				# 作用：兼容旧存档并每周推进共享约会冷却；要点：仍以天为显示单位，每周增加7并封顶90。署名：伊尔诺+2026-07-04+assisted by Codex
+				if = {
+					limit = {
+						NOT = {
+							has_variable = yuzu_married_date_cooldown
+						}
+					}
+					set_variable = { yuzu_married_date_cooldown = 90 }
+				}
+				if = {
+					limit = { check_variable = { yuzu_married_date_cooldown < 90 } }
+					add_to_variable = { yuzu_married_date_cooldown = 7 }
+					clamp_variable = { var = yuzu_married_date_cooldown min = 0 max = 90 }
+				}
+
+				# 作用：每周推进三项互动冷却；要点：每次增加7天并封顶90。署名：伊尔诺+2026-07-04+assisted by Codex
+				if = {
+					limit = { check_variable = { married_interact_kiss_cooldown < 90 } }
+					add_to_variable = { married_interact_kiss_cooldown = 7 }
+					clamp_variable = { var = married_interact_kiss_cooldown min = 0 max = 90 }
+				}
+				if = {
+					limit = { check_variable = { married_interact_study_cooldown < 90 } }
+					add_to_variable = { married_interact_study_cooldown = 7 }
+					clamp_variable = { var = married_interact_study_cooldown min = 0 max = 90 }
+				}
+				if = {
+					limit = { check_variable = { married_interact_play_cooldown < 90 } }
+					add_to_variable = { married_interact_play_cooldown = 7 }
+					clamp_variable = { var = married_interact_play_cooldown min = 0 max = 90 }
+				}
+
+				# 作用：每周推进三项赠礼冷却；要点：每次增加7天并封顶90。署名：伊尔诺+2026-07-04+assisted by Codex
+				if = {
+					limit = { check_variable = { married_gift_accessory_cooldown < 90 } }
+					add_to_variable = { married_gift_accessory_cooldown = 7 }
+					clamp_variable = { var = married_gift_accessory_cooldown min = 0 max = 90 }
+				}
+				if = {
+					limit = { check_variable = { married_gift_cosmetics_cooldown < 90 } }
+					add_to_variable = { married_gift_cosmetics_cooldown = 7 }
+					clamp_variable = { var = married_gift_cosmetics_cooldown min = 0 max = 90 }
+				}
+				if = {
+					limit = { check_variable = { married_gift_doll_cooldown < 90 } }
+					add_to_variable = { married_gift_doll_cooldown = 7 }
+					clamp_variable = { var = married_gift_doll_cooldown min = 0 max = 90 }
+				}
+
+				# 作用：每周结算学习增益剩余天数；要点：每次减少7，归零时清除三项学习加成。署名：伊尔诺+2026-07-04+assisted by Codex
+				if = {
+					limit = { check_variable = { yuzu_married_study_days > 0 } }
+					add_to_variable = { yuzu_married_study_days = -7 }
+					if = {
+						limit = { check_variable = { yuzu_married_study_days < 1 } }
+						set_variable = { yuzu_married_study_days = 0 }
+						set_variable = { yuzu_married_study_research_effect = 0 }
+						set_variable = { yuzu_married_study_political_effect = 0 }
+						set_variable = { yuzu_married_study_output_effect = 0 }
+					}
+				}
+
+				# 作用：每周结算三种战时支援的剩余天数；要点：每次减少7，效果结束时清零对应变量。署名：伊尔诺+2026-07-04+assisted by Codex
+				if = {
+					limit = { check_variable = { yuzu_married_assistance_days > 0 } }
+					add_to_variable = { yuzu_married_assistance_days = -7 }
+					if = {
+						limit = { check_variable = { yuzu_married_assistance_days < 1 } }
+						set_variable = { yuzu_married_assistance_days = 0 }
+						set_variable = { yuzu_married_assistance_political_effect = 0 }
+						set_variable = { yuzu_married_assistance_stability_effect = 0 }
+						set_variable = { yuzu_married_assistance_planning_effect = 0 }
+					}
+				}
+				if = {
+					limit = { check_variable = { yuzu_married_logistics_days > 0 } }
+					add_to_variable = { yuzu_married_logistics_days = -7 }
+					if = {
+						limit = { check_variable = { yuzu_married_logistics_days < 1 } }
+						set_variable = { yuzu_married_logistics_days = 0 }
+						set_variable = { yuzu_married_logistics_supply_effect = 0 }
+						set_variable = { yuzu_married_logistics_attrition_effect = 0 }
+						set_variable = { yuzu_married_logistics_speed_effect = 0 }
+					}
+				}
+				if = {
+					limit = { check_variable = { yuzu_married_production_days > 0 } }
+					add_to_variable = { yuzu_married_production_days = -7 }
+					if = {
+						limit = { check_variable = { yuzu_married_production_days < 1 } }
+						set_variable = { yuzu_married_production_days = 0 }
+						set_variable = { yuzu_married_production_output_effect = 0 }
+						set_variable = { yuzu_married_production_efficiency_effect = 0 }
+						set_variable = { yuzu_married_production_construction_effect = 0 }
+					}
+				}
+
+				# 作用：每周分别衰减三项关系值并恢复战时支援；要点：关系值低于30后停止衰减，各项独立判断，支援加3。署名：伊尔诺+2026-06-08+assisted by Codex
+				if = {
+					limit = { check_variable = { value_of_loving > 29 } }
+					add_to_variable = { value_of_loving = -1 }
+				}
+				if = {
+					limit = { check_variable = { value_of_believity > 29 } }
+					add_to_variable = { value_of_believity = -1 }
+				}
+				if = {
+					limit = { check_variable = { value_of_relationship > 29 } }
+					add_to_variable = { value_of_relationship = -1 }
+				}
+				add_to_variable = { value_of_help = 3 }
+				clamp_variable = { var = value_of_loving min = 0 max = 100 }
+				clamp_variable = { var = value_of_believity min = 0 max = 100 }
+				clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+				clamp_variable = { var = value_of_help min = 0 max = 100 }
+
+				# 作用：在全部每周结算完成后统一刷新婚后动态修正；要点：避免兼容、倒计时和属性变化在同一周重复刷新。署名：伊尔诺+2026-07-04+assisted by Codex
+				yuzu_married_refresh_effect_values = yes
+			}
+		}
+	}
+}

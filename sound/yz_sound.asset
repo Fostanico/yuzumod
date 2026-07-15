@@ -20,6 +20,11 @@ sound =
 }
 sound = 
 {
+	name = "lenacoming"
+	file = "menu/lenacoming.wav"
+}
+sound = 
+{
 	name = "murasame_end"
 	file = "menu/murasame_end.wav"
 }
@@ -68,6 +73,11 @@ sound =
 {
 	name = "nancoming"
 	file = "menu/nancoming.wav"
+}
+sound = 
+{
+	name = "chisakicoming"
+	file = "menu/chisakicoming.wav"
 }
 sound = 
 {
@@ -208,4 +218,55 @@ sound =
 {
 	name = "rok_kohcoming"
 	file = "menu/rok_kohcoming.wav"
+}
+sound = 
+{
+	name = "nan_window"
+	file = "menu/nan_window.wav"
+}
+sound = 
+{
+	name = "nan_yuzu"
+	file = "menu/nan_yuzu.wav"
+}
+#夏目不是枣子姐
+sound = 
+{
+	name = "ena_recruit"
+	file = "menu/ena_recruit.wav"
+}
+sound = 
+{
+	name = "LLLJ_goodbye"
+	file = "menu/LLLJ_goodbye.wav"
+}
+sound = 
+{
+	name = "ena_Kokuhaku"
+	file = "menu/ena_Kokuhaku.wav"
+}
+sound = 
+{
+	name = "anju_kawaii"
+	file = "menu/anju_kawaii.wav"
+}
+sound = 
+{
+	name = "tsukimi_isshoni"
+	file = "menu/tsukimi_isshoni.wav"
+}
+sound = 
+{
+	name = "nayoka_sabishii"
+	file = "menu/nayoka_sabishii.wav"
+}
+sound = 
+{
+	name = "ririko_suki"
+	file = "menu/ririko_suki.wav"
+}
+sound = 
+{
+	name = "miku_suki"
+	file = "menu/miku_suki.wav"
 }

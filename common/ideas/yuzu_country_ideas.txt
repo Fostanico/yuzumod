@@ -1,0 +1,236 @@
+ideas = {
+    country = {
+        # 吸血鬼军队
+        yuzu_vampire_army = {
+            picture = generic_infantry_bonus
+            modifier = {
+                land_night_attack = 0.50 # 夜战攻击+50%
+                army_org_factor = 0.10   # 组织度+10%
+                army_strength_factor = 0.15 #HP+15%
+            }
+        }
+        
+        # 魔王之力
+        yuzu_demon_power = {
+            picture = generic_morale_bonus
+            modifier = {
+                army_attack_factor = 1.0 # 陆军攻击+100%
+                army_defence_factor = 1.0 # 陆军防御+100%
+            }
+        }
+        
+        # 神之力
+        yuzu_divine_power = {
+            picture = generic_intel_bonus
+            modifier = {
+                core_attack_factor = 0.50 # 核心攻击+50%
+                core_defence_factor = 0.50 # 核心防御+50%
+                supply_grace = 288 # 携行补给+288h
+                production_speed_buildings_factor = 0.50 # 建造速度+50%
+                industrial_capacity_factory = 1.00 # 工厂产出+100%
+                out_of_supply_factor = -1.0 # 核心补给耗尽惩罚-100%
+                production_factory_max_efficiency_factor = 0.50 # 生产效率上限+50%
+                production_factory_efficiency_gain_factor = 1.0 # 生产效率增长+100%
+            }
+        }
+        
+        # 对军国主义的最后一战 (针对日本) -> 在游戏中最好做为国家攻击加成Modifier
+        yuzu_final_battle_buff = {
+            picture = generic_production_bonus
+            modifier = {
+                army_speed_factor = 1.0 # 进攻速度+100%
+                core_attack_factor = 10.0 # 核心攻击+1000%
+                core_defence_factor = 10.0 # 核心防御+1000%
+                # 针对日本的额外加成暂用通用代替或在目标修改器中做
+            }
+            targeted_modifier = {
+                tag = JAP
+                attack_bonus_against = 10.0
+                defense_bonus_against = 10.0
+            }
+        }
+        
+        # 民心涣散 / 柚子势力渗透 (日本及伪满debuff)
+        yuzu_japan_collapse_debuff = {
+            picture = generic_disputes_with_monarchy
+            modifier = {
+                core_attack_factor = -10.0
+                core_defence_factor = -10.0
+                surrender_limit = -0.50 # 投降倾向+50% (-表示更容易投降)
+            }
+        }
+        
+        yuzu_penetration_debuff = {
+            picture = generic_disputes_with_monarchy
+            modifier = {
+                base_stability = -1.0 # 稳定度-100%
+                base_war_support = -1.0 # 战争支持+100%
+                conscription = -0.10 # 适役人口 -10%
+                conscription_factor = -1.0 # 适役人口系数 -100%
+            }
+            targeted_modifier = {
+                tag = YUZ
+                attack_bonus_against = -10.0
+                defense_bonus_against = -10.0
+                breakthrough_bonus_against = -10.0
+            }
+        }
+
+        # 消灭最后的法西斯
+        yuzu_eliminate_fascism_buff = {
+            picture = generic_victors_of_ww1
+            modifier = {
+                supply_consumption_factor = -1.0 # 补给消耗-100%
+                attrition = -1.0 # 损耗-100%
+                army_speed_factor = 1.0 # 速度+100%
+            }
+            targeted_modifier = {
+                tag = MAN
+                attack_bonus_against = 5.0
+                defense_bonus_against = 5.0
+                breakthrough_bonus_against = 5.0
+            }
+        }
+
+        # 战后重建
+        yuzu_post_war_reconstruction = {
+            picture = generic_economic_welfare
+            modifier = {
+                industry_repair_factor = 1.0 # 修复速度+100%
+                production_speed_industrial_complex_factor = 0.50 # 民工
+                production_speed_arms_factory_factor = -0.30 # 军工
+                production_speed_infrastructure_factor = 0.50 # 基建
+                production_speed_buildings_factor = 0.30 # 整体
+                production_speed_dockyard_factor = -0.30 # 船坞
+                consumer_goods_factor = -1.0 # 消费品系数-100%
+            }
+        }
+        yuzu_aid_continent_war = {
+        picture = generic_supply_bonus
+        modifier = {
+            supply_node_range = 1.0 # 补给范围
+            supply_factor = 1.0     # 补给效率+100%
+            consumer_goods_factor = 0.50 # 生活消费品系数+50% (负面惩罚必须用正数)
+            base_stability = -0.10  # 稳定度-10%
+            base_war_support = 0.15 # 战争支持+15%
+        }
+         targeted_modifier = {
+             tag = MAN
+             attack_bonus_against = 1.0  # 对满洲国攻击+100%
+             defense_bonus_against = 1.0 # 对满洲国防御+100%
+        }
+        }
+        Yuzu_land_reform = {
+            picture = generic_production_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.15 # 建造速度+15%
+                production_speed_infrastructure_factor = 0.20 # 基建建造速度+20%
+                global_building_slots = 4 # 地区最大工业值+4
+                global_building_slots_factor = 0.50 # 地区最大工业值+50%
+            }
+        }
+         Yuzu_agriclutural_collectivization = {
+            picture = generic_agriculture
+            modifier = {
+                base_stability = -0.05
+                consumer_goods_factor = -0.25 # 消费品系数-25%
+                global_building_slots = 2
+                global_building_slots_factor = 0.25
+                consumer_goods_expected_value = -0.05 # 期望用于生产的消费品系数-5%
+            }
+        }
+        Yuzu_land_contract = {
+            picture = generic_economic_welfare
+            modifier = {
+                industrial_capacity_factory = 0.20 # 工厂产出+20%
+                production_factory_max_efficiency_factor = 0.20 # 生产效率上限+20%
+                production_speed_buildings_factor = 0.10
+                production_speed_industrial_complex_factor = 0.05
+                production_speed_arms_factory_factor = 0.05
+                production_speed_dockyard_factor = 0.05
+                consumer_goods_factor = 0.10
+            }
+        }
+        Yuzu_split_financial_conglomerates = { 
+            picture = generic_disputes_with_monarchy
+            modifier = {
+                base_stability = -0.10
+                consumer_goods_factor = 0.20
+                production_speed_buildings_factor = 0.30
+                production_speed_industrial_complex_factor = 0.50
+                production_speed_arms_factory_factor = 0.30
+                production_speed_dockyard_factor = 0.30
+                production_speed_infrastructure_factor = 1.00
+            }
+        }
+        Yuzu_vibrant_market = { # 充满活力的市场
+            picture = generic_goods_red_bonus
+            modifier = {
+                base_stability = 0.15
+                consumer_goods_factor = -0.25
+                consumer_goods_expected_value = -0.025
+                production_speed_buildings_factor = 0.30
+                production_speed_industrial_complex_factor = 0.30
+                production_speed_arms_factory_factor = 0.50
+                production_speed_dockyard_factor = 0.50
+                industrial_capacity_factory = 0.30
+                industrial_capacity_dockyard = 0.30
+                production_factory_max_efficiency_factor = 0.20
+                production_factory_efficiency_gain_factor = 0.50
+            }
+        }
+        Yuzu_encourage_enterprises = { # 受引导的企业
+            picture = generic_research_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.15
+                research_speed_factor = 0.20
+                production_speed_supply_node_factor = 1.00 # 补给中心建造速度+100%
+                production_speed_railway_factor = 4.00 # 铁路建造速度+400%
+            }
+        }
+        Yuzu_strengthen_industry_unions = { # 加强工会监管
+            picture = generic_pp_unity_bonus
+            modifier = {
+                consumer_goods_factor = 0.25
+                industrial_capacity_factory = -0.10
+                monthly_population = 0.5
+                conscription = 0.01 # 适役人口+1%
+                conscription_factor = 0.25 # 适役人口系数+25%
+                research_speed_factor = 0.10
+                production_speed_infrastructure_factor = 0.50
+            }
+        }
+        Yuzu_F21_idea = {
+            picture = generic_nationalism
+            modifier = {
+                base_stability = 0.10
+                consumer_goods_factor = -0.20
+                research_speed_factor = 0.15
+                conscription = 0.015
+                mobilization_speed = 0.50 # 动员速度+50%
+                political_power_factor = 0.25
+            }
+        }
+        Yuzu_emperor = { # 柚子天皇
+            picture = generic_monarchy_bonus
+            modifier = {
+                base_stability = 0.20
+                stability_weekly_factor = 0.01
+                base_war_support = 0.20
+                war_support_weekly_factor = 0.20 
+                political_power_factor = 0.50
+            }
+        }
+        Yuzu_secend_congress_idea = { # 勃勃生机万物竞发
+            picture = generic_all_allies_comp
+            modifier = {
+                production_speed_buildings_factor = 0.30
+                research_speed_factor = 0.20
+                industrial_capacity_factory = 0.50
+                industrial_capacity_dockyard = 0.50
+                political_power_factor = 0.20
+                command_power_gain_mult = 0.40 
+            }
+        }
+}
+}

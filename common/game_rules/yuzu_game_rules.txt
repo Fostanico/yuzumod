@@ -1,0 +1,16 @@
+#柚子彩蛋是否开启
+youzu_easter_egg_rule = {
+	name = "youzu_easter_egg_rule"
+	group = "RULE_GROUP_youzu_SETUP"
+	default = {
+		name = I_need_my_love
+		text = "I_need_my_love_help_me"
+		desc = "I_need_my_love_help_me_desc"
+	}
+	option = {
+		name = I_do_not_need_my_love
+		text = "I_do_not_need_my_love"
+		desc = "I_do_not_need_my_love_desc"
+		allow_achievements = yes
+	}
+}

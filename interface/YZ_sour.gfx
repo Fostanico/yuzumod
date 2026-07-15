@@ -1,0 +1,65 @@
+spriteTypes = {
+	#gui相关
+	spriteType = {
+		name = "GFX_yuzusoft_sour"
+		textureFile = "gfx/guis/yzsoft_sour.png"
+	}
+	spriteType = {                                     #这两个是我当时备选的酸柚子图标，2025.5.29,20:39，伊尔诺（其实是昨天写的，
+		name = "GFX_yuzusoft_sour_2"                   #但是忘记写注释了）
+		textureFile = "gfx/guis/yzsoft_sour_2.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_logo"
+		textureFile = "gfx/guis/parquet_logo.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_logo_gaming"
+		textureFile = "gfx/guis/parquet_logo_gaming.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_background"
+		textureFile = "gfx/guis/paruqet_background.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_futari"
+		textureFile = "gfx/guis/parquet_futari.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_futari_2"
+		textureFile = "gfx/guis/parquet_futari_2.png"
+	}
+	spriteType = {
+		name = "GFX_parquet_exit"
+		textureFile = "gfx/guis/paequet_exit.png"
+	}
+	#将领
+	spriteType = {
+		name = "GFX_ibaraki_rino_big"
+		textureFile = "gfx/leader/ibaraki_rino.png"
+	}
+	spriteType = {
+		name = "GFX_kido_tsubasa_big"
+		textureFile = "gfx/leader/kido_tsubasa.png"
+	}
+	#特质
+	spriteType = {
+		name = "GFX_trait_bmi_device"
+		textureFile = "gfx/traits/item_BMI.png"
+	}
+	spriteType = {
+		name = "GFX_trait_bmi_has_worked"
+		textureFile = "gfx/interface/traits/personal/trait_career_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_kido_tsubasa_only_at_sun"
+		textureFile = "gfx/traits/kido_tsubasa_only_at_sun.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ibaraki_rino_only_at_night"
+		textureFile = "gfx/traits/ibaraki_rino_only_at_night.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yasaidaburuninnikuaboramashimashibaagaa_trait"
+		textureFile = "gfx/traits/yasaidaburuninnikuaboramashimashibaagaa_trait.png"
+	}
+}

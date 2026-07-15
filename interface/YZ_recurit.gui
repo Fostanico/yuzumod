@@ -245,6 +245,32 @@ guiTypes = {
 			#clicksound = 
 		} 
 	}
+	#夏目不是枣子姐
+	containerWindowType = {
+		name = "LLLJ"
+		position = { x = 0 y = 0 }
+		orientation = LOWER_RIGHT
+		size = { width = 960 height = 540 } 
+		show_position = { x = -145 y = -720 }
+		hide_position = { x = -77 y = -510 }
+		animation_time = 250
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		moveable = yes
+		background = {
+			name = "LLLJ_BG"
+			quadTextureSprite = "GFX_LLLJ"
+		}
+		buttonType = { 
+			name = "LLLJ"
+			position = { x = 0 y = 0 }  
+			size = { width = 960 height = 540 }
+			quadTextureSprite = "GFX_LLLJ"
+			pdx_tooltip = "LLLJ"
+			clicksound = ena_recruit
+		} 
+	}
+
 	containerWindowType = {		##总招募按钮
 		name = "YZ_recurit"
 		position = { x = -77 y = -510 }
@@ -302,13 +328,13 @@ guiTypes = {
 			clicksound = murcoming
 		} 
 		buttonType = { 
-			name = "recruit_rena"
+			name = "recruit_lena"
 			position = { x = 229 y = 352 } 
 			size = { width = 960 height = 540 }  
-			quadTextureSprite = "GFX_recruit_rena"
-			pdx_tooltip = "recruit_rena"
-			#pdx_tooltip_delayed = "recruit_rena_1"
-			clicksound = clicksound
+			quadTextureSprite = "GFX_recruit_lena"
+			pdx_tooltip = "recruit_lena"
+			pdx_tooltip_delayed = "recruit_lena_1"
+			clicksound = lenacoming
 		} 
 		buttonType = { 
 			name = "recruit_title"
@@ -355,12 +381,12 @@ guiTypes = {
 			pdx_tooltip_delayed = "recruit_murasame_1"
 		} 
 		iconType = { 
-			name = "recruit_rena1"
+			name = "recruit_lena1"
 			position = { x = 229 y = 352 } 
 			size = { width = 960 height = 540 }  
-			quadTextureSprite = "GFX_recruit_rena1"
-			pdx_tooltip = "recruit_rena"
-			#pdx_tooltip_delayed = "recruit_rena_1"
+			quadTextureSprite = "GFX_recruit_lena1"
+			pdx_tooltip = "recruit_lena"
+			pdx_tooltip_delayed = "recruit_lena_1"
 		} 
 		
 		iconType = { 
@@ -579,8 +605,8 @@ guiTypes = {
 			size = { width = 960 height = 540 } 
 			quadTextureSprite = "GFX_recruit_chisaki"
 			pdx_tooltip = "recruit_chisaki"
-			#pdx_tooltip_delayed = "recruit_chisaki_1"
-			#clicksound = coming
+			pdx_tooltip_delayed = "recruit_chisaki_1"
+			clicksound = chisakicoming
 		} 
 
 		iconType = { 
@@ -1454,4 +1480,134 @@ guiTypes = {
 			#clicksound = 
 		} 
 	}
+	#夏目不是枣子姐
+	containerWindowType = {		##聚光灯柠檬果酱
+	name = "LLLJ_recurit"
+		position = { x = 0 y = 0 }
+		orientation = CENTER
+		size = { width = 960 height = 540 } 
+		show_position = { x= -220 y = -280}
+		hide_position = { x= -220 y = -280}
+		animation_time = 200
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		moveable = yes
+
+		background = {
+			name = "LLLJ_recruit_bg"
+			quadTextureSprite = "GFX_LLLJ_recruit_bg"
+		}
+		buttonType = { 
+			name = "recruit_ena"
+			position = { x = 458 y = 240} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_ena"
+			pdx_tooltip = "recruit_ena"
+			clicksound = ena_Kokuhaku
+		} 
+		iconType = {
+			name = "recruit_ena1"
+			position = { x = 458 y = 240 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_ena1"
+			pdx_tooltip = "recruit_ena"
+		} 
+
+		buttonType = { 
+			name = "recruit_anju"
+			position = { x = 212 y = 300} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_anju"
+			pdx_tooltip = "recruit_anju"
+			clicksound = anju_kawaii
+		} 
+		iconType = { 
+			name = "recruit_anju1"
+			position = { x = 212 y = 300 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_anju1"
+			pdx_tooltip = "recruit_anju"
+		}
+
+		buttonType = { 
+			name = "recruit_ririko"
+			position = { x = 50 y = 3} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_ririko"
+			pdx_tooltip = "recruit_ririko"
+			clicksound = ririko_suki
+		} 
+		iconType = { 
+			name = "recruit_ririko1"
+			position = { x = 50 y = 3 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_ririko1"
+			pdx_tooltip = "recruit_ririko"
+		}
+
+		buttonType = { 
+			name = "recruit_tsukimi"
+			position = { x = 60 y = 202} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_tsukimi"
+			pdx_tooltip = "recruit_tsukimi"
+			clicksound = tsukimi_isshoni
+		} 
+		iconType = { 
+			name = "recruit_tsukimi1"
+			position = { x = 60 y = 202 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_tsukimi1"
+			pdx_tooltip = "recruit_tsukimi"
+		}
+
+		buttonType = { 
+			name = "recruit_nayuka"
+			position = { x = 677 y = 202} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_nayuka"
+			pdx_tooltip = "recruit_nayuka"
+			clicksound = nayoka_sabishii
+		} 
+		iconType = { 
+			name = "recruit_nayuka1"
+			position = { x = 677 y = 202 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_nayuka1"
+			pdx_tooltip = "recruit_nayuka"
+		}
+
+		buttonType = { 
+			name = "recruit_miku"
+			position = { x = 841 y = 153} 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_miku"
+			pdx_tooltip = "recruit_miku"
+			clicksound = miku_suki
+		} 
+		iconType = { 
+			name = "recruit_miku1"
+			position = { x = 841 y = 153 } 
+			size = { width = 960 height = 540 } 
+			quadTextureSprite = "GFX_recruit_miku1"
+			pdx_tooltip = "recruit_miku"
+		}
+
+		buttonType = { 
+			name = "LLLJ_recruit_title"
+			position = { x = 645 y = 351 } 
+			quadTextureSprite = "GFX_LLLJ_recruit_title"
+			pdx_tooltip = LLLJ_recruit_title
+			clicksound = ena_recruit
+		} 
+		buttonType = { 
+			name = "LLLJ_exit"
+			position = { x = 20 y = 492 } 
+			quadTextureSprite = "GFX_LLLJ_exit"
+			shortcut = "ESCAPE"
+			clicksound = LLLJ_goodbye
+		} 
+
+	}
+	
 }	

@@ -1,0 +1,5 @@
+on_actions = {
+    on_declare_war = {
+        events = { yuzu_event.1 }
+    }
+}

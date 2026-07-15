@@ -13,7 +13,7 @@ country_event = {
 			not = {
 				has_country_flag = have_kotori
 			}
-    		}
+    	}
 
 	
 	option = {
@@ -25,6 +25,7 @@ country_event = {
 
                     token_base = yz_kotori
                     name = "伊势琴里"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -38,6 +39,7 @@ country_event = {
                     }
 
                     corps_commander = {
+                        desc = kotori_corps_desc
                         traits = {
                             maid_kotori_trait
                         }

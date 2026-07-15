@@ -6,7 +6,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 1198
 		ai_priority = 100
-		active = yes
+		active = no
 		is_artillery_brigade = yes
 		
 		type = {
@@ -54,7 +54,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 11983
 		ai_priority = 100
-		active = yes
+		active = no
 		is_artillery_brigade = yes
 		
 		type = {

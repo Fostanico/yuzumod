@@ -1,110 +1,110 @@
 add_namespace = murasame_event
 
-country_event = { 
-	id = murasame_event.1
-	title = murasame_event.1.t
-	desc = murasame_event.1.d
-	picture = murasame_cwfn_event0
-	
-	is_triggered_only = yes
-	
-	option = {
-		retire_country_leader = yes
-		name = murasame_event.1.a
-		trigger = {
-			has_government = communism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "丛雨（绫）"
-			        picture = "GFX_portrait_ADD_murasame"
-					desc = murasame_desc
-					expire = "2095.1.1"
-				    ideology = marxism
-					 traits = {
-						SZDDL
-						XFJC
-				    }
-				}
-		}
+country_event = {
+    id = murasame_event.1
+    title = murasame_event.1.t
+    desc = murasame_event.1.d
+    picture = murasame_cwfn_event0
 
-		option = {
-		retire_country_leader = yes
-		name = murasame_event.2.a
-		trigger = {
-			has_government = democratic
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "丛雨（绫）"
-			        picture = "GFX_portrait_ADD_murasame"
-			        desc = murasame_desc
-					expire = "2095.1.1"
-				    ideology = conservatism
-					 traits = {
-						SZDDL
-						XFJC
-				    }
-				}
-		}
+    is_triggered_only = yes
 
-		option = {
-		retire_country_leader = yes
-		name = murasame_event.3.a
-		trigger = {
-			has_government = fascism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "丛雨（绫）"
-			        picture = "GFX_portrait_ADD_murasame"
-			        desc = murasame_desc
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						SZDDL
-						XFJC
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = murasame_event.1.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "丛雨（绫）"
+            picture = "GFX_portrait_ADD_murasame"
+            desc = murasame_desc
+            expire = "2095.1.1"
+            ideology = marxism
+            traits = {
+                SZDDL
+                XFJC
+            }
+        }
+    }
 
-		option = {
-		retire_country_leader = yes
-		name = murasame_event.4.a
-		trigger = {
-			has_government = neutrality
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "丛雨（绫）"
-			        picture = "GFX_portrait_ADD_murasame"
-			        desc = murasame_desc
-					expire = "2095.1.1"
-				    ideology = despotism
-					 traits = {
-						SZDDL
-						XFJC
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = murasame_event.2.a
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "丛雨（绫）"
+            picture = "GFX_portrait_ADD_murasame"
+            desc = murasame_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                SZDDL
+                XFJC
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = murasame_event.3.a
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "丛雨（绫）"
+            picture = "GFX_portrait_ADD_murasame"
+            desc = murasame_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                SZDDL
+                XFJC
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = murasame_event.4.a
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "丛雨（绫）"
+            picture = "GFX_portrait_ADD_murasame"
+            desc = murasame_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                SZDDL
+                XFJC
+            }
+        }
+    }
 }

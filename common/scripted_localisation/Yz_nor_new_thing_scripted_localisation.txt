@@ -1,0 +1,780 @@
+#defined_text = {
+#
+#	name = rob_the_yz_gold_description		#抢黄金描述
+#	text = {
+#		trigger = {
+#			has_country_flag = we_can_reduce_yz_bond
+#		}
+#		localization_key = rob_the_yz_gold_description_1
+#	}
+#	text = {
+#		trigger = {
+#			NOT = {
+#				has_country_flag = we_can_reduce_yz_bond
+#			}
+#		}
+#		localization_key = rob_the_yz_gold_description_2
+#	}
+#}
+defined_text = {      #这个是柚子债券决议组的描述
+    name = yz_economy_department_category_describe
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = Yoshino_industry_long_term_invest_now_start
+            }
+        }
+        localization_key = we_dont_start_yz_invest
+    }
+    text = {
+        trigger = {
+            has_country_flag = Yoshino_industry_long_term_invest_now_start
+        }
+        localization_key = we_now_start_yoshino_industry_long_term_invest
+    }
+}
+defined_text = {       #这个是柚子社文化局的传播柚子文化条件的描述
+    name = Yuzu_can_form_yuzu_land_describe
+    text = {
+        trigger = {
+            has_country_flag = change_puppt_to_yuzu_land
+        }
+        localization_key = Yuzu_can_form_yuzu_land_describe_start
+    }
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = change_puppt_to_yuzu_land
+            }
+        }
+        localization_key = Yuzu_can_form_yuzu_land_describe_start_first
+    }
+}
+defined_text = {     #小夜市长特质
+    name = YZ_aragami_sayo_our_role_model_of_victory_name
+    text = {
+        trigger = {
+            OR = {
+                has_government = communism
+                has_country_flag = aragami_sayo_trait_show_c
+            }
+        }
+        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_c
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_government = democratic
+                has_country_flag = aragami_sayo_trait_show_d
+            }
+        }
+        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_d
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = aragami_sayo_trait_show_f
+                has_government = fascism
+            }
+        }
+        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_f
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_government = neutrality
+                has_country_flag = aragami_sayo_trait_show_n
+            }
+        }
+        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_n
+    }
+}
+defined_text = {      #小夜吸血鬼特质
+    name = YZ_aragami_sayo_two_hundred_years_vampire_name
+    text = {
+        trigger = {
+            OR = {
+                has_government = communism
+                has_country_flag = aragami_sayo_trait_show_c
+            }
+        }
+        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_c
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_government = democratic
+                has_country_flag = aragami_sayo_trait_show_d
+            }
+        }
+        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_d
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = aragami_sayo_trait_show_f
+                has_government = fascism
+            }
+        }
+        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_f
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_government = neutrality
+                has_country_flag = aragami_sayo_trait_show_n
+            }
+        }
+        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_n
+    }
+}
+defined_text = {      #参谋总长头像——2026.5.3，12：26，御坂真琴
+    name = YZ_miliatry_party_cos_guys
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_ayase  
+		}
+		localization_key =  YzLeader_ayase_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_hazuki
+		}
+		localization_key =  YzLeader_hazuki_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_miu 
+		}
+		localization_key =  YzLeader_miu_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_toko 
+		}
+		localization_key =  YzLeader_toko_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_ruri
+		}
+		localization_key =  YzLeader_ruri_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_sayo
+		}
+		localization_key =  YzLeader_sayo_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_suou
+		}
+		localization_key =  YzLeader_suou_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_misaka_makoto
+		}
+		localization_key =  YzLeader_misaka_makoto_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_kurumi
+		}
+		localization_key =  YzLeader_kurumi_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_kaguya
+		}
+		localization_key =  YzLeader_kaguya_image
+	}
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_orie
+		}
+		localization_key =  YzLeader_orie_image
+	}
+}
+### 海滩约会文本分流：根据 wife_id 分别选择事件名、标题、正文和选项；当前仅预留 43 号角色，并提供默认兜底。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_beach_event_name
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_beach_event_name_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_beach_event_name_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_beach_title
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_beach_title_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_beach_title_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_beach_desc
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_beach_desc_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_beach_desc_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_beach_option
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_beach_option_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_beach_option_default
+	}
+}
+
+### 购物约会文本分流：根据 wife_id 分别选择事件名、标题、正文和选项；新增角色时可继续追加对应分支。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_shopping_event_name
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_shopping_event_name_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_shopping_event_name_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_shopping_title
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_shopping_title_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_shopping_title_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_shopping_desc
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_shopping_desc_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_shopping_desc_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_shopping_option
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_shopping_option_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_shopping_option_default
+	}
+}
+
+### 学园祭约会文本分流：根据 wife_id 分别选择事件名、标题、正文和选项；默认文本防止未配置角色显示缺失键。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_school_party_event_name
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_school_party_event_name_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_school_party_event_name_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_school_party_title
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_school_party_title_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_school_party_title_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_school_party_desc
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_school_party_desc_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_school_party_desc_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_school_party_option
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_school_party_option_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_school_party_option_default
+	}
+}
+
+### 咖啡厅约会文本分流：根据 wife_id 分别选择事件名、标题、正文和选项；当前框架只实现 43 号角色入口。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_cafe_event_name
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_cafe_event_name_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_cafe_event_name_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_cafe_title
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_cafe_title_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_cafe_title_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_cafe_desc
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_cafe_desc_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_cafe_desc_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_cafe_option
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_cafe_option_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_cafe_option_default
+	}
+}
+
+### 旅行约会文本分流：根据 wife_id 分别选择事件名、标题、正文和选项；具体文本和事件配图均留给后续填充。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_jounery_event_name
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_jounery_event_name_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_jounery_event_name_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_jounery_title
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_jounery_title_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_jounery_title_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_jounery_desc
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_jounery_desc_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_jounery_desc_default
+	}
+}
+
+defined_text = {
+	name = YZ_date_jounery_option
+	text = {
+		trigger = { check_variable = { wife_id = 43 } }
+		localization_key = YZ_date_jounery_option_wife_43
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_date_jounery_option_default
+	}
+}
+
+### 约会事件配图分流：事件通过picture = "[名称]"调用；每个选择器按wife_id返回已注册的GFX名，最后一项为未配置角色的通用配图兜底。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_date_beach_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_beach
+	}
+	text = {
+		localization_key = GFX_date_beach
+	}
+}
+
+defined_text = {
+	name = YZ_date_shopping_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_shopping
+	}
+	text = {
+		localization_key = GFX_date_shopping
+	}
+}
+
+defined_text = {
+	name = YZ_date_school_party_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_school_party
+	}
+	text = {
+		localization_key = GFX_date_school_party
+	}
+}
+
+defined_text = {
+	name = YZ_date_cafe_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_cafe
+	}
+	text = {
+		localization_key = GFX_date_cafe
+	}
+}
+
+defined_text = {
+	name = YZ_date_jounery_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_jounery
+	}
+	text = {
+		localization_key = GFX_date_jounery
+	}
+}
+
+defined_text = {
+	name = YZ_date_school_party_2_picture
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+		}
+		localization_key = GFX_date_43_school_party_2
+	}
+	text = {
+		localization_key = GFX_date_school_party
+	}
+}
+
+### 婚后角色立绘分流：同时根据wife_id与number_of_portrait选择已注册图片；当前43号角色共有16张，默认回退第一张。伊尔诺+2026-06-08+assisted by Codex
+defined_text = {
+	name = YZ_married_portrait_image
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 1 }
+		}
+		localization_key = YZ_married_portrait_43_1
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 2 }
+		}
+		localization_key = YZ_married_portrait_43_2
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 3 }
+		}
+		localization_key = YZ_married_portrait_43_3
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 4 }
+		}
+		localization_key = YZ_married_portrait_43_4
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 5 }
+		}
+		localization_key = YZ_married_portrait_43_5
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 6 }
+		}
+		localization_key = YZ_married_portrait_43_6
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 7 }
+		}
+		localization_key = YZ_married_portrait_43_7
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 8 }
+		}
+		localization_key = YZ_married_portrait_43_8
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 9 }
+		}
+		localization_key = YZ_married_portrait_43_9
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 10 }
+		}
+		localization_key = YZ_married_portrait_43_10
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 11 }
+		}
+		localization_key = YZ_married_portrait_43_11
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 12 }
+		}
+		localization_key = YZ_married_portrait_43_12
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 13 }
+		}
+		localization_key = YZ_married_portrait_43_13
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 14 }
+		}
+		localization_key = YZ_married_portrait_43_14
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 15 }
+		}
+		localization_key = YZ_married_portrait_43_15
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_portrait = 16 }
+		}
+		localization_key = YZ_married_portrait_43_16
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_married_portrait_43_1
+	}
+}
+
+### 婚后SD图片分流：同时根据wife_id与number_of_sd选择已注册图片；当前43号角色共有7张，默认回退第一张。伊尔诺+2026-06-09+assisted by Codex
+defined_text = {
+	name = YZ_married_sd_image
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 1 }
+		}
+		localization_key = YZ_married_sd_43_1
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 2 }
+		}
+		localization_key = YZ_married_sd_43_2
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 3 }
+		}
+		localization_key = YZ_married_sd_43_3
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 4 }
+		}
+		localization_key = YZ_married_sd_43_4
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 5 }
+		}
+		localization_key = YZ_married_sd_43_5
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 6 }
+		}
+		localization_key = YZ_married_sd_43_6
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 7 }
+		}
+		localization_key = YZ_married_sd_43_7
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_married_sd_43_1
+	}
+}
+
+### 婚后SD留言分流：图片与留言共用wife_id和number_of_sd；新增角色时按其number_of_sd_max补齐同数量文本分支。伊尔诺+2026-06-09+assisted by Codex
+defined_text = {
+	name = YZ_married_sd_message
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 1 }
+		}
+		localization_key = YZ_married_sd_message_43_1
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 2 }
+		}
+		localization_key = YZ_married_sd_message_43_2
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 3 }
+		}
+		localization_key = YZ_married_sd_message_43_3
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 4 }
+		}
+		localization_key = YZ_married_sd_message_43_4
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 5 }
+		}
+		localization_key = YZ_married_sd_message_43_5
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 6 }
+		}
+		localization_key = YZ_married_sd_message_43_6
+	}
+	text = {
+		trigger = {
+			check_variable = { wife_id = 43 }
+			check_variable = { number_of_sd = 7 }
+		}
+		localization_key = YZ_married_sd_message_43_7
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_married_sd_message_default
+	}
+}
+
+# 要点：启动界面右侧正文只使用一个 instantTextBoxType，通过三个互斥 tab flag 在此处切换具体本地化文本。 [2026-06-20] [伊尔诺/GPT5.5]
+defined_text = {
+	name = YZ_start_ui_content
+	text = {
+		trigger = {
+			has_country_flag = YZ_start_ui_tab_guide
+		}
+		localization_key = YZ_start_ui_guide_content
+	}
+	text = {
+		trigger = {
+			has_country_flag = YZ_start_ui_tab_credits
+		}
+		localization_key = YZ_start_ui_credits_content
+	}
+	text = {
+		trigger = { }
+		localization_key = YZ_start_ui_update_content
+	}
+}

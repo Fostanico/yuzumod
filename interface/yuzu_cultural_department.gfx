@@ -8,5 +8,32 @@ spriteTypes = {
 		name = "GFX_autonomy_yuzu_fans_land_icon"
 		textureFile = "gfx/organization/Yuzu_soft_Tank_organization.png"
 	}
-	
+	spriteType = {
+		name = "GFX_ruri_marry"
+		textureFile = "gfx/event_pictures/ruri_marry.png"
+	}
+	spriteType = {
+		name = "GFX_rena_wedding"
+		textureFile = "gfx/event_pictures/rena_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_kaguya_wedding"
+		textureFile = "gfx/event_pictures/kaguya_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_suou_wedding"
+		textureFile = "gfx/event_pictures/suou_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_sakuyahime_wedding"
+		textureFile = "gfx/event_pictures/sakuyahime_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_tsubasa_wedding"
+		textureFile = "gfx/event_pictures/tsubasa_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_rino_wedding"
+		textureFile = "gfx/event_pictures/rino_wedding.png"
+	}
 }

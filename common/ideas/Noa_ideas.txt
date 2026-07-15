@@ -79,76 +79,7 @@ ideas = {
 			}
 		}
 
-		YzOpreative_boost1 = {
-			allowed_civil_war = {
-				is_ai = no
-			}
-			modifier = {
-				operative_slot = 1 #特工槽位
-        		intel_network_gain_factor = 0.1 #情报网增长
-				intelligence_agency_defense = 1 #反间谍
-				own_operative_detection_chance_factor = -0.2 #我方特工被发现概率
-				agency_upgrade_time = -0.1 #情报机构升级时间
-				required_garrison_factor = -0.05 #驻军需求
-				consumer_goods_factor = 0.05
-			}
-		}
-		YzOpreative_boost2 = {
-			allowed_civil_war = {
-				is_ai = no
-			}
-			modifier = {
-				operative_slot = 2 #特工槽位
-        		intel_network_gain_factor = 0.2 #情报网增长
-				intelligence_agency_defense = 2 #反间谍
-				own_operative_detection_chance_factor = -0.25 #我方特工被发现概率
-				agency_upgrade_time = -0.15 #情报机构升级时间
-				required_garrison_factor = -0.075 #驻军需求
-				consumer_goods_factor = 0.075
-			}
-		}
-		YzOpreative_boost3 = {
-			allowed_civil_war = {
-				is_ai = no
-			}
-			modifier = {
-				operative_slot = 2 #特工槽位
-        		intel_network_gain_factor = 0.25 #情报网增长
-				intelligence_agency_defense = 2.5 #反间谍
-				own_operative_detection_chance_factor = -0.3 #我方特工被发现概率
-				agency_upgrade_time = -0.2 #情报机构升级时间
-				required_garrison_factor = -0.1 #驻军需求
-				consumer_goods_factor = 0.1
-			}
-		}
-		YzOpreative_boost4 = {
-			allowed_civil_war = {
-				is_ai = no
-			}
-			modifier = {
-				operative_slot = 3 #特工槽位
-        		intel_network_gain_factor = 0.3 #情报网增长
-				intelligence_agency_defense = 3 #反间谍
-				own_operative_detection_chance_factor = -0.35 #我方特工被发现概率
-				agency_upgrade_time = -0.25 #情报机构升级时间
-				required_garrison_factor = -0.1 #驻军需求
-				consumer_goods_factor = 0.125
-			}
-		}
-		YzOpreative_boost5 = {
-			allowed_civil_war = {
-				is_ai = no
-			}
-			modifier = {
-				operative_slot = 3 #特工槽位
-        		intel_network_gain_factor = 0.35 #情报网增长
-				intelligence_agency_defense = 4.5 #反间谍
-				own_operative_detection_chance_factor = -0.4 #我方特工被发现概率
-				agency_upgrade_time = -0.3 #情报机构升级时间
-				required_garrison_factor = -0.125 #驻军需求
-				consumer_goods_factor = 0.15
-			}
-		}
+		
 
 		Married_preparing = {
 

@@ -1,0 +1,21 @@
+technologies = {
+
+	tech_YZ_type90 = { 
+
+		enable_equipments = {
+			type90_tank_chassis_1
+		}
+
+		research_cost = 1.5
+		start_year = 1936
+		
+		allow = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

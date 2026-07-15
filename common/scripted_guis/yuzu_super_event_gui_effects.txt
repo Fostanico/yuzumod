@@ -1,0 +1,601 @@
+scripted_gui = {
+    yuzu_super_event_gui = {
+        window_name = yuzu_super_event
+        context_type = player_context
+        visible = {
+            or = {
+                has_global_flag = yuzu_super_event_visible_flag
+				has_country_flag = yuzu_super_event_private_visible_flag
+            }
+        }
+
+        #图片
+
+        triggers = {  #穗织的毁灭
+            Super_event_destruction_of_hoori_visible = {
+                has_global_flag  = show_nuke_hoori_spevt
+            }
+        }
+        triggers = {
+            Super_event_destruction_of_washizu_visible = {
+                has_global_flag = show_nuke_washizu_spevt
+            }
+        }
+        triggers = {
+            Super_event_marry_kanna_visible = {
+                has_country_flag = we_marry_with_kanna
+            }
+        }
+        triggers = {
+            Super_event_marry_mako_visible = {
+                has_country_flag = we_marry_with_mako
+            }
+        }
+        triggers = {
+            Super_event_marry_murasame_visible = {
+                has_country_flag = 	we_marry_with_murasame
+            }
+        }
+        triggers = {
+            Super_event_marry_hazuki_visible = {
+                has_country_flag = we_marry_with_hazuki
+            }
+        }
+        triggers = {
+            Super_event_marry_daozhu_visible = {
+                has_country_flag = we_marry_with_daozhu
+            }
+        }
+        triggers = {
+            Super_event_marry_tia_visible = {
+                has_country_flag = we_marry_with_tia
+            }
+        }
+        triggers = {
+            Super_event_marry_koharu_visible = {
+                has_country_flag = we_marry_with_koharu
+            }
+        }
+        triggers = {
+            Super_event_marry_ruri_visible = {
+                has_country_flag = we_marry_with_ruri
+            }
+        }
+        triggers = {
+            Super_event_marry_wakana_visible = {
+                has_country_flag = we_marry_with_wakana
+            }
+        }
+        triggers = {
+            Super_event_unite_the_world_n_visible = {
+                has_country_flag = we_unite_the_world_n
+            }
+        }
+        triggers = {
+            Super_event_unite_the_world_d_visible = {
+                has_country_flag = we_unite_the_world_d
+            }
+        }
+        triggers = {
+            Super_event_unite_the_world_c_visible = {
+                has_country_flag = we_unite_the_world_c
+            }
+        }
+        triggers = {
+            Super_event_unite_the_world_f_visible = {
+                has_country_flag = we_unite_the_world_f
+            }
+        }
+        triggers = {
+            Super_event_marry_yoshino_visible = {
+                has_country_flag = we_marry_with_yoshino
+            }
+        }
+        triggers = {
+            Super_event_marry_mibu_visible = {
+                has_country_flag = we_marry_with_mibu
+            }
+        }
+        triggers = {
+            Super_event_marry_noa_visible = {
+                has_country_flag = we_marry_with_noa
+            }
+        }
+        triggers = {
+            Super_event_marry_ayase_visible = {
+                has_country_flag = we_marry_with_ayase
+            }
+        }
+        triggers = {
+            Super_event_marry_nene_visible = {
+                has_country_flag = we_marry_with_nene
+            }
+        }
+        triggers = {
+            Super_event_marry_kaguya_visible = {
+                has_country_flag = we_marry_with_kaguya
+            }
+        }
+        triggers = {
+            Super_event_marry_rena_visible = {
+                has_country_flag = we_marry_with_rena
+            }
+        }
+        triggers = {
+            Super_event_marry_meguru_visible = {
+                has_country_flag = we_marry_with_meguru
+            }
+        }
+        triggers = {
+            Super_event_marry_tsumugi_visible = {
+                has_country_flag = we_marry_with_tsumugi
+            }
+        }
+        triggers = {
+            Super_event_marry_natsume_visible = {
+                has_country_flag = we_marry_with_natsume
+            }
+        }
+        triggers = {
+            Super_event_marry_mayu_visible = {
+                has_country_flag = we_marry_with_mayu
+            }
+        }
+        triggers = {
+            Super_event_marry_suou_visible = {
+                has_country_flag = we_marry_with_suou
+            }
+        }
+        triggers = {
+            Super_event_marry_sana_visible = {
+                has_country_flag = we_marry_with_sana
+            }
+        }
+        triggers = {
+            Super_event_marry_sayo_visible = {
+                has_country_flag = we_marry_with_sayo
+            }
+        }
+        triggers = {
+            Super_event_marry_tsubasa_visible = {
+                has_country_flag = we_marry_with_tsubasa
+            }
+        }
+        triggers = {
+            Super_event_marry_rino_visible = {
+                has_country_flag = we_marry_with_rino
+            }
+        }
+        triggers = {
+            Super_event_marry_roka_visible = {
+                has_country_flag = we_marry_with_roka
+            }
+        }
+        triggers = {
+            Super_event_marry_yune_visible = {
+                has_country_flag = we_marry_with_yune
+            }
+        }
+        triggers = {
+            Super_event_marry_mei_visible = {
+                has_country_flag = we_marry_with_mei
+            }
+        }
+        triggers = {
+            Super_event_marry_nozomi_visible = {
+                has_country_flag = we_marry_with_nozomi
+            }
+        }
+        triggers = {
+            Super_event_marry_shizuru_visible = {
+                has_country_flag = we_marry_with_shizuru
+            }
+        }
+        triggers = {
+            Super_event_marry_sena_visible = {
+                has_country_flag = we_marry_with_sena
+            }
+        }
+        triggers = {
+            Super_event_marry_maya_visible = {
+                has_country_flag = we_marry_with_maya
+            }
+        }
+        triggers = {
+            Super_event_marry_huhu_visible = {
+                has_country_flag = we_marry_with_huhu
+            }
+        }
+        triggers = {
+            Super_event_marry_scp_visible = {
+                has_country_flag = we_marry_with_scp
+            }
+        }
+        triggers = {
+            Super_event_marry_napoleon_vi_visible = {
+                has_country_flag = we_marry_with_napoleon_vi
+            }
+        }
+        triggers = {
+            Super_event_marry_takashiro_maya_visible = {
+                has_country_flag = we_marry_with_takashiro_maya
+            }
+        }
+        triggers = {
+            Super_event_marry_hotaru_visible = {
+                has_country_flag = we_marry_with_hotaru
+            }
+        }
+        triggers = {
+            Super_event_marry_sakuyahime_visible = {
+                has_country_flag = we_marry_with_sakuyahime
+            }
+        }
+        triggers = {
+            Super_event_SCP_come_here_visible = {
+                has_country_flag = SCP_come_here
+            }
+        }
+        triggers = {
+            Super_event_huhu_come_here_visible = {
+                has_country_flag = huhu_come_here
+            }
+        }
+        triggers = {
+            Super_event_we_unite_with_ilno_visible = {
+                has_country_flag = we_unite_with_ilro_flag
+            }
+        }
+        triggers = {
+            Super_event_we_forward_with_irno_visible = {
+                has_country_flag = we_forward_with_irno_flag
+            }
+        }
+        triggers = {
+            Super_event_we_unite_with_makoto_visible = {
+                has_country_flag = we_unite_with_makoto_flag
+            }
+        }
+        triggers = {
+            Super_event_we_forward_with_makoto_visible = {
+                has_country_flag = we_forward_with_makoto_flag
+            }
+        }
+        triggers = {
+            Super_event_we_have_fukai_omo_visible = {
+                has_country_flag = we_have_fukai_omo
+            }
+        }
+        #超事件其实只有一个，每次都是用triggers来切换显示的图片和文本   伊尔诺，2025.8.4，17：37
+        #triggers = {
+        #	<super_event>_visible = {
+        #		has_global_flag = <your flag>
+        #	}
+        #}
+
+        #按钮
+
+        effects = {#其实就是一个一个清掉
+            yuzu_sp_event_close_button_click = {
+				if = {
+					limit = {
+						has_global_flag = yuzu_super_event_visible_flag
+					}
+					clr_global_flag = yuzu_super_event_visible_flag
+				}
+				if = {
+					limit = {
+						has_country_flag = yuzu_super_event_private_visible_flag
+					}
+					clr_country_flag = yuzu_super_event_private_visible_flag
+				}
+                if = {
+                    limit = {
+                        has_global_flag = show_nuke_hoori_spevt
+                    }
+                    clr_global_flag = show_nuke_hoori_spevt
+                }
+                if = {
+                    limit = {
+                        has_global_flag = show_nuke_washizu_spevt
+                    }
+                    clr_global_flag = show_nuke_washizu_spevt
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_kanna
+                    }
+                    clr_country_flag = we_marry_with_kanna
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_mako
+                    }
+                    clr_country_flag = we_marry_with_mako
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_murasame
+                    }
+                    clr_country_flag = 	we_marry_with_murasame
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_hazuki
+                    }
+                    clr_country_flag = we_marry_with_hazuki
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_the_world_n
+                    }
+                    clr_country_flag = we_unite_the_world_n
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_the_world_d
+                    }
+                    clr_country_flag = we_unite_the_world_d
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_the_world_c
+                    }
+                    clr_country_flag = we_unite_the_world_c
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_the_world_f
+                    }
+                    clr_country_flag = we_unite_the_world_f
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_daozhu
+                    }
+                    clr_country_flag = we_marry_with_daozhu
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_yoshino
+                    }
+                    clr_country_flag = we_marry_with_yoshino
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_mibu
+                    }
+                    clr_country_flag = we_marry_with_mibu
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_ruri
+                    }
+                    clr_country_flag = we_marry_with_ruri
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_koharu
+                    }
+                    clr_country_flag = we_marry_with_koharu
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_tia
+                    }
+                    clr_country_flag = we_marry_with_tia
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_noa
+                    }
+                    clr_country_flag = we_marry_with_noa
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_ayase
+                    }
+                    clr_country_flag = we_marry_with_ayase
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_nene
+                    }
+                    clr_country_flag = we_marry_with_nene
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_kaguya
+                    }
+                    clr_country_flag = we_marry_with_kaguya
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_rena
+                    }
+                    clr_country_flag = we_marry_with_rena
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_meguru
+                    }
+                    clr_country_flag = we_marry_with_meguru
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_tsumugi
+                    }
+                    clr_country_flag = we_marry_with_tsumugi
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_natsume
+                    }
+                    clr_country_flag = we_marry_with_natsume
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_mayu
+                    }
+                    clr_country_flag = we_marry_with_mayu
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_sana
+                    }
+                    clr_country_flag = we_marry_with_sana
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_sayo
+                    }
+                    clr_country_flag = we_marry_with_sayo
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_suou
+                    }
+                    clr_country_flag = we_marry_with_suou
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_tsubasa
+                    }
+                    clr_country_flag = we_marry_with_tsubasa
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_rino
+                    }
+                    clr_country_flag = we_marry_with_rino
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_roka
+                    }
+                    clr_country_flag = we_marry_with_roka
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_yune
+                    }
+                    clr_country_flag = we_marry_with_yune
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_mei
+                    }
+                    clr_country_flag = we_marry_with_mei
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_nozomi
+                    }
+                    clr_country_flag = we_marry_with_nozomi
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_wakana
+                    }
+                    clr_country_flag = we_marry_with_wakana
+                }
+                 if = {
+                    limit = {
+                        has_country_flag = we_marry_with_shizuru
+                    }
+                    clr_country_flag = we_marry_with_shizuru
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_sena
+                    }
+                    clr_country_flag = we_marry_with_sena
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_maya
+                    }
+                    clr_country_flag = we_marry_with_maya
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_sakuyahime
+                    }
+                    clr_country_flag = we_marry_with_sakuyahime
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_huhu
+                    }
+                    clr_country_flag = we_marry_with_huhu
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_scp
+                    }
+                    clr_country_flag = we_marry_with_scp
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_napoleon_vi
+                    }
+                    clr_country_flag = we_marry_with_napoleon_vi
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_takashiro_maya
+                    }
+                    clr_country_flag = we_marry_with_takashiro_maya
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_marry_with_hotaru
+                    }
+                    clr_country_flag = we_marry_with_hotaru
+                }
+                if = {
+                    limit = {
+                        has_country_flag = SCP_come_here
+                    }
+                    clr_country_flag = SCP_come_here
+                }
+                if = {
+                    limit = {
+                        has_country_flag = huhu_come_here
+                    }
+                    clr_country_flag = huhu_come_here
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_with_ilro_flag
+                    }
+                    clr_country_flag = we_unite_with_ilro_flag
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_forward_with_irno_flag
+                    }
+                    clr_country_flag = we_forward_with_irno_flag
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_unite_with_makoto_flag
+                    }
+                    clr_country_flag = we_unite_with_makoto_flag
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_forward_with_makoto_flag
+                    }
+                    clr_country_flag = we_forward_with_makoto_flag
+                }
+                if = {
+                    limit = {
+                        has_country_flag = we_have_fukai_omo
+                    }
+                    clr_country_flag = we_have_fukai_omo
+                }
+            }
+        }
+    }
+}

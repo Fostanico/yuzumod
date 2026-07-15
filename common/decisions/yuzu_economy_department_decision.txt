@@ -1,0 +1,682 @@
+yuzu_economy_department_category = {
+	yz_economy_department_category_close = {
+		priority = 900
+		visible = {
+			NOT = {
+				has_country_flag = yz_economy_department_category_close_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = yz_economy_department_category_close_flag
+		}
+	}
+	Yoshino_industry_debt_cycle = {  #债务周期——2025.3.17，16：12，伊尔诺      ——2025.3.20,16:17,伊尔诺 移植这里
+		priority = 800                                                        #我决定单独开一个决议组，但是处于方便，我不改决议名称了
+		activation = {                         
+			has_country_flag = now_we_issuing_bonds
+			not = { has_country_flag = finished_repayment_of_bonds }
+		}                                 
+		available = {                           
+			#check_variable = { 
+			#	num_yoshino_industray_completed > 12
+			#}
+			has_country_flag = finished_repayment_of_bonds
+		}
+		
+		is_good = no                       
+	
+		days_mission_timeout = 140
+		timeout_effect = {            
+			custom_effect_tooltip = {
+				localization_key = we_need_to_make_choice_about_yz_bonds
+			}
+			country_event = yzbonds_event.1
+		}
+		complete_effect = {                   
+			clr_country_flag = now_we_issuing_bonds
+		}
+	}
+	
+	Expanding_debt_issuance_first_time = {    #第一次扩大债券发行
+		priority = 700 
+		fire_only_once = yes
+		days_remove = 30
+		cost = 50
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+		}
+		modifier = {
+			#consumer_goods_factor = 0.2
+			political_power_gain = -0.05
+		}
+		remove_effect = {
+			set_country_flag = expend_issuance_first
+			add_to_variable = {
+				var = yz_money
+				value = 3500
+				tooltip = expend_debt_issuance_first
+			}
+			add_to_variable = {
+				var = bond_we_need_to_repay
+				value = 1000
+				tooltip = bond_we_need_to_repay_add_tooltip
+			}
+			add_to_variable = {
+				var = yz_interest_rate
+				value = 0.005
+			}
+			add_to_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.005
+				tooltip = add_interest_rate_tooltip
+			}
+			#custom_effect_tooltip = expend_debt_first
+		}
+	}
+	Expanding_debt_issuance_second_time = {    #第二次扩大债券发行
+		fire_only_once = yes
+		priority = 700 
+		days_remove = 35
+		cost = 75
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			has_country_flag = expend_issuance_first
+		}
+		modifier = {
+			#consumer_goods_factor = 0.4
+			political_power_gain = -0.075
+		}
+		remove_effect = {
+			set_country_flag = expend_issuance_second
+			add_to_variable = {
+				var = yz_money
+				value = 3000
+				tooltip = expend_debt_issuance_second
+			}
+			add_to_variable = {
+				var = yz_interest_rate
+				value = 0.07
+			}
+			
+			add_to_variable = {
+				var = bond_we_need_to_repay
+				value = 1250
+				tooltip = bond_we_need_to_repay_add_tooltip
+			}
+			add_to_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.007
+				tooltip = add_interest_rate_tooltip
+			}
+			#custom_effect_tooltip = expend_debt_second
+		}
+	}
+	Expanding_debt_issuance_third_time = {    #第三次扩大债券发行
+		fire_only_once = yes
+		priority = 700 
+		days_remove = 40
+		cost = 100
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			has_country_flag = expend_issuance_first
+			has_country_flag = expend_issuance_second
+		}
+		modifier = {
+			#consumer_goods_factor = 0.6
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			set_country_flag = expend_issuance_third
+			add_to_variable = {
+				var = yz_money
+				value = 3000
+				tooltip = expend_debt_issuance_third
+			}
+			add_to_variable = {
+				var = yz_interest_rate
+				value = 0.005
+			}
+			
+			add_to_variable = {
+				var = bond_we_need_to_repay
+				value = 1500
+				tooltip = bond_we_need_to_repay_add_tooltip
+			}
+			add_to_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.01
+				tooltip = add_interest_rate_tooltip
+			}
+			#custom_effect_tooltip = expend_debt_third
+		}
+	}
+	Expanding_debt_issuance_after_third_time = {
+		priority = 700
+		days_remove = 45
+		cost = 100
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			has_country_flag = expend_issuance_first
+			has_country_flag = expend_issuance_second
+			has_country_flag = expend_issuance_third
+		}
+		modifier = {
+			#consumer_goods_factor = 0.6
+			political_power_gain = -0.15
+		}
+		remove_effect = {
+			set_country_flag = expend_issuance_after_third_time
+			add_to_variable = {
+				var = yz_money
+				value = 3000
+				tooltip = expend_debt_issuance_third
+			}
+			add_to_variable = {
+				var = yz_interest_rate
+				value = 0.01
+			}
+			add_to_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.01
+				tooltip = add_interest_rate_tooltip
+			}
+			add_to_variable = {
+				var = bond_we_need_to_repay
+				value = 1750
+				tooltip = bond_we_need_to_repay_add_tooltip
+			}
+			#custom_effect_tooltip = expend_debt_after_third
+		}
+	}
+	repay_the_bonds_when_have_no_yzmoney = {   #在没有柚子币时的偿还方式
+		fire_only_once = yes
+		priority = 799
+		cost = 50
+		days_remove = 60
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			Yuzu_can_repay_bonds_by_yzmoney = no
+		}
+		remove_effect = {
+			custom_effect_tooltip = now_we_repay_the_bonds_without_yzmoney_tooltip
+			add_timed_idea = {
+				idea = now_we_repay_the_bonds_without_yzmoney
+				days = 180
+			}
+			set_country_flag = finished_repayment_of_bonds
+		}
+	}
+	repay_the_bonds_by_yzmoney = {     #有柚子币时偿还
+		fire_only_once = yes
+		priority = 799
+		days_remove = 60
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = bond_we_need_to_repay
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_can_repay
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			Yuzu_can_repay_bonds_by_yzmoney = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = now_we_repay_the_bonds_with_yzmoney_tooltip
+			subtract_from_variable = {
+				var = yz_money
+				value = bond_we_need_to_repay
+				#tooltip = repay_the_bonds_with_yzmoney_tooltip
+			}
+			set_country_flag = finished_repayment_of_bonds
+		}
+	}
+	partly_repay_the_bonds_by_yzmoney = {      #部分偿还
+		priority = 798
+		days_remove = 30
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = bond_we_need_to_repay
+				compare = less_than
+			}
+		}
+		custom_cost_text = YM_can_partly_repay
+		visible = {
+			has_country_flag = now_we_issuing_bonds
+			Yuzu_can_repay_bonds_by_yzmoney = no
+		}
+		remove_effect = {
+			custom_effect_tooltip = now_we_partly_repay_the_bonds_with_yzmoney_tooltip
+			subtract_from_variable = {
+				var = bond_we_need_to_repay
+				value = yz_money
+				#tooltip = repay_the_bonds_with_yzmoney_tooltip
+			}
+			set_variable = {
+				var = yz_money
+				value = 0
+			}
+			subtract_from_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.03
+			}
+			#set_country_flag = finished_repayment_of_bonds
+		}
+	}
+	start_rob_the_yz_gold_of_the_land = {
+		priority = 2
+		visible = {
+			NOT = {
+				has_country_flag = yz_rob_start_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = yz_rob_start_flag
+		}
+	}
+	close_rob_the_yz_gold = {
+		priority = 2
+		visible = {
+			#NOT = {
+				has_country_flag = yz_rob_start_flag
+			#}
+		}
+		complete_effect = {
+			clr_country_flag = yz_rob_start_flag
+		}
+	}
+	rob_the_yz_gold_of_the_land_we_occupied = {    #强迫当地人民买柚子社Gal
+		priority = 1
+		state_target = yes
+		target_root_trigger = {
+			has_country_flag = now_we_issuing_bonds
+		}
+		visible = {
+			has_country_flag = yz_rob_start_flag
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					has_dynamic_modifier = {
+						modifier = obsessed_in_yuzu_galgame
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		#icon = my_icon
+		cost = 20
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = obsessed_in_yuzu_galgame
+					days = 90
+				}
+				set_variable = {
+					var = yuzu_rob_cont_to_decti
+					value = state_population_k
+				}
+				if = {
+					limit = {
+						OR = {
+							check_variable = {
+								var = yuzu_rob_cont_to_decti
+								value = ROOT.bond_we_need_to_repay
+								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = yuzu_rob_cont_to_decti
+								value = bond_we_need_to_repay
+								compare = less_than_or_equals
+							}
+						}
+					}
+					ROOT = {
+						set_country_flag = we_can_reduce_yz_bond
+					}
+					set_variable = {
+						var = yuzu_rob_cont
+						value = state_population_k
+						tooltip = we_force_people_to_buy_yuzu_game_1_tt
+					}
+					subtract_from_variable = {
+						var = ROOT.bond_we_need_to_repay
+						value = yuzu_rob_cont
+						#tooltip = we_force_people_to_buy_yuzu_game_tt
+					}
+					#custom_effect_tooltip = test_yz_tooltip_1_tt
+				}
+				else = {
+					set_variable = {
+						var = yuzu_rob_cont_another
+						value = state_population_k
+						#tooltip = we_force_people_to_buy_yuzu_game_2_tt
+					}
+					subtract_from_variable = {
+						var = yuzu_rob_cont_another
+						value = root.bond_we_need_to_repay
+						#tooltip = we_get_the_rest
+					}
+					root = {
+						set_variable = {
+							var = bond_we_need_to_repay
+							value = 0
+						}
+						set_variable = {
+							var = yz_interest_rate_we_can_see
+							value = 0.05
+						}
+					}
+					add_to_variable = {
+						var = ROOT.yz_money
+						value = yuzu_rob_cont_another
+						#tooltip = we_get_the_rest
+					}
+					#root = {
+					#	custom_effect_tooltip = we_force_people_to_buy_yuzu_game_tt     #我也不知道为什么这两个不生效
+					#}                                                                   #一开始我怀疑过作用域的问题，但是
+					#custom_effect_tooltip = we_force_people_to_buy_yuzu_game_tt         #<-这个一样没用，和上面的一样，但是
+				}                                                                       #上面的效果又是生效的，一个下午+晚上我都在
+				#set_temp_variable = {                                                  #处理这个，我甚至尝试过预设本地化，
+				#	var = yuzu_rob_cont_to_show                                         #但是都不生效，显示出来的本地化都是if里面
+				#	value = yuzu_rob_cont                                               #的，我只能放弃了——2025.3.21,22:01,伊尔诺
+				#}
+				
+				
+			}
+			set_variable = {
+				var = yuzu_rob_cont_to_show_out
+				value = FROM.yuzu_rob_cont
+			}
+			set_variable = {
+				var = yuzu_rob_cont_to_show_out_1
+				value = yuzu_rob_cont
+			}
+			#custom_effect_tooltip = we_force_people_to_buy_yuzu_game_tt
+			#subtract_from_variable = {
+			#	var = bond_we_need_to_repay
+			#	value = yuzu_rob_cont
+			#	tooltip = we_force_people_to_buy_yuzu_game_tt
+			#}
+		}
+	}
+	Yoshino_long_term_invest_start = {        #芳乃长期投资                         #van：给你每个耗费的柚子币都减少了，但是效果也减少了一点
+		icon = GFX_yoshino                                                          
+		fire_only_once = yes
+		priority = 600
+		visible = {
+			has_country_flag = finished_yoshino_industry
+		}
+		cost = 50
+		days_remove = 10
+		remove_effect = {
+			set_country_flag = Yoshino_industry_long_term_invest_now_start
+		}
+	}
+	Yoshino_long_term_invest_in_construction = {
+		icon = GFX_yoshino
+		priority = 600
+		days_remove = 180
+		visible = {
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			NOT = {
+				has_idea = yz_long_term_invest_in_construction
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 750
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_1500
+		complete_effect = {
+			add_to_variable = {
+				var = yz_money
+				value = -750
+				tooltip = yz_money_tooltip_subtain
+			}
+			#custom_effect_tooltip = yz_money_monly_tooltip_subtain
+			add_to_variable = {
+				var = basic_additional_yz_money_spend
+				value = 750
+				tooltip = additional_yz_money_spend_raise
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.2               
+			consumer_goods_factor = -0.2
+			consumer_goods_expected_value = -0.1
+			global_building_slots_factor = 0.15
+		}
+		cancel_trigger = {
+			has_country_flag = monly_yz_money_spent_too_much
+		}
+		cancel_effect = {
+			subtract_from_variable = {
+				basic_additional_yz_money_spend = 750
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
+			country_event = yzbonds_event.3
+		} 
+	}
+	Yoshino_long_term_invest_resource_extraction = {
+		icon = GFX_yoshino
+		priority = 599
+		days_remove = 180
+		visible = {
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			NOT = {
+				has_idea = yz_long_term_invest_resource_extraction
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 500
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_500
+		complete_effect = {
+			add_to_variable = {
+				var = yz_money
+				value = -500
+				tooltip = yz_money_tooltip_subtain
+			}
+			#custom_effect_tooltip = yz_money_monly_tooltip_subtain
+			add_to_variable = {
+				var = basic_additional_yz_money_spend
+				value = 500
+				tooltip = additional_yz_money_spend_raise
+			}
+		}
+		modifier = {
+			country_resource_oil = 10
+			country_resource_aluminium = 10
+			country_resource_chromium = 10
+			country_resource_steel = 10
+			country_resource_rubber = 10
+			country_resource_tungsten = 10
+			base_fuel_gain_factor = 0.25
+			local_resources_factor = 0.25
+		}
+		cancel_trigger = {
+			has_country_flag = monly_yz_money_spent_too_much
+		}
+		cancel_effect = {
+			subtract_from_variable = {
+				basic_additional_yz_money_spend = 500
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
+			country_event = yzbonds_event.4
+		}
+	}
+	Yoshino_long_term_invest_in_research = {
+		icon = GFX_yoshino
+		priority = 598
+		days_remove = 180
+		visible = {
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			NOT = {
+				has_idea = yz_long_term_invest_in_research
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 500
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_500
+		complete_effect = {
+			add_to_variable = {
+				var = yz_money
+				value = -500
+				tooltip = yz_money_tooltip_subtain
+			}
+			#custom_effect_tooltip = yz_money_monly_tooltip_subtain
+			add_to_variable = {
+				var = basic_additional_yz_money_spend
+				value = 500
+				tooltip = additional_yz_money_spend_raise
+			}
+		}
+		modifier = {
+			research_speed_factor = 0.2
+			research_sharing_per_country_bonus_factor = 0.4
+			specialization_nuclear_speed_factor = 0.15
+			#specialization_speed_factor = 0.15
+			sp_tag_rocket_speed_factor = 0.1 
+		}
+		cancel_trigger = {
+			has_country_flag = monly_yz_money_spent_too_much
+		}
+		cancel_effect = {
+			subtract_from_variable = {
+				basic_additional_yz_money_spend = 500
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
+			country_event = yzbonds_event.5
+		}
+	}
+	Yoshino_long_term_invest_in_industrialization = {
+		icon = GFX_yoshino
+		priority = 597
+		days_remove = 180
+		visible = {
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			NOT = {
+				has_idea = yz_long_term_invest_in_industrialization
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 750
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_750
+		complete_effect = {
+			add_to_variable = {
+				var = yz_money
+				value = -750
+				tooltip = yz_money_tooltip_subtain
+			}
+			#custom_effect_tooltip = yz_money_monly_tooltip_subtain
+			add_to_variable = {
+				var = basic_additional_yz_money_spend
+				value = 750
+				tooltip = additional_yz_money_spend_raise
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = 0.2
+			industrial_capacity_dockyard = 0.2
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_max_efficiency_factor = 0.1
+		}
+		cancel_trigger = {
+			has_country_flag = monly_yz_money_spent_too_much
+		}
+		cancel_effect = {
+			subtract_from_variable = {
+				basic_additional_yz_money_spend = 750
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
+			country_event = yzbonds_event.6
+		}
+	}
+	Yoshino_long_term_invest_in_political_field = {
+		icon = GFX_yoshino
+		priority = 596
+		days_remove = 180
+		visible = {
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			#NOT = {
+			#	has_idea = yz_long_term_invest_in_construction
+			#}
+		}
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 400
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_400
+		complete_effect = {
+			add_to_variable = {
+				var = yz_money
+				value = -450
+				tooltip = yz_money_tooltip_subtain
+			}
+			#custom_effect_tooltip = yz_money_monly_tooltip_subtain
+			add_to_variable = {
+				var = basic_additional_yz_money_spend
+				value = 250
+				tooltip = additional_yz_money_spend_raise
+			}
+		}
+		modifier = {
+			political_advisor_cost_factor = -0.3
+			political_power_gain = 0.3
+			political_power_factor = 0.15
+			stability_weekly = 0.01
+			war_support_weekly = 0.01
+		}
+		cancel_trigger = {
+			has_country_flag = monly_yz_money_spent_too_much
+		}
+		cancel_effect = {
+			subtract_from_variable = {
+				basic_additional_yz_money_spend = 250
+			}
+		}
+	}
+}

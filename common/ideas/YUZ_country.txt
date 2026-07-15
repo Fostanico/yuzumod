@@ -1,0 +1,35 @@
+ideas = {
+#不要动
+
+	country = {
+	#不要动	
+
+		{YUZ}_country = { 
+		#国家tag_精神名字，如USA_123(只能英文)
+
+			name = YUZ_country
+			#国家tag_精神名字，如USA_123
+
+			picture = 
+            #国家精神图片（p社目前的主流是将其注册在\interface中的ideas.gfx文件中后，再将其name贴入这里。其构成简单，你们可以自行去那个.gfx文件中学习）
+			allowed = { always = yes }
+			#想要限制哪个国家使用，original_tag = XXX 是只有原始tag为XXX的国家可以使用该民族精神。想让所有国家都可以使用该民族精神的写法为always = yes
+
+			removal_cost = -1
+			#移除花费（一般不动这个）
+
+			modifier = {
+				political_power_factor = 1
+				political_power_gain = 2
+				stability_weekly = 1
+				war_support_weekly = 1
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.1
+        		global_building_slots = 1
+				consumer_goods_factor = -0.25
+				research_speed_factor = 0.2
+			}
+			#该国家精神提供的buff或debuff，可以上网查询id
+		}
+	}
+}

@@ -1,6 +1,7 @@
 characters={
 	JCL_changlumozi = {
 		name = changlumozi
+		can_be_captured = no
 		gender = female
 		portraits={
 			army = {
@@ -27,6 +28,7 @@ characters={
 	}
 	STW_lingdiningning = {
 		name = lingdiningning
+		can_be_captured = no
 		gender = female
 		portraits={
 			army = {
@@ -56,6 +58,7 @@ characters={
 	}
 	CSS_kanna = {
 		name = kanna
+		can_be_captured = no
 		gender = female
 		portraits={
 			army = {
@@ -85,6 +88,7 @@ characters={
 	}
 	RGR_zaiyuanqihai = {
 		name = zaiyuanqihai
+		can_be_captured = no
 		gender = female
 		portraits={
 			army = {

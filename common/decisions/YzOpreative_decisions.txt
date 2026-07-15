@@ -1,19 +1,4 @@
 YzOpreative_category = {
-	
-	YzOpreative_close = {	
-		days_remove = 0
-		cost = 0
-		
-		visible = { 
-			has_country_flag = YzOpreative_open
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			clr_country_flag = YzOpreative_open
-			clr_country_flag = Nanami_industry_five_year_yes
-		}
-	}
-
 	add_to_YzOpreative_money = {
 		days_remove = 0
 		custom_cost_trigger = {
@@ -86,6 +71,167 @@ YzOpreative_category = {
 		}
 	}
 
+	YzOpreative_choose_country_menu = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_open
+			not = { has_country_flag = YzOpreative_choose_country_menu_on }
+		}
+		complete_effect = {
+			set_country_flag =  YzOpreative_choose_country_menu_on
+		}
+	}
+
+	close_YzOpreative_choose_country_menu = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_open
+			has_country_flag = YzOpreative_choose_country_menu_on 
+		}
+		complete_effect = {
+			clr_country_flag = YzOpreative_choose_country_menu_on
+			clr_country_flag = YzOpreative_choose_country_menu_on_major
+			clr_country_flag = YzOpreative_choose_country_menu_on_neighbor
+			clr_country_flag = YzOpreative_choose_country_menu_on_other
+			clr_country_flag = YzOpreative_choose_country_menu_on_cancel
+		}
+	}
+
+	YzOpreative_choose_country_menu_1 = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on
+			not = { has_country_flag = YzOpreative_choose_country_menu_on_major }
+		}
+		complete_effect = {
+			set_country_flag =  YzOpreative_choose_country_menu_on_major
+		}
+	}
+	YzOpreative_choose_country_menu_2 = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on
+			not = { has_country_flag = YzOpreative_choose_country_menu_on_neighbor }
+		}
+		complete_effect = {
+			set_country_flag =  YzOpreative_choose_country_menu_on_neighbor
+		}
+	}
+	YzOpreative_choose_country_menu_3 = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on
+			not = { has_country_flag = YzOpreative_choose_country_menu_on_other }
+		}
+		complete_effect = {
+			set_country_flag =  YzOpreative_choose_country_menu_on_other
+		}
+	}
+	YzOpreative_choose_country_menu_4 = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on
+			not = { has_country_flag = YzOpreative_choose_country_menu_on_cancel }
+		}
+		complete_effect = {
+			set_country_flag =  YzOpreative_choose_country_menu_on_cancel
+		}
+	}
+
+	YzOpreative_cancel_choose_country = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = YzOpreative_have_chosen
+			}
+		}
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on_cancel
+		}
+		complete_effect = {
+			FROM  = {
+				clr_country_flag = YzOpreative_have_chosen
+			}
+		}
+	}
+
+	YzOpreative_choose_major_country = {
+		target_trigger = {
+			FROM = {
+				not = { has_country_flag = YzOpreative_have_chosen }
+				is_major = yes
+			}
+		}
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on_major
+		}
+		complete_effect = {
+			FROM  = {
+				set_country_flag = YzOpreative_have_chosen
+			}
+		}
+	}
+
+	YzOpreative_choose_neighbor_country = {
+		target_trigger = {
+			FROM = {
+				not = { has_country_flag = YzOpreative_have_chosen }
+				is_neighbor_of = ROOT
+			}
+		}
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on_neighbor
+		}
+		complete_effect = {
+			FROM  = {
+				set_country_flag = YzOpreative_have_chosen
+			}
+		}
+	}
+
+	YzOpreative_choose_other_country = {
+		target_trigger = {
+			FROM = {
+				not = { has_country_flag = YzOpreative_have_chosen }
+				not = {
+					is_major = yes
+					is_neighbor_of = ROOT
+				}
+			}
+		}
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = YzOpreative_choose_country_menu_on_other
+		}
+		complete_effect = {
+			FROM  = {
+				set_country_flag = YzOpreative_have_chosen
+			}
+		}
+	}
+
 	YzOpreative_killed_enemy_operative = {		#杀对方特工
 		icon = GFX_decision_spr_political_assassination
 		days_remove = 45
@@ -94,9 +240,8 @@ YzOpreative_category = {
 			has_country_flag = YzOpreative_open
 		}
 		available = {
-			has_war = yes
-			any_enemy_country = {
-				num_of_operatives > 0
+			custom_trigger_tooltip = {
+				tooltip = any_country_need_one_spy_tt
 			}
 			has_intelligence_agency = yes
 			has_equipment = {
@@ -113,7 +258,7 @@ YzOpreative_category = {
 		remove_effect = {
 			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 					num_of_operatives > 0
 				}
 				random_operative = {
@@ -131,24 +276,28 @@ YzOpreative_category = {
 			has_country_flag = YzOpreative_open
 		}
 		available = {
-			has_war = yes
-			any_enemy_country = {
-				num_of_operatives > 0
+			custom_trigger_tooltip = {
+				tooltip = any_country_need_one_spy_tt
 			}
 			has_intelligence_agency = yes
 			check_variable = {
-				yz_money > 100
+				yz_money > 300
 				tooltip = yz_money_tooltip_compare
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -100 }
+			add_to_variable = { yz_money = -300 }
 		}
 		remove_effect = {
-			random_country = {
+			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 					num_of_operatives > 0
+				}
+				random_operative = {
+					turn_operative = {
+						turned_by = root
+					}
 				}
 				random_operative = {
 					turn_operative = {
@@ -167,10 +316,10 @@ YzOpreative_category = {
 			has_country_flag = YzOpreative_open
 		}
 		available = {
-			has_war = yes
-			any_enemy_country = {
-				num_of_operatives > 0
+			custom_trigger_tooltip = {
+				tooltip = any_country_need_one_spy_tt
 			}
+			has_war = yes
 			has_intelligence_agency = yes
 		}
 		complete_effect = {
@@ -180,17 +329,67 @@ YzOpreative_category = {
 			}
 			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 				}
 				every_operative = {
 					random_list = {
 						40 = { capture_operative = { captured_by = ROOT ignore_death_chance = yes } }
-						20 = { }
-						25 = { kill_operative = { killed_by = ROOT } }
-						15 = { turn_operative = { turned_by = ROOT } }
+						10 = { }
+						30 = { kill_operative = { killed_by = ROOT } }
+						20 = { turn_operative = { turned_by = ROOT } }
 					}
 				}
 			}
+		}
+	}
+
+	YzOpreative_connect_border_yzc = {		#联系外国柚子厨
+		icon = GFX_yz_manpower
+		days_remove = 30
+		cost = 15
+		visible = {
+			has_country_flag = YzOpreative_open
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = any_country_need_one_spy_tt
+			}
+			has_intelligence_agency = yes
+			has_country_flag = have_researched_yzwork
+			has_equipment = {
+				yz_works_equipment > 999
+			}
+			check_variable = {
+				yz_money > 250
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		modifier = {
+			intelligence_agency_defense = 4
+			crypto_strength = 2
+			enemy_intel_network_gain_factor_over_occupied_tag = -0.5
+			local_intel_to_enemies = -0.5
+			intel_network_gain_factor = 0.2
+			intel_from_operatives_factor = 0.35
+		}
+		complete_effect = {
+			add_to_variable = { yz_money = -250 }
+			add_equipment_to_stockpile = {
+				type = yz_works_equipment_0
+				amount = -1000
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = YzOpreative_have_chosen	
+				}
+				add_timed_idea = {
+					idea = yzc_spy
+					days = 30
+				}
+			}
+			add_to_variable = { border_yzc_boost = 1 tooltip = border_yzc_boost_up_tt }
 		}
 	}
 
@@ -202,7 +401,6 @@ YzOpreative_category = {
 			has_country_flag = YzOpreative_open
 		}
 		available = {
-			has_war = yes
 			has_intelligence_agency = yes
 			has_manpower > 1000
 			has_equipment = {
@@ -212,37 +410,129 @@ YzOpreative_category = {
 				yz_money > 300
 				tooltip = yz_money_tooltip_compare
 			}
+			check_variable = {
+				border_yzc_boost > 0
+				tooltip = border_yzc_boost_tt
+			}
 		}
 		complete_effect = {
 			add_to_variable = { yz_money = -300 }
-			add_manpower = -1000
+			subtract_from_temp_variable = { YzOpreative_need_add_manpower = border_yzc_boost }
+			subtract_from_temp_variable = { YzOpreative_need_infantry_equipment = border_yzc_boost }
+			subtract_from_temp_variable = { YzOpreative_need_yz_works_equipment = border_yzc_boost }
+			multiply_temp_variable = { YzOpreative_need_add_manpower = 1000 }
+			multiply_temp_variable = { YzOpreative_need_infantry_equipment = 125 }
+			multiply_temp_variable = { YzOpreative_need_yz_works_equipment = 750 }
+			add_manpower = YzOpreative_need_add_manpower
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = -100
+				amount = YzOpreative_need_infantry_equipment
 			}
+			add_equipment_to_stockpile = {
+				type = yz_works_equipment
+				amount = YzOpreative_need_yz_works_equipment
+			}
+			add_to_variable = { border_yzc_boost = 1 tooltip = border_yzc_boost_down_tt }
 		}
 		remove_effect = {
-			random_country = {
+			custom_effect_tooltip = yz_neighbor_only_tt
+			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 				}
-				random_state = {
+				if = {
 					limit = {
-						is_controlled_by = PREV
-						or = {
-							industrial_complex > 0
-							arms_factory > 0
+						check_variable = {
+							border_yzc_boost < 3
 						}
 					}
-					damage_building = {
-						type = industrial_complex
-						damage = 2
-						repair_speed_modifier = -0.2
+					random_state = {
+						limit = {
+							is_controlled_by = PREV
+							not = { is_core_of = root }
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 2
+							repair_speed_modifier = -0.25
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 1
+							repair_speed_modifier = -0.25
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 2
+							repair_speed_modifier = -0.5
+						}
+						damage_building = {
+							type = rail_way
+							damage = 3
+							repair_speed_modifier = -0.5
+						}
 					}
-					damage_building = {
-						type = arms_factory
-						damage = 2
-						repair_speed_modifier = -0.2
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							border_yzc_boost > 2
+							border_yzc_boost < 5
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = PREV
+							not = { is_core_of = root }
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 3
+							repair_speed_modifier = -0.45
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 2
+							repair_speed_modifier = -0.3
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 2
+							repair_speed_modifier = -0.5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							border_yzc_boost > 4
+						}
+					}
+					random_state = {
+						limit = {
+							is_controlled_by = PREV
+							not = { is_core_of = root }
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 3
+							repair_speed_modifier = -0.45
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 2
+							repair_speed_modifier = -0.3
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 2
+							repair_speed_modifier = -0.5
+						}
+						damage_building = {
+							type = rail_way
+							damage = 3
+							repair_speed_modifier = -0.5
+						}
 					}
 				}
 			}
@@ -272,6 +562,7 @@ YzOpreative_category = {
 			}
 		}
 		complete_effect = {
+			custom_effect_tooltip = yz_neighbor_only_tt
 			add_to_variable = { yz_money = -300 }
 			add_manpower = -300
 			add_equipment_to_stockpile = {
@@ -284,9 +575,10 @@ YzOpreative_category = {
 			}
 		}
 		remove_effect = {
-			random_country = {
+			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
+					is_neighbor_of = ROOT
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -336,9 +628,9 @@ YzOpreative_category = {
 			has_intelligence_agency = yes
 		}
 		remove_effect = {
-			random_country = {
+			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 				}
 				ROOT = {
 					add_intel = {
@@ -367,138 +659,17 @@ YzOpreative_category = {
 		complete_effect = {
 			every_country = {
 				limit = {
-					has_war_with = ROOT
+					has_country_flag = YzOpreative_have_chosen
 				}
 				ROOT = {
 					add_decryption = {
 						target = prev
-						ratio = 0.2
+						ratio = 0.4
 					}
 				}
 			}
 		}
 	}
 
-
-
-
-
-
-	YzOpreative_nanami_1 = {		#七海意识形态共产主义宣传计划
-	icon = GFX_qihai
-		days_remove = 55
-		cost = 25
-		
-		visible = { 
-			has_country_flag = Nanami_industry_five_year_yes
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			or = {
-				has_country_flag = have_nanami
-			}
-		}
-
-		modifier = {
-			political_power_gain = -0.15
-			communism_drift = 1.5
-			industrial_capacity_factory = 0.05
-			production_factory_efficiency_gain_factor = 0.05
-		}
-
-		remove_effect = {
-			
-			remove_effect = {
-			}
-		}
-	}
-
-	YzOpreative_nanami_2 = {		#七海意识形态民主主义宣传计划
-	icon = GFX_qihai
-		days_remove = 55
-		cost = 25
-		
-		visible = { 
-			has_country_flag = Nanami_industry_five_year_yes
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			or = {
-				has_country_flag = have_nanami
-			}
-		}
-
-		modifier = {
-			political_power_gain = -0.15
-			democratic_drift = 1.5
-			stability_weekly = 0.001
-		}
-
-		remove_effect = {
-			
-			remove_effect = {
-			}
-		}
-	}
-
-	YzOpreative_nanami_3 = {		#七海意识形态法西斯宣传？
-	icon = GFX_qihai
-		days_remove = 55
-		cost = 25
-		
-		visible = { 
-			has_country_flag = Nanami_industry_five_year_yes
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			or = {
-				has_country_flag = have_nanami
-			}
-		}
-
-		modifier = {
-			political_power_gain = -0.15
-			fascism_drift = 1.5
-			war_support_weekly = 0.001
-		}
-
-		remove_effect = {
-			
-			remove_effect = {
-			}
-		}
-	}
-
-	YzOpreative_nanami_4 = {		#七海意识形态中立思想宣传？
-	icon = GFX_qihai
-		days_remove = 55
-		cost = 25
-		
-		visible = { 
-			has_country_flag = Nanami_industry_five_year_yes
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			or = {
-				has_country_flag = have_nanami
-			}
-		}
-
-		modifier = {
-			political_power_gain = -0.15
-			neutrality_drift= 1.5
-			production_speed_buildings_factor = 0.05
-		}
-
-		remove_effect = {
-		}
-		complete_effect = {
-			add_threat = -3
-		   }
-	}
-
+	
 }

@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+#大概以后每次更新加的内容我都加到新的本地化文件里了（出于不要动一些可以运行的代码的原则）——伊尔诺，2025.3.10
+ play_the_song_of_hachiroku_effect_tooltip: "播放§R开始旋转的动轮§!"
+ debug_love_sana_everyday: "今天是佐奈的生日！(每年的六月八日哦！)"
+ yuri_s_Revenge_occupation: "柚里的复仇"
+ loc_yuri_occupation: "居然连柚子厨都不怕，这些已经不是普通的暴民了，必须要重拳出击！（自动切换法案时会在抵抗度大于40%的地区自动使用该法案）"
+ hoori_style_occupation: "穗织式管理模式"
+ loc_hoori_occupation: "在见识到穗织民族伟大复兴的光辉成果后，我们可以把这一套成功经验推广到我们广大的乡村殖民地中。（自动切换法案时会在乡村地区使用该法案）"
+ washizu_style_occupation: "鹫逗式管理模式"
+ loc_washizu_occupation: "绫濑同志把鹫逗市从一个中型城市建设成了一个国际化大都市，我们可以参考她的成功经验。（自动切换法案时会在城市地区使用该法案）"
+ let_them_fly_occupation: "把他们上市！"                                        #不一定出现在正式版中
+ auto_switch_occupation_law: "自动切换占领法案（仅限柚子法案）"
+ auto_switch_occupation_law_desc: "如果花费一份柚金金的话，我们文化局的人会努力帮我们治理我们广大殖民地的的说。（可以关闭该自动切换功能，并再次开启时不需要消耗柚金金）"
+ Yuzu_occupation_law_fund_subtract_tt: "一份柚金金用于让文化局的人努力工作"
+ auto_switch_occupation_law_descision_effect_tooltip: "我们的文化局将在适合的地区使用适合的占领法案"
+ #let_usa_fly: "§R让美国人飞起来！§!"                                            #不一定出现在正式版中
+ #let_usa_fly_desc: "把所有美国的核心领土占领法案切换成把他们上市！"               #不一定出现在正式版中
+ #auto_switch_occupation_law_in_usa_descision_effect_tooltip: "把美国人上市"     #不一定出现在正式版中
+ auto_switch_occupation_off: "关闭自动切换占领法案"
+ auto_switch_occupation_again: "再次开启自动切换占领法案"

@@ -100,6 +100,14 @@ spriteTypes = {
 		texturefile = "gfx/decision/huiye.png"
 	}
 	spriteType = {
+		name = "GFX_tsubasa"
+		texturefile = "gfx/decision/tsubasa.png"
+	}
+	spriteType = {
+		name = "GFX_rino"
+		texturefile = "gfx/decision/rino.png"
+	}
+	spriteType = {
 		name = "GFX_tianyin"
 		texturefile = "gfx/decision/tianyin.png"
 	}
@@ -303,6 +311,30 @@ spriteTypes = {
 		texturefile = "gfx/decision/maya_d.png"
 	}
 	spriteType = {
+		name = "GFX_ena"
+		texturefile = "gfx/decision/GFX_ena.png"
+	}
+	spriteType = {
+		name = "GFX_anju"
+		texturefile = "gfx/decision/GFX_anju.png"
+	}
+	spriteType = {
+		name = "GFX_tsukimi"
+		texturefile = "gfx/decision/GFX_tsukimi.png"
+	}
+	spriteType = {
+		name = "GFX_miku"
+		texturefile = "gfx/decision/GFX_miku.png"
+	}
+	spriteType = {
+		name = "GFX_nayuka"
+		texturefile = "gfx/decision/GFX_nayuka.png"
+	}
+	spriteType = {
+		name = "GFX_ririko"
+		texturefile = "gfx/decision/GFX_ririko.png"
+	}
+	spriteType = {
 		name = "GFX_koharu"
 		texturefile = "gfx/decision/koharu_d.png"
 	}
@@ -322,13 +354,82 @@ spriteTypes = {
 		name = "GFX_roko_d_desc"
 		texturefile = "gfx/decision/roko_decision_desc.png"
 	}
+
+	spriteType = {
+		name = "GFX_konoka"
+		texturefile = "gfx/decision/konoka.png"
+	}
+	spriteType = {
+		name = "GFX_mahiro"
+		texturefile = "gfx/decision/mahiro.png"
+	}
+	spriteType = {
+		name = "GFX_mei"
+		texturefile = "gfx/decision/mei.png"
+	}
+	spriteType = {
+		name = "GFX_nicola"
+		texturefile = "gfx/decision/nicola.png"
+	}
+	spriteType = {
+		name = "GFX_noriko"
+		texturefile = "gfx/decision/noriko.png"
+	}
+	spriteType = {
+		name = "GFX_orie"
+		texturefile = "gfx/decision/orie.png"
+	}
+	spriteType = {
+		name = "GFX_sumi"
+		texturefile = "gfx/decision/sumi.png"
+	}
+	spriteType = {
+		name = "GFX_tae"
+		texturefile = "gfx/decision/tae.png"
+	}
+	spriteType = {
+		name = "GFX_tia"
+		texturefile = "gfx/decision/tia.png"
+	}
+	spriteType = {
+		name = "GFX_yukari"
+		texturefile = "gfx/decision/yukari.png"
+	}
+	spriteType = {
+		name = "GFX_yuki"
+		texturefile = "gfx/decision/yuki.png"
+	}
+
+	
 #神秘标记点@@
 	spriteType = {
 		name = "GFX_ebihara_minase"
 		texturefile = "gfx/decision/ebihara_minase.png"
 	}
-
-
+    spriteType = {
+		name = "GFX_aragami_sayo"      #2025.3.29,16:59,伊尔诺
+		texturefile = "gfx/decision/aragami_sayo.png"
+	}
+	spriteType = {
+		name = "GFX_makoto"
+		textureFile = "gfx/decision/makoto.png"
+	}
+	spriteType = {
+		name = "GFX_minamoto"
+		textureFile = "gfx/decision/minamoto.png"
+	}
+	spriteType = {
+		name = "GFX_suou"
+		textureFile = "gfx/decision/GFX_suou.png"
+	}
+	spriteType = {
+		name = "GFX_yuuki_noa"
+		textureFile = "gfx/decision/GFX_noa.png"
+	}
+	spriteType = {
+		name = "GFX_yuna"
+		textureFile = "gfx/decision/GFX_yuna.png"
+	}	
 	spriteType = {
 		name = "GFX_yzctq"
 		texturefile = "gfx/decision/yzctq.png"
@@ -342,14 +443,37 @@ spriteTypes = {
 		texturefile = "gfx/decision/airi.png"
 	}
 	spriteType = {
+		name = "GFX_chisaki"
+		texturefile = "gfx/decision/chisaki.png"
+	}
+	spriteType = {
+		name = "GFX_lena"
+		texturefile = "gfx/decision/lena.png"
+	}
+	spriteType = {
 		name = "GFX_elina_owen"
 		texturefile = "gfx/decision/elina_owen.png"
 	}
 	spriteType = {
-		name = "GFX_mera_azusa"
-		texturefile = "gfx/decision/mera_azusa.png"
+		name = "GFX_tokusa_honoka"
+		texturefile = "gfx/decision/tokusa_honoka.png"
 	}
-
+	spriteType = {
+		name = "GFX_yamabuki_wataru"
+		texturefile = "gfx/decision/yamabuki_wataru.png"
+	}
+	spriteType = {
+		name = "GFX_akagi"
+		texturefile = "gfx/decision/akagi_descision.png"
+	}
+	spriteType = {
+		name = "GFX_nanao"
+		texturefile = "gfx/decision/nanao.png"
+	}
+	spriteType = {
+		name = "GFX_prepare_strike_ic"
+		texturefile = "gfx/decision/prepare_strike_ic.png"
+	}
 	
 #民族精神
 spriteType = {
@@ -425,192 +549,316 @@ spriteType = {
 		textureFile = "gfx/ideas/yuzu_super_vip.png"
 	}
 	spriteType = {
-		name = "GFX_idea_yuzu_fans_land_ide"
-		textureFile = "gfx/ideas/gloden_ten_years.png"
+		name = "GFX_idea_ship_making_brand_standinglized"
+		textureFile = "gfx/ideas/hazuki_core.png"
 	}
-	
+	spriteType = {
+		name = "GFX_idea_yuzu_fans_land_ide"
+		textureFile = "gfx/ideas/HandGrab2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_hotaru_eat_every_thing"
+		textureFile = "gfx/ideas/hotaru_eat_every_thing.png"
+	}
+	spriteType = {
+		name = "GFX_idea_super_nature_science_house"
+		textureFile = "gfx/ideas/chaoziranyan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YzOpreative_boost1"
+		textureFile = "gfx/ideas/youzu_intelligence_agency1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YzOpreative_boost2"
+		textureFile = "gfx/ideas/youzu_intelligence_agency1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YzOpreative_boost3"
+		textureFile = "gfx/ideas/Handgun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YzOpreative_boost4"
+		textureFile = "gfx/ideas/Handgun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YzOpreative_boost5"
+		textureFile = "gfx/ideas/Sabers_Crossed.png"
+	}
+#核心圈精神
+    spriteType = {
+	    name = "GFX_idea_YCG_ayase"
+		textureFile = "gfx/ideas/ayase_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_yoshino"
+	    texturefile = "gfx/ideas/yoshino_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_murasame"
+	    texturefile = "gfx/ideas/murasame_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_nene"
+	    texturefile = "gfx/ideas/nene_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_hazuki"
+	    texturefile = "gfx/ideas/hazuki_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_megulu"
+	    texturefile = "gfx/ideas/megulu_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_nanami"
+	    texturefile = "gfx/ideas/nanami_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_mayu"
+	    texturefile = "gfx/ideas/mayu_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_kanna"
+	    texturefile = "gfx/ideas/kanna_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_noa"
+	    texturefile = "gfx/ideas/noa_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_fumika"
+	    texturefile = "gfx/ideas/fumika_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_masaki"
+	    texturefile = "gfx/ideas/zhenxiao_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_miu"
+	    texturefile = "gfx/ideas/miu_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_toko"
+	    texturefile = "gfx/ideas/toko_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_sana"
+	    texturefile = "gfx/ideas/sana_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_ruri"
+	    texturefile = "gfx/ideas/ruri_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_sayo"
+	    texturefile = "gfx/ideas/sayo_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_sakuyahime"
+	    texturefile = "gfx/ideas/sakuyahime_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_misaka_makoto"
+	    texturefile = "gfx/ideas/misaka_makoto_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_suou"
+	    texturefile = "gfx/ideas/suou_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_nozomi"
+	    texturefile = "gfx/ideas/nozomi_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_wakana"
+	    texturefile = "gfx/ideas/wakana_core.png"
+    }
+	spriteType = {
+	    name = "GFX_idea_YCG_tsumugi"
+	    texturefile = "gfx/ideas/tsumugi_core.png"
+    }
 #塔罗牌
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_tarot"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_fool"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_fool_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_chariot"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_chariot_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_the_sun"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_sun_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_death"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_death_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_judgement"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_judgement_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_justice"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_justice_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_strength"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_strength_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_temperrance"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_temperrance_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_devil"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_devil_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_emperor"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_emperor_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_empress"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_empress_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hanged_man"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hanged_man_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hermit"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hermit_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hierophant"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hierophant_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_hierophant_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_high_priestess"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_high_priestess_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_lovers"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+	spriteType = {
 		name = "GFX_idea_the_lovers_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_magician"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_magician_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_moon"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_moon_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_star"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_star_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_tower"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_tower_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_world"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_world"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_the_world_down"
 		texturefile = "gfx/ideas/tarot.png"
 	}
-spriteType = {
+    spriteType = {
 		name = "GFX_idea_wheel_of_fortune"
 		texturefile = "gfx/ideas/tarot.png"
 	}
@@ -638,5 +886,14 @@ spriteType = {
 	spriteType = {
 		name = "GFX_dr_title"
 		texturefile = "gfx/decision/dr_title.png"
+	}
+
+	spriteType = {
+		name = "GFX_yzmanpower_texticon"
+		texturefile = "gfx/texticons/yzmanpower_texticon.png"
+	}
+	spriteType = {
+		name = "GFX_yzmanpower_texticon_1"
+		texturefile = "gfx/texticons/yzmanpower_texticon_1.png"
 	}
 }

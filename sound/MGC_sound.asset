@@ -1,0 +1,5 @@
+sound = 
+{
+	name = "kkr_come"
+	file = "menu/kkr_coming_sound.wav"
+}

@@ -1,0 +1,46 @@
+
+kkr_scientist_trait = {
+	
+	modifier = {
+		special_project_speed_factor = 0.996	#特殊项目速度
+		scientist_breakthrough_bonus_factor = 0.996 #突破加成
+		scientist_research_bonus_factor = 0.996 #研究加成
+		scientist_xp_gain_factor = 2.5 #科学家经验值获取
+		special_project_facility_supply_consumption_factor = 0.05	#补给消耗
+		sp_tag_aircraft_speed_factor = 2.5
+		sp_tag_rocket_speed_factor = 2.5
+		sp_tag_radar_speed_factor = 2.5
+		sp_tag_helicopter_speed_factor = 2.5
+		sp_tag_jet_speed_factor = 2.5
+		sp_tag_bomb_speed_factor = 2.5
+		sp_tag_tank_speed_factor = 2.5
+		sp_tag_submarine_speed_factor = 2.5
+		sp_tag_artillery_speed_factor = 2.5
+		specialization_nuclear_speed_factor = 2.5
+		sp_tag_surface_ship_speed_factor = 2.5
+		sp_tag_nuclear_warfare_speed_factor = 2.5
+		sp_tag_nuclear_power_speed_factor = 2.5
+	}
+}
+#sp_tag_aircraft_speed_factor = 0.05
+#sp_tag_rocket_speed_factor = 0.05
+#sp_tag_radar_speed_factor = 0.05
+#sp_tag_helicopter_speed_factor = 0.15
+#sp_tag_jet_speed_factor = 0.1
+#sp_tag_bomb_speed_factor = 0.1
+##sp_tag_tank_speed_factor = 0.05
+#sp_tag_submarine_speed_factor = 0.05
+#sp_tag_artillery_speed_factor = 0.05
+#specialization_nuclear_speed_factor = 0.05
+#sp_tag_surface_ship_speed_factor = 0.05
+#sp_tag_nuclear_warfare_speed_factor = 0.1
+#sp_tag_nuclear_power_speed_factor = 0.1
+
+
+
+#scientist_trait_schrodingers_trait = {
+#	modifier = {
+#		custom_modifier_tooltip = scientist_trait_schrodingers_trait_tt
+#	}	
+#}
+

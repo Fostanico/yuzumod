@@ -1,0 +1,25 @@
+
+soundeffect = {
+	name = ibaraki_rino_parquet
+	sounds = {
+		sound = ibaraki_rino_parquet
+	}
+}
+soundeffect = {
+	name = ibaraki_rino_yuzusoftsour
+	sounds = {
+		sound = ibaraki_rino_yuzusoftsour
+	}
+}
+soundeffect = {
+	name = kido_tsubasa_parquet
+	sounds = {
+		sound = kido_tsubasa_parquet
+	}
+}
+soundeffect = {
+	name = kido_tsubasa_yuzusoftsour
+	sounds = {
+		sound = kido_tsubasa_yuzusoftsour
+	}	
+}

@@ -1,0 +1,56 @@
+﻿l_simp_chinese:
+l_simp_chinese:
+ #玖玖瑠
+ KM_text_1:0 "£GFX_kkr_favor_icon_small §Y好感度§!为 [?kkr_favor|+0]"
+ KM_text_3:0 "£GFX_kkr_favor_icon_small_2 §Y当前状态§! \n                   [kkr_favor_level]"
+ kkr_favor_level_0: "陌路相逢"
+ kkr_favor_level_1: "§7相谈甚欢§!"
+ kkr_favor_level_2: "§8情愫暗生§!"
+ kkr_favor_level_3: "§t两心相许§!"
+ kkr_favor_level_4: "§t白首之盟§!"
+
+ KM_text_2:0 "[KM_text_2_text]"
+ KM_text_2_text_0:0 "空闲中..."
+ KM_text_2_text_1:0 "与玖玖瑠玩游戏中..."
+ KM_text_2_text_2:0 "与玖玖瑠共享美食中..."
+ KM_text_2_text_3:0 "与玖玖瑠约会♡中..."
+ KM_text_2_text_4:0 "与玖玖瑠旅游♡中..."
+
+ kkr_change_clothes_tt:0 "当£GFX_kkr_favor_icon_small §Y好感度§!达到§Y150§!时可点击此按钮切换立绘(目前有12张)"
+ KM_dialog_textbox_2_tt:0 "当点击§g玖玖瑠§!§Y好感度§!决议时，这里会显示正在和§g玖玖瑠§!做的事哦~"
+
+ Kukuru_protrait_images_1:0 "GFX_kkr_big_1"
+ Kukuru_protrait_images_2:0 "GFX_kkr_big_2"
+ Kukuru_protrait_images_3:0 "GFX_kkr_big_3"
+ Kukuru_protrait_images_4:0 "GFX_kkr_big_4"
+ Kukuru_protrait_images_5:0 "GFX_kkr_big_5"
+ Kukuru_protrait_images_6:0 "GFX_kkr_big_11"
+ Kukuru_protrait_images_7:0 "GFX_kkr_big_12"
+ Kukuru_protrait_images_8:0 "GFX_kkr_big_8"
+ Kukuru_protrait_images_9:0 "GFX_kkr_big_9"
+ Kukuru_protrait_images_10:0 "GFX_kkr_big_10"
+ Kukuru_protrait_images_11:0 "GFX_kkr_big_6"
+ Kukuru_protrait_images_12:0 "GFX_kkr_big_7"
+ Kukuru_research_protrait_images_1:0 "GFX_kkr_big_10"
+ Kukuru_research_protrait_images_2:0 "GFX_kkr_big_11"
+ Kukuru_research_protrait_images_3:0 "GFX_kkr_big_12"
+
+ KM_bg_images_1:0 "GFX_kkr_bg_1"
+ KM_bg_images_2:0 "GFX_kkr_bg_2"
+ KM_bg_images_3:0 "GFX_kkr_bg_3"
+ KM_bg_images_4:0 "GFX_kkr_bg_4"
+
+ KM_activity_state_icon_images_0:0 "GFX_kkr_activity_state_bg"
+ KM_activity_state_icon_images_1:0 "GFX_kkr_activity_state_1"
+ KM_activity_state_icon_images_2:0 "GFX_kkr_activity_state_2"
+ KM_activity_state_icon_images_3:0 "GFX_kkr_activity_state_3"
+ KM_activity_state_icon_images_4:0 "GFX_kkr_activity_state_4"
+
+ get_kkr_super_event_quote_1:0 "永恒的温暖 总是会\n化为幸福的眼泪 拯救了我\n我说 你一定会为我证明\n这并不是靠逻辑解释的命运吧\n永远 永远 充满挚爱" 
+ get_kkr_super_event_title_1:0 "与玖玖瑠的婚礼"
+ get_kkr_super_event_remark_1:0 "「不论怎样，我都想和你在一起」"
+ Super_event_images_1:0 "GFX_super_event_kkr_marriage"
+
+ KR_text_1:0 "£GFX_research_icon §4研究进度§! §Y[?kkr_research_progress|Y0]%§!"
+ KR_text_3:0 "£GFX_research_icon 每周§4研究进度§!\n      变化 §Y[?weekly_kkr_research_progress|Y0]%§!"
+

@@ -1,297 +1,498 @@
 ideas = {
-	country = {
-		#YCG_<name> = {
-		#	cancel = {
-		#		not = { 
-		#			has_country_flag = YCG_CM_<name>
-		#			has_country_flag = YCG_VC_<name>
-		#			has_country_flag = YCG_FS_<name>
-		#		}
-		#	}
-		#	modifier = {
-		#		
-		#	}
-		#}
-		#############################################################
-		
-		YCG_ayase = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_ayase
-					has_country_flag = YCG_VC_ayase
-					has_country_flag = YCG_FS_ayase 
-				}
-			}
-			modifier = { 
-				political_power_factor = 0.1
-				party_popularity_stability_factor = 0.15
-				war_support_weekly = 0.002
-				command_power_gain = 0.15
-				own_operative_detection_chance_factor = -0.1
-				enemy_operative_detection_chance_factor = 0.15  
-				command_abilities_cost_factor = -0.2 
-			}
-		}
-		YCG_yoshino = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_yoshino
-					has_country_flag = YCG_VC_yoshino
-					has_country_flag = YCG_FS_yoshino 
-				}
-			}
-			modifier = {
-				political_power_gain = 0.05
-				min_export = -0.05
-				stability_factor = 0.05
-				monthly_population = 0.5
-				global_building_slots_factor = 0.05
-				autonomy_gain = 0.15
-			}
-		}
-		YCG_murasame = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_murasame
-					has_country_flag = YCG_VC_murasame
-					has_country_flag = YCG_FS_murasame 
-				}
-			}
-			modifier = {
-				justify_war_goal_time = -0.25
-				war_support_factor = 0.1
-				army_attack_factor = 0.05
-				army_morale_factor = 0.05
-				max_dig_in_factor = 0.05
-				industrial_capacity_factory = 0.05
-				conscription_total_factor = 0.05
-				land_reinforce_rate = 0.01
-				non_core_manpower = 0.05
-				resistance_growth_on_our_occupied_states = 0.2
-				compliance_growth = 0.15
-			}
-		}
-		YCG_nene = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_nene
-					has_country_flag = YCG_VC_nene
-					has_country_flag = YCG_FS_nene 
-				}
-			}
-			modifier = {
-				political_power_factor = -0.1
-				research_speed_factor = 0.15
-				equipment_capture = 0.1
-				equipment_upgrade_xp_cost = -0.1
-				local_resources_factor = 0.1
-				line_change_production_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
-				air_accidents = -0.05
-			}
-		}
-		YCG_miu = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_miu
-					has_country_flag = YCG_VC_miu
-					has_country_flag = YCG_FS_miu 
-				}
-			}
-			modifier = {
-				political_power_factor = 0.1 # 政治点数+15%
-				stability_factor = 0.1 # 稳定度+15%
-				war_support_factor = 0.05 # 战争支持度40%
-				drift_defence_factor = 0.20 # 意识形态变化抵制力度+40%
-				industry_air_damage_factor = -0.15	#工厂受轰炸易损性 -
-			}
-		}
-		YCG_hazuki = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_hazuki
-					has_country_flag = YCG_VC_hazuki
-					has_country_flag = YCG_FS_hazuki 
-				}
-			}
-			modifier = {
-				consumer_goods_factor = 0.1
-				naval_strike = 0.1
-				invasion_preparation = -0.25
-				naval_detection = 0.2
-				navy_anti_air_attack_factor = 0.1
-				navy_max_range_factor = 0.15
-				experience_gain_navy_factor = 0.1
-				industrial_capacity_dockyard = 0.1
-				unit_marine_design_cost_factor = -0.5
-				industrial_capacity_dockyard = 0.15
-				naval_invasion_capacity = 10
-			}
-		}
-		YCG_megulu = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_megulu
-					has_country_flag = YCG_VC_megulu
-					has_country_flag = YCG_FS_megulu 
-				}
-			}
-			modifier = {
-				military_industrial_organization_size_up_requirement = -0.15        #升级规模要求
-				military_industrial_organization_funds_gain = 0.2       #经费获取
-				military_industrial_organization_research_bonus = 0.1       #研究加成
-				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
-				stability_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.2
-				production_speed_dockyard_factor = 0.1
-				equipment_bonus = {
-					armor = {
-						build_cost_ic = -0.05
-						instant = yes
-					}
-				}
-			}
-		}
-		YCG_nanami = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_nanami
-					has_country_flag = YCG_VC_nanami
-					has_country_flag = YCG_FS_nanami 
-				}
-			}
-			modifier = {
-				agency_upgrade_time = -0.15
-				operative_slot = 1 
-				experience_gain_army_factor = 0.1
-				coordination_bonus = 0.05
-				initiative = 0.2
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
-				casualty_trickleback = 0.3 #伤兵复原
-				experience_loss_factor = -0.15
-			}
-		}
-		YCG_mayu = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_mayu
-					has_country_flag = YCG_VC_mayu
-					has_country_flag = YCG_FS_mayu 
-				}
-			}
-			modifier = {
-				consumer_goods_factor = 0.1
-				research_speed_factor = 0.15
-				military_industrial_organization_funds_gain = 0.2
-				military_industrial_organization_research_bonus = 0.05
-				military_industrial_organization_industrial_manufacturer_assign_cost = -0.2
-			}
-		}
-		YCG_toko = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_toko
-					has_country_flag = YCG_VC_toko
-					has_country_flag = YCG_FS_toko 
-				}
-			}
-			modifier = {
-				political_power_factor = 0.1
-				industrial_concern_cost_factor = -0.25
-				mobilization_laws_cost_factor = -0.25
-				trade_laws_cost_factor  = -0.25
-				economy_cost_factor = -0.25
-				political_advisor_cost_factor = -0.25
-				theorist_cost_factor = -0.25
-				army_chief_cost_factor = -0.25
-				navy_chief_cost_factor = -0.25
-				air_chief_cost_factor = -0.25
-				high_command_cost_factor = -0.25
-				tank_manufacturer_cost_factor = -0.25
-				naval_manufacturer_cost_factor = -0.25
-				aircraft_manufacturer_cost_factor = -0.25
-				materiel_manufacturer_cost_factor = -0.25
-				opinion_gain_monthly_factor = 0.15
-				trade_opinion_factor = 0.15
-				subversive_activites_upkeep = -0.25
-			}
-		}
-		YCG_kanna = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_kanna
-					has_country_flag = YCG_VC_kanna
-					has_country_flag = YCG_FS_kanna 
-				}
-			}
-			modifier = {
-				monthly_population = 0.025
-				army_bonus_air_superiority_factor = 0.1
-				air_ace_generation_chance_factor = 0.1
-				air_superiority_bonus_in_combat = 0.05
-				air_mission_xp_gain_factor = 0.05
-			}
-		}
-		YCG_noa = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_noa
-					has_country_flag = YCG_VC_noa
-					has_country_flag = YCG_FS_noa 
-				}
-			}
-			modifier = {
-				air_agility_factor = 0.1
-				air_cas_present_factor = 0.05
-				air_attack_factor = 0.05
-				air_range_factor = 0.1
-				ground_attack_factor = 0.1
-				army_bonus_air_superiority_factor = 0.1
-				navy_anti_air_attack_factor = 0.2
-			}
-		}
-		YCG_fumika = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_fumika
-					has_country_flag = YCG_VC_fumika
-					has_country_flag = YCG_FS_fumika 
-				}
-			}
-			modifier = {
-				command_power_gain = 2
-				max_command_power_mult = 0.25
-				land_doctrine_cost_factor = -0.1
-				naval_doctrine_cost_factor = -0.1
-				air_doctrine_cost_factor = -0.1
-				military_leader_cost_factor = -0.1
-				army_leader_start_level = 1
-				army_leader_start_attack_level = 2
-				planning_speed = 0.1
-				max_planning = 0.05
-			}
-		}
-		YCG_sana = {
-			cancel = {
-				not = { 
-					has_country_flag = YCG_CM_sana
-					has_country_flag = YCG_VC_sana
-					has_country_flag = YCG_FS_sana 
-				}
-			}
-			modifier = {
-				production_factory_start_efficiency_factor = 0.05
-				line_change_production_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-				global_building_slots_factor = 0.05
-				production_speed_buildings_factor = 0.05
-			}
-		}
-		
-	}
+    country = {
+        #YCG_<name> = {
+        #	cancel = {
+        #		not = {
+        #			has_country_flag = YCG_CM_<name>
+        #			has_country_flag = YCG_VC_<name>
+        #			has_country_flag = YCG_FS_<name>
+        #		}
+        #	}
+        #	modifier = {
+        #
+        #	}
+        #}
+        #############################################################
+
+        YCG_ayase = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_ayase
+                    has_country_flag = YCG_VC_ayase
+                    has_country_flag = YCG_FS_ayase
+                }
+            }
+            modifier = {
+                political_power_factor = 0.1
+                party_popularity_stability_factor = 0.15
+                war_support_weekly = 0.002
+                command_power_gain = 0.15
+                own_operative_detection_chance_factor = -0.1
+                enemy_operative_detection_chance_factor = 0.15
+                command_abilities_cost_factor = -0.2
+            }
+        }
+        YCG_yoshino = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_yoshino
+                    has_country_flag = YCG_VC_yoshino
+                    has_country_flag = YCG_FS_yoshino
+                }
+            }
+            modifier = {
+                conscription = 0.02
+                political_power_gain = 0.25
+                min_export = -0.15
+                stability_factor = 0.15
+                monthly_population = 0.5
+                global_building_slots_factor = 0.15
+                autonomy_gain = 0.3
+                production_speed_buildings_factor = 0.1
+            }
+        }
+        YCG_murasame = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_murasame
+                    has_country_flag = YCG_VC_murasame
+                    has_country_flag = YCG_FS_murasame
+                }
+            }
+            modifier = {
+                justify_war_goal_time = -0.25
+                war_support_factor = 0.1
+                army_attack_factor = 0.05
+                army_morale_factor = 0.05
+                max_dig_in_factor = 0.05
+                industrial_capacity_factory = 0.05
+                conscription_total_factor = 0.05
+                land_reinforce_rate = 0.01
+                non_core_manpower = 0.05
+                resistance_growth_on_our_occupied_states = 0.2
+                compliance_growth = 0.15
+            }
+        }
+        YCG_nene = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_nene
+                    has_country_flag = YCG_VC_nene
+                    has_country_flag = YCG_FS_nene
+                }
+            }
+            modifier = {
+                political_power_factor = -0.1
+                research_speed_factor = 0.15
+                equipment_capture = 0.1
+                equipment_upgrade_xp_cost = -0.1
+                local_resources_factor = 0.1
+                line_change_production_efficiency_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.05
+                air_accidents = -0.1
+            }
+        }
+        YCG_miu = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_miu
+                    has_country_flag = YCG_VC_miu
+                    has_country_flag = YCG_FS_miu
+                }
+            }
+            modifier = {
+                political_power_factor = 0.1 # 政治点数+15%
+                stability_factor = 0.1 # 稳定度+15%
+                war_support_factor = 0.05 # 战争支持度40%
+                drift_defence_factor = 0.20 # 意识形态变化抵制力度+40%
+                industry_air_damage_factor = -0.15	#工厂受轰炸易损性 -
+            }
+        }
+        YCG_hazuki = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_hazuki
+                    has_country_flag = YCG_VC_hazuki
+                    has_country_flag = YCG_FS_hazuki
+                }
+            }
+            modifier = {
+                consumer_goods_factor = 0.1
+                naval_strike = 0.1
+                invasion_preparation = -0.25
+                naval_detection = 0.2
+                navy_anti_air_attack_factor = 0.1
+                navy_max_range_factor = 0.15
+                experience_gain_navy_factor = 0.1
+                industrial_capacity_dockyard = 0.1
+                unit_marine_design_cost_factor = -0.5
+                industrial_capacity_dockyard = 0.15
+                naval_invasion_capacity = 10
+            }
+        }
+        YCG_megulu = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_megulu
+                    has_country_flag = YCG_VC_megulu
+                    has_country_flag = YCG_FS_megulu
+                }
+            }
+            modifier = {
+                military_industrial_organization_size_up_requirement = -0.15        #升级规模要求
+                military_industrial_organization_funds_gain = 0.2       #经费获取
+                military_industrial_organization_research_bonus = 0.1       #研究加成
+                production_speed_arms_factory_factor = 0.2
+                production_speed_dockyard_factor = 0.2
+                stability_factor = -0.05
+                production_factory_efficiency_gain_factor = 0.2
+                production_speed_dockyard_factor = 0.1
+                industrial_capacity_factory = 0.1
+                industrial_capacity_dockyard = 0.1
+                equipment_bonus = {
+                    armor = {
+                        build_cost_ic = -0.05
+                        instant = yes
+                    }
+                }
+            }
+        }
+        YCG_nanami = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_nanami
+                    has_country_flag = YCG_VC_nanami
+                    has_country_flag = YCG_FS_nanami
+                }
+            }
+            modifier = {
+                agency_upgrade_time = -0.15
+                operative_slot = 1
+                experience_gain_army_factor = 0.1
+                coordination_bonus = 0.05
+                initiative = 0.2
+                army_core_attack_factor = 0.05
+                army_core_defence_factor = 0.05
+                casualty_trickleback = 0.3 #伤兵复原
+                experience_loss_factor = -0.15
+            }
+        }
+        YCG_mayu = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_mayu
+                    has_country_flag = YCG_VC_mayu
+                    has_country_flag = YCG_FS_mayu
+                }
+            }
+            modifier = {
+                consumer_goods_factor = 0.1
+                research_speed_factor = 0.15
+                military_industrial_organization_funds_gain = 0.2
+                military_industrial_organization_research_bonus = 0.05
+                military_industrial_organization_industrial_manufacturer_assign_cost = -0.2
+            }
+        }
+        YCG_toko = {
+            picture = GFX_idea_toko_core
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_toko
+                    has_country_flag = YCG_VC_toko
+                    has_country_flag = YCG_FS_toko
+                }
+            }
+            modifier = {
+                political_power_factor = 0.1
+                industrial_concern_cost_factor = -0.25
+                mobilization_laws_cost_factor = -0.25
+                trade_laws_cost_factor  = -0.25
+                economy_cost_factor = -0.25
+                political_advisor_cost_factor = -0.25
+                theorist_cost_factor = -0.25
+                army_chief_cost_factor = -0.25
+                navy_chief_cost_factor = -0.25
+                air_chief_cost_factor = -0.25
+                high_command_cost_factor = -0.25
+                tank_manufacturer_cost_factor = -0.25
+                naval_manufacturer_cost_factor = -0.25
+                aircraft_manufacturer_cost_factor = -0.25
+                materiel_manufacturer_cost_factor = -0.25
+                opinion_gain_monthly_factor = 0.15
+                trade_opinion_factor = 0.15
+                subversive_activites_upkeep = -0.25
+            }
+        }
+        YCG_kanna = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_kanna
+                    has_country_flag = YCG_VC_kanna
+                    has_country_flag = YCG_FS_kanna
+                }
+            }
+            modifier = {
+                monthly_population = 0.025
+                army_bonus_air_superiority_factor = 0.1
+                air_ace_generation_chance_factor = 0.1
+                air_superiority_bonus_in_combat = 0.1
+                air_mission_xp_gain_factor = 0.15
+            }
+        }
+        YCG_noa = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_noa
+                    has_country_flag = YCG_VC_noa
+                    has_country_flag = YCG_FS_noa
+                }
+            }
+            modifier = {
+                air_agility_factor = 0.15
+                air_cas_present_factor = 0.05
+                air_attack_factor = 0.1
+                air_range_factor = 0.1
+                ground_attack_factor = 0.1
+                army_bonus_air_superiority_factor = 0.1
+                navy_anti_air_attack_factor = 0.2
+            }
+        }
+        YCG_fumika = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_fumika
+                    has_country_flag = YCG_VC_fumika
+                    has_country_flag = YCG_FS_fumika
+                }
+            }
+            modifier = {
+                command_power_gain = 2
+                max_command_power_mult = 0.25
+                land_doctrine_cost_factor = -0.1
+                naval_doctrine_cost_factor = -0.1
+                air_doctrine_cost_factor = -0.1
+                military_leader_cost_factor = -0.1
+                army_leader_start_level = 1
+                army_leader_start_attack_level = 2
+                planning_speed = 0.1
+                max_planning = 0.05
+            }
+        }
+        YCG_sana = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_sana
+                    has_country_flag = YCG_VC_sana
+                    has_country_flag = YCG_FS_sana
+                }
+            }
+            modifier = {
+                production_factory_start_efficiency_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.15
+                production_factory_max_efficiency_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.1
+                global_building_slots_factor = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        YCG_masaki = {
+            cancel = {
+                not = {
+                    has_country_flag = YCG_CM_masaki
+                    has_country_flag = YCG_VC_masaki
+                    has_country_flag = YCG_FS_masaki
+                }
+            }
+            modifier = {
+                production_factory_start_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+                army_attack_factor = 0.15
+                max_planning = 0.15
+                supply_consumption_factor = 0.15
+                supply_node_range = -0.15
+            }
+        }
+        YCG_ruri = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_ruri
+                    has_country_flag = YCG_VC_ruri
+                    has_country_flag = YCG_FS_ruri
+                }
+            }
+            modifier = {
+                army_attack_factor = 0.65
+                breakthrough_factor = 1.25
+                combat_width_factor = -0.25
+                coordination_bonus = 0.2
+                initiative_factor = 0.2
+                recon_factor = 0.2
+                army_defence_factor = -0.75
+                supply_consumption_factor = 0.5
+                no_supply_grace = -120
+            }
+        }
+        YCG_sayo = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_sayo
+                    has_country_flag = YCG_VC_sayo
+                    has_country_flag = YCG_FS_sayo
+                }
+            }
+            modifier = {
+                research_speed_factor = 0.05
+                local_resources_factor = 0.15
+                consumer_goods_factor = -0.15
+                #consumer_goods_expected_value = -0.1
+                global_building_slots_factor = 0.3
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.15
+                industrial_capacity_dockyard = 0.15
+                army_org_factor = 0.05
+                army_morale_factor = 0.05
+            }
+        }
+        YCG_sakuyahime = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_sakuyahime
+                    has_country_flag = YCG_VC_sakuyahime
+                    has_country_flag = YCG_FS_sakuyahime
+                }
+            }
+            modifier = {
+                global_building_slots_factor = 0.25
+                production_speed_buildings_factor = 0.25
+                local_resources_factor = 0.75
+                consumer_goods_factor = -0.5
+                research_speed_factor = -0.05
+                stability_factor = 0.5
+                stability_weekly = 0.05
+                industrial_capacity_dockyard = -0.05
+                industrial_capacity_factory = -0.05
+                production_factory_max_efficiency_factor = -0.05
+                production_factory_efficiency_gain_factor = -0.05
+                production_factory_start_efficiency_factor = -0.1
+                line_change_production_efficiency_factor = -0.1
+            }
+        }
+        YCG_misaka_makoto = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_misaka_makoto
+                    has_country_flag = YCG_VC_misaka_makoto
+                    has_country_flag = YCG_FS_misaka_makoto
+                }
+            }
+            modifier = {
+                health_cost_multiplier_modifier = -0.5
+                education_cost_multiplier_modifier = -0.5
+                social_cost_multiplier_modifier = -0.5
+                police_cost_multiplier_modifier = -0.5
+                bureaucracy_cost_multiplier_modifier = -0.5
+				army_personnel_cost_multiplier_modifier = -0.99
+                navy_personnel_cost_multiplier_modifier = -0.99
+                airforce_personnel_cost_multiplier_modifier = -0.99
+                corporate_tax_income_multiplier_modifier = 0.5
+                population_tax_income_multiplier_modifier = 0.5
+                productivity_growth_modifier = 10
+                economic_cycles_cost_factor = -0.4
+                research_speed_factor = 0.25
+                energy_use_multiplier = -0.3
+                energy_gain_multiplier = 0.3
+                local_resources_factor = 0.3
+                consumer_goods_factor = -0.5
+                consumer_goods_expected_value = -0.15
+                global_building_slots_factor = 2
+                production_speed_buildings_factor = 0.5
+				industrial_capacity_dockyard = 1
+            }
+        }
+        YCG_suou = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_suou
+                    has_country_flag = YCG_VC_suou
+                    has_country_flag = YCG_FS_suou
+                }
+            }
+            modifier = {
+                supply_consumption_factor = -0.65
+                consumer_goods_expected_value = -0.05
+                consumer_goods_factor = -0.5
+                army_org_factor = 0.35
+                army_org_regain = 0.35
+                army_strength_factor = 0.35
+                stability_factor = 0.2
+                industrial_capacity_dockyard = 0.2
+                industrial_capacity_factory = 0.2
+                monthly_population = 0.15
+                global_building_slots_factor = 0.5
+                global_building_slots = 5
+                planning_speed = -0.15
+                max_planning_factor = -0.15
+            }
+        }
+        YCG_wakana = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_wakana
+                    has_country_flag = YCG_VC_wakana
+                    has_country_flag = YCG_FS_wakana
+                }
+            }
+            modifier = {
+                industrial_capacity_factory = 0.15
+                industrial_capacity_dockyard = 0.15
+                consumer_goods_factor = -0.2
+                production_factory_max_efficiency_factor = 0.15
+                political_power_factor = -0.1
+                stability_factor = 0.1
+                war_support_factor = 0.1               
+            }
+        }
+        YCG_nozomi = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_nozomi
+                    has_country_flag = YCG_VC_nozomi
+                    has_country_flag = YCG_FS_nozomi
+                }
+            }
+            modifier = {
+                research_speed_factor = -0.05
+                supply_consumption_factor = -0.1
+                army_strength_factor = 0.1
+                army_core_attack_factor = 0.1
+                army_core_defence_factor = 0.1
+                no_supply_grace = 48
+                experience_loss_factor = -0.1
+                army_org_factor = -0.05
+                war_support_factor = 0.1
+            }
+        }
+        YCG_tsumugi = {
+            cancel = {
+                NOT = {
+                    has_country_flag = YCG_CM_tsumugi
+                    has_country_flag = YCG_VC_tsumugi
+                    has_country_flag = YCG_FS_tsumugi
+                }
+            }
+            modifier = {
+                stability_factor = 0.15
+                stability_weekly = 0.005
+                war_support_factor = 0.15
+                war_support_weekly = 0.005
+                experience_loss_factor = -0.6
+                casualty_trickleback = 0.1
+            }
+        }
+    }
 }

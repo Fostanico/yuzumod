@@ -1,0 +1,69 @@
+
+
+#### Propaganda assets and posters ####
+
+spriteTypes = {	
+
+
+	### youzu ###
+	spriteType = {
+		name = "GFX_yz_poster_bg"
+		texturefile = "gfx/guis/yuzu_poster/yz_poster_bg.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_yz_poster_images_1"
+		texturefile = "gfx/guis/yuzu_poster/yz_poster_images.png"
+		legacy_lazy_load = no
+		noOfFrames = 16
+	}
+	spriteType = {
+		name = "GFX_yz_poster_images_2"
+		texturefile = "gfx/guis/yuzu_poster/yz_poster_images.png"
+		legacy_lazy_load = no
+		noOfFrames = 16
+	}
+	spriteType = {
+		name = "GFX_yz_poster_images_3"
+		texturefile = "gfx/guis/yuzu_poster/yz_poster_images.png"
+		legacy_lazy_load = no
+		noOfFrames = 16
+	}
+	spriteType = {
+		name = "GFX_yz_poster_sd_1"
+		texturefile = "gfx/guis/yuzu_poster/murasame_leftdown.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_poster_sd_2"
+		texturefile = "gfx/guis/yuzu_poster/downright_nene.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_poster_sd_3"
+		texturefile = "gfx/guis/yuzu_poster/downright_meigulu.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_yz_manpower1"
+		texturefile = "gfx/decision/yzc_manpower1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_manpower2"
+		texturefile = "gfx/decision/yzc_manpower2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_manpower3"
+		texturefile = "gfx/decision/yzc_manpower3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_manpower"
+		texturefile = "gfx/decision/yzc_manpower.png"
+		legacy_lazy_load = no
+	}
+}

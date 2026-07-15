@@ -5,6 +5,7 @@ QRYleaders_category = {
 			or = {
                 has_country_flag = qiyong_youzi_1
                 has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
             }
 		}
 		available = {
@@ -13,6 +14,36 @@ QRYleaders_category = {
 		}
 		complete_effect = {
 			country_event = { id = YZHJ_event.1 }
+		}
+	}
+	JCLleaders_decision_JCL_2 = {
+		icon = generic_construction
+		cost = 114
+		visible = {
+			or = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+            }
+		}
+		available = {
+			is_ai = no
+			has_country_flag = have_kakka_nor
+		}
+		complete_effect = {
+			create_navy_leader = {
+			name = "伊尔诺"
+			gfx = "GFX_portrait_sirno_capital"
+			traits = {
+				ad_victorian_in_see
+			}
+			skill = 40
+			attack_skill = 40
+			defense_skill = 40
+			maneuvering_skill = 40
+			coordination_skill = 40
+			set_character_flag = yz_navy_flag
+		}
 		}
 	}
 }

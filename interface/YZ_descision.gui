@@ -26,7 +26,7 @@ guiTypes = {
 			size = { width = 180 height = 230 }
 			scale = 0.6		###缩放
 			quadTextureSprite = "GFX_murasame_3"
-			#pdx_tooltip = "open_YzModule_tt"
+			pdx_tooltip = "open_start_ui_tt"
 		} 
 		#instantTextBoxType = {
 		#	name = "open_YzModule_text"

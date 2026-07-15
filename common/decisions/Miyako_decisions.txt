@@ -1,0 +1,761 @@
+Miyako_steal_decision = {
+	#huhu的喵都偷东西小机制
+	awakening = {
+		priority = 10
+		icon = GFX_decision_miyako_steal
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			has_country_flag = have_miyako
+		}
+		fire_only_once = yes
+		days_remove = 7
+		modifier = {
+			political_power_gain = -0.2
+		}
+		remove_effect = {
+			set_country_flag = miyako_steal_unlocked
+		}
+	}
+	Miyako_steal_choose_country_menu = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			not = {
+				has_country_flag = Miyako_steal_choose_country_menu_on
+			}
+		}
+		complete_effect = {
+			set_country_flag = Miyako_steal_choose_country_menu_on
+		}
+	}
+	close_Miyako_steal_choose_country_menu = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on
+		}
+		complete_effect = {
+			clr_country_flag = Miyako_steal_choose_country_menu_on
+			clr_country_flag = Miyako_steal_choose_country_menu_on_major
+			clr_country_flag = Miyako_steal_choose_country_menu_on_neighbor
+			clr_country_flag = Miyako_steal_choose_country_menu_on_other
+			clr_country_flag = Miyako_steal_choose_country_menu_on_cancel
+		}
+	}
+	Miyako_steal_choose_country_menu_1 = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on
+			not = {
+				has_country_flag = Miyako_steal_choose_country_menu_on_major
+			}
+		}
+		complete_effect = {
+			set_country_flag = Miyako_steal_choose_country_menu_on_major
+		}
+	}
+	Miyako_steal_choose_country_menu_2 = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on
+			not = {
+				has_country_flag = Miyako_steal_choose_country_menu_on_neighbor
+			}
+		}
+		complete_effect = {
+			set_country_flag = Miyako_steal_choose_country_menu_on_neighbor
+		}
+	}
+	Miyako_steal_choose_country_menu_3 = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on
+			not = {
+				has_country_flag = Miyako_steal_choose_country_menu_on_other
+			}
+		}
+		complete_effect = {
+			set_country_flag = Miyako_steal_choose_country_menu_on_other
+		}
+	}
+	Miyako_steal_choose_country_menu_4 = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on
+			not = {
+				has_country_flag = Miyako_steal_choose_country_menu_on_cancel
+			}
+		}
+		complete_effect = {
+			set_country_flag = Miyako_steal_choose_country_menu_on_cancel
+		}
+	}
+	Miyako_steal_cancel_choose_country = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on_cancel
+		}
+		complete_effect = {
+			FROM = {
+				clr_country_flag = Miyako_steal_have_chosen
+			}
+		}
+	}
+	Miyako_steal_choose_major_country = {
+		target_trigger = {
+			FROM = {
+				not = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				is_major = yes
+			}
+		}
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on_major
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = Miyako_steal_have_chosen
+			}
+		}
+	}
+	Miyako_steal_choose_neighbor_country = {
+		target_trigger = {
+			FROM = {
+				not = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				is_neighbor_of = ROOT
+			}
+		}
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on_neighbor
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = Miyako_steal_have_chosen
+			}
+		}
+	}
+	Miyako_steal_choose_other_country = {
+		target_trigger = {
+			FROM = {
+				not = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				not = {
+					is_major = yes
+					is_neighbor_of = ROOT
+				}
+			}
+		}
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = Miyako_steal_choose_country_menu_on_other
+		}
+		complete_effect = {
+			FROM = {
+				set_country_flag = Miyako_steal_have_chosen
+			}
+		}
+	}
+	Miyako_steal_manpower = {
+		icon = GFX_decision_miyako_steal
+		cost = 50
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_manpower = -250000
+			}
+			add_manpower = 250000
+		}
+	}
+	Miyako_steal_infantry_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 20
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+		}
+	}
+	Miyako_steal_support_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 30
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -2000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 2000
+			}
+		}
+	}
+	Miyako_steal_artillery_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 40
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -1000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+			}
+		}
+	}
+	Miyako_steal_truck_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 30
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -500
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+		}
+	}
+	Miyako_steal_mechanized_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 70
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -1000
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 1000
+			}
+		}
+	}
+	Miyako_steal_fuel = {
+		icon = GFX_decision_miyako_steal
+		cost = 50
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_fuel = -100000
+			}
+			add_fuel = 100000
+		}
+	}
+	Miyako_steal_tank_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 60
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -500
+				}
+				add_equipment_to_stockpile = {
+					type = heavy_tank_chassis
+					amount = -500
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = -500
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_tank_chassis
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = 500
+			}
+		}
+	}
+	Miyako_steal_fighter_equipment = {
+		icon = GFX_decision_miyako_steal
+		cost = 60
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe
+					amount = -500
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 500
+			}
+		}
+	}
+	huhu_s_revenge = {
+		icon = GFX_decision_miyako_steal
+		cost = 0
+		days_remove = 90
+		visible = {
+			has_country_flag = have_miyako
+			any_army_leader = {
+				has_trait = wounded
+				has_trait = call_from_king_right
+			}
+		}
+		modifier = {
+			army_attack_factor = 10
+			army_defence_factor = 10
+			army_org = 100
+			army_strength_factor = 10
+			army_core_attack_factor = 10
+			army_core_defence_factor = 10
+			army_speed_factor = 1
+			army_org_regain = 10
+			max_planning = 10
+			max_planning_factor = 1
+			planning_speed = 10
+		}
+	}
+	Miyako_steal_civilian_factory = {
+		icon = GFX_decision_miyako_steal
+		cost = 60
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				random_country = {
+					limit = {
+						has_country_flag = Miyako_steal_have_chosen
+					}
+					# 扣除对方实体省份的民工（执行两次，每次扣1个）
+					random_owned_controlled_state = {
+						limit = {
+							has_building = industrial_complex
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_building = industrial_complex
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			# 给自己增加2个地图外民用工厂
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	}
+	Miyako_steal_military_factory = {
+		icon = GFX_decision_miyako_steal
+		cost = 60
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				random_country = {
+					limit = {
+						has_country_flag = Miyako_steal_have_chosen
+					}
+					# 扣除对方军工
+					random_owned_controlled_state = {
+						limit = {
+							has_building = arms_factory
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_building = arms_factory
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_building = arms_factory
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+				}
+			}
+			# 给自己增加3个地图外军工厂
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
+		}
+	}
+	Miyako_steal_dockyard = {
+		icon = GFX_decision_miyako_steal
+		cost = 60
+		days_remove = 7
+		visible = {
+			has_country_flag = miyako_steal_unlocked
+			has_country_flag = have_miyako
+			any_country = {
+				has_country_flag = Miyako_steal_have_chosen
+			}
+		}
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+			has_country_flag = have_miyako
+			hidden_trigger = {
+				any_country = {
+					has_country_flag = Miyako_steal_have_chosen
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				random_country = {
+					limit = {
+						has_country_flag = Miyako_steal_have_chosen
+					}
+					# 扣除对方船坞
+					random_owned_controlled_state = {
+						limit = {
+							has_building = dockyard
+						}
+						remove_building = {
+							type = dockyard
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_building = dockyard
+						}
+						remove_building = {
+							type = dockyard
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_building = dockyard
+						}
+						remove_building = {
+							type = dockyard
+							level = 1
+						}
+					}
+				}
+			}
+			# 给自己增加2个地图外船坞
+			add_offsite_building = {
+				type = dockyard
+				level = 3
+			}
+		}
+	}
+}

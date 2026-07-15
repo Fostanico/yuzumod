@@ -1,0 +1,22 @@
+Tarot_category = { #魔宴塔罗牌
+	#close_traot = {		
+	#	icon = GFX_tarot_icon
+	#	visible = {
+	#		and = {
+	#			or = {
+	#				has_country_flag = have_ningning
+	#				has_country_flag = have_meigulu
+	#				has_country_flag = have_wakana
+	#				has_country_flag = have_toko
+	#				has_country_flag = have_chou
+	#			}
+	#			has_country_flag = open_traot 
+	#		}
+	#	}
+	#	cost = 0
+	#	complete_effect = {
+	#		clr_country_flag = open_traot
+	#	}
+	#}
+}
+

@@ -1,0 +1,30 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_decision_miyako_steal"
+        texturefile = "gfx/decision/miyako_steal.png"
+    }
+}
+spriteTypes = {
+    spriteType = {
+        name = "GFX_miyako_steal"
+        texturefile = "gfx/decision/miyako_steal.png"
+    }
+}
+spriteTypes = {
+    spriteType = {
+        name = "GFX_decision_haruka_decision"
+        texturefile = "gfx/decision/haruka_decision.png"
+    }
+}
+spriteTypes = {
+    spriteType = {
+        name = "GFX_haruka_decision"
+        texturefile = "gfx/decision/haruka_decision.png"
+    }
+}
+spriteTypes = {
+    spriteType = {
+        name = "GFX_ideas_new_three"
+        texturefile = "gfx/ideas/new_three.png"
+    }
+}

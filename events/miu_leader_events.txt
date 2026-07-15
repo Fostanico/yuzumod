@@ -1,106 +1,106 @@
 add_namespace = miu_event
 
-country_event = { 
-	id = miu_event.1
-	title = miu_event.1.t
-	desc = miu_event.1.d
-	picture = miu_cwfn_event0
-	
-	is_triggered_only = yes
-	
-	option = {
-		retire_country_leader = yes
-		name = miu_event.1.a
-		trigger = {
-			has_government = communism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-					name = "矢来美羽"
-			        picture = "GFX_portrait_ADD_meiyu"
-					desc = miu_desc
-					expire = "2095.1.1"
-				    ideology = marxism
-					 traits = {
-						MY
-				    }
-				}
-		}
+country_event = {
+    id = miu_event.1
+    title = miu_event.1.t
+    desc = miu_event.1.d
+    picture = miu_cwfn_event0
 
-		option = {
-		retire_country_leader = yes
-		name = miu_event.2.a
-		trigger = {
-			has_government = democratic
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "矢来美羽"
-			        picture = "GFX_portrait_ADD_meiyu"
-			        desc = miu_desc
-					expire = "2095.1.1"
-				    ideology = conservatism
-					 traits = {
-						MY
-				    }
-				}
-		}
+    is_triggered_only = yes
 
-		option = {
-		retire_country_leader = yes
-		name = miu_event.3.a
-		trigger = {
-			has_government = fascism
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "矢来美羽"
-			        picture = "GFX_portrait_ADD_meiyu"
-			        desc = miu_desc
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						MY
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = miu_event.1.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "矢来美羽"
+            picture = "GFX_portrait_ADD_meiyu"
+            desc = miu_desc
+            expire = "2095.1.1"
+            ideology = marxism
+            traits = {
+                MY
+            }
+        }
+    }
 
-		option = {
-		retire_country_leader = yes
-		name = miu_event.4.a
-		trigger = {
-			has_government = neutrality
-		}
-		set_rule = {
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		hidden_effect = {
-		}
-		create_country_leader = {
-			        name = "矢来美羽"
-			        picture = "GFX_portrait_ADD_meiyu"
-			        desc = miu_desc
-					expire = "2095.1.1"
-				    ideology = despotism
-					 traits = {
-						MY
-				    }
-				}
-		}
+    option = {
+        retire_country_leader = yes
+        name = miu_event.2.a
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "矢来美羽"
+            picture = "GFX_portrait_ADD_meiyu"
+            desc = miu_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                MY
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = miu_event.3.a
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "矢来美羽"
+            picture = "GFX_portrait_ADD_meiyu"
+            desc = miu_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                MY
+            }
+        }
+    }
+
+    option = {
+        retire_country_leader = yes
+        name = miu_event.4.a
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "矢来美羽"
+            picture = "GFX_portrait_ADD_meiyu"
+            desc = miu_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                MY
+            }
+        }
+    }
 }

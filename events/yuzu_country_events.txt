@@ -1,0 +1,173 @@
+#废案
+#add_namespace = yuzu_event
+
+# 【前置】你需要在 common/on_actions/yuzu_on_actions.txt 里注册监听：
+# on_actions = {
+#     on_declare_war = {
+#         events = { yuzu_event.1 }
+#     }
+# }
+
+# 宣战触发刷兵事件
+#country_event = {
+    #id = yuzu_event.1
+    #title = "yuzu_event.1.t"
+    #desc = "yuzu_event.1.d"
+    #picture = GFX_report_event_generic_infantry
+    #hidden = yes # 隐藏事件自动执行不会弹出窗口
+
+    #trigger = {
+        #tag = YUZ
+        #has_war_with = MAN
+        #NOT = { has_country_flag = yuzu_spawned_dalian_troops } # 确保只刷一次
+    #}
+
+    #immediate = {
+        #set_country_flag = yuzu_spawned_dalian_troops
+        
+        # 在大连刷24个柚子近卫军
+        # (确保此前已在国策或历史文件中注册了这个 division_template 模板)
+        #745 = { # 大连的省级地块 id (请确保地志代码正确)
+            # HoI4 中的 create_unit 最多可以加单体 count 等等，也可以暴力循环
+            #custom_effect_tooltip = "大连集结了 24 个柚子近卫军"
+            #create_unit = {
+                #division = "name = \"柚子厨0721近卫军\" division_template = \"柚子厨0721近卫军\" start_experience_factor = 1.0"
+                #owner = YUZ
+                #count = 24
+            }
+            # 如果 count = 23 不能在 create_unit 生效，可以使用多个 create_unit
+            # 或通过 add_divisions 直接给予
+        }
+        
+        # 更简便的方式（直接发往大连或首都周边）：
+        # add_divisions = { version = 1 division_template = "柚子厨0721近卫军" count = 24 }
+    }
+}
+country_event = {
+    id = yuzu_congress.1
+    title = yuzu_congress.1.t
+    desc = yuzu_congress.1.d
+    picture = GFX_report_event_generic_parliament
+    is_triggered_only = yes
+
+    option = {
+        name = yuzu_congress.1.a
+        set_politics = { ruling_party = democratic }
+        add_popularity = { ideology = democratic popularity = 1.0 }
+    }
+    option = {
+        name = yuzu_congress.1.b
+        set_politics = { ruling_party = neutrality }
+        add_popularity = { ideology = neutrality popularity = 1.0 }
+    }
+    option = {
+        name = yuzu_congress.1.c
+        set_politics = { ruling_party = communism }
+        add_popularity = { ideology = communism popularity = 1.0 }
+    }
+    option = {
+        name = yuzu_congress.1.e
+        set_politics = { ruling_party = fascism }
+        add_popularity = { ideology = fascism popularity = 1.0 }
+    }
+}
+
+country_event= {           #将领彻底失望全部离开
+    id = start_event.4sp
+    title = start_event.4sp.t
+    desc = start_event.4sp.d
+    is_triggered_only = yes
+    trigger = {
+        tag = YUZ
+        has_government = fascism
+        NOT = { has_country_flag = yuzu_turned_fascist }
+    }
+    mean_time_to_happen = { days = 1 } 
+    immediate = {
+        set_country_flag = yuzu_turned_fascist
+    }
+    option = {
+        name = start_event.4.a
+        add_political_power = -100
+        country_event = { id = yuzu_congress.3 days = 10 }
+    }
+}
+
+country_event = {
+    id = yuzu_congress.3
+    title = yuzu_congress.3.t
+    desc = yuzu_congress.3.d
+    picture = GFX_report_event_generic_readmit_fascism
+    is_triggered_only = yes
+
+    option = {
+        name = yuzu_congress.3.o1
+        clr_country_flag = yuzu_turned_fascist # 清除标记
+        country_event = { id = yuzu_congress.1 } # 退回大会事件重新选择
+    }
+    option = {
+        name = yuzu_congress.3.o2
+        # 直接被日本吞并
+        JAP = { annex_country = { target = YUZ } } 
+    }
+}
+
+country_event = {
+    id = yuzu_recon.1
+    title = yuzu_recon.1.t
+    desc = yuzu_recon.1.d
+    picture = GFX_report_event_generic_court
+    is_triggered_only = yes
+
+    option = {
+        name = yuzu_recon.1.a
+        add_manpower = -500
+        add_stability = 0.20
+        add_political_power = 200
+        add_war_support = 0.10
+        army_experience = 50
+        navy_experience = 50
+        air_experience = 50
+        
+        # 触发天皇的命运事件
+        country_event = { id = yuzu_recon.2 days = 1 }
+    }
+}
+
+# === 事件 2：天皇的命运 ===
+country_event = {
+    id = yuzu_recon.2
+    title = yuzu_recon.2.t
+    desc = yuzu_recon.2.d
+    picture = GFX_report_event_generic_monarchy
+    is_triggered_only = yes
+
+    option = {
+        name = yuzu_recon.2.a
+        add_political_power = 100
+        add_stability = -0.10
+    }
+    option = {
+        name = yuzu_recon.2.b
+        add_stability = 0.15
+        add_political_power = 50
+    }
+    option = {
+        name = yuzu_recon.2.c
+        add_to_variable = { yz_money = 15000 } 
+        add_stability = 1.0
+        add_war_support = 1.0
+        add_ideas = Yuzu_emperor
+    }
+}
+
+# === 事件 3：拆分财阀完成 (隐形事件) ===
+country_event = {
+    id = yuzu_recon.3
+    hidden = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        add_ideas = Yuzu_vibrant_market
+    }
+}

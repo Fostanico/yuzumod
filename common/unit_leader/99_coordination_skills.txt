@@ -1,0 +1,323 @@
+leader_coordination_skills = {
+
+	### NAVY ###
+	1 = {
+		cost = 100
+		type = navy
+		modifier = {
+			naval_coordination = 0.01
+		}
+	}
+
+	2 = {
+		cost = 200
+		type = navy
+		modifier = {
+			naval_coordination = 0.03
+		}
+	}
+
+	3 = {
+		cost = 400
+		type = navy
+		modifier = {
+			naval_coordination = 0.05
+		}
+	}
+
+	4 = {
+		cost = 600
+		type = navy
+		modifier = {
+			naval_coordination = 0.07
+		}
+	}
+
+	5 = {
+		cost = 1000
+		type = navy
+		modifier = {
+			naval_coordination = 0.09
+		}
+	}
+
+	6 = {
+		cost = 1500
+		type = navy
+		modifier = {
+			naval_coordination = 0.12
+		}
+	}
+
+	7 = {
+		cost = 2100
+		type = navy
+		modifier = {
+			naval_coordination = 0.14
+		}
+	}
+
+	8 = {
+		cost = 2800
+		type = navy
+		modifier = {
+			naval_coordination = 0.16
+		}
+	}
+
+	9 = {
+		cost = 3600
+		type = navy
+		modifier = {
+			naval_coordination = 0.18
+		}
+	}
+	
+	10 = {
+		cost = 4500
+		type = navy
+		modifier = {
+			naval_coordination = 0.2
+		}
+	}
+
+	11 = {
+		cost = 5500
+		type = navy
+		modifier = {
+			naval_coordination = 0.21
+		}
+	}
+
+	12 = {
+		cost = 6600
+		type = navy
+		modifier = {
+			naval_coordination = 0.23
+		}
+	}
+
+	13 = {
+		cost = 7800
+		type = navy
+		modifier = {
+			naval_coordination = 0.25
+		}
+	}
+
+	14 = {
+		cost = 9100
+		type = navy
+		modifier = {
+			naval_coordination = 0.27
+		}
+	}
+
+	15 = {
+		cost = 10500
+		type = navy
+		modifier = {
+			naval_coordination = 0.29
+		}
+	}
+
+	16 = {
+		cost = 12000
+		type = navy
+		modifier = {
+			naval_coordination = 0.22
+		}
+	}
+
+	17 = {
+		cost = 13600
+		type = navy
+		modifier = {
+			naval_coordination = 0.34
+		}
+	}
+
+	18 = {
+		cost = 15300
+		type = navy
+		modifier = {
+			naval_coordination = 0.36
+		}
+	}
+
+	19 = {
+		cost = 17100
+		type = navy
+		modifier = {
+			naval_coordination = 0.38
+		}
+	}
+
+	20 = {
+		cost = 19000
+		type = navy
+		modifier = {
+			naval_coordination = 0.4
+		}
+	}
+
+	21 = {
+		cost = 21000
+		type = navy
+		modifier = {
+			naval_coordination = 0.41
+		}
+	}
+
+	22 = {
+		cost = 23100
+		type = navy
+		modifier = {
+			naval_coordination = 0.43
+		}
+	}
+
+	23 = {
+		cost = 25300
+		type = navy
+		modifier = {
+			naval_coordination = 0.45
+		}
+	}
+
+	24 = {
+		cost = 27600
+		type = navy
+		modifier = {
+			naval_coordination = 0.47
+		}
+	}
+
+	25 = {
+		cost = 30000
+		type = navy
+		modifier = {
+			naval_coordination = 0.49
+		}
+	}
+
+	26 = {
+		cost = 32500
+		type = navy
+		modifier = {
+			naval_coordination = 0.52
+		}
+	}
+
+	27 = {
+		cost = 35100
+		type = navy
+		modifier = {
+			naval_coordination = 0.54
+		}
+	}
+
+	28 = {
+		cost = 37800
+		type = navy
+		modifier = {
+			naval_coordination = 0.56
+		}
+	}
+
+	29 = {
+		cost = 40600
+		type = navy
+		modifier = {
+			naval_coordination = 0.58
+		}
+	}
+
+	30 = {
+		cost = 43500
+		type = navy
+		modifier = {
+			naval_coordination = 0.6
+		}
+	}
+
+	31 = {
+		cost = 46500
+		type = navy
+		modifier = {
+			naval_coordination = 0.61
+		}
+	}
+
+	32 = {
+		cost = 49600
+		type = navy
+		modifier = {
+			naval_coordination = 0.63
+		}
+	}
+
+	33 = {
+		cost = 52800
+		type = navy
+		modifier = {
+			naval_coordination = 0.65
+		}
+	}
+
+	34 = {
+		cost = 56100
+		type = navy
+		modifier = {
+			naval_coordination = 0.67
+		}
+	}
+
+	35 = {
+		cost = 59500
+		type = navy
+		modifier = {
+			naval_coordination = 0.69
+		}
+	}
+
+	36 = {
+		cost = 63000
+		type = navy
+		modifier = {
+			naval_coordination = 0.72
+		}
+	}
+
+	37 = {
+		cost = 66600
+		type = navy
+		modifier = {
+			naval_coordination = 0.74
+		}
+	}
+
+	38 = {
+		cost = 70300
+		type = navy
+		modifier = {
+			naval_coordination = 0.76
+		}
+	}
+
+	39 = {
+		cost = 74100
+		type = navy
+		modifier = {
+			naval_coordination = 0.78
+		}
+	}
+
+	40 = {
+		cost = 78000
+		type = navy
+		modifier = {
+			naval_coordination = 0.8
+		}
+	}
+}

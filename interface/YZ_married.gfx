@@ -1,0 +1,359 @@
+spriteTypes = {
+	# Married GUI
+	spriteType = {
+		name = "GFX_yuzu_believity_icon"
+		textureFile = "gfx/married_gui/believity_icon.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_change_clothes_buttom"
+		textureFile = "gfx/married_gui/change_clothes_buttom.png"
+		transparencecheck = yes
+	}
+	# 作用：注册婚后界面可切换角色立绘；要点：名称由角色ID和立绘序号组成，并由scripted localisation动态选取。署名：伊尔诺+2026-06-08+assisted by Codex
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_1"
+		textureFile = "gfx/married_gui/portrait/43_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_2"
+		textureFile = "gfx/married_gui/portrait/43_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_3"
+		textureFile = "gfx/married_gui/portrait/43_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_4"
+		textureFile = "gfx/married_gui/portrait/43_4.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_5"
+		textureFile = "gfx/married_gui/portrait/43_5.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_6"
+		textureFile = "gfx/married_gui/portrait/43_6.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_7"
+		textureFile = "gfx/married_gui/portrait/43_7.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_8"
+		textureFile = "gfx/married_gui/portrait/43_8.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_9"
+		textureFile = "gfx/married_gui/portrait/43_9.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_10"
+		textureFile = "gfx/married_gui/portrait/43_10.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_11"
+		textureFile = "gfx/married_gui/portrait/43_11.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_12"
+		textureFile = "gfx/married_gui/portrait/43_12.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_13"
+		textureFile = "gfx/married_gui/portrait/43_13.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_14"
+		textureFile = "gfx/married_gui/portrait/43_14.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_15"
+		textureFile = "gfx/married_gui/portrait/43_15.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_portrait_43_16"
+		textureFile = "gfx/married_gui/portrait/43_16.png"
+		transparencecheck = yes
+	}
+	# 作用：注册婚后留言框左侧的95x95 SD图片；要点：注册名和文件名均按wife_id与SD序号对应。署名：伊尔诺+2026-06-09+assisted by Codex
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_1"
+		textureFile = "gfx/married_gui/sd/43_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_2"
+		textureFile = "gfx/married_gui/sd/43_2.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_3"
+		textureFile = "gfx/married_gui/sd/43_3.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_4"
+		textureFile = "gfx/married_gui/sd/43_4.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_5"
+		textureFile = "gfx/married_gui/sd/43_5.PNG"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_6"
+		textureFile = "gfx/married_gui/sd/43_6.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_sd_43_7"
+		textureFile = "gfx/married_gui/sd/43_7.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_bac"
+		textureFile = "gfx/married_gui/date_bac.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_buttom_left_one"
+		textureFile = "gfx/married_gui/date_buttom_left_one.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_buttom_left_two"
+		textureFile = "gfx/married_gui/date_buttom_left_two.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_buttom_middle"
+		textureFile = "gfx/married_gui/date_buttom_middle.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_buttom_right_one"
+		textureFile = "gfx/married_gui/date_buttom_right_one.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_date_buttom_right_two"
+		textureFile = "gfx/married_gui/date_buttom_right_two.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_gift_bac"
+		textureFile = "gfx/married_gui/gift_bac.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_gift_buttom_left"
+		textureFile = "gfx/married_gui/gift_buttom_left.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_gift_buttom_middle"
+		textureFile = "gfx/married_gui/gift_buttom_middle.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_gift_buttom_right"
+		textureFile = "gfx/married_gui/gift_buttom_right.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_help_bac"
+		textureFile = "gfx/married_gui/help_bac.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_help_buttom_left"
+		textureFile = "gfx/married_gui/help_buttom_left.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_help_buttom_middle"
+		textureFile = "gfx/married_gui/help_buttom_middle.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_help_buttom_right"
+		textureFile = "gfx/married_gui/help_buttom_right.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_help_icon"
+		textureFile = "gfx/married_gui/help_icon.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_interact_bac"
+		textureFile = "gfx/married_gui/interact_bac.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_interact_buttom_left"
+		textureFile = "gfx/married_gui/interact_buttom_left.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_interact_buttom_middle"
+		textureFile = "gfx/married_gui/interact_buttom_middle.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_interact_buttom_right"
+		textureFile = "gfx/married_gui/interact_buttom_right.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_loving_icon"
+		textureFile = "gfx/married_gui/loving_icon.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yuzu_married_ui_back"
+		textureFile = "gfx/married_gui/married_ui_back.png"
+	}
+	spriteType = {
+		name = "GFX_yuzu_relationship_icon"
+		textureFile = "gfx/married_gui/relationship_icon.png"
+		transparencecheck = yes
+	}
+	#约会地点图
+	spriteType = {
+		name = "GFX_date_jounery"
+		texturefile = "gfx/married_gui/date_jounery.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_shopping"
+		texturefile = "gfx/married_gui/date_shopping.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_school_party"
+		texturefile = "gfx/married_gui/date_school_party.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_cafe"
+		texturefile = "gfx/married_gui/date_cafe.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_beach"
+		texturefile = "gfx/married_gui/date_beach.png"
+		legacy_lazy_load = no
+	}
+	# Date event pictures. Registration name: GFX_date_[file name].
+	spriteType = {
+		name = "GFX_date_43_beach"
+		texturefile = "gfx/married_gui/date_picture/43_beach.PNG"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_43_cafe"
+		texturefile = "gfx/married_gui/date_picture/43_cafe.PNG"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_43_jounery"
+		texturefile = "gfx/married_gui/date_picture/43_jounery.PNG"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_43_school_party"
+		texturefile = "gfx/married_gui/date_picture/43_school_party.PNG"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_43_school_party_2"
+		texturefile = "gfx/married_gui/date_picture/43_school_party_2.PNG"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_43_shopping"
+		texturefile = "gfx/married_gui/date_picture/43_shopping.PNG"
+		legacy_lazy_load = no
+	}
+	# 作用：注册约会按钮描述使用的小尺寸文字图标；要点：保持32像素高度，避免157像素原图破坏tooltip排版。署名：伊尔诺+2026-06-08+assisted by Codex
+	spriteType = {
+		name = "GFX_date_beach_texticon"
+		texturefile = "gfx/married_gui/date_beach_texticon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_shopping_texticon"
+		texturefile = "gfx/married_gui/date_shopping_texticon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_school_party_texticon"
+		texturefile = "gfx/married_gui/date_school_party_texticon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_cafe_texticon"
+		texturefile = "gfx/married_gui/date_cafe_texticon.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_date_jounery_texticon"
+		texturefile = "gfx/married_gui/date_jounery_texticon.png"
+		legacy_lazy_load = no
+	}
+	# Married GUI progress bars
+	progressbartype = {
+		name = "GFX_yuzu_believity_value"
+		textureFile1 = "gfx/married_gui/progress_bar/believity_value_full.png"
+		textureFile2 = "gfx/married_gui/progress_bar/believity_value_empty.png"
+		size = { x = 327 y = 24 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_yuzu_help_value"
+		textureFile1 = "gfx/married_gui/progress_bar/help_value_full.png"
+		textureFile2 = "gfx/married_gui/progress_bar/help_value_empty.png"
+		size = { x = 327 y = 25 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_yuzu_loving_value"
+		textureFile1 = "gfx/married_gui/progress_bar/loving_value_full.png"
+		textureFile2 = "gfx/married_gui/progress_bar/loving_value_empty.png"
+		size = { x = 328 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_yuzu_relationship_value"
+		textureFile1 = "gfx/married_gui/progress_bar/relationship_value_full.png"
+		textureFile2 = "gfx/married_gui/progress_bar/relationship_value_empty.png"
+		size = { x = 326 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		horizontal = yes
+	}
+}

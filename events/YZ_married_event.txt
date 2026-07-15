@@ -1,18 +1,21 @@
-add_namespace = tongyong_event      ##当时名字乱取的，现在懒得改了(((      
+add_namespace = tongyong_event      ##当时名字乱取的，现在懒得改了(((
 
-country_event= {       
+country_event= {
     id = tongyong_event.1
-    picture = GFX_tongyong_event.1 	
+    picture = GFX_tongyong_event.1
     title = tongyong_event.1.t
-    desc = tongyong_event.1.d	
+    desc = tongyong_event.1.d
     is_triggered_only = yes
     trigger = {
-        has_country_flag = qiyong_youzi_2
+        or = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = qiyong_youzi_3
+        }
         not = { has_country_flag = had_chosen_haogan }
     }
 
     option = {
-        name = tongyong_event.1.a	
+        name = tongyong_event.1.a
         custom_effect_tooltip = jiesuo_haogan
         trigger = {
         }
@@ -20,43 +23,46 @@ country_event= {
         set_country_flag = yz_money_visible
         add_dynamic_modifier = { modifier = YZ_love_depth_dynamic_modifier }
         force_update_dynamic_modifier = yes
-        country_event = start_event.10  
+        country_event = start_event.10
     }
 }
 
 country_event= {            ###准备婚礼
-    id = tongyong_event.2           
+    id = tongyong_event.2
     picture = GFX_tongyong_event.2
     title = tongyong_event.2.t
-    desc = tongyong_event.2.d	
+    desc = tongyong_event.2.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.2.a	
+        name = tongyong_event.2.a
         custom_effect_tooltip = preparing_for_the_wedding
         add_ideas = Married_preparing
-		add_political_power = -25
+        add_political_power = -25
     }
-    
+
 }
 
 ###婚礼事件
 
 country_event= {            ###宁宁的婚礼
-    id = tongyong_event.3           
-    picture = GFX_ningning_wedding      
+    id = tongyong_event.3
+    picture = GFX_ningning_wedding
     title = tongyong_event.3.t
-    desc = tongyong_event.3.d	
+    desc = tongyong_event.3.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.3.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.3.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_nene
         random_army_leader = {
             limit = {
                 has_trait = maid_ninging_trait
@@ -70,20 +76,23 @@ country_event= {            ###宁宁的婚礼
 }
 
 country_event= {            ###乃爱的婚礼
-    id = tongyong_event.4           
-    picture = GFX_noa_wedding     
+    id = tongyong_event.4
+    picture = GFX_noa_wedding
     title = tongyong_event.4.t
-    desc = tongyong_event.4.d	
+    desc = tongyong_event.4.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.4.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.4.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_noa
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_noa_trait
@@ -91,26 +100,29 @@ country_event= {            ###乃爱的婚礼
             add_unit_leader_trait = married_trait
         }
         hidden_effect = {
-            play_song = youzu17
+            play_song = Call_My_Name
         }
     }
 }
 
 country_event= {            ###meigulu的婚礼
-    id = tongyong_event.5           
-    picture = GFX_meigulu_wedding   
+    id = tongyong_event.5
+    picture = GFX_meigulu_wedding
     title = tongyong_event.5.t
-    desc = tongyong_event.5.d	
+    desc = tongyong_event.5.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.5.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.5.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_meguru
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_meigulu_trait
@@ -124,20 +136,23 @@ country_event= {            ###meigulu的婚礼
 }
 
 country_event= {            ###murasame的婚礼
-    id = tongyong_event.6           
-    picture = GFX_murasame_wedding  
+    id = tongyong_event.6
+    picture = GFX_murasame_wedding
     title = tongyong_event.6.t
-    desc = tongyong_event.6.d	
+    desc = tongyong_event.6.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.6.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.6.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_murasame
         random_army_leader = {
             limit = {
                 has_trait = maid_congyu_trait
@@ -151,20 +166,23 @@ country_event= {            ###murasame的婚礼
 }
 
 country_event= {            ###chou的婚礼
-    id = tongyong_event.7           
-    picture = GFX_chou_wedding    
+    id = tongyong_event.7
+    picture = GFX_chou_wedding
     title = tongyong_event.7.t
-    desc = tongyong_event.7.d	
+    desc = tongyong_event.7.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.7.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.7.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_tsumugi
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_chou_trait
@@ -177,20 +195,23 @@ country_event= {            ###chou的婚礼
     }
 }
 country_event= {            ###mako的婚礼
-    id = tongyong_event.8           
-    picture = GFX_mozi_wedding  
+    id = tongyong_event.8
+    picture = GFX_mozi_wedding
     title = tongyong_event.8.t
-    desc = tongyong_event.8.d	
+    desc = tongyong_event.8.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.8.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.8.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_mako
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_mozi_trait
@@ -203,20 +224,21 @@ country_event= {            ###mako的婚礼
     }
 }
 country_event= {            ###yoshino的婚礼
-    id = tongyong_event.9           
-    picture = GFX_fangnai_wedding 
+    id = tongyong_event.9
+    picture = GFX_fangnai_wedding
     title = tongyong_event.9.t
-    desc = tongyong_event.9.d	
+    desc = tongyong_event.9.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.9.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.9.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_fangnai_trait
@@ -229,20 +251,23 @@ country_event= {            ###yoshino的婚礼
     }
 }
 country_event= {            ###cuodao的婚礼
-    id = tongyong_event.10           
-    picture = GFX_cuodao_wedding   
+    id = tongyong_event.10
+    picture = GFX_cuodao_wedding
     title = tongyong_event.10.t
-    desc = tongyong_event.10.d	
+    desc = tongyong_event.10.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.10.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.10.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_ayase
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_cuodao_trait
@@ -255,20 +280,21 @@ country_event= {            ###cuodao的婚礼
     }
 }
 country_event= {            ###nanami的婚礼
-    id = tongyong_event.11           
-    picture = GFX_qihai_wedding     
+    id = tongyong_event.11
+    picture = GFX_qihai_wedding
     title = tongyong_event.11.t
-    desc = tongyong_event.11.d	
+    desc = tongyong_event.11.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.11.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.11.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_qihai_trait
@@ -281,20 +307,23 @@ country_event= {            ###nanami的婚礼
     }
 }
 country_event= {            ###kanna的婚礼
-    id = tongyong_event.12           
-    picture = GFX_kanna_wedding   
+    id = tongyong_event.12
+    picture = GFX_kanna_wedding
     title = tongyong_event.12.t
-    desc = tongyong_event.12.d	
+    desc = tongyong_event.12.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.12.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.12.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_kanna
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_kanna_trait
@@ -307,20 +336,23 @@ country_event= {            ###kanna的婚礼
     }
 }
 country_event= {            ###sana的婚礼
-    id = tongyong_event.13           
-    picture = GFX_sana_wedding    
+    id = tongyong_event.13
+    picture = GFX_sana_wedding
     title = tongyong_event.13.t
-    desc = tongyong_event.13.d	
+    desc = tongyong_event.13.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.13.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.13.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_sana
         random_army_leader = {
             limit = {
                 has_trait = maid_sana_trait
@@ -333,20 +365,23 @@ country_event= {            ###sana的婚礼
     }
 }
 country_event= {            ###枣子姐的婚礼
-    id = tongyong_event.14           
-    picture = GFX_zaozi_wedding     
+    id = tongyong_event.14
+    picture = GFX_zaozi_wedding
     title = tongyong_event.14.t
-    desc = tongyong_event.14.d	
+    desc = tongyong_event.14.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.14.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.14.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_natsume
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_zaozi_trait
@@ -359,20 +394,21 @@ country_event= {            ###枣子姐的婚礼
     }
 }
 country_event= {            ###公屏的婚礼
-    id = tongyong_event.15           
-    picture = GFX_gongping_wedding     
+    id = tongyong_event.15
+    picture = GFX_gongping_wedding
     title = tongyong_event.15.t
-    desc = tongyong_event.15.d	
+    desc = tongyong_event.15.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.15.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.15.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_gongping_trait
@@ -382,20 +418,21 @@ country_event= {            ###公屏的婚礼
     }
 }
 country_event= {            ###chihaya的婚礼
-    id = tongyong_event.16           
-    picture = GFX_chihaya_wedding     
+    id = tongyong_event.16
+    picture = GFX_chihaya_wedding
     title = tongyong_event.16.t
-    desc = tongyong_event.16.d	
+    desc = tongyong_event.16.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.16.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.16.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_chihaya_trait
@@ -405,20 +442,23 @@ country_event= {            ###chihaya的婚礼
     }
 }
 country_event= {            ###hazuki的婚礼
-    id = tongyong_event.17           
-    picture = GFX_hazuki_wedding    
+    id = tongyong_event.17
+    picture = GFX_hazuki_wedding
     title = tongyong_event.17.t
-    desc = tongyong_event.17.d	
+    desc = tongyong_event.17.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.17.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.17.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_hazuki
         random_army_leader = {
             limit = {
                 has_trait = maid_hazuki_trait
@@ -431,20 +471,21 @@ country_event= {            ###hazuki的婚礼
     }
 }
 country_event= {            ###风实花的婚礼
-    id = tongyong_event.18        
-    picture = GFX_fumika_wedding    
+    id = tongyong_event.18
+    picture = GFX_fumika_wedding
     title = tongyong_event.18.t
-    desc = tongyong_event.18.d	
+    desc = tongyong_event.18.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.18.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.18.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_fumika_trait
@@ -457,20 +498,23 @@ country_event= {            ###风实花的婚礼
     }
 }
 country_event= {            ###石墨烯的婚礼
-    id = tongyong_event.19        
-    picture = GFX_nozomi_wedding    
+    id = tongyong_event.19
+    picture = GFX_nozomi_wedding
     title = tongyong_event.19.t
-    desc = tongyong_event.19.d	
+    desc = tongyong_event.19.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.19.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.19.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_nozomi
         random_army_leader = {
             limit = {
                 has_trait = maid_nozomi_trait
@@ -483,20 +527,23 @@ country_event= {            ###石墨烯的婚礼
     }
 }
 country_event= {            ###和奏的婚礼
-    id = tongyong_event.21        
-    picture = GFX_wakana_wedding    
+    id = tongyong_event.21
+    picture = GFX_wakana_wedding
     title = tongyong_event.21.t
-    desc = tongyong_event.21.d	
+    desc = tongyong_event.21.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.21.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.21.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_wakana
         random_army_leader = {
             limit = {
                 has_trait = maid_wakana_trait
@@ -504,25 +551,26 @@ country_event= {            ###和奏的婚礼
             add_unit_leader_trait = married_trait
         }
         hidden_effect = {
-            play_song = youzu5
+            play_song = daisuki
         }
     }
 }
 country_event= {            ###toko的婚礼
-    id = tongyong_event.22        
-    picture = GFX_wakana_wedding    
+    id = tongyong_event.22
+    picture = GFX_toko_wedding
     title = tongyong_event.22.t
-    desc = tongyong_event.22.d	
+    desc = tongyong_event.22.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.22.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.22.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_toko_trait
@@ -535,20 +583,21 @@ country_event= {            ###toko的婚礼
     }
 }
 country_event= {            ###真咲的婚礼
-    id = tongyong_event.23        
-    picture = GFX_masaki_wedding        
+    id = tongyong_event.23
+    picture = GFX_masaki_wedding
     title = tongyong_event.23.t
-    desc = tongyong_event.23.d	
+    desc = tongyong_event.23.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.23.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.23.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_masaki_trait
@@ -561,20 +610,21 @@ country_event= {            ###真咲的婚礼
     }
 }
 country_event= {            ###美羽的婚礼
-    id = tongyong_event.24        
-    picture = GFX_miu_wedding   
+    id = tongyong_event.24
+    picture = GFX_miu_wedding
     title = tongyong_event.24.t
-    desc = tongyong_event.24.d	
+    desc = tongyong_event.24.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.24.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.24.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_miu_trait
@@ -587,20 +637,23 @@ country_event= {            ###美羽的婚礼
     }
 }
 country_event= {            ###茉优的婚礼
-    id = tongyong_event.25        
-    picture = GFX_Mayu_wedding    
+    id = tongyong_event.25
+    picture = GFX_Mayu_wedding
     title = tongyong_event.25.t
-    desc = tongyong_event.25.d	
+    desc = tongyong_event.25.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.25.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.25.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_mayu
         random_army_leader = {
             limit = {
                 has_trait = maid_Mayu_trait
@@ -613,24 +666,25 @@ country_event= {            ###茉优的婚礼
     }
 }
 country_event= {            ###天音的婚礼
-    id = tongyong_event.26        
-    picture = GFX_Amane_wedding    
+    id = tongyong_event.26
+    picture = GFX_Amane_wedding
     title = tongyong_event.26.t
-    desc = tongyong_event.26.d	
+    desc = tongyong_event.26.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.26.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.26.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = yz_amane_trait_1
             }
-            add_unit_leader_trait = married_trait 
+            add_unit_leader_trait = married_trait
             add_unit_leader_trait = yz_amane_trait_2
             remove_unit_leader_trait = yz_amane_trait_1
         }
@@ -640,20 +694,21 @@ country_event= {            ###天音的婚礼
     }
 }
 country_event= {            ###凉音的婚礼
-    id = tongyong_event.27        
-    picture = GFX_liangyin_wedding    
+    id = tongyong_event.27
+    picture = GFX_liangyin_wedding
     title = tongyong_event.27.t
-    desc = tongyong_event.27.d	
+    desc = tongyong_event.27.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.27.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.27.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_suzune_trait
@@ -666,20 +721,21 @@ country_event= {            ###凉音的婚礼
     }
 }
 country_event= {            ##夏莉的婚礼
-    id = tongyong_event.28        
-    picture =     
+    id = tongyong_event.28
+    #picture =
     title = tongyong_event.28.t
-    desc = tongyong_event.28.d	
+    desc = tongyong_event.28.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.28.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.28.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = maid_shirley_trait
@@ -692,47 +748,49 @@ country_event= {            ##夏莉的婚礼
     }
 }
 country_event= {            ##来海的婚礼
-    id = tongyong_event.29        
+    id = tongyong_event.29
     picture = GFX_kurumi_wedding
     title = tongyong_event.29.t
-    desc = tongyong_event.29.d	
+    desc = tongyong_event.29.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.29.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.29.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 or = {
                     has_trait = yz_kurumi_trait
                     has_trait = yz_kurumi_trait_2
                 }
-                
+
             }
             add_unit_leader_trait = married_trait
         }
     }
 }
 country_event= {            ##爱莉的婚礼
-    id = tongyong_event.30       
-    picture = GFX_airi_wedding    
+    id = tongyong_event.30
+    picture = GFX_airi_wedding
     title = tongyong_event.30.t
-    desc = tongyong_event.30.d	
+    desc = tongyong_event.30.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.30.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.30.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
         random_army_leader = {
             limit = {
                 has_trait = yz_airi_trait
@@ -742,20 +800,23 @@ country_event= {            ##爱莉的婚礼
     }
 }
 country_event= {            ##芦花的婚礼
-    id = tongyong_event.31       
-    picture = GFX_roka_wedding    
+    id = tongyong_event.31
+    picture = GFX_roka_wedding
     title = tongyong_event.31.t
-    desc = tongyong_event.31.d	
+    desc = tongyong_event.31.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.31.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.31.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_roka
         random_army_leader = {
             limit = {
                 has_trait = yz_roka_trait
@@ -765,20 +826,23 @@ country_event= {            ##芦花的婚礼
     }
 }
 country_event= {            ##小春的婚礼
-    id = tongyong_event.32       
-    picture = GFX_koharu_wedding    
+    id = tongyong_event.32
+    picture = GFX_koharu_wedding
     title = tongyong_event.32.t
-    desc = tongyong_event.32.d	
+    desc = tongyong_event.32.d
     is_triggered_only = yes
 
     option = {
-        name = tongyong_event.32.a	
-		custom_effect_tooltip = get_married
-		add_political_power = 15
+        name = tongyong_event.32.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
         add_stability = 0.025
         add_war_support = 0.025
         add_ideas = Married
         remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_koharu
         random_army_leader = {
             limit = {
                 has_trait = yz_koharu_trait
@@ -787,83 +851,1022 @@ country_event= {            ##小春的婚礼
         }
     }
 }
+country_event= {            ##蕾娜的婚礼
+    id = tongyong_event.33
+    picture = GFX_rena_wedding
+    title = tongyong_event.33.t
+    desc = tongyong_event.33.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.33.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_rena
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_lena_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = blue_sky
+        }
+    }
+}
+country_event= {            ##千咲的婚礼
+    id = tongyong_event.34
+    picture = GFX_chisaki_wedding
+    title = tongyong_event.34.t
+    desc = tongyong_event.34.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.34.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_chisaki_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼   #<-云雀丘由贵 2025.12.17，19：38伊尔诺
+    id = tongyong_event.35       #错误注释危害大，小朋友们别学他
+    picture = GFX_yuki_wedding
+    title = tongyong_event.35.t
+    desc = tongyong_event.35.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.35.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_yuki_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼 <-御影须美
+    id = tongyong_event.36
+    picture = GFX_sumi_wedding
+    title = tongyong_event.36.t
+    desc = tongyong_event.36.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.36.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_sumi_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼  <-今宫纪子
+    id = tongyong_event.37
+    picture = GFX_noriko_wedding
+    title = tongyong_event.37.t
+    desc = tongyong_event.37.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.37.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_noriko_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼    <-中之岛妙
+    id = tongyong_event.38
+    picture = GFX_tae_wedding
+    title = tongyong_event.38.t
+    desc = tongyong_event.38.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.38.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_tae_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼    <-尼古拉
+    id = tongyong_event.39
+    picture = GFX_nicola_wedding
+    title = tongyong_event.39.t
+    desc = tongyong_event.39.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.39.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_nicola_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼     <-奥莉叶
+    id = tongyong_event.40
+    picture = GFX_orie_wedding
+    title = tongyong_event.40.t
+    desc = tongyong_event.40.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.40.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_orie_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##缇娅的婚礼
+    id = tongyong_event.41
+    picture = GFX_tia_wedding
+    title = tongyong_event.41.t
+    desc = tongyong_event.41.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.41.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_tia
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_tia_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = amairo
+        }
+    }
+}
+country_event= {            ##爱衣的婚礼
+    id = tongyong_event.42
+    picture = GFX_mei_wedding
+    title = tongyong_event.42.t
+    desc = tongyong_event.42.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.42.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_mei
+        random_army_leader = {
+            limit = {
+                has_trait = yz_mei_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼
+    id = tongyong_event.43
+    picture = GFX_mahiro_wedding
+    title = tongyong_event.43.t
+    desc = tongyong_event.43.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.43.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_mahiro_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼
+    id = tongyong_event.44
+    picture = GFX_konoka_wedding
+    title = tongyong_event.44.t
+    desc = tongyong_event.44.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.44.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_konoka_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+country_event= {            ##千咲的婚礼
+    id = tongyong_event.45
+    picture = GFX_yukari_wedding
+    title = tongyong_event.45.t
+    desc = tongyong_event.45.d
+    is_triggered_only = yes
+
+    option = {
+        name = tongyong_event.45.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = maid_yukari_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
+
 #神秘标记点@@
 country_event = { ## 海老原水濑 marrige
-	id = tongyong_event.11304845
-	picture = GFX_ebihara_minase_wedding
-	title = tongyong_event.11304845.t
-	desc = tongyong_event.11304845.d
-	is_triggered_only = yes
-	option = {
-		name = tongyong_event.11304845.a
-		custom_effect_tooltip = get_married
-		add_political_power = 15
-		add_stability = 0.025
-		add_war_support = 0.025
-		add_ideas = Married
-		remove_ideas = Married_preparing
-		random_army_leader = {
-			limit = {
-				has_trait = yz_ebihara_minase_trait
-			}
-			add_unit_leader_trait = married_trait
-		}
-		hidden_effect = {
-			play_song = youzu_ebihara_minase_song
-		}
-	}
+    id = tongyong_event.11304845
+    picture = GFX_ebihara_minase_wedding
+    title = tongyong_event.11304845.t
+    desc = tongyong_event.11304845.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.11304845.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_ebihara_minase_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = youzu_ebihara_minase_song
+        }
+    }
 }
-	
+
 
 country_event = { ## 艾莉娜·欧文 marrige
-	id = tongyong_event.78375704
-	picture = GFX_elina_owen_wedding
-	title = tongyong_event.78375704.t
-	desc = tongyong_event.78375704.d
-	is_triggered_only = yes
-	option = {
-		name = tongyong_event.78375704.a
-		custom_effect_tooltip = get_married
-		add_political_power = 15
-		add_stability = 0.025
-		add_war_support = 0.025
-		add_ideas = Married
-		remove_ideas = Married_preparing
-		random_army_leader = {
-			limit = {
-				has_trait = yz_elina_owen_trait
-			}
-			add_unit_leader_trait = married_trait
-		}
-		hidden_effect = {
-			play_song = youzu_elina_owen_song
-		}
-	}
+    id = tongyong_event.78375704
+    picture = GFX_elina_owen_wedding
+    title = tongyong_event.78375704.t
+    desc = tongyong_event.78375704.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.78375704.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_elina_owen_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = youzu_elina_owen_song
+        }
+    }
 }
-	
+
 
 country_event = { ## 布良梓 marrige
-	id = tongyong_event.50183671
-	picture = GFX_mera_azusa_wedding
-	title = tongyong_event.50183671.t
-	desc = tongyong_event.50183671.d
-	is_triggered_only = yes
-	option = {
-		name = tongyong_event.50183671.a
-		custom_effect_tooltip = get_married
-		add_political_power = 15
-		add_stability = 0.025
-		add_war_support = 0.025
-		add_ideas = Married
-		remove_ideas = Married_preparing
-		random_army_leader = {
-			limit = {
-				has_trait = yz_mera_azusa_trait
-			}
-			add_unit_leader_trait = married_trait
-		}
-		hidden_effect = {
-			play_song = youzu_mera_azusa_song
-		}
-	}
+    id = tongyong_event.50183671
+    picture = GFX_mera_azusa_wedding
+    title = tongyong_event.50183671.t
+    desc = tongyong_event.50183671.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.50183671.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_mera_azusa_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = youzu_mera_azusa_song
+        }
+    }
+}
+country_event = { #荒神小夜
+    id = tongyong_event.118171139
+    #picture = GFX_aragami_sayo_wedding
+    title = tongyong_event.118171139.t
+    desc = tongyong_event.118171139.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.118171139.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_sayo
+        random_army_leader = {
+            limit = {
+                has_trait = yz_aragami_sayo_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = youzu31
+        }
+    }
+}
+country_event = { #琉璃的婚礼——2025.11.30，20：12，伊尔诺
+    id = tongyong_event.91718630
+    picture = GFX_ruri_marry
+    title = tongyong_event.91718630.t
+    desc = tongyong_event.91718630.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.91718630.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_ruri
+        random_army_leader = {
+            limit = {
+                has_trait = yz_ruri_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = youzu34
+        }
+    }
+}
+country_event = { #苏芳的婚礼——2025.12.11，23：25，伊尔诺
+    id = tongyong_event.65015542
+    picture = GFX_suou_wedding
+    title = tongyong_event.65015542.t
+    desc = tongyong_event.65015542.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.65015542.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_suou
+        random_army_leader = {
+            limit = {
+                has_trait = want_to_marry_suou_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = tenshenranman_op_piano
+        }
+    }
+}
+country_event = { #辉耶的婚礼——2025.12.3，20：20，伊尔诺
+    id = tongyong_event.46348368
+    picture = GFX_kaguya_wedding
+    title = tongyong_event.46348368.t
+    desc = tongyong_event.46348368.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.46348368.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_kaguya
+        random_army_leader = {
+            limit = {
+                has_trait = maid_kaguya_trait
+            }
+            add_unit_leader_trait = married_trait
+            #replace_unit_leader_trait = {
+            #    trait = maid_kaguya_trait
+            #    replace = power_of_otherworld_queen_kaguya_trait
+            #}
+            remove_unit_leader_trait = maid_kaguya_trait
+            add_unit_leader_trait = power_of_otherworld_queen_kaguya_trait
+        }
+        random_army_leader = {
+            limit = {
+                has_trait = yz_orie_trait
+            }
+            remove_unit_leader_trait = yz_orie_trait
+            add_unit_leader_trait = yz_orie_second_trait
+        }
+        hidden_effect = {
+            play_song = DIVE
+        }
+    }
+}
+country_event = { #城门翼的婚礼——2025.12.15，22：12，伊尔诺
+    id = tongyong_event.29395306
+    picture = GFX_tsubasa_wedding
+    title = tongyong_event.29395306.t
+    desc = tongyong_event.29395306.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.29395306.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_tsubasa
+        random_army_leader = {
+            limit = {
+                has_trait = kido_tsubasa_only_at_sun
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = furerufurueru
+        }
+    }
+}
+country_event = { #茨木梨乃的婚礼——2025.12.15，22：20，伊尔诺
+    id = tongyong_event.21405364
+    picture = GFX_rino_wedding
+    title = tongyong_event.21405364.t
+    desc = tongyong_event.21405364.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.21405364.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_rino
+        random_army_leader = {
+            limit = {
+                has_trait = ibaraki_rino_only_at_night
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = furerufurueru
+        }
+    }
+}
+country_event = { #天雾夕音的婚礼——2025.12.16，15：25，伊尔诺
+    id = tongyong_event.61709779
+    #picture = GFX_kaguya_wedding
+    title = tongyong_event.61709779.t
+    desc = tongyong_event.61709779.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.61709779.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_yune
+        random_army_leader = {
+            limit = {
+                has_trait = yz_yune_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = amairo_yune
+        }
+    }
+}
+country_event = { #卯花之佐久夜姬的婚礼——2026.1.18，19：52，伊尔诺
+    id = tongyong_event.56658215
+    picture = GFX_sakuyahime_wedding
+    title = tongyong_event.56658215.t
+    desc = tongyong_event.56658215.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.56658215.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_sakuyahime
+        random_army_leader = {
+            limit = {
+                has_trait = yz_sakuyahime_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = Charge_Of_Soul
+        }
+    }
+}
+country_event = { #兼元灯里的婚礼——2026.3.4，20：23，伊尔诺
+    id = tongyong_event.745607
+    picture = GFX_akari_wedding
+    title = tongyong_event.745607.t
+    desc = tongyong_event.745607.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.745607.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_akari
+        random_army_leader = {
+            limit = {
+                has_trait = yz_akari_trait
+            }
+            add_unit_leader_trait = married_trait
+            remove_unit_leader_trait = yz_akari_trait
+            add_unit_leader_trait = real_perfect_girl
+        }
+        hidden_effect = {
+            play_song = noble_works_ed
+        }
+    }
+}
+country_event = { #濑奈的婚礼
+    id = tongyong_event.95202185
+    picture = GFX_sena_wedding
+    title = tongyong_event.95202185.t
+    desc = tongyong_event.95202185.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.95202185.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_sena
+        random_army_leader = {
+            limit = {
+                has_trait = yz_sena_trait
+            }
+            add_unit_leader_trait = married_trait
+            add_unit_leader_trait = kimi_ga_kureta_hikari
+        }
+        hidden_effect = {
+            play_song = noble_works_ed
+        }
+    }
+}
+country_event = { #静流的婚礼
+    id = tongyong_event.12573334
+    picture = GFX_shizuru_wedding
+    title = tongyong_event.12573334.t
+    desc = tongyong_event.12573334.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.12573334.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_shizuru
+        random_army_leader = {
+            limit = {
+                has_trait = yz_shizuru_trait
+            }
+            add_unit_leader_trait = married_trait
+            remove_unit_leader_trait = yz_shizuru_trait
+            add_unit_leader_trait = real_shizuru
+        }
+        hidden_effect = {
+            play_song = noble_works_ed
+        }
+    }
+}
+country_event = { #日向的婚礼
+    id = tongyong_event.43718388
+    picture = GFX_hinata_wedding
+    title = tongyong_event.43718388.t
+    desc = tongyong_event.43718388.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.43718388.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_hinata
+        random_army_leader = {
+            limit = {
+                has_trait = yz_hinata_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = noble_works_ed
+        }
+    }
+}
+country_event = { #麻夜的婚礼
+    id = tongyong_event.75554005
+    picture = GFX_maya_wedding
+    title = tongyong_event.75554005.t
+    desc = tongyong_event.75554005.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.75554005.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = yz_maya_trait
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = noble_works_ed
+        }
+    }
+}
+
+country_event = { #ena的，懒得写时间了——伊尔诺
+    id = tongyong_event.75774954
+    picture = GFX_ena_wedding
+    title = tongyong_event.75774954.t
+    desc = tongyong_event.75774954.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.75774954.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = hanakyu
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = song_of_ena
+        }
+    }
+}
+
+country_event = { #隐杏株的婚礼
+    id = tongyong_event.11722289
+    picture = GFX_anju_wedding
+    title = tongyong_event.11722289.t
+    desc = tongyong_event.11722289.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.11722289.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = give_me_a_shining_at_b_point
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = song_of_anju
+        }
+    }
+}
+
+country_event = { #月望的婚礼
+    id = tongyong_event.36732743
+    picture = GFX_tsukimi_wedding
+    title = tongyong_event.36732743.t
+    desc = tongyong_event.36732743.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.36732743.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = big_small_sister_good_at_sex
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = song_of_tsukimi
+        }
+    }
+}
+
+country_event = { #莉莉子的婚礼
+    id = tongyong_event.9782093
+    picture = GFX_ririko_wedding
+    title = tongyong_event.9782093.t
+    desc = tongyong_event.9782093.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.9782093.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = good_woman_ririko
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = song_of_ririko
+        }
+    }
+}
+
+country_event = { #美玖的婚礼
+    id = tongyong_event.47496112
+    picture = GFX_miku_wedding
+    title = tongyong_event.47496112.t
+    desc = tongyong_event.47496112.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.47496112.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = internet_oppose_line_little_princess
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = song_of_miku
+        }
+    }
+}
+
+country_event = { #那优花的婚礼
+    id = tongyong_event.73719949
+    picture = GFX_nayuka_wedding
+    title = tongyong_event.73719949.t
+    desc = tongyong_event.73719949.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.73719949.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_marry_with_maya
+        random_army_leader = {
+            limit = {
+                has_trait = best_music_maker 
+            }
+            add_unit_leader_trait = married_trait
+        }
+        #hidden_effect = {
+        #    play_song = noble_works_ed
+        #}
+    }
+}
+country_event = {
+    id = tongyong_event.48472417
+    title = tongyong_event.48472417.t
+    desc = tongyong_event.48472417.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.48472417.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        set_country_flag = yuzu_super_event_private_visible_flag
+        set_country_flag = we_unite_with_ilro_flag 
+        random_army_leader = {
+            limit = {
+                has_trait = caidan_trait_iron
+            }
+            add_unit_leader_trait = married_trait
+            add_unit_leader_trait = ad_victoriam
+        }
+    }
+    
+}
+country_event = {
+    id = tongyong_event.65171977
+    title = tongyong_event.65171977.t
+    picture = GFX_luoyi_wedding
+    desc = tongyong_event.65171977.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.65171977.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        #set_country_flag = yuzu_super_event_private_visible_flag
+        #set_country_flag = we_unite_with_ilro_flag 
+        random_army_leader = {
+            limit = {
+                has_trait = ill_and_weak
+            }
+            add_unit_leader_trait = married_trait
+        }
+        hidden_effect = {
+            play_song = fuyuno_daiyamondo
+        }
+    }
+    
 }

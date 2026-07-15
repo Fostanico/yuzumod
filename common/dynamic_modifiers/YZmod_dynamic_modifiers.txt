@@ -6,6 +6,10 @@ YZ_love_depth_dynamic_modifier = {
 	stability_factor = love_stability
 	war_support_factor = love_war_support_factor
 	consumer_goods_factor = love_consumer_goods_factor
+	industrial_capacity_factory = love_industrial_capacity_factory
+	production_factory_efficiency_gain_factor = love_industrial_capacity_factory
+	production_speed_buildings_factor = love_industrial_capacity_factory
+	research_speed_factor = love_industrial_capacity_factory
 }
 
 YZ_CORE_GROUP_dynamic_modifier = {
@@ -284,4 +288,16 @@ youzu_air_dynamic_modifier = {
 	air_mission_xp_gain_factor = youzu_air_mission_xp_gain_factor #晋升花费
 	air_strategic_bomber_bombing_factor = youzu_air_strategic_bomber_bombing_factor #陆军经验增长
 	carrier_capacity_penalty_reduction = youzu_carrier_capacity_penalty_reduction #适役人口
+}
+sana_birthday_dynamic_modifier = {
+	enable = { always = yes } 
+	army_attack_factor = sana_army_attack
+	special_forces_cap = sana_special_forces_cap
+	army_org_factor = sana_army_org_factor
+	war_support_factor = sana_ws
+	stability_factor = sana_st
+	industrial_capacity_factory = sana_industry		#产出
+	production_factory_efficiency_gain_factor = sana_industry		#生产效率增长
+	production_factory_max_efficiency_factor = sana_industry    		#生产效率上限
+	production_factory_start_efficiency_factor = sana_industry #基础生产
 }

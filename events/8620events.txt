@@ -13,6 +13,12 @@ country_event = {
 		hidden_effect = {
             add_ideas = chose_baliu
         }
+        hidden_effect = {
+            play_song = youzu26
+        }
+        custom_effect_tooltip = {
+            localization_key = play_the_song_of_hachiroku_effect_tooltip
+        }
     } 
 }
 country_event = {
@@ -31,6 +37,9 @@ country_event = {
         hidden_effect = {
             country_event = { id = ASHC_event.10 days = 15 }
         }
+        trigger = {
+            has_country_flag = qiyong_youzi_2
+        }
         add_equipment_to_stockpile = {
 			type = train_equipment
 			amount = 1
@@ -41,6 +50,7 @@ country_event = {
                 generate_character = {
                     token_base = baliu
                     name = "baliu"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -83,6 +93,7 @@ country_event = {
                 generate_character = {
                     token_base = baliu_1
                     name = "八六"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -205,10 +216,10 @@ country_event = {
         name = ASHC_event.14.a
         add_political_power = -2
         hidden_effect = {                                         #2025.3.10
-            play_song = youzu26
+            play_song = dokomademotsuzukukonomichiwo              #2026,1.18,伊尔诺
         }
         custom_effect_tooltip = {
-            localization_key = play_the_song_of_hachiroku_effect_tooltip
+            localization_key = you_contiune_with_hachiroku
         }
         set_country_flag = allow_baliu
         custom_effect_tooltip = baliu_hide6
@@ -259,10 +270,10 @@ country_event = {
         add_political_power = 200
         army_experience = 75
         hidden_effect = {
-            play_song = youzu26
+            play_song = dokomademotsuzukukonomichiwo
         }
         custom_effect_tooltip = {
-            localization_key = play_the_song_of_hachiroku_effect_tooltip
+            localization_key = you_contiune_with_hachiroku
         }
         add_political_power = -2
         set_country_flag = allow_baliu
@@ -284,10 +295,10 @@ country_event = {
         add_political_power = -2
         set_country_flag = allow_baliu
         hidden_effect = {
-            play_song = youzu26
+            play_song = dokomademotsuzukukonomichiwo
         }
         custom_effect_tooltip = {
-            localization_key = play_the_song_of_hachiroku_effect_tooltip
+            localization_key = you_contiune_with_hachiroku
         }
         custom_effect_tooltip = baliu_hide8
         random_army_leader = {

@@ -1,0 +1,174 @@
+defined_text = { 
+	name = GetyouzuPropagandaLeftSlotAge
+	text = {
+		trigger = {
+			not = { has_country_flag = yz_1st_solt_empty }
+		}
+		localization_key = yz_poster_images_properties_1
+	}
+}
+
+defined_text = { 
+	name = GetyouzuPropagandaCenterSlotAge
+	text = {
+		trigger = {
+			not = { has_country_flag = yzposter_2nd_solt_empty }
+		}
+		localization_key = yz_poster_images_properties_2
+	}
+}
+
+defined_text = { 
+	name = GetyouzuPropagandaRightSlotAge
+	text = {
+		trigger = {
+			not = { has_country_flag = yzposter_3rd_solt_empty }
+		}
+		localization_key = yz_poster_images_properties_3
+	}
+}
+
+defined_text = { 
+	name = yzc_manpower_icon
+	text = {
+		trigger = {
+			check_variable = {
+				yzc_manpower_factor < 0.075
+			}
+		}
+		localization_key = yzc_manpower_icon1
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				yzc_manpower_factor > 0.074
+				yzc_manpower_factor < 0.15
+			}
+		}
+		localization_key = yzc_manpower_icon2
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				yzc_manpower_factor > 0.149
+			}
+		}
+		localization_key = yzc_manpower_icon3
+	}
+}
+
+defined_text = { 
+	name = YuzuSongUndDanceTroupe_event_text
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 1 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_1
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 2 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_2
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 3 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_3
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 4 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_4
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 5 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_5
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 6 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_6
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 7 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_7
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 8 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_8
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_text_9
+	}
+}
+
+defined_text = { 
+	name = YuzuSongUndDanceTroupe_event_option_text
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 1 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_1
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 2 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_2
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 3 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_3
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 4 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_4
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 5 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_5
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 6 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_6
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 7 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_7
+	}
+	text = {
+		trigger = {
+			check_variable = { YuzuSongUndDanceTroupe_event_var = 8 }
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_8
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = YuzuSongUndDanceTroupe_event_option_text_9
+	}
+}

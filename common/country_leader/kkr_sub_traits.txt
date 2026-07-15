@@ -1,0 +1,28 @@
+#防覆盖文件
+leader_traits = {
+    #玖玖瑠
+    trait_sub_kkr_eco = {      #敏锐的商业嗅觉
+        random = no
+        political_power_gain = 1
+        stability_factor = 0.1
+		war_support_factor = 0.1
+        consumer_goods_factor = -0.3
+        production_speed_industrial_complex_factor = 0.25
+		production_speed_arms_factory_factor = 0.25
+        production_speed_supply_node_factor = 2.5
+        production_speed_rail_way_factor = 0.4
+        production_speed_infrastructure_factor = 0.3
+        industrial_capacity_factory = 0.15
+        military_industrial_organization_funds_gain = 1
+        research_speed_factor = 0.15
+        trade_cost_for_target_factor = 1
+
+    }
+    trait_sub_kkr_sci = {      #天才科学家
+        random = no
+        research_speed_factor = 0.35
+        consumer_goods_factor = 0.1
+        military_industrial_organization_funds_gain = 1
+        military_industrial_organization_research_bonus = 0.25
+    }
+}

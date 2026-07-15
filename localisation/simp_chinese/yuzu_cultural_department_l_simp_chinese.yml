@@ -22,7 +22,9 @@
  play_the_song_of_linglai_descision_effect_tooltip: "播放§tastral ability§!"
  yuzu_super_vip: "柚子网盘超级会员"
  yuzu_super_vip_desc: "一个神秘的小网盘，里面有柚子社全套作品（ExE除外）"
- Yuzu_can_form_yuzu_land_tt: "我们得在[?yuzu_form_yuzu_land_days_basic_require|.0+Y]天之后才能再次传播柚子文化，现在已经过了[?yuzu_form_yuzu_land_days|.0+Y]天"
+ Yuzu_can_form_yuzu_land_tt: "[Yuzu_can_form_yuzu_land_describe]"
+ Yuzu_can_form_yuzu_land_describe_start: "我们得在[?yuzu_form_yuzu_land_days_basic_require|.0+Y]天之后才能再次传播柚子文化，现在已经过了[?yuzu_form_yuzu_land_days|.0+Y]天"
+ Yuzu_can_form_yuzu_land_describe_start_first: "我们尚未进行柚子文化传播"
  yuzu_fund_add: "我们的柚金金增加了"
 
  

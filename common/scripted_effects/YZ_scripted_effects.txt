@@ -364,7 +364,33 @@ clr_YzCoreGroup = {
 	clr_country_flag = YCG_FS_fumika
 	clr_country_flag = YCG_CM_fumika
 	clr_country_flag = YCG_VC_fumika
-
+	clr_country_flag = YCG_FS_masaki
+	clr_country_flag = YCG_CM_masaki
+	clr_country_flag = YCG_VC_masaki
+	clr_country_flag = YCG_FS_ruri
+	clr_country_flag = YCG_CM_ruri
+	clr_country_flag = YCG_VC_ruri
+	clr_country_flag = YCG_FS_sayo
+	clr_country_flag = YCG_CM_sayo
+	clr_country_flag = YCG_VC_sayo
+	clr_country_flag = YCG_FS_sakuyahime
+	clr_country_flag = YCG_CM_sakuyahime
+	clr_country_flag = YCG_VC_sakuyahime
+	clr_country_flag = YCG_FS_suou
+	clr_country_flag = YCG_CM_suou
+	clr_country_flag = YCG_VC_suou
+	clr_country_flag = YCG_FS_wakana
+	clr_country_flag = YCG_CM_wakana
+	clr_country_flag = YCG_VC_wakana
+	clr_country_flag = YCG_FS_nozomi
+	clr_country_flag = YCG_CM_nozomi
+	clr_country_flag = YCG_VC_nozomi
+	clr_country_flag = YCG_FS_tsumugi
+	clr_country_flag = YCG_CM_tsumugi
+	clr_country_flag = YCG_VC_tsumugi
+	clr_country_flag = YCG_FS_misaka_makoto
+	clr_country_flag = YCG_CM_misaka_makoto
+	clr_country_flag = YCG_VC_misaka_makoto
 }
 
 noa_love_up = {			###noa好感度增加
@@ -483,6 +509,33 @@ roka_koharu_check = {   #芦花小春触发事件判定
 	}
 }
 
+turn_to_yzc = {	#变成柚子厨
+	if = {		
+		limit = {
+			has_equipment = {
+				yz_works_equipment > 9
+			}
+			any_army_leader = {
+				not = { has_trait = yzc_trait }
+				yz_general = no
+			}
+		}
+		random_army_leader = {
+			limit = {
+				not = { yz_general = yes }
+			}
+			add_unit_leader_trait = yzc_trait
+		}
+		add_equipment_to_stockpile = {
+			type = yz_works_equipment
+			amount = -10
+			producer = JAP
+		}
+		custom_effect_tooltip = yzc_general_gain_tt
+	}
+}
+
+
 clr_tarot_flags = {		
 	clr_country_flag = tarot_the_chariot
 	clr_country_flag = tarot_the_chariot_down
@@ -529,4 +582,283 @@ clr_tarot_flags = {
 	clr_country_flag = tarot_wheel_of_fortune
 	clr_country_flag = tarot_wheel_of_fortune_down       
 }
+clean_all_traits_and_desc = {
+	if = {
+        limit = { THIS = { has_ideology = nazism } }
+        remove_country_leader_role = { ideology = nazism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = nazism
+				traits = {  }
+            }
+        }
+    }
+    # 2. 法西斯主义 (fascism_ideology)
+    else_if = {
+        limit = { THIS = { has_ideology = fascism_ideology } }
+        remove_country_leader_role = { ideology = fascism_ideology }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = fascism_ideology
+				traits = {  }
+            }
+        }
+    }
+    else_if = {
+        limit = { THIS = { has_ideology = gen_nazism } }
+        remove_country_leader_role = { ideology = gen_nazism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = gen_nazism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = falangism } }
+        remove_country_leader_role = { ideology = falangism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = falangism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = rexism } }
+        remove_country_leader_role = { ideology = rexism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = rexism
+				traits = {  }
+            }
+        }
+    }
+	
+    # ============ 民主主义组 (Democratic) ============
+    # 3. 保守主义 (conservatism)
+    else_if = {
+        limit = { THIS = { has_ideology = conservatism } }
+        remove_country_leader_role = { ideology = conservatism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = conservatism
+				traits = {  }
+            }
+        }
+    }
+    # 4. 自由主义 (liberalism)
+    else_if = {
+        limit = { THIS = { has_ideology = liberalism } }
+        remove_country_leader_role = { ideology = liberalism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = liberalism
+				traits = {  }
+            }
+        }
+    }
 
+	else_if = {
+        limit = { THIS = { has_ideology = socialism } }
+        remove_country_leader_role = { ideology = socialism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = socialism
+				traits = {  }
+            }
+        }
+    }
+
+	else_if = {
+        limit = { THIS = { has_ideology = populism } }
+        remove_country_leader_role = { ideology = populism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = populism
+				traits = {  }
+            }
+        }
+    }
+    # ============ 共产主义组 (Communism) ============
+    # 5. 马克思主义 (marxism)
+    else_if = {
+        limit = { THIS = { has_ideology = marxism } }
+        remove_country_leader_role = { ideology = marxism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = marxism
+				traits = {  }
+            }
+        }
+    }
+    # 6. 斯大林主义 (stalinism)
+    else_if = {
+        limit = { THIS = { has_ideology = stalinism } }
+        remove_country_leader_role = { ideology = stalinism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = stalinism
+				traits = {  }
+            }
+        }
+    }
+
+	else_if = {
+        limit = { THIS = { has_ideology = leninism } }
+        remove_country_leader_role = { ideology = leninism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = leninism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = anti_revisionism } }
+        remove_country_leader_role = { ideology = anti_revisionism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = anti_revisionism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = anarchist_communism } }
+        remove_country_leader_role = { ideology = anarchist_communism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = anarchist_communism
+				traits = {  }
+            }
+        }
+    }
+	
+    # ============ 中立主义组 (Neutrality) ============
+    # 7. 专制主义 (despotism)
+    else_if = {
+        limit = { THIS = { has_ideology = despotism } }
+        remove_country_leader_role = { ideology = despotism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = despotism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = oligarchism } }
+        remove_country_leader_role = { ideology = oligarchism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = oligarchism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = anarchism } }
+        remove_country_leader_role = { ideology = anarchism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = anarchism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = despotism } }
+        remove_country_leader_role = { ideology = despotism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = despotism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = moderatism } }
+        remove_country_leader_role = { ideology = moderatism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = moderatism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = centrism } }
+        remove_country_leader_role = { ideology = centrism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = centrism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = japan_militarism_ideology } }
+        remove_country_leader_role = { ideology = japan_militarism_ideology }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = japan_militarism_ideology
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = buddhist_socialism } }
+        remove_country_leader_role = { ideology = buddhist_socialism }
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = buddhist_socialism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = emperor_fascism } }
+        remove_country_leader_role = { ideology = emperor_fascism}
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = emperor_fascism
+				traits = {  }
+            }
+        }
+    }
+	else_if = {
+        limit = { THIS = { has_ideology = Communist-State } }
+        remove_country_leader_role = { ideology = Communist-State}
+        add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+                ideology = Communist-State
+				traits = {  }
+            }
+        }
+    }
+}

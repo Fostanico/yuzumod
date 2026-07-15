@@ -1,0 +1,381 @@
+kkr_military_industrial_organization_0 = { 
+	icon = GFX_idea_youzi_ATRI
+
+	allowed = {	
+        has_dlc = "Arms Against Tyranny"
+	}
+    visible = {
+		owner = { 
+            has_country_flag = kkr_MIO_1
+		}
+	}
+	equipment_type = { 
+		ATRI_equipment
+		ATRI_recon_equipment
+		ATRI_engine_equipment
+		ATRI_artillery_equipment
+		ATRI_medic_equipment
+	}
+	research_categories = {
+		ATRI_tech
+		mio_cat_tech_all_ATRI_tech
+	}
+    tree_header_text = {
+		text = kkr_ATRI_equipment_department
+        x = 1
+	}
+
+	tree_header_text = {
+		text = kkr_ATRI_production_department
+		x = 4
+	}
+
+    initial_trait = {
+	    token = kkr_ATRI_mio_trait
+		name =  kkr_ATRI_mio_trait
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 1
+			military_industrial_organization_size_up_requirement = -0.95
+			military_industrial_organization_funds_gain = 0.05
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.95
+		}
+    	equipment_bonus = {
+			reliability = 0.1
+			soft_attack = 2
+			hard_attack = 1.5
+			breakthrough = 2.5
+        	build_cost_ic = -0.1
+		    }
+        production_bonus = {
+			production_capacity_factor = 0.5
+			production_resource_need_factor = -0.1
+            production_resource_penalty_factor = -0.1
+		}
+	}
+    trait = {	#单兵装备
+		token = kkr_ATRI_mio_trait_0
+		name  = kkr_ATRI_mio_trait_0
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=1 y=0 }
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+        equipment_bonus = {
+           reliability = 0.05
+		   defense = 0.5
+		   hard_attack = 0.15
+		   air_attack = 0.2
+		   hard_attack = 0.15
+		   ap_attack = 0.05
+		   breakthrough = 0.05
+		}
+	}
+	 trait = {	#提升武器适配性
+		token = kkr_ATRI_mio_trait_1
+		name  = kkr_ATRI_mio_trait_1 
+		icon = GFX_generic_mio_department_icon_artillery
+
+		position = { x=1 y=1 }
+
+        all_parents = { kkr_ATRI_mio_trait_0 }
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+        equipment_bonus = {
+        	defense = 0.25
+			hard_attack = 0.15
+			air_attack = 0.2
+			hard_attack = 0.15
+			ap_attack = 0.05
+			breakthrough = 0.05
+			reliability = -0.05
+        }
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_2
+		name  = kkr_ATRI_mio_trait_2   
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+
+		position = { x=0 y=1 }
+
+        all_parents = { kkr_ATRI_mio_trait_1 }
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+        equipment_bonus = {
+           recon = 0.25
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_3
+		name  = kkr_ATRI_mio_trait_3   
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x=0 y=2 }
+
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+
+		all_parents = { kkr_ATRI_mio_trait_2 }
+		equipment_bonus = {
+			breakthrough = 0.5
+			recon = 0.15
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_4
+		name  = kkr_ATRI_mio_trait_4   
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x=0 y=3 }
+
+        all_parents = { kkr_ATRI_mio_trait_3 }
+
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+        
+		equipment_bonus = {
+            defense = 0.25
+			hard_attack = 0.3
+			air_attack = 0.25
+			hard_attack = 0.25
+			ap_attack = 0.05
+			breakthrough = 0.1
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_5
+		name  = kkr_ATRI_mio_trait_5   
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		position = { x=1 y=4 }
+
+        all_parents = { kkr_ATRI_mio_trait_4 kkr_ATRI_mio_trait_7 }
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+	   }
+	   equipment_bonus = {
+		   	defense = 0.25
+			hard_attack = 0.3
+			air_attack = 0.25
+			hard_attack = 0.25
+			ap_attack = 0.05
+			breakthrough = 0.1
+			recon = 0.25
+			initiative = 1
+	   }
+	}
+	trait = {	#外骨骼
+		token = kkr_ATRI_mio_trait_6
+		name  = kkr_ATRI_mio_trait_6   
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		position = { x=2 y=1 }
+
+        all_parents = { kkr_ATRI_mio_trait_1 }
+
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+	   }
+        
+		equipment_bonus = {
+			breakthrough = 0.15
+		    defense = 0.15
+		}
+	}
+	trait = {	#
+		token = kkr_ATRI_mio_trait_13
+		name  = kkr_ATRI_mio_trait_13 
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		position = { x=2 y=2 }
+
+        all_parents = { kkr_ATRI_mio_trait_6 }
+
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+	   }
+        
+		equipment_bonus = {
+			reliability = -0.1
+			build_cost_ic = -0.15
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_7
+		name  = kkr_ATRI_mio_trait_7   
+		icon = GFX_generic_mio_trait_icon_detection
+
+		position = { x=2 y=3 }
+
+        all_parents = { kkr_ATRI_mio_trait_13 }
+        
+        limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+        equipment_bonus = {
+            soft_attack = 0.15
+			hard_attack = 0.25
+			air_attack = 0.15
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_8
+		name  = kkr_ATRI_mio_trait_8   
+		icon = GFX_generic_mio_department_icon_infantry_production
+
+		position = { x=4 y=0 }
+		
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+
+        equipment_bonus = {
+           build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.5
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_9
+		name  = kkr_ATRI_mio_trait_9   
+		icon =  GFX_generic_mio_department_icon_infantry_quality
+
+		position = { x=4 y=1 }
+
+		all_parents = { kkr_ATRI_mio_trait_8 }
+		
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 2
+			production_efficiency_cap_factor = 0.5
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_10
+		name  = kkr_ATRI_mio_trait_10   
+		icon =  GFX_generic_mio_department_icon_infantry_line_efficiency
+
+		position = { x=4 y=2 }
+
+		all_parents = { kkr_ATRI_mio_trait_9 }
+		
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 2.56
+			production_efficiency_cap_factor = 0.25
+			production_capacity_factor = 0.25
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_11
+		name  = kkr_ATRI_mio_trait_11   
+		icon =  GFX_generic_mio_department_icon_tank_general_at
+
+		position = { x=4 y=3 }
+
+		all_parents = { kkr_ATRI_mio_trait_10 }
+		
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 1
+			production_efficiency_cap_factor = 0.5
+			production_resource_need_factor = -0.75
+            production_resource_penalty_factor = -0.45
+		}
+	}
+	trait = {
+		token = kkr_ATRI_mio_trait_12
+		name  = kkr_ATRI_mio_trait_12   
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x=4 y=4 }
+		all_parents = {
+			kkr_ATRI_mio_trait_11
+		}
+		limit_to_equipment_type = { 
+			ATRI_equipment
+			ATRI_recon_equipment
+			ATRI_engine_equipment
+			ATRI_artillery_equipment
+			ATRI_medic_equipment
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 4.1
+			production_efficiency_cap_factor = 1
+			production_capacity_factor = 1
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.05
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.5
+		}
+	}
+}

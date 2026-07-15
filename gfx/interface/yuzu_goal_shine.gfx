@@ -1,0 +1,32 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_focus_yuzu_independence_shine"  # <--- 名字末尾必须有 _shine！
+        texturefile = "gfx/interface/goals/focus_yuzu_independence.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" # 绑定一个特效文件，这个文件是游戏自带的，专门用来给国策图标添加发光效果的
+    }
+    SpriteType = {
+        name = "GFX_focus_yuzu_infiltrate_japan_shine"
+        texturefile = "gfx/interface/goals/focus_yuzu_infiltrate_japan.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" 
+    }
+    SpriteType = {
+        name = "GFX_focus_yuzu_overthrow_japan_shine"
+        texturefile = "gfx/interface/goals/focus_yuzu_overthrow_japan.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" 
+    }
+    SpriteType = {
+        name = "GFX_focus_yuzu_cross_tsushima_shine"
+        texturefile = "gfx/interface/goals/focus_yuzu_cross_tsushima.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" 
+    }
+    SpriteType = {
+        name = "GFX_focus_yuzu_aid_continent_war_shine"
+        texturefile = "gfx/interface/goals/focus_yuzu_aid_continent_war.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" 
+    }
+    SpriteType = {
+        name = "GFX_focus_yuzu_stand_in_world_shine"
+        texturefile = "gfx/interface/goals/focus_yuzu_stand_in_world.dds" 
+        effectFile = "gfx/FX/buttonstate.lua" 
+    }
+}

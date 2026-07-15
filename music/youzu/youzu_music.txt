@@ -93,9 +93,9 @@ music = {
 	song = "youzu9"
 	
 	chance = {
-		factor = 1
+		factor = 1.25
 		modifier = {
-			factor = 1
+			factor = 1.25
 		}		
 	}	
 }
@@ -236,9 +236,9 @@ music = {
 	song = "youzu22"
 	
 	chance = {
-		factor = 1
+		factor = 1.25
 		modifier = {
-			factor = 1
+			factor = 1.1
 		}		
 	}	
 }
@@ -265,27 +265,7 @@ music = {
 	}	
 }
 
-music = {
-	song = "youzu25"
-	
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}		
-	}	
-}
 
-music = {
-	song = "youzu26"
-	
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}		
-	}	
-}
 
 music = {
 	song = "youzu27"
@@ -309,16 +289,7 @@ music = {
 	}	
 }
 
-music = {
-	song = "youzu29"
-	
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}		
-	}	
-}
+
 music = {
 	song = "youzu30"
 	
@@ -329,9 +300,98 @@ music = {
 		}		
 	}	
 }
-
+music = {
+	song = "youzu31"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "youzu32"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "youzu33"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "youzu34"
+	
+	chance = {
+		factor = 1.3
+		modifier = {
+			factor = 1.3
+		}		
+	}	
+}
 music = {
 	song = "koto_battle"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "amairo"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "blue_sky"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "DIVE"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "furerufurueru"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+music = {
+	song = "amairo_yune"
 	
 	chance = {
 		factor = 1
@@ -370,5 +430,104 @@ music = {
 		modifier = {
 			factor = 1
 		}		
+	}
+}
+music = {
+	song = "Call_My_Name"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "Charge_Of_Soul"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "daisuki"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "noble_works_ed"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "song_of_ena"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "song_of_anju"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "song_of_tsukimi"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "song_of_ririko"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "song_of_miku"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "tenshenranman_op_piano"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "the_song_of_guanyu"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
 	}
 }

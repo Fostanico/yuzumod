@@ -1,0 +1,25 @@
+scripted_gui = {
+	YZ_miliatry_party_ui = {
+		window_name = YZ_miliatry_party_ui
+		context_type = decision_category
+		visible = {
+			has_country_flag = open_YZS_military_academy
+		}
+		triggers = {
+			Yz_cos_people_visible = {
+				or = {
+					has_country_flag = have_a_cos
+				}
+			}
+		}
+		effects = {
+			
+		}
+		properties = {
+			Yz_cos_people = {
+				image = "[YZ_miliatry_party_cos_guys]"
+			}
+		}
+	}
+	
+}

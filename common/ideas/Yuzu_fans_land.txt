@@ -1,28 +1,139 @@
 ideas = {
-	country = {
-		yuzu_fans_land_ide = {
-			name = yuzu_fans_land_ide
-			picture = idea_yuzu_fans_land_ide
-			modifier = {
-				consumer_goods_factor = -0.3
-				global_building_slots_factor = 0.4
-				production_speed_buildings_factor = 0.3
-				monthly_population = 0.3
-			}
-		}
-		yuzu_super_vip = {
-			name = yuzu_super_vip
-			picture = idea_yuzu_super_vip
-			modifier = {
-				research_speed_factor = 0.15
-				political_power_factor = 0.2
-				monthly_population = 0.3
-			}
-			on_remove = {
-				set_variable = {
-					yuzu_form_yuzu_land_days_basic_require = 180
-				}
-			}
-		}
-	}
+    country = {
+        yuzu_fans_land_ide = {
+            name = yuzu_fans_land_ide
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                consumer_goods_factor = -0.3
+                global_building_slots_factor = 0.4
+                production_speed_buildings_factor = 0.3
+                monthly_population = 0.3
+            }
+        }
+        yuzu_super_vip = {
+            name = yuzu_super_vip
+            picture = idea_yuzu_super_vip
+            modifier = {
+                research_speed_factor = 0.15
+                political_power_factor = 0.2
+                monthly_population = 0.3
+            }
+            on_remove = {
+                set_variable = {
+                    yuzu_form_yuzu_land_days_basic_require = 180
+                }
+            }
+        }
+        now_we_repay_the_bonds_without_yzmoney = {
+            name = now_we_repay_the_bonds_without_yzmoney     #2025.3.19,18:26，伊尔诺——小萝莉帮我弄民族精神图标
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                consumer_goods_factor = 0.5
+                production_speed_buildings_factor = -0.1
+            }
+        }
+        ship_making_brand_standinglized = {
+            name = ship_making_brand_standinglized
+            picture = GFX_idea_YCG_hazuki
+            modifier = {
+                production_speed_dockyard_factor = 1
+                industrial_capacity_dockyard = 2
+                
+            }
+			equipment_bonus = {
+                ship_hull_submarine = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+				convoy = {
+                    build_cost_ic = -0.15
+                    instant = yes
+                }
+				ship_hull_light = {
+                    build_cost_ic = -0.2
+                    instant = yes
+                }
+				ship_hull_cruiser = {
+                    build_cost_ic = -0.30
+                    instant = yes
+                }
+				ship_hull_heavy = {
+                    build_cost_ic = -0.35
+                    instant = yes
+                }
+				ship_hull_carrier = {
+                    build_cost_ic = -0.4
+                    instant = yes
+                }
+                cv_small_plane_naval_bomber_airframe = {
+                    build_cost_ic = -0.5
+                    instant = yes
+                }
+				cv_small_plane_airframe = {
+                    build_cost_ic = -0.2
+                    instant = yes
+                }
+            }
+        }
+        hotaru_eat_every_thing = {
+            name = hotaru_eat_every_thing   #萤技能民族精神——2026.5.2，19：45，御坂真琴
+            picture = GFX_idea_hotaru_eat_every_thing
+            modifier = {
+                supply_consumption_factor = 1000
+                no_supply_grace = -1000
+                consumer_goods_factor = 1
+            }
+        }
+        #yz_long_term_invest_in_political_field = {
+        #	name = yz_long_term_invest_in_political_field
+        #	picture = idea_yuzu_fans_land_ide
+        #}
+    }
+    hidden_ideas = {
+        yz_long_term_invest_in_construction = {        #2025.3.25,22:45,伊尔诺
+            name = yz_long_term_invest_in_construction
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                production_speed_buildings_factor = 0.33
+                consumer_goods_factor = -0.33
+                consumer_goods_expected_value = -0.075
+                global_building_slots_factor = 0.25
+            }
+        }
+        yz_long_term_invest_resource_extraction = {
+            name = yz_long_term_invest_resource_extraction
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                country_resource_oil = 7.5
+                country_resource_aluminium = 7.5
+                country_resource_chromium = 7.5
+                country_resource_steel = 7.5
+                country_resource_rubber = 7.5
+                country_resource_tungsten = 7.5
+                base_fuel_gain_factor = 0.375
+                local_resources_factor = 0.375
+            }
+        }
+        yz_long_term_invest_in_research = {
+            name = yz_long_term_invest_in_research
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                research_speed_factor = 0.33
+                research_sharing_per_country_bonus_factor = 0.33
+                specialization_nuclear_speed_factor = 0.125
+                #specialization_speed_factor = 0.15
+                sp_tag_rocket_speed_factor = 0.075
+            }
+        }
+        yz_long_term_invest_in_industrialization = {
+            name = yz_long_term_invest_in_industrialization
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                industrial_capacity_factory = 0.33
+                industrial_capacity_dockyard = 0.33
+                production_factory_efficiency_gain_factor = 0.075
+                production_factory_max_efficiency_factor = 0.075
+            }
+        }
+    }
 }

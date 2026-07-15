@@ -1,55 +1,55 @@
 ability = {
     ebi_charge = { #虾吹响冲锋号
         name = ABILITY_ebi_charge
-	    desc = ABILITY_ebi_charge_desc #额外描述
+        desc = ABILITY_ebi_charge_desc #额外描述
         sound_effect = ebi_practice #声音
         icon = GFX_ability_hiyoriradio
-	    type = army_leader #是陆军将领
+        type = army_leader #是陆军将领
 
-	    allowed = { #要求
-			has_ability = ebi_charge #有技能=
-	    }
-	    cost = 0
-	    duration = 240 #持续时间（小时）
-	    cooldown = 2400 #冷却（小时）
+        allowed = { #要求
+            has_ability = ebi_charge #有技能=
+        }
+        cost = 0
+        duration = 240 #持续时间（小时）
+        cooldown = 2400 #冷却（小时）
         unit_modifiers = { #单位加成
-                plains = {
-                    movement = 0.25
-                }             
-                forest = {	#森林
-                    movement = 0.25
-                }    
-                hills = {	#丘陵
-                    movement = 0.25 
-                }      
-                jungle = {	#丛林
-                    movement = 0.25
-                }        
-                marsh = {	#沼泽
-                    movement = 0.25
-                }      
-                mountain = {
-                    movement = 0.25
-                }
-                urban = {	
-                    movement = 0.25
-                }
-        
-                river = {
-                    movement = 0.25
-                }
-        
-                amphibious = {
-                    movement = 0.25
-                }
-                
-                snow = {
-                    movement = 0.25
-                }
-        
-                mud = {
-                    movement = 0.25
-                }
+            plains = {
+                movement = 0.25
+            }
+            forest = {	#森林
+                movement = 0.25
+            }
+            hills = {	#丘陵
+                movement = 0.25
+            }
+            jungle = {	#丛林
+                movement = 0.25
+            }
+            marsh = {	#沼泽
+                movement = 0.25
+            }
+            mountain = {
+                movement = 0.25
+            }
+            urban = {
+                movement = 0.25
+            }
+
+            river = {
+                movement = 0.25
+            }
+
+            amphibious = {
+                movement = 0.25
+            }
+
+            snow = {
+                movement = 0.25
+            }
+
+            mud = {
+                movement = 0.25
+            }
             army_morale_factor = 0.5 #组织度恢复 50％
         }
         one_time_effect = { #单次加成
@@ -64,27 +64,27 @@ ability = {
         }
     }
 
-    chou_witch_ability = { #紬妈魔女技能
+   chou_witch_ability = { #紬妈魔女技能
         name = chou_witch_ability
-	    desc = chou_witch_ability_desc #额外描述
+        desc = chou_witch_ability_desc #额外描述
         sound_effect = chocoming #声音
         icon = GFX_ability_chou_witch_ability_icon
-	    type = army_leader #是陆军将领
+        type = army_leader #是陆军将领
 
-	    allowed = { #要求
-			has_ability = chou_witch_ability #有技能
-	    }
-	    cost = 0
-	    duration = 360 #持续时间（小时）
-	    cooldown = 960 #冷却（小时）
+        allowed = { #要求
+            has_ability = chou_witch_ability #有技能
+        }
+        cost = 0
+        duration = 360 #持续时间（小时）
+        cooldown = 720 #冷却（小时）
         unit_modifiers = { #单位加成
-            org_loss_when_moving = -0.2
-            army_morale_factor = 0.25 
-            land_night_attack = 0.25
-            supply_consumption_factor = -0.15
-            max_planning = 0.25
-            planning_speed = 0.25
-            out_of_supply_factor = -0.3
+            org_loss_when_moving = -0.5
+            army_morale_factor = 0.5
+            land_night_attack = 0.5
+            supply_consumption_factor = -0.3
+            max_planning = 0.5
+            planning_speed = 10
+            out_of_supply_factor = -0.5
         }
         one_time_effect = { #单次加成
             hidden_effect = {
@@ -94,14 +94,14 @@ ability = {
                     }
                 }
                 FROM = {
-                    country_event = { id = start_event.19 days = 15 } 
+                    country_event = { id = start_event.19 days = 15 }
                 }
             }
             add_temporary_buff_to_units = {
-                combat_offense = 0.25 #攻击
-                combat_breakthrough = 0.20 #突破
-                org_damage_multiplier = -0.75 #受到的组织度损伤
-                str_damage_multiplier = -0.30 #受到的兵力损伤
+                combat_offense = 0.5 #攻击
+                combat_breakthrough = 0.5 #突破
+                org_damage_multiplier = -1 #受到的组织度损伤
+                str_damage_multiplier = -1 #受到的兵力损伤
                 days = 15 #为部队添加10天上面的加成
             }
             #custom_effect_tooltip = chou_witch_ability_tt #技能描述
@@ -110,25 +110,32 @@ ability = {
 
     nene_witch_ability = { #宁宁魔女技能
         name = nene_witch_ability
-	    desc = nene_witch_ability_desc #额外描述
+        desc = nene_witch_ability_desc #额外描述
         sound_effect = nencoming #声音
         icon = GFX_ability_nene_witch_ability_icon
-	    type = army_leader #是陆军将领
+        type = army_leader #是陆军将领
 
-	    allowed = { #要求
-			has_ability = nene_witch_ability #有技能
-	    }
-	    cost = 0
-	    duration = 360 #持续时间（小时）
-	    cooldown = 960 #冷却（小时）
+        allowed = { #要求
+            has_ability = nene_witch_ability #有技能
+        }
+        cost = 0
+        duration = 360 #持续时间（小时）
+        cooldown = 720 #冷却（小时）
         unit_modifiers = { #单位加成
-            org_loss_when_moving = -0.2
-            army_morale_factor = 0.25 
-            land_night_attack = 0.25
-            max_planning = 0.25
-            planning_speed = 0.25
-            land_reinforce_rate = 0.1
+            org_loss_when_moving = -0.5
+            army_morale_factor = 0.5
+            land_night_attack = 0.5
+            max_planning = 0.5
+            planning_speed = 10
+            land_reinforce_rate = 0.2
             coordination_bonus = 0.15
+            initiative_factor = 0.2
+            fort = {
+                attack = 0.3
+            }
+            urban = {
+                attack = 0.3
+            }
         }
         one_time_effect = { #单次加成
             hidden_effect = {
@@ -138,17 +145,629 @@ ability = {
                     }
                 }
                 FROM = {
-                    country_event = { id = start_event.20 days = 15 } 
+                    country_event = { id = start_event.20 days = 15 }
                 }
             }
             add_temporary_buff_to_units = {
-                combat_offense = 0.25 #攻击
-                combat_breakthrough = 0.25 #突破
-                org_damage_multiplier = -0.1 #受到的组织度损伤
-                str_damage_multiplier = -0.25 #受到的兵力损伤
+                combat_offense = 0.5 #攻击
+                combat_breakthrough = 0.5 #突破
+                org_damage_multiplier = -1 #受到的组织度损伤
+                str_damage_multiplier = -1 #受到的兵力损伤
                 days = 15 #为部队添加10天上面的加成
             }
             #custom_effect_tooltip = nene_witch_ability_tt #技能描述
+        }
+    }
+    elina_bloodsucking_ability = { #艾莉娜吸血技能
+        name = elina_bloodsucking_ability
+        desc = elina_bloodsucking_ability_desc #额外描述
+        icon = GFX_trait_yz_elina_owen_trait
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = elina_bloodsucking_ability #有技能
+        }
+        cost = 0.09
+        duration = 240 #持续时间（小时）
+        cooldown = 24 #冷却（小时）
+        unit_modifiers = { #单位加成
+            army_attack_factor = 0.3
+            army_defence_factor = 0.3
+            coordination_bonus = 0.5
+            land_reinforce_rate = 0.2
+            recon_factor = 1
+            urban = {
+                attack = 1
+            }
+            org_damage_multiplier = -0.5 #受到的组织度损伤
+            str_damage_multiplier = -0.5 #受到的兵力损伤
+        }
+    }
+    nicola_bloodsucking_ability = { #尼古拉吸血技能
+        name = nicola_bloodsucking_ability
+        desc = nicola_bloodsucking_ability_desc #额外描述
+        icon = GFX_trait_yz_nicola_trait
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = nicola_bloodsucking_ability #有技能
+        }
+        cost = 0.09
+        duration = 240 #持续时间（小时）
+        cooldown = 24 #冷却（小时）
+        unit_modifiers = { #单位加成
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            org_loss_when_moving = -0.5
+            org_loss_at_low_org_factor = -0.3
+            terrain_penalty_reduction = 0.2
+            org_damage_multiplier = -0.5 #受到的组织度损伤
+            str_damage_multiplier = -0.5 #受到的兵力损伤
+            forest = {
+                attack = 0.4
+            }
+            hills = {
+                attack = 0.25
+            }
+            mountain = {
+                attack = 0.3
+            }
+            plains = {
+                attack = 0.15
+            }
+        }
+    }
+    miu_bloodsucking_ability = { #美羽吸血技能
+        name = miu_bloodsucking_ability
+        desc = miu_bloodsucking_ability_desc #额外描述
+        icon = GFX_trait_maid_miu_trait
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = miu_bloodsucking_ability #有技能
+        }
+        cost = 0.09
+        duration = 240 #持续时间（小时）
+        cooldown = 24 #冷却（小时）
+        unit_modifiers = { #单位加成
+            army_attack_factor = 0.2
+            army_defence_factor = 0.5
+            dig_in_speed = 1
+            max_dig_in_factor = 1
+            cas_damage_reduction = 1
+            experience_loss_factor = -0.3
+            org_damage_multiplier = -0.5 #受到的组织度损伤
+            str_damage_multiplier = -0.5 #受到的兵力损伤
+        }
+    }
+    rio_bloodsucking_ability = { #莉音吸血技能
+        name = rio_bloodsucking_ability
+        desc = rio_bloodsucking_ability_desc #额外描述
+        icon = GFX_trait_maid_rio_trait_1
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = rio_bloodsucking_ability #有技能
+        }
+        cost = 0.18
+        duration = 240 #持续时间（小时）
+        cooldown = 24 #冷却（小时）
+        unit_modifiers = { #单位加成
+            army_attack_factor = 0.65
+            army_defence_factor = 0.95
+            dig_in_speed = 1
+            max_dig_in_factor = 1
+            cas_damage_reduction = 1
+            experience_loss_factor = -0.3
+            org_loss_when_moving = -0.5
+            org_loss_at_low_org_factor = -0.3
+            terrain_penalty_reduction = 0.2
+            coordination_bonus = 0.5
+            land_reinforce_rate = 0.2
+            recon_factor = 1
+            org_damage_multiplier = -1.5 #受到的组织度损伤
+            str_damage_multiplier = -1.5 #受到的兵力损伤
+            urban = {
+                attack = 1
+            }
+            forest = {
+                attack = 0.4
+            }
+            hills = {
+                attack = 0.25
+            }
+            mountain = {
+                attack = 0.3
+            }
+            plains = {
+                attack = 0.15
+            }
+        }
+    }
+    aragami_sayo_bloodsucking_ability = { #小夜吸血技能
+        name = aragami_sayo_bloodsucking_ability
+        desc = aragami_sayo_bloodsucking_ability_desc #额外描述
+        icon = GFX_trait_yz_aragami_sayo_trait
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = aragami_sayo_bloodsucking_ability #有技能
+        }
+        cost = 0.21
+        duration = 240 #持续时间（小时）
+        cooldown = 24 #冷却（小时）
+        unit_modifiers = { #单位加成
+            army_attack_factor = 1
+            army_defence_factor = 1
+            dig_in_speed = 3
+            max_dig_in_factor = 3
+            cas_damage_reduction = 1
+            experience_loss_factor = -0.5
+            org_loss_when_moving = -1
+            org_loss_at_low_org_factor = -1
+            terrain_penalty_reduction = 0.5
+            coordination_bonus = 1
+            land_reinforce_rate = 1
+            recon_factor = 5
+            org_damage_multiplier = -1 #受到的组织度损伤
+            str_damage_multiplier = -1 #受到的兵力损伤
+            urban = {
+                attack = 1
+            }
+            forest = {
+                attack = 1
+            }
+            hills = {
+                attack = 1
+            }
+            mountain = {
+                attack = 1
+            }
+            plains = {
+                attack = 1
+            }
+        }
+    }
+    nanao_morin_ability = {
+        name = nanao_ability
+        desc = nanao_ability_desc
+        sound_effect = command_power_ability_offensive
+        icon = GFX_ability_nanao_ability_icon
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = nanao_morin_ability #有技能
+        }
+        cost = 0
+        duration = 600 #持续时间（小时）
+        cooldown = 360 #冷却（小时）
+        unit_modifiers = { #单位加成
+            org_loss_when_moving = -0.8
+            army_morale_factor = 0.8
+            land_night_attack = 1
+            max_planning = 1
+            planning_speed = 1
+            land_reinforce_rate = 1
+            coordination_bonus = 1
+        }
+        one_time_effect = { #单次加成
+            hidden_effect = {
+                set_portraits = {
+                    army = {
+                        large = "gfx\leader\souba_nanao_in_morin_a.png"
+                    }
+                }
+                FROM = {
+                    country_event = { id = start_event.70205860 days = 25 }
+                }
+            }
+            add_temporary_buff_to_units = {
+                combat_offense = 0.75
+                combat_breakthrough = 0.75
+                org_damage_multiplier = -0.75
+                str_damage_multiplier = -0.75
+                days = 25
+            }
+        }
+    }
+    ruri_haaa_ability = {
+        name = ruri_haha
+        desc = ruri_haha_des
+        icon = GFX_trait_ruri_ha_ability
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = ruri_haaa_ability
+        }
+        cost = 0.22
+        duration = 720
+        cooldown = 2160
+        unit_modifiers = {
+            army_attack_factor = 2
+            army_defence_factor = -0.6
+            no_supply_grace = -48
+            land_reinforce_rate = -0.05
+            initiative_factor = -0.05
+            coordination_bonus = -0.05
+            terrain_penalty_reduction = 1
+            combat_width_factor = 0.1
+            pocket_penalty = -1
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 30
+            }
+
+        }
+    }
+    sana_ability = { #佐奈技能  @统计计划管理 数值美工改一下就可以了
+        name = sana_ability
+        desc = sana_ability_desc #额外描述
+        sound_effect = sana_ability_sound #声音
+        icon = GFX_trait_maid_sana_trait
+        type = army_leader #是陆军将领
+
+        allowed = { #要求
+            has_ability = sana_ability #有技能
+        }
+        cost = 0
+        duration = 360 #持续时间（小时）
+        cooldown = 720 #冷却（小时）
+        unit_modifiers = { #单位加成
+            org_loss_when_moving = -0.5
+            army_morale_factor = 0.6
+            land_night_attack = 0.6
+            max_planning = 0.75
+            planning_speed = 10
+            land_reinforce_rate = 0.35
+            coordination_bonus = 0.25
+            initiative_factor = 0.25
+            fort = {
+                attack = 0.5
+            }
+            urban = {
+                attack = 0.5
+            }
+        }
+        one_time_effect = { #单次加成
+            hidden_effect = {
+                set_portraits = {
+                    army = {
+                        large = "gfx\leader\Ling.png"
+                    }
+                }
+                FROM = {
+                    country_event = { id = start_event.21 days = 15 }
+                }
+            }
+            add_temporary_buff_to_units = {
+                combat_offense = 0.5 #攻击
+                combat_breakthrough = 0.5 #突破
+                org_damage_multiplier = -1 #受到的组织度损伤
+                str_damage_multiplier = -1 #受到的兵力损伤
+                days = 15 #为部队添加10天上面的加成
+            }
+            #custom_effect_tooltip = nene_witch_ability_tt #技能描述
+        }
+    }
+    SCP_in_deep_way = {
+        name = SCP_forward
+        desc = SCP_forward_des
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = SCP_in_deep_way
+        }
+        cost = 0
+        duration = 360
+        cooldown = 720
+        unit_modifiers = {
+            army_artillery_attack_factor = 5
+            army_attack_factor = 0.5
+            army_speed_factor = 0.5
+            attrition = 0.3
+            ground_attack_factor = 0.5
+        }
+    }
+    work_ai_start = {
+        name = work_ok
+        desc = work_ok_des
+        icon = GFX_trait_work_ai_help_you
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = work_ai_start
+        }
+        cost = 0.22
+        duration = 336
+        cooldown = 2160
+        unit_modifiers = {
+            army_attack_factor = 3.36
+            army_defence_factor = 3.36
+            no_supply_grace = 168
+            land_reinforce_rate = 0.1
+            initiative_factor = 0.2
+            coordination_bonus = 0.2
+            terrain_penalty_reduction = 1
+            MODIFIER_POCKET_PENALTY = -1
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 14
+            }
+
+        }
+    }
+    call_from_king_s_power = {   #喵都技能——2026.4.28，18：42，伊尔诺
+        name = call_from_king_s_power
+        desc = call_from_king_s_power_desc
+        icon = GFX_trait_call_from_king_right
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = call_from_king_s_power
+        }
+        cost = 0.09
+        duration = 168
+        cooldown = 336
+        unit_modifiers = {
+            army_armor_attack_factor = 0.99
+            army_infantry_defence_factor = 0.99
+            army_artillery_attack_factor = 0.99
+            breakthrough_factor = 0.99
+            max_dig_in_factor = 0.99
+            no_supply_grace = 99
+            equipment_capture_factor = 0.99
+            coordination_bonus = 0.99
+            land_reinforce_rate = 0.99
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 7
+            }
+        }
+    }
+    god_hidding_clothes = {
+        name = god_hidding_clothes
+        desc = god_hidding_clothes_desc
+        icon = GFX_trait_you_cannot_find_me
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = god_hidding_clothes
+        }
+        cost = 0.12
+        duration = 168
+        cooldown = 336
+        unit_modifiers = {
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            air_superiority_bonus_in_combat = 10
+            army_bonus_air_superiority_factor = 1
+            air_attack_factor = 1
+            terrain_penalty_reduction = 0.5
+            air_cas_present_factor = 1
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 7
+            }
+        }
+    }
+    NEU_student_home_three_c = {
+        name = NEU_student_home_three_c
+        desc = NEU_student_home_three_c
+        icon = GFX_trait_Reform_and_opening_up
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = NEU_student_home_three_c
+        }
+        cost = 0.12
+        duration = 168
+        cooldown = 336
+        unit_modifiers = {
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            max_dig_in_factor = 1
+            recon_factor = 10
+            initiative_factor = 10
+            coordination_bonus = 10
+            land_reinforce_rate = 10
+            combat_width_factor = -0.5
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 7
+            }
+        }
+    }
+    the_command = {
+        name = the_command
+        desc = the_command_desc
+        icon = GFX_trait_the_order_comm
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = the_command
+        }
+        cost = 0.22
+        duration = 168
+        cooldown = 336
+        unit_modifiers = {
+            army_attack_factor = 1.5
+            army_defence_factor = 0.5
+            max_planning_factor = 1
+            planning_speed = 10
+            recon_factor = 5
+            air_attack_factor = 1
+            army_bonus_air_superiority_factor = 0.5
+            cas_damage_reduction = 1
+            terrain_penalty_reduction = 1
+        }
+        one_time_effect = {
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -0.5
+                days = 7
+            }
+        }
+    }
+    regression_star = {
+        name = regression_star
+        desc = regression_star_desc
+        icon = GFX_regression_star
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = regression_star
+        }
+        cost = 0.11
+        duration = 240
+        cooldown = 168
+        unit_modifiers = {
+            army_strength_factor = 1
+            org_loss_at_low_org_factor = -1
+            army_org_regain = 1
+            cas_damage_reduction = 1
+            army_defence_factor = 1
+            army_core_defence_factor = 2
+            experience_loss_factor = -1
+            casualty_trickleback = 1
+        }
+    }
+    regression_star2 = {
+        name = regression_star2
+        desc = regression_star_desc
+        icon = GFX_regression_star
+        cost = 0
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = regression_star2
+        }
+        duration = 1
+        cooldown = 999999999
+        one_time_effect = {
+            custom_effect_tooltip = regression_star2_attack
+            hidden_effect = {
+                owner = {
+                   country_event = { id = yz_ability_event.114514 } 
+                }
+            }
+        }
+    }
+    hypong_bom = {
+        name = hypong_bom
+        desc = hypong_bom_desc
+        icon = GFX_trait_hypong_bom
+        sound_effect = raid_result_success_nuclear #command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = hypong_bom
+        }
+        cost = 0
+        duration = 240
+        cooldown = 240
+        unit_modifiers = {
+            army_attack_factor = 150
+            army_defence_factor = 150
+        }
+        one_time_effect = {
+            custom_effect_tooltip = takashiro_boom_all
+            hidden_effect = {
+                owner = {
+                   country_event = { id = yz_ability_event.47994554 } 
+                }
+            }
+            
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -1
+                days = 10
+            }
+        }
+    }
+    eat_people = {
+        name = eat_people
+        desc = eat_people_desc
+        icon = GFX_trait_human_eating_girl
+        sound_effect = command_power_ability_offensive
+        type = army_leader
+        allowed = {
+            has_ability = eat_people
+        }
+        cost = 0
+        duration = 480
+        cooldown = 240
+        unit_modifiers = {
+            army_attack_factor = 100
+            army_defence_factor = 100
+            breakthrough_factor = 100
+            supply_consumption_factor = -10
+            no_supply_grace = 100000
+        }
+        one_time_effect = {
+            custom_effect_tooltip = hotaru_eat_all
+            hidden_effect = {
+                owner = {
+                   country_event = { id = yz_ability_event.3659153 } 
+                }
+            }
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -1
+                days = 7
+            }
+        }
+    }
+    power_of_kami = {
+        name = power_of_kami
+        desc = power_of_kami_desc
+        icon = GFX_trait_old_big_sister
+        sound_effect = raid_result_success_nuclear
+        type = army_leader
+        allowed = {
+            has_ability = power_of_kami
+        }
+        cost = 0
+        duration = 480
+        cooldown = 240
+        unit_modifiers = {
+            army_attack_factor = 4000
+            army_defence_factor = 1
+            breakthrough_factor = 100
+        }
+        one_time_effect = {
+            custom_effect_tooltip = kuko_use_her_power
+            hidden_effect = {
+                owner = {
+                   country_event = { id = yz_ability_event.53402385 } 
+                }
+                set_portraits = {
+                    army = {
+                        large = "gfx\leader\kuko_in_bluse_roes.png"
+                    }
+                }
+                FROM = {
+                    country_event = { id = start_event.70205861 days = 20 }
+                }
+            }
+            add_temporary_buff_to_units = {
+                org_damage_multiplier = -1
+                str_damage_multiplier = -1
+                days = 7
+            }
         }
     }
 }

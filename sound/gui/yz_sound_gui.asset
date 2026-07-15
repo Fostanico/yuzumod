@@ -35,6 +35,13 @@ soundeffect =
 }
 soundeffect =
 {
+	name = lenacoming
+	sounds = {
+		sound = lenacoming
+	}
+}
+soundeffect =
+{
 	name = murasame_end
 	sounds = {
 		sound = murasame_end
@@ -96,12 +103,18 @@ soundeffect =
 		sound = wak_title
 	}
 }
-
 soundeffect =
 {
 	name = nancoming
 	sounds = {
 		sound = nancoming
+	}
+}
+soundeffect =
+{
+	name = chisakicoming
+	sounds = {
+		sound = chisakicoming
 	}
 }
 soundeffect =
@@ -300,4 +313,79 @@ soundeffect =
 		sound = meg_yuzu
 	}
 }
+soundeffect =
+{
+	name = nan_yuzu
+	sounds = {
+		sound = nan_yuzu
+	}
+}
+soundeffect =
+{
+	name = nan_window
+	sounds = {
+		sound = nan_window
+	}
+}
+#夏目不是枣子姐
+soundeffect =
+{
+	name = ena_recruit
+	sounds = {
+		sound = ena_recruit
+	}
+}
+soundeffect =
+{
+	name = LLLJ_goodbye
+	sounds = {
+		sound = LLLJ_goodbye
+	}
+}
+soundeffect =
+{
+	name = ena_Kokuhaku
+	sounds = {
+		sound = ena_Kokuhaku
+	}
+}
+soundeffect =
+{
+	name = anju_kawaii
+	sounds = {
+		sound = anju_kawaii
+	}
+}
+soundeffect =
+{
+	name = tsukimi_isshoni
+	sounds = {
+		sound = tsukimi_isshoni
+	}
+}
+soundeffect =
+{
+	name = nayoka_sabishii
+	sounds = {
+		sound = nayoka_sabishii
+	}
+}
+soundeffect =
+{
+	name = ririko_suki
+	sounds = {
+		sound = ririko_suki
+	}
+}
+soundeffect =
+{
+	name = miku_suki
+	sounds = {
+		sound = miku_suki
+	}
+}
+
+
+
+
 

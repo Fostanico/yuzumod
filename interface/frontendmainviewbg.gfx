@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/core.png"
 	}
 	spriteType = {
+		name = "GFX_2026_new_year"
+		texturefile = "gfx/event_pictures/2026_new_year.png"
+	}
+	spriteType = {
 		name = "GFX_trait_maid_ninging_trait"
 		texturefile = "gfx/traits/maid_ninging_trait.png"
 	}
@@ -296,6 +300,26 @@ spriteTypes = {
 		texturefile = "gfx/traits/yz_ruri_trait.png"
 	}
 	spriteType = {
+		name = "GFX_trait_ruri_haa"
+		textureFile = "gfx/traits/ruri_haa.png"
+	}
+	spriteType = {
+		name = "GFX_trait_my_doubutsu_tomodachi"
+		textureFile = "gfx/traits/my_doubutsu_tomodachi.png"
+	}
+	spriteType = {
+		name = "GFX_trait_not_alone_bird"
+		textureFile = "gfx/traits/not_alone_bird.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ou_kami"
+		textureFile = "gfx/traits/ou_kami.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_tia_trait"
+		textureFile = "gfx/traits/yz_tia_trait.png"
+	}
+	spriteType = {
 		name = "GFX_trait_yz_roka_trait"
 		texturefile = "gfx/traits/yz_roka_trait.png"
 	}
@@ -307,13 +331,59 @@ spriteTypes = {
 		name = "GFX_trait_yz_sakuyahime_trait"
 		texturefile = "gfx/traits/yz_sakuyahime_trait.png"
 	}
+	spriteType = {
+		name = "GFX_trait_yz_kamikaranokisu_trait"
+		textureFile = "gfx/traits/yz_kamikaranokisu_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_god_who_collect_the_pollution"
+		textureFile = "gfx/traits/god_who_collect_the_pollution.png"
+	}
+	spriteType = {
+		name = "GFX_trait_super_big_big_sister"
+		textureFile = "gfx/traits/super_big_big_sister.png"
+	}
+	spriteType = {
+		name = "GFX_trait_super_shake_sm"
+		textureFile = "gfx/traits/super_shake_sm.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_mei_trait"
+		textureFile = "gfx/traits/yz_mei_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_suzune_trait"
+		textureFile = "gfx/traits/maid_suzune_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_kaguya_trait"
+		textureFile = "gfx/traits/maid_kaguya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_power_of_otherworld_queen_kaguya_trait"
+		textureFile = "gfx/traits/maid_kaguya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_konoka_trait"
+		textureFile = "gfx/traits/yz_konoka_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_orie_trait"
+		textureFile = "gfx/traits/yz_orie_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_orie_second_trait"
+		textureFile = "gfx/traits/yz_orie_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_nicola_trait"
+		textureFile = "gfx/traits/yz_nicola_trait.png"
+	}
 #神秘标记点@@
 	spriteType = {
 		name = "GFX_trait_yz_ebihara_minase_trait"
 		texturefile = "gfx/traits/yz_ebihara_minase_trait.png"
 	}
-
-
 	spriteType = {
 		name = "GFX_trait_yz_elina_owen_trait"
 		texturefile = "gfx/traits/yz_elina_owen_trait.png"
@@ -321,6 +391,413 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_yz_mera_azusa_trait"
 		texturefile = "gfx/traits/yz_mera_azusa_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_alexander_bartender"
+		texturefile = "gfx/traits/alexander_bartender.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_aragami_sayo_trait"
+		texturefile = "gfx/traits/yz_aragami_sayo_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_want_to_marry_suou_trait"
+		textureFile = "gfx/traits/want_to_marry_suou_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_suou_kawaii"
+		textureFile = "gfx/traits/suou_kawaii.png"
+	}
+	spriteType = {
+		name = "GFX_trait_best_music_maker"
+		textureFile = "gfx/traits/best_music_maker.png"
+	}
+	spriteType = {
+		name = "GFX_trait_internet_oppose_line_little_princess"
+		textureFile = "gfx/traits/internet_oppose_line_little_princess.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yuzusoft_fans_girl"
+		textureFile = "gfx/traits/yuzusoft_fans_girl.png"
+	}
+	spriteType = {
+		name = "GFX_trait_big_small_sister_good_at_sex"
+		textureFile = "gfx/traits/big_small_sister_good_at_sex.png"
+	}
+	spriteType = {
+		name = "GFX_trait_good_at_both_gita_and_study"
+		textureFile = "gfx/traits/good_at_both_gita_and_study.png"
+	}
+	spriteType = {
+		name = "GFX_trait_broker_of_band"
+		textureFile = "gfx/traits/broker_of_band.png"
+	}
+	spriteType = {
+		name = "GFX_trait_good_woman_ririko"
+		textureFile = "gfx/traits/good_woman_ririko.png"
+	}
+	spriteType = {
+		name = "GFX_trait_give_me_a_shining_at_b_point"
+		textureFile = "gfx/traits/give_me_a_shining_at_b_point.png"
+	}
+	spriteType = {
+		name = "GFX_trait_influencing_singer"
+		textureFile = "gfx/traits/influencing_singer.png"
+	}
+	spriteType = {
+		name = "GFX_trait_hanakyu"
+		textureFile = "gfx/traits/hanakyu.png"
+	}
+	spriteType = {
+		name = "GFX_trait_learn_from_trump"
+		textureFile = "gfx/traits/learn_from_trump.png"
+	}
+	spriteType = {
+		name = "GFX_trait_seven_girl"
+		textureFile = "gfx/traits/seven_girl.png"
+	}
+	spriteType = {
+		name = "GFX_trait_jieerrensiji_s_mentu"
+		textureFile = "gfx/traits/jieerrensiji_s_mentu.png"
+	}
+	spriteType = {
+		name = "GFX_trait_big_sister_of_morin"
+		textureFile = "gfx/traits/big_sister_of_morin.png"
+	}
+	spriteType = {
+		name = "GFX_trait_nekopara_in_yuzu"
+		textureFile = "gfx/traits/nekopara_in_yuzu.png"
+	}
+	spriteType = {
+		name = "GFX_trait_very_good_cat_sister"
+		textureFile = "gfx/traits/very_good_cat_sister.png"
+	}
+	spriteType = {
+		name = "GFX_trait_master_in_love_really"
+		textureFile = "gfx/traits/master_in_love_really.png"
+	}
+	spriteType = {
+		name = "GFX_trait_haru_katayaga_sister"
+		textureFile = "gfx/traits/haru_katayaga_sister.png"
+	}
+	#彩蛋特质
+	spriteType = {
+		name = "GFX_trait_maid_van_trait"
+		texturefile = "gfx/traits/maid_van_trait.png"
+	}
+    spriteType = {
+		name = "GFX_trait_maid_Weiss_trait"
+		texturefile = "gfx/traits/maid_Weiss_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Ling_trait"
+		texturefile = "gfx/traits/maid_Ling_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_Ling_trait"
+		texturefile = "gfx/traits/married_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Tsukimori_trait"
+		texturefile = "gfx/traits/maid_Tsukimori_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Ukisov_trait"
+		texturefile = "gfx/traits/maid_Ukisov_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Verniy_trait"
+		texturefile = "gfx/traits/maid_Verniy_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_Verniy_trait"
+		texturefile = "gfx/traits/yz_Verniy_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Laoba_trait"
+		texturefile = "gfx/traits/maid_Laoba_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_Laoba_trait"
+		texturefile = "gfx/traits/yz_Laoba_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Manbo_trait"
+		texturefile = "gfx/traits/maid_Manbo_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_Manbo_trait"
+		texturefile = "gfx/traits/yz_Manbo_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_o5j_trait"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_A_voice_from_wonderful_future"
+		textureFile = "gfx/traits/A_voice_from_wonderful_future.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_ad_victoriam"
+		textureFile = "gfx/traits/ad_victoriam.png"
+	}
+	spriteType = {
+		name = "GFX_trait_First_Air_Transport_Special_Operations_Brigade"
+		textureFile = "gfx/traits/First_Air_Transport_Special_Operations_Brigade.png"
+	}
+	spriteType = {
+		name = "GFX_trait_the_best_namaden_player"
+		textureFile = "gfx/traits/the_best_namaden_player.png"
+	}
+	spriteType = {
+		name = "GFX_trait_the_best_Minecraft_player"
+		textureFile = "gfx/traits/the_best_Minecraft_player.png"
+	}
+	spriteType = {
+		name = "GFX_trait_scp_cat_killer"
+		textureFile = "gfx/traits/scp_cat_killer.png"
+	}
+	spriteType = {
+		name = "GFX_trait_the_true_west_soviet_spirit"
+		textureFile = "gfx/traits/the_true_west_soviet_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_trait_mottomo_kawaii_kawaisa"
+		textureFile = "gfx/traits/mottomo_kawaii_kawaisa.png"
+	}
+	spriteType = {
+		name = "GFX_trait_call_from_king_s_force"
+		textureFile = "gfx/traits/call_from_king_s_force.png"
+	}
+	spriteType = {
+		name = "GFX_trait_work_ai_help_you"
+		textureFile = "gfx/traits/work_ai_help_you.png"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_futsuuna_shoujo_no_kokoro"
+		textureFile = "gfx/traits/futsuuna_shoujo_no_kokoro.png"
+	}
+	spriteType = {
+		name = "GFX_trait_strong_ai"
+		textureFile = "gfx/traits/strong_ai.png"
+	}
+	spriteType = {
+		name = "GFX_trait_world_type_maho"
+		textureFile = "gfx/traits/world_type_maho.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ill_and_weak"
+		textureFile = "gfx/traits/ill_and_weak.png"
+	}
+	spriteType = {
+		name = "GFX_trait_evil_in_setting"
+		textureFile = "gfx/traits/evil_in_setting.png"
+	}
+	spriteType = {
+		name = "GFX_trait_very_rely_on_internet"
+		textureFile = "gfx/traits/very_rely_on_internet.png"
+	}
+	spriteType = {
+		name = "GFX_trait_retired_soilder_of_greffen"
+		textureFile = "gfx/traits/retired_soilder_of_greffen.png"
+	}
+	spriteType = {
+		name = "GFX_trait_see_star"
+		textureFile = "gfx/traits/see_star.png"
+	}
+	spriteType = {
+		name = "GFX_trait_man_walk_in_night"
+		textureFile = "gfx/traits/man_walk_in_night.png"
+	}
+	spriteType = {
+		name = "GFX_trait_power_of_general"
+		textureFile = "gfx/traits/power_of_general.png"
+	}
+	spriteType = {
+		name = "GFX_trait_general_of_line_division"
+		textureFile = "gfx/traits/general_of_line_division.png"
+	}
+	spriteType = {
+		name = "GFX_trait_false_big_sister"
+		textureFile = "gfx/traits/false_big_sister.png"
+	}
+	spriteType = {
+		name = "GFX_trait_specialist_in_H_joker"
+		textureFile = "gfx/traits/specialist_in_H_joker.png"
+	}
+	spriteType = {
+		name = "GFX_trait_specialist_in_SM_play"
+		textureFile = "gfx/traits/specialist_in_SM_play.png"
+	}
+	spriteType = {
+		name = "GFX_trait_super_yiliu_meidou"
+		textureFile = "gfx/traits/super_yiliu_meidou.png"
+	}
+	spriteType = {
+		name = "GFX_trait_koise_jodan"
+		textureFile = "gfx/traits/koise_jodan.png"
+	}
+	spriteType = {
+		name = "GFX_trait_help_from_haishangdushi"
+		texturefile = "gfx/traits/yz_aragami_sayo_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_hinata_trait"
+		textureFile = "gfx/traits/yz_hinata_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_kimi_ga_kureta_hikari "
+		textureFile = "gfx/traits/kimi_ga_kureta_hikari.png"
+	}
+	spriteType = {
+		name = "GFX_trait_sena_gainianshen_da"
+		textureFile = "gfx/traits/sena_gainianshen_da.png"
+	}
+	spriteType = {
+		name = "GFX_trait_akari_dahefuzi"
+		textureFile = "gfx/traits/akari_dahefuzi.png"
+	}
+	spriteType = {
+		name = "GFX_trait_real_perfect_girl"
+		textureFile = "gfx/traits/real_perfect_girl.png"
+	}
+	spriteType = {
+		name = "GFX_trait_aojiao_de_daxiaojie"
+		textureFile = "gfx/traits/aojiao_de_daxiaojie.png"
+	}
+	spriteType = {
+		name = "GFX_trait_real_shizuru"
+		textureFile = "gfx/traits/real_shizuru.png"
+	}
+	spriteType = {
+		name = "GFX_trait_oupai_nai_kenjuuna_juse"
+		textureFile = "gfx/traits/oupai_nai_kenjuuna_juse.png"
+	}
+	spriteType = {
+		name = "GFX_trait_call_from_king_right"
+		textureFile = "gfx/traits/call_from_king_right.png"
+	}
+	spriteType = {
+		name = "GFX_trait_big_sister_of_kujo"
+		textureFile = "gfx/traits/big_sister_of_kujo.png"
+	}
+	spriteType = {
+		name = "GFX_trait_nona_times_nona_days_nona_hues_divine"
+		textureFile = "gfx/traits/nona_times_nona_days_nona_hues_divine.png"
+	}
+	spriteType = {
+		name = "GFX_trait_you_cannot_find_me"
+		textureFile = "gfx/traits/you_cannot_find_me.png"
+	}
+	spriteType = {
+		name = "GFX_trait_paper_bag_super_woman"
+		textureFile = "gfx/traits/paper_bag_super_woman.png"
+	}
+	spriteType = {
+		name = "GFX_trait_Caeli_Hue_Caeli_Song_Caeli_Voice_Sublime"
+		textureFile = "gfx/traits/Caeli_Hue_Caeli_Song_Caeli_Voice_Sublime.png"
+	}
+	spriteType = {
+		name = "GFX_trait_Reform_and_opening_up"
+		textureFile = "gfx/traits/Reform_and_opening_up.png"
+	}
+	spriteType = {
+		name = "GFX_trait_deadly_gari"
+		textureFile = "gfx/traits/deadly_gari.png"
+	}
+	spriteType = {
+		name = "GFX_trait_Vernal_Hue_Vernal_Love_Vernal_Breeze_of_Time"
+		textureFile = "gfx/traits/Vernal_Hue_Vernal_Love_Vernal_Breeze_of_Time.png"
+	}
+	spriteType = {
+		name = "GFX_trait_the_order_comm"
+		textureFile = "gfx/traits/the_order_comm.png"
+	}
+	spriteType = {
+		name = "GFX_regression_star"
+		textureFile = "gfx/traits/regression_star.png"
+	}
+	spriteType = {
+		name = "GFX_trait_final_days_of_middle_two_ill"
+		textureFile = "gfx/traits/final_days_of_middle_two_ill.png"
+	}
+	spriteType = {
+		name = "GFX_trait_Nival_Hue_Nival_Flake_Nival_Trace_in_Rhyme"
+		textureFile = "gfx/traits/Nival_Hue_Nival_Flake_Nival_Trace_in_Rhyme.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ruyu_type_sword_big_teacher"
+		textureFile = "gfx/traits/ruyu_type_sword_big_teacher.png"
+	}
+	spriteType = {
+		name = "GFX_trait_kabutochi"
+		textureFile = "gfx/traits/kabutochi.png"
+	}
+	spriteType = {
+		name = "GFX_trait_regression_star"
+		textureFile = "gfx/traits/regression_star.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ghost_girl_in_mirror"
+		textureFile = "gfx/traits/ghost_girl_in_mirror.png"
+	}
+	spriteType = {
+		name = "GFX_trait_common_girl_in_real_world"
+		textureFile = "gfx/traits/common_girl_in_real_world.png"
+	}
+	spriteType = {
+		name = "GFX_trait_hypong_bom"
+		textureFile = "gfx/traits/hypong_bom.png"
+	}
+	spriteType = {
+		name = "GFX_trait_specialist_in_biology"
+		textureFile = "gfx/traits/specialist_in_biology.png"
+	}
+	spriteType = {
+		name = "GFX_takashiro_maya_tenshen_trait"
+		textureFile = "gfx/traits/specialist_in_biology.png"
+	}
+	spriteType = {
+		name = "GFX_trait_love_in_deep_from_this_girl"
+		textureFile = "gfx/traits/love_in_deep_from_this_girl.png"
+	}
+	spriteType = {
+		name = "GFX_trait_childhood_sweethearts_never_lost"
+		textureFile = "gfx/traits/childhood_sweethearts_never_lost.png"
+	}
+	spriteType = {
+		name = "GFX_trait_powerful_childhood_sweethearts"
+		textureFile = "gfx/traits/powerful_childhood_sweethearts.png"
+	}
+	spriteType = {
+		name = "GFX_trait_sister_always_lost"
+		textureFile = "gfx/traits/sister_always_lost.png"
+	}
+	spriteType = {
+		name = "GFX_trait_best_brain_and_mind"
+		textureFile = "gfx/traits/best_brain_and_mind.png"
+	}
+	spriteType = {
+		name = "GFX_trait_hotaru_in_april"
+		textureFile = "gfx/traits/hotaru_in_april.png"
+	}
+	spriteType = {
+		name = "GFX_trait_flower_in_may"
+		textureFile = "gfx/traits/flower_in_may.png"
+	}
+	spriteType = {
+		name = "GFX_trait_human_eating_girl"
+		textureFile = "gfx/traits/human_eating_girl.png"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_a_always_lie_to_me"
+		textureFile = "gfx/traits/a_always_lie_to_me.png"
+	}
+	spriteType = {
+		name = "GFX_trait_old_big_sister"
+		textureFile = "gfx/traits/old_big_sister.png"
 	}
 	#爱之结晶
 	spriteType = {
@@ -452,6 +929,116 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_mera_azusa_wedding"
 		texturefile = "gfx/event_pictures/mera_azusa_wedding.png"
+	}
+	spriteType = {                               #荒神小夜 2025.4.3,23:45,伊尔诺
+		name = "GFX_aragami_sayo_wedding"
+		texturefile = "gfx/event_pictures/aragami_sayo_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_roka_wedding"
+		texturefile = "gfx/event_pictures/roka_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_yuki_wedding"
+		texturefile = "gfx/event_pictures/yuki_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_sumi_wedding"
+		texturefile = "gfx/event_pictures/sumi_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_noriko_wedding"
+		texturefile = "gfx/event_pictures/noriko_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_tae_wedding"
+		texturefile = "gfx/event_pictures/tae_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_nicola_wedding"
+		texturefile = "gfx/event_pictures/nicola_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_orie_wedding"
+		texturefile = "gfx/event_pictures/orie_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_tia_wedding"
+		texturefile = "gfx/event_pictures/tia_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_mei_wedding"
+		texturefile = "gfx/event_pictures/mei_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_mahiro_wedding"
+		texturefile = "gfx/event_pictures/mahiro_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_konoka_wedding"
+		texturefile = "gfx/event_pictures/konoka_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_yukari_wedding"
+		texturefile = "gfx/event_pictures/yukari_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_akari_wedding"
+		texturefile = "gfx/event_pictures/akari_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_hinata_wedding"
+		texturefile = "gfx/event_pictures/hinata_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_sena_wedding"
+		texturefile = "gfx/event_pictures/sena_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_shizuru_wedding"
+		texturefile = "gfx/event_pictures/shizuru_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_maya_wedding"
+		texturefile = "gfx/event_pictures/maya_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_ena_wedding"
+		texturefile = "gfx/event_pictures/ena_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_anju_wedding"
+		texturefile = "gfx/event_pictures/anju_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_tsukimi_wedding"
+		texturefile = "gfx/event_pictures/tsukimi_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_ririko_wedding"
+		texturefile = "gfx/event_pictures/ririko_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_miku_wedding"
+		texturefile = "gfx/event_pictures/miku_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_nayuka_wedding"
+		texturefile = "gfx/event_pictures/nayuka_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_luoyi_wedding"
+		texturefile = "gfx/event_pictures/luoyi_wedding.png"
+	}
+	
+
+	spriteType = {        #穗织核爆  2025.4.4,17:06,伊尔诺
+		name = "GFX_nuke_hoori"
+		texturefile = "gfx/event_pictures/news_event_hoori_nuke.dds"
+	}
+	spriteType = {
+		name = "GFX_nuke_washizu"
+		texturefile = "gfx/event_pictures/new_event_washizu_nuke.png"
 	}
 	###芦花小春
 	spriteType = {
@@ -845,6 +1432,10 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_yz_works_equipment_medium"
+		texturefile = "gfx/counters/yz_works_equipment.png"
+	}
 	   
 
 	spriteType = {
@@ -929,5 +1520,22 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_idea_army_yuzusoft_spirit_special_forces"
 		texturefile = "gfx/ideas/special.png"
+	}
+	#统一决议
+	spriteType = {
+		name = "GFX_World_Communism"
+		texturefile = "gfx/decision/World_Communism.png"
+	}
+	spriteType = {
+		name = "GFX_World_fascism"
+		texturefile = "gfx/decision/World_fascism.png"
+	}
+	spriteType = {
+		name = "GFX_World_democratic"
+		texturefile = "gfx/decision/World_democratic.png"
+	}
+	spriteType = {
+		name = "GFX_World_neutrality"
+		texturefile = "gfx/decision/World_neutrality.png"
 	}
 }

@@ -1,1978 +1,1162 @@
 YZS_scientist_category = {
-	
-	set_0721_facility = {
-		icon = GFX_decision_generic_research
-		days_remove = 25
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 721
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_721
-		fire_only_once = yes
-		visible = {
-			has_country_flag = set_YRI
-		}
-		modifier = {
-			consumer_goods_factor = 0.1
-			research_speed_factor = -0.05
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -721 }
-		}
-		remove_effect = {
-			add_to_variable = { facility_guimo = 1  tooltip = facility_guimo_tt }
-			set_country_flag = have_set_0721_facility  #设立721所
-			add_dynamic_modifier = {
-				modifier = yz_721_research_facility_dynamic_modifier
-			}
-			force_update_dynamic_modifier = yes
-			add_breakthrough_points = {
-				specialization = all
-				value = 1
-			}
-			
-			random_list = {
-				10 = {
-					random_owned_controlled_state = {
-						limit = {
-							can_construct_building = land_facility
-						}
-						construct_building_in_random_province = {
-							land_facility = 1
-						}
-					}
-				}
-				10 = {
-					random_owned_controlled_state = {
-						limit = {
-							can_construct_building = air_facility
-						}
-						construct_building_in_random_province = {
-							air_facility = 1
-						}
-					}
-				}
-				10 = {
-					random_owned_controlled_state = {
-						limit = {
-							can_construct_building = nuclear_facility
-						}
-						construct_building_in_random_province = {
-							nuclear_facility = 1
-						}
-					}
-				}
-			}
-			
-			
-		}
-	}
+    test_yz_yanjiuyuan_1 = {	###测试用的就放这个决议下面
+        visible = {
+            is_debug = yes
+        }
+        complete_effect = {
+            set_country_flag = research_yz_type90
+        }
+    }
+    test_yz_yanjiuyuan_2 = {	###测试用的就放这个决议下面
+        visible = {
+            is_debug = yes
+        }
+        complete_effect = {
+            root = {
+                country_event = yz_type90_event.1
+                set_technology = {
+                    tech_YZ_type90 = 1
+                }
+                set_technology = {
+                    main_battle_tank_chassis = 1
+                }
+                create_equipment_variant = {
+                    name = "柚子YIWG-90式主战坦克"
+                    type = type90_tank_chassis_1
+                    parent_version = 0
+                    modules = {
+                        main_armament_slot = type90_Rh_120_120mm_gun
+                        turret_type_slot = type90_tank_turret
+                        suspension_type_slot = type90_hydropneumatic_suspension
+                        armor_type_slot = type90_composite_armor
+                        engine_type_slot = type90_Mitsubishi_10ZG32WT_engine
+                        special_type_slot_1 = type90_modern_electronic_equipment
+                        special_type_slot_2 = type90_machine_guns
+                        special_type_slot_3 = type90_fire_control_system
+                        special_type_slot_4 = type90_auto_loader
+                    }
+                    upgrades = {
+                        tank_nsb_engine_upgrade = 6
+                        tank_nsb_armor_upgrade = 20
+                    }
+                    icon = "gfx/counters/YZ_TYPE90_ICON.png"
+                    design_team = mio:youzi_tank_design_and_production_Center_organization_0
+                }
+                add_equipment_production = {
+                    equipment = {
+                        type = type90_tank_chassis_1
+                    }
+                    requested_factories = 1
+                    progress = 0
+                    efficiency = 90
+                    amount = 0
+                    industrial_manufacturer = mio:youzi_tank_design_and_production_Center_organization_0
+                    version_name = "柚子YIWG-90式主战坦克"
+                }
+            }
+        }
+    }
+    set_0721_facility = {
+        icon = GFX_decision_generic_research
+        days_remove = 25
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 721
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_721
+        fire_only_once = yes
+        visible = {
+            has_country_flag = set_YRI
+        }
+        modifier = {
+            consumer_goods_factor = 0.1
+            research_speed_factor = -0.05
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -721 }
+        }
+        remove_effect = {
+            add_to_variable = { facility_guimo = 1  tooltip = facility_guimo_tt }
+            set_country_flag = have_set_0721_facility  #设立721所
+            add_dynamic_modifier = {
+                modifier = yz_721_research_facility_dynamic_modifier
+            }
+            force_update_dynamic_modifier = yes
+            add_breakthrough_points = {
+                specialization = all
+                value = 1
+            }
 
-	add_to_research_money = {
-		icon = GFX_research_up
-		days_remove = 30
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		available = {
-			has_country_flag = used_mayu
-			check_variable = {
-				var = facility_guimo
-				value = 9
-				compare = less_than_or_equals
-			}
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-		}
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = facility_guimo
-						value = 10
-						compare = greater_than_or_equals
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = facility_guimo_max_tt
-				} 
-			}
-			add_to_variable = { facility_guimo = 1  tooltip = facility_guimo_tt }
-			custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-			add_to_variable = { yz_721_research_research_speed_factor = 0.05  tooltip = research_speed_factor_tt }
-			add_to_variable = { yz_721_research_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
-		}
-	}
-
-	subtain_to_research_money = {
-		icon = GFX_research_down
-		days_remove = 0
-		cost = 5
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		available = {
-			has_country_flag = used_mayu
-			check_variable = {
-				var = facility_guimo
-				value = 2
-				compare = greater_than_or_equals
-			}
-			
-			
-		}
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = facility_guimo
-						value = 1
-						compare = less_than_or_equals
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = facility_guimo_min_tt
-				} 
-			}
-			add_to_variable = { facility_guimo = -1  tooltip = facility_guimo_tt_1 }
-			custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-			add_to_variable = { yz_721_research_research_speed_factor = -0.05  tooltip = research_speed_factor_tt }
-			add_to_variable = { yz_721_research_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
-		}
-	}
-
-	research_0721_detonator = {	#研究起爆器
-		icon = GFX_ningning
-		days_remove = 7
-		fire_only_once = yes
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 200
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_200
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		modifier = {
-			research_speed_factor = -0.1
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -200 }
-		}
-		remove_effect = {
-			add_breakthrough_points = {
-				specialization = specialization_land
-				value = 1
-			}
-			set_country_flag = start_research_0721_detonator
-			custom_effect_tooltip = start_research_0721_detonator_tt
-		}
-	}
-
-	use_mayu = {
-		icon = GFX_Mayu
-		fire_only_once = yes
-		cost = 5
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		available = {
-			has_country_flag = have_Mayu
-		}
-
-		remove_effect = {
-			custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-			add_to_variable = { yz_721_research_research_speed_factor = 0.04  tooltip = research_speed_factor_tt }
-			add_to_variable = { yz_721_research_consumer_goods_factor = 0.01 tooltip = consumer_goods_factor_tt }
-			set_country_flag = used_mayu
-		}
-	}
-	
-	add_to_some_breakthrough = {
-		icon = GFX_decision_category_CHL_nacista_decisions
-		days_remove = 30
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		available = {
-			has_country_flag = used_mayu
-		}
-		modifier = {
-			research_speed_factor = -0.025
-			consumer_goods_factor = 0.025
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -750 }
-		}
-		remove_effect = {
-			custom_override_tooltip = {
-				tooltip = add_to_some_breakthrough_tt
-			}
-			hidden_effect = {
-				country_event = yz_721_scientist_event.1
-			}
-		}
-		
-	}
-
-	add_to_some_facility = {
-		icon = GFX_facility_up
-		days_remove = 90
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 1000
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_1000
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		modifier = {
-			consumer_goods_factor = 0.075
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -1000 }
-		}
-		remove_effect = {
-			custom_override_tooltip = {
-				tooltip = add_to_some_facility_tt
-			}
-			hidden_effect = {
-				country_event = yz_721_scientist_event.2
-			}
-		}
-		
-	}
-
-	tisheng_research_ability = {
-		icon = GFX_decision_gre_paying_ifc_debt
-		days_remove = 90
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		modifier = {
-			consumer_goods_factor = 0.05
-			research_speed_factor = 0.1
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-		}
-	}
-
-	push_research_projects = {
-		icon = GFX_decision_generic_research
-		days_remove = 30
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			has_country_flag = have_set_0721_facility
-		}
-		modifier = {
-			consumer_goods_factor = 0.05
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-		}
-
-		complete_effect = {
-			custom_override_tooltip = {
-				tooltip = push_research_projects_tt
-			}
-			hidden_effect = {
-				country_event = yz_721_scientist_event.3
-			}
-		}
-	}
-
-   ###     ######  ######## ########     ###    ##          ########  ########  ######  ########    ###    ########   ######  ##     ## 
-  ## ##   ##    ##    ##    ##     ##   ## ##   ##          ##     ## ##       ##    ## ##         ## ##   ##     ## ##    ## ##     ## 
- ##   ##  ##          ##    ##     ##  ##   ##  ##          ##     ## ##       ##       ##        ##   ##  ##     ## ##       ##     ## 
-##     ##  ######     ##    ########  ##     ## ##          ########  ######    ######  ######   ##     ## ########  ##       ######### 
-#########       ##    ##    ##   ##   ######### ##          ##   ##   ##             ## ##       ######### ##   ##   ##       ##     ## 
-##     ## ##    ##    ##    ##    ##  ##     ## ##          ##    ##  ##       ##    ## ##       ##     ## ##    ##  ##    ## ##     ## 
-##     ##  ######     ##    ##     ## ##     ## ########    ##     ## ########  ######  ######## ##     ## ##     ##  ######  ##     ## 
-
-	set_astral_research_academy = {
-		icon = GFX_Mayu
-		fire_only_once = yes
-		visible = {
-			has_country_flag = set_YRI
-			OR = {
-				has_country_flag = have_Mayu
-				has_country_flag = have_0nai
-			}
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			has_country_flag = used_mayu
-		}
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			set_country_flag = has_astral_research_academy
-		}
-	}
-	add_astral_research_fund = {
-		icon = GFX_Mayu
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 200
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_200
-		visible = {
-			has_country_flag = has_astral_research_academy
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			has_country_flag = has_astral_research_academy
-			not = { has_country_flag = yz_bad_end }
-		}
-		days_remove = 15
-		modifier = {
-			civilian_factory_use = 5
-			research_speed_factor = 0.15
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -200 }
-		}
-		remove_effect = {
-			add_to_variable = { 
-				astral_breakthrough_point_total = 1 
-				tooltip = add_astral_breakthrough_point_tt
-			}
-		}
-		
-	}
-	debug_anxunsizhili = {
-		visible = {
-			is_debug = yes
-		}
-		complete_effect = {
-			add_to_variable = { astral_breakthrough_point = 1000 }
-			add_to_variable = { astral_breakthrough_point_total = 1000 }
-		}
-	}
-	nanami_use_point = {
-		icon = GFX_qihai
-		visible = {
-			NOT = {
-				any_army_leader = {
-					has_trait = maid_qihai_trait
-					has_trait = maid_astral_boost3
-				}
-			}
-			has_country_flag = have_nanami
-		}
-		available = {
-			check_variable = { 
-				astral_breakthrough_point_total > 0
-				tooltip = astral_breakthrough_point_more_than_tt
-			}
-		}
-		days_remove = 7
-		complete_effect = {
-			subtract_from_variable = { astral_breakthrough_point_total = 1 tooltip = subtract_astral_breakthrough_point_tt }
-		}
-		remove_effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost1
-						}
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_qihai_trait
-					}
-					add_unit_leader_trait = maid_astral_boost1	
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_qihai_trait
-					}
-					add_unit_leader_trait = maid_astral_boost2	
-					remove_unit_leader_trait = maid_astral_boost1
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_qihai_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_qihai_trait
-					}
-					remove_unit_leader_trait = maid_astral_boost2
-					add_unit_leader_trait = maid_astral_boost3	
-				}
-			}
-		}
-	}
-	mayu_use_point = {
-		icon = GFX_Mayu
-		visible = {
-			NOT = {
-				any_army_leader = {
-					has_trait = maid_Mayu_trait
-					has_trait = maid_astral_boost3
-				}
-			}
-			any_army_leader = {
-				has_trait = maid_Mayu_trait
-			}
-		}
-		available = {
-			check_variable = { 
-				astral_breakthrough_point_total > 0
-				tooltip = astral_breakthrough_point_more_than_tt
-			}
-		}
-		days_remove = 7
-		complete_effect = {
-			subtract_from_variable = { astral_breakthrough_point_total = 1 tooltip = subtract_astral_breakthrough_point_tt }
-		}
-		remove_effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost1
-						}
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_Mayu_trait
-					}
-					add_unit_leader_trait = maid_astral_boost1	
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_Mayu_trait
-					}
-					add_unit_leader_trait = maid_astral_boost2	
-					remove_unit_leader_trait = maid_astral_boost1
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_Mayu_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_Mayu_trait
-					}
-					add_unit_leader_trait = maid_astral_boost3	
-					remove_unit_leader_trait = maid_astral_boost2
-				}
-			}
-		}
-	}
-	hazuki_use_point = {
-		icon = GFX_yuyuan
-		visible = {
-			NOT = {
-				any_army_leader = {
-					has_trait = maid_hazuki_trait
-					has_trait = maid_astral_boost3
-				}
-			}
-			any_army_leader = {
-				has_trait = maid_hazuki_trait
-			}
-		}
-		available = {
-			check_variable = { 
-				astral_breakthrough_point_total > 0
-				tooltip = astral_breakthrough_point_more_than_tt
-			}
-		}
-		days_remove = 7
-		complete_effect = {
-			subtract_from_variable = { astral_breakthrough_point_total = -1 tooltip = subtract_astral_breakthrough_point_tt }
-		}
-		remove_effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost1
-						}
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_hazuki_trait
-					}
-					add_unit_leader_trait = maid_astral_boost1	
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_hazuki_trait
-					}
-					add_unit_leader_trait = maid_astral_boost2	
-					remove_unit_leader_trait = maid_astral_boost1
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_hazuki_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_hazuki_trait
-					}
-					add_unit_leader_trait = maid_astral_boost3	
-					remove_unit_leader_trait = maid_astral_boost2
-				}
-			}
-		}
-	}
-	kotori_use_point = {
-		icon = GFX_kotori
-		visible = {
-			NOT = {
-				any_army_leader = {
-					has_trait = maid_kotori_trait
-					has_trait = maid_astral_boost3
-				}
-			}
-			any_army_leader = {
-				has_trait = maid_kotori_trait
-			}
-		}
-		available = {
-			check_variable = { 
-				astral_breakthrough_point_total > 0
-				tooltip = astral_breakthrough_point_more_than_tt
-			}
-		}
-		complete_effect = {
-			subtract_from_variable = { astral_breakthrough_point_total = -1 tooltip = subtract_astral_breakthrough_point_tt }
-		}
-		days_remove = 7
-		remove_effect = {
-			if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost1
-						}
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_kotori_trait
-					}
-					add_unit_leader_trait = maid_astral_boost1	
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost2
-						}
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_kotori_trait
-					}
-					add_unit_leader_trait = maid_astral_boost2	
-					remove_unit_leader_trait = maid_astral_boost1
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						any_army_leader = {
-							has_trait = maid_kotori_trait
-							has_trait = maid_astral_boost3
-						}
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_kotori_trait
-					}
-					add_unit_leader_trait = maid_astral_boost3	
-					remove_unit_leader_trait = maid_astral_boost2
-				}
-			}
-		}
-	}
-	kotori_air_department = {
-		icon = GFX_kotori
-		fire_only_once = yes
-		days_remove = 30
-		visible = {
-			has_country_flag = have_kotori	
-		}
-		available = {
-			industrial_complex > 4
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_doctrine_cost_factor = -0.05}
-			add_to_variable = {youzu_air_experience_gain_air = 0.2}
-			add_to_variable = {youzu_experience_gain_air_factor = 0.05}
-			add_to_variable = {youzu_air_mission_xp_gain_factor = 0.05}
-			set_country_flag = have_air_department
-		}
-		
-	}
-	kotori_wind_tunnel_1 = {
-		icon = GFX_kotori
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = have_air_department
-				
-		}
-		available = {
-			industrial_complex > 4
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_doctrine_cost_factor = -0.05}
-			add_to_variable = {youzu_air_experience_gain_air = 0.1}
-			add_to_variable = {youzu_experience_gain_air_factor = 0.05}
-			add_to_variable = {youzu_air_agility_factor = 0.05}
-			add_to_variable = {youzu_air_speed_factor = 0.1}
-			add_to_variable = {youzu_air_defence_factor = 0.05}
-			set_country_flag = kotori_research_1
-		}
-	}
-	kotori_wind_tunnel_2 = {
-		icon = GFX_kotori
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = kotori_research_1
-				
-		}
-		available = {
-			industrial_complex > 4
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_experience_gain_air = 0.1}
-			add_to_variable = {youzu_experience_gain_air_factor = 0.05}
-			add_to_variable = {youzu_air_agility_factor = 0.05}
-			add_to_variable = {youzu_air_range_factor = 0.05}
-			add_to_variable = {youzu_air_defence_factor = 0.05}
-			add_to_variable = {youzu_air_speed_factor = 0.1}
-			set_country_flag = kotori_research_2
-		}
-	}
-	kotori_wind_tunnel_3 = {
-		icon = GFX_kotori
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = kotori_research_2
-				
-		}
-		available = {
-			industrial_complex > 4
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_experience_gain_air = 0.1}
-			add_to_variable = {youzu_experience_gain_air_factor = 0.1}
-			add_to_variable = {youzu_air_agility_factor = 0.1}
-			add_to_variable = {youzu_air_range_factor = 0.1}
-			add_to_variable = {youzu_air_defence_factor = 0.1}
-			add_to_variable = {youzu_air_speed_factor = 0.1}
-			add_to_variable = {youzu_air_attack_factor = 0.1}
-			add_to_variable = {youzu_air_cas_present_factor = 0.1}
-			add_to_variable = {youzu_ground_attack_factor = 0.1}
-			set_country_flag = kotori_research_3
-		}
-	}
-	shirayuki_noa_air_training_1 = {
-		icon = GFX_noa
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = have_air_department
-			has_country_flag = have_noa
-				
-		}
-		available = {
-			industrial_complex > 4
-			has_country_flag = have_air_department
-			has_air_experience > 99.99
-		
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			air_experience = -100
-
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_agility_factor = 0.05}
-			add_to_variable = {youzu_air_cas_present_factor = 0.025}
-			add_to_variable = {youzu_ground_attack_factor = 0.025}
-			set_country_flag = shirayuki_noa_air_1
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = shirayuki_noa_advisor
-                    	name = "白雪乃爱"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Noa.png"
-                            	small = "gfx\leader\Noa2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = air_chief
-							cost = 100
-							idea_token = shirayuki_noa_advisor
-							traits = { trait_sub_shirayuki_noa }
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-			
-		}
-	}
-	shirayuki_noa_air_training_2 = {
-		icon = GFX_noa
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = shirayuki_noa_air_1
-			has_country_flag = have_noa
-				
-		}
-		available = {
-			industrial_complex > 4
-			has_country_flag = shirayuki_noa_air_1
-			has_air_experience > 99.99
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			air_experience = -100
-
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_agility_factor = 0.1}
-			add_to_variable = {youzu_air_cas_present_factor = 0.05}
-			add_to_variable = {youzu_ground_attack_factor = 0.05}
-			add_to_variable = {youzu_air_range_factor = 0.1}
-			set_country_flag = shirayuki_noa_air_2
-		}
-	}
-	shirayuki_noa_air_training_3 = {
-		icon = GFX_noa
-		fire_only_once = yes
-		days_remove = 120 #正式版120
-		visible = {
-			has_country_flag = shirayuki_noa_air_2
-			has_country_flag = have_noa
-				
-		}
-		available = {
-			industrial_complex > 4
-			has_country_flag = shirayuki_noa_air_2
-			has_air_experience > 99.99
-				
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		complete_effect = {
-			air_experience = -100
-
-		}
-		remove_effect = {
-			add_dynamic_modifier = {
-				modifier = youzu_air_dynamic_modifier
-			}
-			add_to_variable = {youzu_air_agility_factor = 0.1}
-			add_to_variable = {youzu_air_cas_present_factor = 0.1}
-			add_to_variable = {youzu_ground_attack_factor = 0.1}
-			add_to_variable = {youzu_air_range_factor = 0.1}
-			add_to_variable = {youzu_army_bonus_air_superiority_factor = 0.1}
-			add_to_variable = {youzu_air_superiority_bonus_in_combat = 0.1}
-			add_to_variable = {youzu_air_strategic_bomber_bombing_factor = 0.3}
-			add_to_variable = {youzu_carrier_capacity_penalty_reduction = -0.6}
-			set_country_flag = shirayuki_noa_air_3
-		}
-	}
-
-########  #######  ##     ## #### ########  ##     ## ######## ##    ## ######## 
-##       ##     ## ##     ##  ##  ##     ## ###   ### ##       ###   ##    ##    
-##       ##     ## ##     ##  ##  ##     ## #### #### ##       ####  ##    ##    
-######   ##     ## ##     ##  ##  ########  ## ### ## ######   ## ## ##    ##    
-##       ##  ## ## ##     ##  ##  ##        ##     ## ##       ##  ####    ##    
-##       ##    ##  ##     ##  ##  ##        ##     ## ##       ##   ###    ##    
-########  ##### ##  #######  #### ##        ##     ## ######## ##    ##    ##    
-
-	get_yz_medium_tank_artillery_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = basic_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_artillery_2 }
-		}
-		available = {
-			has_tech = basic_medium_tank_chassis
-			has_tech = artillery1
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_artillery_1
-			}
-			create_equipment_variant = {
-				name = "静流自行火炮式——六麓分局"
-				type = medium_tank_artillery_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_medium_howitzer
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = YZ_0721_detonator_module
-
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 3
-					tank_nsb_armor_upgrade = 2
-				}
-				icon = "gfx/interface/technologies/USA_basic_heavy_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_artillery_1
-			}
-			custom_effect_tooltip = yz_medium_tank_artillery_1_tt
-			set_country_flag = yz_medium_tank_artillery_1
-		}
-	}
-	get_yz_medium_tank_artillery_equipment_2 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = improved_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_artillery_3 }
-		}
-		available = {
-			has_tech = artillery2
-			has_tech = improved_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_artillery_2
-			}
-			create_equipment_variant = {
-				name = "灯里自行火炮式——六麓分局"
-				type = medium_tank_artillery_chassis_2
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_medium_howitzer_2
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 5
-					tank_nsb_armor_upgrade = 4
-				}
-				icon = "gfx/interface/technologies/GER_super_heavy_art.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_artillery_2
-			}
-			custom_effect_tooltip = yz_medium_tank_artillery_2_tt
-			set_country_flag = yz_medium_tank_artillery_2
-			#add_equipment_production = {
-			#	equipment = {
-			#		type = medium_tank_artillery_chassis_2
-			#	}
-			#	requested_factories = 1
-			#	progress = 0
-			#	efficiency = 90
-			#	amount = 0
-			#	industrial_manufacturer = mio:youzi_tank_design_and_production_Center_organization_0
-			#	version_name = "柚子兵器工业集团 - SU122"
-			#}
-		}
-	}
-	get_yz_medium_tank_artillery_equipment_3 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = advanced_medium_tank_chassis
-		}
-		available = {
-			has_tech = artillery3
-			has_tech = advanced_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_artillery_3
-			}
-			create_equipment_variant = {
-				name = "濑奈自行火炮式——六麓分局"
-				type = medium_tank_artillery_chassis_3
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_heavy_howitzer
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 8
-					tank_nsb_armor_upgrade = 7
-				}
-				icon = "gfx/interface/technologies/GER_modern_td.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_artillery_3
-			}
-			custom_effect_tooltip = yz_medium_tank_artillery_3_tt
-			set_country_flag = yz_medium_tank_artillery_3
-		}
-	}
-
-	get_yz_medium_tank_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = basic_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_2 }
-		}
-		available = {
-			has_tech = antitank1
-			has_tech = basic_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_1
-			}
-			create_equipment_variant = {
-				name = "梓式中型坦克——阴阳分局"
-				type = medium_tank_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_medium_cannon
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 3
-					tank_nsb_armor_upgrade = 2
-				}
-				icon = "gfx/interface/technologies/USA_imp_main_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_1
-			}
-			custom_effect_tooltip = yz_medium_tank_1_tt
-			set_country_flag = yz_medium_tank_1
-		}
-	}
-	get_yz_medium_tank_equipment_2 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = improved_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_3 }
-		}
-		available = {
-			has_tech = antitank3
-			has_tech = improved_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_2
-			}
-			create_equipment_variant = {
-				name = "艾莉娜式中型坦克——阴阳分局"
-				type = medium_tank_chassis_2
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_medium_cannon_2
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 5
-					tank_nsb_armor_upgrade = 4
-				}
-				icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_2
-			}
-			custom_effect_tooltip = yz_medium_tank_2_tt
-			set_country_flag = yz_medium_tank_2
-		}
-	}
-	get_yz_medium_tank_equipment_3 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = advanced_medium_tank_chassis
-		}
-		available = {
-			has_tech = antitank3
-			has_tech = advanced_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_3
-			}
-			create_equipment_variant = {
-				name = "尼古拉式中型坦克——阴阳分局"
-				type = medium_tank_chassis_3
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_high_velocity_cannon_2
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 8
-					tank_nsb_armor_upgrade = 7
-				}
-				icon = "gfx/interface/technologies/GER_main_battle_tank_2.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_3
-			}
-			custom_effect_tooltip = yz_medium_tank_3_tt
-			set_country_flag = yz_medium_tank_3
-		}
-	}
-	get_yz_modern_tank_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = main_battle_tank_chassis
-		}
-		available = {
-			has_tech = artillery4
-			has_tech = main_battle_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_modern_tank
-			}
-			create_equipment_variant = {
-				name = "丛雨丸自卫现代坦克——穗织分局"
-				type = modern_tank_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_heavy_cannon_3
-					turret_type_slot = tank_modern_tank_turret
-					suspension_type_slot = tank_torsion_bar_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 8
-					tank_nsb_armor_upgrade = 14
-				}
-				icon = "gfx/interface/technologies/SOV_adv_main_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_modern_tank
-			}
-			custom_effect_tooltip = yz_modern_tank_tt
-		}
-	}
-	get_yz_medium_aa_tank_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = basic_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_aa_2 }
-		}
-		available = {
-			has_tech = antiair1
-			has_tech = basic_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_aa_1
-			}
-			create_equipment_variant = {
-				name = "爱莉式自行防空炮-莱泽鲁格分局"
-				type = medium_tank_aa_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_anti_air_cannon
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 3
-					tank_nsb_armor_upgrade = 2
-				}
-				icon = "gfx/interface/technologies/FIN_basic_medium_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_aa_1
-			}
-			custom_effect_tooltip = yz_medium_tank_aa_1_tt
-			set_country_flag = yz_medium_tank_aa_1
-		}
-	}
-	get_yz_medium_aa_tank_equipment_2 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = improved_medium_tank_chassis
-			not = { has_country_flag = yz_medium_tank_aa_3 }
-		}
-		available = {
-			has_tech = antiair2
-			has_tech = improved_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_aa_2
-			}
-			create_equipment_variant = {
-				name = "夏莉式自行防空炮-莱泽鲁格分局"
-				type = medium_tank_aa_chassis_2
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_anti_air_cannon_2
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 5
-					tank_nsb_armor_upgrade = 4
-				}
-				icon = "gfx/interface/technologies/FRA_adv_light_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_aa_2
-			}
-			custom_effect_tooltip = yz_medium_tank_aa_2_tt
-			set_country_flag = yz_medium_tank_aa_2
-		}
-	}
-	get_yz_medium_aa_tank_equipment_3 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = advanced_medium_tank_chassis
-		}
-		available = {
-			has_tech = antiair1
-			has_tech = advanced_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_aa_3
-			}
-			create_equipment_variant = {
-				name = "真咲式自行防空炮-莱泽鲁格分局"
-				type = medium_tank_aa_chassis_3
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_anti_air_cannon_3
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_christie_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = sloped_armor
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 8
-					tank_nsb_armor_upgrade = 7
-				}
-				icon = "gfx/interface/technologies/JAP_adv_main_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_aa_3
-			}
-			custom_effect_tooltip = yz_medium_tank_aa_3_tt
-			set_country_flag = yz_medium_tank_aa_3
-		}
-	}
-	get_yz_medium_destroyer_tank_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = basic_medium_tank_chassis
-		}
-		available = {
-			has_tech = antitank2
-			has_tech = basic_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_destroyer_1
-			}
-			create_equipment_variant = {
-				name = "AST—Mitsukasa-橘花分局"
-				type = medium_tank_destroyer_chassis_1
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_heavy_cannon_2
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot =  tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_1
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = extra_ammo_storage 
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 1
-					tank_nsb_armor_upgrade = 2
-				}
-				icon = "gfx/interface/technologies/ITA_basic_main_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_destroyer_1
-			}
-			custom_effect_tooltip = yz_medium_tank_destroyer_1_tt
-			set_country_flag = yz_medium_tank_destroyer_1
-		}
-	}
-	get_yz_medium_destroyer_tank_equipment_2 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = improved_medium_tank_chassis
-		}
-		available = {
-			has_tech = antitank5
-			has_tech = improved_medium_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_medium_tank_destroyer_2
-			}
-			create_equipment_variant = {
-				name = "AST-ISU-Ayasegradets-橘花分局"
-				type = medium_tank_destroyer_chassis_2
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_high_velocity_cannon_3
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					suspension_type_slot =  tank_torsion_bar_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module 
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 1
-					tank_nsb_armor_upgrade = 2
-				}
-				icon = "gfx/interface/technologies/FIN_imp_medium_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_medium_tank_destroyer_2
-			}
-			custom_effect_tooltip = yz_medium_tank_destroyer_2_tt
-			set_country_flag = yz_medium_tank_destroyer_2
-		}
-	}
-	get_yz_heavy_tank_equipment_1 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = improved_heavy_tank_chassis
-		}
-		available = {
-			has_tech = antitank2
-			has_tech = improved_heavy_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_heavy_tank_1
-			}
-			create_equipment_variant = {
-				name = "茉子の苦无重型坦克-穗织分局"
-				type = heavy_tank_chassis_2
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_heavy_cannon_2
-					turret_type_slot = tank_heavy_three_man_tank_turret
-					suspension_type_slot =  tank_torsion_bar_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module 
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 6
-					tank_nsb_armor_upgrade = 12
-				}
-				icon = "gfx/interface/technologies/SOV_imp_heavy_spart.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_heavy_tank_1
-			}
-			custom_effect_tooltip = yz_heavy_tank_1_tt
-			set_country_flag = yz_heavy_tank_1
-		}
-	}
-	get_yz_heavy_tank_equipment_2 = {
-		icon = GFX_decision_generic_tank
-		days_remove = 15  ###
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_750
-		visible = {
-			has_country_flag = set_YRI
-			has_tech = advanced_heavy_tank_chassis
-		}
-		available = {
-			has_tech = antitank5
-			has_tech = improved_heavy_tank_chassis
-			has_country_flag = yz_mio_5
-			has_country_flag = has_YZ_0721_detonator_tech
-		}
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -750
-			}
-		}
-		modifier = {
-			research_speed_factor = -0.05
-		}
-		remove_effect = {
-			hidden_effect = {
-				add_ideas = yz_heavy_tank_2
-			}
-			create_equipment_variant = {
-				name = "芳乃の鉾铃重型坦克-穗织分局"
-				type = heavy_tank_chassis_3
-				parent_version = 0
-				modules = {
-					main_armament_slot = tank_heavy_cannon_3
-					turret_type_slot = tank_heavy_three_man_tank_turret
-					suspension_type_slot =  tank_torsion_bar_suspension
-					armor_type_slot = tank_riveted_armor 
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = YZ_0721_detonator_module
-					special_type_slot_3 = YZ_0721_detonator_module 
-					special_type_slot_4 = easy_maintenance
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 6
-					tank_nsb_armor_upgrade = 20
-				}
-				icon = "gfx/interface/technologies/ger_adv_heavy_tank.dds"
-				design_team = mio:youzi_tank_design_and_production_Center_organization_0
-			}
-			hidden_effect = {
-				remove_ideas = yz_heavy_tank_2
-			}
-			custom_effect_tooltip = yz_heavy_tank_2_tt
-			set_country_flag = yz_heavy_tank_2
-		}
-	}
+            random_list = {
+                10 = {
+                    random_owned_controlled_state = {
+                        limit = {
+                            can_construct_building = land_facility
+                        }
+                        construct_building_in_random_province = {
+                            land_facility = 1
+                        }
+                    }
+                }
+                10 = {
+                    random_owned_controlled_state = {
+                        limit = {
+                            can_construct_building = air_facility
+                        }
+                        construct_building_in_random_province = {
+                            air_facility = 1
+                        }
+                    }
+                }
+                10 = {
+                    random_owned_controlled_state = {
+                        limit = {
+                            can_construct_building = nuclear_facility
+                        }
+                        construct_building_in_random_province = {
+                            nuclear_facility = 1
+                        }
+                    }
+                }
+            }
 
 
-	atri_ic = {
-		icon = GFX_ATRI_1
-		fire_only_once = yes
-		days_remove = 60
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 1000
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_1000
+        }
+    }
 
-		visible = {
-			has_country_flag = have_ATRI
-		}
-		available = {
-			check_variable = { 
-				love_depth > 100
-				tooltip = love_depth_tooltip_compare
-			}
-			has_country_flag = yz_mio_1
-			has_country_flag = yz_mio_5
-			has_tech = improved_computing_machine
-			has_tech = advanced_machine_tools
-		}
+    add_to_research_money = {
+        icon = GFX_research_up
+        days_remove = 30
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        available = {
+            has_country_flag = used_mayu
+            check_variable = {
+                var = facility_guimo
+                value = 9
+                compare = less_than_or_equals
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        var = facility_guimo
+                        value = 10
+                        compare = greater_than_or_equals
+                    }
+                }
+                custom_override_tooltip = {
+                    tooltip = facility_guimo_max_tt
+                }
+            }
+            add_to_variable = { facility_guimo = 1  tooltip = facility_guimo_tt }
+            custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
+            add_to_variable = { yz_721_research_research_speed_factor = 0.05  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
+        }
+    }
 
-		modifier = {
-			research_speed_factor = -0.5
-			political_power_gain = -0.1
-			civilian_factory_use = 10
-		}
+    subtain_to_research_money = {
+        icon = GFX_research_down
+        days_remove = 0
+        cost = 5
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        available = {
+            has_country_flag = used_mayu
+            check_variable = {
+                var = facility_guimo
+                value = 2
+                compare = greater_than_or_equals
+            }
 
-		remove_effect = {
-			set_technology = {
-				tech_ATRI_equipment_1 = 1 
-			}
-		}
-	}
-	
-	ATRI_get = {		#亚托利
-		icon = GFX_ATRI_1
-		fire_only_once = yes
-		days_remove = 30
-		cost = 300
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 5000
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_5000
 
-		visible = {
-			has_country_flag = set_YRI
-			
-		}
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        var = facility_guimo
+                        value = 1
+                        compare = less_than_or_equals
+                    }
+                }
+                custom_override_tooltip = {
+                    tooltip = facility_guimo_min_tt
+                }
+            }
+            add_to_variable = { facility_guimo = -1  tooltip = facility_guimo_tt_1 }
+            custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
+            add_to_variable = { yz_721_research_research_speed_factor = -0.05  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+        }
+    }
 
-		available = {
-			has_army_experience > 99.99
-			has_tech = radio
-			has_tech = computing_machine
-			has_tech = improved_machine_tools
-		}
+    research_0721_detonator = {	#研究起爆器
+        icon = GFX_ningning
+        days_remove = 7
+        fire_only_once = yes
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 200
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_200
+        visible = {
+            has_country_flag = have_set_0721_facility
+            has_country_flag = qiyong_youzi_2
+        }
+        modifier = {
+            research_speed_factor = -0.1
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -200 }
+        }
+        remove_effect = {
+            add_breakthrough_points = {
+                specialization = specialization_land
+                value = 1
+            }
+            set_country_flag = start_research_0721_detonator
+            custom_effect_tooltip = start_research_0721_detonator_tt
+        }
+    }
 
-		modifier = {
-			research_speed_factor = -1
-			political_power_gain = -0.25
-			consumer_goods_factor = 0.25
-			civilian_factory_use = 30
-			industrial_capacity_factory = -0.1 
-		}
+    use_mayu = {
+        icon = GFX_Mayu
+        fire_only_once = yes
+        cost = 5
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        available = {
+            has_country_flag = have_Mayu
+        }
 
-		complete_effect = {
-			add_to_variable = {
-				yz_money = -5000
-				tooltip = yz_money_tooltip_subtain
-			}
-			army_experience = -100
-			custom_effect_tooltip = ATRI_warn
-			meta_effect = {
+        remove_effect = {
+            custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
+            add_to_variable = { yz_721_research_research_speed_factor = 0.04  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_consumer_goods_factor = 0.01 tooltip = consumer_goods_factor_tt }
+            set_country_flag = used_mayu
+        }
+    }
+
+    add_to_some_breakthrough = {
+        icon = GFX_decision_category_CHL_nacista_decisions
+        days_remove = 30
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        available = {
+            has_country_flag = used_mayu
+        }
+        modifier = {
+            research_speed_factor = -0.025
+            consumer_goods_factor = 0.025
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -750 }
+        }
+        remove_effect = {
+            custom_override_tooltip = {
+                tooltip = add_to_some_breakthrough_tt
+            }
+            hidden_effect = {
+                country_event = yz_721_scientist_event.1
+            }
+        }
+
+    }
+
+    add_to_some_facility = {
+        icon = GFX_facility_up
+        days_remove = 90
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 1000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_1000
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        modifier = {
+            consumer_goods_factor = 0.075
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -1000 }
+        }
+        remove_effect = {
+            custom_override_tooltip = {
+                tooltip = add_to_some_facility_tt
+            }
+            hidden_effect = {
+                country_event = yz_721_scientist_event.2
+            }
+        }
+
+    }
+
+    tisheng_research_ability = {
+        icon = GFX_decision_gre_paying_ifc_debt
+        days_remove = 90
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        modifier = {
+            consumer_goods_factor = 0.05
+            research_speed_factor = 0.1
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+        }
+    }
+
+    push_research_projects = {
+        icon = GFX_decision_generic_research
+        days_remove = 30
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            has_country_flag = have_set_0721_facility
+        }
+        modifier = {
+            consumer_goods_factor = 0.05
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+        }
+
+        complete_effect = {
+            custom_override_tooltip = {
+                tooltip = push_research_projects_tt
+            }
+            hidden_effect = {
+                country_event = yz_721_scientist_event.3
+            }
+        }
+    }
+
+    ###     ######  ######## ########     ###    ##          ########  ########  ######  ########    ###    ########   ######  ##     ##
+    ## ##   ##    ##    ##    ##     ##   ## ##   ##          ##     ## ##       ##    ## ##         ## ##   ##     ## ##    ## ##     ##
+    ##   ##  ##          ##    ##     ##  ##   ##  ##          ##     ## ##       ##       ##        ##   ##  ##     ## ##       ##     ##
+    ##     ##  ######     ##    ########  ##     ## ##          ########  ######    ######  ######   ##     ## ########  ##       #########
+    #########       ##    ##    ##   ##   ######### ##          ##   ##   ##             ## ##       ######### ##   ##   ##       ##     ##
+    ##     ## ##    ##    ##    ##    ##  ##     ## ##          ##    ##  ##       ##    ## ##       ##     ## ##    ##  ##    ## ##     ##
+    ##     ##  ######     ##    ##     ## ##     ## ########    ##     ## ########  ######  ######## ##     ## ##     ##  ######  ##     ##
+
+    set_astral_research_academy = {
+        icon = GFX_Mayu
+        fire_only_once = yes
+        visible = {
+            has_country_flag = set_YRI
+            OR = {
+                has_country_flag = have_Mayu
+                has_country_flag = have_0nai
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            has_country_flag = used_mayu
+        }
+        days_remove = 30
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            set_country_flag = has_astral_research_academy
+        }
+    }
+    YZ_yanjiusuo_close = {
+        priority = 1000
+        visible = {
+            has_country_flag = set_YRI
+            has_country_flag = YZS_scientist_category_show
+        }
+        complete_effect = {
+            clr_country_flag = YZS_scientist_category_show
+        }
+    }
+    add_astral_research_fund = {
+        icon = GFX_Mayu
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 200
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_200
+        visible = {
+            has_country_flag = has_astral_research_academy
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            has_country_flag = has_astral_research_academy
+            not = { has_country_flag = yz_bad_end }
+        }
+        days_remove = 15
+        modifier = {
+            civilian_factory_use = 5
+            research_speed_factor = 0.15
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -200 }
+        }
+        remove_effect = {
+            add_to_variable = {
+                astral_breakthrough_point_total = 1
+                tooltip = add_astral_breakthrough_point_tt
+            }
+        }
+
+    }
+    debug_anxunsizhili = {
+        visible = {
+            is_debug = yes
+        }
+        complete_effect = {
+            add_to_variable = { astral_breakthrough_point = 1000 }
+            add_to_variable = { astral_breakthrough_point_total = 1000 }
+        }
+    }
+    nanami_use_point = {
+        icon = GFX_qihai
+        visible = {
+            NOT = {
+                any_army_leader = {
+                    has_trait = maid_qihai_trait
+                    has_trait = maid_astral_boost3
+                }
+            }
+            has_country_flag = have_nanami
+        }
+        available = {
+            check_variable = {
+                astral_breakthrough_point_total > 0
+                tooltip = astral_breakthrough_point_more_than_tt
+            }
+        }
+        days_remove = 7
+        complete_effect = {
+            subtract_from_variable = { astral_breakthrough_point_total = 1 tooltip = subtract_astral_breakthrough_point_tt }
+        }
+        remove_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost1
+                        }
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_qihai_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_qihai_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost2
+                    remove_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_qihai_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_qihai_trait
+                    }
+                    remove_unit_leader_trait = maid_astral_boost2
+                    add_unit_leader_trait = maid_astral_boost3
+                }
+            }
+        }
+    }
+    mayu_use_point = {
+        icon = GFX_Mayu
+        visible = {
+            NOT = {
+                any_army_leader = {
+                    has_trait = maid_Mayu_trait
+                    has_trait = maid_astral_boost3
+                }
+            }
+            any_army_leader = {
+                has_trait = maid_Mayu_trait
+            }
+        }
+        available = {
+            check_variable = {
+                astral_breakthrough_point_total > 0
+                tooltip = astral_breakthrough_point_more_than_tt
+            }
+        }
+        days_remove = 7
+        complete_effect = {
+            subtract_from_variable = { astral_breakthrough_point_total = 1 tooltip = subtract_astral_breakthrough_point_tt }
+        }
+        remove_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost1
+                        }
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_Mayu_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_Mayu_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost2
+                    remove_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_Mayu_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_Mayu_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost3
+                    remove_unit_leader_trait = maid_astral_boost2
+                }
+            }
+        }
+    }
+    hazuki_use_point = {
+        icon = GFX_yuyuan
+        visible = {
+            NOT = {
+                any_army_leader = {
+                    has_trait = maid_hazuki_trait
+                    has_trait = maid_astral_boost3
+                }
+            }
+            any_army_leader = {
+                has_trait = maid_hazuki_trait
+            }
+        }
+        available = {
+            check_variable = {
+                astral_breakthrough_point_total > 0
+                tooltip = astral_breakthrough_point_more_than_tt
+            }
+        }
+        days_remove = 7
+        complete_effect = {
+            subtract_from_variable = { astral_breakthrough_point_total = -1 tooltip = subtract_astral_breakthrough_point_tt }
+        }
+        remove_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost1
+                        }
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_hazuki_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_hazuki_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost2
+                    remove_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_hazuki_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_hazuki_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost3
+                    remove_unit_leader_trait = maid_astral_boost2
+                }
+            }
+        }
+    }
+    kotori_use_point = {
+        icon = GFX_kotori
+        visible = {
+            NOT = {
+                any_army_leader = {
+                    has_trait = maid_kotori_trait
+                    has_trait = maid_astral_boost3
+                }
+            }
+            any_army_leader = {
+                has_trait = maid_kotori_trait
+            }
+        }
+        available = {
+            check_variable = {
+                astral_breakthrough_point_total > 0
+                tooltip = astral_breakthrough_point_more_than_tt
+            }
+        }
+        complete_effect = {
+            subtract_from_variable = {
+                astral_breakthrough_point_total = 1
+                tooltip = subtract_astral_breakthrough_point_tt
+            }
+        }
+        days_remove = 7
+        remove_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost1
+                        }
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_kotori_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost2
+                        }
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_kotori_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost2
+                    remove_unit_leader_trait = maid_astral_boost1
+                }
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        any_army_leader = {
+                            has_trait = maid_kotori_trait
+                            has_trait = maid_astral_boost3
+                        }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_kotori_trait
+                    }
+                    add_unit_leader_trait = maid_astral_boost3
+                    remove_unit_leader_trait = maid_astral_boost2
+                }
+            }
+        }
+    }
+    kotori_air_department = {
+        icon = GFX_kotori
+        fire_only_once = yes
+        days_remove = 30
+        visible = {
+            has_country_flag = have_kotori
+        }
+        available = {
+            industrial_complex > 4
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_doctrine_cost_factor = -0.05}
+            add_to_variable = {youzu_air_experience_gain_air = 0.2}
+            add_to_variable = {youzu_experience_gain_air_factor = 0.05}
+            add_to_variable = {youzu_air_mission_xp_gain_factor = 0.05}
+            set_country_flag = have_air_department
+        }
+
+    }
+    kotori_wind_tunnel_1 = {
+        icon = GFX_kotori
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = have_air_department
+
+        }
+        available = {
+            industrial_complex > 4
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_doctrine_cost_factor = -0.05}
+            add_to_variable = {youzu_air_experience_gain_air = 0.1}
+            add_to_variable = {youzu_experience_gain_air_factor = 0.05}
+            add_to_variable = {youzu_air_agility_factor = 0.05}
+            add_to_variable = {youzu_air_speed_factor = 0.1}
+            add_to_variable = {youzu_air_defence_factor = 0.05}
+            set_country_flag = kotori_research_1
+        }
+    }
+    kotori_wind_tunnel_2 = {
+        icon = GFX_kotori
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = kotori_research_1
+
+        }
+        available = {
+            industrial_complex > 4
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_experience_gain_air = 0.1}
+            add_to_variable = {youzu_experience_gain_air_factor = 0.05}
+            add_to_variable = {youzu_air_agility_factor = 0.05}
+            add_to_variable = {youzu_air_range_factor = 0.05}
+            add_to_variable = {youzu_air_defence_factor = 0.05}
+            add_to_variable = {youzu_air_speed_factor = 0.1}
+            set_country_flag = kotori_research_2
+        }
+    }
+    kotori_wind_tunnel_3 = {
+        icon = GFX_kotori
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = kotori_research_2
+
+        }
+        available = {
+            industrial_complex > 4
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_experience_gain_air = 0.1}
+            add_to_variable = {youzu_experience_gain_air_factor = 0.1}
+            add_to_variable = {youzu_air_agility_factor = 0.1}
+            add_to_variable = {youzu_air_range_factor = 0.1}
+            add_to_variable = {youzu_air_defence_factor = 0.1}
+            add_to_variable = {youzu_air_speed_factor = 0.1}
+            add_to_variable = {youzu_air_attack_factor = 0.1}
+            add_to_variable = {youzu_air_cas_present_factor = 0.1}
+            add_to_variable = {youzu_ground_attack_factor = 0.1}
+            set_country_flag = kotori_research_3
+        }
+    }
+    shirayuki_noa_air_training_1 = {
+        icon = GFX_noa
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = have_air_department
+            has_country_flag = have_noa
+
+        }
+        available = {
+            industrial_complex > 4
+            has_country_flag = have_air_department
+            has_air_experience > 99.99
+
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        complete_effect = {
+            air_experience = -100
+
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_agility_factor = 0.05}
+            add_to_variable = {youzu_air_cas_present_factor = 0.025}
+            add_to_variable = {youzu_ground_attack_factor = 0.025}
+            set_country_flag = shirayuki_noa_air_1
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = shirayuki_noa_advisor
+                        name = "白雪乃爱"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Noa.png"
+                                small = "gfx\leader\Noa2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {
+                            slot = air_chief
+                            cost = 100
+                            idea_token = shirayuki_noa_advisor
+                            traits = { trait_sub_shirayuki_noa }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    shirayuki_noa_air_training_2 = {
+        icon = GFX_noa
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = shirayuki_noa_air_1
+            has_country_flag = have_noa
+
+        }
+        available = {
+            industrial_complex > 4
+            has_country_flag = shirayuki_noa_air_1
+            has_air_experience > 99.99
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        complete_effect = {
+            air_experience = -100
+
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_agility_factor = 0.1}
+            add_to_variable = {youzu_air_cas_present_factor = 0.05}
+            add_to_variable = {youzu_ground_attack_factor = 0.05}
+            add_to_variable = {youzu_air_range_factor = 0.1}
+            set_country_flag = shirayuki_noa_air_2
+        }
+    }
+    shirayuki_noa_air_training_3 = {
+        icon = GFX_noa
+        fire_only_once = yes
+        days_remove = 120 #正式版120
+        visible = {
+            has_country_flag = shirayuki_noa_air_2
+            has_country_flag = have_noa
+
+        }
+        available = {
+            industrial_complex > 4
+            has_country_flag = shirayuki_noa_air_2
+            has_air_experience > 99.99
+
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        complete_effect = {
+            air_experience = -100
+
+        }
+        remove_effect = {
+            add_dynamic_modifier = {
+                modifier = youzu_air_dynamic_modifier
+            }
+            add_to_variable = {youzu_air_agility_factor = 0.1}
+            add_to_variable = {youzu_air_cas_present_factor = 0.1}
+            add_to_variable = {youzu_ground_attack_factor = 0.1}
+            add_to_variable = {youzu_air_range_factor = 0.1}
+            add_to_variable = {youzu_army_bonus_air_superiority_factor = 0.1}
+            add_to_variable = {youzu_air_superiority_bonus_in_combat = 0.1}
+            add_to_variable = {youzu_air_strategic_bomber_bombing_factor = 0.3}
+            add_to_variable = {youzu_carrier_capacity_penalty_reduction = -0.6}
+            set_country_flag = shirayuki_noa_air_3
+        }
+    }
+
+    atri_ic = {
+        icon = GFX_ATRI_1
+        fire_only_once = yes
+        days_remove = 60
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 1000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_1000
+
+        visible = {
+            has_country_flag = have_ATRI
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        available = {
+            check_variable = {
+                love_depth > 100
+                tooltip = love_depth_tooltip_compare
+            }
+            has_country_flag = yz_mio_1
+            has_country_flag = yz_mio_5
+            has_tech = improved_computing_machine
+            has_tech = advanced_machine_tools
+        }
+
+        modifier = {
+            research_speed_factor = -0.5
+            political_power_gain = -0.1
+            civilian_factory_use = 10
+        }
+
+        remove_effect = {
+            set_technology = {
+                tech_ATRI_equipment_1 = 1
+            }
+        }
+    }
+
+    ATRI_get = {		#亚托利
+        icon = GFX_ATRI_1
+        fire_only_once = yes
+        days_remove = 30
+        cost = 300
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 5000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_5000
+
+        visible = {
+            has_country_flag = set_YRI
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+
+        available = {
+            has_army_experience > 99.99
+            has_tech = radio
+            has_tech = computing_machine
+            has_tech = improved_machine_tools
+        }
+
+        modifier = {
+            research_speed_factor = -1
+            political_power_gain = -0.25
+            consumer_goods_factor = 0.25
+            civilian_factory_use = 30
+            industrial_capacity_factory = -0.1
+        }
+
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -5000
+                tooltip = yz_money_tooltip_subtain
+            }
+            army_experience = -100
+            custom_effect_tooltip = ATRI_warn
+            meta_effect = {
                 text = {
 
                     generate_character = {
                         token_base = ATRI
                         name = "亚托莉酱"
+                        can_be_captured = no
                         gender = female
                         nationality = JAP
                         portraits = {
@@ -1986,13 +1170,13 @@ YZS_scientist_category = {
                         }
                         corps_commander = {
                             traits = {
-								brilliant_strategist
-								career_officer
-								bearer_of_artillery		
-								infantry_officer
-								cavalry_officer
-								armor_officer
-								ATRI_trait
+                                brilliant_strategist
+                                career_officer
+                                bearer_of_artillery
+                                infantry_officer
+                                cavalry_officer
+                                armor_officer
+                                ATRI_trait
                             }
                             skill = 1
                             attack_skill = 10
@@ -2003,26 +1187,1014 @@ YZS_scientist_category = {
                     }
                 }
             }
-		}
+        }
 
-		remove_effect = {
-			
-			set_country_flag = have_ATRI
-			hidden_effect = {
-				set_technology = {
-					tech_ATRI_equipment_0 = 1
-				}
-			}
+        remove_effect = {
+
+            set_country_flag = have_ATRI
+            hidden_effect = {
+                set_technology = {
+                    tech_ATRI_equipment_0 = 1
+                }
+            }
+            set_technology = {
+                tech_atri_engineer = 1
+
+                tech_atri_recon_icon = 1
+
+            }
+
+
+        }
+    }
+    mayu_and_nene_advanced_atri = {
+		icon = "GFX_ATRI_1"
+		fire_only_once = yes
+		days_remove = 30
+		cost = 10
+		
+		visible = {
+			has_country_flag = have_ATRI
+		}
+		modifier = {
+			consumer_goods_factor = 0.2
+			research_speed_factor = -1
+		}
+		remove_effect = {	
+			set_country_flag = kkr_MIO_1
+			unlock_mio_policy_tooltip = kkr_military_industrial_organization_0
 			set_technology = {
-				tech_atri_engineer = 1
-				
-				tech_atri_recon_icon = 1
-				
+				tech_advenced_ATRI_equipment = 1
 			}
-			
-			
+		} 
+	}
+	give_other_leader_bmi_system = {   #给其他将领上bmi特质——2025.8.6，17：27
+        icon = "GFX_trait_bmi_device"
+        days_remove = 10
+        visible = {
+            has_country_flag = have_set_0721_facility
+            has_country_flag = qiyong_youzi_2
+        }
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 58
+                compare = greater_than_or_equals
+            }
+        }
+		custom_cost_text = YM_58
+		available = {
+			has_country_flag =  parquet_started
+		}
+		remove_effect = {
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = bmi_device
+					}
+				}
+				add_unit_leader_trait = bmi_device
+			}
+		}
+    }
+	give_all_leaders_bmi_system = {
+		icon = "GFX_trait_bmi_device"
+        days_remove = 10
+        visible = {
+            has_country_flag = have_set_0721_facility
+            has_country_flag = qiyong_youzi_2
+        }
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 3000
+                compare = greater_than_or_equals
+            }
+        }
+		custom_cost_text = YM_3000
+		available = {
+			has_country_flag = 	parquet_started
+			#NOT = {
+			#		has_country_flag = apply_bmi_device
+			#}
+		}
+		remove_effect = {
+			every_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = bmi_device
+					} 
+				}
+				add_unit_leader_trait = bmi_device
+			}
+			set_country_flag = apply_bmi_device
 		}
 	}
+    start_research_on_yuzu_little_car = {   #2025/11/28,21:43,伊尔诺
+        visible = {
+            has_country_flag = have_set_0721_facility
+            has_country_flag = qiyong_youzi_2
+        }
+        fire_only_once = yes
+        days_remove = 10
+        remove_effect = {
+            set_country_flag = start_yuzu_little_car
+        }
+    }
+}
 
+YZS_scientist_aromors_category = {
+    ########  #######  ##     ## #### ########  ##     ## ######## ##    ## ########
+    ##       ##     ## ##     ##  ##  ##     ## ###   ### ##       ###   ##    ##
+    ##       ##     ## ##     ##  ##  ##     ## #### #### ##       ####  ##    ##
+    ######   ##     ## ##     ##  ##  ########  ## ### ## ######   ## ## ##    ##
+    ##       ##  ## ## ##     ##  ##  ##        ##     ## ##       ##  ####    ##
+    ##       ##    ##  ##     ##  ##  ##        ##     ## ##       ##   ###    ##
+    ########  ##### ##  #######  #### ##        ##     ## ######## ##    ##    ##
+    get_yz_medium_tank_artillery_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = basic_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_artillery_2 }
+        }
+        available = {
+            has_tech = basic_medium_tank_chassis
+            has_tech = artillery1
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_artillery_1
+            }
+            create_equipment_variant = {
+                name = "静流自行火炮式——六麓分局"
+                type = medium_tank_artillery_chassis_1
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_medium_howitzer
+                    turret_type_slot = tank_medium_fixed_superstructure_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_1
+                    special_type_slot_2 = YZ_0721_detonator_module
+
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 3
+                    tank_nsb_armor_upgrade = 2
+                }
+                icon = "gfx/interface/technologies/USA_basic_heavy_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_artillery_1
+            }
+            custom_effect_tooltip = yz_medium_tank_artillery_1_tt
+            set_country_flag = yz_medium_tank_artillery_1
+        }
+    }
+    get_yz_medium_tank_artillery_equipment_2 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = improved_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_artillery_3 }
+        }
+        available = {
+            has_tech = artillery2
+            has_tech = improved_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_artillery_2
+            }
+            create_equipment_variant = {
+                name = "灯里自行火炮式——六麓分局"
+                type = medium_tank_artillery_chassis_2
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_medium_howitzer_2
+                    turret_type_slot = tank_medium_fixed_superstructure_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_2
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 5
+                    tank_nsb_armor_upgrade = 4
+                }
+                icon = "gfx/interface/technologies/GER_super_heavy_art.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_artillery_2
+            }
+            custom_effect_tooltip = yz_medium_tank_artillery_2_tt
+            set_country_flag = yz_medium_tank_artillery_2
+            #add_equipment_production = {
+            #	equipment = {
+            #		type = medium_tank_artillery_chassis_2
+            #	}
+            #	requested_factories = 1
+            #	progress = 0
+            #	efficiency = 90
+            #	amount = 0
+            #	industrial_manufacturer = mio:youzi_tank_design_and_production_Center_organization_0
+            #	version_name = "柚子兵器工业集团 - SU122"
+            #}
+        }
+    }
+    get_yz_medium_tank_artillery_equipment_3 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = advanced_medium_tank_chassis
+        }
+        available = {
+            has_tech = artillery3
+            has_tech = advanced_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_artillery_3
+            }
+            create_equipment_variant = {
+                name = "濑奈自行火炮式——六麓分局"
+                type = medium_tank_artillery_chassis_3
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_heavy_howitzer
+                    turret_type_slot = tank_medium_fixed_superstructure_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_3
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 8
+                    tank_nsb_armor_upgrade = 7
+                }
+                icon = "gfx/interface/technologies/GER_modern_td.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_artillery_3
+            }
+            custom_effect_tooltip = yz_medium_tank_artillery_3_tt
+            set_country_flag = yz_medium_tank_artillery_3
+        }
+    }
+
+    get_yz_medium_tank_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = basic_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_2 }
+        }
+        available = {
+            has_tech = antitank1
+            has_tech = basic_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_1
+            }
+            create_equipment_variant = {
+                name = "梓式中型坦克——阴阳分局"
+                type = medium_tank_chassis_1
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_medium_cannon
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_1
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 3
+                    tank_nsb_armor_upgrade = 2
+                }
+                icon = "gfx/interface/technologies/USA_imp_main_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_1
+            }
+            custom_effect_tooltip = yz_medium_tank_1_tt
+            set_country_flag = yz_medium_tank_1
+        }
+    }
+    get_yz_medium_tank_equipment_2 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = improved_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_3 }
+        }
+        available = {
+            has_tech = antitank3
+            has_tech = improved_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_2
+            }
+            create_equipment_variant = {
+                name = "艾莉娜式中型坦克——阴阳分局"
+                type = medium_tank_chassis_2
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_medium_cannon_2
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_2
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 5
+                    tank_nsb_armor_upgrade = 4
+                }
+                icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_2
+            }
+            custom_effect_tooltip = yz_medium_tank_2_tt
+            set_country_flag = yz_medium_tank_2
+        }
+    }
+    get_yz_medium_tank_equipment_3 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = advanced_medium_tank_chassis
+        }
+        available = {
+            has_tech = antitank3
+            has_tech = advanced_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_3
+            }
+            create_equipment_variant = {
+                name = "尼古拉式中型坦克——阴阳分局"
+                type = medium_tank_chassis_3
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_high_velocity_cannon_2
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_3
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 8
+                    tank_nsb_armor_upgrade = 7
+                }
+                icon = "gfx/interface/technologies/GER_main_battle_tank_2.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_3
+            }
+            custom_effect_tooltip = yz_medium_tank_3_tt
+            set_country_flag = yz_medium_tank_3
+        }
+    }
+    get_yz_modern_tank_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = main_battle_tank_chassis
+        }
+        available = {
+            has_tech = artillery4
+            has_tech = main_battle_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_modern_tank
+            }
+            create_equipment_variant = {
+                name = "丛雨丸自卫现代坦克——穗织分局"
+                type = modern_tank_chassis_1
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_heavy_cannon_3
+                    turret_type_slot = tank_modern_tank_turret
+                    suspension_type_slot = tank_torsion_bar_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_3
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 8
+                    tank_nsb_armor_upgrade = 14
+                }
+                icon = "gfx/interface/technologies/SOV_adv_main_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_modern_tank
+            }
+            custom_effect_tooltip = yz_modern_tank_tt
+        }
+    }
+    get_yz_medium_aa_tank_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = basic_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_aa_2 }
+        }
+        available = {
+            has_tech = antiair1
+            has_tech = basic_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_aa_1
+            }
+            create_equipment_variant = {
+                name = "爱莉式自行防空炮-莱泽鲁格分局"
+                type = medium_tank_aa_chassis_1
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_anti_air_cannon
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_1
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 3
+                    tank_nsb_armor_upgrade = 2
+                }
+                icon = "gfx/interface/technologies/FIN_basic_medium_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_aa_1
+            }
+            custom_effect_tooltip = yz_medium_tank_aa_1_tt
+            set_country_flag = yz_medium_tank_aa_1
+        }
+    }
+    get_yz_medium_aa_tank_equipment_2 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = improved_medium_tank_chassis
+            not = { has_country_flag = yz_medium_tank_aa_3 }
+        }
+        available = {
+            has_tech = antiair2
+            has_tech = improved_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_aa_2
+            }
+            create_equipment_variant = {
+                name = "夏莉式自行防空炮-莱泽鲁格分局"
+                type = medium_tank_aa_chassis_2
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_anti_air_cannon_2
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_2
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 5
+                    tank_nsb_armor_upgrade = 4
+                }
+                icon = "gfx/interface/technologies/FRA_adv_light_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_aa_2
+            }
+            custom_effect_tooltip = yz_medium_tank_aa_2_tt
+            set_country_flag = yz_medium_tank_aa_2
+        }
+    }
+    get_yz_medium_aa_tank_equipment_3 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = advanced_medium_tank_chassis
+        }
+        available = {
+            has_tech = antiair1
+            has_tech = advanced_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_aa_3
+            }
+            create_equipment_variant = {
+                name = "真咲式自行防空炮-莱泽鲁格分局"
+                type = medium_tank_aa_chassis_3
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_anti_air_cannon_3
+                    turret_type_slot = tank_medium_three_man_tank_turret
+                    suspension_type_slot = tank_christie_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_3
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = sloped_armor
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 8
+                    tank_nsb_armor_upgrade = 7
+                }
+                icon = "gfx/interface/technologies/JAP_adv_main_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_aa_3
+            }
+            custom_effect_tooltip = yz_medium_tank_aa_3_tt
+            set_country_flag = yz_medium_tank_aa_3
+        }
+    }
+    get_yz_medium_destroyer_tank_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = basic_medium_tank_chassis
+        }
+        available = {
+            has_tech = antitank2
+            has_tech = basic_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_destroyer_1
+            }
+            create_equipment_variant = {
+                name = "AST—Mitsukasa-橘花分局"
+                type = medium_tank_destroyer_chassis_1
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_heavy_cannon_2
+                    turret_type_slot = tank_medium_fixed_superstructure_turret
+                    suspension_type_slot =  tank_bogie_suspension
+                    armor_type_slot = tank_riveted_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_1
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = extra_ammo_storage
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 1
+                    tank_nsb_armor_upgrade = 2
+                }
+                icon = "gfx/interface/technologies/ITA_basic_main_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_destroyer_1
+            }
+            custom_effect_tooltip = yz_medium_tank_destroyer_1_tt
+            set_country_flag = yz_medium_tank_destroyer_1
+        }
+    }
+    get_yz_medium_destroyer_tank_equipment_2 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = improved_medium_tank_chassis
+        }
+        available = {
+            has_tech = antitank5
+            has_tech = improved_medium_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_medium_tank_destroyer_2
+            }
+            create_equipment_variant = {
+                name = "AST-ISU-Ayasegradets-橘花分局"
+                type = medium_tank_destroyer_chassis_2
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_high_velocity_cannon_3
+                    turret_type_slot = tank_medium_fixed_superstructure_turret
+                    suspension_type_slot =  tank_torsion_bar_suspension
+                    armor_type_slot = tank_riveted_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_2
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 1
+                    tank_nsb_armor_upgrade = 2
+                }
+                icon = "gfx/interface/technologies/FIN_imp_medium_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_medium_tank_destroyer_2
+            }
+            custom_effect_tooltip = yz_medium_tank_destroyer_2_tt
+            set_country_flag = yz_medium_tank_destroyer_2
+        }
+    }
+    get_yz_heavy_tank_equipment_1 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = improved_heavy_tank_chassis
+        }
+        available = {
+            has_tech = antitank2
+            has_tech = improved_heavy_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_heavy_tank_1
+            }
+            create_equipment_variant = {
+                name = "茉子の苦无重型坦克-穗织分局"
+                type = heavy_tank_chassis_2
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_heavy_cannon_2
+                    turret_type_slot = tank_heavy_three_man_tank_turret
+                    suspension_type_slot =  tank_torsion_bar_suspension
+                    armor_type_slot = tank_welded_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_2
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 6
+                    tank_nsb_armor_upgrade = 12
+                }
+                icon = "gfx/interface/technologies/SOV_imp_heavy_spart.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_heavy_tank_1
+            }
+            custom_effect_tooltip = yz_heavy_tank_1_tt
+            set_country_flag = yz_heavy_tank_1
+        }
+    }
+    get_yz_heavy_tank_equipment_2 = {
+        icon = GFX_decision_generic_tank
+        days_remove = 15  ###
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_750
+        visible = {
+            has_country_flag = set_YRI
+            has_tech = advanced_heavy_tank_chassis
+        }
+        available = {
+            has_tech = antitank5
+            has_tech = improved_heavy_tank_chassis
+            has_country_flag = yz_mio_5
+            has_country_flag = has_YZ_0721_detonator_tech
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -750
+            }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_heavy_tank_2
+            }
+            create_equipment_variant = {
+                name = "芳乃の鉾铃重型坦克-穗织分局"
+                type = heavy_tank_chassis_3
+                parent_version = 0
+                modules = {
+                    main_armament_slot = tank_heavy_cannon_3
+                    turret_type_slot = tank_heavy_three_man_tank_turret
+                    suspension_type_slot =  tank_torsion_bar_suspension
+                    armor_type_slot = tank_riveted_armor
+                    engine_type_slot = tank_diesel_engine
+                    special_type_slot_1 = tank_radio_3
+                    special_type_slot_2 = YZ_0721_detonator_module
+                    special_type_slot_3 = YZ_0721_detonator_module
+                    special_type_slot_4 = easy_maintenance
+                }
+                upgrades = {
+                    tank_nsb_engine_upgrade = 6
+                    tank_nsb_armor_upgrade = 20
+                }
+                icon = "gfx/interface/technologies/ger_adv_heavy_tank.dds"
+                design_team = mio:youzi_tank_design_and_production_Center_organization_0
+            }
+            hidden_effect = {
+                remove_ideas = yz_heavy_tank_2
+            }
+            custom_effect_tooltip = yz_heavy_tank_2_tt
+            set_country_flag = yz_heavy_tank_2
+        }
+    }
+    
 }
 

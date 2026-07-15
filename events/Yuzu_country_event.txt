@@ -1,0 +1,23 @@
+add_namespace = yuzu_congress
+
+country_event = {
+    id = yuzu_congress.1
+    title = yuzu_congress.1.t    # 直接填本地化ID，不需要加双引号
+    desc = yuzu_congress.1.d     # 直接填本地化ID
+    picture = GFX_report_event_generic_parliament
+    is_triggered_only = yes
+
+    option = {
+        name = yuzu_congress.1.a # 直接填本地化ID
+        set_politics = { ruling_party = democratic }
+        add_popularity = { ideology = democratic popularity = 1.0 }
+    }
+    option = {
+        name = yuzu_congress.1.b
+        set_politics = { ruling_party = neutrality }
+        add_popularity = { ideology = neutrality popularity = 1.0 }
+    }
+    
+    # 选项3、选项4以及后续的事件2、事件3同理
+    # 只要名字和 yuzu_events_l_simp_chinese.yml 对应上就行
+}

@@ -1,437 +1,131 @@
 add_namespace = start_event     #开始事件和杂项事件
 
-country_event= {           
-    id = start_event.1           
-    picture = GFX_yz_start_qrcode 
-    title = start_event.1.t
-    desc = start_event.1.d	
+
+
+
+
+
+
+
+
+
+
+country_event= {           #抽到真琴
+    id = start_event.90797935
+    title = start_event.90797935.t
+    desc = start_event.90797935.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.1.a	
-		add_political_power = 1
+        name = start_event.90797935.a
         hidden_effect = {
-		}
-    }
-	option = {
-        name = start_event.1.b	
-		add_political_power = -1
-        hidden_effect = {
-		}
-    }
-    
-}
-country_event= {           
-    id = start_event.8          
-    picture = GFX_core 
-    title = start_event.8.t
-    desc = start_event.8.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.8.a	
-		add_political_power = 10
-        hidden_effect = {
-		}
-    }
-}
-
-country_event= {           #一位苏联工人的日记
-    id = start_event.2           
-    title = start_event.2.t
-    desc = start_event.2.d	
-    is_triggered_only = yes
-    trigger = {
-        tag = SOV
-    }
-
-    option = {
-        name = start_event.2.a	
-		add_political_power = 1
-        hidden_effect = {
-		}
-    }
-}
-
-country_event= {           #将领离开
-    id = start_event.3           
-    title = start_event.3.t
-    desc = start_event.3.d	
-    is_triggered_only = yes
-    trigger = {
-        not = { has_country_flag = yz_bad_end }
-    }
-
-    option = {
-        name = start_event.3.a	
-		add_political_power = -1
-    }
-}
-
-country_event= {           #将领彻底失望全部离开
-    id = start_event.4           
-    title = start_event.4.t
-    desc = start_event.4.d	
-    is_triggered_only = yes
-    trigger = {
-        not = { has_country_flag = yz_bad_end }
-    }
-
-    option = {
-        name = start_event.4.a	
-		add_political_power = -100
-    }
-}
-
-country_event= {           
-    id = start_event.5          
-    title = start_event.5.t
-    desc = start_event.5.d	
-    is_triggered_only = yes
-    trigger = {
-        not = { has_country_flag = yz_bad_end }
-        not = { has_country_flag = finished_qry }
-    }
-    hidden = yes
-
-    immediate = {
-        set_country_flag = finished_qry
-        add_to_variable = { Yoshino_production_speed_industrial_complex_factor = 0.15 }
-		add_to_variable = { Yoshino_consumer_goods_factor = -0.05 }
-		add_to_variable = {
-			Yoshino_stability = 0.05
-		}
-    }
-}
-
-country_event= {           
-    id = start_event.6         
-    title = start_event.6.t
-    desc = start_event.6.d	
-    is_triggered_only = yes
-    trigger = {
-        not = { has_country_flag = yz_bad_end }
-        not = { has_country_flag = finished_mgl }
-        has_country_flag = finished_yoshino_industry
-    }
-    hidden = yes
-
-    immediate = {
-        set_country_flag = finished_mgl
-        add_to_variable = { Megulu_production_speed_buildings_factor = 0.2 }
-        add_to_variable = { Megulu_consumer_goods_factor = -0.05 }
-		add_to_variable = { Megulu_production_speed_arms_factory_factor = 0.05 }
-        add_to_variable = { Megulu_production_factory_efficiency_gain_factor = 0.025 }
-        add_to_variable = { Megulu_production_factory_max_efficiency_factor = 0.025 }
-        add_to_variable = { Megulu_production_factory_start_efficiency_factor = 0.025 }
-        add_to_variable = { Megulu_line_change_production_efficiency_factor = 0.025 }
-		add_to_variable = {
-			Megulu_industrial_capacity_factory = 0.05
-		}
-    }
-}
-
-country_event= {           #塔罗牌倒计时
-    id = start_event.7         
-    title = start_event.7.t
-    desc = start_event.7.d	
-    is_triggered_only = yes
-    hidden = yes
-    immediate = {
-        clr_country_flag = tarot_timeout
-
-    }
-
-    option = {
-        name = start_event.7.a	
-    }
-}
-
-country_event= {           #三军经验
-    id = start_event.9       
-    title = start_event.9.t
-    desc = start_event.9.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.9.a	
-        army_experience = 10
-    }
-    option = {
-        name = start_event.9.b
-        air_experience = 10
-    }
-    option = {
-        name = start_event.9.c
-        navy_experience = 10
-    }
-}
-
-country_event= {           #核心圈子可以选举了
-    id = start_event.10    
-    title = start_event.10.t
-    desc = start_event.10.d	
-    picture = GFX_core
-    is_triggered_only = yes
-    trigger = {
-        not = { has_country_flag = YCG_on }
-    }
-
-    option = {
-        name = start_event.10.a	
-        add_political_power = 10
-        set_country_flag = YzCoreGroup_visible
-        set_country_flag = set_YzCoreGroup
-    }
-}
-
-country_event= {           #没钱啦
-    id = start_event.11      
-    title = start_event.11.t
-    desc = start_event.11.d	
-    is_triggered_only = yes
-    trigger = {
-    }
-    hidden = yes
-    option = {
-        name = start_event.11.a
-        set_temp_variable = { auto_gain_yzmoney = 0 }	#自动判断没钱了加钱
-	    add_to_temp_variable = { auto_gain_yzmoney = YzMilitary_fund_var }
-		add_to_temp_variable = { auto_gain_yzmoney = YzAdministration_fund_var }
-		add_to_temp_variable = { auto_gain_yzmoney = YzEducation_fund_var }
-		multiply_temp_variable = { auto_gain_yzmoney = -100 }
-		add_to_variable = { YzMoneyOutcome_var = auto_gain_yzmoney }
-		set_variable = { YzMilitary_fund_var = 0 }
-		set_variable = { YzAdministration_fund_var = 0 }
-		set_variable = { YzEducation_fund_var = 0 }
-		set_variable = { YzMonthlyFund_var = 5 }
-        hidden_effect = {
-            clr_all_YzMoney_effect = yes
-        }
-
-    }
-}
-
-country_event= {           #无事发生
-    id = start_event.12    
-    title = start_event.12.t
-    desc = start_event.12.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.12.a	
-        add_stability = -0.001
-    }
-}
-country_event= {           #小隐藏1
-    id = start_event.13    
-    title = start_event.13.t
-    desc = start_event.13.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.13.a	
-        meta_effect = {
-            text = {
-                generate_character = {
-                    token_base = YzBaichazuichangyan
-                    name = "白茶醉长烟"
-                    gender = male
-                    nationality = PRC
-                    portraits = {
-                        civilian = {
-                            large = "gfx\leader\baichazuichangyan.png"
-                            small = "gfx\leader\baichazuichangyan2.png"
-                        }
-                    }
-                    allowed_civil_war = {
-                        is_ai = no
-                    }
-                    corps_commander = {
-                    traits={
-                        caidan_trait_baicha
-                    }
-                    skill=99
-                    attack_skill=99
-                    defense_skill=99
-                    planning_skill=99
-                    logistics_skill=99
-                    }
+            set_country_flag = have_misaka_makoto
+            every_country = {
+                limit = {
+                    is_ai = no
                 }
+                set_country_flag = yuzu_super_event_private_visible_flag
+                set_country_flag = we_forward_with_makoto_flag
             }
-        }
-        custom_effect_tooltip = xiaoyincangkuan_tt
-    }
-}
-country_event= {           #小隐藏2
-    id = start_event.15    
-    title = start_event.15.t
-    desc = start_event.15.d	
-    is_triggered_only = yes
-    
-    option = {
-        name = start_event.15.a	
-        hidden_effect = {
+            play_song = time_forward
             meta_effect = {
                 text = {
                     generate_character = {
-                        token_base = YzIron
-                        name = "伊尔诺"
-                        gender = male
+                        token_base = Yzmisakamakoto
+                        name = "御坂真琴"
+                        gender = female
                         nationality = PRC
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Irno_character.png"
-                                small = "gfx\leader\Irno_character2.png"
+                                large = "gfx\leader\misaka_makoto.png"
+                                small = "gfx\leader\misaka_makoto_small.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
                         corps_commander = {
-                        traits={
-                            caidan_trait_iron
-                        }
-                        skill=99
-                        attack_skill=99
-                        defense_skill=99
-                        planning_skill=99
-                        logistics_skill=99
+                            desc = misaka_makoto_desc_commander
+                            traits={
+                                futsuuna_shoujo_no_kokoro
+                                strong_ai
+                                world_type_maho
+                            }
+                            skill=100
+                            attack_skill=100
+                            defense_skill=100
+                            planning_skill=100
+                            logistics_skill=100
                         }
                     }
                 }
             }
         }
-        custom_effect_tooltip = xiaoyincangkuan_tt
+        custom_effect_tooltip = toujiang_tt
     }
 }
-country_event= {           #大隐藏
-    id = start_event.14    
-    title = start_event.14.t
-    desc = start_event.14.d	
+country_event= {           #抽到市杵宍姬命——2026.5.28，22：47，御坂真琴
+    id = start_event.83444139
+    title = start_event.83444139.t
+    desc = start_event.83444139.d
     is_triggered_only = yes
-    trigger = {
-        check_variable = {
-            YzStore_LuckyDarw_var = 250
-        }
-    }
+
     option = {
-        name = start_event.14.a	
-        add_political_power = 250
-        add_stability = 2.5
+        name = start_event.83444139.a
         hidden_effect = {
+            set_country_flag = have_itsukishishihimenomikoto
             meta_effect = {
                 text = {
                     generate_character = {
-                        token_base = sana
-                        name = "千岁佐奈"
+                        token_base = Yzitsukishishihimenomikoto
+                        name = "市杵宍姬命"
+                        can_be_captured = no
                         gender = female
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\sana.png"
-                                small = "gfx\leader\sana2.png"
+                                large = "gfx\leader\itsukishishishihimenomikoto_big.png"
+                                small = "gfx\leader\itsukishishishihimenomikoto_small.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
                         corps_commander = {
-                        traits={
-                            maid_sana_trait trait_reckless infantry_officer
-                        }
-                        skill=5
-                        attack_skill=2
-                        defense_skill=8
-                        planning_skill=3
-                        logistics_skill=6
+                            desc = itsukishishishihimenomikoto_desc_commander
+                            traits={
+                                super_big_big_sister
+                                super_shake_sm
+                                god_who_collect_the_pollution
+                            }
+                            skill = 7
+                            attack_skill = 8
+                            defense_skill = 7
+                            planning_skill = 10
+                            logistics_skill = 6
                         }
                     }
                 }
             }
-            random_unit_leader = {
-                limit = {
-                    has_trait = maid_sana_trait
-                }
-                add_unit_leader_trait = maid_sana_birthday_boost1
-                add_unit_leader_trait = maid_sana_birthday_boost2
-                add_unit_leader_trait = maid_sana_birthday_boost3
-                add_unit_leader_trait = maid_sana_birthday_boost4
-                add_unit_leader_trait = maid_sana_birthday_boost5
-            }
         }
-        custom_effect_tooltip = dayincangkuan_tt
+        #custom_effect_tooltip = toujiang_tt
     }
 }
-country_event= {           #250抽的提醒
-    id = start_event.16   
-    title = start_event.16.t
-    desc = start_event.16.d	
-    is_triggered_only = yes
 
-    option = {
-        name = start_event.16.a	
-        add_political_power = -50
-        add_named_threat = {
-            threat = 100
-            name = stop_chou
-        }
-    }
-}
-country_event= {           #提醒工业
-    id = start_event.17   
-    title = start_event.17.t
-    desc = start_event.17.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.17.a	
-    }
-}
-country_event= {           #军工选择线路
-    id = start_event.18 
-    title = start_event.18.t
-    desc = start_event.18.d	
-    is_triggered_only = yes
-
-    option = {
-        name = start_event.18.a	
-    }
-}
-country_event= {           #紬妈立绘倒计时
-    id = start_event.19
+country_event= {           #佐奈立绘倒计时
+    id = start_event.21
     is_triggered_only = yes
     hidden = yes
     immediate = {
         random_unit_leader = {
             limit = {
-                has_trait = maid_chou_trait
+                has_trait = maid_sana_trait
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\chou.png"
+                    large = "gfx\leader\sana.png"
                 }
             }
         }
-        
     }
 }
-country_event= {           #宁宁立绘倒计时
-    id = start_event.20
-    is_triggered_only = yes
-    hidden = yes
-    immediate = {
-        random_unit_leader = {
-            limit = {
-                has_trait = maid_ninging_trait
-            }
-            set_portraits = {
-                army = {
-                    large = "gfx\leader\Nene.png"
-                }
-            }
-        }
-        
-    }
-}
-

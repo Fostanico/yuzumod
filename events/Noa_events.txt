@@ -10,7 +10,10 @@ country_event= {
     option = {
         name = noa_event.1.a	#真正的天使！
         trigger = {
-            has_country_flag = qiyong_youzi_2
+            or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
         }
         custom_effect_tooltip = noa_notice	#小字
         stability_factor = 0.01
@@ -26,6 +29,7 @@ country_event= {
                 generate_character = {
                     token_base = shirayuki_Noa
                     name = "白雪乃爱"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -38,6 +42,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = noa_corps_desc
                 traits={
                     maid_noa_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
                 }
@@ -88,6 +93,7 @@ country_event= {
                 generate_character = {
                     token_base = shirayuki_Noa_1
                     name = "白雪乃爱"
+                    can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -100,6 +106,7 @@ country_event= {
                         is_ai = no
                     }
                     corps_commander = {
+                        desc = noa_corps_desc
                 traits={
                     maid_noa_trait maid_noa1_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
                 }

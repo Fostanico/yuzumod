@@ -1,0 +1,500 @@
+Kukuru_coming_decision_category = {
+	get_kukuru = { #获得玖玖瑠
+		icon = GFX_kkr_icon_3
+		fire_only_once = yes
+		days_remove = 0
+		cost = 5
+		visible = {
+			has_country_flag = have_Laoba
+			has_country_flag = qiyong_youzi_2
+		}
+		complete_effect = {
+			set_variable = { kkr_favor = 0 }
+			set_variable = { weekly_kkr_favor = 0 }
+			set_variable = { max_kkr_favor = 100 }
+
+			set_variable = { kkr_clothes = 0 }	#换装
+
+			#动态效果相关
+			hidden_effect = {
+				set_variable = { KKR_political_power = 0 }
+				set_variable = { KKR_stability = 0 }
+				set_variable = { KKR_research_speed_factor = 0 }
+				set_variable = { KKR_war_support_factor = 0 }
+				set_variable = { KKR_consumer_goods_factor = 0 }
+				set_variable = { KKR_production_speed_buildings_factor = 0 }
+				set_variable = { KKR_industry_repair_factor = 0 }
+				set_variable = { KKR_production_speed_infrastructure_factor = 0 }
+				set_variable = { KKR_production_speed_industrial_complex_factor = 0 }
+				set_variable = { KKR_production_speed_arms_factory_factor = 0 }
+				set_variable = { KKR_industry_air_damage_factor = 0 }
+				set_variable = { KKR_industrial_capacity_factory = 0 }
+				set_variable = { KKR_production_factory_efficiency_gain_factor = 0 }
+				set_variable = { KKR_production_factory_max_efficiency_factor = 0 }
+				set_variable = { KKR_production_factory_start_efficiency_factor = 0 }
+				set_variable = { KKR_line_change_production_efficiency_factor = 0 }
+				set_variable = { KKR_local_resources_factor = 0 }
+				set_variable = { KKR_army_org_factor = 0 }
+				set_variable = { KKR_army_core_defence_factor = 0 }
+				set_variable = { KKR_army_core_attack_factor = 0 }
+				set_variable = { KKR_mobilization_speed = 0 }
+				set_variable = { KKR_recruitable_population_factor = 0 }
+				set_variable = { kkr_fKKR_land_night_attackavor = 0 }
+				set_variable = { KKR_army_attack_factor = 0 }
+				set_variable = { KKR_refit_ic_cost = 0 }
+				set_variable = { KKR_refit_speed = 0 }
+				set_variable = { KKR_repair_speed_factor = 0 }
+				set_variable = { KKR_subversive_activites_upkeep = 0 }
+				set_variable = { KKR_intelligence_agency_defense = 0 }
+				set_variable = { KKR_resistance_growth = 0 }
+				set_variable = { KKR_army_bonus_air_superiority_factor = 0 }
+				set_variable = { KKR_air_superiority_bonus_in_combat = 0 }
+				set_variable = { KKR_air_accidents_factor = 0 }
+			}
+		}
+		remove_effect = {
+			set_country_flag = get_kkr
+			add_dynamic_modifier = {
+				modifier = Kukuru_dynamic_modifier
+			}
+			force_update_dynamic_modifier = yes
+			meta_effect = {
+                text = {
+
+                    generate_character = {
+                        token_base = Kukuru
+                        name = "夜刀玖玖瑠"
+						can_be_captured = no
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\kukuru1.png"
+                                small = "gfx\leader\kukuru1_1.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        corps_commander = {
+                            traits = {
+								brilliant_strategist
+								career_officer
+								bearer_of_artillery		
+								infantry_officer
+								cavalry_officer
+								armor_officer
+								kukuru_1_trait
+								kukuru_2_trait
+								kukuru_3_trait
+                            }
+                            skill = 1
+                            attack_skill = 9
+                            defense_skill = 9
+                            planning_skill = 6
+                            logistics_skill = 1
+                        }
+                    }
+                }
+            }
+			country_event = { id = kkr_event.1 days = 0 }
+		}
+	}
+}
+
+Kukuru_main_decision_category = {
+
+	kkr_play_games_together = {	#和玖玖瑠玩游戏
+		icon = GFX_kkr_icon_9
+		fire_only_once = no
+		days_remove = 30
+		cost = 10
+		visible = {
+			has_country_flag = get_kkr
+		}
+		available = {
+			not = { has_country_flag = is_staying_with_kukuru }
+		}
+
+		complete_effect = {
+			add_to_variable = {	kkr_favor = 5 tooltip = kkr_favor_gain }
+			clamp_variable = {		#范围
+				var = kkr_favor
+				min = 0
+				max = max_kkr_favor
+			}
+			set_country_flag = kkr_play_games_together
+			set_country_flag = is_staying_with_kukuru
+		}
+		
+		modifier = {
+			political_power_factor = 0.15
+		}
+		remove_effect = {
+			clr_country_flag = kkr_play_games_together
+			clr_country_flag = is_staying_with_kukuru
+		}
+	}
+	kkr_taste_food = {	#给玖玖瑠吃好吃的
+		icon = GFX_kkr_icon_5
+		fire_only_once = no
+		days_remove = 45
+		cost = 5
+		visible = {
+			has_country_flag = get_kkr
+		}
+		available = {
+			check_variable = {
+				kkr_favor  > 29
+				tooltip = kkr_favor_compare_more_than
+			}
+			not = { has_country_flag = is_staying_with_kukuru }
+		}
+		modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = 0.25
+			industrial_capacity_dockyard = 0.25
+			production_speed_buildings_factor = 0.25
+		}
+		complete_effect = {
+			add_to_variable = { kkr_favor = 5 tooltip = kkr_favor_gain }
+			clamp_variable = {		#范围
+				var = kkr_favor
+				min = 0
+				max = max_kkr_favor
+			}
+			set_country_flag = kkr_taste_food
+			set_country_flag = is_staying_with_kukuru
+		}
+		remove_effect = {
+			clr_country_flag = kkr_taste_food
+			clr_country_flag = is_staying_with_kukuru
+		}
+	}
+
+	kkr_appointment = {		#约会
+		icon = GFX_kkr_icon_6 
+		days_remove = 75
+		cost = 10
+
+		visible = {
+			not = { has_country_flag = kkr_is_researching }
+			check_variable = {
+				kkr_favor > 100
+			}
+		}
+		available = {
+			not = { has_country_flag = is_staying_with_kukuru }
+		}
+		modifier = {
+			consumer_goods_factor = -1.5
+			line_change_production_efficiency_factor = 1
+			production_factory_efficiency_gain_factor = 2.5
+			production_factory_max_efficiency_factor = 0.5
+			industrial_capacity_factory = 0.75
+			industrial_capacity_dockyard = 0.75
+			production_speed_buildings_factor = 1.5
+		}
+		complete_effect = {
+			add_to_variable = { kkr_favor = 10 tooltip = kkr_favor_gain }
+			clamp_variable = {		#范围
+				var = kkr_favor
+				min = 0
+				max = max_kkr_favor
+			}
+			set_country_flag = kkr_appointment
+			set_country_flag = is_staying_with_kukuru
+		} 
+		remove_effect = {
+			clr_country_flag = kkr_appointment
+			clr_country_flag = is_staying_with_kukuru
+		}
+	}
+	kkr_travel = {	#旅游
+		icon = GFX_kkr_icon_9
+		days_remove = 100
+		cost = 10
+
+		visible = {
+			not = { has_country_flag = kkr_is_researching }
+			check_variable = {
+				kkr_favor > 100
+			}
+		}
+		available = {
+			not = { has_country_flag = is_staying_with_kukuru }
+		}
+		complete_effect = {
+			add_to_variable = { kkr_favor = 15 tooltip = kkr_favor_gain }
+			clamp_variable = {		#范围
+				var = kkr_favor
+				min = 0
+				max = max_kkr_favor
+			}
+			set_country_flag = kkr_travel
+			set_country_flag = is_staying_with_kukuru
+		}
+		modifier = {
+			consumer_goods_factor = -2.5
+			line_change_production_efficiency_factor = 1.5
+			production_factory_efficiency_gain_factor = 3
+			production_factory_max_efficiency_factor = 0.75
+			industrial_capacity_factory = 1.25
+			industrial_capacity_dockyard = 1.25
+			production_speed_buildings_factor = 2
+		}
+		remove_effect = {
+			clr_country_flag = kkr_travel
+			clr_country_flag = is_staying_with_kukuru
+		}
+	}
+
+	kkr_marriage = {
+		icon = GFX_kkr_icon_6
+		days_remove = 5
+		cost = 5
+		fire_only_once = yes
+
+		visible = {
+			check_variable = {
+				kkr_favor > 149
+			}
+		}
+		available = {
+			check_variable = {
+				kkr_favor > 149
+				tooltip = kkr_favor_compare_more_than
+			}
+		}
+		remove_effect = {
+			play_song = kkrsong1
+			country_event = kkr_event.101
+			add_to_variable = {
+				max_kkr_favor = 200
+				tooltip = max_kkr_favor_gain_tt
+			}
+			clamp_variable = {		#范围
+				var = kkr_favor
+				min = 0
+				max = max_kkr_favor
+			}
+		}
+	}
+	
+	kkr_leader = {
+		icon = GFX_kkr_icon_6
+		fire_only_once = no
+		days_remove = 0
+		cost = 5
+
+		visible = {
+			has_country_flag = kkr_married
+		}
+
+		complete_effect = {
+			set_country_flag = kkr_leader
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				create_country_leader = {
+					name = "夜刀 玖玖瑠"
+					picture = "gfx\leader\kukuru_leader.png"
+					desc = kkr_leader_desc
+					expire = "2095.1.1"
+					ideology = conservatism
+					traits = {
+						HBDPR
+						GJJWZX
+						GJKXYZ
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				create_country_leader = {
+					name = "夜刀 玖玖瑠"
+					picture = "gfx\leader\kukuru_leader.png"
+					desc = kkr_leader_desc
+					expire = "2095.1.1"
+					ideology = fascism_ideology
+					traits = {
+						HBDPR
+						GJJWZX
+						GJKXYZ
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				create_country_leader = {
+					name = "夜刀 玖玖瑠"
+					picture = "gfx\leader\kukuru_leader.png"
+					desc = kkr_leader_desc
+					expire = "2095.1.1"
+					ideology = despotism
+					traits = {
+						HBDPR
+						GJJWZX
+						GJKXYZ
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				create_country_leader = {
+					name = "夜刀 玖玖瑠"
+					picture = "gfx\leader\kukuru_leader.png"
+					desc = kkr_leader_desc
+					expire = "2095.1.1"
+					ideology = marxism
+					traits = {
+						HBDPR
+						GJJWZX
+						GJKXYZ
+					}
+				}
+			}
+		}
+		
+
+		remove_effect = {
+			
+		}
+	}
+}
+	
+	
+	
+
+Kukuru_debug_decision_category = {
+	add_kkr_favor = {
+		complete_effect = {
+			add_to_variable = {
+				kkr_favor = 50
+				tooltip = kkr_favor_gain
+			}
+		}
+	}
+
+	use_kkr_scientist = {	#科学家（暂时废弃）
+		#icon = GFX_kkr_icon_1
+		fire_only_once = no
+		days_remove = 0
+		cost = 5
+		visible = {
+			is_debug = yes
+		}
+
+		complete_effect = {
+			set_country_flag = kkr_scientist
+			
+		}
+
+		remove_effect = {
+			
+		}
+	}
+
+	use_kkr_advisor_sci = {	#科学顾问
+		#icon = GFX_kkr_icon_1
+		fire_only_once = no
+		days_remove = 0
+		cost = 5
+
+		complete_effect = {
+			set_country_flag = kkr_advisor_sci
+			meta_effect = {
+                text = {
+
+                    generate_character = {
+                        token_base = Kukuru_advisor_1
+                        name = "夜刀玖玖瑠"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\kukuru2.png"
+                                small = "gfx\leader\kukuru2_1.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {  
+							priority = 1000
+							slot = political_advisor
+							cost = 50
+							idea_token = Kukuru_advisor_1
+							traits = { trait_sub_kkr_sci }
+							research_bonus = {
+								industry = 2.5
+								nuclear = 2.5
+								rocketry = 2.5
+							}
+							ai_will_do = {
+								factor = 0
+							}
+						}
+                    }
+                }
+            }
+		}
+
+		remove_effect = {
+			
+		}
+	}
+	
+	use_kkr_advisor_eco = {	#经济顾问
+		#icon = GFX_kkr_icon_1
+		fire_only_once = no
+		days_remove = 0
+		cost = 5
+
+		complete_effect = {
+			set_country_flag = kkr_advisor_eco
+			meta_effect = {
+                text = {
+
+                    generate_character = {
+                        token_base = Kukuru_advisor_2
+                        name = "夜刀玖玖瑠"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\kukuru1.png"
+                                small = "gfx\leader\kukuru1_1.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {  
+							priority = 1000
+							slot = political_advisor
+							cost = 50
+							idea_token = Kukuru_advisor_2
+							traits = { trait_sub_kkr_eco }
+							ai_will_do = {
+								factor = 0
+							}
+						}
+                    }
+                }
+            }
+		}
+
+		remove_effect = {
+			
+		}
+	}
+}
+

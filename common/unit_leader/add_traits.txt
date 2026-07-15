@@ -1,1738 +1,4254 @@
 leader_traits = {
-##绫地宁宁
-#图书馆的贤者和爆破高手
-maid_ninging_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.1
-		fort_attack_factor = 0.3
-		army_morale_factor = -0.1
-		planning_speed = 0.35
-		max_planning = 0.3
-		org_loss_when_moving = -0.2
-		wounded_chance_factor = -0.5
-		fort = {
-			attack = 0.3
-		}
-		
-	}
-	enable_ability = nene_witch_ability
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##因幡爱瑠
-#天才的游戏少女
-maid_meigulu_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		experience_gain_factor = 0.75
-		experience_gain_army_unit_factor = 0.6
-		army_armor_attack_factor = 0.24
-		army_armor_defence_factor = 0.15
-		mechanized_attack_factor = 0.15
-		mechanized_defence_factor = 0.15
-		breakthrough = 0.1
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##紬妈妈
-#善解人意的魔女
-maid_chou_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		out_of_supply_factor = -0.3
-		no_supply_grace = 36
-		attrition = -0.2
-		army_infantry_attack_factor = 0.1
-		army_infantry_defence_factor = 0.1
-		max_dig_in_factor = 0.1
-		sickness_chance = -0.15
-		max_planning_factor = 0.1
-		
-	}
-	enable_ability = chou_witch_ability
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##丛雨
-#孩子气的刀灵
-maid_congyu_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	   army_core_attack_factor = 0.2
-	   army_core_defence_factor = 0.2
-	   land_reinforce_rate = 0.15
-	   terrain_penalty_reduction = 0.2
-	   wounded_chance_factor = -0.5 
-	   army_attack_factor = 0.1
-	   army_defence_factor = 0.1
-	   breakthrough_factor = 0.1
-	   org_loss_when_moving = -0.25
-	   org_loss_at_low_org_factor = -0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#芭菲之力
-maid_congyu_trait_1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.05
-		breakthrough_factor = 0.25
-		army_defence_factor = 0.05
-		army_morale_factor = 0.15
-		army_org_factor = 0.1
-		planning_speed = 0.5
-		max_planning = 0.5
-		army_core_attack_factor = 0.1
-		army_core_defence_factor = 0.15
-		supply_consumption_factor = -0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##茉子
-#上流的忍者
-maid_mozi_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	  terrain_penalty_reduction =0.2
-	  recon_factor = 0.35
-	  dig_in_speed_factor = 0.1
-	  army_speed_factor = 0.15
-	  coordination_bonus = 0.1
-	  special_forces_attack_factor = 0.2
-	  special_forces_defence_factor = 0.2
-	  special_forces_no_supply_grace = 96
-	  desert = {
-			movement = 0.15
-		}
-		hills = {
-			movement = 0.15
-		}
-		forest = {
-			movement = 0.15
-		}
-		mountain = {
-			movement = 0.15
-		}
-		plains = {
-			movement = 0.15
-		}
-		urban = {
-			movement = 0.15
-		}
-		jungle = {
-			movement = 0.15
-		}
-		marsh = {
-			movement = 0.15
-		}
-		river = {
-			movement = 0.15
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##芳乃
-#穗织的巫女
-maid_fangnai_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	  experience_loss_factor = -0.1
-	  org_loss_when_moving = -0.1
-	  army_strength_factor = 0.05
-	  out_of_supply_factor = -0.1
-	  army_core_attack_factor = 0.15
-	  army_core_defence_factor = 0.2
-	  max_planning = 0.1
-	  army_strength_factor = 0.05
-	  enemy_army_bonus_air_superiority_factor = -0.3
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#神子の袱禊之职
-maid_fangnai2_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	  army_morale_factor = 0.1
-	  dig_in_speed_factor = 0.1
-	  army_core_attack_factor = 0.05
-	  army_core_defence_factor = 0.1
-	  mountain = {
-			attack = 0.05
-		}
-		hills = {
-			attack = 0.05
-		}
-		forest = {
-			attack = 0.05
-		}
-		jungle = {
-			attack = 0.05
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#最后一战
-maid_fangnai3_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	  army_attack_factor = 0.05
-	  army_defence_factor = 0.1
-	  supply_consumption_factor = -0.1
-	  planning_speed = 0.15
-	  winter_attrition_factor = -0.15
-	  heat_attrition_factor = -0.15
-	  attrition = -0.2
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##锉刀
-#学院的明星
-maid_cuodao_trait = { 
-type = land
-trait_type = personality_trait
-modifier = {
-    experience_gain_factor= 0.25	
-	army_defence_factor = -0.1
-	sickness_chance = -0.15
-	attrition = -0.1
-	no_supply_grace = 30
-	local_org_regain = 0.1
-	land_night_attack = 0.15         
-						  
-}
-new_commander_weight = {
-	factor = 0
-}
-}
-maid_cuodao_trait1 = { #橘花学院学生会长
-type = land
-trait_type = personality_trait
-modifier = {
-	max_commander_army_size = 10
-	army_org_regain = 0.1
-	recon_factor = 0.1
-	reassignment_duration_factor = -0.5       
-}
-new_commander_weight = {
-	factor = 0
-}
-}
-maid_cuodao_trait2 = { #另一面的绫濑
-type = land
-trait_type = personality_trait
-modifier = {						     
-    max_dig_in_factor = 0.15							   #堑壕上限
-    dig_in_speed_factor = -0.15
-    army_infantry_attack_factor = 0.1						#步兵单位攻击
-    army_armor_defence_factor = 0.12				      #装甲单位防御
-    winter_attrition_factor = -0.25
-					  
-}
-new_commander_weight = {
-    factor = 0
-}
-}
-maid_cuodao_trait3 = { #PERFECT GIRL
-type = land
-trait_type = personality_trait
-modifier = {
-land_reinforce_rate = 0.02								#增援率
-max_planning = 0.1
-planning_speed = -0.05	
-}
-new_commander_weight = {
-factor = 0
-}
-}
-##七海
-#治愈之风
-maid_qihai_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	experience_loss_factor = -0.8
-	attrition = -0.2
-	recon_factor = 0.15
-	planning_speed = 0.1
-	supply_consumption_factor = 0.05
-	 army_morale_factor = 0.15
-	army_strength_factor = 0.1
-	max_planning = 0.1
-	wounded_chance_factor = -1.5
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#栞娜
-#工口死神
-maid_kanna_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.1
-		army_core_attack_factor = 0.1
-		army_core_defence_factor = 0.1
-		land_reinforce_rate = 0.1
-		recon_factor = 0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#恭平
-#小男娘
-maid_gongping_trait = { 
-type = land
-trait_type = personality_trait
-modifier = {
-	army_armor_speed_factor = 0.05
-		land_reinforce_rate = 0.05
-		initiative_factor = 0.05
-		special_forces_attack_factor = 0.1
-		winter_attrition_factor = -0.2
-		hills = { 
-		movement = 0.05
-		attack = 0.1
-		defence = 0.05
-	}
-}
-new_commander_weight = {
-	factor = 0
-}
-}
-#乃爱
-#下流天使
-maid_noa_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		 experience_gain_factor = 0.5
-		 experience_gain_army_unit_factor = 0.2
-		 recon_factor = 0.5
-		 land_reinforce_rate = 0.05
-		 max_planning = 0.05
-		 enemy_army_bonus_air_superiority_factor = -0.15
-		 supply_consumption_factor = 0.02
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#战乙女
-maid_noa1_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		 army_attack_factor = 0.10
-		 army_morale_factor = 0.05
-		 experience_gain_factor = 0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#假锉刀
-maid_noa2_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		 army_armor_defence_factor = 0.025
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#学习宁宁学姐
-maid_noa3_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		supply_consumption_factor = 0.01
-		fort = {
-			attack = 0.1
-		}
-		urban = {
-			attack = 0.05
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#BAD END
-maid_noa4_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		experience_gain_factor = -100
-		army_attack_factor = -100
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#佐奈
-#初代金毛妹
-	maid_sana_trait = { 
-		type = land
-		trait_type = personality_trait
-		modifier = {
-			out_of_supply_factor = -0.2
+    ##绫地宁宁
+    #图书馆的贤者和爆破高手        
+    maid_ninging_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            fort_attack_factor = 0.3
+            army_morale_factor = +0.15
+            breakthrough = 0.1
+            planning_speed = 0.721
+            max_planning = 0.36
+            org_loss_when_moving = -0.5
+            wounded_chance_factor = -0.5
+            fort = {
+                attack = 0.5
+                defence = 0.3
+            }
+            urban = {
+                attack = 0.5
+                defence = 0.3
+            }
+
+        }
+        enable_ability = nene_witch_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##因幡爱瑠
+    #天才的游戏少女
+    maid_meigulu_trait = {
+        type = land
+        trait_type = personality_trait
+        attack_skill = 10
+        attack_skill_factor = 1
+        modifier = {
+            experience_gain_factor = 1
+            experience_gain_army_unit_factor = 1
+            army_armor_attack_factor = 0.4
+            army_armor_defence_factor = 0.3
+            mechanized_attack_factor = 0.25
+            mechanized_defence_factor = 0.25
+            breakthrough = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##紬妈妈
+    #善解人意的魔女
+    maid_chou_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            out_of_supply_factor = -0.6
+            no_supply_grace = 72
+            attrition = -0.3
+            army_infantry_attack_factor = 0.25
+            army_infantry_defence_factor = 0.25
+            max_dig_in_factor = 0.2
+            sickness_chance = -0.5
+            max_planning = 0.3
+            max_planning_factor = 0.15
+
+        }
+        enable_ability = chou_witch_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##丛雨
+    #孩子气的刀灵
+    maid_congyu_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_core_attack_factor = 0.3
+            army_core_defence_factor = 0.3
+            land_reinforce_rate = 0.25
+            terrain_penalty_reduction = 0.3
+            wounded_chance_factor = -1
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            breakthrough_factor = 0.15
+            org_loss_when_moving = -0.5
+            org_loss_at_low_org_factor = -0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #芭菲之力
+    maid_congyu_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            breakthrough_factor = 0.15
+            army_defence_factor = 0.15
+            army_morale_factor = 0.3
+            planning_speed = 1
+            max_planning = 0.5
+            max_planning_factor = 0.2
+            army_core_attack_factor = 0.2
+            army_core_defence_factor = 0.2
+            supply_consumption_factor = -0.4
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##茉子
+    #上流的忍者
+    maid_mozi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            terrain_penalty_reduction =0.3
+            recon_factor = 1
+            dig_in_speed_factor = 0.3
+            coordination_bonus = 0.15
+            initiative_factor = 0.15
+            special_forces_attack_factor = 0.3
+            special_forces_defence_factor = 0.3
+            special_forces_no_supply_grace = 144
+            desert = {
+                movement = 0.2
+            }
+            hills = {
+                movement = 0.2
+            }
+            forest = {
+                movement = 0.2
+            }
+            mountain = {
+                movement = 0.2
+            }
+            plains = {
+                movement = 0.2
+            }
+            urban = {
+                movement = 0.2
+            }
+            jungle = {
+                movement = 0.2
+            }
+            marsh = {
+                movement = 0.2
+            }
+            river = {
+                movement = 0.2
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##芳乃
+    #穗织的巫女
+    maid_fangnai_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_loss_factor = -0.3
+            org_loss_when_moving = -0.25
+            army_strength_factor = 0.15
+            out_of_supply_factor = -0.3
+            army_core_attack_factor = 0.25
+            army_core_defence_factor = 0.25
+            max_planning = 0.2
+            enemy_army_bonus_air_superiority_factor = -0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #神子の袱禊之职
+    maid_fangnai2_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_morale_factor = 0.2
+            dig_in_speed_factor = 0.2
+            army_core_attack_factor = 0.1
+            army_core_defence_factor = 0.1
+            mountain = {
+                attack = 0.15
+            }
+            hills = {
+                attack = 0.15
+            }
+            forest = {
+                attack = 0.15
+            }
+            jungle = {
+                attack = 0.15
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #最后一战
+    maid_fangnai3_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            supply_consumption_factor = -0.15
+            planning_speed = 0.5
+            winter_attrition_factor = -0.25
+            heat_attrition_factor = -0.25
+            attrition = -0.4
+            max_planning_factor = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #蕾娜
+    #西苏の血脉
+    maid_lena_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            winter_attrition_factor = -0.65
+            experience_gain_factor= 0.5
+            equipment_capture = 0.2
+            army_infantry_defence_factor = 0.25
+            army_armor_defence_factor = 0.25
+            wounded_chance_factor = -0.75
+            army_core_attack_factor = 0.25
+            army_core_defence_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##锉刀
+    #学院的明星
+    maid_cuodao_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor= 0.25
+            army_defence_factor = -0.1
+            sickness_chance = -0.15
+            attrition = -0.1
+            no_supply_grace = 30
+            local_org_regain = 0.1
+            land_night_attack = 0.15
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_cuodao_trait1 = { #橘花学院学生会长
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_commander_army_size = 10
+            army_org_regain = 0.1
+            recon_factor = 0.1
+            reassignment_duration_factor = -0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_cuodao_trait2 = { #另一面的绫濑
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_dig_in_factor = 0.15							   #堑壕上限
+            dig_in_speed_factor = -0.15
+            army_infantry_attack_factor = 0.1						#步兵单位攻击
+            army_armor_defence_factor = 0.12				      #装甲单位防御
+            winter_attrition_factor = -0.25
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_cuodao_trait3 = { #PERFECT GIRL
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.02								#增援率
+            max_planning = 0.1
+            planning_speed = -0.05
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##七海
+    #治愈之风
+    maid_qihai_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_loss_factor = -0.8
+            attrition = -0.2
+            recon_factor = 0.15
+            planning_speed = 0.1
+            supply_consumption_factor = 0.05
+            army_morale_factor = 0.15
+            army_strength_factor = 0.1
+            max_planning = 0.1
+            wounded_chance_factor = -1.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##千咲
+    ##元气满满的学妹
+    maid_chisaki_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_infantry_defence_factor = 0.1
+            pocket_penalty = -0.4
+            land_reinforce_rate = 0.06
+            army_org_regain = 0.1
+            amphibious_invasion_defence = 0.2   #两栖登陆防御
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = -6
+        }
+        field_marshal_modifier = {
+            max_army_group_size = 4
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #栞娜
+    #工口死神
+    maid_kanna_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.1
+            army_core_attack_factor = 0.1
+            army_core_defence_factor = 0.1
+            land_reinforce_rate = 0.1
+            recon_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #恭平
+    #小男娘
+    maid_gongping_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_armor_speed_factor = 0.05
+            land_reinforce_rate = 0.05
+            initiative_factor = 0.05
+            special_forces_attack_factor = 0.1
+            winter_attrition_factor = -0.2
+            hills = {
+                movement = 0.05
+                attack = 0.1
+                defence = 0.05
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #乃爱
+    #下流天使
+    maid_noa_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor = 0.5
+            experience_gain_army_unit_factor = 0.2
+            recon_factor = 0.5
+            land_reinforce_rate = 0.05
+            max_planning = 0.05
+            enemy_army_bonus_air_superiority_factor = -0.15
+            supply_consumption_factor = 0.02
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #战乙女
+    maid_noa1_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.10
+            army_morale_factor = 0.05
+            experience_gain_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #假锉刀
+    maid_noa2_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_armor_defence_factor = 0.025
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #学习宁宁学姐
+    maid_noa3_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = 0.01
+            fort = {
+                attack = 0.1
+            }
+            urban = {
+                attack = 0.05
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #BAD END
+    maid_noa4_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor = -100
+            army_attack_factor = -100
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #佐奈
+    #初代金毛妹
+    maid_sana_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            out_of_supply_factor = -0.2
             org_loss_when_moving = -0.2
-			terrain_penalty_reduction = 0.2  
-			attrition = -0.15
-			dig_in_speed = 1
-		}
-		new_commander_weight = {
-			factor = 0
-		}
-	}
-#佐奈海军（特质底下写了，别重复）
-#枣子姐
-#孤高的坠机王
-maid_zaozi_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		enemy_army_bonus_air_superiority_factor = -0.45
-		air_attack_factor = 0.15
-		army_attack_factor = 0.1
-		army_artillery_attack_factor = 0.15
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 16
-		}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#茅羽耶
-#初恋50次？
-maid_chihaya_trait_1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
+            terrain_penalty_reduction = 0.2
+            attrition = -0.15
+            dig_in_speed = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+        enable_ability = sana_ability
+    }
+    #佐奈海军（特质底下写了，别重复）
+    #枣子姐
+    #孤高的坠机王
+    maid_zaozi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            enemy_army_bonus_air_superiority_factor = -0.45
+            air_attack_factor = 0.15
+            army_attack_factor = 0.1
+            army_artillery_attack_factor = 0.15
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 16
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #茅羽耶
+    #初恋50次？
+    maid_chihaya_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
 
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_chihaya_trait_2 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.1
-	 	experience_gain_factor = 0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_chihaya_trait_3 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.1
-	 	experience_gain_factor = 0.25
-		army_core_attack_factor = 0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_chihaya_trait_4 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.1
-	 	experience_gain_factor = 0.35
-		army_core_attack_factor = 0.15
-		army_core_defence_factor = 0.2
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_chihaya_trait_5 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.1
-	 	experience_gain_factor = 0.5
-		army_core_attack_factor = 0.15
-		army_core_defence_factor = 0.2
-		army_org_factor = 0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#夏空彼方
-maid_chihaya_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.1
-	 	experience_gain_factor = 1
-		army_core_attack_factor = 0.15
-		army_core_defence_factor = 0.2
-		army_org_factor = 0.25
-		supply_consumption_factor = -0.3
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_sana_birthday_boost1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.03
-	 	experience_gain_factor = 0.1
-		army_core_attack_factor = 0.03
-		army_core_defence_factor = 0.03
-		army_attack_factor = 0.04
-		army_defence_factor = 0.04
-		army_org_factor = 0.05
-		supply_consumption_factor = -0.04
-		 max_planning = 0.06
-		 max_dig_in = 3
-		dig_in_speed_factor = 0.2
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 4
-	}
-	field_marshal_modifier = {
-		max_commander_army_group_size = 1
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_sana_birthday_boost2 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.06
-	 	experience_gain_factor = 0.2
-		army_core_attack_factor = 0.06
-		army_core_defence_factor = 0.06
-		army_attack_factor = 0.08
-		army_defence_factor = 0.08
-		army_org_factor = 0.1
-		supply_consumption_factor = -0.08
-		 max_planning = 0.12
-		 max_dig_in = 6
-		dig_in_speed_factor = 0.2
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 8
-	}
-	field_marshal_modifier = {
-		max_commander_army_group_size = 2
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_sana_birthday_boost3 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.09
-	 	experience_gain_factor = 0.3
-		army_core_attack_factor = 0.09
-		army_core_defence_factor = 0.09
-		army_attack_factor = 0.16
-		army_defence_factor = 0.16
-		army_org_factor = 0.15
-		army_strength_factor = 0.05
-		supply_consumption_factor = -0.12
-		 max_planning = 0.20
-		 max_dig_in = 10
-		dig_in_speed_factor = 0.3
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 12
-	}
-	field_marshal_modifier = {
-		max_commander_army_group_size = 3
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_sana_birthday_boost4 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.12
-	 	experience_gain_factor = 0.4
-		army_core_attack_factor = 0.12
-		army_core_defence_factor = 0.12
-		army_attack_factor = 0.24
-		army_defence_factor = 0.24
-		army_org_factor = 0.2
-		army_strength_factor = 0.1
-		supply_consumption_factor = -0.16
-		 max_planning = 0.30
-		 max_dig_in = 15
-		dig_in_speed_factor = 0.4
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 16
-	}
-	field_marshal_modifier = {
-		max_commander_army_group_size = 4
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_sana_birthday_boost5 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		land_reinforce_rate = 0.15
-	 	experience_gain_factor = 0.5
-		army_core_attack_factor = 0.16
-		army_core_defence_factor = 0.16
-		army_attack_factor = 0.35
-		army_defence_factor = 0.35
-		army_org_factor = 0.25
-		army_strength_factor = 0.15
-		supply_consumption_factor = -0.20
-		 max_planning = 0.40
-		 max_dig_in = 20
-		dig_in_speed_factor = 0.5
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 21
-	}
-	field_marshal_modifier = {
-		max_commander_army_group_size = 5
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_chihaya_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_chihaya_trait_3 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 0.25
+            army_core_attack_factor = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_chihaya_trait_4 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 0.35
+            army_core_attack_factor = 0.15
+            army_core_defence_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_chihaya_trait_5 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 0.5
+            army_core_attack_factor = 0.15
+            army_core_defence_factor = 0.2
+            army_org_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #夏空彼方
+    maid_chihaya_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 1
+            army_core_attack_factor = 0.15
+            army_core_defence_factor = 0.2
+            army_org_factor = 0.25
+            supply_consumption_factor = -0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_sana_birthday_boost1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.03
+            experience_gain_factor = 0.1
+            army_core_attack_factor = 0.03
+            army_core_defence_factor = 0.03
+            army_attack_factor = 0.04
+            army_defence_factor = 0.04
+            army_org_factor = 0.05
+            supply_consumption_factor = -0.04
+            max_planning = 0.06
+            max_dig_in = 3
+            dig_in_speed_factor = 0.2
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 4
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_sana_birthday_boost2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.06
+            experience_gain_factor = 0.2
+            army_core_attack_factor = 0.06
+            army_core_defence_factor = 0.06
+            army_attack_factor = 0.08
+            army_defence_factor = 0.08
+            army_org_factor = 0.1
+            supply_consumption_factor = -0.08
+            max_planning = 0.12
+            max_dig_in = 6
+            dig_in_speed_factor = 0.2
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 8
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_sana_birthday_boost3 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.09
+            experience_gain_factor = 0.3
+            army_core_attack_factor = 0.09
+            army_core_defence_factor = 0.09
+            army_attack_factor = 0.16
+            army_defence_factor = 0.16
+            army_org_factor = 0.15
+            army_strength_factor = 0.05
+            supply_consumption_factor = -0.12
+            max_planning = 0.20
+            max_dig_in = 10
+            dig_in_speed_factor = 0.3
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 12
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_sana_birthday_boost4 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.12
+            experience_gain_factor = 0.4
+            army_core_attack_factor = 0.12
+            army_core_defence_factor = 0.12
+            army_attack_factor = 0.24
+            army_defence_factor = 0.24
+            army_org_factor = 0.2
+            army_strength_factor = 0.1
+            supply_consumption_factor = -0.16
+            max_planning = 0.30
+            max_dig_in = 15
+            dig_in_speed_factor = 0.4
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 16
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 4
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_sana_birthday_boost5 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_reinforce_rate = 0.15
+            experience_gain_factor = 0.5
+            army_core_attack_factor = 0.16
+            army_core_defence_factor = 0.16
+            army_attack_factor = 0.35
+            army_defence_factor = 0.35
+            army_org_factor = 0.25
+            army_strength_factor = 0.15
+            supply_consumption_factor = -0.20
+            max_planning = 0.40
+            max_dig_in = 20
+            dig_in_speed_factor = 0.5
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 21
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
 
-#羽院
-#大和抚子
-maid_hazuki_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		army_defence_factor = 0.05
-		recon_factor = 0.25
-		land_reinforce_rate = 0.05
-		coordination_bonus = 0.05
-		amphibious_invasion = 0.15
-		invasion_preparation = -0.2
-		land_night_attack = 0.15
-		river = {
-			movement = 0.2
-			attack = 0.2
-		}
-		amphibious = {
-			movement = 0.2
-			attack = 0.4
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#大和抚子（海军版）
-dahefuzi= { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		navy_anti_air_attack_factor = 0.1
-		navy_submarine_detection_factor = 0.15
-		naval_detection = 0.1
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#莉音
-#逃避命运的吞噬者
-maid_rio_trait_1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		military_leader_cost_factor = 9.99
-		army_org_factor = 0.5
-		equipment_capture = 0.3
-		desert = {
-			movement = 0.2
-		}
-		hills = {
-			movement = 0.2
-		}
-		forest = {
-			movement = 0.2
-		}
-		mountain = {
-			movement = 0.2
-		}
-		plains = {
-			movement = 0.2
-		}
-		urban = {
-			movement = 0.2
-		}
-		jungle = {
-			movement = 0.2
-		}
-		marsh = {
-			movement = 0.2
-		}
-		river = {
-			movement = 0.2
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#无心的吞噬者
-maid_rio_trait_2 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = 9.99
-		army_attack_factor = -0.99
-		breakthrough_factor = -0.99
-		army_defence_factor = -0.99
-		military_leader_cost_factor = 9.99
-		army_org_factor = -0.99
-		equipment_capture = -0.99
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#三国杀
-#魔王之母
-maid_sairi_trait_1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		army_attack_factor = 0.99
-		breakthrough_factor = 0.3
-		army_defence_factor = -0.5
-		supply_consumption_factor = -0.99
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#普通少女的恋心
-maid_sairi_trait_2 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = -0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#喜多喜多
-maid_fumika_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = 0.05
-		army_org_factor = 0.1
-		army_morale_factor = 0.15
-		planning_speed = 0.1
-		max_planning = 0.1
-		experience_gain_army_unit_factor = 0.55
-		cavalry_attack_factor = 0.15
-		cavalry_defence_factor = 0.1  
-	}
-	trait_xp_factor = {
-		maid_fumika_trait = 1
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#天音
-maid_amane_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = 0.01
-		army_morale_factor = 0.15
-		experience_gain_factor = 0.1
-		army_attack_factor = 0.05
-		army_defence_factor = 0.05
-		land_reinforce_rate = -0.01
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#石墨烯
-#不称职的巫女
-maid_nozomi_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		army_org_factor = -0.1
-		org_loss_when_moving = -0.1
-		out_of_supply_factor = -0.1
-		experience_loss_factor = -0.05
-		army_strength_factor = 0.05
-		enemy_army_bonus_air_superiority_factor = -0.15
-		wounded_chance_factor = -0.5
-		supply_consumption_factor = -0.1
-		no_supply_grace = 48
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#真正的巫女
-maid_nozomi_trait_1 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		army_org_factor = -0.05
-		org_loss_when_moving = -0.2
-		out_of_supply_factor = -0.2
-		experience_loss_factor = -0.1
-		army_strength_factor = 0.15
-		enemy_army_bonus_air_superiority_factor = -0.25
-		army_core_attack_factor = 0.1
-		army_strength_factor = 0.15
-		no_supply_grace = 72
-		supply_consumption_factor = -0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#工口会长
-maid_toko_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = -0.1
-		land_reinforce_rate = 0.1
-		coordination_bonus = 0.02
-		out_of_supply_factor = -0.2
-		wounded_chance_factor = -0.5
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 6
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#和奏
-#兄弟你好香
-maid_wakana_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		land_night_attack = 0.15
-		breakthrough_factor = 0.15
-		recon_factor = -0.1
-		army_attack_factor = 0.05
-		terrain_penalty_reduction = 0.2
-		army_infantry_defence_factor = 0.2
-		wounded_chance_factor = -0.5
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#凉音
-maid_suzune_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = -0.2
-		no_supply_grace = 48
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##美羽
-#阴阳局的利爪
-maid_miu_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		out_of_supply_factor = -0.05
-		no_supply_grace = 24
-		army_attack_factor = 0.05
-		army_defence_factor = 0.2
-		breakthrough_factor = 0.2
-		terrain_penalty_reduction = 0.2
-		supply_consumption_factor = -0.05
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##真咲
-#浮空岛的半兽娘
-maid_masaki_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		out_of_supply_factor = 0.2
-		no_supply_grace = -5
-		army_attack_factor = 0.3
-		army_defence_factor = 0.3
-		terrain_penalty_reduction = 0.2
-		supply_consumption_factor = 0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##茉优
-#诡谋科学家
-maid_Mayu_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-	   army_armor_attack_factor = 0.05					
-       army_armor_defence_factor = 0.05						
-       army_artillery_attack_factor = 0.05					
-       army_artillery_defence_factor = 0.05
-	   equipment_capture = 0.15
-	   experience_gain_factor = 0.1
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_astral_boost1 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.025
-		army_defence_factor=0.05
-		army_org_factor = 0.025
-		supply_consumption_factor = -0.025
-		army_strength_factor = 0.025
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_astral_boost2 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.05
-		army_defence_factor=0.1
-		army_org_factor = 0.05
-		supply_consumption_factor = -0.05
-		army_strength_factor = 0.05
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-maid_astral_boost3 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.075
-		army_defence_factor=0.15
-		army_org_factor = 0.075
-		supply_consumption_factor = -0.075
-		army_strength_factor = 0.075
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#薇姿 
-yz_weizi_trait = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.25
-		army_core_attack_factor = 0.25
-		army_core_defence_factor = 0.25
-		army_org_factor = -0.1
+    #羽院          #羽月——2026，2.2，22：17，伊尔诺 有人把“羽月”写成羽院了，不知道是哪个笨笨
+    #大和抚子
+    maid_hazuki_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_defence_factor = 0.05
+            recon_factor = 0.25
+            land_reinforce_rate = 0.05
+            coordination_bonus = 0.05
+            amphibious_invasion = 0.15
+            invasion_preparation = -0.2
+            land_night_attack = 0.15
+            river = {
+                movement = 0.2
+                attack = 0.2
+            }
+            amphibious = {
+                movement = 0.2
+                attack = 0.4
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #大和抚子（海军版）
+    dahefuzi= {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            navy_anti_air_attack_factor = 0.1
+            navy_submarine_detection_factor = 0.15
+            naval_detection = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #莉音
+    #逃避命运的吞噬者
+    maid_rio_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            military_leader_cost_factor = 9.99
+            army_strength_factor = 0.5
+            equipment_capture = 0.5
+            desert = {
+                movement = 0.2
+                attack = 0.1
+            }
+            hills = {
+                movement = 0.2
+                attack = 0.1
+            }
+            forest = {
+                movement = 0.2
+                attack = 0.1
+            }
+            mountain = {
+                movement = 0.2
+                attack = 0.1
+            }
+            plains = {
+                movement = 0.2
+                attack = 0.1
+            }
+            urban = {
+                movement = 0.2
+                attack = 0.1
+            }
+            jungle = {
+                movement = 0.2
+                attack = 0.1
+            }
+            marsh = {
+                movement = 0.2
+                attack = 0.1
+            }
+            river = {
+                movement = 0.2
+                attack = 0.1
+            }
+        }
+        enable_ability = rio_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #无心的吞噬者
+    maid_rio_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = 9.99
+            army_attack_factor = -0.99
+            breakthrough_factor = -0.99
+            army_defence_factor = -0.99
+            military_leader_cost_factor = 9.99
+            army_org_factor = -0.99
+            equipment_capture = -0.99
+        }
+        enable_ability = rio_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #三国杀
+    #魔王之母
+    maid_sairi_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.99
+            breakthrough_factor = 0.3
+            army_defence_factor = -0.5
+            supply_consumption_factor = -0.99
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #普通少女的恋心
+    maid_sairi_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #喜多喜多
+    maid_fumika_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = 0.05
+            army_org_factor = 0.1
+            army_morale_factor = 0.15
+            planning_speed = 0.1
+            max_planning = 0.1
+            experience_gain_army_unit_factor = 0.55
+            cavalry_attack_factor = 0.15
+            cavalry_defence_factor = 0.1
+        }
+        trait_xp_factor = {
+            maid_fumika_trait = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #天音
+    maid_amane_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = 0.01
+            army_morale_factor = 0.15
+            experience_gain_factor = 0.1
+            army_attack_factor = 0.05
+            army_defence_factor = 0.05
+            land_reinforce_rate = -0.01
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #石墨烯
+    #不称职的巫女
+    maid_nozomi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_org_factor = -0.1
+            org_loss_when_moving = -0.1
+            out_of_supply_factor = -0.1
+            experience_loss_factor = -0.05
+            army_strength_factor = 0.05
+            enemy_army_bonus_air_superiority_factor = -0.15
+            wounded_chance_factor = -0.5
+            supply_consumption_factor = -0.1
+            no_supply_grace = 48
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #真正的巫女
+    maid_nozomi_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_org_factor = -0.05
+            org_loss_when_moving = -0.2
+            out_of_supply_factor = -0.2
+            experience_loss_factor = -0.1
+            army_strength_factor = 0.15
+            enemy_army_bonus_air_superiority_factor = -0.25
+            army_core_attack_factor = 0.1
+            army_strength_factor = 0.15
+            no_supply_grace = 72
+            supply_consumption_factor = -0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #工口会长
+    maid_toko_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.5
+            land_reinforce_rate = 0.3
+            coordination_bonus = 0.2
+            out_of_supply_factor = -0.5
+            wounded_chance_factor = -1
+            initiative_factor = 0.3
+            army_defence_factor = 0.2
+            attrition = -0.25
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 6
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #和奏
+    #兄弟你好香
+    maid_wakana_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            land_night_attack = 0.25
+            breakthrough_factor = 0.2
+            recon_factor = -0.1
+            army_attack_factor = 0.1
+            terrain_penalty_reduction = 0.3
+            army_infantry_defence_factor = 0.25
+            wounded_chance_factor = -0.8
+            army_defence_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #凉音
+    #西点大师
+    maid_suzune_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.3
+            no_supply_grace = 72
+            supply_consumption_factor = -0.4
+            pocket_penalty = -0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##美羽
+    #阴阳局的利爪
+    maid_miu_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            out_of_supply_factor = -0.5
+            no_supply_grace = 72
+            army_attack_factor = 0.1
+            army_defence_factor = 0.3
+            terrain_penalty_reduction = 0.25
+            supply_consumption_factor = -0.1
+            max_plannning = 0.25
+            recon_factor = 0.5
+            coordination_bonus = 0.2
+            land_reinforce_rate = 0.2
+        }
+        enable_ability = miu_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##真咲
+    #浮空岛的半兽娘
+    maid_masaki_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            out_of_supply_factor = 0.2
+            no_supply_grace = -5
+            army_attack_factor = 0.3
+            army_defence_factor = 0.3
+            terrain_penalty_reduction = 0.2
+            supply_consumption_factor = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##茉优
+    #诡谋科学家
+    maid_Mayu_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_armor_attack_factor = 0.25
+            army_armor_defence_factor = 0.25
+            army_artillery_attack_factor = 0.35
+            army_artillery_defence_factor = 0.35
+            equipment_capture = 0.3
+            experience_gain_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_astral_boost1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.025
+            army_defence_factor=0.05
+            army_org_factor = 0.025
+            supply_consumption_factor = -0.025
+            army_strength_factor = 0.025
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_astral_boost2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.05
+            army_defence_factor=0.1
+            army_org_factor = 0.05
+            supply_consumption_factor = -0.05
+            army_strength_factor = 0.05
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_astral_boost3 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.075
+            army_defence_factor=0.15
+            army_org_factor = 0.075
+            supply_consumption_factor = -0.075
+            army_strength_factor = 0.075
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #薇姿
+    yz_weizi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.25
+            army_core_attack_factor = 0.25
+            army_core_defence_factor = 0.25
+            army_org_factor = -0.1
 
-		promote_cost_factor =  9.99
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#天音
-#无法被接受的恋心
-yz_amane_trait_1 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_org_factor = 0.1
-		supply_consumption_factor = -0.15
-		experience_gain_army_unit_factor = 2
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#保护者的保护者
-yz_amane_trait_2 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.25
-		army_defence_factor = 0.25
-		army_core_attack_factor = 0.25
-		army_core_defence_factor = 0.25
-		army_org_factor = 0.2
-		supply_consumption_factor = -0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#琴里
-maid_kotori_trait = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_org_factor = 0.15
-		army_strength_factor = 0.1
-		supply_consumption_factor = -0.05
-		air_superiority_bonus_in_combat = 1.8
-		#air_cas_present_factor = 100#不生效
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#夏莉
-#温暖世界
-maid_shirley_trait = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_strength_factor = 0.3
-		army_attack_factor = -0.2
-		combat_width_factor = -0.15
-		supply_consumption_factor = -0.15
-		army_infantry_defence_factor = 0.5
-		land_reinforce_rate = 0.25
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = 66
-	}
-}
-#来海
-#普普通通的辣妹jk(普通版)
-yz_kurumi_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = -0.1
-		planning_speed = 0.15
-		max_planning = 0.15
-		army_attack_factor = 0.1
-		army_defence_factor = 0.05
-		experience_gain_factor = 0.25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#普普通通的的辣妹jk
-yz_kurumi_trait0 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		promote_cost_factor = 9.99
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = -23
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#初出茅庐的天才辣妹jk
-yz_kurumi_trait01 = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		max_planning = 0.15
-		land_reinforce_rate = 0.1
-		experience_gain_factor = 0.45
-		promote_cost_factor = 99.99
-	}
-	attack_skill = 5
-	defense_skill = 5
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#来自于异世界顶级参谋的一丝丝记忆（？
-yz_kurumi_trait_1 = {
-	type = land
-	trait_type = personality_trait
-	attack_skill = 5
-	defense_skill = 5
-	logistics_skill = 7
-	planning_skill = 7
-	corps_commander_modifier = {
-		max_commander_army_size = 47
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#守望者的守望者
-yz_kurumi_trait_2 = {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		planning_speed = 0.3
-		max_planning = 0.3
-		supply_consumption_factor = -0.3
-		promote_cost_factor = -9.99
-	}
-	field_marshal_modifier = {
-		max_army_group_size = 5
-	}
-	attack_skill = 4
-	defense_skill = 3
-	logistics_skill = 4
-	planning_skill = 3
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#白鹿爱莉
-#小小的勇气
-yz_airi_trait= {
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_infantry_attack_factor = 0.15
-		army_infantry_defence_factor = 0.15
-		army_artillery_attack_factor = 0.2
-		army_artillery_defence_factor = 0.2
-		experience_gain_factor = 0.55
-		terrain_penalty_reduction = 0.2
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#神秘标记点@@
-	yz_ebihara_minase_trait = { #海老原水濑
+            promote_cost_factor =  9.99
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #天音
+    #无法被接受的恋心
+    yz_amane_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_org_factor = 0.1
+            supply_consumption_factor = -0.15
+            experience_gain_army_unit_factor = 2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #保护者的保护者
+    yz_amane_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.25
+            army_defence_factor = 0.25
+            army_core_attack_factor = 0.25
+            army_core_defence_factor = 0.25
+            army_org_factor = 0.2
+            supply_consumption_factor = -0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #琴里
+    maid_kotori_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_org_factor = 0.15
+            army_strength_factor = 0.1
+            supply_consumption_factor = -0.05
+            air_superiority_bonus_in_combat = 1.8
+            #air_cas_present_factor = 100#不生效
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #夏莉
+    #温暖世界
+    maid_shirley_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_strength_factor = 0.3
+            army_attack_factor = -0.2
+            combat_width_factor = -0.15
+            supply_consumption_factor = -0.15
+            army_infantry_defence_factor = 0.5
+            land_reinforce_rate = 0.25
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 66
+        }
+        new_commander_weight = {          #加了特质，防止新抽卡的师长有夏莉特质
+            factor = 0
+        }
+    }
+    #来海
+    #普普通通的辣妹jk(普通版)
+    yz_kurumi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.1
+            planning_speed = 0.15
+            max_planning = 0.15
+            army_attack_factor = 0.1
+            army_defence_factor = 0.05
+            experience_gain_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #普普通通的的辣妹jk
+    yz_kurumi_trait0 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            promote_cost_factor = 9.99
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = -23
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #初出茅庐的天才辣妹jk
+    yz_kurumi_trait01 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_planning = 0.15
+            land_reinforce_rate = 0.1
+            experience_gain_factor = 0.45
+            promote_cost_factor = 99.99
+        }
+        attack_skill = 5
+        defense_skill = 5
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #来自于异世界顶级参谋的一丝丝记忆（？
+    yz_kurumi_trait_1 = {
+        type = land
+        trait_type = personality_trait
+        attack_skill = 5
+        defense_skill = 5
+        logistics_skill = 7
+        planning_skill = 7
+        corps_commander_modifier = {
+            max_commander_army_size = 47
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #守望者的守望者
+    yz_kurumi_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = 0.3
+            max_planning = 0.3
+            supply_consumption_factor = -0.3
+            promote_cost_factor = -9.99
+        }
+        field_marshal_modifier = {
+            max_army_group_size = 5
+        }
+        attack_skill = 4
+        defense_skill = 3
+        logistics_skill = 4
+        planning_skill = 3
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    maid_kaguya_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.3
+            breakthrough_factor = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    power_of_otherworld_queen_kaguya_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 1
+            breakthrough_factor = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #白鹿爱莉
+    #小小的勇气
+    yz_airi_trait= {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_infantry_attack_factor = 0.15
+            army_infantry_defence_factor = 0.15
+            army_artillery_attack_factor = 0.2
+            army_artillery_defence_factor = 0.2
+            experience_gain_factor = 0.55
+            terrain_penalty_reduction = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #神秘标记点@@
+    yz_ebihara_minase_trait = { #海老原水濑
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_infantry_attack_factor = -0.1
+            army_armor_attack_factor = -0.05
+            mechanized_attack_factor = 0.15
+            motorized_attack_factor = 0.15
+            cavalry_attack_factor = 0.15
+            army_armor_defence_factor = 0.05
+            mechanized_defence_factor = 0.15
+            motorized_defence_factor = 0.15
+            cavalry_defence_factor = 0.15
+            desert = {
+                movement = 0.5
+            }
+            hills = {
+                movement = 0.5
+            }
+            forest = {
+                movement = 0.5
+            }
+            mountain = {
+                movement = 0.5
+            }
+            plains = {
+                movement = 0.5
+            }
+            urban = {
+                movement = 0.5
+            }
+            jungle = {
+                movement = 0.5
+            }
+            marsh = {
+                movement = 0.5
+            }
+            river = {
+                movement = 0.5
+            }
+        }
+        enable_ability = ebi_charge
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #荒神小夜       2025.3.29,16:46,伊尔诺                  #通衢必须通衢
+    yz_aragami_sayo_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 1
+            breakthrough_factor = 1
+            urban = {
+                attack = 0.2
+            }
+            amphibious = {
+                attack = 1.75
+                defence = 1.75
+                breakthrough = 1.75
+            }
+            mechanized_attack_factor = 0.15
+            motorized_attack_factor = 0.15
+            army_armor_defence_factor = 0.05
+            mechanized_defence_factor = 0.15
+            motorized_defence_factor = 0.15
+            cavalry_attack_factor = 0.35
+            cavalry_defence_factor = 0.35
+        }
+        enable_ability = aragami_sayo_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #大房妃依里
+    alexander_bartender = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = 0.5
+            max_planning = 0.2
+            max_planning_factor = 0.1
+            army_infantry_attack_factor = 0.25
+            army_infantry_defence_factor = 0.25
+            supply_consumption_factor = -0.25
+            river = {
+                attack = 0.5
+            }
+            marsh = {
+                attack = 0.5
+            }
+            amphibious = {
+                attack = 0.5
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #艾莉娜·欧文
+    yz_elina_owen_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            breakthrough_factor = 0.2
+            army_defence_factor = 0.15
+            urban = {
+                attack = 0.3
+            }
+            plains = {
+                attack = 0.25
+            }
+            hills = {
+                attack = 0.2
+            }
+            mountain = {
+                attack = 0.15
+            }
+        }
+        enable_ability = elina_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #布良梓
+    yz_mera_azusa_trait = {
+        type = land
+        trait_type = personality_trait
+        attack_skill = 5
+        defense_skill = 3
+        modifier = {
+            special_forces_attack_factor = 0.5
+            special_forces_defence_factor = 0.5
+            army_infantry_attack_factor = 0.25
+            army_infantry_defence_factor = 0.25
+            army_armor_attack_factor = 0.2
+            army_armor_defence_factor = 0.2
+            army_attack_speed_factor = 0.35
+            army_attack_factor = 0.25
+            army_defence_factor = 0.2
+            breakthrough_factor = 0.2
+            planning_speed = 0.5
+            max_planning = 0.2
+            river = {
+                attack = 0.5
+            }
+            marsh = {
+                attack = 0.5
+            }
+            amphibious = {
+                attack = 0.5
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #尼古拉
+    yz_nicola_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_defence_factor = 0.5
+            army_attack_factor = 0.2
+            cas_damage_reduction = 10
+            
+        }
+        enable_ability = nicola_bloodsucking_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #云雀丘由贵
+    yz_yuki_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_planning = 0.4444
+            planning_speed = 0.35
+            dig_in_speed_factor = 0.1
+            max_dig_in = 4
+            army_attack_speed_factor = 0.25
+            experience_gain_factor = 0.3
+            supply_consumption_factor = -0.2
+            recon_factor = 0.444
+            no_supply_grace = 120
+            land_reinforce_rate = 0.05
+            combat_width_factor = -0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_yuki_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_morale_factor = 0.1
+            wounded_chance_factor = -0.2
+            org_loss_when_moving = 0.2
+            coordination_bonus = 0.2
+            army_strength_factor = 0.2
+            army_attack_factor = 0.25
+            army_defence_factor = 0.25
+            land_reinforce_rate = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #今宫纪子
+    yz_noriko_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = -0.1
+            army_strength_factor = -0.2
+            attrition = 0.2
+            initiative_factor = -0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_noriko_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_morale_factor = 0.3
+            initiative_factor = 0.2
+            combat_width_factor = -0.2
+            army_attack_factor = 0.4
+            army_defence_factor = 0.3
+            max_planning = 0.4
+            land_reinforce_rate = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #御影须美
+    yz_sumi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor = 0.8
+            experience_gain_army_unit_factor = 0.8
+            wounded_chance_factor = 0.3
+            army_strength_factor = -0.1
+            supply_consumption_factor = 0.3
+            army_attack_factor = -0.1
+            army_defence_factor = -0.1
+            initiative_factor = -0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_sumi_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.3
+            army_defence_factor = 0.3
+            army_strength_factor = 0.15
+            dig_in_speed_factor = 0.6
+            max_dig_in = 3
+            max_planning = 0.15
+            planning_speed = 0.15
+            initiative_factor = 0.2
+            supply_consumption_factor = -0.3
+            army_morale_factor = 0.3
+            wounded_chance_factor = -0.6
+        }    
+    }
+    #中之岛妙
+    yz_tae_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_defence_factor = 0.25
+            army_armor_defence_factor = 0.2
+            experience_gain_army_unit_factor = 0.3
+            army_strength_factor = 0.2
+            army_attack_factor = 0.15
+            army_armor_attack_factor = 0.2
+            wounded_chance_factor = -0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_tae_trait_2 = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            army_morale_factor = 0.3
+            planning_speed = 0.3
+            max_planning = 0.2
+            max_dig_in = 7
+            initiative_factor = 0.1
+            coordination_bonus = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #正宗静流
+    yz_shizuru_trait = {   #不正宗的静流
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = -0.05
+            army_core_attack_factor = 0.1
+            army_defence_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    oupai_nai_kenjuuna_juse = {   #欧派平平的威严大小姐
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            max_organisation = 0.1
+            army_org = 0.2
+            army_org_factor = 0.1
+            army_org_regain = 0.1
+            army_morale_factor = 0.1
+            recon_factor = 0.8
+            land_night_attack = 0.7
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    real_shizuru = {  #正宗 静流
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.2
+            army_core_attack_factor = 0.2
+            army_defence_factor = 0.4
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #兼元灯里
+    yz_akari_trait = {      #PERFECT GIRL(伪)
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = 0.2
+            max_planning_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    aojiao_de_daxiaojie = {      #urusaii
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.2
+            army_defence_factor = -0.15
+            army_org_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    real_perfect_girl = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 0.3
+            planning_decay_rate_factor = -0.3
+            max_planning_factor = 0.3
+            supply_consumption_factor = -0.3
+            no_supply_grace = 168
+        }
+    }
+    akari_dahefuzi = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_org_factor = 0.3
+            initiative_factor = 0.3
+            recon_factor = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #月山濑奈
+    yz_sena_trait = {    #双一流女仆
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = 0.15
+            max_planning = 0.15
+            army_attack_factor = 0.05
+            army_defence_factor = 0.05
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    sena_gainianshen_da = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            supply_consumption_factor = -2
+            no_supply_grace = 1000
+            army_org_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    kimi_ga_kureta_hikari = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.3
+            army_defence_factor = 0.4
+            breakthrough_factor = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #长光麻夜
+    yz_maya_trait = {  #争强好胜大姐头
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            breakthrough_factor = 0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    help_from_haishangdushi = {   #海上都市的增援
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.6
+            breakthrough_factor = 0.6
+            army_armor_attack_factor = 0.6
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    
+    #国广日向
+    yz_hinata_trait = {   #元气满满猫猫学妹
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_core_attack_factor = 0.4
+            army_attack_factor = -0.15
+            army_org = 0.2
+            army_org_factor = 0.2
+            army_org_regain = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    false_big_sister = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            supply_consumption_factor = -1
+            no_supply_grace = 1296
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    koise_jodan = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            recon_factor = 0.1
+            experience_loss_factor = -0.8
+            attrition = -0.5
+            army_morale_factor = 0.3
+            army_strength_factor = 0.2
+            wounded_chance_factor = -1
+            casualty_trickleback = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    super_yiliu_meidou = {   #超一流女仆
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            planning_speed = 0.8
+            planning_decay_rate_factor = -0.8
+            max_planning_factor = 0.8
+            max_planning = 0.8
+            no_supply_grace = 1000
+            supply_consumption_factor = -0.8
+            out_of_supply_factor = -0.6
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    specialist_in_SM_play = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            breakthrough_factor = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    specialist_in_H_joker = {    #真琴
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.25
+            army_core_defence_factor = -0.05
+            land_reinforce_rate = 0.1
+            max_dig_in_factor = 0.2
+            combat_width_factor = -0.05
+            max_planning = 0.2
+            army_org_factor = 0.1
+        }
+    }
+    #天雾夕音
+    yz_yune_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #七条沙沙罗
+    yz_sasara_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #三好由比子
+    yz_yuiko_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #山吹葵
+    yz_aoi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = -0.1
+            army_defence_factor = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #龙胆琉璃
+    yz_ruri_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_strength_factor = 0.5
+            army_org_factor = 0.5
+            army_org_regain = 0.5
+            army_morale_factor = 0.3
+            experience_loss_factor = -0.2
+        }
+        enable_ability = ruri_haaa_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ruri_haa = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 1.7
+            army_defence_factor = -0.6
+            breakthrough_factor = 0.5
+            wounded_chance_factor = 0.5
+        }
+        enable_ability = ruri_haaa_ability
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    my_doubutsu_tomodachi = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            supply_consumption_factor = -0.2
+            initiative_factor = 0.1
+            pocket_penalty = -0.25
+            recon_factor = 0.25
+        }
+    }
+    power_of_fox_fairy = {    #琉璃海军——狐仙之力
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            potting_chance = 0.6
+            naval_detection = 0.6
+            night_spotting_chance = 1.2
+            positioning = 1
+            naval_damage_factor = 10
+            naval_defense_factor = 10
+            naval_critical_effect_factor = -10
+            naval_hit_chance = 10
+        }
+    }
+    want_to_marry_suou_trait = {   #苏芳
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_strength_factor = 0.5
+            army_org_factor = 0.5
+            army_org_regain = 0.5
+            army_morale_factor = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    suou_kawaii = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.5
+            breakthrough_factor = 0.3
+            supply_consumption_factor = -2
+            no_supply_grace = 1000
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #卯花之佐久夜姫
+    yz_sakuyahime_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            army_org_factor = 0.1
+            dig_in_speed_factor = 0.5
+            max_dig_in_factor = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_kamikaranokisu_trait = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            recon_factor = 0.1
+            experience_loss_factor = -0.8
+            attrition = -0.5
+            army_morale_factor = 0.3
+            army_strength_factor = 0.2
+            wounded_chance_factor = -1
+            casualty_trickleback = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    super_shake_sm = {   #超级抖S-市杵宍姬命特质——2026.5.28，23：11，伊尔诺
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.25
+            breakthrough_factor = 0.5
+            army_defence_factor = -0.25
+            army_strength_factor = 0.25
+        }
+    }
+    super_big_big_sister = {   #超巨型大姐姐
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            experience_loss_factor = -0.6
+            army_morale_factor = 0.3
+            wounded_chance_factor = -1
+            supply_consumption_factor = 0.2
+        }
+    }
+    god_who_collect_the_pollution = {   #收集污秽的神明
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            equipment_capture_factor = 0.75
+            experience_gain_factor = 0.75
+            pocket_penalty = -0.4
+            terrain_penalty_reduction = 0.4
+        }
+    }
+    #马庭芦花
+    yz_roka_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_core_attack_factor = -0.2
+            army_core_defence_factor = -0.2
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            army_attack_speed_factor = 0.5
+            army_retreat_speed_factor = 0.5
+            planning_speed = 0.75
+            max_planning = 0.5
+            max_planning_factor = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #鞍马小春
+    yz_koharu_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_core_attack_factor = 0.5
+            army_core_defence_factor = 0.5
+            army_attack_factor = -0.1
+            army_defence_factor = -0.1
+            army_attack_speed_factor = 0.5
+            army_retreat_speed_factor = 0.5
+            dig_in_speed_factor = 0.5
+            max_dig_in = 5
+            max_dig_in_factor = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #奥利叶
+    yz_orie_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.25
+            breakthrough_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    yz_orie_second_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.75
+            breakthrough_factor = 0.75
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #提娅
+    yz_tia_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_planning = 1
+            planning_speed = 0.5
+            army_org_factor = 0.5
+            army_strength_factor = 1
+            experience_gain_army_unit_factor = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #爱衣
+    yz_mei_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.2
+            army_org_factor = 0.2
+            army_org_regain = 0.3
+            army_strength_factor = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #常盘真寻
+    yz_mahiro_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #火宫木乃香
+    yz_konoka_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+		    army_org_factor = 0.2
+		    army_morale_factor = 0.4
+		    supply_consumption_factor = -0.5
+		    no_supply_grace = 100
+		    recon_factor = 0.2
+		    land_reinforce_rate = 0.2
+		    coordination_bonus = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #乌羽紫
+    yz_yukari_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #训练
+    yz_training_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            max_planning = -1
+            army_attack_factor = -1
+            custom_modifier_tooltip = training_trait_xp_gain_tt
+        }
+        daily_effect = {
+            gain_xp = 25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #柚子厨
+    yzc_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.05
+            army_org_factor = 0.1
+            army_morale_factor = 0.15
+            planning_speed = 0.1
+            max_planning = 0.1
+            experience_gain_army_unit_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #幸运舰长（千岁佐奈）
+    lucky_or_unlucky= {
+        type = navy
+        trait_type = personality_trait
+        modifier = {
+            navy_anti_air_attack_factor = 0.1 #因为运气好，黑云全刷对面飞机脸上
+            navy_submarine_detection_factor = 0.15 #因为运气好，小人上浮换气正好亮到
+            naval_detection = 0.15 #因为运气好，所以蒙对面位置蒙到了
+            naval_torpedo_reveal_chance_factor = -0.2 #因为运气好，撒雷对面在水听CD
+            naval_torpedo_hit_chance_factor = 0.2 #因为运气好，撒雷对面在水听CD
+            critical_receive_chance = -0.7 #因为运气好，横船赌过穿一定能成功
+            naval_critical_effect_factor = -0.7 #因为运气好，佛蒙特83079血不会被秒
+            naval_hit_chance = 0.25 #因为运气好，轮轮都如萨摩开F
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    good_woman_ririko = {    #莉莉子特质
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            supply_consumption_factor = -0.2
+		    no_supply_grace = 96
+            out_of_supply_factor = -0.5
+            army_org = 10
+            army_strength_factor = 0.2
+        }
+    }
+    broker_of_band = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 0.2
+            max_planning_factor = 0.1
+            army_attack_factor =  0.2
+            army_defence_factor =  0.2
+        }
+    }
+    give_me_a_shining_at_b_point = {   #珠珠特质
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor =  0.5
+            army_defence_factor =  -0.2
+            supply_consumption_factor = 0.1
+            army_speed_factor = 0.2
+            org_loss_when_moving = -0.5
+            wounded_chance_factor = 0.2
+        }
+    }
+    good_at_both_gita_and_study = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            experience_gain_army_unit_factor = 0.2
+            experience_gain_factor = 0.5
+            army_org = 5
+            army_org_regain = 0.2
+            army_armor_attack_factor = 0.16
+        }
+    }
+    
+    big_small_sister_good_at_sex = {    #月望特质
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_defence_factor =  0.3
+            max_dig_in = 10
+            dig_in_speed_factor = 0.3
+            army_org_factor = 0.2
+        }
+    }
+    yuzusoft_fans_girl = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            initiative_factor = 0.2
+            land_reinforce_rate = 0.05
+            combat_width_factor = -0.2
+            army_strength_factor = 0.2
+        }
+    }
+    hanakyu = {     #惠凪
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = -0.1
+            army_attack_factor  = 0.3
+            initiative_factor = 0.1
+            recon_factor = 1
+        }
+    }
+    influencing_singer = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org = 20
+            army_org_regain = 0.3
+            army_strength_factor = 0.2
+            dig_in_speed_factor = 0.5
+            max_planning_factor = 0.3
+            experience_gain_army_unit_factor = 0.2
+        }
+    }
+    internet_oppose_line_little_princess = {    #美玖
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.5
+            supply_consumption_factor = 0.1
+            recon_factor = 2
+            army_defence_factor = -0.1
+            initiative_factor = 0.1
+        }
+    }
+    best_music_maker = {   #那优花
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 0.3
+            max_planning_factor = 0.3
+            dig_in_speed_factor = 0.5
+            max_dig_in = 5
+            army_strength_factor = 0.15
+            recon_factor = 0.1
+        }
+    }
+    learn_from_trump = {      #朋花特质-新闻学大师
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            intel_from_combat_factor = 1
+            recon_factor = 1
+        }
+    }
+    seven_girl = {       #朋花-七号位女主
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.25
+            army_defence_factor = -0.3
+            army_defence_factor = 1
+            max_planning_factor = -0.3
+            max_dig_in_factor = 0.3
+        }
+    }
+    jieerrensiji_s_mentu = {    #捷尔任斯基的门徒
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            cas_damage_reduction = 0.75
+            special_forces_attack_factor = 0.25
+		    special_forces_defence_factor = 0.25
+        }
+    }
+    nekopara_in_yuzu = {   #七绪-nekopara
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 0.33
+            army_org_regain = 0.33
+            max_organisation = 0.33
+            org_loss_when_moving = -0.33
+            org_loss_at_low_org_factor = -0.33
+        }
+    }
+    big_sister_of_morin = {     #魔灵大姐头
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.25
+            army_defence_factor = 0.25
+            breakthrough_factor = 0.25
+        }
+        enable_ability = nanao_morin_ability
+    }
+    very_good_cat_sister = {    #七绪-熟女猫娘大姐姐
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            max_planning_factor = 0.15
+            planning_speed = 0.15
+            experience_gain_army_unit_factor = 0.15
+            experience_loss_factor = -0.15
+            casualty_trickleback = 0.1
+        }
+    }
+    haru_katayaga_sister = {   #涉姐-春风和煦
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 0.2
+            army_org_regain = 0.2
+            max_organisation = 0.2
+            experience_loss_factor = -0.2
+            casualty_trickleback = 0.175
+        }
+    }
+    master_in_love_really = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 0.3
+            max_planning_factor = 0.3
+            army_attack_factor = 0.45
+            breakthrough_factor = 0.3
+            army_defence_factor = 0.15
+        }
+    }
+    kuchi_yes_kokoro_no_jose_ko_ki = {    #口是心非的雌小鬼
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.2
+            army_defence_factor = -0.2
+            planning_speed = 0.2
+            max_planning_factor = -0.2
+            dig_in_speed_factor = 0.2
+            max_dig_in_factor = -0.2
+        }
+    }
+
+    #白板专属
+    yz_baiban_trait= {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor = 0.2
+        }
+        trait_xp_factor = {
+            organizer = 1
+            cavalry_leader = 1
+            infantry_leader = 1
+            skilled_staffer = 1
+            trickster = 1
+            trait_engineer = 1
+            panzer_leader = 1
+            commando = 1
+            naval_invader = 1
+
+            desert_fox = 1
+            swamp_fox = 1
+            trait_mountaineer = 1
+            hill_fighter = 1
+            jungle_rat = 1
+            ranger = 1
+            urban_assault_specialist = 1
+            winter_specialist = 1
+
+            winter_specialist = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ##吸血鬼通用特质
+    #德古拉暴动
+    trait_maid_vampires = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.25
+            army_defence_factor = 0.2
+            army_morale_factor = 0.2
+            breakthrough_factor = 0.2
+            planning_speed = 0.5
+            max_planning = 0.2
+            experience_gain_army_unit_factor= 0.25
+            experience_gain_factor= 0.25
+            org_loss_when_moving = -0.5
+            sickness_chance = -0.8
+            supply_consumption_factor = -0.15
+            land_night_attack = 1
+            desert = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            hills = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            forest = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            mountain = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            plains = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            urban = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            jungle = {
+                attack = 0.15
+                defence = 0.15
+                breakthrough = 0.15
+            }
+            marsh = {
+                attack = -0.1
+                defence = -0.2
+                breakthrough = -0.2
+            }
+            river = {
+                attack = -0.1
+                defence = -0.1
+                breakthrough = -0.1
+            }
+            amphibious = {
+                attack = -2.0
+                defence = -2.0
+                breakthrough = -2.0
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    not_alone_bird = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.56
+            army_defence_factor = -0.45
+            breakthrough_factor = 0.75
+            planning_speed = -0.15
+            max_planning_factor = -0.15
+            max_planning = -0.15
+            terrain_penalty_reduction = 0.15
+            pocket_penalty = -0.15
+        }
+    }
+    ou_kami = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.05
+            army_defence_factor = 0.9
+            breakthrough_factor = -0.75
+            casualty_trickleback = 0.5
+            max_planning_factor = 0.05
+        }
+    }
+    #结婚
+    married_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_loss_factor = -0.025
+            attrition = -0.025
+            equipment_capture_factor = 0.01
+            land_night_attack = 0.05
+            army_attack_factor = 0.025
+            breakthrough_factor = 0.02
+            army_defence_factor = 0.025
+            army_speed_factor = 0.025
+            army_org_factor = 0.025
+            army_morale_factor = 0.05
+            org_loss_when_moving = -0.025
+            planning_speed = 0.025
+            max_planning = 0.025
+            supply_consumption_factor = -0.02
+            no_supply_grace = 6
+            recon_factor = 0.025
+            land_reinforce_rate = 0.02
+            coordination_bonus = 0.02
+            max_dig_in = 0.5
+            out_of_supply_factor = -0.025
+            terrain_penalty_reduction = 0.025
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    super_married_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_loss_factor = -1
+            attrition = -1
+            equipment_capture_factor = 1
+            land_night_attack = 1
+            army_attack_factor = 25
+            breakthrough_factor = 2
+            army_defence_factor = 25
+            army_speed_factor = 25
+            army_org_factor = 25
+            army_morale_factor = 5
+            org_loss_when_moving = -25
+            planning_speed = 25
+            max_planning_factor = 25
+            supply_consumption_factor = -2
+            no_supply_grace = 600
+            recon_factor = 25
+            land_reinforce_rate = 2
+            coordination_bonus = 2
+            max_dig_in_factor = 5
+            out_of_supply_factor = -25
+            terrain_penalty_reduction = 25
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 400
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 20
+            dont_lose_dig_in_on_attack = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    caidan_trait_iron = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        trait_xp_factor = {
+            organizer = 2.5
+            cavalry_leader = 2.5
+            infantry_leader = 2.5
+            skilled_staffer = 2.5
+            trickster = 2.5
+            trait_engineer = 2.5
+            panzer_leader = 2.5
+            commando = 2.5
+            naval_invader = 2.5
+
+            desert_fox = 2.5
+            swamp_fox = 2.5
+            trait_mountaineer = 2.5
+            hill_fighter = 2.5
+            jungle_rat = 2.5
+            ranger = 2.5
+            urban_assault_specialist = 2.5
+            winter_specialist = 2.5
+
+            winter_specialist = 2.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    caidan_trait_baicha = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+
+        }
+        trait_xp_factor = {
+            organizer = 2.5
+            cavalry_leader = 2.5
+            infantry_leader = 2.5
+            skilled_staffer = 2.5
+            trickster = 2.5
+            trait_engineer = 2.5
+            panzer_leader = 2.5
+            commando = 2.5
+            naval_invader = 2.5
+
+            desert_fox = 2.5
+            swamp_fox = 2.5
+            trait_mountaineer = 2.5
+            hill_fighter = 2.5
+            jungle_rat = 2.5
+            ranger = 2.5
+            urban_assault_specialist = 2.5
+            winter_specialist = 2.5
+
+            winter_specialist = 2.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #ATRI
+    ATRI_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            army_strength_factor = 0.5  
+            planning_speed = 1
+            max_planning = 0.5
+            max_planning_factor = 0.3
+            land_night_attack = 0.5
+            experience_gain_factor = 5
+            experience_gain_army_unit_factor = 1
+            promote_cost_factor =  0.99
+            wounded_chance_factor = -114.514
+            org_loss_when_moving = -1
+            army_org_regain = 0.3
+            dig_in_speed_factor = 2
+            max_dig_in = 10
+        }
+        trait_xp_factor = {
+            organizer = 5
+            cavalry_leader = 5
+            infantry_leader = 5
+            skilled_staffer = 5
+            trickster = 5
+            trait_engineer = 5
+            panzer_leader = 5
+            commando = 5
+            naval_invader = 5
+
+            desert_fox = 5
+            swamp_fox = 5
+            trait_mountaineer = 5
+            hill_fighter = 5
+            jungle_rat = 5
+            ranger = 5
+            urban_assault_specialist = 5
+            winter_specialist = 5
+
+            winter_specialist = 5
+            #可分配的特性(需要习得指定特性之后才可点)
+            adaptable = 5
+            winter_expert = 5
+            panzer_expert = 5
+            combined_arms_expert = 5
+            cavalry_expert = 5
+            fortress_buster = 5
+            scavenger = 5
+            infantry_expert = 5
+            ambusher = 5
+            invader_ii = 5
+            naval_liason = 5
+            skirmisher = 5
+            paratrooper = 5
+            camouflage_expert = 5
+            expert_improviser = 5
+            guerilla_fighter = 5
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 24
+        }
+        field_marshal_modifier = {
+            max_army_group_size = 2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #八六
+    #铁路人偶
+    tielurenou = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            supply_consumption_factor = -0.15
+            coordination_bonus = 0.1
+            land_reinforce_rate = 0.05
+            no_supply_grace = 20
+            org_loss_when_moving = -0.1
+            attrition = -0.15
+            winter_attrition_factor = -0.25
+            heat_attrition_factor = -0.25
+            combat_width_factor = -0.05
+            out_of_supply_factor = -0.15
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #旋转的未来
+    maid_tielurenou1_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            winter_attrition_factor = -0.25
+            army_attack_factor = 0.08
+            army_defence_factor = 0.06
+            acclimatization_cold_climate_gain_factor = 0.1
+            acclimatization_hot_climate_gain_factor = 0.1
+            heat_attrition_factor = -0.25
+            max_planning = 0.05
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #van
+    #游击战士
+    maid_van_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            equipment_capture = 0.2
+            army_infantry_attack_factor = 0.15
+            army_core_defence_factor = 0.25
+            army_attack_factor = 0.1
+            experience_gain_factor = 0.45
+            no_supply_grace = 48
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #信赖
+    #特Ⅲ型驱逐舰
+    maid_Verniy_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = -0.05
+            attrition = 0.1
+            army_artillery_attack_factor = 0.3
+            experience_gain_factor = 0.3
+            sickness_chance = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #信赖
+    #红海军
+    yz_Verniy_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            special_forces_attack_factor = 0.1
+            river = {
+                attack = 0.15
+            }
+            amphibious = {
+                attack = 0.25
+            }
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #老登
+    maid_Tsukimori_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_artillery_attack_factor = 0.3
+            army_artillery_defence_factor = 0.3
+            army_attack_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #o5j
+    maid_o5j_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            out_of_supply_factor = -0.2
+            org_loss_when_moving = -0.2
+            terrain_penalty_reduction = 0.2
+            attrition = -0.15
+            dig_in_speed = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #绫空落羽初
+    maid_Weiss_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_factor = 0.35
+            army_defence_factor = -0.2
+            special_forces_attack_factor = 0.25
+            special_forces_defence_factor = 0.2
+            max_planning = 0.15
+            planning_speed = -0.25
+            amphibious_invasion = -0.35
+            terrain_penalty_reduction = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #岛主 天基螺旋炮
+    maid_Ukisov_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            cas_damage_reduction = -0.1
+            cas_attack_factor = -0.1
+            army_bonus_air_superiority_factor = -0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #岛主 查无此人
+    yz_Ukisov_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            promote_cost_factor = 2
+            reassignment_duration_factor = -2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #笨蛋绫濑101  “六大原则”战略宗师
+    maid_Ling_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = -0.1
+            army_speed_factor = 0.15
+            planning_speed = 0.25
+            max_planning = 0.2
+            org_loss_when_moving = -0.25
+            terrain_penalty_reduction = 0.2
+            land_reinforce_rate = 0.05
+            recon_factor = 0.25
+            land_night_attack = 0.2
+            reassignment_duration_factor = -0.25
+            land_leader_command = 12
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #治愈之风（伪）
+    yz_Ling_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_org_regain = 0.15
+            army_org_factor = 0.1
+            experience_loss_factor = -0.3
+            no_supply_grace = 36
+            sickness_chance = 0.05
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #牢八
+    #坚毅之心
+    maid_Laoba_trait = {
+        type = land
+        trait_type = personality_trait
+        attack_skill = 1
+        attack_skill_factor = 1
+        modifier = {
+            army_attack_factor = 0.25
+            army_core_defence_factor = -0.05
+            land_reinforce_rate = 0.1
+            max_dig_in_factor = 0.2
+            combat_width_factor = -0.05
+            max_planning = 0.2
+            army_org_factor = 0.1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #多面手
+    yz_Laoba_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_morale_factor = 0.15
+            army_infantry_attack_factor = 0.1
+            army_infantry_defence_factor = 0.1
+            army_armor_attack_factor = 0.1
+            army_armor_defence_factor = 0.1
+            mechanized_attack_factor = 0.1
+            mechanized_defence_factor = 0.1
+            cavalry_attack_factor = 0.1
+            cavalry_defence_factor = 0.1
+            land_leader_command = 6
+        }
+        daily_effect = {
+            gain_xp = 25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #曼波
+    #碧蓝航线指挥官
+    maid_Manbo_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            air_cas_present_factor = 0.1
+            planning_speed = 0.15
+            recon_factor = 0.15
+            amphibious_invasion = 0.4
+            naval_invasion_preparation = -0.35
+            shore_bombardment_bonus = 0.25
+            equipment_capture = -0.05
+            air_superiority_bonus_in_combat = 0.1
+            naval_invasion_defense = 0.25
+            experience_gain_factor = 0.5
+            promote_cost_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #赛马娘训练员
+    yz_Manbo_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            cavalry_attack_factor = 0.5
+            cavalry_defence_factor = 0.5
+            mechanized_attack_factor = 0.35
+            mechanized_defence_factor = 0.35
+            land_reinforce_rate = 0.05
+            sickness_chance = -0.60
+            attrition = 0.05
+            org_loss_when_moving = -0.25
+            experience_loss_factor = -0.25
+            reassignment_duration_factor = 0.5
+            army_core_attack_factor = 0.25
+            army_core_defence_factor = 0.25
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ############################################
+    ############################################   以下为新群u特质
+    ############################################
+	A_voice_from_wonderful_future = {         #诺卡卡特质
 		type = land
 		trait_type = personality_trait
 		modifier = {
-			army_infantry_attack_factor = -0.1
-			army_armor_attack_factor = -0.05
-			mechanized_attack_factor = 0.15
-			motorized_attack_factor = 0.15
-			cavalry_attack_factor = 0.15
-			army_armor_defence_factor = 0.05
-			mechanized_defence_factor = 0.15
-			motorized_defence_factor = 0.15
-			cavalry_defence_factor = 0.15
-		  desert = {
-				movement = 0.5
-			}
-			hills = {
-				movement = 0.5
-			}
-			forest = {
-				movement = 0.5
-			}
-			mountain = {
-				movement = 0.5
-			}
-			plains = {
-				movement = 0.5
-			}
-			urban = {
-				movement = 0.5
-			}
-			jungle = {
-				movement = 0.5
-			}
-			marsh = {
-				movement = 0.5
-			}
-			river = {
-				movement = 0.5
-			}
+			army_attack_factor = 591        #桑柏颗够吗
+            army_attack_speed_factor = 60    #应该够吧
+			army_attack_against_major_factor = 15   #来吧
+			army_attack_against_minor_factor = 3   #试一下你妮
+			                                       #蚩尤说又是这个nang的过分的波斯
+		}                                           #它手没了，它手没了就好一点了
+		new_commander_weight = {                   #可以庄心的躲这个骷髅头
+            factor = 0                              #可能我之前死了就是因为这个手
+        }
+	}
+	First_Air_Transport_Special_Operations_Brigade = {  #一空输，控油！
+		type = land
+		trait_type = personality_trait  
+		modifier = {  
+			breakthrough_factor = 12    #亡了亡了
+			army_speed_factor = 1.2       #我以为我有史莱姆ang
+			army_strength_factor = 10
+			army_org_factor = 26
+			army_org_regain = 12.12
+            army_morale_factor = 516
 		}
-		enable_ability = ebi_charge
+        corps_commander_modifier = {
+            max_commander_army_size = 100
+            dont_lose_dig_in_on_attack = 1
+        }
 		new_commander_weight = {
-			factor = 0
-		}
+            factor = 0
+        }
 	}
-
-
-#艾莉娜·欧文
-yz_elina_owen_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		army_attack_factor = 0.05
-		breakthrough_factor = 0.05
-		urban = {
-			attack = 0.2
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#布良梓
-yz_mera_azusa_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		special_forces_attack_factor = 0.25
-		special_forces_defence_factor = 0.25
-		army_infantry_attack_factor = 0.05
-		army_infantry_defence_factor = 0.05
-		urban = {
-			attack = 0.2
-		}
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#正宗静流
-yz_shizuru_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#兼元灯里
-yz_akari_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#月山濑奈
-yz_sena_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#长光麻夜
-yz_maya_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#国广日向
-yz_hinata_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#天雾夕音
-yz_yune_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#七条沙沙罗
-yz_sasara_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#三好由比子
-yz_yuiko_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#山吹葵
-yz_aoi_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#龙胆琉璃
-yz_ruri_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#卯花之佐久夜姫
-yz_sakuyahime_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#马庭芦花
-yz_roka_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#鞍马小春
-yz_koharu_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#训练
-yz_training_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		max_planning = -1
-		army_attack_factor = -1
-		custom_modifier_tooltip = training_trait_xp_gain_tt
-	}
-	daily_effect = {
-		gain_xp = 25
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#幸运舰长（千岁佐奈）
-lucky_or_unlucky= { 
-	type = navy
-	trait_type = personality_trait
-	modifier = { 
-		navy_anti_air_attack_factor = 0.05 #因为运气好，黑云全刷对面飞机脸上
-		navy_submarine_detection_factor = 0.1 #因为运气好，小人上浮换气正好亮到
-		naval_detection = 0.05 #因为运气好，所以蒙对面位置蒙到了
-		naval_torpedo_reveal_chance_factor = -0.1 #因为运气好，撒雷对面在水听CD
-		naval_torpedo_hit_chance_factor = 0.1 #因为运气好，撒雷对面在水听CD
-		critical_receive_chance = -0.3 #因为运气好，横船赌过穿一定能成功
-		naval_critical_effect_factor = -0.3 #因为运气好，佛蒙特83079血不会被秒
-		naval_hit_chance = 0.1 #因为运气好，轮轮都如萨摩开F
-
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#白板专属
-yz_baiban_trait= { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		experience_gain_factor = 0.2
-	}
-	trait_xp_factor = {
-		organizer = 1
-		cavalry_leader = 1
-		infantry_leader = 1
-		skilled_staffer = 1
-		trickster = 1
-		trait_engineer = 1
-		panzer_leader = 1
-		commando = 1
-		naval_invader = 1
-
-		desert_fox = 1
-		swamp_fox = 1
-		trait_mountaineer = 1
-		hill_fighter = 1
-		jungle_rat = 1
-		ranger = 1
-		urban_assault_specialist = 1
-		winter_specialist = 1
-		
-		winter_specialist = 1		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-##吸血鬼通用特质
-#德古拉暴动
-	trait_maid_vampires = { 
+    ad_victoriam = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 100
+            army_org_factor = 100
+            army_org_regain = 100
+            army_morale_factor = 100
+            army_strength_factor = 100
+            breakthrough_factor = 100
+			dig_in_speed = 100
+			max_dig_in_factor = 100
+            max_planning = 100
+            planning_speed = 1000
+            experience_gain_army_unit_factor = 100
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 1200
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 50
+            dont_lose_dig_in_on_attack = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    futsuuna_shoujo_no_kokoro = {   #群主特质     普通的少女心   #这里也不是群主了喵
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_strength_factor = 2000
+            army_org = 200
+			army_org_factor = 2000
+			army_org_regain = 2000
+            army_morale_factor = 3000
+            experience_loss_factor = -20
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    strong_ai = {     #强ai
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            planning_speed = 1000
+            planning_decay_rate_factor = -1000
+            max_planning_factor = 1000
+            max_planning = 1000
+            no_supply_grace = 10000
+            supply_consumption_factor = -2
+            out_of_supply_factor = -1
+            reliability = 10
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 2400
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 100
+            dont_lose_dig_in_on_attack = 1
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    world_type_maho = {     #世界级魔法
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 15000
+            army_defence_factor = 15000
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+	the_best_Minecraft_player = {   #耄耋特质一
 		type = land
 		trait_type = personality_trait
 		modifier = {
-			army_attack_factor = 0.15
-			army_defence_factor = 0.05
-			army_morale_factor = 0.1
-			breakthrough_factor = 0.2
-			planning_speed = 0.1
-			max_planning = 0.1
-			experience_gain_army_unit_factor= 0.1
-			experience_gain_factor= 0.1
-			org_loss_when_moving = -0.2
-			sickness_chance = -0.6
-			supply_consumption_factor = -0.05
-			land_night_attack = 1	
-		  desert = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			hills = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			forest = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			mountain = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			plains = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			urban = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			jungle = {
-				attack = 0.1
-            			defence = 0.1
-            			breakthrough = 0.1
-			}
-			marsh = {
-				attack = -0.1
-            			defence = -0.2
-            			breakthrough = -0.2
-			}
-			river = {
-				attack = -0.25
-            			defence = -0.25
-            			breakthrough = -0.25
-			}
-			amphibious = {
-				attack = -2.0
-            			defence = -2.0
-            			breakthrough = -2.0
-			}
+			army_attack_factor = 12.1
+			coordination_bonus = 1.21
+			dig_in_speed = 121
+			max_dig_in_factor = 1.21
+			initiative_factor = 1.21
+			terrain_penalty_reduction = 1.21
 		}
 		new_commander_weight = {
-			factor = 0
+            factor = 0
+        }
+	}
+	the_best_namaden_player = {
+		trait_type = personality_trait
+		type = land
+		modifier = {
+			supply_consumption_factor = -1.21
+			no_supply_grace = 121
+			out_of_supply_factor = -1.21
 		}
+		new_commander_weight = {
+            factor = 0
+        }
 	}
-#结婚
-married_trait = { 
-	type = land
-	trait_type = personality_trait
-	modifier = {
-		experience_loss_factor = -0.025
-		attrition = -0.025
-		equipment_capture_factor = 0.01
-		land_night_attack = 0.05
-		army_attack_factor = 0.025
-		breakthrough_factor = 0.02
-		army_defence_factor = 0.025
-		army_speed_factor = 0.025
-		army_org_factor = 0.025
-		army_morale_factor = 0.05
-		org_loss_when_moving = -0.025
-		planning_speed = 0.025
-		max_planning = 0.025
-		supply_consumption_factor = -0.02
-		no_supply_grace = 6
-		recon_factor = 0.025
-		land_reinforce_rate = 0.02
-		coordination_bonus = 0.02
-		max_dig_in = 0.5
-		out_of_supply_factor = -0.025
-		terrain_penalty_reduction = 0.025
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-caidan_trait_iron = {
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		
-	}
-	trait_xp_factor = {
-		organizer = 2.5
-		cavalry_leader = 2.5
-		infantry_leader = 2.5
-		skilled_staffer = 2.5
-		trickster = 2.5
-		trait_engineer = 2.5
-		panzer_leader = 2.5
-		commando = 2.5
-		naval_invader = 2.5
-
-		desert_fox = 2.5
-		swamp_fox = 2.5
-		trait_mountaineer = 2.5
-		hill_fighter = 2.5
-		jungle_rat = 2.5
-		ranger = 2.5
-		urban_assault_specialist = 2.5
-		winter_specialist = 2.5
-		
-		winter_specialist = 2.5		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-caidan_trait_baicha = {
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		
-	}
-	trait_xp_factor = {
-		organizer = 2.5
-		cavalry_leader = 2.5
-		infantry_leader = 2.5
-		skilled_staffer = 2.5
-		trickster = 2.5
-		trait_engineer = 2.5
-		panzer_leader = 2.5
-		commando = 2.5
-		naval_invader = 2.5
-
-		desert_fox = 2.5
-		swamp_fox = 2.5
-		trait_mountaineer = 2.5
-		hill_fighter = 2.5
-		jungle_rat = 2.5
-		ranger = 2.5
-		urban_assault_specialist = 2.5
-		winter_specialist = 2.5
-		
-		winter_specialist = 2.5		
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-#ATRI
-ATRI_trait = {
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		army_attack_factor = 0.25
-		breakthrough_factor = 0.25
-		army_defence_factor = 0.3
-		army_org = 0.1
-		army_org_factor = 0.2
-		planning_speed = 1
-		max_planning = 0.5
-		land_night_attack = 0.35
-		experience_gain_factor = 5
-		experience_gain_army_unit_factor = 0.5
-		promote_cost_factor =  999.99
-		wounded_chance_factor = -114.514
-		max_army_group_size = -4
-		org_loss_when_moving = -0.75
-	}
-	trait_xp_factor = {
-		organizer = 5
-		cavalry_leader = 5
-		infantry_leader = 5
-		skilled_staffer = 5
-		trickster = 5
-		trait_engineer = 5
-		panzer_leader = 5
-		commando = 5
-		naval_invader = 5
-
-		desert_fox = 5
-		swamp_fox = 5
-		trait_mountaineer = 5
-		hill_fighter = 5
-		jungle_rat = 5
-		ranger = 5
-		urban_assault_specialist = 5
-		winter_specialist = 5
-		
-		winter_specialist = 5		
-	#可分配的特性(需要习得指定特性之后才可点)
-		adaptable = 5
-		winter_expert = 5
-		panzer_expert = 5
-		combined_arms_expert = 5
-		cavalry_expert = 5
-		fortress_buster = 5
-		scavenger = 5
-		infantry_expert = 5
-		ambusher = 5
-		invader_ii = 5
-		naval_liason = 5
-		skirmisher = 5
-		paratrooper = 5
-		camouflage_expert = 5
-		expert_improviser = 5
-		guerilla_fighter = 5	
-	}
-	corps_commander_modifier = {
-		max_commander_army_size = -21
-	}
-	field_marshal_modifier = {
-		max_army_group_size = -5
-	}
-	new_commander_weight = {
-		factor = 0
-	}
- }
- #八六
-#铁路人偶
-tielurenou = { 
-	type = land
-	trait_type = personality_trait
-	modifier = { 
-		supply_consumption_factor = -0.15
-		coordination_bonus = 0.1
-		land_reinforce_rate = 0.05
-		no_supply_grace = 20
-		org_loss_when_moving = -0.1
-		attrition = -0.15
-		winter_attrition_factor = -0.25
-		heat_attrition_factor = -0.25
-		combat_width_factor = -0.05
-		out_of_supply_factor = -0.15
-	}
-	new_commander_weight = {
-		factor = 0
-	}
-}
-   #旋转的未来
-    maid_tielurenou1_trait = { 
-    type = land
-    trait_type = personality_trait
-    modifier = {
-        winter_attrition_factor = -0.25
-		army_attack_factor = 0.08
-		army_defence_factor = 0.06
-        acclimatization_cold_climate_gain_factor = 0.1
-        acclimatization_hot_climate_gain_factor = 0.1
-        heat_attrition_factor = -0.25
-        max_planning = 0.05
+    scp_cat_killer = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_attack_factor = 0.5
+            breakthrough_factor = 0.5
+            army_defence_factor = 0.1
+            recon_factor = 0.5
+            land_reinforce_rate = 0.1
+            coordination_bonus = 0.1
+            amphibious_invasion = 0.3
+            invasion_preparation = -0.4
+            land_night_attack = 0.3
+            river = {
+                movement = 0.4
+                attack = 0.4
+            }
+            amphibious = {
+                movement = 0.4
+                attack = 0.8
+            }
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 6
+        }
+        enable_ability = SCP_in_deep_way
+        new_commander_weight = {
+            factor = 0
+        }
     }
-    new_commander_weight = {
-        factor = 0
+    three_three_type_way_of_battle = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            equipment_capture_factor = 0.1
+            army_attack_factor = 0.5
+            army_defence_factor = 0.5
+            breakthrough_factor = 0.75
+
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+        #corps_commander_modifier = {
+        #    infantry = {
+        #        combat_width = -0.3
+        #    }
+        #}
+    }
+    soldier_and_cannon_work_together_in_WWII_style = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            breakthrough_factor = 5
+            army_strength_factor = 1
+            army_defence_factor = 1
+            
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    the_true_west_soviet_spirit = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            supply_consumption_factor = -0.5
+            army_attack_factor = 0.2
+            terrain_penalty_reduction = 0.2
+            breakthrough_factor = 0.2
+            dig_in_speed = 10
+			max_dig_in_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    mottomo_kawaii_kawaisa = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            army_core_attack_factor = 0.3
+            army_attack_factor = -0.1
+            army_attack_speed_factor = 0.3
+            army_defence_against_minor_factor = 1
+            army_attack_against_minor_factor = 0.5
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    call_from_king_s_force = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = -0.2      #因为对主要攻防不生效，目前已删除——huhu
+            army_defence_factor = -0.3
+            no_supply_grace = 96
+            supply_consumption_factor = -0.2
+            out_of_supply_factor = -0.5
+            equipment_capture_factor = 0.5
+            initiative_factor = 0.3
+            land_reinforce_rate = 0.2
+            combat_width_factor = -0.2
+            coordination_bonus = 0.2
+            land_reinforce_rate = 0.2
+        }
+    }
+    work_ai_help_you = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 1
+            max_planning_factor = 0.5
+            org_loss_when_moving = -0.33
+            army_morale_factor = 0.2
+            dig_in_speed_factor = 0.5
+            max_dig_in = 33.6
+            max_dig_in_factor = 3.36
+            dig_in_speed_factor = 3.36
+            terrain_penalty_reduction = 0.2
+            pocket_penalty = -0.3
+            planning_skill = 10
+            army_strength_factor = 0.2
+            max_planning_factor = 0.8
+            max_planning = 0.5
+            experience_gain_factor = 1
+            experience_gain_army_unit_factor = 1
+            land_night_attack = 0.5
+            army_attack_speed_factor = 0.3
+            army_retreat_speed_factor = 0.3
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 24
+            dont_lose_dig_in_on_attack = 1
+        }
+        enable_ability = work_ai_start
+        field_marshal_modifier = {
+            max_army_group_size = 5
+            dont_lose_dig_in_on_attack = 1
+        }
+    }
+    man_walk_in_night = {     #洛易
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = -0.2
+            land_night_attack = 0.35
+            supply_consumption_factor = -0.05
+        }
+    }
+    ill_and_weak = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = -0.2
+            max_planning_factor = 0.25
+            planning_speed = 0.2
+            winter_attrition_factor = -0.2
+            acclimatization_cold_climate_gain_factor = -0.2
+            acclimatization_hot_climate_gain_factor = -0.2
+        }
+    }
+    see_star = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            land_night_attack = 0.15
+            winter_attrition_factor = 0.1
+            urban = {
+                attack = -0.5
+            }
+            mountain = {
+                attack = 0.1
+            }
+            hills = {
+                attack = 0.1
+            }
+            plains = {
+                attack = 0.1
+            }
+            desert = {
+                attack = 0.1
+            }
+            forest = {
+                attack = -0.1
+            }
+        }
+    }
+    evil_in_setting = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            no_supply_grace = 1890
+            promote_cost_factor = -0.5
+            max_planning_factor = 1
+            army_org_factor = 0.1
+            army_defence_factor = 0.36
+            combat_width_factor = -0.1
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 36
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 5
+            dont_lose_dig_in_on_attack = 1
+        }
+    }
+    very_rely_on_internet = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            max_dig_in = 10
+            dig_in_speed_factor = 1
+            army_infantry_attack_factor = 0.2
+            army_infantry_defence_factor = 0.2
+            cavalry_attack_factor = -1
+            cavalry_defence_factor = -1
+            motorized_attack_factor = 0.1
+            motorized_defence_factor = 0.1
+            planning_speed = -0.1
+            breakthrough_factor = 0.36
+            sickness_chance = 0.1
+            wounded_chance_factor = -0.2
+        }
+    }
+    retired_soilder_of_greffen = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            org_loss_when_moving = -0.36
+            out_of_supply_factor = -0.36
+            pocket_penalty = -0.36
+            terrain_penalty_reduction = 0.36
+            initiative_factor = 0.36
+            coordination_bonus = 0.36
+            land_reinforce_rate = 0.36
+            cas_damage_reduction = 0.36
+            intel_from_combat_factor = 0.36
+            recon_factor = 0.36
+            experience_gain_army_unit_factor = 0.36
+            equipment_capture_factor = 0.36
+        }
+    }
+    general_of_line_division = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            supply_consumption_factor = -0.85
+            army_attack_factor = -1
+            breakthrough_factor = -0.75
+            army_strength_factor = 0.5
+            army_defence_factor = 0.75
+            army_morale_factor = 0.1
+            army_org_factor = 0.5
+            army_infantry_attack_factor = 0.5
+            army_infantry_defence_factor = 0.5
+            motorized_defence_factor = 0.3
+            army_artillery_defence_factor = 0.5
+            army_armor_defence_factor = 0.5
+            combat_width_factor = -0.8
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 456
+        }
+    }
+    power_of_general = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            land_night_attack = 0.35
+            cas_damage_reduction = 0.6
+            air_attack_factor = 0.2
+        }
+    }
+    #####################################
+    #####################################    以下为其他会社角色特质
+    #####################################    别问我为什么酸柚子的我也放下面了——御坂真琴，2026.4.2，21：37
+    #BMI设备
+    bmi_device = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            experience_gain_army_unit_factor = 0.5
+            experience_gain_factor = 0.75
+        }
+        new_commander_weight = {
+            factor = 100
+            modifier = {
+                FROM = {
+                    NOT = {
+                        has_country_flag = apply_bmi_device
+                    }
+                }
+                factor = 0
+            }
+        }
+    }
+    bmi_has_worked = {  #已经升级一次
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #茨木梨乃特质
+    #夜行性生物
+    ibaraki_rino_only_at_night = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            recon_factor = 0.3
+            combat_width_factor = -0.2
+            breakthrough_factor = 0.2
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #城门翼特质
+    #日行性生物
+    kido_tsubasa_only_at_sun = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            planning_speed = 0.3
+            max_planning_factor = 0.2
+            coordination_bonus = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    #ヤサイダブルニンニクアブラマシマシバーガー
+    yasaidaburuninnikuaboramashimashibaagaa_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_fuel_consumption_factor = -0.3
+            equipment_capture_factor = 0.3
+            army_morale_factor = 0.2
+            attrition = -0.2
+            supply_consumption_factor = -0.3
+            no_supply_grace = 72
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    call_from_king_right = {   #喵都特质
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            out_of_supply_factor = -1
+            equipment_capture = 1
+            supply_consumption_factor = -0.5
+            army_attack_factor = 0.5
+            army_defence_factor = 0.3
+            no_supply_grace = 144
+            terrain_penalty_reduction = 0.5
+            combat_width_factor = -0.2
+            equipment_capture_factor = 1
+        }
+        enable_ability = call_from_king_s_power
+    }
+    big_sister_of_kujo = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            land_reinforce_rate = 0.2
+            initiative_factor = 0.3
+            coordination_bonus = 0.3
+            max_planning = 0.5
+            army_bonus_air_superiority_factor = 0.3
+            intel_from_combat_factor = 0.4
+            max_planning_factor = 0.5
+            experience_gain_army_unit_factor = 1
+        }
+        corps_commander_modifier = {
+            dont_lose_dig_in_on_attack = 1
+        }
+    }
+    nona_times_nona_days_nona_hues_divine = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_strength_factor = 0.99
+            army_morale_factor = 0.99
+            army_armor_attack_factor = 0.99
+            air_attack_factor = 0.99
+            max_dig_in_factor = 9
+            max_dig_in = 99
+            dig_in_speed_factor = 0.99
+            planning_speed = 0.99
+            experience_gain_factor = 0.99
+        }
+    }
+    you_cannot_find_me = {    #天特质
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            #air_close_air_support_org_damage_factor = -10
+            cas_damage_reduction = 10
+            initiative_factor = 0.5
+            land_reinforce_rate = 0.05
+            army_attack_factor = 0.3
+            army_defence_factor = 0.3
+            intel_from_combat_factor = 0.5
+            recon_factor = 2
+        }
+        enable_ability = god_hidding_clothes
+    }
+    paper_bag_super_woman = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = -0.3
+            max_planning_factor = -0.2
+            army_attack_factor = 0.25
+            army_defence_factor= 0.2
+            equipment_capture = 0.1
+            max_dig_in = -5
+            dig_in_speed_factor = -0.3
+        }
+    }
+    Caeli_Hue_Caeli_Song_Caeli_Voice_Sublime = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            air_attack_factor = 1
+            cas_damage_reduction = 1
+            air_superiority_bonus_in_combat = 1
+            terrain_penalty_reduction = 0.3
+            air_close_air_support_org_damage_factor =  1
+        }
+    }
+    Reform_and_opening_up = {    #改开         #什么雷霆翻译，这是春风特质——huhu
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.3
+            army_defence_factor = 0.3
+            initiative_factor = 1
+            max_planning = -0.3
+            planning_speed = -1
+            recon_factor = 1
+            land_reinforce_rate = 1
+            coordination_bonus = 1
+            army_org = 10
+        }
+        enable_ability = NEU_student_home_three_c
+    }
+    deadly_gari = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            supply_consumption_factor = 0.2
+            army_attack_factor = -0.05
+            breakthrough_factor = 0.2
+            attrition = 0.1
+            reliability = -0.1
+            army_morale_factor = -0.1
+        }
+    }
+    Vernal_Hue_Vernal_Love_Vernal_Breeze_of_Time = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            terrain_penalty_reduction = 0.2
+            pocket_penalty = -0.2
+            out_of_supply_factor = -1
+            army_attack_speed_factor = 0.5
+            army_infantry_attack_factor = 0.2
+            army_infantry_defence_factor = 0.2
+        }
+    }
+    the_order_comm = {    #希亚特质
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.5
+            breakthrough_factor = 0.5
+            army_defence_factor = -0.2
+            terrain_penalty_reduction = 1
+            pocket_penalty = -0.5
+        }
+        enable_ability = the_command
+    }
+    final_days_of_middle_two_ill = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            initiative_factor = -0.1
+            coordination_bonus = -0.1
+            planning_speed = -0.3
+            experience_gain_army_unit_factor = -0.1
+            experience_gain_factor = -0.1
+        }
+    }
+    Nival_Hue_Nival_Flake_Nival_Trace_in_Rhyme = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            max_dig_in = 10
+            dig_in_speed_factor = 0.5
+            army_armor_attack_factor = 0.2
+            breakthrough_factor = 0.2
+            army_infantry_defence_factor = 0.2
+            army_artillery_attack_factor = 0.3
+            max_planning_factor = 0.2
+        }
+    }
+    ruyu_type_sword_big_teacher = {     #结那特质——2026.6.27 huhu 23:10
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.2
+            army_speed_factor = 0.1
+            army_core_attack_factor = 0.2
+            army_core_defence_factor = 0.2
+            land_reinforce_rate = 0.1
+        }        
+    }
+    kabutochi = {   #居合斩
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        attack_skill = 10
+        modifier = {
+            army_attack_factor = 0.25
+            army_infantry_attack_factor = 0.3
+            army_armor_attack_factor = 0.25
+            army_attack_speed_factor = 0.15
+        }
+    }
+    regression_star = {     #回归煌星
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        defense_skill = 10
+        modifier = {
+            army_strength_factor = 0.25
+            army_defence_factor = 0.5
+            army_infantry_defence_factor = 0.5
+            army_armor_attack_factor = 0.25
+            casualty_trickleback = 0.5
+            experience_loss_factor = -0.5
+            wounded_chance_factor = -1
+            terrain_penalty_reduction = 0.5
+            experience_gain_factor = 1
+            experience_gain_army_unit_factor = 1
+        }
+        enable_ability = regression_star
+        enable_ability = regression_star2
+    }
+    ghost_girl_in_mirror = {     #镜中的幽灵少女鹰白一夜特质——2026.3.18，伊尔诺 18：22
+        type = land 
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = -0.75
+            army_defence_factor = -0.75
+            attrition = -0.75
+            army_org_factor = -0.75
+            supply_consumption_factor = -0.75
+        }
+    }
+    common_girl_in_real_world = {   #普通世界的普通少女
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            army_org_factor = 0.15
+            attrition = 0.05
+            supply_consumption_factor = 0.05
+        }
+    }
+    specialist_in_biology = {   #生物学专家
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            experience_loss_factor = -1
+            army_org_factor = 0.5
+            recon_factor = 0.5
+            terrain_penalty_reduction = 0.5
+        }
+    }
+    love_in_deep_from_this_girl = {     #至深、至彻、至纯的爱
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 1
+            max_planning_factor = 1
+            breakthrough_factor = 5
+            army_attack_factor = 5
+            army_defence_factor = 5
+        }
+        enable_ability = hypong_bom
+        corps_commander_modifier = {
+            max_commander_army_size = 40
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 8
+            dont_lose_dig_in_on_attack = 1
+        }
+    }
+    childhood_sweethearts_never_lost = {   #千代田小夜美 青梅永不败
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 0.2
+            planning_speed = 0.5
+            max_planning_factor = 0.5
+            terrain_penalty_reduction = 0.7
+        }
+    }
+    powerful_childhood_sweethearts = {  #世界最强青梅
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 2.75
+            army_defence_factor = 2.75
+            breakthrough_factor = 2.75
+            pocket_penalty = -1
+            max_dig_in_factor = 10
+            dig_in_speed_factor = 10
+            attrition = -10
+            supply_consumption_factor = -10
+        }
+    }
+    sister_always_lost = {      #鹿仓忧姬  妹妹总是输
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 3.25
+            army_defence_factor = -0.75
+            breakthrough_factor = 3.75
+        }
+    }
+    best_brain_and_mind = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            planning_speed = 5
+            max_dig_in_factor = 5
+            max_planning_factor = 5
+            army_org_factor = 5
+            attrition = -5
+            supply_consumption_factor = -5
+        }
+    }
+    hotaru_in_april = {     #四月之萤
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = -0.4
+            air_close_air_support_org_damage_factor = -0.2
+            initiative_factor = -0.4
+            land_reinforce_rate = -0.4
+        }
+    }
+    flower_in_may = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 0.6
+            max_planning_factor = 0.6
+            dig_in_speed_factor = 0.6
+            max_dig_in_factor = 0.6
+            attrition = -0.6
+            pocket_penalty = -0.6
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 40
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 8
+            dont_lose_dig_in_on_attack = 1
+        }
+    }
+    human_eating_girl = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            attrition = 0.1
+            equipment_capture = 0.6
+            pocket_penalty = -0.8
+            experience_loss_factor = 0.1
+        }
+        enable_ability = eat_people
+    }
+    a_always_lie_to_me = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 5.2
+            army_defence_factor = 4.8
+            breakthrough_factor = 4.6
+        }
+    }
+    old_big_sister = {
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 7.5
+            army_defence_factor = 3.5
+            breakthrough_factor = 4.0
+            casualty_trickleback = 1
+            org_loss_when_moving = -1
+            org_loss_at_low_org_factor = -1
+            experience_loss_factor = -1
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 40
+            dont_lose_dig_in_on_attack = 1
+        }
+        field_marshal_modifier = {
+            max_commander_army_group_size = 8
+            dont_lose_dig_in_on_attack = 1
+        }
+        enable_ability = power_of_kami
+    }
+    serve_the_public_trust = {    #服务公众
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 1
+            army_org_regain = 1
+            org_loss_at_low_org_factor = -1
+            org_loss_when_moving = -1
+            army_org = 100
+            supply_consumption_factor = -1
+            no_supply_grace = 9
+            experience_loss_factor = -1
+            attrition = -2
+        }
+    }
+    protect_the_innocent = {   #保护无辜
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            
+        }
+    }
+    uphold_the_law = {     #维护法律
+        type = land
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            
+        }
+    }
+    injia_good_at_water = {    #茉子海军——2026.4.11 20：24，御坂真琴
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            sortie_efficiency = 0.3
+            navy_carrier_air_targetting_factor = 0.2
+            navy_carrier_air_targetting_factor = 0.25
+            spotting_chance = 0.3
+            naval_enemy_fleet_size_ratio_penalty_factor = 0.3
+            navy_carrier_air_attack_factor = 0.3
+            naval_coordination = 0.2
+            navy_anti_air_attack_factor = 0.5
+        }
+    }
+    best_hacker = {    #七海海军——2026.4.11 20：35，御坂真琴
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            spotting_chance = 0.5
+            naval_detection = 0.5
+            navy_submarine_detection_factor = 0.5
+            naval_speed_factor = 0.3
+            navy_carrier_air_targetting_factor = 0.5
+            navy_visibility = -0.3
+        }
+    }
+    little_guy_under_water = {    #宁宁海军——2026.4.11 20：46，御坂真琴
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            navy_submarine_detection_factor = 0.3
+            navy_submarine_attack_factor = 0.3
+            navy_visibility = -0.3
+            naval_torpedo_hit_chance_factor = 0.3
+            naval_torpedo_reveal_chance_factor = -0.5
+            naval_torpedo_screen_penetration_factor = 0.5
+            naval_torpedo_cooldown_factor = -0.5
+            navy_max_range_factor = 0.4
+            spotting_chance = 0.3
+            convoy_raiding_efficiency_factor = 0.3
+        }
+    }
+    fixible_command = {    #栞那海军——2026.4.11 20：49，御坂真琴
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            positioning = 0.5
+            naval_speed_factor = 0.2
+            naval_damage_factor = 0.2
+            screening_efficiency = 0.3
+            navy_visibility = -0.2
+            navy_org_factor = 0.2
+            naval_coordination = 0.15
+            naval_retreat_speed = 0.2
+        }
+    }
+    profersional_see_general = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            screening_efficiency = 0.3
+            naval_detection = 0.15
+            navy_capital_ship_attack_factor = 0.3
+            navy_capital_ship_defence_factor = 0.3
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+    ad_victorian_in_see = {   #我的海军——2026.4.28，18：24，伊尔诺（仅为注释时间、非编写时间）
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            navy_submarine_detection_factor = 300
+            navy_submarine_attack_factor = 300
+            navy_visibility = -10
+            naval_torpedo_hit_chance_factor = 20
+            naval_torpedo_reveal_chance_factor = -10
+            naval_torpedo_screen_penetration_factor = 10
+            naval_torpedo_cooldown_factor = -0.9
+            navy_max_range_factor = 10
+            spotting_chance = 10
+            convoy_raiding_efficiency_factor = 10
+            screening_efficiency = 300
+            naval_detection = 100
+            navy_capital_ship_attack_factor = 5000
+            navy_capital_ship_defence_factor = 5000
+            positioning = 350
+            naval_speed_factor = 50
+            naval_damage_factor = 1000
+            navy_org_factor = 30
+            naval_coordination = 500
+            naval_retreat_speed = 500
+            sortie_efficiency = 100
+            navy_carrier_air_targetting_factor = 1000
+            naval_enemy_fleet_size_ratio_penalty_factor = 0.3
+            navy_carrier_air_attack_factor = 100
+            navy_anti_air_attack_factor = 1000
+        }
+    }
+    makoto_the_great = {   #我的海军——2026.4.28，18：24，御坂真琴
+        type = navy
+        trait_type = personality_trait
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            navy_submarine_detection_factor = 1000
+            navy_submarine_attack_factor = 10000
+            navy_visibility = -10
+            naval_torpedo_hit_chance_factor = 100
+            naval_torpedo_reveal_chance_factor = -500
+            naval_torpedo_screen_penetration_factor = 10000
+            naval_torpedo_cooldown_factor = -0.99
+            navy_max_range_factor = 1000
+            spotting_chance = 100
+            convoy_raiding_efficiency_factor = 1000
+            screening_efficiency = 3000
+            naval_detection = 1000
+            navy_capital_ship_attack_factor = 10000
+            navy_capital_ship_defence_factor = 10000
+            positioning = 1000
+            naval_speed_factor = 100
+            naval_damage_factor = 100000
+            navy_org_factor = 300
+            naval_coordination = 10000
+            naval_retreat_speed = 10000
+            sortie_efficiency = 1000
+            navy_carrier_air_targetting_factor = 1000
+            naval_enemy_fleet_size_ratio_penalty_factor = 0.3
+            navy_carrier_air_attack_factor = 1000
+            navy_anti_air_attack_factor = 10000
+        }
     }
 }
-}
 
 
-	

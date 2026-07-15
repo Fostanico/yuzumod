@@ -1,1738 +1,2702 @@
 YZ_CORE_GROUP = {
-	test = {
-		priority = 1000000
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = yz_money
-						value = 1
-						compare = less_than_or_equals
-					}
-				}
-				country_event = { id = start_event.11 }
-			}
-		}
-	}
-	YzCoreGroup_election_start = {
-		priority = 100
-		days_remove = 5
-		cost = 120
-		days_re_enable = 120
-		visible = {
-			has_country_flag = YzCoreGroup_visible
-		}
-		complete_effect = {
-			clr_YzCoreGroup = yes
-		}
-		remove_effect = {
-			set_country_flag = YzCoreGroup_visible
-			set_country_flag = YzCoreGroup_first_secretary	
-		}
-	}
-
-	#YzCoreGroup_Research_Institute = {	#成立研究院(YRI
-	#	priority = 100
-	#	days_remove = 30 
-	#	cost = 0
-	#	days_re_enable = 0
-	#	visible = {
-	#		has_country_flag = YzCoreGroup_visible
-	#	}
-	#	
-	#	remove_effect = {
-	#		
-	#		set_country_flag = set_YRI
-	#	}
-	#}
-	#YzCoreGroup_Planning_Commission = {	#成立计委(YPC
-	#	priority = 100
-	#	days_remove = 0 
-	#	cost = 0
-	#	days_re_enable = 0
-	#	visible = {
-	#		has_country_flag = YzCoreGroup_visible
-	#	}
-	#}
-	#YzCoreGroup_MI7 = {	#成立情报局(YMI7
-	#	days_remove = 0 
-	#	cost = 0
-	#	days_re_enable = 0
-	#	visible = {
-	#		has_country_flag = YzCoreGroup_visible
-	#	}
-	#}
-	#YzCoreGroup_YIG_Ordnance_Group = {	#成立柚子工业兵器集团(YIGOG
-	#	days_remove = 0 
-	#	cost = 0
-	#	days_re_enable = 0
-	#	visible = {
-	#		has_country_flag = YzCoreGroup_visible
-	#	}
-	#}
-
-	Ningning_research = {		#宁宁
-		icon = GFX_ningning
-		fire_only_once = yes
-		days_remove = 15
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30	
-		visible = { 
-			has_country_flag = have_ningning
-			has_country_flag = set_YzCoreGroup
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = { 
-				love_depth > 30
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-		modifier = {
-			civilian_factory_use = 3
-		}
-		remove_effect = {
-			country_event = { id = ASHC_event.1 }
-			set_country_flag = set_YRI
-			add_to_variable = {
-				love_depth = 10
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			add_research_slot = 1
-			add_to_variable = { yz_721_research_research_speed_factor = 0.01 }
-			add_to_variable = { yz_721_research_consumer_goods_factor = 0.005 }
-			set_variable = { facility_guimo = 0 }
-			set_variable = { astral_breakthrough_point = 0 }
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Ningning_advisor
-                    	name = "绫地宁宁"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Nene.png"
-                            	small = "gfx\leader\Nene2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						allowed = {
-							
-						}
-						advisor = {  
-							slot = political_advisor
-							cost = 50
-							idea_token = Ningning_advisor
-							traits = { trait_sub_lingdiningning }
-							research_bonus = {
-								industry = 0.15
-								nuclear = 0.3
-								rocketry = 0.25
-							}
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-	}
-	Yoshino_industry = {		#芳乃振新计划
-		icon = GFX_yoshino
-		fire_only_once = yes
-		days_remove = 7
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30
-		
-		visible = { 
-			has_country_flag = have_yoshino
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = set_YzCoreGroup
-			not = { has_country_flag = finished_yoshino_industry }
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			or = {
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.1
-			civilian_factory_use = 1
-		}
-
-		remove_effect = {
-			if = {
-				limit = { }
-				add_to_variable = { Yoshino_political_power = -0.3 }
-				add_to_variable = { Yoshino_consumer_goods_factor = 0.1 }
-				add_to_variable = { Yoshino_production_speed_buildings_factor = 0.1 }
-			}
-			else_if = {
-				limit = { has_country_flag = doing_Megulu_industry }
-				add_ideas = manglujianshe
-				add_to_variable = { Yoshino_political_power = -0.3 }
-				add_to_variable = { Yoshino_consumer_goods_factor = 0.1 }
-				add_to_variable = { Yoshino_production_speed_buildings_factor = 0.1 }
-			}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Yoshino_advisor
-                    	name = "朝武芳乃"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Yoshino.png"
-                            	small = "gfx\leader\Yoshino2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 35
-							idea_token = Yoshino_advisor
-							traits = { trait_sub_chaowufangnai }
-							research_bonus = {
-								industry = 0.10
-							}
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-			set_country_flag = yoshino_industry_start
-		}
-	}
-
-	Megulu_industry = {		#美咕噜装备增产计划
-		icon = GFX_meigulu
-		fire_only_once = yes
-		days_remove = 7
-		cost = 20
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30
-		
-		visible = { 
-			has_country_flag = have_meigulu
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = set_YzCoreGroup
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			check_variable = { 
-				love_depth > 30
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.1
-			civilian_factory_use = 8
-		}
-
-		remove_effect = {
-			if = {
-				limit =  { has_country_flag = finished_yoshino_industry }
-				add_to_variable = { Megulu_consumer_goods_factor = 0.05 }
-				add_to_variable = { Megulu_political_power = -0.2 }
-				add_to_variable = { Megulu_production_speed_buildings_factor = -0.05 }
-			}
-			else_if = {
-				limit =  {  }
-				add_to_variable = { Megulu_consumer_goods_factor = 0.1 }
-				add_to_variable = { Megulu_political_power = -0.3 }
-				add_to_variable = { Megulu_production_speed_buildings_factor = -0.1 }
-			}
-
-			add_to_variable = {
-				love_depth = 10
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Megulu_advisor
-                    	name = "因幡爱瑠"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Meguru.png"
-                                small = "gfx\leader\Meguru2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 100
-							idea_token = Megulu_advisor
-							traits = { trait_sub_meigulu }
-							research_bonus = {
-								industry = 0.15
-								armor = 0.1
-							}
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-			set_country_flag = megulu_industry_start
-		}
-	}
-
-	yuyue_research = {		#羽月海军学校
-		icon = GFX_yuyuan
-		fire_only_once = yes
-		days_remove = 55
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30
-		
-		visible = { 
-			has_country_flag = have_hazuki
-			has_country_flag = set_YzCoreGroup
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			check_variable = { 
-				love_depth > 30
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-
-		modifier = {
-			experience_gain_navy_factor = -0.25
-			industrial_capacity_dockyard = -0.2
-			invasion_preparation = 0.25
-		}
-
-
-		remove_effect = {
-			add_to_variable = {
-				love_depth = 10
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = hazuki_advisor
-                    	name = "二条院羽月"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\hazuki.png"
-                            	small = "gfx\leader\hazuki2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = navy_chief
-							cost = 100
-							idea_token = hazuki_advisor
-							traits = { trait_sub_hazuki }
-							research_bonus = {
-							}
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-	}
-	#七海相关
-	Nanami_advisor_get = {		#娜娜米内阁
-		icon = GFX_qihai1
-		fire_only_once = yes
-		days_remove = 30
-		cost = 0
-		
-		visible = {
-			has_country_flag = have_nanami
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = set_YzCoreGroup
-			#not = { has_country_flag = have_nanami_high_command }
-			not = { has_country_flag = yz_bad_end }
-		}
-		
-		available = { 
-			has_country_flag = have_nanami
-			command_power > 19.99
-			has_army_experience > 24.99
-			industrial_complex > 4
-			check_variable = { 
-				love_depth > 30 
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-		
-		modifier = {
-			civilian_factory_use = 5
-	   	}
-		complete_effect = {
-			set_country_flag = have_nanami_advisor
-		}
-		
-		remove_effect = {
-			add_ideas = YzOpreative_boost1
-			set_country_flag = qihai_industry_start
-			add_to_variable = {
-				love_depth = 10
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			add_command_power = -20
-			army_experience = -25
-			create_intelligence_agency = yes
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Nanami_advisor
-                    	name = "在原七海"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Nanami.png"
-                            	small = "gfx\leader\Nanami2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 200
-							idea_token = Nanami_advisor
-							traits = { trait_sub_nanami }
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-	}
-
-	YzOpreative_open = {	
-		days_remove = 0
-		cost = 0
-		visible = { 
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = qihai_industry_start
-			not = { has_country_flag = YzOpreative_open }
-		}
-		complete_effect = {
-			set_country_flag = YzOpreative_open
-			set_country_flag = Nanami_industry_five_year_yes
-		}
-	}
-	show_yuzu_culture_department = {     #显示柚子文化局
-	    visible = {
-			has_country_flag = qiyong_youzi_2
-			not = {
-				has_country_flag = qiyong_yuzu_culture_department
-			}
-	    }
-		complete_effect = {
-			set_country_flag = qiyong_yuzu_culture_department
-		}
-	}
-	Nanami_high_command_get = { 	#娜娜米陆军顾问
-		icon = GFX_qihai
-		fire_only_once = yes
-		days_remove = 45
-		cost = 20
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30
-		available = { 
-			has_country_flag = have_nanami
-			command_power > 24.99
-			has_army_experience > 34.99
-			has_tech = tech_field_hospital
-			industrial_complex > 2
-			check_variable = { 
-				love_depth > 30 
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-
-		visible = {
-			has_country_flag = have_nanami
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = set_YzCoreGroup
-			#not = { has_country_flag = have_nanami_advisor }
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.2
-			civilian_factory_use = 3
-			production_factory_efficiency_gain_factor = -0.1
-			industrial_capacity_factory = -0.1
-			research_speed_factor = -0.05
-	   	}
-
-		complete_effect = {
-			add_command_power = -25
-			army_experience = -35
-			add_to_variable = {
-				love_depth = 10
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			hidden_effect = {
-				set_country_flag = have_nanami_high_command
-			}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Nanami_cheif
-                    	name = "在原七海"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Nanami.png"
-                            	small = "gfx\leader\Nanami2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = high_command
-							cost = 200
-							idea_token = Nanami_cheif
-							ledger = army
-							traits = { trait_sub_nanami_cheif }
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-
-		remove_effect = {
-			set_country_flag = Nanami_industry_five_year_yes
-			set_country_flag = YzOpreative_open
-			set_technology = {
-				tech_YZ_field_hospital = 1
-			}
-		}
-	}
-	
-	0nai_concert = { 		#零奶的演唱会
-		icon = GFX_lingnai	
-		days_remove = 120
-		cost = 35
-		days_re_enable = 185
-		
-		visible = { 
-			has_country_flag = have_0nai
-			has_country_flag = set_YzCoreGroup
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		modifier = {
-			consumer_goods_factor = -0.1
-			civilian_factory_use = 1
-			production_factory_efficiency_gain_factor = 0.15
-			industrial_capacity_factory = 0.15
-			research_speed_factor = 0.1
-			industrial_capacity_factory = 0.1
-			production_speed_buildings_factor = 0.125
-	   	}
-
-		complete_effect = {
-			hidden_effect = {
-                play_song = youzu28
+    test = {
+        priority = 1000000
+        complete_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        var = yz_money
+                        value = 1
+                        compare = less_than_or_equals
+                    }
+                }
+                country_event = { id = start_event.11 }
             }
-			custom_effect_tooltip = {
-				localization_key = play_the_song_of_linglai_descision_effect_tooltip
-			}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = lingnai_advisor
-                    	name = "三司绫濑"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Ayase.png"
-                            	small = "gfx\leader\Ayase2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 100
-							idea_token = lingnai_advisor
-							traits = { trait_sub_0nai }
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-	}
-	
-	miu_reinforce_vampires_organization_n = {		###美羽加强吸血鬼组织建设（灰色）
-		icon = GFX_miu
-		cost = 30
-		days_remove = 30
-		fire_only_once = yes
+        }
+    }
+    YzCoreGroup_election_start = {
+        priority = 100
+        days_remove = 5
+        cost = 120
+        days_re_enable = 120
+        visible = {
+            has_country_flag = YzCoreGroup_visible
+        }
+        complete_effect = {
+            clr_YzCoreGroup = yes
+        }
+        remove_effect = {
+            set_country_flag = YzCoreGroup_visible
+            set_country_flag = YzCoreGroup_first_secretary
+        }
+    }
 
-		visible = {
-			and = {
-				has_country_flag = have_miu
-				has_country_flag = set_YzCoreGroup
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-			has_government = neutrality
-		}
-		modifier = {
-			political_power_gain = -0.5
-			stability_weekly = 0.01
-			war_support_weekly = 0.01
-			army_morale_factor = -0.50
-			army_organization_factor = -0.10
-			army_attack_factor = -0.10
-			army_defence_factor = -0.10
-			experience_gain_army_unit_factor = -0.2
-			
-		}
+    #YzCoreGroup_Research_Institute = {	#成立研究院(YRI
+    #	priority = 100
+    #	days_remove = 30
+    #	cost = 0
+    #	days_re_enable = 0
+    #	visible = {
+    #		has_country_flag = YzCoreGroup_visible
+    #	}
+    #
+    #	remove_effect = {
+    #
+    #		set_country_flag = set_YRI
+    #	}
+    #}
+    #YzCoreGroup_Planning_Commission = {	#成立计委(YPC
+    #	priority = 100
+    #	days_remove = 0
+    #	cost = 0
+    #	days_re_enable = 0
+    #	visible = {
+    #		has_country_flag = YzCoreGroup_visible
+    #	}
+    #}
+    #YzCoreGroup_MI7 = {	#成立情报局(YMI7
+    #	days_remove = 0
+    #	cost = 0
+    #	days_re_enable = 0
+    #	visible = {
+    #		has_country_flag = YzCoreGroup_visible
+    #	}
+    #}
+    #YzCoreGroup_YIG_Ordnance_Group = {	#成立柚子工业兵器集团(YIGOG
+    #	days_remove = 0
+    #	cost = 0
+    #	days_re_enable = 0
+    #	visible = {
+    #		has_country_flag = YzCoreGroup_visible
+    #	}
+    #}
 
-		remove_effect = {
-		custom_effect_tooltip = reinforce_vampire_modifier_tt
-		add_to_variable = { vampire_attack = 0.15} 
-		add_to_variable = { love_depth = 10} 
-		add_stability = 0.1
-		add_war_support = 0.1
-		}
-	}
-	miu_reinforce_vampires_organization_d = {		###美羽加强吸血鬼组织建设（蓝色/黑色）
-		icon = GFX_miu
-		cost = 30
-		days_remove = 30
-		fire_only_once = yes
+    Murasame_knife_competition = {
+        icon = GFX_murasame
+        fire_only_once = yes
+        days_remove = 7
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+        visible = {
+            has_country_flag = have_murasame
+            has_country_flag = set_YzCoreGroup
+            has_country_flag = qiyong_youzi_2
 
-		visible = {
-			and = {
-				has_country_flag = have_miu
-				has_country_flag = set_YzCoreGroup
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-			OR = {
-				has_government = fascism
-				has_government = democratic
-			}
-		}
-		modifier = {
-			political_power_gain = -0.5
-			stability_weekly = 0.01
-			war_support_weekly = 0.01
-			army_morale_factor = -0.50
-			army_organization_factor = -0.10
-			army_attack_factor = -0.10
-			army_defence_factor = -0.10
-			experience_gain_army_unit_factor = -0.2
-			
-		}
+            not = { has_country_flag = yz_bad_end }
+        }
+        modifier = {
+            army_attack_factor = 0.05
+            army_defence_factor = 0.05
+            consumer_goods_factor = -0.05
+        }
+        complete_effect = {
+            if = {
+                limit = { not = { has_country_flag = have_murasame } }
+                hidden_effect = {
+                    yzrecruit_murasame = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_murasame
+            }
+            else = {
 
-		remove_effect = {
-		custom_effect_tooltip = reinforce_vampire_modifier_tt
-		add_to_variable = { vampire_attack = 0.10} 
-		add_to_variable = { love_depth = 10} 
-		add_stability = 0.05
-		add_war_support = 0.05
-		}
-	}
-	miu_reinforce_vampires_organization_c = {		###美羽加强吸血鬼组织建设（红色）
-		icon = GFX_miu
-		cost = 30
-		days_remove = 30
-		fire_only_once = yes
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Murasame_advisor
+                        name = "丛雨酱"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Murasame.png"
+                                small = "gfx\leader\Murasame2.png"
+                            }
+                        }
+                        set_character_flag = yz_government_flag
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {
+                            slot = political_advisor
+                            cost = 125
+                            idea_token = Murasame_advisor
+                            traits = { trait_sub_murasame }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            add_to_variable = {
+                yzc_manpower_factor = 0.01
+                tooltip = yzc_manpower_factor_gain
+            }
+            custom_effect_tooltip = get_Murasame_advisor
+        }
+    }
 
-		visible = {
-			and = {
-				has_country_flag = have_miu
-				has_country_flag = set_YzCoreGroup
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-			has_government = communism
-		}
-		modifier = {
-			political_power_gain = -0.5
-			stability_weekly = 0.02
-			war_support_weekly = 0.02
-			army_morale_factor = -0.50
-			army_organization_factor = -0.10
-			army_attack_factor = -0.10
-			army_defence_factor = -0.10
-			experience_gain_army_unit_factor = -0.2
-			
-		}
+    Ningning_research = {		#宁宁
+        icon = GFX_ningning
+        fire_only_once = yes
+        days_remove = 15
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+        visible = {
+            #has_country_flag = have_ningning   #核心决议显示
+            has_country_flag = set_YzCoreGroup
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+        modifier = {
+            civilian_factory_use = 3
+        }
+        complete_effect = {
+            if = {
+                limit = { not = { has_country_flag = have_ningning } }
+                hidden_effect = {
+                    yzrecruit_nene = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_nene
+            }
+            else = {
 
-		remove_effect = {
-		custom_effect_tooltip = reinforce_vampire_modifier_tt
-		add_to_variable = { vampire_attack = 0.15} 
-		add_to_variable = { love_depth = 20} 
-		add_stability = 0.1
-		add_war_support = 0.1
-		}
-	}
-	#蠢驴是印度人的星怒
-	remove_chunlu_and_raj_decisions = {
-		icon = GFX
-		fire_only_once = yes
-		visible = {
-			has_country_flag = qiyong_youzi_2
-		}
-		complete_effect = {
-			country_event = { id = shabichunlv_event.1 }
-		}
-	}
+            }
+        }
+        remove_effect = {
+            country_event = { id = ASHC_event.1 }
+            set_country_flag = set_YRI
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            add_research_slot = 1
+            add_to_variable = { yz_721_research_research_speed_factor = 0.01 }
+            add_to_variable = { yz_721_research_consumer_goods_factor = 0.005 }
+            set_variable = { facility_guimo = 0 }
+            set_variable = { astral_breakthrough_point = 0 }
+            set_variable = {
+                astral_breakthrough_point_total = 0
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Ningning_advisor
+                        name = "绫地宁宁"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Nene.png"
+                                small = "gfx\leader\Nene2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        allowed = {
 
-##       ########    ###    ########  ######## ########  
-##       ##         ## ##   ##     ## ##       ##     ## 
-##       ##        ##   ##  ##     ## ##       ##     ## 
-##       ######   ##     ## ##     ## ######   ########  
-##       ##       ######### ##     ## ##       ##   ##   
-##       ##       ##     ## ##     ## ##       ##    ##  
-######## ######## ##     ## ########  ######## ##     ## 	
-	
-	open_YzLeader_decisions = {
-		#icon = GFX_
-		visible = {
-			check_variable = { love_depth > 150 }
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = open_Yz_leaders_list }
-		}
-		complete_effect = {
-			set_country_flag = open_Yz_leaders_list
-		}
-	}
-	close_YzLeader_decisions = {
-		#icon = GFX_
-		visible = {
-			has_country_flag = open_Yz_leaders_list
-		}
-		complete_effect = {
-			clr_country_flag = open_Yz_leaders_list
-		}
-	}
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = political_advisor
+                            cost = 50
+                            idea_token = Ningning_advisor
+                            traits = { trait_sub_lingdiningning }
 
-	country_leader_decisions_conservatism = {
-		icon = GFX_yoshino
-		available = {
-			is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
-		}
-		visible = {
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_yoshino
-		}
-		complete_effect = {
-			country_event = { id = cwfn_event.1 }
-			clr_country_flag = open_Yz_leaders_list
-		}
-	}
+                            research_bonus = {
+                                industry = 0.15
+                                nuclear = 0.3
+                                rocketry = 0.25
+                            }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            custom_effect_tooltip = get_Ningning_advisor
+        }
+    }
+    chongzhiyouzibishangxian = {
+        visible = {
+            has_country_flag = qiyong_youzi_2
+        }
+        complete_effect = {
+            set_variable = {
+                var = yz_money_max
+                value = 20000
+            }
+        }
+    }
+    Yoshino_industry = {		#芳乃振新计划
+        icon = GFX_yoshino
+        fire_only_once = yes
+        days_remove = 7
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
 
-	country_leader_navy_Yamato_nadeshiko_decisions_conservatism = {
-		icon = GFX_yuyuan
-		available = {
-			is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
-		}
-		visible = {
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_hazuki
-		}
-		complete_effect = {
-			country_event = { id = yuyuan_event.1 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
+        visible = {
+            #has_country_flag = have_yoshino
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = set_YzCoreGroup
+            not = { has_country_flag = finished_yoshino_industry }
+            not = { has_country_flag = yz_bad_end }
+        }
 
-	country_leader_gongping_decisions_conservatism = {
-		icon = GFX_gongping
-		available = {
-			is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
-		}
-		visible = {
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_gongping
-		}
-		complete_effect = {
-			country_event = { id = GP_event.1 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
+        available = {
+            or = {
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+        }
 
-	country_leader_linglai_decisions_conservatism = {
-		icon = GFX_lingnai
-		allowed = {
+        modifier = {
+            consumer_goods_factor = 0.1
+            civilian_factory_use = 1
+        }
+        complete_effect = {
+            if = {
+                limit = { not = { has_country_flag = have_yoshino } }
+                hidden_effect = {
+                    yzrecruit_yoshino = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_yoshino
+            }
+            else = {
+
+            }
+        }
+        remove_effect = {
+            if = {
+                limit = { }
+                add_to_variable = { Yoshino_political_power = -0.3 }
+                add_to_variable = { Yoshino_consumer_goods_factor = 0.1 }
+                add_to_variable = { Yoshino_production_speed_buildings_factor = 0.1 }
+            }
+            else_if = {
+                limit = { has_country_flag = doing_Megulu_industry }
+                add_ideas = manglujianshe
+                add_to_variable = { Yoshino_political_power = -0.3 }
+                add_to_variable = { Yoshino_consumer_goods_factor = 0.1 }
+                add_to_variable = { Yoshino_production_speed_buildings_factor = 0.1 }
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Yoshino_advisor
+                        name = "朝武芳乃"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Yoshino.png"
+                                small = "gfx\leader\Yoshino2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = political_advisor
+                            cost = 35
+                            idea_token = Yoshino_advisor
+                            traits = { trait_sub_chaowufangnai }
+                            research_bonus = {
+                                industry = 0.10
+                            }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            set_country_flag = yoshino_industry_start
+            custom_effect_tooltip = get_Yoshino_advisor
+        }
+    }
+
+    Megulu_industry = {		#美咕噜装备增产计划
+        icon = GFX_meigulu
+        fire_only_once = yes
+        days_remove = 7
+        cost = 20
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+
+        visible = {
+            #has_country_flag = have_meigulu
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = set_YzCoreGroup
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.1
+            civilian_factory_use = 8
+        }
+        complete_effect = {
+            if = {
+                limit = { not = { has_country_flag = have_meigulu } }
+                hidden_effect = {
+                    yzrecruit_megulu = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_megulu
+            }
+            else = {
+
+            }
+        }
+        remove_effect = {
+            if = {
+                limit =  { has_country_flag = finished_yoshino_industry }
+                add_to_variable = { Megulu_consumer_goods_factor = 0.05 }
+                add_to_variable = { Megulu_political_power = -0.2 }
+                add_to_variable = { Megulu_production_speed_buildings_factor = -0.05 }
+            }
+            else_if = {
+                limit =  {  }
+                add_to_variable = { Megulu_consumer_goods_factor = 0.1 }
+                add_to_variable = { Megulu_political_power = -0.3 }
+                add_to_variable = { Megulu_production_speed_buildings_factor = -0.1 }
+            }
+
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Megulu_advisor
+                        name = "因幡爱瑠"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Meguru.png"
+                                small = "gfx\leader\Meguru2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = political_advisor
+                            cost = 100
+                            idea_token = Megulu_advisor
+                            traits = { trait_sub_meigulu }
+                            research_bonus = {
+                                industry = 0.15
+                                armor = 0.1
+                            }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            set_country_flag = megulu_industry_start
+            custom_effect_tooltip = get_Megulu_advisor
+        }
+    }
+
+    yuyue_research = {		#羽月海军学校
+        icon = GFX_yuyuan
+        fire_only_once = yes
+        days_remove = 55
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+
+        visible = {
+            has_country_flag = have_hazuki
+            has_country_flag = set_YzCoreGroup
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+
+        modifier = {
+            experience_gain_navy_factor = -0.25
+            industrial_capacity_dockyard = -0.2
+            invasion_preparation = 0.25
+        }
+
+
+        remove_effect = {
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = hazuki_advisor
+                        name = "二条院羽月"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\hazuki.png"
+                                small = "gfx\leader\hazuki2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = navy_chief
+                            cost = 100
+                            idea_token = hazuki_advisor
+                            traits = { trait_sub_hazuki }
+                            research_bonus = {
+                            }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            custom_effect_tooltip = get_hazuki_advisor
+        }
+    }
+    #七海相关
+    Nanami_advisor_get = {		#娜娜米内阁
+        icon = GFX_qihai1
+        fire_only_once = yes
+        days_remove = 30
+        cost = 0
+
+        visible = {
+            #has_country_flag = have_nanami
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = set_YzCoreGroup
+            #not = { has_country_flag = have_nanami_high_command }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            command_power > 19.99
+            has_army_experience > 24.99
+            industrial_complex > 4
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+
+        modifier = {
+            civilian_factory_use = 5
+        }
+        complete_effect = {
+            if = {
+                limit = { not = { has_country_flag = have_nanami } }
+                hidden_effect = {
+                    yzrecruit_nanami = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_nanami
+            }
+            else = {
+
+            }
+            set_country_flag = have_nanami_advisor
+        }
+
+        remove_effect = {
+            set_country_flag = YzOpreative_open
+            add_ideas = YzOpreative_boost1
+            set_country_flag = qihai_industry_start
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            add_command_power = -20
+            army_experience = -25
+            create_intelligence_agency = yes
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Nanami_advisor
+                        name = "在原七海"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Nanami.png"
+                                small = "gfx\leader\Nanami2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = political_advisor
+                            cost = 200
+                            idea_token = Nanami_advisor
+                            traits = { trait_sub_nanami }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+            custom_effect_tooltip = get_Nanami_advisor
+        }
+    }
+
+    Nanami_high_command_get = { 	#娜娜米陆军顾问
+        icon = GFX_qihai
+        fire_only_once = yes
+        days_remove = 45
+        cost = 20
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+        available = {
+            has_country_flag = have_nanami
+            command_power > 24.99
+            has_army_experience > 34.99
+            has_tech = tech_field_hospital
+            industrial_complex > 2
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+
+        visible = {
+            has_country_flag = have_nanami
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = set_YzCoreGroup
+            #not = { has_country_flag = have_nanami_advisor }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.2
+            civilian_factory_use = 3
+            production_factory_efficiency_gain_factor = -0.1
+            industrial_capacity_factory = -0.1
+            research_speed_factor = -0.05
+        }
+
+        complete_effect = {
+            add_command_power = -25
+            army_experience = -35
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            hidden_effect = {
+                set_country_flag = have_nanami_high_command
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Nanami_cheif
+                        name = "在原七海"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Nanami.png"
+                                small = "gfx\leader\Nanami2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = high_command
+                            cost = 200
+                            idea_token = Nanami_cheif
+                            ledger = army
+                            traits = { trait_sub_nanami_cheif }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        remove_effect = {
+            set_country_flag = Nanami_industry_five_year_yes
+            set_country_flag = YzOpreative_open
+            set_technology = {
+                tech_YZ_field_hospital = 1
+            }
+            custom_effect_tooltip = get_Nanami_cheif
+        }
+    }
+
+    0nai_concert = { 		#让绫濑组建宣传部
+        icon = GFX_lingnai
+        days_remove = 7
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+        fire_only_once = yes
+
+        visible = {
+            #has_country_flag = have_0nai
+            has_country_flag = set_YzCoreGroup
+            not = { has_country_flag = yz_bad_end }
+            has_country_flag = qiyong_youzi_2
+        }
+        available = {
+            check_variable = {
+                yz_money > 200
+                tooltip = yz_money_tooltip_compare
+            }
+            check_variable = {
+                love_depth > 30
+            }
+        }
+        modifier = {
+            consumer_goods_factor = 0.05
+        }
+        complete_effect = {
+            add_to_variable = {
+                yz_money = -200
+                tooltip =  yz_money_tooltip_subtain
+            }
+            if = {
+                limit = { not = { has_country_flag = have_0nai } }
+                hidden_effect = {
+                    yzrecruit_ayase = yes
+                }
+                custom_effect_tooltip = yz_auto_recruit
+                custom_effect_tooltip = recruit_ayase
+            }
+            else = {
+
+            }
+        }
+        remove_effect= {
+            set_country_flag = set_YzPropaganda
+            set_country_flag = unlock_YzPropaganda
+            custom_effect_tooltip = set_YzPropaganda_tt
+            custom_effect_tooltip = get_lingnai_advisor
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = lingnai_advisor
+                        name = "三司绫濑"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Ayase.png"
+                                small = "gfx\leader\Ayase2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        set_character_flag = yz_government_flag
+                        advisor = {
+                            slot = political_advisor
+                            cost = 100
+                            idea_token = lingnai_advisor
+                            traits = { trait_sub_0nai }
+                            ai_will_do = {
+                                factor = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    miu_reinforce_vampires_organization_n = {		###美羽加强吸血鬼组织建设（灰色）
+        icon = GFX_miu
+        cost = 30
+        days_remove = 30
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_miu
+                has_country_flag = set_YzCoreGroup
+                has_country_flag = qiyong_youzi_2
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+            has_government = neutrality
+        }
+        modifier = {
+            political_power_gain = -0.5
+            stability_weekly = 0.01
+            war_support_weekly = 0.01
+            army_morale_factor = -0.50
+            army_organization_factor = -0.10
+            army_attack_factor = -0.10
+            army_defence_factor = -0.10
+            experience_gain_army_unit_factor = -0.2
+
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = reinforce_vampire_modifier_tt
+            add_to_variable = { vampire_attack = 0.15}
+            add_to_variable = { love_depth = 10}
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+    }
+    miu_reinforce_vampires_organization_d = {		###美羽加强吸血鬼组织建设（蓝色/黑色）
+        icon = GFX_miu
+        cost = 30
+        days_remove = 30
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_miu
+                has_country_flag = set_YzCoreGroup
+                has_country_flag = qiyong_youzi_2
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+            OR = {
+                has_government = fascism
+                has_government = democratic
+            }
+        }
+        modifier = {
+            political_power_gain = -0.5
+            stability_weekly = 0.01
+            war_support_weekly = 0.01
+            army_morale_factor = -0.50
+            army_organization_factor = -0.10
+            army_attack_factor = -0.10
+            army_defence_factor = -0.10
+            experience_gain_army_unit_factor = -0.2
+
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = reinforce_vampire_modifier_tt
+            add_to_variable = { vampire_attack = 0.10}
+            add_to_variable = { love_depth = 10}
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+    }
+    miu_reinforce_vampires_organization_c = {		###美羽加强吸血鬼组织建设（红色）
+        icon = GFX_miu
+        cost = 30
+        days_remove = 30
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_miu
+                has_country_flag = set_YzCoreGroup
+                has_country_flag = qiyong_youzi_2
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+            has_government = communism
+        }
+        modifier = {
+            political_power_gain = -0.5
+            stability_weekly = 0.02
+            war_support_weekly = 0.02
+            army_morale_factor = -0.50
+            army_organization_factor = -0.10
+            army_attack_factor = -0.10
+            army_defence_factor = -0.10
+            experience_gain_army_unit_factor = -0.2
+
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = reinforce_vampire_modifier_tt
+            add_to_variable = { vampire_attack = 0.15}
+            add_to_variable = { love_depth = 20}
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+    }
+    #蠢驴是印度人的星怒
+    remove_chunlu_and_raj_decisions = {
+        icon = GFX
+        fire_only_once = yes
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            country_event = { id = shabichunlv_event.1 }
+        }
+    }
+
+    ##       ########    ###    ########  ######## ########
+    ##       ##         ## ##   ##     ## ##       ##     ##
+    ##       ##        ##   ##  ##     ## ##       ##     ##
+    ##       ######   ##     ## ##     ## ######   ########
+    ##       ##       ######### ##     ## ##       ##   ##
+    ##       ##       ##     ## ##     ## ##       ##    ##
+    ######## ######## ##     ## ########  ######## ##     ##
+
+    open_YzLeader_decisions = {
+        #icon = GFX_
+        visible = {
+            check_variable = { love_depth > 150 }
+            not = { has_country_flag = open_Yz_leaders_list }
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+        }
+        complete_effect = {
+            set_country_flag = open_Yz_leaders_list
+        }
+    }
+    close_YzLeader_decisions = {
+        #icon = GFX_
+        visible = {
+            has_country_flag = open_Yz_leaders_list
+        }
+        complete_effect = {
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+
+    country_leader_decisions_conservatism = {
+        icon = GFX_yoshino
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_yoshino
+        }
+        complete_effect = {
+            country_event = { id = cwfn_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+
+    country_leader_navy_Yamato_nadeshiko_decisions_conservatism = {
+        icon = GFX_yuyuan
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_hazuki
+        }
+        complete_effect = {
+            country_event = { id = yuyuan_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+
+    country_leader_gongping_decisions_conservatism = {
+        icon = GFX_gongping
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_gongping
+        }
+        complete_effect = {
+            country_event = { id = GP_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+
+    country_leader_linglai_decisions_conservatism = {
+        icon = GFX_lingnai
+        allowed = {
             is_ai = no
         }
-		available = {
+        available = {
             is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
         }
-		visible = {
+        visible = {
             is_ai = no
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_0nai
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_0nai
         }
-		complete_effect = {
-			country_event = { id = linglai_event.1 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
+        complete_effect = {
+            country_event = { id = linglai_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
 
-	country_leader_ningning_decisions_conservatism = {
-		icon = GFX_ningning
-		allowed = {
+    country_leader_ningning_decisions_conservatism = {
+        icon = GFX_ningning
+        allowed = {
             is_ai = no
         }
-		available = {
+        available = {
             is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
         }
-		visible = {
+        visible = {
             is_ai = no
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_ningning
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_ningning
         }
-		complete_effect = {
-			country_event = { id = ningning_event.2 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
-	country_leader_Murasame_decisions_conservatism = {
-		icon = GFX_murasame
-		allowed = {
-            is_ai = no
+        complete_effect = {
+            country_event = { id = ningning_event.2 }
+            clr_country_flag = open_Yz_leaders_list
         }
-		available = {
-            is_ai = no
-			check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
-			not = { has_country_flag = yz_bad_end }
-        }
-		visible = {
-            is_ai = no
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_murasame
-        }
-		complete_effect = {
-			country_event = { id = murasame_event.1 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
-	country_leader_meiyu_decisions_conservatism = {
-		icon = GFX_miu
-		allowed = {
+    }
+    country_leader_Murasame_decisions_conservatism = {
+        icon = GFX_murasame
+        allowed = {
             is_ai = no
         }
-		available = {
+        available = {
             is_ai = no
-			 
-			not = { has_country_flag = yz_bad_end }
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
         }
-		visible = {
+        visible = {
             is_ai = no
-			has_country_flag = open_yz_leaders_list
-			has_country_flag = have_miu
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_murasame
         }
-		complete_effect = {
-			country_event = { id = miu_event.1 }
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
-	是时候让柚子社领导国家了 = {
-		icon = GFX_Category_decision
-		allowed = {
+        complete_effect = {
+            country_event = { id = murasame_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+    country_leader_meiyu_decisions_conservatism = {
+        icon = GFX_miu
+        allowed = {
             is_ai = no
         }
-		available = {
+        available = {
             is_ai = no
-			 
-			not = { has_country_flag = yz_bad_end }
-        }
-		visible = {
-            is_ai = no
-			has_country_flag = open_yz_leaders_list
-        }
-		complete_effect = {
-			if = {
-				limit = {
-					has_government = communism
-				}
-				country_event = yzrmwyh_event.1
-			}
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				country_event = yzjzf_event.1
-			}
-			if = {
-				limit = {
-					has_government = neutrality
-				}
-				country_event = yzyh_event.1
-			}
-			if = {
-				limit = {
-					has_government = democratic
-				}
-				country_event = yzgh_event.1
-			}
-			clr_country_flag = open_Yz_leaders_list	
-		}
-	}
 
-######## ##       ########  ######  ######## ####  #######  ##    ## 
-##       ##       ##       ##    ##    ##     ##  ##     ## ###   ## 
-##       ##       ##       ##          ##     ##  ##     ## ####  ## 
-######   ##       ######   ##          ##     ##  ##     ## ## ## ## 
-##       ##       ##       ##          ##     ##  ##     ## ##  #### 
-##       ##       ##       ##    ##    ##     ##  ##     ## ##   ### 
-######## ######## ########  ######     ##    ####  #######  ##    ## 
-	
-	YCG_FS_empty = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-		}
-		complete_effect = {
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_empty = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-		}
-		complete_effect = {
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_empty = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-		}
-		complete_effect = {   
-			clr_country_flag = YzCoreGroup_vice_chair
-			set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_miu
+        }
+        complete_effect = {
+            country_event = { id = miu_event.1 }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
+    country_leader_aragami_sayo_decisions = {      #荒神小夜,2025.4.1,22:52,伊尔诺
+        icon = GFX_aragami_sayo
+        allowed = {
+            is_ai = no
+        }
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_aragami_sayo
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    has_government = communism
+                    has_country_flag = have_kakka_nor
+                }
+                country_event = aragami_sayo_event.2
+            }
+            else = {
+                country_event = { id = aragami_sayo_event.1 }
+            }
+            clr_country_flag = open_Yz_leaders_list
+            if = {                                                #2025.4.3,18:58,伊尔诺 我试一试这样能不能在创建领导人的时候
+                limit = {                                         #显示正确的特质名称
+                    has_government = communism                    #2024.3.3,19:20,伊尔诺 实测不行
+                }
+                set_country_flag = aragami_sayo_trait_show_c
+            }
+            else_if = {
+                limit = {
+                    has_government = democratic
+                }
+                set_country_flag = aragami_sayo_trait_show_d
+            }
+            else_if = {
+                limit = {
+                    has_government = fascism
+                }
+                set_country_flag = aragami_sayo_trait_show_f
+            }
+            else = {
+                set_country_flag = aragami_sayo_trait_show_n
+            }
+        }
+    }
+    country_leader_misaka_makoto_decision = {
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_government = communism
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_misaka_makoto
+        }
+        complete_effect = {
+            custom_effect_tooltip = makoto_become_leader
+            hidden_effect = {
+                retire_country_leader = yes
+                if = {
+                    limit = {
+                        date < 1999.12.31
+                    }
+                    create_country_leader = {
+                        name = "御坂 真琴"
+                        picture = "GFX_leader_misaka_makoto"
+                        desc = misaka_makoto_leader_desc
+                        expire = "2095.1.1"
+                        ideology = marxism
+                        traits = {
+                            tallest_biggest_uppest
+                            our_glory_and_believe
+                            our_pround_and_happy
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        OR = {
+                            tag = CHI
+                            tag = RAJ
+                        }
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "御坂 真琴"
+                        picture = "GFX_leader_misaka_makoto"
+                        desc = misaka_makoto_leader_desc
+                        expire = "2200.1.1"
+                        ideology = Communist-State
+                        traits = {
+                            new_big_forward
+                            new_class_struggle
+                            people_s_new_revolution
+                        }
+                    }
+                }
+                else = {
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "御坂 真琴"
+                        picture = "GFX_leader_misaka_makoto"
+                        desc = misaka_makoto_leader_desc
+                        expire = "2200.1.1"
+                        ideology = Communist-State
+                        traits = {
+                            new_lenin
+                            social_new_designer
+                            comrade_we_forward
+                        }
+                    }
+                }
+            }
+        }
+    }
+    country_leader_the_dead = {
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_government = communism
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_misaka_makoto
+            date > 1999.12.31
+        }
+        complete_effect = {
+            custom_effect_tooltip = we_rebuild_it
+            hidden_effect = {
+                if = {
+                    limit = {
+                        OR = {
+                            tag = CHI
+                            tag = RAJ
+                        }
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "真·御坂真琴"
+                        picture = "GFX_leader_misaka_makoto"
+                        desc = misaka_makoto_leader_desc
+                        expire = "2200.1.1"
+                        ideology = Communist-State
+                        traits = {
+                            we_will_rebuild_our_world
+                            fengshanguoshanfengshuiguoshui
+                            do_not_afraid_of_dead_and_scarif
+                        }
+                    }
+                }
+                else = {
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "真·御坂真琴"
+                        picture = "GFX_leader_misaka_makoto"
+                        desc = misaka_makoto_leader_desc
+                        expire = "2200.1.1"
+                        ideology = Communist-State
+                        traits = {
+                            we_will_rebuild_our_world
+                            we_strong_than_hell
+                            do_not_afraid_of_dead_and_scarif
+                        }
+                    }
+                }
+            }
+        }
+    }
+    country_leader_huhu_decision = {
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_huhu
+        }
+        complete_effect = {
+            custom_effect_tooltip = huhu_become_leader
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "huhu~"
+                        picture = "GFX_leader_huhu"
+                        desc = huhu_leader_desc
+                        expire = "2300.1.1"
+                        ideology = marxism
+                        traits = {
+                            John_official_in_planting_field
+                            victory_in_air
+                            war_lover_in_war_lover_field
+                            kaishen_type_yichihyakuyichi
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "huhu~"
+                        picture = "GFX_leader_huhu"
+                        desc = huhu_leader_desc
+                        expire = "2300.1.1"
+                        ideology = conservatism
+                        traits = {
+                            John_official_in_planting_field
+                            victory_in_air
+                            war_lover_in_war_lover_field
+                            kaishen_type_yichihyakuyichi
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "huhu~"
+                        picture = "GFX_leader_huhu"
+                        desc = huhu_leader_desc
+                        expire = "2300.1.1"
+                        ideology = fascism_ideology
+                        traits = {
+                            John_official_in_planting_field
+                            victory_in_air
+                            war_lover_in_war_lover_field
+                            kaishen_type_yichihyakuyichi
+                        }
+                    }
+                }
+                else = {
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "huhu~"
+                        picture = "GFX_leader_huhu"
+                        desc = huhu_leader_desc
+                        expire = "2300.1.1"
+                        ideology = despotism
+                        traits = {
+                            John_official_in_planting_field
+                            victory_in_air
+                            war_lover_in_war_lover_field
+                            kaishen_type_yichihyakuyichi
+                        }
+                    }
+                }
+            }
+        }
+    }
+    country_leader_chun_decision = {
+        available = {
+            is_ai = no
+            check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_country_flag = open_yz_leaders_list
+            has_country_flag = have_chun
+        }
+        complete_effect = {
+            custom_effect_tooltip = chun_become_leader
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "诺 亚"
+                        picture = "GFX_leader_chun"
+                        desc = chun_leader_desc
+                        expire = "2300.1.1"
+                        ideology = marxism
+                        traits = {
+                            hope_for_new_centery_navy
+                            pastisen_of_boomer
+                            best_solve_in_keiei
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                        name = "诺 亚"
+                        picture = "GFX_leader_chun"
+                        desc = chun_leader_desc
+                        expire = "2300.1.1"
+                        ideology = conservatism
+                        traits = {
+                            hope_for_new_centery_navy
+                            pastisen_of_boomer
+                            best_solve_in_keiei
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    retire_country_leader = yes
+                    create_country_leader = {
+                         name = "诺 亚"
+                        picture = "GFX_leader_chun"
+                        desc = chun_leader_desc
+                        expire = "2300.1.1"
+                        ideology = fascism_ideology
+                        traits = {
+                            hope_for_new_centery_navy
+                            pastisen_of_boomer
+                            best_solve_in_keiei
+                        }
+                    }
+                }
+                else = {
+                    retire_country_leader = yes
+                    create_country_leader = {
+                         name = "诺 亚"
+                        picture = "GFX_leader_chun"
+                        desc = chun_leader_desc
+                        expire = "2300.1.1"
+                        ideology = despotism
+                        traits = {
+                            hope_for_new_centery_navy
+                            pastisen_of_boomer
+                            best_solve_in_keiei
+                        }
+                    }
+                }
+            }
+        }
+    }
+    是时候让柚子社领导国家了 = {
+        icon = GFX_Category_decision
+        allowed = {
+            is_ai = no
+        }
+        available = {
+            is_ai = no
 
-	YCG_FS_yoshino = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_yoshino }
-			has_country_flag = have_yoshino 
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_yoshino	
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-			add_ideas = YCG_yoshino
-		}
-	}
-	YCG_CM_yoshino = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_yoshino }
-			has_country_flag = have_yoshino
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_yoshino
-			
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-			add_ideas = YCG_yoshino
-		}
-	}
-	YCG_VC_yoshino = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_yoshino }
-			has_country_flag = have_yoshino
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_yoshino
-			
-			clr_country_flag = YzCoreGroup_vice_chair
-			set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-			add_ideas = YCG_yoshino
-		}
-	}
+            not = { has_country_flag = yz_bad_end }
+        }
+        visible = {
+            is_ai = no
+            has_country_flag = open_yz_leaders_list
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    has_government = communism
+                }
+                country_event = yzrmwyh_event.1
+            }
+            if = {
+                limit = {
+                    has_government = fascism
+                }
+                country_event = yzjzf_event.1
+            }
+            if = {
+                limit = {
+                    has_government = neutrality
+                }
+                country_event = yzyh_event.1
+            }
+            if = {
+                limit = {
+                    has_government = democratic
+                }
+                country_event = yzgh_event.1
+            }
+            clr_country_flag = open_Yz_leaders_list
+        }
+    }
 
-	YCG_FS_murasame = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_murasame }
-			has_country_flag = have_murasame
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_murasame
-			 
-			add_ideas = YCG_murasame
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_murasame = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman 
-			not = { has_idea = YCG_murasame }
-			has_country_flag = have_murasame
-		}  
-		complete_effect = {
-			set_country_flag = YCG_CM_murasame
-			 
-			add_ideas = YCG_murasame
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_murasame = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_murasame }
-			has_country_flag = have_murasame
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_murasame
-			add_ideas = YCG_murasame
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_nene = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_nene }
-			has_country_flag = have_ningning
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_nene
-			 
-			add_ideas = YCG_nene
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_nene = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_nene }
-			has_country_flag = have_ningning
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_nene
-			 
-			add_ideas = YCG_nene
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_nene = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_nene }
-			has_country_flag = have_ningning
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_nene
-			add_ideas = YCG_nene
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	} 
-	YCG_FS_ayase = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = { 
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_ayase }
-			has_country_flag = have_0nai
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_ayase
-			 
-			add_ideas = YCG_ayase
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_ayase = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_ayase }
-			has_country_flag = have_0nai
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_ayase
-			 
-			add_ideas = YCG_ayase
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_ayase = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_ayase }
-			has_country_flag = have_0nai
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_ayase
-			add_ideas = YCG_ayase
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_miu = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = { 
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_miu }
-			has_country_flag = have_miu
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_miu
-			 
-			add_ideas = YCG_miu
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_miu = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_miu }
-			has_country_flag = have_miu
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_miu
-			 
-			add_ideas = YCG_miu
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_miu = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_miu }
-			has_country_flag = have_miu
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_miu
-			add_ideas = YCG_miu
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_hazuki = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_hazuki }
-			has_country_flag = have_hazuki
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_hazuki
-			 
-			add_ideas = YCG_hazuki
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_hazuki = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_hazuki }
-			has_country_flag = have_hazuki
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_hazuki
-			 
-			add_ideas = YCG_hazuki
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_hazuki = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_hazuki }
-			has_country_flag = have_hazuki
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_hazuki
-			add_ideas = YCG_hazuki
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_megulu = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_megulu }
-			has_country_flag = have_meigulu
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_megulu
-			 
-			add_ideas = YCG_megulu
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_megulu = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_megulu }
-			has_country_flag = have_meigulu
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_megulu
-			 
-			add_ideas = YCG_megulu
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_megulu = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_megulu }
-			has_country_flag = have_meigulu
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_megulu
-			add_ideas = YCG_megulu
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_nanami = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_nanami }
-			has_country_flag = have_nanami
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_nanami
-			 
-			add_ideas = YCG_nanami
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_nanami = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_nanami }
-			has_country_flag = have_nanami
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_nanami
-			 
-			add_ideas = YCG_nanami
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_nanami = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_nanami }
-			has_country_flag = have_nanami
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_nanami
-			add_ideas = YCG_nanami
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_mayu = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_mayu }
-			has_country_flag = have_Mayu
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_mayu
-			 
-			add_ideas = YCG_mayu
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_mayu = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_mayu }
-			has_country_flag = have_Mayu
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_mayu
-			 
-			add_ideas = YCG_mayu
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_mayu = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_mayu }
-			has_country_flag = have_Mayu
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_mayu
-			add_ideas = YCG_mayu
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_toko = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_toko }
-			has_country_flag = have_toko
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_toko
-			 
-			add_ideas = YCG_toko
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_toko = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_toko }
-			has_country_flag = have_toko
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_toko
-			 
-			add_ideas = YCG_toko
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_toko = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_toko }
-			has_country_flag = have_toko
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_toko
-			add_ideas = YCG_toko
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_kanna = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_kanna }
-			has_country_flag = have_kanna
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_kanna
-			 
-			add_ideas = YCG_kanna
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_kanna = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_kanna }
-			has_country_flag = have_kanna
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_kanna
-			 
-			add_ideas = YCG_kanna
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_kanna = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_kanna }
-			has_country_flag = have_kanna
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_kanna
-			add_ideas = YCG_kanna
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_noa = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_noa }
-			has_country_flag = have_noa
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_noa
-			 
-			add_ideas = YCG_noa
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_noa = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_noa }
-			has_country_flag = have_noa
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_noa
-			 
-			add_ideas = YCG_noa
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_noa = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_noa }
-			has_country_flag = have_noa
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_noa
-			add_ideas = YCG_noa
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_fumika = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_fumika }
-			has_country_flag = have_fumika
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_fumika
-			 
-			add_ideas = YCG_fumika
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_fumika = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_fumika }
-			has_country_flag = have_fumika
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_fumika
-			 
-			add_ideas = YCG_fumika
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_fumika = {	#副主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_fumika }
-			has_country_flag = have_fumika
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_fumika
-			add_ideas = YCG_fumika
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
-	YCG_FS_sana = {	#第一书记
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_first_secretary
-			not = { has_idea = YCG_sana }
-			has_country_flag = have_sana
-		}
-		complete_effect = {
-			set_country_flag = YCG_FS_sana
-			 
-			add_ideas = YCG_sana
-			clr_country_flag = YzCoreGroup_first_secretary
-			set_country_flag = YzCoreGroup_chairman
-		}
-	}
-	YCG_CM_sana = {	#主席
-		days_remove = 0
-		priority = 10
-		visible = {
-			has_country_flag = YzCoreGroup_chairman
-			not = { has_idea = YCG_sana }
-			has_country_flag = have_sana
-		}
-		complete_effect = {
-			set_country_flag = YCG_CM_sana
-			 
-			add_ideas = YCG_sana
-			clr_country_flag = YzCoreGroup_chairman
-			set_country_flag = YzCoreGroup_vice_chair
-		}
-	}
-	YCG_VC_sana = {	#副主席
-		priority = 10
-		days_remove = 0
-		visible = {
-			has_country_flag = YzCoreGroup_vice_chair
-			not = { has_idea = YCG_sana }
-			has_country_flag = have_sana
-		}
-		complete_effect = {
-			set_country_flag = YCG_VC_sana
-			add_ideas = YCG_sana
-			clr_country_flag = YzCoreGroup_vice_chair
-			 set_country_flag = have_YCG_VC
-			set_country_flag = have_YCG_FS
-			set_country_flag = have_YCG_CM
-		}
-	}
+    ######## ##       ########  ######  ######## ####  #######  ##    ##
+    ##       ##       ##       ##    ##    ##     ##  ##     ## ###   ##
+    ##       ##       ##       ##          ##     ##  ##     ## ####  ##
+    ######   ##       ######   ##          ##     ##  ##     ## ## ## ##
+    ##       ##       ##       ##          ##     ##  ##     ## ##  ####
+    ##       ##       ##       ##    ##    ##     ##  ##     ## ##   ###
+    ######## ######## ########  ######     ##    ####  #######  ##    ##
 
+    YCG_FS_empty = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+        }
+        complete_effect = {
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_empty = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+        }
+        complete_effect = {
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_empty = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+        }
+        complete_effect = {
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
 
+    YCG_FS_yoshino = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_yoshino }
+            has_country_flag = have_yoshino
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_yoshino
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+            add_ideas = YCG_yoshino
+        }
+    }
+    YCG_CM_yoshino = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_yoshino }
+            has_country_flag = have_yoshino
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_yoshino
+
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+            add_ideas = YCG_yoshino
+        }
+    }
+    YCG_VC_yoshino = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_yoshino }
+            has_country_flag = have_yoshino
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_yoshino
+
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+            add_ideas = YCG_yoshino
+        }
+    }
+
+    YCG_FS_murasame = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_murasame }
+            has_country_flag = have_murasame
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_murasame
+
+            add_ideas = YCG_murasame
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_murasame = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_murasame }
+            has_country_flag = have_murasame
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_murasame
+
+            add_ideas = YCG_murasame
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_murasame = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_murasame }
+            has_country_flag = have_murasame
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_murasame
+            add_ideas = YCG_murasame
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_nene = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_nene }
+            has_country_flag = have_ningning
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_nene
+
+            add_ideas = YCG_nene
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_nene = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_nene }
+            has_country_flag = have_ningning
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_nene
+
+            add_ideas = YCG_nene
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_nene = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_nene }
+            has_country_flag = have_ningning
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_nene
+            add_ideas = YCG_nene
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_ayase = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_ayase }
+            has_country_flag = have_0nai
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_ayase
+
+            add_ideas = YCG_ayase
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_ayase = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_ayase }
+            has_country_flag = have_0nai
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_ayase
+
+            add_ideas = YCG_ayase
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_ayase = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_ayase }
+            has_country_flag = have_0nai
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_ayase
+            add_ideas = YCG_ayase
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_miu = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_miu }
+            has_country_flag = have_miu
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_miu
+
+            add_ideas = YCG_miu
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_miu = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_miu }
+            has_country_flag = have_miu
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_miu
+
+            add_ideas = YCG_miu
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_miu = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_miu }
+            has_country_flag = have_miu
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_miu
+            add_ideas = YCG_miu
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_hazuki = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_hazuki }
+            has_country_flag = have_hazuki
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_hazuki
+
+            add_ideas = YCG_hazuki
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_hazuki = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_hazuki }
+            has_country_flag = have_hazuki
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_hazuki
+
+            add_ideas = YCG_hazuki
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_hazuki = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_hazuki }
+            has_country_flag = have_hazuki
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_hazuki
+            add_ideas = YCG_hazuki
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_megulu = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_megulu }
+            has_country_flag = have_meigulu
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_megulu
+
+            add_ideas = YCG_megulu
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_megulu = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_megulu }
+            has_country_flag = have_meigulu
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_megulu
+
+            add_ideas = YCG_megulu
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_megulu = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_megulu }
+            has_country_flag = have_meigulu
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_megulu
+            add_ideas = YCG_megulu
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_nanami = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_nanami }
+            has_country_flag = have_nanami
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_nanami
+
+            add_ideas = YCG_nanami
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_nanami = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_nanami }
+            has_country_flag = have_nanami
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_nanami
+
+            add_ideas = YCG_nanami
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_nanami = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_nanami }
+            has_country_flag = have_nanami
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_nanami
+            add_ideas = YCG_nanami
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_mayu = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_mayu }
+            has_country_flag = have_Mayu
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_mayu
+
+            add_ideas = YCG_mayu
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_mayu = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_mayu }
+            has_country_flag = have_Mayu
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_mayu
+
+            add_ideas = YCG_mayu
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_mayu = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_mayu }
+            has_country_flag = have_Mayu
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_mayu
+            add_ideas = YCG_mayu
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_toko = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_toko }
+            has_country_flag = have_toko
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_toko
+
+            add_ideas = YCG_toko
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_toko = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_toko }
+            has_country_flag = have_toko
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_toko
+
+            add_ideas = YCG_toko
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_toko = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_toko }
+            has_country_flag = have_toko
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_toko
+            add_ideas = YCG_toko
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_kanna = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_kanna }
+            has_country_flag = have_kanna
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_kanna
+
+            add_ideas = YCG_kanna
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_kanna = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_kanna }
+            has_country_flag = have_kanna
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_kanna
+
+            add_ideas = YCG_kanna
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_kanna = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_kanna }
+            has_country_flag = have_kanna
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_kanna
+            add_ideas = YCG_kanna
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_noa = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_noa }
+            has_country_flag = have_noa
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_noa
+
+            add_ideas = YCG_noa
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_noa = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_noa }
+            has_country_flag = have_noa
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_noa
+
+            add_ideas = YCG_noa
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_noa = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_noa }
+            has_country_flag = have_noa
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_noa
+            add_ideas = YCG_noa
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_fumika = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_fumika }
+            has_country_flag = have_fumika
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_fumika
+
+            add_ideas = YCG_fumika
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_fumika = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_fumika }
+            has_country_flag = have_fumika
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_fumika
+
+            add_ideas = YCG_fumika
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_fumika = {	#副主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_fumika }
+            has_country_flag = have_fumika
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_fumika
+            add_ideas = YCG_fumika
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_sana = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_sana }
+            has_country_flag = have_sana
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_sana
+
+            add_ideas = YCG_sana
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_sana = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_sana }
+            has_country_flag = have_sana
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_sana
+
+            add_ideas = YCG_sana
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_sana = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_sana }
+            has_country_flag = have_sana
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_sana
+            add_ideas = YCG_sana
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_masaki = {	#第一书记
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_masaki }
+            has_country_flag = have_masaki
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_masaki
+
+            add_ideas = YCG_masaki
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_masaki = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_masaki }
+            has_country_flag = have_masaki
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_masaki
+
+            add_ideas = YCG_masaki
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_masaki = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_masaki }
+            has_country_flag = have_masaki
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_masaki
+            add_ideas = YCG_masaki
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_ruri = {	#第一书记  琉璃核心圈——2026.4.6，20：36，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_ruri }
+            has_country_flag = have_ruri
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_ruri
+
+            add_ideas = YCG_ruri
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_ruri = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_ruri }
+            has_country_flag = have_ruri
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_ruri
+
+            add_ideas = YCG_ruri
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_ruri = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_ruri }
+            has_country_flag = have_masaki
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_ruri
+            add_ideas = YCG_ruri
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_sayo = {	#第一书记  小夜核心圈——2026.4.6，20：51，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_sayo }
+            has_country_flag = have_aragami_sayo
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_sayo
+
+            add_ideas = YCG_sayo
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_sayo = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_sayo }
+            has_country_flag = have_aragami_sayo
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_sayo
+
+            add_ideas = YCG_sayo
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_sayo = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_sayo }
+            has_country_flag = have_aragami_sayo
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_sayo
+            add_ideas = YCG_sayo
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_sakuyahime = {	#第一书记  卯之花核心圈——2026.4.6，21：19，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_sakuyahime }
+            has_country_flag = have_sakuyahime
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_sakuyahime
+
+            add_ideas = YCG_sakuyahime
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_sakuyahime = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_sakuyahime }
+            has_country_flag = have_sakuyahime
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_sakuyahime
+
+            add_ideas = YCG_sakuyahime
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_sakuyahime = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_sakuyahime }
+            has_country_flag = have_sakuyahime
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_sakuyahime
+            add_ideas = YCG_sakuyahime
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_misaka_makoto = {	#第一书记  御坂真琴核心圈——2026.4.6，22：19，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_misaka_makoto }
+            has_country_flag = have_misaka_makoto
+            date > 1999.12.31
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_misaka_makoto
+
+            add_ideas = YCG_misaka_makoto
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_misaka_makoto = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_misaka_makoto }
+            has_country_flag = have_misaka_makoto
+            date > 1999.12.31
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_misaka_makoto
+
+            add_ideas = YCG_misaka_makoto
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_misaka_makoto = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_misaka_makoto }
+            has_country_flag = have_misaka_makoto
+            date > 1999.12.31
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_misaka_makoto
+            add_ideas = YCG_misaka_makoto
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_suou = {	#第一书记  苏芳核心圈——2026.4.11，22：56，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_suou }
+            has_country_flag = have_suou
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_suou
+
+            add_ideas = YCG_suou
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_suou = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_suou }
+            has_country_flag = have_suou
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_suou
+
+            add_ideas = YCG_suou
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_suou = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_suou }
+            has_country_flag = have_suou
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_suou
+            add_ideas = YCG_suou
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_wakana = {	#第一书记  和奏核心圈——2026.4.11，23：58，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_wakana }
+            has_country_flag = have_wakana
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_wakana
+
+            add_ideas = YCG_wakana
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_wakana = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_wakana }
+            has_country_flag = have_wakana
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_wakana
+
+            add_ideas = YCG_wakana
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_wakana = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_wakana }
+            has_country_flag = have_wakana
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_wakana
+            add_ideas = YCG_wakana
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_nozomi = {	#第一书记  石墨烯核心圈——2026.4.12，0：00，伊尔诺
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_nozomi }
+            has_country_flag = have_nozomi
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_nozomi
+
+            add_ideas = YCG_nozomi
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_nozomi = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_nozomi }
+            has_country_flag = have_nozomi
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_nozomi
+
+            add_ideas = YCG_nozomi
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_nozomi = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_nozomi }
+            has_country_flag = have_nozomi
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_nozomi
+            add_ideas = YCG_nozomi
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
+    YCG_FS_tsumugi = {	#第一书记  紬妈核心圈——2026.5.9，20：38，御坂真琴
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_first_secretary
+            not = { has_idea = YCG_tsumugi }
+            has_country_flag = have_chou
+        }
+        complete_effect = {
+            set_country_flag = YCG_FS_tsumugi
+
+            add_ideas = YCG_tsumugi
+            clr_country_flag = YzCoreGroup_first_secretary
+            set_country_flag = YzCoreGroup_chairman
+        }
+    }
+    YCG_CM_tsumugi = {	#主席
+        days_remove = 0
+        priority = 10
+        visible = {
+            has_country_flag = YzCoreGroup_chairman
+            not = { has_idea = YCG_tsumugi }
+            has_country_flag = have_chou
+        }
+        complete_effect = {
+            set_country_flag = YCG_CM_tsumugi
+
+            add_ideas = YCG_tsumugi
+            clr_country_flag = YzCoreGroup_chairman
+            set_country_flag = YzCoreGroup_vice_chair
+        }
+    }
+    YCG_VC_tsumugi = {	#副主席
+        priority = 10
+        days_remove = 0
+        visible = {
+            has_country_flag = YzCoreGroup_vice_chair
+            not = { has_idea = YCG_tsumugi }
+            has_country_flag = have_chou
+        }
+        complete_effect = {
+            set_country_flag = YCG_VC_tsumugi
+            add_ideas = YCG_tsumugi
+            clr_country_flag = YzCoreGroup_vice_chair
+            set_country_flag = have_YCG_VC
+            set_country_flag = have_YCG_FS
+            set_country_flag = have_YCG_CM
+        }
+    }
 }

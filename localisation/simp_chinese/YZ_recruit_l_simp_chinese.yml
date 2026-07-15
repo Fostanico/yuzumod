@@ -1,13 +1,14 @@
 ﻿l_simp_chinese:
+ yz_auto_recruit:0 "\n§4由于你未获得所需的将领，§4自动招募§!以下将领，其效果为：§!"
  #千恋万花#"
  recruit_mako:0 "§C常陆茉子§!\n§Y等级:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:7  £trait_logistics:8\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_yoshino:0 "朝武芳乃\n§Y等级:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§t将开启芳乃事件链§!\n§Y将解锁芳乃工业化决议组\n可选§Y领导人§!\n解锁内阁选项§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_murasame:0 "§G丛雨酱§!\n§Y等级:5§!\n £trait_attack:7  £trait_defense:5\n £trait_planning:3  £trait_logistics:5\n可选§Y领导人§!\n§Y将解锁丛雨顾问决议\n获得陆军部长§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_rena:0 "§t尚未实装，敬请期待！§!"
+ recruit_lena:0 "§H蕾娜·列支敦瑙尔§!\n§Y等级:5 §!\n £trait_attack:3  £trait_defense:6 \n £trait_planning:3  £trait_logistics:6\n\n将花费 £GFX_pol_power §Y10§!""
  recruit_luchun:0 "[recruit_luchun_text]"
  recruit_luchun_1:0 "马庭芦花、鞍马小春\n\n§t特殊招募!§!\n将解锁决议：§Y妹妹与姐姐的修罗场§!\n(将领会在§Y后续的决议和事件中解锁！§!)\n\n将花费 £GFX_pol_power §Y20§!"
  recruit_luchun_2:0 "§Y马庭芦花§!\n§Y等级:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n§Y鞍马小春§!\n§Y等级:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n\n将花费 £GFX_pol_power §Y20§!"
- recruit_title:0 "§G 千恋 * 万花! §!"
+ recruit_title:0 "§G 千恋 * 万花! §!\n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  SR:0 "§G 千恋 * 万花! §!"
 
  #魔宴#
@@ -16,7 +17,7 @@
  recruit_chou:0 "椎叶䌷\n§Y等级:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:6\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_toko:0 "户隐憧子\n§Y等级:6 §!\n £trait_attack:3£trait_defense:5 \n £trait_planning:5  £trait_logistics:8\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_wakana:0 "§O仮屋和奏§!\n§Y等级:4 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:3  £trait_logistics:5\n\n将花费 £GFX_pol_power §Y10§!"
- SW_recruit_title:0 "§0Sabbita of the witch!!!§!"
+ SW_recruit_title:0 "§0Sabbita of the witch!!!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  SW:0 "§0Sabbita of the witch!!!§!"
 
  #RJ#
@@ -24,8 +25,8 @@
  recruit_nanami:0 "§Y在原七海§!\n§Y等级:5 §!\n £trait_attack:6  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n将解锁§Y内阁与陆军部长§!决议\n可获得§Y特殊支援连§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_nijouin_hazuki:0 "§C二条院羽月§!\n§Y等级:5 §!\n £trait_attack:6  £trait_defense:5 \n £trait_planning:4  £trait_logistics:3\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_mayu:0 "式部茉优\n§Y等级:5 §!\n £trait_attack:4£trait_defense:4 \n £trait_planning:6  £trait_logistics:5\n将解锁§Y科学家§!，并且你可以让§Y茉优§!在§Y721研究所§!任职\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_chisaki:0 "§t尚未实装，敬请期待！§!"
- RJ_recruit_title:0 "§2 RIDDLE JOKER!!! §!"
+ recruit_chisaki:0 "§1壬生千咲§!\n§Y等级:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:5\n\n将花费 £GFX_pol_power §Y10§!"
+ RJ_recruit_title:0 "§2 RIDDLE JOKER!!! §! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  RJ:0 "§2 RIDDLE JOKER!!! §!"
 
  #咖啡馆#
@@ -33,8 +34,8 @@
  recruit_nozomi:0 "§Y墨染希§!\n§Y等级:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:5  £trait_logistics:5\n将解锁§Y做点心决议§!\n你可以通过此决议招募§Y凉音§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_zaozi:0 "§R四季夏目§!\n§Y等级:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:3  £trait_logistics:7\n将解锁§Y做点心决议§!\n你可以通过此决议招募§Y凉音§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_suzune:0 "夕山凉音\n§Y等级:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:3 £trait_logistics:9\n§t特殊招募!§!\n你在招募§Y夏目§!、§Y栞那§!和§Y墨染希§!后\n通过§Y做点心决议§!招募凉音姐！\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_mei:0 "§t尚未实装，敬请期待！§!"
- CS_recruit_title:0 " 星光咖啡馆与死神之蝶!!! "
+ recruit_mei:0 "§7火打谷爱衣§!\n§Y等级:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:6\n\n\n将花费 £GFX_pol_power §Y10§!"
+ CS_recruit_title:0 " 星光咖啡馆与死神之蝶!!! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§!  "
  CS:0 " 星光咖啡馆与死神之蝶!!! "
  CS_neko:0 "[CS_neko_text]"
  CS_neko1:0 "点击有2.5%的概率掉落§Y猫粮§! (£GFX_pol_power §Y5§!) !"
@@ -44,59 +45,69 @@
  recruit_amane:0 "§C谷风天音§!\n§Y等级:5 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:5  £trait_logistics:6\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_fumika:0 "§t百里风实花§!\n§Y等级:5 §!\n £trait_attack:5  £trait_defense:2 \n £trait_planning:6  £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_kaguya:0 "§辉夜§!\n§Y等级:5 §!\n £trait_attack:6  £trait_defense:4 \n £trait_planning:8  £trait_logistics:3\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_kurumi:0 "§C小云雀来海§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:5\n§t当前仍是白板角色，内容待填充！§!\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_kurumi:0 "§C小云雀来海§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:5\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_noa:0 "§Y白雪乃爱§!\n§Y等级:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:6 £trait_logistics:5\n§t可选进入§Y乃爱线§!§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_ori:0 "§t尚未实装，敬请期待！§!"
- TS_recruit_title:0 " §C天使☆騒々RE-BOOT!!!§! "
+ recruit_ori:0 "§G高楯奥莉叶§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:8 £trait_logistics:8\n\n将花费 £GFX_pol_power §Y10§!"
+ TS_recruit_title:0 " §C天使☆騒々RE-BOOT!!!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§!  "
  TS:0 " §C天使☆騒々RE-BOOT!!!§! "
 
  #天色幻想岛#       
  recruit_airi:0 "§4白鹿爱莉§!\n[!recruit_airi_click]\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_xiali:0 "§Y夏莉·沃里克§!\n§Y等级:5 §!\n £trait_attack:1 £trait_defense:8 \n £trait_planning:1 £trait_logistics:8\n§Y填线特化将领，高领导上限！§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_zhenxiao:0 "§R真咲·加亚尔!§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\n将解锁§Y真咲连锁店§!决议，极速修建§Y补给站§!，§Y额外柚子币§!加成！\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_xiyin:0 "天雾夕音\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§! \n\n将花费 £GFX_pol_power §Y10§!"
- recruit_munaixiang:0 "§t尚未实装，敬请期待！§!"
- recruit_diya:0 "§t尚未实装，敬请期待！§!"
- AIN_recruit_title:0 "§4天色Islenauts!!!§!"
+ recruit_xiyin:0 "天雾夕音\n§t等级:7 §!\n £trait_attack:11 £trait_defense:5 \n £trait_planning:5 £trait_logistics:9\n唷唷唷……§! \n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_munaixiang:0 "§W木乃香§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_diya:0 "§G缇娅·霍芬威尔芬§!\n§t等级:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:9 £trait_logistics:4\n我...我才不是什么H教师呢！§!\n\n将花费 £GFX_pol_power §Y10§!"
+ AIN_recruit_title:0 "§4天色Islenauts!!!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  AIN:0 "§4天色Islenauts!!!§!"
 
  #DRACU-RIOT!#
  recruit_miu:0 "§R矢来美羽§!\n§Y等级:5 §!\n £trait_attack:7 £trait_defense:2 \n £trait_planning:3 £trait_logistics:4\n[!recruit_miu_click]\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_hiyori:0 "§t尚未实装，敬请期待！§!"
+ recruit_hiyori:0 "§W大房妃依里§!\n§Y等级:5§!\n  £trait_attack:4 £trait_defense:4 \n £trait_planning:6 £trait_logistics:8\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_elina:0 "§R艾莉娜·欧文§!\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:2 \n £trait_planning:6 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_liyin:0 "§C莉音§!\n§Y等级:6 §!\n £trait_attack:6 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\n[!recruit_liyin_click]\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_buliangzi:0 "布良梓\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_DR_title:0 "§RDRACU-RIOT!§!"
+ recruit_nigula:0 "§Y尼古拉·凯菲乌斯\n§Y等级:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_DR_title:0 "§RDRACU-RIOT!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y60§! "
  DR:0 "§RDRACU-RIOT!§!"
 
  #nobleworks#
- recruit_maya:0 "§B长光麻夜§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§! \n\n将花费 £GFX_pol_power §Y10§!"
- recruit_akari:0 "§Y兼元灯里§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_hinata:0 "§Y国广日向§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_shizuru:0 "§W正宗静流§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_sena:0 "§7月山濑奈§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_NW_titile:0 "§YNOBLEWORKS!§!"
+ recruit_maya:0 "§B长光麻夜§!\n£trait_attack:8 £trait_defense:6 \n £trait_planning:3 £trait_logistics:3 \n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_akari:0 "§Y兼元灯里§!\n£trait_attack:3 £trait_defense:6 \n £trait_planning:8 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_hinata:0 "§Y国广日向§!\n£trait_attack:7 £trait_defense:1 \n £trait_planning:3 £trait_logistics:9\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_shizuru:0 "§W正宗静流§!\n£trait_attack:8 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_sena:0 "§7月山濑奈§!\n£trait_attack:5 £trait_defense:5 \n £trait_planning:3 £trait_logistics:13\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_NW_titile:0 "§YNOBLEWORKS!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  NW:0 "§YNOBLEWORKS!§!"
 
  #夏空彼方#
  recruit_chihaya:0 "茅羽耶\n拥有§Y单独将领升级决议链！§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_sasara:0 "§W七条沙沙罗§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_yuiko:0 "§O三好由比子§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_NK_title:0 "§4夏空彼方§!"
+ recruit_NK_title:0 "§4夏空彼方§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  NK:0 "§4夏空彼方§!"
 
  #天神乱漫#
- recruit_sakuyahime:0 "§R卯花之佐久夜姫§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_ruri:0 "§W龙胆琉璃§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_aoi:0 "§R山吹葵§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_sakuyahime:0 "§R卯花之佐久夜姫§!\n§Y等级:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:5 £trait_logistics:4\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_ruri:0 "§W龙胆琉璃§!\n等级:5 §!\n £trait_attack:15 £trait_defense:1 \n £trait_planning:1 £trait_logistics:1\n狐狐哈气！§!\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_aoi:0 "§R山吹葵§!\n§Y等级:5 §!\n £trait_attack:3 £trait_defense:4 \n £trait_planning:7 £trait_logistics:7\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_sana:0 "§Y千岁佐奈§!\n§Y等级:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6\n\n在每年6月8日佐奈生日时，可以通过§Y决议§!为§Y佐奈过生日§!获得§Y巨量加成§!哦！\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_mahiro:0 "§t尚未实装，敬请期待！§!"
- recruit_yukari:0 "§t尚未实装，敬请期待！§!"
- TL_recruit_title:0 "§Y天神乱漫 LUCKY or UNLUCKY?!§!"
+ recruit_mahiro:0 "§W常盘真寻§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_yukari:0 "§R乌羽紫§!\n§t该将领仍是白板将领，仅有简单四维和白板专属特质§!\n\n将花费 £GFX_pol_power §Y10§!"
+ TL_recruit_title:0 "§Y天神乱漫 LUCKY or UNLUCKY?!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
  TL:0 "§Y天神乱漫 LUCKY or UNLUCKY?!§!"
 
  baibanjiang:0 "§t该将领仍是白板将领，仅有简单四维和白板专属特质§!"
  YZrecruit:0 "打开§Y柚子社招募面板§!"
+
+#聚光灯柠檬果酱#
+LLLJ:0 "§O聚光灯柠檬果酱!!!§! " #暂定
+recruit_ena: "§t阳见惠凪§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:3 £trait_logistics:5\n花Q花Q！！"
+recruit_anju: "§0隐杏株§!\n§Y等级:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:5\nB点高闪来一个！"
+recruit_tsukimi: "§Y嶌越月望§!\n§Y等级:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6"
+recruit_ririko: "§R二见原莉莉子§!\n§Y等级:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n毕竟我可是好女人嘛~"
+recruit_nayuka: "§1茶园那优花§!\n§Y等级:5 §!\n £trait_attack:4 £trait_defense:4 \n £trait_planning:5 £trait_logistics:6"
+recruit_miku: "§g砾川美玖§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:4 £trait_logistics:4"
 
  
 

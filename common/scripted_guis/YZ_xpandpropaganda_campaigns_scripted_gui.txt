@@ -1,0 +1,23 @@
+scripted_gui = {
+	yz_posters_ui_window_gui = {
+		context_type = decision_category
+		window_name = "yz_posters_ui_window"
+		properties = {
+			yz_poster_1 = {
+				image = "[GetyouzuPropagandaLeftSlotAge]"
+				frame = yz_poster_icon_frame_1
+			}
+			yz_poster_2 = {
+				image = "[GetyouzuPropagandaCenterSlotAge]"
+				frame = yz_poster_icon_frame_2
+			}
+			yz_poster_3 = {
+				image = "[GetyouzuPropagandaRightSlotAge]"
+				frame = yz_poster_icon_frame_3
+			}
+			yz_manpower_icon = {
+				image = "[yzc_manpower_icon]"
+			}
+		}
+	}
+}

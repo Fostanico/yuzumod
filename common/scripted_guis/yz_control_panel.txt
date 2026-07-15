@@ -1,0 +1,286 @@
+scripted_gui = {
+	YZ_SETTINT_open_gui = {
+		context_type = player_context
+		window_name = "YZ_SETTINT_open"
+		visible = {
+			not = { has_country_flag = close_yz_setting_open_btn }
+			or = {
+                has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		}
+		effects = {
+			YZ_setting_click = {
+				if = {
+					limit = {
+						not = {
+							has_country_flag = open_yz_setting
+						}
+					}
+					set_country_flag = open_yz_setting
+				}
+				else_if = {
+					limit = {
+						has_country_flag = open_yz_setting
+					}
+					clr_country_flag = open_yz_setting
+				}
+			}
+
+			button_close_click = {
+				clr_country_flag = open_yz_setting
+			}
+			btn_1_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = set_YzPropaganda }
+					}
+					set_country_flag = set_YzPropaganda
+				}
+				else = {
+					clr_country_flag = set_YzPropaganda
+				}
+			}
+			btn_2_click = {
+				if = {
+					limit = {
+						not = { OR = {
+							has_country_flag = Yoshino_industry_five_year_yes
+							has_country_flag = Yoshino_industry_five_year_yes_by_loan
+						} }
+					}
+					set_country_flag = Yoshino_industry_five_year_yes
+				}
+				else = {
+					clr_country_flag = Yoshino_industry_five_year_yes
+				}
+			}
+			btn_3_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = open_YZS_military_academy }
+					}
+					set_country_flag = open_YZS_military_academy
+				}
+				else = {
+					clr_country_flag = open_YZS_military_academy
+				}
+			}
+			btn_4_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = YZS_scientist_category_show }
+					}
+					set_country_flag = YZS_scientist_category_show
+				}
+				else = {
+					clr_country_flag = YZS_scientist_category_show
+				}
+			}
+			btn_5_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = yzc_armor_decision }
+					}
+					set_country_flag = yzc_armor_decision
+				}
+				else = {
+					clr_country_flag = yzc_armor_decision
+				}
+			}
+			btn_6_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = YzOpreative_open }
+					}
+					set_country_flag = YzOpreative_open
+				}
+				else = {
+					clr_country_flag = YzOpreative_open
+				}
+			}
+			btn_7_click = {
+				if = {
+					limit = {
+						not = { has_country_flag = open_traot }
+					}
+					set_country_flag = open_traot
+				}
+				else = {
+					clr_country_flag = open_traot
+				}
+			}
+			btn_11_click = {
+				if = {
+					limit = {
+						not = {
+							has_country_flag = qiyong_yuzu_culture_department
+						}
+					}
+					set_country_flag = qiyong_yuzu_culture_department
+				}
+				else = {
+					clr_country_flag = qiyong_yuzu_culture_department
+				}
+			}
+			btn_12_click = {
+				if = {
+					limit = {
+						has_country_flag = yz_economy_department_category_close_flag
+					}
+					clr_country_flag = yz_economy_department_category_close_flag
+				}
+				else = {
+					set_country_flag = yz_economy_department_category_close_flag
+				}
+			}
+			yzsetting_money_btn_click = {
+				if = {
+					limit = {
+						has_country_flag = show_yz_money_window
+					}
+					clr_country_flag = show_yz_money_window
+				}
+				else = {
+					set_country_flag = show_yz_money_window
+				}
+			}
+			yzsetting_money_btn_2_click = {
+				if = {
+					limit = {
+						has_country_flag = show_YzStore_window
+					}
+					clr_country_flag = show_YzStore_window
+				}
+				else = {
+					set_country_flag = show_YzStore_window
+				}
+			}
+		}
+		triggers = {
+			btn_1_click_enabled = {
+				
+			}
+			btn_2_click_enabled = {
+				has_country_flag = finished_yoshino_industry
+			}
+			btn_3_click_enabled = {
+				
+			}
+			btn_4_click_enabled = {
+				has_country_flag = set_YRI
+			}
+			btn_5_click_enabled = {
+				
+			}
+			btn_6_click_enabled = {
+				
+			}
+			btn_7_click_enabled = {
+				or = {
+					has_country_flag = have_ningning
+					has_country_flag = have_wakana
+					has_country_flag = have_toko
+					has_country_flag = have_chou
+					has_country_flag = have_meigulu
+				}
+			}
+			btn_12_click_enabled = {
+			}
+			btn_11_click_enabled = {
+			}
+			yzsetting_money_btn_click_enabled = {
+				#has_country_flag = set_YzCoreGroup
+			}
+			yzsetting_money_btn_2_click_enabled = {
+				#has_country_flag = set_YzCoreGroup
+			}
+			button_close_visible = {
+				has_country_flag = open_yz_setting
+			}
+			yz_control_panel_visible = {
+				has_country_flag = open_yz_setting
+			}
+
+			yz_control_panel_bg_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_1_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_2_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_3_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_4_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_5_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_6_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_7_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_8_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_9_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_10_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_11_visible = {
+				has_country_flag = open_yz_setting
+			}
+			text_12_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_1_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_2_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_3_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_4_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_5_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_6_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_7_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_12_visible = {
+				has_country_flag = open_yz_setting
+			}
+			btn_11_visible = {
+				has_country_flag = open_yz_setting
+			}
+			yzsetting_money_btn_visible = {
+				has_country_flag = open_yz_setting
+			}
+			yzsetting_money_btn_2_visible = {
+				has_country_flag = open_yz_setting
+			}
+			yzsetting_money_text_visible = {
+				has_country_flag = open_yz_setting
+			}
+			yzsetting_money_text_2_visible = {
+				has_country_flag = open_yz_setting
+			}
+
+		}
+	}
+}

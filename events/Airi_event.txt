@@ -98,6 +98,7 @@ country_event= {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = Airi_corps_desc
 					traits={
 						yz_airi_trait
 						trait_reckless

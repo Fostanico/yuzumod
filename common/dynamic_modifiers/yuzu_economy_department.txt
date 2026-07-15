@@ -1,0 +1,23 @@
+obsessed_in_yuzu_galgame = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		NOT = { 
+			is_controlled_by = ROOT
+		}
+	}
+	icon = GFX_modifiers_BRA_neglected_state
+	#local_building_slots = 5
+	state_resources_factor = -0.15
+	state_production_speed_buildings_factor = -0.15
+	#local_supplies = -0.2
+	#army_speed_factor_for_controller = 0.1
+	#attrition_for_controller = -0.1
+	#local_factory_sabotage = -0.15
+	local_manpower = 0.25
+	monthly_population = 0.25
+	#mobilization_speed = 0.1
+	compliance_growth = 0.0721
+	resistance_growth = -0.0721
+}

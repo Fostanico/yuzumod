@@ -1,0 +1,173 @@
+add_namespace = aragami_sayo_event
+
+country_event = {
+    id = aragami_sayo_event.1
+    title = aragami_sayo_event.1.t
+    desc = aragami_sayo_event.1.d
+    #picture = miu_cwfn_event0
+
+    is_triggered_only = yes
+
+    option = {
+        custom_effect_tooltip = yz_sorry_i_try_my_best_on_scripted_localisation_tt
+        retire_country_leader = yes
+        name = aragami_sayo_event.1.a
+        trigger = {
+            has_government = communism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        meta_effect = {                                          #2025.4.3,20:50,伊尔诺   这个办法看来也没办法解决本地化的问题
+            text = {
+                create_country_leader = {
+                    name = "荒神 小夜"
+                    picture = "GFX_leader_aragami_sayo"
+                    desc = aragami_sayo_desc
+                    expire = "2095.1.1"
+                    ideology = marxism
+                    traits = {
+                        YZ_aragami_sayo_our_role_model_of_victory
+                        YZ_aragami_sayo_the_mayor
+                        YZ_aragami_sayo_two_hundred_years_vampire
+                    }
+                }
+            }
+        }
+
+    }
+
+    option = {
+        custom_effect_tooltip = yz_sorry_i_try_my_best_on_scripted_localisation_tt
+        retire_country_leader = yes
+        name = aragami_sayo_event.1.b
+        trigger = {
+            has_government = democratic
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "荒神 小夜"
+            picture = "GFX_leader_aragami_sayo"
+            desc = aragami_sayo_desc
+            expire = "2095.1.1"
+            ideology = conservatism
+            traits = {
+                YZ_aragami_sayo_our_role_model_of_victory
+                YZ_aragami_sayo_the_mayor
+                YZ_aragami_sayo_two_hundred_years_vampire
+            }
+        }
+    }
+
+    option = {
+        custom_effect_tooltip = yz_sorry_i_try_my_best_on_scripted_localisation_tt
+        retire_country_leader = yes
+        name = aragami_sayo_event.1.c
+        trigger = {
+            has_government = fascism
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "荒神 小夜"
+            picture = "GFX_leader_aragami_sayo"
+            desc = aragami_sayo_desc
+            expire = "2095.1.1"
+            ideology = fascism_ideology
+            traits = {
+                YZ_aragami_sayo_our_role_model_of_victory
+                YZ_aragami_sayo_the_mayor
+                YZ_aragami_sayo_two_hundred_years_vampire
+            }
+        }
+    }
+
+    option = {
+        custom_effect_tooltip = yz_sorry_i_try_my_best_on_scripted_localisation_tt
+        retire_country_leader = yes
+        name = aragami_sayo_event.1.d
+        trigger = {
+            has_government = neutrality
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        hidden_effect = {
+        }
+        create_country_leader = {
+            name = "荒神 小夜"
+            picture = "GFX_leader_aragami_sayo"
+            desc = aragami_sayo_desc
+            expire = "2095.1.1"
+            ideology = despotism
+            traits = {
+                YZ_aragami_sayo_our_role_model_of_victory
+                YZ_aragami_sayo_the_mayor
+                YZ_aragami_sayo_two_hundred_years_vampire
+            }
+        }
+    }
+}
+country_event = {
+    id = aragami_sayo_event.2
+    title = aragami_sayo_event.2.t
+    desc = aragami_sayo_event.2.d
+    is_triggered_only = yes
+    option = {      #让小夜上
+        name = aragami_sayo_event.2.a
+        country_event = aragami_sayo_event.1
+    }
+    option = {     #诺酱
+        name = aragami_sayo_event.2.b
+        trigger = {
+            date < 1999.12.30
+        }
+        set_rule = {
+            can_send_volunteers = yes
+            can_puppet = yes
+        }
+        create_country_leader = {
+            name = "伊尔 诺"
+            picture = "GFX_leader_nor"
+            ideology = marxism
+            desc = leader_nor_desc
+            expire = "2095.1.1"
+            traits = {
+                YZ_leader_nor_self_use_a_traits
+                YZ_leader_nor_self_use_b_traits
+                YZ_leader_nor_self_use_c_traits
+            }
+        }
+    }
+    option = {
+        name = aragami_sayo_event.2.c
+        trigger = {
+            date > 1999.12.31
+        }
+        create_country_leader = {
+            name = "伊尔 诺"
+            picture = "GFX_leader_nor"
+            ideology = Communist-State
+            desc = leader_nor_desc
+            expire = "2200.1.1"
+            traits = {
+                YZ_leader_nor_self_use_a_traits_for_md
+                YZ_leader_nor_self_use_b_traits_for_md
+                YZ_leader_nor_self_use_c_traits_for_md
+            }
+        }
+    }
+}

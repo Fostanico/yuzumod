@@ -1,89 +1,111 @@
 add_namespace = YZHJ_event
-
-country_event = { 
+country_event = {
 	id = YZHJ_event.1
 	title = YZHJ_event.1.t
 	desc = YZHJ_event.1.d
 	picture = GFX_YZHJ_event.0
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = YZHJ_event.1.a
 		create_navy_leader = {
-		name = "changlumozi"
-		gfx = "GFX_portrait_JCL_mako"
-		traits = { 
-		bold air_controller
-		}
-		skill = 4
-		attack_skill = 6
-		defense_skill = 3
-		maneuvering_skill = 7
-		coordination_skill = 8
+			name = "changlumozi"
+			gfx = "GFX_portrait_JCL_mako"
+			traits = {
+				injia_good_at_water
+				blue_water_expert
+				torpedo_bomber
 			}
+			skill = 4
+			attack_skill = 6
+			defense_skill = 3
+			maneuvering_skill = 7
+			coordination_skill = 8
+			set_character_flag = yz_navy_flag
+		}
 		create_navy_leader = {
-		name = "mingyuekanna"
-		gfx = "GFX_portrait_CSS_kanna"
-		traits = { 
-		superior_tactician
-		}
-		skill = 5			
-		attack_skill = 4
-		defense_skill = 8
-		maneuvering_skill = 7
-		coordination_skill = 5
+			name = "mingyuekanna"
+			gfx = "GFX_portrait_CSS_kanna"
+			traits = {
+				fixible_command
 			}
+			skill = 5
+			attack_skill = 4
+			defense_skill = 8
+			maneuvering_skill = 7
+			coordination_skill = 5
+			set_character_flag = yz_navy_flag
+		}
 		create_navy_leader = {
-		name = "lingdiningning"
-		gfx = "GFX_portrait_STW_Nene"
-		traits = { 
-		seawolf
-		}
-		skill = 5
-		attack_skill = 7
-		defense_skill = 2
-		maneuvering_skill = 1
-		coordination_skill = 6
+			name = "lingdiningning"
+			gfx = "GFX_portrait_STW_Nene"
+			traits = {
+				little_guy_under_water
+				blue_water_expert
 			}
+			skill = 5
+			attack_skill = 7
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 6
+			set_character_flag = yz_navy_flag
+		}
 		create_navy_leader = {
-		name = "zaiyuanqihai"
-		gfx = "GFX_portrait_RGR_Nanami"
-		traits = { 
-		spotter
-		}
-		skill = 5
-		attack_skill = 5
-		defense_skill = 3
-		maneuvering_skill = 5
-		coordination_skill = 5
+			name = "zaiyuanqihai"
+			gfx = "GFX_portrait_RGR_Nanami"
+			traits = {
+				best_hacker
+				green_water_expert
 			}
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 5
+			set_character_flag = yz_navy_flag
+		}
 		create_navy_leader = {
 			name = "qiansuizuonai"
 			gfx = "GFX_portrait_TSL_sana"
-			traits = { 
-			lucky_or_unlucky
+			traits = {
+				lucky_or_unlucky
+				inshore_fighter
 			}
 			skill = 5
 			attack_skill = 5
 			defense_skill = 4
 			maneuvering_skill = 4
 			coordination_skill = 5
+			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
 			name = "ertiaoyuanyuyue"
 			gfx = "GFX_portrait_RGR_hazuki"
-			traits = { 
-			dahefuzi
+			traits = {
+				dahefuzi
+				profersional_see_general
+				blue_water_expert
+				green_water_expert
 			}
 			skill = 5
 			attack_skill = 6
 			defense_skill = 4
 			maneuvering_skill = 4
 			coordination_skill = 4
+			set_character_flag = yz_navy_flag
 		}
-	}
-    } 
-
-
+		create_navy_leader = {
+			name = "龙胆琉璃"
+			gfx = "GFX_portrait_super_ruri"
+			traits = {
+				power_of_fox_fairy
+			}
+			skill = 5
+			attack_skill = 15
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 4
+			set_character_flag = yz_navy_flag
+		}
 		
+	}
+}

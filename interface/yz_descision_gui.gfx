@@ -27,4 +27,21 @@ spriteTypes = {
 		noOfFrames = 3
 		transparencecheck = yes
 	}
+
+	spriteType = {
+		name = "GFX_yuzusoft_icon_big"
+		texturefile = "gfx/guis/yuzusoft_icon_big.png"
+	}
+	spriteType = {
+		name = "GFX_nanami_setting"
+		texturefile = "gfx/guis/nanami_setting.png"
+	}
+	spriteType = {
+		name = "GFX_yz_control_bg"
+		texturefile = "gfx/guis/control_bg.png"
+	}
+	spriteType = {
+		name = "GFX_nanami_setting2"
+		texturefile = "gfx/guis/nanami_setting2.png"
+	}
 }

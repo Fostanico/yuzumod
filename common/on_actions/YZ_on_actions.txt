@@ -1,418 +1,462 @@
 on_actions = {
-	on_startup = {
-		effect = {
-				set_victory_points = {
-   				province = 12097
-   				value = 30
-				} #穗织
-				set_province_name = {
-				id = "12097"
-				name = "穗织"
-				}
-				set_victory_points = {
-   				province = 12006
-   				value = 30
-				} #御一夜
-				set_province_name = {
-				id = "12006"
-				name = "御一夜"
-				}
-				set_variable = { date_counter = 0 }
-			
-		}
-	}
-	
-	on_monthly = {	#金圆券限制
-		effect = {
-			set_variable = { yz_money_pp = 5 }
-			set_variable = { yz_money_cp = 5 }
-			set_variable = { yz_money_xp1 = 5 }
-			set_variable = { yz_money_xp2 = 5 }
-			set_variable = { yz_money_xp3 = 5 }
-			set_variable = { YzStore_5_var = 15 }
-			set_variable = { YzStore_6_var = 10 }
-			set_variable = { YzStore_8_var = 3 }
-			set_variable = { YzStore_10_var = 5 }
-			set_variable = { YzStore_11_var = 1 }
-		}
-	}
+    on_weekly = {#防止被大清洗
+        effect = {
+            if = {
+                limit = {
+                    tag = SOV
+                }
+                every_army_leader = {
+                    limit = {
+                        yz_general = yes
+                    }
+                    set_character_flag = SOV_safe_from_purge_flag
+                }
+                every_navy_leader = {
+                    limit = {
+                        yz_general = yes
+                    }
+                    set_character_flag = SOV_safe_from_purge_flag
+                }
+                every_character = {
+                    limit = {
+                        yz_advisor = yes
+                    }
+                    set_character_flag = SOV_safe_from_purge_flag
+                }
+            }
+        }
+    }
 
-	on_daily = {		#好感民族精神修正
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-				}
-				set_variable = { love_political_power = love_depth }
-				multiply_variable = { love_political_power = 0.001 }
-				set_variable = { love_stability = love_depth }
-				multiply_variable = { love_stability = 0.001 }
-				multiply_variable = { love_stability = 0.5 }
-				set_variable = { love_war_support_factor = love_depth }
-				multiply_variable = { love_war_support_factor = 0.001 }
-				multiply_variable = { love_war_support_factor = 0.5 }
-				set_variable = { love_consumer_goods_factor = love_depth }
-				multiply_variable = { love_consumer_goods_factor = -0.001 }
-				multiply_variable = { love_consumer_goods_factor = 0.5 }
-			}
-		}
-	}
-	on_daily = {		#日期计时
-		effect = {
-				add_to_variable = { date_counter = 1 }
-				if = {
-					limit = {
-						check_variable = { date_counter > 364 }
-					}
-					add_to_variable = { date_counter = -365 }
-				}
-			}
-		}
+    on_startup = {
+        effect = {
+            set_victory_points = {
+                province = 12097
+                value = 30
+            } #穗织
+            set_province_name = {
+                id = "12097"
+                name = "穗织"
+            }
+            set_victory_points = {
+                province = 12006
+                value = 30
+            } #御一夜
+            set_province_name = {
+                id = "12006"
+                name = "御一夜"
+            }
+            set_victory_points = {
+                province = 7102
+                value = 30
+            }
+            set_province_name = {
+                id = 7102
+                name = "鹫逗"
+            }
+            set_variable = { date_counter = 0 }
 
-	on_daily = {		#每月好感修正
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-				}
-				clear_variable = monly_num_YZ_love_depth
-				
-				set_temp_variable = { YZ_num_of_factories = num_of_factories }
-				multiply_temp_variable = { YZ_num_of_factories = 0.1 }
+        }
+    }
 
-				round_variable = YZ_num_of_factories
-				clamp_variable = {		#范围
-					var = YZ_num_of_factories
-					min = 0
-				}
-				set_variable = { monly_num_YZ_love_depth = num_YZ_general }
-				add_to_variable = { monly_num_YZ_love_depth = YZ_num_of_factories }
-				add_to_variable = { monly_num_YZ_love_depth = stability }
-				round_variable = monly_num_YZ_love_depth
-			}
-		}
-	}
+    on_monthly = {	#金圆券限制
+        effect = {
+            set_variable = { yz_money_pp = 5 }
+            set_variable = { yz_money_cp = 5 }
+            set_variable = { yz_money_xp1 = 5 }
+            set_variable = { yz_money_xp2 = 5 }
+            set_variable = { yz_money_xp3 = 5 }
+            set_variable = { YzStore_5_var = 15 }
+            set_variable = { YzStore_6_var = 10 }
+            set_variable = { YzStore_8_var = 3 }
+            set_variable = { YzStore_10_var = 5 }
+            set_variable = { YzStore_11_var = 1 }
+        }
+    }
 
-	on_monthly = {		#每月增加好感
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-				}
-				add_to_variable = { love_depth = monly_num_YZ_love_depth }
-				clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			}
-		}
-	}
+    on_daily = {		#好感民族精神修正
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                    has_country_flag = qiyong_youzi_2
+                }
+                set_variable = { temp_love_depth = love_depth }
+                set_variable = { temp_yzc_factor = yzc_manpower_factor }
+                add_to_variable = { temp_yzc_factor = 1.5 }
+                multiply_variable = { temp_love_depth = temp_yzc_factor }
+                set_variable = { love_political_power = temp_love_depth }
+                multiply_variable = { love_political_power = 0.002 }
+                set_variable = { love_stability = temp_love_depth }
+                multiply_variable = { love_stability = 0.002 }
+                multiply_variable = { love_stability = 0.5 }
+                set_variable = { love_war_support_factor = temp_love_depth }
+                multiply_variable = { love_war_support_factor = 0.002 }
+                multiply_variable = { love_war_support_factor = 0.5 }
+                set_variable = { love_consumer_goods_factor = temp_love_depth }
+                multiply_variable = { love_consumer_goods_factor = -0.002 }
+                multiply_variable = { love_consumer_goods_factor = 0.5 }
+                set_variable = { love_industrial_capacity_factory = temp_love_depth }
+                multiply_variable = { love_industrial_capacity_factory = 0.002 }
+                multiply_variable = { love_industrial_capacity_factory = 0.5 }
+            }
+        }
+    }
+    on_daily = {		#日期计时
+        effect = {
+            add_to_variable = { date_counter = 1 }
+            if = {
+                limit = {
+                    check_variable = { date_counter > 364 }
+                }
+                add_to_variable = { date_counter = -365 }
+            }
+        }
+    }
 
-	on_monthly = {		#工业资金
-		effect = {
-			if = {
-				limit = { 
-					
-				}
-				add_to_variable = { yz_money = monly_YZ_money_visible }
-				clamp_variable = {		#范围
-					var = yz_money
-					#min = 0
-					max = 5000
-				}
-				set_temp_variable = { yz_money_temp_1 = 0 }
-				add_to_temp_variable = { yz_money_temp_1 = YzMonthlyFund_var }
-				multiply_temp_variable = { yz_money_temp_1 = -10 }
-				meta_effect = {		#自动比例扣除pp
-					text = {
-						add_political_power = [TEMP_POL] 
-					}
-					TEMP_POL = "[?yz_money_temp_1|0]" # 调用的变量
-				}
-				
-			}
-		}
-	}
-	on_monthly = {
-		effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = yz_money
-						value = 1
-						compare = less_than_or_equals
-					}
-				}
-				country_event = start_event.11
-			}
-		}
-	}
-	on_daily = {		#工业资金每月显示
-		effect = {
-			if = {
-				limit = { 
-					
-				}
-				set_variable = { monly_YZ_money_visible = 0 }
-				add_to_variable = { monly_YZ_money_visible = num_of_factories }
-				clamp_variable = {		#范围
-					var = monly_YZ_money_visible
-					min = 0
-					max = 150
-				}
-				set_variable = { monly_YZ_money_temp = monly_YZ_money_visible }
-				set_variable = { monly_YZ_money_visible = 0 }
-				if = {
-					limit = {
-						check_variable = { num_of_factories < 30 }
-					}
-					multiply_variable = { monly_YZ_money_temp = 3 }
-					add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
-				}
-				else_if = {
-					limit = {
-						check_variable = { num_of_factories > 29 }
-						check_variable = { num_of_factories < 80 }
-					}
-					add_to_variable = {monly_YZ_money_visible = 90}
-					add_to_variable = {monly_YZ_money_temp = -30}
-					multiply_variable = { monly_YZ_money_temp = 2.5 }
-					add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
-				}
-				else_if = {
-					limit = {
-						check_variable = { num_of_factories > 79 }
-					}
-					add_to_variable = {monly_YZ_money_visible = 90}
-					add_to_variable = {monly_YZ_money_temp = -30}
-					add_to_variable = {monly_YZ_money_visible = 125}
-					add_to_variable = {monly_YZ_money_temp = -50}
-					multiply_variable = { monly_YZ_money_temp = 1.5 }
-					add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
-				}
-				if = {		#每月自动拨款
-					limit = {
-						check_variable = { yz_money < 4999 }
-						check_variable = { YzMonthlyFund_var > 0 }
-					}
-					set_temp_variable = { yz_money_temp = 0 }
-					add_to_temp_variable = { yz_money_temp = YzMonthlyFund_var }
-					multiply_temp_variable = { yz_money_temp = 150 }
-					add_to_variable = { monly_YZ_money_visible = yz_money_temp }
-				}
-			}
-			add_to_variable = { monly_YZ_money_visible = monly_YZ_masaki_money_visible }#真咲连锁店与柚子收入的互动
-			set_variable = { monthly_YZ_money_income = 0 }
-			add_to_variable = { monthly_YZ_money_income = monly_YZ_money_visible } #ui显示收入
-			subtract_from_variable = { monly_YZ_money_visible = YzMoneyOutcome_var } #减去支出
-		}
-	}
+    on_daily = {		#每月好感修正
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                }
+                clear_variable = monly_num_YZ_love_depth
 
-	on_daily = {	#经济政策倒计时
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = StratConstructionInvestment
-				}
-				add_to_variable = { yz_economic_policy_3_var = -1 }
-				if = {
-					limit = {
-						check_variable = { yz_economic_policy_3_var = 0 }
-					}
-					clr_country_flag = StratConstructionInvestment
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = StratTreasuryBonds
-				}
-				add_to_variable = { yz_economic_policy_1_var = -1 }
-				if = {
-					limit = {
-						check_variable = { yz_economic_policy_1_var = 0 }
-					}
-					clr_country_flag = StratTreasuryBonds
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = StratForeignInvestment
-				}
-				add_to_variable = { yz_economic_policy_2_var = -1 }
-				if = {
-					limit = {
-						check_variable = { yz_economic_policy_2_var = 0 }
-					}
-					clr_country_flag = StratForeignInvestment
-				}
-			}
-		}
-	}
+                set_temp_variable = { YZ_num_of_factories = num_of_factories }
+                multiply_temp_variable = { YZ_num_of_factories = 0.1 }
 
-	on_peace = {
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = tianyin_fighting
-				}
-				remove_advisor_role = {
-					character = Amane_advisor
-					slot = political_advisor
-				}
-				remove_ideas = yz_amane1
-				set_country_flag = get_true_amane
-				country_event = sairi_event.10
-				clr_country_flag = tianyin_fighting
-			}
-		}
-	}
+                round_variable = YZ_num_of_factories
+                clamp_variable = {		#范围
+                    var = YZ_num_of_factories
+                    min = 0
+                }
+                set_variable = { monly_num_YZ_love_depth = num_YZ_general }
+                add_to_variable = { monly_num_YZ_love_depth = YZ_num_of_factories }
+                add_to_variable = { monly_num_YZ_love_depth = stability }
+                round_variable = monly_num_YZ_love_depth
+            }
+        }
+    }
 
-	on_capitulation = {
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-					is_ai = no
-				}
-				add_to_variable = { love_depth = -100 }
-				clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			}
-		}
-	}
+    on_monthly = {		#每月增加好感
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                }
+                add_to_variable = { love_depth = monly_num_YZ_love_depth }
+                set_variable = { base_max_love = 100 }
+                add_to_variable = { base_max_love = marry_love_bonus }
+                clamp_variable = {		#范围
+                    var = love_depth
+                    min = -100
+                    max = base_max_love
+                }
+            }
+        }
+    }
 
-	on_uncapitulation = {
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-					is_ai = no
-				}
-				add_to_variable = { love_depth = 100 }
-				clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			}
-		}
-	}
+    on_monthly = {		#工业资金
+        effect = {
+            if = {
+                limit = {
+                    or = {
+                        has_country_flag = qiyong_youzi_2
+                        has_country_flag = qiyong_youzi_3
+                    }
+                }
+                add_to_variable = { yz_money = monly_YZ_money_visible }
+                clamp_variable = {		#范围
+                    var = yz_money
+                    #min = 0
+                    max = yz_money_max
+                }
+                set_temp_variable = { yz_money_temp_1 = 0 }
+                add_to_temp_variable = { yz_money_temp_1 = YzMonthlyFund_var }
+                multiply_temp_variable = { yz_money_temp_1 = -10 }
+                meta_effect = {		#自动比例扣除pp
+                    text = {
+                        add_political_power = [TEMP_POL]
+                    }
+                    TEMP_POL = "[?yz_money_temp_1|0]" # 调用的变量
+                }
+                round_variable = yz_money #取整
 
-	on_weekly = {		#每周低好感随机离开
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-					check_variable = { love_depth < -50 }
-			 	}
-				random_list = {
-					50 = { add_to_variable = { love_depth = 10 } }
-				}
-				random_list = {
-					30 = {
-						random_army_leader = {
-							limit = { 
-								or = {
-									has_trait = maid_amane_trait
-									has_trait = maid_chihaya_trait
-									has_trait = maid_chihaya_trait_1
-									has_trait = maid_chihaya_trait_2
-									has_trait = maid_chihaya_trait_3
-									has_trait = maid_chihaya_trait_4
-									has_trait = maid_chihaya_trait_5
-									has_trait = maid_chou_trait
-									has_trait = maid_congyu_trait
-									has_trait = maid_cuodao_trait
-									has_trait = maid_fangnai_trait
-									has_trait = maid_fumika_trait
-									has_trait = maid_gongping_trait
-									has_trait = maid_hazuki_trait
-									has_trait = maid_kaguya_trait
-									has_trait = maid_kanna_trait
-									has_trait = maid_kurumi_trait
-									has_trait = maid_meigulu_trait
-									has_trait = maid_mozi_trait
-									has_trait = maid_ninging_trait
-									has_trait = maid_noa_trait
-									has_trait = maid_nozomi_trait
-									has_trait = maid_nozomi_trait_1
-									has_trait = maid_qihai_trait
-									has_trait = maid_rio_trait_1
-									has_trait = maid_rio_trait_2
-									has_trait = maid_sana_trait
-									has_trait = maid_toko_trait
-									has_trait = maid_wakana_trait
-									has_trait = maid_zaozi_trait
-									has_trait = maid_suzune_trait
-								}
-							}
-							remove_unit_leader_role = yes
-						}
-						country_event = start_event.3
-					}
-				}
-			}
-		}
-	}
+            }
+        }
+    }
+    on_monthly = {
+        effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        var = yz_money
+                        value = 1
+                        compare = less_than_or_equals
+                    }
+                }
+                country_event = start_event.11
+            }
+        }
+    }
+    on_daily = {		#工业资金每月显示
+        effect = {
+            if = {
+                limit = {
 
-	on_monthly = {		##暂时没用，回头写事件触发
-		effect = {
-			if = {
-				limit = { 
-					has_variable = love_depth
-					has_variable = num_YZ_general
-					check_variable = { love_depth = -100 }
-				}
-				every_army_leader = {
-					limit = { 
-						or = {
-							has_trait = maid_amane_trait
-							has_trait = maid_chihaya_trait
-							has_trait = maid_chihaya_trait_1
-							has_trait = maid_chihaya_trait_2
-							has_trait = maid_chihaya_trait_3
-							has_trait = maid_chihaya_trait_4
-							has_trait = maid_chihaya_trait_5
-							has_trait = maid_chou_trait
-							has_trait = maid_congyu_trait
-							has_trait = maid_cuodao_trait
-							has_trait = maid_fangnai_trait
-							has_trait = maid_fumika_trait
-							has_trait = maid_gongping_trait
-							has_trait = maid_hazuki_trait
-							has_trait = maid_kaguya_trait
-							has_trait = maid_kanna_trait
-							has_trait = maid_kurumi_trait
-							has_trait = maid_meigulu_trait
-							has_trait = maid_mozi_trait
-							has_trait = maid_ninging_trait
-							has_trait = maid_noa_trait
-							has_trait = maid_nozomi_trait
-							has_trait = maid_nozomi_trait_1
-							has_trait = maid_qihai_trait
-							has_trait = maid_rio_trait_1
-							has_trait = maid_rio_trait_2
-							has_trait = maid_sana_trait
-							has_trait = maid_toko_trait
-							has_trait = maid_wakana_trait
-							has_trait = maid_zaozi_trait
-						}
-					}
-					remove_unit_leader_role = yes
-				}
-				country_event = start_event.4
-				set_country_flag = yz_bad_end
-			}
-		}
-	}
+                }
+                set_variable = { monly_YZ_money_visible = 0 }
+                add_to_variable = { monly_YZ_money_visible = num_of_factories }
+                clamp_variable = {		#范围
+                    var = monly_YZ_money_visible
+                    min = 0
+                    max = 150
+                }
+                set_variable = { monly_YZ_money_temp = monly_YZ_money_visible }
+                set_variable = { monly_YZ_money_visible = 0 }
+                if = {
+                    limit = {
+                        check_variable = { num_of_factories < 30 }
+                    }
+                    multiply_variable = { monly_YZ_money_temp = 3 }
+                    add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { num_of_factories > 29 }
+                        check_variable = { num_of_factories < 80 }
+                    }
+                    add_to_variable = {monly_YZ_money_visible = 90}
+                    add_to_variable = {monly_YZ_money_temp = -30}
+                    multiply_variable = { monly_YZ_money_temp = 2.5 }
+                    add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { num_of_factories > 79 }
+                    }
+                    add_to_variable = {monly_YZ_money_visible = 90}
+                    add_to_variable = {monly_YZ_money_temp = -30}
+                    add_to_variable = {monly_YZ_money_visible = 125}
+                    add_to_variable = {monly_YZ_money_temp = -50}
+                    multiply_variable = { monly_YZ_money_temp = 1.5 }
+                    add_to_variable = { monly_YZ_money_visible = monly_YZ_money_temp }
+                }
+                if = {		#每月自动拨款
+                    limit = {
+                        check_variable = { yz_money < 4999 }
+                        check_variable = { YzMonthlyFund_var > 0 }
+                    }
+                    set_temp_variable = { yz_money_temp = 0 }
+                    add_to_temp_variable = { yz_money_temp = YzMonthlyFund_var }
+                    multiply_temp_variable = { yz_money_temp = 150 }
+                    add_to_variable = { monly_YZ_money_visible = yz_money_temp }
+                }
+            }
+
+            ###额外增加柚子币放在这里
+            add_to_variable = { monly_YZ_money_visible = monly_YZ_masaki_money_visible } #真咲连锁店与柚子收入的互动
+            add_to_variable = { monly_YZ_money_visible = yz_new_works } #卖新作
+
+            set_variable = { monthly_YZ_money_income = 0 }
+            add_to_variable = { monthly_YZ_money_income = monly_YZ_money_visible } #ui显示收入
+            subtract_from_variable = { monly_YZ_money_visible = YzMoneyOutcome_var } #减去支出
+        }
+    }
+
+    on_daily = {	#经济政策倒计时
+        effect = {
+            if = {
+                limit = {
+                    has_country_flag = StratConstructionInvestment
+                }
+                add_to_variable = { yz_economic_policy_3_var = -1 }
+                if = {
+                    limit = {
+                        check_variable = { yz_economic_policy_3_var = 0 }
+                    }
+                    clr_country_flag = StratConstructionInvestment
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = StratTreasuryBonds
+                }
+                add_to_variable = { yz_economic_policy_1_var = -1 }
+                if = {
+                    limit = {
+                        check_variable = { yz_economic_policy_1_var = 0 }
+                    }
+                    clr_country_flag = StratTreasuryBonds
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = StratForeignInvestment
+                }
+                add_to_variable = { yz_economic_policy_2_var = -1 }
+                if = {
+                    limit = {
+                        check_variable = { yz_economic_policy_2_var = 0 }
+                    }
+                    clr_country_flag = StratForeignInvestment
+                }
+            }
+        }
+    }
+
+    on_peace = {
+        effect = {
+            if = {
+                limit = {
+                    has_country_flag = tianyin_fighting
+                }
+                remove_advisor_role = {
+                    character = Amane_advisor
+                    slot = political_advisor
+                }
+                remove_ideas = yz_amane1
+                set_country_flag = get_true_amane
+                country_event = sairi_event.10
+                clr_country_flag = tianyin_fighting
+            }
+        }
+    }
+
+    on_daily = {        #柚子厨相关
+        effect = {
+            if = {
+                limit = {
+                    has_country_flag = qiyong_youzi_2
+                }
+                clamp_variable = {		#范围
+                    var = yzc_manpower_factor
+                    min = 0
+                    max = 1
+                }
+                set_variable = { yzc_manpower_k = 0 }
+                set_variable = { temp_yzc_unit_recruit = 0 }
+                set_variable = { temp_yzc_manpower = max_manpower_k }  #计算柚子厨
+                multiply_variable = { temp_yzc_manpower = yzc_manpower_factor } #乘以柚子厨比例
+                add_to_variable = { yzc_manpower_k = temp_yzc_manpower }
+                add_to_variable = { yzc_manpower_k = recruited_yzc_manpower }    #减去招募过的柚子厨
+                add_to_variable = { temp_yzc_unit_recruit = yzc_manpower_k }
+                set_variable = { temp_yzc_zhandouli = yzc_zhandouli }
+                add_to_variable = { temp_yzc_zhandouli = -0.025 }
+                multiply_variable = { temp_yzc_unit_recruit = temp_yzc_zhandouli }   #柚子厨战斗力
+                set_variable = { yzc_unit_recruit = temp_yzc_unit_recruit }
+                add_to_variable = {
+                    var = yzc_unit_recruit
+                    value = recruited_yzc_manpower
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    ##############################################################
+    ####把新加的放在这上面
+
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                    is_ai = no
+                }
+                add_to_variable = { love_depth = -50 }
+                clamp_variable = {		#范围
+                    var = love_depth
+                    min = -100
+                    max = base_max_love
+                }
+            }
+        }
+    }
+
+    on_uncapitulation = {
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                    is_ai = no
+                }
+                add_to_variable = { love_depth = 50 }
+                clamp_variable = {		#范围
+                    var = love_depth
+                    min = -100
+                    max = base_max_love
+                }
+            }
+        }
+    }
+
+    on_weekly = {		#每周低好感随机离开
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                    check_variable = { love_depth < -50 }
+                }
+                random_list = {
+                    50 = { add_to_variable = { love_depth = 10 } }
+                }
+                random_list = {
+                    30 = {
+                        random_army_leader = {
+                            limit = {
+                                yz_general = yes
+                            }
+                            remove_unit_leader_role = yes
+                        }
+                        country_event = start_event.3
+                    }
+                }
+            }
+        }
+    }
+
+    on_monthly = {		##暂时没用，回头写事件触发
+        effect = {
+            if = {
+                limit = {
+                    has_variable = love_depth
+                    has_variable = num_YZ_general
+                    check_variable = { love_depth = -100 }
+                }
+                every_army_leader = {
+                    limit = {
+                        yz_general = yes
+                    }
+                    remove_unit_leader_role = yes
+                }
+                country_event = start_event.4
+                set_country_flag = yz_bad_end
+            }
+        }
+    }
+    on_nuke_drop = {
+        effect = {
+            set_variable = {
+                global.nukecountry = ROOT
+            }
+            news_event = { id = nuke_dropped.12097 days = 1 }
+            news_event = { id = nuke_dropped.7102 days = 1 }
+        }
+    }
 }

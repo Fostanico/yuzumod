@@ -4,7 +4,7 @@
 ##        ##  ##     ##  ##  ##        ##  ##     ## ## ## ## 
 ##        ##   ##   ##   ##  ##        ##  ######### ##  #### 
 ##    ##  ##    ## ##    ##  ##        ##  ##     ## ##   ### 
- ######  ####    ###    #### ######## #### ##     ## ##    ## 
+ ######  ####    ###    #### ######## #### ##     ## ##    ##           #van：我砍了芳乃建造速度加在了生产上限上
 JCL_industry_category = {
 	Yoshino_industry_540days = {  
 		priority = 1000   
@@ -50,7 +50,6 @@ JCL_industry_category = {
 			
 		}
 	}
-	
 	Yoshino_industry_five_year_yes = {		#芳乃五年计划显示决议
 		icon = GFX_yoshino
 		days_remove = 1
@@ -62,17 +61,19 @@ JCL_industry_category = {
 			has_country_flag = yoshino_industry_start
 			not = { has_country_flag = yz_bad_end }
 			not = { has_country_flag = Yoshino_industry_five_year_yes }
+			not = { has_country_flag = Yoshino_industry_five_year_yes_by_loan }
 			not = { has_country_flag = finished_yoshino_industry }
 		}
 
 		available = {
-			industrial_complex > 5
+			num_of_civilian_factories_available_for_projects > 5
 		}
 
 		complete_effect = {
 			add_dynamic_modifier = { modifier = Yoshino_industry_dynamic_modifier }
 			force_update_dynamic_modifier = yes
 			set_country_flag = Yoshino_industry_five_year_yes
+			set_country_flag = Yoshino_industry_five_year_yes_by_loan
 			set_country_flag = doing_Yoshino_industry
 			if = {
 				limit = {
@@ -82,7 +83,7 @@ JCL_industry_category = {
 			}
 		}
 	}
-
+	
 	Yoshino_industry_five_year_no = {		#芳乃五年计划隐藏决议
 		icon = GFX_yoshino
 		days_remove = 1
@@ -99,6 +100,7 @@ JCL_industry_category = {
 		
 		complete_effect = {
 			clr_country_flag = Yoshino_industry_five_year_yes
+			clr_country_flag = Yoshino_industry_five_year_yes_by_loan
 		}
 	}
 	
@@ -333,10 +335,6 @@ JCL_industry_category = {
 		}            
 		timeout_effect = {                      
 			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
-			add_to_variable = {
-				Yoshino_production_speed_buildings_factor = 0.025
-				tooltip = production_speed_buildings_factor_tt
-			}
 			add_to_variable = { num_yoshino_industray_completed = 1 }
 			set_country_flag = yoshino_industrial_complex_3
 			set_temp_variable = { zengjiamingong = 0 }
@@ -791,7 +789,7 @@ JCL_industry_category = {
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
-				Yoshino_production_factory_efficiency_gain_factor = 0.025
+				Yoshino_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = {
@@ -799,7 +797,7 @@ JCL_industry_category = {
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = {
-				Yoshino_industrial_capacity_factory = 0.025
+				Yoshino_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
 			set_temp_variable = { diqugaizao = 0 }
@@ -882,11 +880,11 @@ JCL_industry_category = {
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
-				Yoshino_production_factory_max_efficiency_factor = 0.025
+				Yoshino_production_factory_max_efficiency_factor = 0.075
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = {
-				Yoshino_production_factory_efficiency_gain_factor = 0.025
+				Yoshino_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = {
@@ -1069,7 +1067,7 @@ JCL_industry_category = {
 				tooltip = local_resources_factor_tt
 			}
 			add_to_variable = {
-				Yoshino_industrial_capacity_factory = 0.025
+				Yoshino_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
 			} 
 			if = {
@@ -1200,8 +1198,11 @@ JCL_industry_category = {
 		}
 		custom_cost_text = YM_500
 		
-		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+		visible = {
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1212,7 +1213,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -500 }
 		}
 
 		modifier = {
@@ -1246,10 +1247,13 @@ JCL_industry_category = {
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_250
+		custom_cost_text = YM_400
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1260,7 +1264,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -400 }
 		}
 
 		modifier = {
@@ -1275,7 +1279,7 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = tungsten
-					amount = 20
+					amount = 30
 					}
 				}
 		}
@@ -1287,14 +1291,17 @@ JCL_industry_category = {
 		custom_cost_trigger = {
 			check_variable = {
 				var = yz_money
-				value = 250
+				value = 400
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_250
+		custom_cost_text = YM_400
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1305,7 +1312,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -400 }
 		}
 
 		modifier = {
@@ -1320,7 +1327,7 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = aluminium
-					amount = 20
+					amount = 30
 					}
 				}
 		}
@@ -1332,14 +1339,17 @@ JCL_industry_category = {
 		custom_cost_trigger = {
 			check_variable = {
 				var = yz_money
-				value = 250
+				value = 400
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_250
+		custom_cost_text = YM_400
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1350,7 +1360,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -400 }
 		}
 
 		modifier = {
@@ -1365,7 +1375,7 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = rubber
-					amount = 20
+					amount = 30
 					}
 				}
 		}
@@ -1377,14 +1387,17 @@ JCL_industry_category = {
 		custom_cost_trigger = {
 			check_variable = {
 				var = yz_money
-				value = 350
+				value = 500
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_350
+		custom_cost_text = YM_500
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1395,7 +1408,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -350 }
+			add_to_variable = { yz_money = -500 }
 		}
 
 		modifier = {
@@ -1410,7 +1423,7 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = oil
-					amount = 20
+					amount = 30
 					}
 				}
 		}
@@ -1422,14 +1435,17 @@ JCL_industry_category = {
 		custom_cost_trigger = {
 			check_variable = {
 				var = yz_money
-				value = 250
+				value = 400
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_250
+		custom_cost_text = YM_400
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1440,7 +1456,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -400 }
 		}
 
 		modifier = {
@@ -1455,7 +1471,7 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = chromium
-					amount = 20
+					amount = 30
 					}
 				}
 		}
@@ -1466,14 +1482,17 @@ JCL_industry_category = {
 		custom_cost_trigger = {
 			check_variable = {
 				var = yz_money
-				value = 250
+				value = 400
 				compare = greater_than_or_equals
 			}
 		}
-		custom_cost_text = YM_250
+		custom_cost_text = YM_400
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
 
@@ -1484,7 +1503,7 @@ JCL_industry_category = {
 		}
 
 		complete_effect = {
-			add_to_variable = { yz_money = -250 }
+			add_to_variable = { yz_money = -400 }
 		}
 
 		modifier = {
@@ -1499,7 +1518,55 @@ JCL_industry_category = {
 				}
 				add_resource = {
 					type = steel
-					amount = 20
+					amount = 30
+				}
+			}
+		}
+	}
+	Yoshino_industry_five_year_coal = {		#芳乃五年煤炭开采计划    2025.11.23 22：58 伊尔诺
+		icon = GFX_decision_coal
+		days_remove = 16
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 400
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_400
+		
+		visible = { 
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
+			not = { has_country_flag = yz_bad_end }
+			date < 1999.12.31
+		}
+
+		available = {
+			or = {
+				has_country_flag = have_yoshino
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = { yz_money = -400 }
+		}
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					not = { impassable = yes }
+				}
+				add_resource = {
+					type = coal
+					amount = 500
 				}
 			}
 		}
@@ -1511,7 +1578,10 @@ JCL_industry_category = {
 		cost = 30
 		
 		visible = { 
-			has_country_flag = Yoshino_industry_five_year_yes
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			}
 			not = { has_country_flag = yz_bad_end }
 		}
  
@@ -1542,8 +1612,1153 @@ JCL_industry_category = {
 
 		remove_effect = {
 		}
-	}	
-}
+	}
+	#######################################################################################################
+    #######################################################################################################
+	#######################################################################################################——这个绿坨子是我后来补的标记物，因为我怕我找不到我加的内容在哪里
+	#######################################################################################################——我忘记啥时候加的了，——2025.3.18，17:03，伊尔诺
+	#######################################################################################################		   
+	#######################################################################################################
+	#######################################################################################################
+	####################################################################################################### 
+	#如果工厂不足的我都放在这里了
+	Yoshino_industry_540days_by_loan = {  #这个是用贷款启动的任务——2025.3.17，15：32，伊尔诺
+		priority = 1000   
+		activation = {                         
+			has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			not = { has_country_flag = finished_yoshino_industry }
+		}                                 
+		available = {                           
+			check_variable = { 
+				num_yoshino_industray_completed > 12
+			}
+		}
+		
+		is_good = no                       
+	
+		days_mission_timeout = 730
+		timeout_effect = {            
+			set_country_flag = finished_yoshino_industry          
+			add_stability = -0.2
+			add_political_power = -300
+			remove_advisor_role = {
+				character = "Yoshino_advisor"
+				slot = political_advisor
+			}
+			remove_dynamic_modifier = {
+				modifier = Yoshino_industry_dynamic_modifier
+			}
+		}
+		complete_effect = {                   
+			hidden_effect = { 
+				remove_ideas = bupingheng
+				remove_ideas = manglujianshe
+				clr_country_flag = doing_Yoshino_industry_by_bonds
+				#clr_country_flag = 
+				set_country_flag = finished_yoshino_industry
+				country_event = start_event.5
+				remove_dynamic_modifier = {
+					modifier = Yoshino_industry_dynamic_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = Yoshino_industry_finished_dynamic_modifier
+				}
+			}
+			
+		}
+	}
+	
+	#贷款启动芳乃五年计划——2025.3.17，15：24，伊尔诺         /*有时候挺能感觉到技术文档的重要性的，比如我现在真的不想看这些flag到底是什么
+	#。顺便吐槽一下P语言居然不支持“/**/”这种注释格式，这种多行注释多好用，比一个“#”好多了，C++里都让我用“/**/”和“//”，我现在只能装模做样
+	#地使用多行注释。*/
+	Yoshino_industry_five_year_yes_by_loan = {
+		icon = GFX_yoshino    
+		days_remove = 1
+		cost = 50          #开始发行债券
+		#custom_cost_trigger = {   
+		#	check_variable = {
+		#		var = yz_money
+		#		value = 500
+		#		compare = greater_than_or_equals
+		#	}
+		#}
+		#custom_cost_text = YM_500
+
+		visible = { 
+			has_country_flag = have_yoshino
+			has_country_flag = qiyong_youzi_2
+			has_country_flag = yoshino_industry_start
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = Yoshino_industry_five_year_yes }
+			not = { has_country_flag = Yoshino_industry_five_year_yes_by_loan }
+			not = { has_country_flag = finished_yoshino_industry }
+		}
+
+		#available = {
+		#	check_variable = {
+		#		var = num_of_civilian_factories_available_for_projects     #2025.3.18，22:21，伊尔诺
+		#		value = 5         
+		#		compare = less_than
+		#	}
+		#	#num_of_civilian_factories_available_for_projects < 5
+		#}
+
+		complete_effect = {
+			add_dynamic_modifier = { modifier = Yoshino_industry_dynamic_modifier }
+			force_update_dynamic_modifier = yes
+			set_country_flag = Yoshino_industry_five_year_yes_by_loan
+			set_country_flag = doing_Yoshino_industry_by_bonds
+			set_country_flag = now_we_issuing_bonds
+			if = {
+				limit = {
+					has_country_flag = doing_Megulu_industry
+				}
+				add_ideas = manglujianshe
+			}
+			add_to_variable = { 
+				yz_money = 4000 
+				tooltip = bond_we_issuing_tooltip
+			}
+			add_to_variable = {
+				var = bond_we_need_to_repay
+				value = 1000
+			}
+			add_to_variable = {
+				var = yz_interest_rate
+				value = 100.05
+			}
+			add_to_variable = {
+				var = yz_interest_rate_we_can_see
+				value = 0.05
+			}
+		}
+	}
+	yuzu_auto_industrialization = {
+        icon = GFX_decision_NOR_prepare_state_dem_0
+        days_remove = 0
+        visible = {
+            has_country_flag = doing_Yoshino_industry_by_bonds
+            not = { has_country_flag = industry_industrial_complex_line_by_bonds }
+        }
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 1500
+				compare = greater_than_or_equals
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		custom_cost_text = YM_1500
+        complete_effect = {
+            set_country_flag = industry_industrial_complex_line_by_bonds
+            if = {
+                limit = {
+                    not = { has_country_flag = yoshino_industrial_complex_by_bonds_1 }
+                }
+                activation_mission = Yoshino_industry_five_year_industrial_complex_by_bonds_1
+            }
+            #custom_effect_tooltip = 
+            hidden_effect = {
+                add_ideas = {
+                    idea = Yoshino_industry_five_year_industrial_complex_by_bonds_1_idea
+                }
+            }
+            add_to_variable = { 
+				yz_money = -1500 
+				tooltip = yz_money_tooltip_subtain 
+			}
+        }
+    }
+    Yoshino_industry_five_year_industrial_complex_by_bonds_1 = {
+        icon = GFX_decision_NOR_prepare_state_dem_1
+        days_mission_timeout = 40
+        activation = {                
+			has_country_flag = industry_industrial_complex_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_industrial_complex_by_bonds_1 }
+		}
+        available = {
+            always = no
+        }
+        #days_remove = 40
+        is_good = yes
+        timeout_effect = {                     
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = { Yoshino_production_speed_industrial_complex_factor = 0.05 tooltip = production_speed_industrial_complex_factor_tt }#
+			add_to_variable = { Yoshino_consumer_goods_factor = 0.025 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_industrial_complex_by_bonds_1
+			set_temp_variable = { zengjiamingong = 0 } 
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							industrial_complex > 2
+							arms_factory > 2
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiamingong < 10 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							industrial_complex > 2
+							arms_factory > 2
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiamingong = 1 }
+				}
+			}	
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 1500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_industrial_complex_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_industrial_complex_by_bonds_2
+				add_to_variable = { 
+					yz_money = -1500 
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}
+		}
+    }
+    Yoshino_industry_five_year_industrial_complex_by_bonds_2 = {
+        icon = GFX_decision_NOR_prepare_state_dem_2
+        days_mission_timeout = 35
+        activation = {                
+			has_country_flag = industry_industrial_complex_line_by_bonds
+			has_country_flag = yoshino_industrial_complex_by_bonds_1
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_industrial_complex_by_bonds_2 }
+		}
+        is_good = yes
+        available = {
+            always = no
+        }
+        timeout_effect = {                      
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_production_speed_buildings_factor = 0.025
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_industrial_complex_by_bonds_2
+			set_temp_variable = { zengjiamingong = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							industrial_complex > 1
+							arms_factory > 1
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiamingong < 12 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							industrial_complex > 1
+							arms_factory > 1
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiamingong = 1 }
+				}
+				
+			}				
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 1500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_industrial_complex_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_industrial_complex_by_bonds_3
+				add_to_variable = { 
+					yz_money = -1500 
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}
+		} 
+    }
+    Yoshino_industry_five_year_industrial_complex_by_bonds_3 = {
+        icon = GFX_decision_NOR_prepare_state_dem_3
+        days_mission_timeout = 35
+        activation = {                
+			has_country_flag = industry_industrial_complex_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			has_country_flag = yoshino_industrial_complex_by_bonds_2
+			not = { has_country_flag = yoshino_industrial_complex_by_bonds_3 }
+		}
+        is_good = yes
+        available = {
+            always = no
+        }
+        timeout_effect = {                      
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_industrial_complex_by_bonds_3
+			set_temp_variable = { zengjiamingong = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							industrial_complex > 1
+							arms_factory > 1
+						}
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiamingong < 12 } }
+				random_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiamingong = 1 }
+				}
+			}	
+									
+		}
+    }
+    yuzu_auto_infrastructurlization = {
+        icon = GFX_decision_generic_construction
+        days_remove = 0
+        custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 750
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_750
+        visible = { 
+			has_country_flag = doing_Yoshino_industry_by_bonds
+			not = { has_country_flag = industry_infrastructure_line_by_bonds }
+		}
+        complete_effect = {
+			set_country_flag = industry_infrastructure_line_by_bonds
+			if = {
+				limit = {
+					not = { has_country_flag = yoshino_infrastructure_by_bonds_1 }
+				}
+				activate_mission = Yoshino_industry_five_year_infrastructure_by_bonds_1
+				add_manpower = -10000
+				custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+				add_to_variable = {
+					Yoshino_production_speed_infrastructure_factor = 0.15#
+					tooltip =  production_speed_infrastructure_factor_tt
+				}
+			}
+			add_to_variable = { 
+				yz_money = -750
+				tooltip = yz_money_tooltip_subtain 
+			}
+		}
+    }
+    Yoshino_industry_five_year_infrastructure_by_bonds_1 = {
+        icon = GFX_decision_generic_construction
+		days_mission_timeout = 35
+		activation = {                
+			has_country_flag = industry_infrastructure_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_infrastructure_by_bonds_1 }
+		}    
+		available = {
+			always = no
+		}
+        is_good = yes
+        timeout_effect = {                     
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_infrastructure_by_bonds_1
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_stability = 0.015
+				tooltip = stability_factor_neutral_tt
+			}
+			add_manpower = 15000
+			set_temp_variable = { zengjiajijian = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_city
+							has_state_category = metropolis
+							has_state_category = megalopolis
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 8 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_city
+							has_state_category = metropolis
+							has_state_category = megalopolis
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}	
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 600
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_infrastructure_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				add_to_variable = { 
+					yz_money = -600
+					tooltip = yz_money_tooltip_subtain 
+				}
+				add_to_variable = { yz_money = -600 }
+				add_manpower = -15000
+				add_to_variable = {
+					production_speed_infrastructure_factor = 0.075
+				}
+				add_to_variable = {
+					Yoshino_consumer_goods_factor = -0.05
+				}
+				activate_mission = Yoshino_industry_five_year_infrastructure_by_bonds_2
+			}
+		}
+    }
+    Yoshino_industry_five_year_infrastructure_by_bonds_2 = {
+        icon = GFX_decision_generic_construction
+		days_mission_timeout = 35
+		activation = {                
+			has_country_flag = industry_infrastructure_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_infrastructure_by_bonds_2 }
+			has_country_flag = yoshino_infrastructure_by_bonds_1
+		}    
+		available = {
+			always = no
+		}
+        is_good = yes
+        timeout_effect = {                     
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_infrastructure_by_bonds_2
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_stability = 0.015
+				tooltip = stability_factor_tt
+			}
+			add_manpower = 20000
+			set_temp_variable = { zengjiajijian = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_town
+							has_state_category = large_city
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 13 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_town
+							has_state_category = large_city
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}	
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_infrastructure_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_infrastructure_by_bonds_3
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}
+		}
+    }
+    Yoshino_industry_five_year_infrastructure_by_bonds_3 = {
+        icon = GFX_decision_generic_construction
+		days_mission_timeout = 35
+		activation = {                
+			has_country_flag = industry_infrastructure_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_infrastructure_by_bonds_3 }
+			has_country_flag = yoshino_infrastructure_by_bonds_2
+		}    
+		available = {
+			always = no
+		}
+        is_good = yes
+        timeout_effect = {                     
+			set_country_flag = yoshino_infrastructure_by_bonds_3
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_stability = 0.08
+				tooltip = stability_factor_neutral_tt
+			}
+			add_manpower = 35000
+			set_temp_variable = { zengjiajijian = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = rural
+							has_state_category = town
+							has_state_category = large_town
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 15 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = rural
+						has_state_category = town
+						has_state_category = large_town
+						}
+					}
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+					add_to_temp_variable = { zengjiajijian = 1 }
+				}
+			}
+		}
+    }
+    yuzu_auto_state_category = {
+        icon = GFX_decision_generic_electricity
+		days_remove = 0
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 500
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_500
+
+		visible = { 
+			has_country_flag = doing_Yoshino_industry_by_bonds
+			not = { has_country_flag = industry_state_category_line_by_bonds }
+		}
+		complete_effect = {
+			set_country_flag = industry_state_category_line_by_bonds
+			if = {
+				limit = {
+					not = { has_country_flag = yoshino_state_category_by_bonds_1 }
+				}
+				activate_mission = Yoshino_industry_five_year_state_category_by_bonds_1
+			}
+			add_to_variable = { 
+				yz_money = -500
+				tooltip = yz_money_tooltip_subtain 
+			}
+		}
+    }
+    Yoshino_industry_five_year_state_category_by_bonds_1 = {
+        icon = GFX_decision_generic_electricity
+		days_mission_timeout = 45
+		activation = {                
+			has_country_flag = industry_state_category_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_state_category_by_bonds_1 }
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes
+        timeout_effect = {                     
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_state_category_by_bonds_1
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			set_temp_variable = { diqugaizao = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_city
+							has_state_category = metropolis
+						}
+					}
+					set_state_category = megalopolis
+					add_to_temp_variable = { diqugaizao = 1 }
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 8 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_city
+							has_state_category = metropolis
+						}
+					}
+					set_state_category = megalopolis
+					add_to_temp_variable = { diqugaizao = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_state_category_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_state_category_by_bonds_2
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}
+		} 
+    }
+    Yoshino_industry_five_year_state_category_by_bonds_2 = {
+        icon = GFX_decision_generic_electricity
+		days_mission_timeout = 45
+		activation = {                
+			has_country_flag = industry_state_category_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_state_category_by_bonds_2 }
+			has_country_flag = yoshino_state_category_by_bonds_1
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes
+        timeout_effect = {                     
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			set_country_flag = yoshino_state_category_by_bonds_2
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_factory_start_efficiency_factor = 0.05
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			set_temp_variable = { diqugaizao = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_town
+							has_state_category = city
+						}
+					}
+					random_list = {
+						50 = { set_state_category = large_city }
+						50 = { set_state_category = metropolis }
+					}
+					add_to_temp_variable = { diqugaizao = 1 }
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 9 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = large_town
+							has_state_category = city
+						}
+					}
+					random_list = {
+						50 = { set_state_category = large_city }
+						50 = { set_state_category = metropolis }
+					}
+					add_to_temp_variable = { diqugaizao = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_state_category_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_state_category_by_bonds_3
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}
+		} 
+    }
+    Yoshino_industry_five_year_state_category_by_bonds_3 = {
+        icon = GFX_decision_generic_electricity
+		days_mission_timeout = 35
+		activation = {                
+			has_country_flag = industry_state_category_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_state_category_by_bonds_3 }
+			has_country_flag = yoshino_infrastructure_by_bonds_2
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes
+        timeout_effect = {                     
+			set_country_flag = yoshino_state_category_by_bonds_3
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			add_manpower = 50000
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_factory_max_efficiency_factor = 0.075#
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_stability = 0.05
+				tooltip = stability_factor_tt
+			}
+			set_temp_variable = { diqugaizao = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+			random_controlled_state = {
+				limit = {
+					or = {
+						has_state_category = rural
+						has_state_category = town
+					}
+				}
+				random_list = {
+					50 = { set_state_category = large_city }
+					50 = { set_state_category = city }
+				}
+				add_to_temp_variable = { diqugaizao = 1 }
+			}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { zengjiajijian < 8 } }
+				random_controlled_state = {
+					limit = {
+						or = {
+							has_state_category = rural
+							has_state_category = town
+						}
+					}
+					random_list = {
+						50 = { set_state_category = large_city }
+						50 = { set_state_category = city }
+					}
+					add_to_temp_variable = { diqugaizao = 1 }
+				}
+			}	
+		}
+    }
+    yuzu_auto_others = {
+		icon = GFX_decision_generic_wreckers
+		days_remove = 0
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 500
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_500
+
+		visible = { 
+			has_country_flag = doing_Yoshino_industry_by_bonds
+			not = { has_country_flag = industry_auto_others_line_by_bonds }
+		}
+		complete_effect = {
+			set_country_flag = industry_auto_others_line_by_bonds
+			if = {
+				limit = {
+					not = { has_country_flag = yoshino_steels_by_bonds }
+				}
+				activate_mission = Yoshino_industry_five_year_3_by_bonds
+			}
+			add_to_variable = { 
+				yz_money = -500
+				tooltip = yz_money_tooltip_subtain 
+			}
+		}
+	}
+	Yoshino_industry_five_year_3_by_bonds = {
+		icon = GFX_decision_steel
+		days_mission_timeout = 30
+		activation = {                
+			has_country_flag = industry_auto_others_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_steels_by_bonds }
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes 
+		timeout_effect = {                     
+			set_country_flag = yoshino_steels_by_bonds
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			add_to_variable = {
+				Yoshino_local_resources_factor = 0.15
+				tooltip = local_resources_factor_tt
+			}
+			set_temp_variable = { add_steel = 0 }
+			effect_tooltip = {		#显示效果,无实际效果
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						not = { impassable = yes }
+					}
+					add_resource = {
+						type = steel
+						amount = 25
+					}
+				}
+			}
+			
+			while_loop_effect = {
+				limit = { check_variable = { add_steel < 11 } }
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						not = { impassable = yes }
+						or = {
+							has_state_category = city
+							has_state_category = large_city
+							has_state_category = metropolis
+							has_state_category = megalopolis
+						}
+					}
+					add_resource = {
+						type = steel
+						amount = 25
+					}
+				}
+				add_to_temp_variable = {
+					add_steel = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_auto_others_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_4_by_bonds
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}	
+		}
+	}
+	Yoshino_industry_five_year_4_by_bonds = {
+		icon = GFX_decision_generic_wreckers
+		days_mission_timeout = 45
+		activation = {                
+			has_country_flag = industry_auto_others_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_4_by_bonds }
+			has_country_flag = yoshino_steels_by_bonds
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes
+		timeout_effect = {                     
+			set_country_flag = yoshino_4_by_bonds
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = {
+				Yoshino_min_export = -0.17
+			}
+			add_to_variable = {
+				Yoshino_local_resources_factor = 0.125
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			} 
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_auto_others_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_5_by_bonds
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}	
+		}   
+	}
+	Yoshino_industry_five_year_5_by_bonds = {
+		icon = GFX_decision_generic_wreckers
+		days_mission_timeout = 45
+		activation = {                
+			has_country_flag = industry_auto_others_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_5_by_bonds }
+			has_country_flag = yoshino_4_by_bonds
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes
+		timeout_effect = {                     
+			set_country_flag = yoshino_5_by_bonds
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			add_to_variable = {
+				Yoshino_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_production_speed_buildings_factor = 0.025#
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_stability = 0.025
+				tooltip = stability_factor_neutral_tt
+			}
+			if = {
+				limit = {
+					check_variable = {
+						yz_money < 500
+						tooltip = yz_money_tooltip_compare_less
+					}
+				}
+				clr_country_flag = industry_auto_others_line_by_bonds
+				country_event = start_event.17
+			}
+			else = {
+				activate_mission = Yoshino_industry_five_year_20_by_bonds
+				add_to_variable = { 
+					yz_money = -500
+					tooltip = yz_money_tooltip_subtain 
+				}
+			}	
+		} 
+	}
+	Yoshino_industry_five_year_20_by_bonds = {		#农业机械化
+		icon = GFX_decision_generic_trucks
+		days_mission_timeout = 45
+		activation = {                
+			has_country_flag = industry_auto_others_line_by_bonds
+			not = { has_country_flag = yz_bad_end }
+			not = { has_country_flag = yoshino_20_by_bonds }
+			has_country_flag = yoshino_5_by_bonds
+		}    
+		available = {
+			always = no
+		}
+		is_good = yes                 
+		timeout_effect = {                     
+			set_country_flag = yoshino_20_by_bonds
+			add_ideas = agricultural_mechanization
+			custom_effect_tooltip = Yoshino_industry_dynamic_modifier_tt
+			add_to_variable = { num_yoshino_industray_completed = 1 }
+			add_to_variable = {
+				Yoshino_consumer_goods_factor = -0.037
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_local_resources_factor = 0.075
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				Yoshino_stability = 0.037
+				tooltip = stability_factor_neutral_tt
+			}	
+		}
+	}
+}	
+	#######################################################################################################
+    #######################################################################################################
+	#######################################################################################################
+	#######################################################################################################
+	#######################################################################################################		   
+	#######################################################################################################
+	#######################################################################################################
+	#######################################################################################################	
+
 ##     ## #### ##       #### ########    ###    ########  ##    ## 
 ###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##  
 #### ####  ##  ##        ##     ##     ##   ##  ##     ##   ####   
@@ -2024,7 +3239,7 @@ Megulu_industry_category = {
 			add_to_variable = { num_megulu_industray_completed = 1 }
 			set_country_flag = megulu_industry_5
 			custom_effect_tooltip = Megulu_industry_dynamic_modifier_tt
-			add_to_variable = { Megulu_industrial_capacity_factory = 0.025 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { Megulu_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
 			add_to_variable = { Megulu_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt }
 			add_to_variable = { 
 				Megulu_attrition = -0.025 
@@ -2741,7 +3956,7 @@ Megulu_industry_category = {
 			add_to_variable = { Megulu_armor_build_cost_ic = -0.05 }			
 			add_to_variable = { Megulu_war_support_factor = 0.1 tooltip = war_support_factor_tt }
 			add_to_variable = { Megulu_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
-			add_to_variable = { Megulu_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { Megulu_industrial_capacity_factory = 0.025 tooltip = industrial_capacity_factory_tt }
 			add_to_variable = { Megulu_offensive_war_stability_factor = 0.1 tooltip = offensive_war_stability_factor_tt}
 		}
 	}

@@ -56,10 +56,23 @@ or = {
 	has_country_flag = have_sakuyahime
 	has_country_flag = have_roka
 	has_country_flag = have_koharu
+	has_country_flag = have_yukari
+	has_country_flag = have_konoka
+	has_country_flag = have_mahiro
+	has_country_flag = have_mei
+	has_country_flag = have_tia
+	has_country_flag = have_orie
+	has_country_flag = have_nicola
+	has_country_flag = have_tae
+	has_country_flag = have_noriko
+	has_country_flag = have_sumi
+	has_country_flag = have_yuki
+
 #神秘标记点@@
 	has_country_flag = have_ebihara_minase
 	has_country_flag = have_mera_azusa
 	has_country_flag = have_elina_owen
+	has_country_flag = have_aragami_sayo     #伊尔诺，时间不记得了
 }
 }
 
@@ -115,6 +128,19 @@ or = {
 	has_trait = yz_shizuru_trait
 	has_trait = yz_koharu_trait
 	has_trait = yz_roka_trait
+	has_trait = yz_yuki_trait
+	has_trait = yz_yuki_trait_2
+	has_trait = yz_sumi_trait 
+	has_trait = yz_sumi_trait_2 
+	has_trait = yz_noriko_trait
+	has_trait = yz_yukari_trait
+	has_trait = yz_tae_trait
+	has_trait = yz_nicola_trait
+	has_trait = yz_orie_trait
+	has_trait = yz_tia_trait
+	has_trait = yz_mei_trait
+	has_trait = yz_mahiro_trait
+	has_trait = yz_konoka_trait
 #神秘标记点@@
 	has_trait = yz_ebihara_minase_trait
 	has_trait = yz_elina_owen_trait
@@ -123,6 +149,8 @@ or = {
 	has_trait = yz_kurumi_trait0
 	has_trait = yz_kurumi_trait01
 	has_trait = yz_kurumi_trait_2
+	has_trait = yz_aragami_sayo_trait   #2025.3.29,17:58,伊尔诺
+	has_character_flag = yz_navy_flag
 }
 }
 
@@ -136,4 +164,7 @@ chihaya_trait = {
 		has_trait = maid_chihaya_trait_5
 	}
 }
-
+is_yz_advisor = {
+	has_character_flag = yz_government_flag
+	
+}

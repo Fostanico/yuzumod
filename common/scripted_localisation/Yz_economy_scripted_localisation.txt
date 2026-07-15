@@ -1,0 +1,52 @@
+#defined_text = {
+#
+#	name = rob_the_yz_gold_description		#抢黄金描述
+#	text = {
+#		trigger = {
+#			has_country_flag = we_can_reduce_yz_bond
+#		}
+#		localization_key = rob_the_yz_gold_description_1
+#	}
+#	text = {
+#		trigger = {
+#			NOT = {
+#				has_country_flag = we_can_reduce_yz_bond
+#			}
+#		}
+#		localization_key = rob_the_yz_gold_description_2
+#	}
+#}
+defined_text = {
+	name = yz_economy_department_category_describe
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = Yoshino_industry_long_term_invest_now_start
+			}
+		}
+		localization_key = we_dont_start_yz_invest
+	}
+	text = {
+		trigger = {
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+		}
+		localization_key = we_now_start_yoshino_industry_long_term_invest
+	}
+}
+defined_text = {
+	name = Yuzu_can_form_yuzu_land_describe
+	text = {
+		trigger = {
+			has_country_flag = change_puppt_to_yuzu_land
+		}
+		localization_key = Yuzu_can_form_yuzu_land_describe_start
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = change_puppt_to_yuzu_land
+			}
+		}
+		localization_key = Yuzu_can_form_yuzu_land_describe_start_first
+	}
+}

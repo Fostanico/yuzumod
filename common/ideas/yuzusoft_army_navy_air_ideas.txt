@@ -1,12 +1,14 @@
 ideas = {
 	navy_spirit = {
 		naval_yuzusoft_spirit = {
-		    ledger = navy
-            picture = GFX_idea_naval_yuzusoft_spirit
-		    cost= 100
-			visible = { 
+			ledger = navy
+			picture = GFX_idea_naval_yuzusoft_spirit
+			cost = 100
+			visible = {
 				has_country_flag = have_hazuki
-				not = { has_country_flag = yz_bad_end }
+				not = {
+					has_country_flag = yz_bad_end
+				}
 			}
 			modifier = {
 				navy_max_range_factor = 0.15
@@ -22,12 +24,14 @@ ideas = {
 	}
 	air_force_spirit = {
 		air_yuzusoft_spirit = {
-		    ledger = air
-            picture = GFX_idea_air_yuzusoft_spirit
-		    cost= 100
-			visible = { 
+			ledger = air
+			picture = GFX_idea_air_yuzusoft_spirit
+			cost = 100
+			visible = {
 				has_country_flag = have_zaozi
-				not = { has_country_flag = yz_bad_end }
+				not = {
+					has_country_flag = yz_bad_end
+				}
 			}
 			modifier = {
 				sortie_efficiency = 0.3
@@ -44,21 +48,26 @@ ideas = {
 	}
 	army_spirit = {
 		army_yuzusoft_forces = {
-		    ledger = army
-            picture = GFX_idea_army_yuzusoft_forces
-		    cost= 100
-			visible = { 
+			ledger = army
+			picture = GFX_idea_army_yuzusoft_forces
+			cost = 100
+			visible = {
 				has_country_flag = have_fumika
-				not = { has_country_flag = yz_bad_end }
+				not = {
+					has_country_flag = yz_bad_end
+				}
 			}
 			modifier = {
-				weekly_manpower = 1300
-				training_time_army_factor = -0.2
-				special_forces_training_time_factor = 0.25
-				army_attack_factor = 0.05
-				command_power_gain_mult = 0.25
+				weekly_manpower = 2500
+				training_time_army_factor = -0.25
+				special_forces_training_time_factor = 0.4
+				army_attack_factor = 0.1
+				command_power_gain_mult = 0.5
 				army_defence_factor = 0.1
 				supply_consumption_factor = 0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				army_speed_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 0
@@ -67,25 +76,62 @@ ideas = {
 	}
 	army_spirit = {
 		army_yuzusoft_spirit_special_forces = {
-		    ledger = army
-            picture = GFX_idea_army_yuzusoft_spirit_special_forces
-		    cost= 100
-			visible = { 
+			ledger = army
+			picture = GFX_idea_army_yuzusoft_spirit_special_forces
+			cost = 100
+			visible = {
 				has_country_flag = have_mako
-				not = { has_country_flag = yz_bad_end }
+				not = {
+					has_country_flag = yz_bad_end
+				}
 			}
 			modifier = {
 				weekly_manpower = 750
-				special_forces_training_time_factor = -0.25
+				special_forces_training_time_factor = -0.4
 				training_time_army_factor = 0.1
-				special_forces_cap = 0.65
-				command_power_gain_mult = 0.25
-				special_forces_out_of_supply_factor = -0.25
-				special_forces_attack_factor = 0.1
-				special_forces_defence_factor = 0.15
+				special_forces_cap = 1
+				command_power_gain_mult = 1
+				special_forces_out_of_supply_factor = -0.5
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				unit_marine_design_cost_factor = -1
+				unit_mountaineers_design_cost_factor = -1
+				unit_paratrooper_design_cost_factor = -1
+				unit_ranger_battalion_design_cost_factor = -1
+				unit_marine_commando_design_cost_factor = -1
+				unit_amphibious_mechanized_design_cost_factor = -1
+				unit_amphibious_armor_design_cost_factor = -1
+				unit_amphibious_heavy_armor_design_cost_factor = -1
+				unit_amphibious_light_armor_design_cost_factor = -1
+				unit_amphibious_medium_armor_design_cost_factor = -1
 			}
 			ai_will_do = {
 				factor = 0
+			}
+		}
+	}
+	division_command_spirit = {
+		vampire_force = {
+			ledger = army
+			picture = GFX_idea_YCG_sayo
+			cost = 100
+			visible = {
+				has_country_flag = have_miu
+				not = {
+					has_country_flag = yz_bad_end
+				}
+			}
+			modifier = {
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				land_night_attack = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+				army_strength_factor = 0.05
+				army_org_factor = 0.05
+				invasion_preparation = 0.5
+				amphibious_invasion = -0.25
 			}
 		}
 	}

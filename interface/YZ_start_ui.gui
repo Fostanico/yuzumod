@@ -1,0 +1,263 @@
+guiTypes = {
+	# 要点：启动界面主窗口使用 1022x857 原图尺寸居中显示，所有交互按钮都在这张背景上绝对定位。 [2026-06-20] [伊尔诺/GPT5.5]
+	containerWindowType = {
+		name = "YZ_start_ui"
+		position = { x = -511 y = -428 }
+		orientation = CENTER
+		size = { width = 1022 height = 857 }
+		moveable = yes
+		click_to_front = yes
+
+		background = {
+			name = "YZ_start_ui_background"
+			quadTextureSprite = "GFX_start_ui_origin_no_bargin"
+		}
+
+		# 内容：前三个内容按钮使用已经画好的整图透明按钮，不使用 GFX_empty；文字用 instantTextBoxType 独立居中覆盖。 [2026-06-20] [伊尔诺/GPT5.5]
+		buttonType = {
+			name = "YZ_start_ui_update_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_start_ui_buttom_up_one"
+			clicksound = click_ok
+		}
+		instantTextBoxType = {
+			name = "YZ_start_ui_update_button_text"
+			position = { x = 25 y = 52 }
+			font = "hoi_18mbs"
+			text = "YZ_start_ui_update_button_text"
+			maxWidth = 186
+			maxHeight = 24
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "YZ_start_ui_guide_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_start_ui_buttom_middle_one"
+			clicksound = click_ok
+		}
+		instantTextBoxType = {
+			name = "YZ_start_ui_guide_button_text"
+			position = { x = 25 y = 134 }
+			font = "hoi_18mbs"
+			text = "YZ_start_ui_guide_button_text"
+			maxWidth = 186
+			maxHeight = 24
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "YZ_start_ui_credits_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_start_ui_buttom_down_one"
+			clicksound = click_ok
+		}
+		instantTextBoxType = {
+			name = "YZ_start_ui_credits_button_text"
+			position = { x = 25 y = 217 }
+			font = "hoi_18mbs"
+			scale = 0.92
+			text = "YZ_start_ui_credits_button_text"
+			maxWidth = 186
+			maxHeight = 24
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 内容：关闭按钮复用第三个按钮贴图并下移 80 像素，保持左侧按钮视觉风格一致。 [2026-06-20] [伊尔诺/GPT5.5]
+		buttonType = {
+			name = "YZ_start_ui_close_button"
+			position = { x = 0 y = 80 }
+			quadTextureSprite = "GFX_start_ui_buttom_down_one"
+			clicksound = click_close
+		}
+		instantTextBoxType = {
+			name = "YZ_start_ui_close_button_text"
+			position = { x = 25 y = 297 }
+			font = "hoi_18mbs"
+			scale = 0.92
+			text = "YZ_start_ui_close_button_text"
+			maxWidth = 186
+			maxHeight = 24
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 要点：两个 SD 小人同时是彩蛋输入按钮；192x256 素材放在 x=22，使中心线落在左侧栏约 x=118 的中轴线上。 [2026-06-20] [伊尔诺/GPT5.5]
+		buttonType = {
+			name = "YZ_start_ui_sd_0_button"
+			position = { x = 22 y = 346 }
+			quadTextureSprite = "GFX_start_ui_sd_0"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "YZ_start_ui_sd_1_button"
+			position = { x = 22 y = 601 }
+			quadTextureSprite = "GFX_start_ui_sd_1"
+			clicksound = click_default
+		}
+
+		# 内容：右侧正文框通过 scripted localisation 切换内容，并使用原版 standardtext_slider 处理长文本滚动。 [2026-06-20] [伊尔诺/GPT5.5]
+		# 要点：Nature 彩蛋页只在 this_country_in_nor_mode 且切到制作人员页时显示；真正的跳转由 web_link 按钮承担。 [2026-06-22] [伊尔诺/GPT5.5]
+		iconType = {
+			name = "YZ_start_ui_nature_page_bg"
+			position = { x = 260 y = 18 }
+			size = { width = 746 height = 820 }
+			quadTextureSprite = "GFX_start_ui_nature_credits"
+		}
+
+		buttonType = {
+			name = "YZ_start_ui_nature_home_button"
+			position = { x = 282 y = 36 }
+			size = { width = 58 height = 23 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			clicksound = click_default
+			web_link = "https://www.nature.com/"
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_breadcrumbs"
+			position = { x = 292 y = 72 }
+			font = "hoi_18mbs"
+			scale = 0.72
+			text = "YZ_start_ui_nature_breadcrumbs_text"
+			maxWidth = 650
+			maxHeight = 28
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_meta"
+			position = { x = 292 y = 112 }
+			font = "hoi_18mbs"
+			scale = 0.78
+			text = "YZ_start_ui_nature_meta_text"
+			maxWidth = 650
+			maxHeight = 28
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_title"
+			position = { x = 292 y = 148 }
+			font = "hoi_18mbs"
+			scale = 1.12
+			text = "YZ_start_ui_nature_title_text"
+			maxWidth = 650
+			maxHeight = 72
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_authors"
+			position = { x = 292 y = 238 }
+			font = "hoi_18mbs"
+			scale = 0.72
+			text = "YZ_start_ui_nature_authors_text"
+			maxWidth = 650
+			maxHeight = 120
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_journal"
+			position = { x = 292 y = 378 }
+			font = "hoi_18mbs"
+			scale = 0.72
+			text = "YZ_start_ui_nature_journal_text"
+			maxWidth = 650
+			maxHeight = 32
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_metrics"
+			position = { x = 292 y = 430 }
+			font = "hoi_18mbs"
+			scale = 0.72
+			text = "YZ_start_ui_nature_metrics_text"
+			maxWidth = 650
+			maxHeight = 48
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_footer"
+			position = { x = 292 y = 490 }
+			font = "hoi_18mbs"
+			scale = 0.64
+			text = "YZ_start_ui_nature_footer_text"
+			maxWidth = 650
+			maxHeight = 28
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_side_lead"
+			position = { x = 292 y = 544 }
+			font = "hoi_18mbs"
+			scale = 0.78
+			text = "YZ_start_ui_nature_side_lead_text"
+			maxWidth = 620
+			maxHeight = 44
+			format = left
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "YZ_start_ui_nature_workshop_button"
+			position = { x = 298 y = 596 }
+			size = { width = 670 height = 55 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			clicksound = click_default
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3303751918"
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_workshop_button_text"
+			position = { x = 310 y = 608 }
+			font = "hoi_18mbs"
+			scale = 0.82
+			text = "YZ_start_ui_nature_workshop_button_text"
+			maxWidth = 180
+			maxHeight = 26
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_nature_statements"
+			position = { x = 292 y = 660 }
+			font = "hoi_18mbs"
+			scale = 0.68
+			text = "YZ_start_ui_nature_statements_text"
+			maxWidth = 650
+			maxHeight = 120
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "YZ_start_ui_content"
+			position = { x = 278 y = 58 }
+			font = "hoi_18mbs"
+			scale = 0.72
+			text = "YZ_start_ui_content_text"
+			maxWidth = 680
+			maxHeight = 735
+			format = left
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+	}
+}

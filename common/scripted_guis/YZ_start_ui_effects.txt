@@ -1,0 +1,157 @@
+scripted_gui = {
+	# 要点：启动 GUI 只由国家 flag 控制显示，入口目前来自启动决议而不是 start_event.1。 [2026-06-20] [伊尔诺/GPT5.5]
+	YZ_start_ui_gui = {
+		window_name = "YZ_start_ui"
+		context_type = player_context
+		visible = {
+			has_country_flag = YZ_start_ui_visible
+		}
+		effects = {
+			# 内容：三个正文按钮通过互斥 tab flag 切换 scripted localisation 显示内容。 [2026-06-20] [伊尔诺/GPT5.5]
+			YZ_start_ui_update_button_click = {
+				set_country_flag = YZ_start_ui_tab_update
+				clr_country_flag = YZ_start_ui_tab_guide
+				clr_country_flag = YZ_start_ui_tab_credits
+			}
+			YZ_start_ui_guide_button_click = {
+				clr_country_flag = YZ_start_ui_tab_update
+				set_country_flag = YZ_start_ui_tab_guide
+				clr_country_flag = YZ_start_ui_tab_credits
+			}
+			YZ_start_ui_credits_button_click = {
+				clr_country_flag = YZ_start_ui_tab_update
+				clr_country_flag = YZ_start_ui_tab_guide
+				set_country_flag = YZ_start_ui_tab_credits
+			}
+			YZ_start_ui_close_button_click = {
+				clr_country_flag = YZ_start_ui_visible
+				clr_country_flag = YZ_start_ui_tab_update
+				clr_country_flag = YZ_start_ui_tab_guide
+				clr_country_flag = YZ_start_ui_tab_credits
+			}
+			# 要点：SD 彩蛋序列为 1001011001，其中 sd_0 代表 0；变量记录当前已经匹配到的前缀长度。 [2026-06-20] [伊尔诺/GPT5.5]
+			YZ_start_ui_sd_0_button_click = {
+				if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 1 } }
+					set_variable = { YZ_start_ui_sd_progress = 2 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 2 } }
+					set_variable = { YZ_start_ui_sd_progress = 3 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 4 } }
+					set_variable = { YZ_start_ui_sd_progress = 5 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 5 } }
+					set_variable = { YZ_start_ui_sd_progress = 3 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 6 } }
+					set_variable = { YZ_start_ui_sd_progress = 2 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 7 } }
+					set_variable = { YZ_start_ui_sd_progress = 8 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 8 } }
+					set_variable = { YZ_start_ui_sd_progress = 9 }
+				}
+				else = {
+					set_variable = { YZ_start_ui_sd_progress = 0 }
+				}
+			}
+			# 要点：sd_1 代表 1；完整匹配后设置 global flag mod_in_nor_mode 和 country flag this_country_in_nor_mode，并把进度停在 10。 [2026-06-22] [伊尔诺/GPT5.5]
+			YZ_start_ui_sd_1_button_click = {
+				if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 3 } }
+					set_variable = { YZ_start_ui_sd_progress = 4 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 5 } }
+					set_variable = { YZ_start_ui_sd_progress = 6 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 6 } }
+					set_variable = { YZ_start_ui_sd_progress = 7 }
+				}
+				else_if = {
+					limit = { check_variable = { YZ_start_ui_sd_progress = 9 } }
+					set_global_flag = mod_in_nor_mode
+					# 要点：完整输入 1001011001 后，同时写入全局 flag 和当前国家 flag；后者用于只让该国家看到 Nature 彩蛋制作人员页。 [2026-06-22] [伊尔诺/GPT5.5]
+					set_country_flag = this_country_in_nor_mode
+					# 要点：阿诺模式启用后直接执行两项原招募决议的完整结算；已有对应招募旗标时跳过，防止重复生成同名将领。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
+					if = {
+						limit = {
+							not = { has_country_flag = have_kakka_nor }
+						}
+						yzrecruit_irno_full = yes
+					}
+					if = {
+						limit = {
+							not = { has_country_flag = have_misaka_makoto }
+						}
+						yzrecruit_misaka_makoto_full = yes
+					}
+					set_variable = { YZ_start_ui_sd_progress = 10 }
+				}
+				else = {
+					set_variable = { YZ_start_ui_sd_progress = 1 }
+				}
+			}
+		}
+		# 内容：Nature 彩蛋页与普通右侧正文互斥显示，避免制作人员页在彩蛋状态下两套文本重叠。 [2026-06-22] [伊尔诺/GPT5.5]
+		triggers = {
+			YZ_start_ui_content_visible = {
+				or = {
+					not = { has_country_flag = YZ_start_ui_tab_credits }
+					not = { has_country_flag = this_country_in_nor_mode }
+				}
+			}
+			YZ_start_ui_nature_page_bg_visible = {
+				has_country_flag = YZ_start_ui_tab_credits
+				has_country_flag = this_country_in_nor_mode
+			}
+			YZ_start_ui_nature_home_button_visible = {
+				has_country_flag = YZ_start_ui_tab_credits
+				has_country_flag = this_country_in_nor_mode
+			}
+			YZ_start_ui_nature_breadcrumbs_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_meta_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_title_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_authors_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_journal_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_metrics_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_footer_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_side_lead_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_workshop_button_visible = {
+				has_country_flag = YZ_start_ui_tab_credits
+				has_country_flag = this_country_in_nor_mode
+			}
+			YZ_start_ui_nature_workshop_button_text_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+			YZ_start_ui_nature_statements_visible = {
+				has_country_flag = YZ_start_ui_nature_text_disabled
+			}
+		}
+	}
+}

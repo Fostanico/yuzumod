@@ -1,0 +1,179 @@
+guiTypes = {
+    containerWindowType = {
+        name = "YZ_industry_ompression_control_ui"
+        position = {
+            x = 0         
+            y = -15
+        }
+        size = {
+            width = 500
+            height = 150
+        }
+        background = {
+           name = "YZ_industry_ompression_control_ui_background"
+           quadTextureSprite = "GFX_YZ_industry_ompression_control_ui_background"
+           position = {
+                x = 4
+                y = 0
+           }
+        }
+        
+        instantTextBoxType = {     #信息
+            name = "yz_industry_ompression_information"
+			orientation = CENTER_UP
+            position = {
+                x = -125
+                y = 0
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_describe_text"
+            maxHeight = 80
+            maxWidth = 250
+            #pdx_tooltip = "yz_not_instand_show_explain"
+        }
+        instantTextBoxType = {            #民工操作
+            name = "yz_industry_ompression_operation_for_civilian_factories_text"
+            position = {
+                x = 120
+                y = 65
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_for_civilian_factories_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        instantTextBoxType = {
+            name = "yuzu_industry_ompression_operation_number_for_civilian_factories"
+            position = {
+                x = 265
+                y = 65
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_number_for_civilian_factories_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_for_civilian_factories_add"
+            position = { 
+                x = 230
+                y = 60
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_subtract_for_civilian_factories"
+            position = { 
+                x = 300
+                y = 60
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
+        }
+        instantTextBoxType = {            #军工操作
+            name = "yz_industry_ompression_operation_for_arma_factories_text"
+            position = {
+                x = 120
+                y = 85
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_for_arma_factories_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        instantTextBoxType = {
+            name = "yuzu_industry_ompression_operation_number_for_arma_factories"
+            position = {
+                x = 265
+                y = 85
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_number_for_arma_factories_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_for_arma_factories_add"
+            position = { 
+                x = 230
+                y = 80
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_subtract_for_arma_factories"
+            position = { 
+                x = 300
+                y = 80
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
+        }
+        instantTextBoxType = {            #船坞操作
+            name = "yz_industry_ompression_operation_for_dockyard_text"
+            position = {
+                x = 120
+                y = 105
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_for_dockyard_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        instantTextBoxType = {
+            name = "yuzu_industry_ompression_operation_number_for_dockyard"
+            position = {
+                x = 265
+                y = 105
+            }
+            font = "hoi_16mbs"
+            text = "yz_industry_ompression_operation_number_for_dockyard_text_loc"
+            maxWidth = 200
+			maxHeight = 30
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_for_dockyard_add"
+            position = { 
+                x = 230
+                y = 100
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
+        }
+        buttonType = {                               
+            name = "yz_industry_ompression_operation_subtract_for_dockyard"
+            position = { 
+                x = 300
+                y = 100
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
+        }
+    }   
+}

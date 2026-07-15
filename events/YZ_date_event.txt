@@ -1,0 +1,175 @@
+add_namespace = YZ_date_event
+
+# 作用：海滩约会事件框架；要点：事件文本与配图均由wife_id对应的scripted localisation提供。署名：伊尔诺+2026-06-08+assisted by Codex
+country_event = {
+	id = YZ_date_event.1
+	title = YZ_date_event.1.t
+	desc = YZ_date_event.1.d
+	picture = "[YZ_date_beach_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.1.a
+		custom_effect_tooltip = YZ_date_event.1.effect_tt
+		hidden_effect = {
+			add_to_variable = { value_of_loving = 24 }
+			add_to_variable = { value_of_believity = 15 }
+			add_to_variable = { value_of_relationship = 18 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+	}
+}
+
+# 作用：商圈约会事件框架；要点：四类事件文本均按wife_id分流，并使用独立收益组合与共享约会冷却。署名：伊尔诺+2026-06-08+assisted by Codex
+country_event = {
+	id = YZ_date_event.2
+	title = YZ_date_event.2.t
+	desc = YZ_date_event.2.d
+	picture = "[YZ_date_shopping_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.2.a
+		custom_effect_tooltip = YZ_date_event.2.effect_tt
+		hidden_effect = {
+			add_to_variable = { value_of_loving = 18 }
+			add_to_variable = { value_of_believity = 22 }
+			add_to_variable = { value_of_relationship = 16 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+	}
+}
+
+# 作用：学院祭约会事件框架；要点：事件名、标题、正文与选项均由wife_id选择，并使用独立收益组合。署名：伊尔诺+2026-06-08+assisted by Codex
+country_event = {
+	id = YZ_date_event.3
+	title = YZ_date_event.3.t
+	desc = YZ_date_event.3.d
+	picture = "[YZ_date_school_party_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.3.a
+		custom_effect_tooltip = YZ_date_event.3.effect_tt
+		hidden_effect = {
+			add_to_variable = { value_of_loving = 16 }
+			add_to_variable = { value_of_believity = 24 }
+			add_to_variable = { value_of_relationship = 20 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					wife_id = 43
+				}
+			}
+			country_event = YZ_date_event.47001125
+		}
+	}
+}
+
+# 作用：咖啡馆约会事件框架；要点：四类事件文本与事件配图均按wife_id分流。署名：伊尔诺+2026-06-08+assisted by Codex
+country_event = {
+	id = YZ_date_event.4
+	title = YZ_date_event.4.t
+	desc = YZ_date_event.4.d
+	picture = "[YZ_date_cafe_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.4.a
+		custom_effect_tooltip = YZ_date_event.4.effect_tt
+		hidden_effect = {
+			add_to_variable = { value_of_loving = 20 }
+			add_to_variable = { value_of_believity = 18 }
+			add_to_variable = { value_of_relationship = 23 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					wife_id = 43
+				}
+			}
+			add_to_variable = {
+				yz_money = 2000
+			}
+		}
+	}
+}
+
+# 作用：远行约会事件框架；要点：四类事件文本均按wife_id分流，并保持单事件单选项结构。署名：伊尔诺+2026-06-08+assisted by Codex
+country_event = {
+	id = YZ_date_event.5
+	title = YZ_date_event.5.t
+	desc = YZ_date_event.5.d
+	picture = "[YZ_date_jounery_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.5.a
+		custom_effect_tooltip = YZ_date_event.5.effect_tt
+		hidden_effect = {
+			add_to_variable = { value_of_loving = 23 }
+			add_to_variable = { value_of_believity = 21 }
+			add_to_variable = { value_of_relationship = 25 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+	}
+}
+
+country_event = {   #佐奈专属校园祭事件二
+	id = YZ_date_event.47001125
+	title = YZ_date_event.47001125.t
+	desc = YZ_date_event.47001125.d
+	picture = "[YZ_date_school_party_2_picture]"
+	is_triggered_only = yes
+	trigger = {
+		yuzu_married_wife_id_is_registered = yes
+	}
+
+	option = {
+		name = YZ_date_event.47001125.a
+		custom_effect_tooltip = YZ_date_event.47001125.effect_tt
+		hidden_effect = {
+			# 作用：提高佐奈专属校园祭后续约会的关系收益；要点：沿用远行约会的高收益组合并保持0至100上限。署名：伊尔诺+2026-06-08+assisted by Codex
+			add_to_variable = { value_of_loving = 23 }
+			add_to_variable = { value_of_believity = 21 }
+			add_to_variable = { value_of_relationship = 25 }
+			clamp_variable = { var = value_of_loving min = 0 max = 100 }
+			clamp_variable = { var = value_of_believity min = 0 max = 100 }
+			clamp_variable = { var = value_of_relationship min = 0 max = 100 }
+			yuzu_married_refresh_effect_values = yes
+		}
+	}
+}

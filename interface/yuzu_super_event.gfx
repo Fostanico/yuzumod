@@ -1,0 +1,227 @@
+spriteTypes = {
+	spriteType = {   #前三个是基本组件——2025.8.4，17：11，伊尔诺
+		name = "GFX_yuzu_super_event_background"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Window.dds"
+	}
+	spriteType = {
+		name = "GFX_yuzu_sp_event_underlay"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Underlay.dds"
+	}
+	spriteType = {
+		name = "GFX_yuzu_sp_event_close_button"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Close_Button.dds"
+	}
+	#下面是超事件的背景图——2025.8.4，17：29——伊尔诺
+	spriteType = {#穗织的毁灭
+		name = "GFX_super_event_destruction_of_hoori"
+		textureFile = "gfx/super_event/Super_event_destruction_of_hoori.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_destruction_of_washizu"
+		textureFile = "gfx/super_event/Super_event_destruction_of_washizu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_kanna"
+		textureFile = "gfx/super_event/Super_event_marry_kanna.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_mako"
+		textureFile = "gfx/super_event/Super_event_marry_mako.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_murasame"
+		textureFile = "gfx/super_event/Super_event_marry_murasame.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_hazuki"
+		textureFile = "gfx/super_event/Super_event_marry_hazuki.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_mibu"
+		textureFile = "gfx/super_event/Super_event_marry_mibu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_yoshino"
+		textureFile = "gfx/super_event/Super_event_marry_yoshino.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_tia"
+		textureFile = "gfx/super_event/Super_event_marry_tia.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_koharu"
+		textureFile = "gfx/super_event/Super_event_marry_koharu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_ruri"
+		textureFile = "gfx/super_event/Super_event_marry_ruri.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_noa"
+		textureFile = "gfx/super_event/Super_event_marry_noa.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_ayase"
+		textureFile = "gfx/super_event/Super_event_marry_ayase.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_rena"
+		textureFile = "gfx/super_event/Super_event_marry_rena.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_kaguya"
+		textureFile = "gfx/super_event/Super_event_marry_kaguya.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_nene"
+		textureFile = "gfx/super_event/Super_event_marry_nene.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_meguru"
+		textureFile = "gfx/super_event/Super_event_marry_meguru.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_tsumugi"
+		textureFile = "gfx/super_event/Super_event_marry_tsumugi.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_natsume"
+		textureFile = "gfx/super_event/Super_event_marry_natsume.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_mayu"
+		textureFile = "gfx/super_event/Super_event_marry_mayu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_sana"
+		textureFile = "gfx/super_event/Super_event_marry_sana.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_sayo"
+		textureFile = "gfx/super_event/Super_event_marry_sayo.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_rino"
+		textureFile = "gfx/super_event/Super_event_marry_rino.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_tsubasa"
+		textureFile = "gfx/super_event/Super_event_marry_tsubasa.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_yune"
+		textureFile = "gfx/super_event/Super_event_marry_yune.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_roka"
+		textureFile = "gfx/super_event/Super_event_marry_roka.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_mei"
+		textureFile = "gfx/super_event/Super_event_marry_mei.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_nozomi"
+		textureFile = "gfx/super_event/Super_event_marry_nozomi.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_wakana"
+		textureFile = "gfx/super_event/Super_event_marry_wakana.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_shizuru"
+		textureFile = "gfx/super_event/Super_event_marry_shizuru.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_sena"
+		textureFile = "gfx/super_event/Super_event_marry_sena.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_maya"
+		textureFile = "gfx/super_event/Super_event_marry_maya.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_huhu"
+		textureFile = "gfx/super_event/Super_event_marry_huhu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_suou"
+		textureFile = "gfx/super_event/Super_event_marry_suou.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_nanao"
+		textureFile = "gfx/super_event/Super_event_marry_nanao.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_sakuyahime"
+		textureFile = "gfx/super_event/Super_event_marry_sakuyahime.dds"
+	}
+	spriteType = {
+		name = "GFX_Super_event_unite_the_world_n"
+		textureFile = "gfx/super_event/Super_event_unite_the_world_n.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_unite_the_world_d"
+		textureFile = "gfx/super_event/Super_event_unite_the_world_d.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_unite_the_world_c"
+		textureFile = "gfx/super_event/Super_event_unite_the_world_c.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_unite_the_world_f"
+		textureFile = "gfx/super_event/Super_event_unite_the_world_f.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_daozhu"
+		textureFile = "gfx/super_event/Super_event_marry_daozhu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_scp"
+		textureFile = "gfx/super_event/Super_event_marry_scp.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_napoleon_vi"
+		textureFile = "gfx/super_event/Super_event_marry_napoleon_vi.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_SCP_come_here"
+		textureFile = "gfx/super_event/Super_event_SCP_come.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_SCP_come_here"
+		textureFile = "gfx/super_event/Super_event_SCP_come.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_huhu_come_here"
+		textureFile = "gfx/super_event/Super_event_we_have_huhu.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_we_forward_with_irno"
+		textureFile = "gfx/super_event/Super_event_we_forward_with_irno.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_we_unite_with_ilno"
+		textureFile = "gfx/super_event/Super_event_we_unite_with_ilno.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_we_forward_with_makoto"
+		textureFile = "gfx/super_event/Super_event_we_forward_with_makoto.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_we_unite_with_makoto"
+		textureFile = "gfx/super_event/Super_event_we_unite_with_makoto.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_takashiro_maya"
+		textureFile = "gfx/super_event/Super_event_marry_takashiro_maya.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_marry_hotaru"
+		textureFile = "gfx/super_event/Super_event_marry_hotaru.dds"
+	}
+	spriteType = {
+		name = "GFX_super_event_we_have_fukai_omo"
+		textureFile = "gfx/super_event/Super_event_we_have_fukai_omo.dds"
+	}
+}

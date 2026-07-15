@@ -143,3 +143,90 @@ YZ_sp_land_detonator = {
 		}
 	}
 }
+
+sp_land_yz_type_90 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = yz_sp_tag_type90
+
+	ai_will_do = {
+		base = 1
+	}
+
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+	
+	available = {
+		from = {
+			has_country_flag = research_yz_type90
+		}
+		
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	complexity = sp_complexity.insane
+	prototype_time = sp_time.prototype.long	
+	
+	project_output = {
+		country_effects = {
+			hidden_effect = { 
+				root = {
+					#country_event = yz_type90_event.1	#预备的事件
+					set_technology = {
+						tech_YZ_type90 = 1
+					}
+					create_equipment_variant = {
+						name = "柚子YIWG-90式主战坦克"
+						type = type90_tank_chassis
+						parent_version = 0
+						modules = {
+							main_armament_slot = type90_Rh_120_120mm_gun
+							turret_type_slot = type90_tank_turret
+							suspension_type_slot = type90_hydropneumatic_suspension
+							armor_type_slot = type90_composite_armor
+							engine_type_slot = type90_Mitsubishi_10ZG32WT_engine
+							special_type_slot_1 = type90_modern_electronic_equipment
+							special_type_slot_2 = type90_machine_guns
+							special_type_slot_3 = type90_fire_control_system
+							special_type_slot_4 = type90_auto_loader
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 6
+							tank_nsb_armor_upgrade = 20
+						}
+						#icon = "gfx/counters/YZ_TYPE90_ICON.png"
+						design_team = mio:youzi_tank_design_and_production_Center_organization_0
+					}
+				}
+				
+			}
+
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = tech_YZ_type90	
+			}
+		}
+
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_resource_scarcity
+	}
+}

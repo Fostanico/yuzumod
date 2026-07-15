@@ -1,0 +1,7 @@
+#Applied on the project level to group together Projects with the purpose of generating modifiers 
+
+project_tags = {
+	YZ_sp_tag_artillery
+	yz_sp_tag_type90
+	
+}

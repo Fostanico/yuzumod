@@ -1,0 +1,78 @@
+#on_actions = {
+#    on_unit_leader_level_up = {   #BMI系统机制
+#		effect = {
+#			if = {
+#				limit = {
+#					root = {
+#						has_trait = bmi_device
+#						NOT = {
+#							has_trait = bmi_has_worked
+#						}
+#					}
+#				}
+#				set_temp_variable = {
+#					now_level_up_yuzu_leader = root
+#				}
+#				from = {
+#					every_army_leader = {
+#						limit = {
+#							has_trait = bmi_device
+#							NOT = {
+#								has_trait = bmi_has_worked
+#								check_variable = {
+#									var = now_level_up_yuzu_leader
+#									value = this
+#									compare = equals
+#								}
+#							}
+#						}
+#						add_timed_unit_leader_trait = {
+#							trait = bmi_has_worked
+#							days = 1
+#						}
+#						add_skill_level = 1
+#						#add_max_trait = 1
+#						
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
+on_actions = {
+    on_unit_leader_level_up = {   #Gemini版BMI机制_2026.4.29,23:14,伊尔诺
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_trait = bmi_device
+					}
+					FROM = {
+						NOT = {
+							has_country_flag = bmi_cascade_processing_flag
+						}
+					}
+				}
+				ROOT = {
+					set_character_flag = my_wife_level_up
+				}
+				FROM = {
+					set_country_flag = bmi_cascade_processing_flag
+					every_army_leader = {
+						limit = {
+							has_trait = bmi_device
+							NOT = {
+								has_character_flag = my_wife_level_up
+							}
+						}
+						add_skill_level = 1
+					}
+					clr_country_flag = bmi_cascade_processing_flag
+				}
+				ROOT = {
+					clr_character_flag = my_wife_level_up
+				}
+			}
+		}
+	}
+}

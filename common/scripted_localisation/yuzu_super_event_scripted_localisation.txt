@@ -1,0 +1,950 @@
+
+defined_text = {      #超事件名言    
+	name = get_yuzu_super_event_quote
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_hoori_spevt
+		}
+		localization_key = we_nuke_hoori_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_washizu_spevt
+		}
+		localization_key = we_nuke_washizu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kanna
+		}
+		localization_key = we_marry_with_kanna_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mako
+		}
+		localization_key = we_marry_with_mako_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_murasame	
+		}
+		localization_key = we_marry_with_murasame_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hazuki
+		}
+		localization_key = we_marry_with_hazuki_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_daozhu
+		}
+		localization_key = we_marry_with_daozhu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yoshino
+		}
+		localization_key = we_marry_with_yoshino_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mibu
+		}
+		localization_key = we_marry_with_mibu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_koharu
+		}
+		localization_key = we_marry_with_koharu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ruri
+		}
+		localization_key = we_marry_with_ruri_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tia
+		}
+		localization_key = we_marry_with_tia_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_noa
+		}
+		localization_key = we_marry_with_noa_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ayase
+		}
+		localization_key = we_marry_with_ayase_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nene
+		}
+		localization_key = we_marry_with_nene_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kaguya
+		}
+		localization_key = we_marry_with_kaguya_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rena
+		}
+		localization_key = we_marry_with_rena_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_meguru
+		}
+		localization_key = we_marry_with_meguru_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_natsume
+		}
+		localization_key = we_marry_with_natsume_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsumugi
+		}
+		localization_key = we_marry_with_tsumugi_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mayu
+		}
+		localization_key = we_marry_with_mayu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_suou
+		}
+		localization_key = we_marry_with_suou_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sana
+		}
+		localization_key = we_marry_with_sana_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sayo
+		}
+		localization_key = we_marry_with_sayo_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rino
+		}
+		localization_key = we_marry_with_rino_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsubasa
+		}
+		localization_key = we_marry_with_tsubasa_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_roka
+		}
+		localization_key = we_marry_with_roka_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yune
+		}
+		localization_key = we_marry_with_yune_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mei
+		}
+		localization_key = we_marry_with_mei_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nozomi
+		}
+		localization_key = we_marry_with_nozomi_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_wakana
+		}
+		localization_key = we_marry_with_wakana_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_shizuru
+		}
+		localization_key = we_marry_with_shizuru_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sena
+		}
+		localization_key = we_marry_with_sena_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_maya
+		}
+		localization_key = we_marry_with_maya_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sakuyahime
+		}
+		localization_key = we_marry_with_sakuyahime_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_scp
+		}
+		localization_key = we_marry_with_scp_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_napoleon_vi
+		}
+		localization_key = we_marry_with_napoleon_vi_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_huhu
+		}
+		localization_key = we_marry_with_huhu_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_takashiro_maya
+		}
+		localization_key = we_marry_with_takashiro_maya_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hotaru
+		}
+		localization_key = we_marry_with_hotaru_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_n
+		}
+		localization_key = we_unite_the_world_n_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_d
+		}
+		localization_key = we_unite_the_world_d_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_c
+		}
+		localization_key = we_unite_the_world_c_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_f
+		}
+		localization_key = we_untie_the_world_f_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = SCP_come_here
+		}
+		localization_key = scp_come_here_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = huhu_come_here
+		}
+		localization_key = huhu_come_here_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_have_fukai_omo
+		}
+		localization_key = we_have_fukai_omo_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_irno_flag
+		}
+		localization_key = we_forward_with_irno_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_ilro_flag
+		}
+		localization_key = we_unite_with_ilno_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_makoto_flag
+		}
+		localization_key = we_forward_with_makoto_quote
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_makoto_flag
+		}
+		localization_key = we_unite_with_makoto_quote
+	}
+	#后面的都按照我的模板写就行——伊尔诺，2025.8.4，18：02
+	#text = {
+	#	trigger = {
+	#		has_global_flag = <your flag>
+	#	}
+	#	localization_key = <your 名言>
+	#}
+}
+defined_text = {       #超事件标题
+	name = get_yuzu_super_event_title
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_hoori_spevt
+		}
+		localization_key = we_nuke_hoori_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_washizu_spevt
+		}
+		localization_key = we_nuke_washizu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kanna
+		}
+		localization_key = we_marry_with_kanna_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mako
+		}
+		localization_key = we_marry_with_mako_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_murasame	
+		}
+		localization_key = we_marry_with_murasame_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hazuki
+		}
+		localization_key = we_marry_with_hazuki_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_daozhu
+		}
+		localization_key = we_marry_with_daozhu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yoshino
+		}
+		localization_key = we_marry_with_yoshino_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mibu
+		}
+		localization_key = we_marry_with_mibu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_koharu
+		}
+		localization_key = we_marry_with_koharu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ruri
+		}
+		localization_key = we_marry_with_ruri_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tia
+		}
+		localization_key = we_marry_with_tia_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_noa
+		}
+		localization_key = we_marry_with_noa_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ayase
+		}
+		localization_key = we_marry_with_ayase_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nene
+		}
+		localization_key = we_marry_with_nene_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kaguya
+		}
+		localization_key = we_marry_with_kaguya_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rena
+		}
+		localization_key = we_marry_with_rena_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_meguru
+		}
+		localization_key = we_marry_with_meguru_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_natsume
+		}
+		localization_key = we_marry_with_natsume_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsumugi
+		}
+		localization_key = we_marry_with_tsumugi_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mayu
+		}
+		localization_key = we_marry_with_mayu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_suou
+		}
+		localization_key = we_marry_with_suou_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sana
+		}
+		localization_key = we_marry_with_sana_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sayo
+		}
+		localization_key = we_marry_with_sayo_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rino
+		}
+		localization_key = we_marry_with_rino_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsubasa
+		}
+		localization_key = we_marry_with_tsubasa_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_roka
+		}
+		localization_key = we_marry_with_roka_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yune
+		}
+		localization_key = we_marry_with_yune_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mei
+		}
+		localization_key = we_marry_with_mei_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nozomi
+		}
+		localization_key = we_marry_with_nozomi_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_wakana
+		}
+		localization_key = we_marry_with_wakana_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_shizuru
+		}
+		localization_key = we_marry_with_shizuru_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sena
+		}
+		localization_key = we_marry_with_sena_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_maya
+		}
+		localization_key = we_marry_with_maya_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sakuyahime
+		}
+		localization_key = we_marry_with_sakuyahime_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_scp
+		}
+		localization_key = we_marry_with_scp_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_napoleon_vi
+		}
+		localization_key = we_marry_with_napoleon_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_huhu
+		}
+		localization_key = we_marry_with_huhu_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_takashiro_maya
+		}
+		localization_key = we_marry_with_takashiro_maya_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hotaru
+		}
+		localization_key = we_marry_with_hotaru_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_n
+		}
+		localization_key = we_unite_the_world_n_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_d
+		}
+		localization_key = we_unite_the_world_d_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_c
+		}
+		localization_key = we_unite_the_world_c_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_f
+		}
+		localization_key = we_untie_the_world_f_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SCP_come_here
+		}
+		localization_key = scp_come_here_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = huhu_come_here
+		}
+		localization_key = huhu_come_here_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_irno_flag
+		}
+		localization_key = we_forward_with_irno_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_ilro_flag
+		}
+		localization_key = we_unite_with_ilno_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_makoto_flag
+		}
+		localization_key = we_forward_with_makoto_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_makoto_flag
+		}
+		localization_key = we_unite_with_makoto_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_have_fukai_omo
+		}
+		localization_key = we_have_fukai_omo_title
+	}
+	#后面的都按照我的模板写就行——伊尔诺，2025.8.4，18：10
+	#text = {
+	#	trigger = {
+	#		has_global_flag = <your flag>
+	#	}
+	#	localization_key = <your 标题>
+	#}
+}
+defined_text = {     #关闭按钮文字
+	name = get_yuzu_super_event_remark
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_hoori_spevt
+		}
+		localization_key = we_nuke_hoori_close_buttom
+	}
+	text = {
+		trigger = {
+			has_global_flag = show_nuke_washizu_spevt
+		}
+		localization_key = we_nuke_washizu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kanna
+		}
+		localization_key = we_marry_with_kanna_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mako
+		}
+		localization_key = we_marry_with_mako_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_murasame	
+		}
+		localization_key = we_marry_with_murasame_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hazuki
+		}
+		localization_key = we_marry_with_hazuki_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_daozhu
+		}
+		localization_key = we_marry_with_daozhu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yoshino
+		}
+		localization_key = we_marry_with_yoshino_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mibu
+		}
+		localization_key = we_marry_with_mibu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_koharu
+		}
+		localization_key = we_marry_with_koharu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ruri
+		}
+		localization_key = we_marry_with_ruri_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tia
+		}
+		localization_key = we_marry_with_tia_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_noa
+		}
+		localization_key = we_marry_with_noa_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_ayase
+		}
+		localization_key = we_marry_with_ayase_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nene
+		}
+		localization_key = we_marry_with_nene_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rena
+		}
+		localization_key = we_marry_with_rena_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_kaguya
+		}
+		localization_key = we_marry_with_kaguya_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_meguru
+		}
+		localization_key = we_marry_with_meguru_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_natsume
+		}
+		localization_key = we_marry_with_natsume_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsumugi
+		}
+		localization_key = we_marry_with_tsumugi_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mayu
+		}
+		localization_key = we_marry_with_mayu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_suou
+		}
+		localization_key = we_marry_with_suou_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sana
+		}
+		localization_key = we_marry_with_sana_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sayo
+		}
+		localization_key = we_marry_with_sayo_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_rino
+		}
+		localization_key = we_marry_with_rino_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_tsubasa
+		}
+		localization_key = we_marry_with_tsubasa_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_roka
+		}
+		localization_key = we_marry_with_roka_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_yune
+		}
+		localization_key = we_marry_with_yune_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_mei
+		}
+		localization_key = we_marry_with_mei_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_nozomi
+		}
+		localization_key = we_marry_with_nozomi_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_wakana
+		}
+		localization_key = we_marry_with_wakana_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_shizuru
+		}
+		localization_key = we_marry_with_shizuru_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sena
+		}
+		localization_key = we_marry_with_sena_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_maya
+		}
+		localization_key = we_marry_with_maya_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_sakuyahime
+		}
+		localization_key = we_marry_with_sakuyahime_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_scp
+		}
+		localization_key = we_marry_with_scp_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_napoleon_vi
+		}
+		localization_key = we_marry_with_napoleon_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_huhu
+		}
+		localization_key = we_marry_with_huhu_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_takashiro_maya
+		}
+		localization_key = we_marry_with_takashiro_maya_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_marry_with_hotaru
+		}
+		localization_key = we_marry_with_hotaru_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_n
+		}
+		localization_key = we_unite_the_world_n_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_d
+		}
+		localization_key = we_unite_the_world_d_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_c
+		}
+		localization_key = we_unite_the_world_c_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_the_world_f
+		}
+		localization_key = we_untie_the_world_f_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = SCP_come_here
+		}
+		localization_key = scp_come_here_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = huhu_come_here
+		}
+		localization_key = huhu_come_here_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_irno_flag
+		}
+		localization_key = we_forward_with_irno_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_ilro_flag
+		}
+		localization_key = we_unite_with_ilno_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_forward_with_makoto_flag
+		}
+		localization_key = we_forward_with_makoto_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_unite_with_makoto_flag
+		}
+		localization_key = we_unite_with_makoto_close_buttom
+	}
+	text = {
+		trigger = {
+			has_country_flag = we_have_fukai_omo
+		}
+		localization_key = we_have_fukai_omo_close_buttom
+	}
+	#后面的都按照我的模板写就行——伊尔诺，2025.8.4，18：12
+	#text = {
+	#	trigger = {
+	#		has_global_flag = <your flag>
+	#	}
+	#	localization_key = <your 关闭按钮文字>
+	#}
+}
+

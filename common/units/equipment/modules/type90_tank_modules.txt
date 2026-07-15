@@ -1,0 +1,185 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "No Step Back" 
+	}
+### Engine Types
+	type90_Mitsubishi_10ZG32WT_engine = {
+		abbreviation = "type90_EG"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 30
+			fuel_consumption = 10
+			reliability = -0.2
+			maximum_speed = 6
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.4
+		}
+	}
+
+	###Armor Types
+
+	type90_composite_armor = {	#复合装甲
+		abbreviation = "type90_AM"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 30
+			breakthrough = 15
+		}
+		xp_cost = 5
+		multiply_stats = {
+			build_cost_ic = 0.25
+			armor_value = 0.5
+		}
+	}
+
+	###Suspension Types
+
+	type90_hydropneumatic_suspension = {
+		abbreviation = "type90_SPS"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1
+			reliability = 0.1
+			
+		}
+		dismantle_cost_ic  = 2
+
+		multiply_stats = {
+			breakthrough = 0.2
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+	}
+
+	###Turret Types
+	type90_tank_turret = {
+		abbreviation = "type90_TUR"
+		category = tank_modern_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_heavy_main_armament
+			}
+		}
+		add_stats = {
+			build_cost_ic = 30
+			breakthrough = 45
+			defense = 30
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 2
+		multiply_stats = {
+			recon = 0.25
+		}
+		manpower = 2
+	}
+
+	###Weapons
+	type90_Rh_120_120mm_gun = {
+		abbreviation = "type90_ARM"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+
+		dismantle_cost_ic = 10
+		xp_cost = 1
+
+		build_cost_resources = {
+			tungsten = 3
+			chromium = 3
+			steel = 2
+		}
+		add_stats = {
+			breakthrough = 45 #Improved Medium Cannon: 4
+			soft_attack = 150
+			hard_attack = 300
+			ap_attack = 478
+			build_cost_ic = 35 
+			maximum_speed = -0.1 #SH Cannon: -0.6 / #Improved Medium Cannon: -0.3
+			reliability = -0.1 #SH Cannon: -0.35 / #Improved Medium Cannon: -0.15
+		}
+	}
+
+	###Special Modules
+	type90_modern_electronic_equipment = {
+		abbreviation = "type90_MEE"
+		category = tank_radio_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 25
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.5
+			breakthrough = 0.25
+			hard_attack = 0.25
+			recon = 1
+		}
+		
+	}
+
+	type90_auto_loader = {
+		abbreviation = "type90_AL"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 15
+			
+		}
+		multiply_stats = {
+			breakthrough = 0.5
+			defense = 0.5
+		}
+		xp_cost = 1
+		
+	}
+
+	type90_fire_control_system = {
+		abbreviation = "type90_FCS"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = -0.05
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		multiply_stats = {
+			build_cost_ic = 0.25
+			breakthrough = 0.35
+			hard_attack = 0.35
+			soft_attack = 0.25
+			defense = 0.25
+		}
+	}
+
+	type90_machine_guns = {
+		abbreviation = "type90_MG"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 10
+			defense = 25
+			build_cost_ic = 2.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+}
+
+
+
+

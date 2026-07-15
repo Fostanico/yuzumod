@@ -1,0 +1,78 @@
+news_event = {
+	id = nuke_dropped.12097              #穗织的毁灭
+	title = nuke_dropped.12097.t
+	desc = nuke_dropped.12097.d
+	picture = GFX_nuke_hoori
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		FROM.FROM = { state = 532 }
+	}
+	option = {
+		name = nuke_dropped.12097.a
+		trigger = {
+			NOT = { owns_state = 532 }
+		}
+		hidden_effect = {
+			play_song = yuzu_Dies_irae
+		}
+		set_global_flag = yuzu_super_event_visible_flag
+		set_global_flag  = show_nuke_hoori_spevt
+		custom_effect_tooltip = des_non_vult_what_we_do_on_yuzu
+	}
+	option = {
+		name = nuke_dropped.12097.b
+		trigger = {
+			owns_state = 532
+		}
+		hidden_effect = {
+			play_song = yuzu_Dies_irae
+		}
+		set_global_flag = yuzu_super_event_visible_flag
+		set_global_flag =  show_nuke_hoori_spevt
+		custom_effect_tooltip = des_non_vult_what_we_do_on_yuzu
+	}
+}
+news_event = {
+	id = nuke_dropped.7102              #鹫逗的毁灭
+	title = nuke_dropped.7102.t
+	desc = nuke_dropped.7102.d
+	picture = GFX_nuke_washizu
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		FROM.FROM = { state = 535 }
+	}
+	option = {
+		name = nuke_dropped.7102.a
+		trigger = {
+			NOT = { owns_state = 535 }
+		}
+		hidden_effect = {
+			play_song = non_vult
+		}
+		set_global_flag = yuzu_super_event_visible_flag
+		set_global_flag  = show_nuke_washizu_spevt
+		custom_effect_tooltip = des_non_vult_what_we_do_on_yuzu
+		add_to_variable = { 
+			astral_breakthrough_point_total = 1 
+			tooltip = add_astral_breakthrough_point_tt
+		}
+	}
+	option = {
+		name = nuke_dropped.7102.b
+		trigger = {
+			owns_state = 535
+		}
+		hidden_effect = {
+			play_song = non_vult
+		}
+		set_global_flag = yuzu_super_event_visible_flag
+		set_global_flag  = show_nuke_washizu_spevt
+		custom_effect_tooltip = des_non_vult_what_we_do_on_yuzu
+		add_to_variable = { 
+			astral_breakthrough_point_total = 1 
+			tooltip = add_astral_breakthrough_point_tt
+		}
+	}
+}

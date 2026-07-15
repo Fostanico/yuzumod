@@ -1,0 +1,402 @@
+kkr_atri_reseasrch_decision_category = {
+
+	kkr_atri_reseasrch_240days = {  
+		icon = GFX_kkr_icon_7
+		priority = 1000   
+		activation = {                         
+			has_country_flag = kkr_is_researching
+		}                                 
+		available = {                           
+			not = { has_country_flag = kkr_is_researching }
+		}
+		is_good = no                       
+		days_mission_timeout = 300
+		timeout_effect = {            
+			clr_country_flag = kkr_is_researching   
+			clr_country_flag = get_kkr
+			add_stability = -0.5
+			add_political_power = -500
+			every_unit_leader = {
+				limit = {
+					has_trait = kukuru_1_trait
+					has_trait = kukuru_2_trait
+					has_trait = kukuru_3_trait
+				}
+                remove_unit_leader_role = yes
+            }
+			hidden_effect = {
+				every_scientist = {
+					limit = {
+						has_trait = kkr_scientist_trait
+					}
+					remove_scientist_role = yes
+				}
+			}
+			custom_effect_tooltip = remove_kkr_scientist
+			remove_dynamic_modifier = {
+				modifier = Kukuru_dynamic_modifier
+			}
+			remove_dynamic_modifier = {
+				modifier = Kukuru_atri_research_dynamic_modifier
+			}
+		}
+		complete_effect = {         
+			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt          
+			add_to_variable = {
+				KKR_atri_research_research_speed_factor = 0.5
+				tooltip = research_speed_factor_tt
+			}
+		}
+	}
+
+	kkr_research_1 = {		#帮忙收集实验数据
+		icon = GFX_kkr_icon_5
+		days_remove = 14
+		days_re_enable = 20
+		cost = 5
+
+		visible = {
+			has_country_flag = kkr_is_researching
+			not = { has_country_flag = kkr_research_stop }
+		}
+		remove_effect = {
+			add_to_variable = {
+				kkr_favor = 2
+            	tooltip = kkr_favor_gain
+			}
+			add_to_variable = {
+				kkr_research_progress = 5
+            	tooltip = kkr_research_progress_gain_tt
+			}
+		} 
+
+	}
+	kkr_research_2 = {		#批准实验经费
+		icon = GFX_kkr_icon_7
+		days_remove = 60
+		cost = 15
+
+		visible = {
+			has_country_flag = kkr_is_researching
+			not = { has_country_flag = kkr_research_stop }
+		}
+		modifier = {
+			political_power_cost = 0.05
+		}
+		complete_effect = {
+			add_to_variable = {
+				weekly_kkr_research_progress = 1
+            	tooltip = weekly_kkr_research_progress_gain
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+				kkr_favor = 2
+            	tooltip = kkr_favor_gain
+			}
+			add_to_variable = {
+				weekly_kkr_research_progress = -1
+            	tooltip = weekly_kkr_research_progress_decress
+			}
+		} 
+	}
+	kkr_research_3 = {		#任命研究所长
+		icon = GFX_kkr_icon_8
+		fire_only_once = yes
+		cost = 10
+		priority = 2
+		visible = {
+			has_country_flag = kkr_is_researching
+		}
+		available = {
+			check_variable = {
+				kkr_favor > 19
+				tooltip = kkr_favor_compare_more_than
+			}
+		}
+		
+		remove_effect = {
+			add_to_variable = { KKR_atri_research_research_speed_factor = 0.1 }
+			add_dynamic_modifier = {
+				modifier = Kukuru_atri_research_dynamic_modifier
+			}	
+			force_update_dynamic_modifier = yes
+			add_to_variable = {
+				kkr_favor = 3
+            	tooltip = kkr_favor_gain
+			}
+			add_to_variable = {
+				weekly_kkr_research_progress = 1
+            	tooltip = weekly_kkr_research_progress_gain
+			}
+			custom_effect_tooltip = get_kkr_advisor_sci
+			set_country_flag = kkr_advisor_sci
+			meta_effect = {
+                text = {
+
+                    generate_character = {
+                        token_base = Kukuru_advisor_1
+                        name = "夜刀玖玖瑠"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\kukuru2.png"
+                                small = "gfx\leader\kukuru2_1.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {  
+							priority = 1000
+							slot = political_advisor
+							cost = 50
+							idea_token = Kukuru_advisor_1
+							traits = { trait_sub_kkr_sci }
+							research_bonus = {
+								industry = 2.5
+								nuclear = 2.5
+								rocketry = 2.5
+							}
+							ai_will_do = {
+								factor = 0
+							}
+						}
+                    }
+                }
+            }
+		} 
+
+	}
+	kkr_research_4 = {		#立项前的准备
+		icon = GFX_kkr_icon_5
+		fire_only_once = yes
+		cost = 10
+		days_remove = 21
+		priority = 10
+		visible = {
+			has_country_flag = kkr_is_preparing_research
+		}
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		remove_effect = {
+			add_ideas = kkr_Research_Director	
+			add_to_variable = {
+				kkr_favor = 1
+            	tooltip = kkr_favor_gain
+			}
+			country_event = kkr_event.3
+			set_technology = {
+				electronic_mechanical_engineering = 1
+				radio = 1
+				improved_radio = 1
+				advanced_radio = 1
+				radio_detection = 1
+				cavity_magnatron = 1
+				cavity_magnatron = 1
+				centimetric_radar = 1
+				phased_array = 1
+				monopulse_radar = 1
+				mechanical_computing = 1
+				computing_machine = 1
+				improved_computing_machine = 1
+				advanced_computing_machine = 1
+			}
+		} 
+
+	}
+	
+	kkr_appointment_test = {
+		icon = GFX_kkr_icon_6
+		fire_only_once = yes
+		days_remove = 3
+		cost = 10
+
+		visible = {
+			has_country_flag = kkr_is_researching
+			has_country_flag = kkr_research_stop
+		}
+		complete_effect = {
+			set_country_flag = kkr_appointment
+		}
+		remove_effect = {	
+			hidden_effect = {
+				country_event = kkr_event.7
+			}
+			clr_country_flag = kkr_appointment
+		} 
+	}
+	kkr_first_travel = {
+		icon = GFX_kkr_icon_9
+		fire_only_once = yes
+		days_remove = 7
+		cost = 10
+		complete_effect = {
+			set_country_flag = kkr_travel
+		}
+		visible = {
+			has_country_flag = kkr_first_travel
+		}
+		remove_effect = {	
+			hidden_effect = {
+				country_event = kkr_event.11
+			}
+			clr_country_flag = kkr_travel
+		} 
+	}
+
+	kkr_set_research_facility = {
+		icon = GFX_kkr_icon_research
+		priority = 10
+		fire_only_once = yes
+		days_remove = 14
+		cost = 25
+		visible = {
+			has_country_flag = get_kkr
+			not = { has_country_flag = kkr_is_researching }
+			not = { has_country_flag = kkr_is_preparing_research }
+		}
+		complete_effect = {
+			add_to_variable = {
+				kkr_favor = 5 
+				tooltip = kkr_favor_gain
+			}
+		}
+		remove_effect = {
+			set_country_flag = set_kkr_research_facility
+			custom_effect_tooltip = unlock_kkr_research_industrial_concern_tt
+			add_research_slot = 3
+			random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				construct_building_in_random_province = {
+					air_facility = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				construct_building_in_random_province = {
+					naval_facility = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				construct_building_in_random_province = {
+					nuclear_facility = 1
+				}
+			}
+		
+			add_breakthrough_points = {
+				specialization = specialization_land
+				value = 100
+			}
+		
+			add_breakthrough_points = {
+				specialization = specialization_nuclear
+				value = 100
+			}
+			
+			add_breakthrough_points = {
+				specialization = specialization_air
+				value = 100
+			}
+			
+			add_breakthrough_points = {
+				specialization = specialization_naval
+				value = 100
+			}
+    
+			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
+			add_to_variable = {
+				KKR_atri_research_research_speed_factor = 0.5
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = armor
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = artillery
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = naval_equipment
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = rocketry
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = nuclear
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 20
+				category = industry
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = infantry_tech
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = plane_modules_tech
+			}
+			add_tech_bonus = {
+				ahead_reduction = 20
+				bonus = 5
+				uses = 5
+				category = helicopter_tech
+			}
+		}
+	}
+}

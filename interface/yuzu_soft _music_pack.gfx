@@ -6,4 +6,9 @@ spriteTypes = {
 		noOfFrames = 2
 	}
     
+	spriteType = {
+		name = "GFX_yuzu_event_album_art"
+		textureFile = "gfx/yuzu_event_album_art.dds"
+		noOfFrames = 2
+	}
 }

@@ -1,4 +1,427 @@
 YZS_military_academy_category = {
+	army_mastery_gain = {        #huhu的精通度小机制，一动就炸，我也不知道为什么，不动了
+		priority = 20
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		   	not = { has_country_flag = yz_bad_end }
+			has_country_flag = open_YZS_military_academy
+		}
+		fire_only_once = no
+		days_remove = 120
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 1000
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = var:army_experience
+				value = 150
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_1000_LE_50
+		complete_effect = {
+			subtract_from_variable = {
+				var	= yz_money
+				value = 1000
+			}
+			army_experience = -150
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = infantry	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = combat_support		
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = armor	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = operations		
+			}
+		}
+		modifier = {
+			
+		}
+		remove_effect = {
+			
+		}
+		
+	}
+	navy_mastery_gain = {
+		priority = 20
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		   	not = { has_country_flag = yz_bad_end }
+			has_country_flag = open_YZS_military_academy
+		}
+		fire_only_once = no
+		days_remove = 120
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 1000
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = var:navy_experience
+				value = 150
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_1000_NE_50
+		complete_effect = {
+			subtract_from_variable = {
+				var	= yz_money
+				value = 1000
+			}
+			navy_experience = -150
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = capital_ships	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = carriers		
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = screens	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = submarines	
+			}
+		}
+		modifier = {
+			
+		}
+		remove_effect = {
+			
+		}
+		
+	}
+	air_mastery_gain = {
+		priority = 20
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		   	not = { has_country_flag = yz_bad_end }
+			has_country_flag = open_YZS_military_academy
+		}
+		fire_only_once = no
+		days_remove = 120
+		custom_cost_trigger = {
+			check_variable = {
+				var = yz_money
+				value = 1000
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = var:air_experience
+				value = 150
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = YM_1000_AE_50
+		complete_effect = {
+			subtract_from_variable = {
+				var	= yz_money
+				value = 1000
+			}
+			air_experience = -150
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = fighter_aircraft	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = strike_aircraft		
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = medium_aircraft	
+			}
+			add_daily_mastery = {
+				amount = 0.3
+				days = 120
+				track = heavy_aircraft		
+			}
+		}
+		modifier = {
+			
+		}
+		remove_effect = {
+			
+		}
+		
+	}
+
+		ship_making_standardlized = {
+		priority = 20
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		   	not = { has_country_flag = yz_bad_end }
+			has_country_flag = open_YZS_military_academy
+		}
+		fire_only_once = yes
+        days_remove = 30
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 1000
+                compare = greater_than_or_equals
+            }
+			check_variable = {
+				var = var:political_power
+				value = 50
+				compare = greater_than_or_equals
+			}
+        }
+        custom_cost_text = YM_1000_PP_50
+		complete_effect = {
+			subtract_from_variable = {
+				var	= yz_money
+				value = 1000
+			}
+			add_political_power = -50
+		}
+		modifier = {
+			consumer_goods_factor = 0.2
+		}
+		remove_effect = {
+			add_ideas = ship_making_brand_standinglized
+		}
+	}
+	debug_set_misaka_cos = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			set_country_flag = yz_cos_misaka_makoto
+			set_country_flag = have_a_cos
+		}
+	}
+	debug_remove_misaka_cos = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			clr_country_flag = yz_cos_misaka_makoto
+			clr_country_flag = have_a_cos
+		}
+	}
+	test_start_nuke_strike = {
+		visible = {
+            has_country_flag = have_kakka_nor
+			has_country_flag = have_misaka_makoto
+			has_country_flag = open_YZS_military_academy
+			NOT = {
+				has_country_flag = ready_nuke_strike
+			}
+        }
+		complete_effect = {
+			set_country_flag = ready_nuke_strike
+		}
+	}
+	test_end_nuke_strike = {
+		visible = {
+			has_country_flag = ready_nuke_strike
+        }
+		complete_effect = {
+			clr_country_flag = ready_nuke_strike
+		}
+	}
+	test_nuke_some_place = {    
+        icon = GFX_prepare_strike_ic
+        state_target = yes
+        target_root_trigger = {
+            has_country_flag = ready_nuke_strike
+			has_country_flag = open_YZS_military_academy
+        }
+        target_trigger = {
+            FROM = {
+                controller = {
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    has_state_flag = we_will_be_nuke_test
+                    has_state_flag = we_will_be_nuke_H_test
+                }
+            }
+        }
+        on_map_mode = map_only
+        complete_effect = {
+            FROM = {
+                set_state_flag = we_will_be_nuke_test
+            }
+        }
+    }
+    test_drop_nuke = {
+        visible = {
+            has_country_flag = ready_nuke_strike
+			has_country_flag = open_YZS_military_academy
+        }
+        complete_effect = {
+            every_state = {
+                limit = {
+                    has_state_flag = we_will_be_nuke_test
+                }
+                PREV = {
+                    launch_nuke = {
+                        state = PREV
+                        use_nuke = no
+                    }
+                }
+                damage_units = {
+                    state = THIS
+                    damage = 0.6
+                    ratio = yes
+                    army = yes
+                    navy = yes
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            is_core_of = ROOT
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = fallout_atomic
+                        days = 180
+                    }
+                }
+
+                clr_state_flag = we_will_be_nuke_test
+            }
+        }
+    }
+    test_nuke_some_place_H = {    
+        icon = GFX_prepare_strike_ic
+        state_target = yes
+        target_root_trigger = {
+            has_country_flag = ready_nuke_strike
+			has_country_flag = open_YZS_military_academy
+        }
+        target_trigger = {
+            FROM = {
+                controller = {
+                    has_war_with = ROOT
+                }
+                NOT = {
+                    has_state_flag = we_will_be_nuke_test
+                    has_state_flag = we_will_be_nuke_H_test
+                }
+            }
+        }
+        on_map_mode = map_only
+        complete_effect = {
+            FROM = {
+                set_state_flag = we_will_be_nuke_H_test
+            }
+        }
+    }
+    test_drop_nuke_H = {
+        visible = {
+            has_country_flag = ready_nuke_strike
+			has_country_flag = open_YZS_military_academy
+        }
+        complete_effect = {
+            every_state = {
+                limit = {
+                    has_state_flag = we_will_be_nuke_H_test
+                }
+                PREV = {
+                    launch_nuke = {
+                        state = PREV
+                        use_nuke = no
+                        nuke_type = thermonuclear_bomb
+                    }
+                }
+                damage_units = {
+                    state = THIS
+                    damage = 0.9
+                    ratio = yes
+                    army = yes
+                    navy = yes
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            is_core_of = ROOT
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = fallout_atomic
+                        days = 90
+                    }
+                }
+                clr_state_flag = we_will_be_nuke_H_test
+            }
+        }
+    }
+	change_general_to_yzc = {
+		priority = 9
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+		   	not = { has_country_flag = yz_bad_end }
+		   	has_yz_general = yes
+			has_country_flag = open_YZS_military_academy
+			any_army_leader = {
+				not = {
+					has_trait = yzc_trait
+				}
+			}
+			has_equipment = {
+				yz_works_equipment > 9
+			}
+		}
+		cost = 25
+
+		complete_effect = {
+			random_army_leader = {
+				limit = {
+					not = { yz_general = yes }
+				}
+				add_unit_leader_trait = yzc_trait
+			}
+			add_equipment_to_stockpile = {
+				type = yz_works_equipment
+				amount = -10
+				producer = JAP
+			}
+		}
+	}
+
 	remove_training = {
 		visible = {
 			is_debug = yes
@@ -19,7 +442,10 @@ YZS_military_academy_category = {
 	close_YZS_military_academy = {
 		priority = 9
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 		   	not = { has_country_flag = yz_bad_end }
 		   	has_yz_general = yes
 			has_country_flag = open_YZS_military_academy
@@ -36,7 +462,10 @@ YZS_military_academy_category = {
 	   	days_remove = 0
 
 	   	visible = { 
-		   	has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 		   	not = { has_country_flag = yz_bad_end }
 		   	has_yz_general = yes
 			has_country_flag = open_YZS_military_academy
@@ -67,7 +496,10 @@ YZS_military_academy_category = {
 		days_remove = 0
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			has_country_flag = open_YZS_military_academy
@@ -103,7 +535,10 @@ YZS_military_academy_category = {
 		days_remove = 15
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -210,7 +645,10 @@ YZS_military_academy_category = {
 		days_remove = 20
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -317,7 +755,10 @@ YZS_military_academy_category = {
 		days_remove = 15
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -427,7 +868,10 @@ YZS_military_academy_category = {
 		days_remove = 20
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -537,7 +981,10 @@ YZS_military_academy_category = {
 		days_remove = 25
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -647,7 +1094,10 @@ YZS_military_academy_category = {
 		days_remove = 25
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -757,7 +1207,10 @@ YZS_military_academy_category = {
 		days_remove = 35
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -866,7 +1319,10 @@ YZS_military_academy_category = {
 		days_remove = 30
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -978,7 +1434,10 @@ YZS_military_academy_category = {
 		days_remove = 25
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -1088,7 +1547,10 @@ YZS_military_academy_category = {
 		days_remove = 20
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -1198,7 +1660,10 @@ YZS_military_academy_category = {
 		days_remove = 20
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -1308,7 +1773,10 @@ YZS_military_academy_category = {
 		days_remove = 20
 
 		visible = {
-			has_country_flag = qiyong_youzi_2
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			not = { 
@@ -1404,6 +1872,7 @@ YZS_military_academy_category = {
 			}
 		}
 	}
+
 
 	###################################
 	###################################
@@ -2665,6 +3134,7 @@ YZS_military_academy_category = {
 		}
 	}
 
+
 ##    ## ##     ## ######## ##     ##       ###    ########  ##     ## ##    ## 
  ##  ##  ##     ##      ##  ##     ##      ## ##   ##     ## ###   ###  ##  ##  
   ####   ##     ##     ##   ##     ##     ##   ##  ##     ## #### ####   ####   
@@ -2679,26 +3149,42 @@ YZS_military_academy_category = {
 		days_remove = 15
 		cost = 100  
 		visible = {
-            and = {
-					has_country_flag = qiyong_youzi_2
-					not = { has_country_flag = have_youzu_army_1 }
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
 			}
-			 
+            and = {
+				not = { has_country_flag = have_youzu_army_1 }
+			}
         }
 		available = {
-			or = {
-				has_country_flag = have_0nai
-			}
+			
 		}
 		complete_effect = {
-			add_command_power = -15
+			if = {
+				limit = { not = { has_country_flag = have_0nai } }
+				add_command_power = -15
+				hidden_effect = {
+					yzrecruit_ayase = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_ayase
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -15
+			}
+			
 		}
 		remove_effect = {
+			unlock_decision_tooltip = yz_poster_7
 			set_country_flag = have_youzu_army_1  
 			add_dynamic_modifier = {
 				modifier = youzu_military_dynamic_modifier
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.01 tooltip = yzc_zhandouli_gain_tt }
+			turn_to_yzc = yes
 		}
     }
 	youzu_army_2 = {  
@@ -2710,16 +3196,16 @@ YZS_military_academy_category = {
 		visible = {
             is_ai = no
 			has_country_flag = have_youzu_army_1
-            and = { 
-					 
+			or = {
 				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+            and = { 
 				not = { has_country_flag = have_youzu_army_2 }
 			}
         }
 		available = {
-			or = {
-				has_country_flag = have_fumika
-			}
+			
 			command_power > 14.99
 			check_variable = {
 				yz_money > 500
@@ -2727,8 +3213,22 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			add_command_power = -15
-			add_to_variable = { yz_money = -500 }
+			if = {
+				limit = { not = { has_country_flag = have_fumika } }
+				add_command_power = -15
+				add_to_variable = { yz_money = -500 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_fumika = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_fumika
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -15
+				add_to_variable = { yz_money = -500 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
 			set_country_flag = have_youzu_army_2  
@@ -2745,6 +3245,8 @@ YZS_military_academy_category = {
 				add_to_variable = { youzu_army_recruitable_population_factor = 0.01 tooltip = recruitable_population_factor_tt }
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.015 tooltip = yzc_zhandouli_gain_tt }
+			
 		}
 	}
 	youzu_army_3 = {  
@@ -2756,31 +3258,47 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_youzu_army_2
             is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
 					not = { has_country_flag = have_youzu_army_3 }
 				}
 			 
         }
 		available = {
-			or = {
-				has_country_flag = have_toko
-			}
-					has_army_experience > 14.99
-					command_power > 14.99
+			
+			has_army_experience > 14.99
+			command_power > 14.99
 			check_variable = {
 				yz_money > 500
 				tooltip = yz_money_tooltip_compare
 			}
 		}
 		complete_effect = {
-			add_command_power = -15
-			add_to_variable = { yz_money = -500 }
-			army_experience = -15
+			if = {
+				limit = { not = { has_country_flag = have_toko } }
+				add_command_power = -15
+				army_experience = -15
+				add_to_variable = { yz_money = -500 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_toko = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_toko
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -15
+				army_experience = -15
+				add_to_variable = { yz_money = -500 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
 			set_country_flag = have_youzu_army_3  
+			unlock_decision_tooltip = yz_poster_9
 			if = {
 				limit = { }
 				custom_effect_tooltip = youzu_military_finished_dynamic_modifier_tt
@@ -2793,6 +3311,7 @@ YZS_military_academy_category = {
 				add_to_variable = { youzu_army_army_org_regain = 0.02 }
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.01 tooltip = yzc_zhandouli_gain_tt }
 		}
 	}
 	youzu_army_4 = {  
@@ -2800,21 +3319,21 @@ YZS_military_academy_category = {
 		icon = GFX_chou
 		fire_only_once = yes
 		days_remove = 45
-		cost = 100
+		cost = 75
 		visible = {
             is_ai = no
 			has_country_flag = have_youzu_army_3
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
 					not = { has_country_flag = have_youzu_army_4 }
 				}
 			 
         }
 		available = {
-			or = {
-				has_country_flag = have_chou
-			}
+			
 					has_army_experience > 29.99
 			check_variable = {
 				yz_money > 750
@@ -2822,8 +3341,22 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -750 }
-			army_experience = -30
+			if = {
+				limit = { not = { has_country_flag = have_chou } }
+				army_experience = -30
+				add_to_variable = { yz_money = -750 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_chou = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_chou
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				army_experience = -30
+				add_to_variable = { yz_money = -750 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
 			set_country_flag = have_youzu_army_4 
@@ -2839,6 +3372,7 @@ YZS_military_academy_category = {
 				add_to_variable = { youzu_army_unit_infantry_design_cost_factor = -0.25  }
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.015 tooltip = yzc_zhandouli_gain_tt }
 		}
 	}
 	youzu_army_5 = {  
@@ -2846,32 +3380,33 @@ YZS_military_academy_category = {
 		icon = GFX_liangyin
 		fire_only_once = yes
 		days_remove = 30
-		cost = 100
+		cost = 75
 		visible = {
 			has_country_flag = have_youzu_army_4
             is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
-					not = { has_country_flag = have_youzu_army_5 }
-				}
-
-			 
+				not = { has_country_flag = have_youzu_army_5 }
+			}
         }
 		available = {
 			or = {
 				has_country_flag = have_suzune
 				
 			}
-					command_power > 19.99
+			command_power > 19.99
 			check_variable = {
 				yz_money > 750
 				tooltip = yz_money_tooltip_compare
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -750 }
+			add_to_variable = { yz_money = -750 tooltip = yz_money_tooltip_subtain }
 			add_command_power = -20
+			turn_to_yzc = yes
 		}
 		remove_effect = {
 			set_country_flag = have_youzu_army_5 
@@ -2882,29 +3417,33 @@ YZS_military_academy_category = {
 				add_to_variable = { youzu_army_local_supplies = 0.1 tooltip = local_supplies_tt }
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.005 tooltip = yzc_zhandouli_gain_tt }
+			add_to_variable = {
+				yzc_factor = 0.01
+				tooltip = yzc_factor_gain_tt
+			}
+
 		}
 	}
 	youzu_army_6 = {  
 		priority = 1 
 		icon = GFX_mako
 		fire_only_once = yes
-		cost = 150
+		cost = 75
 		days_remove = 45
 		visible = {
 			has_country_flag = have_youzu_army_5
             is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
 					not = { has_country_flag = have_youzu_army_6 }
 				}
 			 
         }
 		available = {
-			or = {
-				has_country_flag = have_mako
-				
-			}
 					has_command_power > 9.99
 					has_army_experience > 49.99
 			check_variable = {
@@ -2913,9 +3452,24 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -750 }
-			add_command_power = -10
-			army_experience = -50
+			if = {
+				limit = { not = { has_country_flag = have_mako } }
+				add_command_power = -10
+				army_experience = -50
+				add_to_variable = { yz_money = -750 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_mako = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_mako
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -10
+				army_experience = -50
+				add_to_variable = { yz_money = -750 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
 			set_country_flag = have_youzu_army_6 
@@ -2935,6 +3489,7 @@ YZS_military_academy_category = {
 				add_to_variable = { youzu_army_equipment_capture = 0.1 tooltip = equipment_capture_tt }
 			}
 			force_update_dynamic_modifier = yes
+			add_to_variable = { yzc_zhandouli = 0.01 tooltip = yzc_zhandouli_gain_tt }
 		}
 	}
 	youzu_army_7 = {  
@@ -2942,13 +3497,15 @@ YZS_military_academy_category = {
 		icon = GFX_murasame
 		fire_only_once = yes
 		days_remove = 60
-		cost = 150
+		cost = 100
 		visible = {
 			has_country_flag = have_youzu_army_6
             is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
 					not = { has_country_flag = youzu_army_7 }
 			        not = { has_country_flag = youzu_army_8 }
 					not = { has_country_flag = yz_bad_end }
@@ -2956,10 +3513,6 @@ YZS_military_academy_category = {
 			 
         }
 		available = {
-			or = {
-				has_country_flag = have_murasame
-				
-			}
 					has_command_power > 9.99
 					has_army_experience > 79.99
 			check_variable = {
@@ -2968,13 +3521,29 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -1000 }
-			add_command_power = -40
-			army_experience = -80
 			set_country_flag = youzu_army_7
+			if = {
+				limit = { not = { has_country_flag = have_murasame } }
+				add_command_power = -40
+				army_experience = -80
+				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_murasame = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_murasame
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -40
+				army_experience = -80
+				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
-			
+			unlock_decision_tooltip = yz_poster_8
+			add_to_variable = { yzc_zhandouli = 0.025 tooltip = yzc_zhandouli_gain_tt }
 			hidden_effect = {
 				remove_dynamic_modifier = {
 					modifier = youzu_military_dynamic_modifier
@@ -3016,9 +3585,11 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_youzu_army_6
             is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
             and = {
-					 
-					has_country_flag = qiyong_youzi_2
 					not = { has_country_flag = youzu_army_7 }
 			        not = { has_country_flag = youzu_army_8 }
 					not = { has_country_flag = yz_bad_end }
@@ -3026,10 +3597,6 @@ YZS_military_academy_category = {
 			 
         }
 		available = {
-			or = {
-				has_country_flag = have_meigulu
-				
-			}
 					has_command_power > 9.99
 					has_army_experience > 79.99
 			check_variable = {
@@ -3038,13 +3605,28 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			add_to_variable = { yz_money = -1000 }
-			add_command_power = -40
 			set_country_flag = youzu_army_8
-			army_experience = -80
+			if = {
+				limit = { not = { has_country_flag = have_meigulu } }
+				add_command_power = -40
+				army_experience = -80
+				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+				hidden_effect = {
+					yzrecruit_megulu = yes
+				}
+				custom_effect_tooltip = yz_auto_recruit
+				custom_effect_tooltip = recruit_megulu
+				#custom_effect_tooltip = yz_auto_recruit2
+			}
+			else = {
+				add_command_power = -40
+				army_experience = -80
+				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			}
+			turn_to_yzc = yes
 		}
 		remove_effect = {
-			
+			add_to_variable = { yzc_zhandouli = 0.025 tooltip = yzc_zhandouli_gain_tt }
 			hidden_effect = {
 				remove_dynamic_modifier = {
 					modifier = youzu_military_dynamic_modifier
@@ -3053,6 +3635,7 @@ YZS_military_academy_category = {
 					modifier = youzu_military_finished_dynamic_modifier
 				}
 			}
+			unlock_decision_tooltip = yz_poster_8
 			
 			if = {
 				limit = { }
@@ -3080,7 +3663,7 @@ YZS_military_academy_category = {
 	}
 
 	create_yzc_units = {
-		#icon = GFX_
+		icon = GFX_yz_manpower
 		 
 		cost = 25
 		days_remove = 7
@@ -3091,18 +3674,20 @@ YZS_military_academy_category = {
 				has_country_flag = yzc_units_boost_2
 				has_country_flag = yzc_units_boost_3
 			}
+			has_country_flag = open_YZS_military_academy
 			check_variable = {
-				yzc_unit_recruit < 5
+				yzc_unit_recruit > 15
+				tooltip = yzc_unit_recruit_more_than_15k_tt
 			}
 		}
 		available = {
 
 		}
 		complete_effect = {
-			add_manpower = -50000
-			add_to_variable = {
-				yzc_unit_recruit = 1
+			hidden_effect = {
+				add_manpower = -45000
 			}
+			subtract_from_variable = { recruited_yzc_manpower = 45 tooltip = yz_manpower_decrease_tt }
 		}
 		remove_effect = {
 			if = {
@@ -3155,6 +3740,7 @@ YZS_military_academy_category = {
 				has_country_flag = yzc_units_boost_2
 				has_country_flag = yzc_units_boost_3
 			}
+			has_country_flag = open_YZS_military_academy
 		}
 		complete_effect = {
 			custom_effect_tooltip = change_yzc_units_template_tt
@@ -3165,6 +3751,8 @@ YZS_military_academy_category = {
 				every_country_division = {
 					limit = {
 						division_has_battalion_in_template = yzc_infantry
+						division_has_battalion_in_template = yzc_artillery_brigade
+						division_has_battalion_in_template = yzc_medium_armor_aa
 					}
 					change_division_template = {
 						division_template = "柚子厨0721机械化近卫军"
@@ -3178,6 +3766,8 @@ YZS_military_academy_category = {
 				every_country_division = {
 					limit = {
 						division_has_battalion_in_template = yzc_mechanized
+						division_has_battalion_in_template = yzc_self_propelled_artillery_brigade
+						division_has_battalion_in_template = yzc_medium_armor_aa
 					}
 					change_division_template = {
 						division_template = "柚子厨0721现代机械化近卫军"
@@ -3187,16 +3777,18 @@ YZS_military_academy_category = {
 		}
 	}
 	yzc_units_1 = {
-		#icon = GFX_
+		icon = GFX_yz_manpower1
 		 
 		cost = 50
 		days_remove = 30
 		fire_only_once = yes
 		visible = {
 			has_country_flag = qiyong_youzi_2
+			has_country_flag = open_YZS_military_academy
 		}
 		available = {
 			has_country_flag = has_YZ_0721_detonator_tech
+			has_country_flag = have_researched_yzwork
 		}
 		complete_effect = {
 			
@@ -3231,7 +3823,7 @@ YZS_military_academy_category = {
 		}
 	}
 	yzc_units_2 = {
-		#icon = GFX_
+		icon = GFX_yz_manpower2
 		 
 		cost = 50
 		days_remove = 30
@@ -3239,6 +3831,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = qiyong_youzi_2
 			has_country_flag = yzc_units_boost_1
+			has_country_flag = open_YZS_military_academy
 		}
 		available = {
 			has_tech = basic_medium_tank_chassis
@@ -3279,7 +3872,7 @@ YZS_military_academy_category = {
 		}
 	}
 	yzc_units_3 = {
-		#icon = GFX_
+		icon = GFX_yz_manpower3
 		 
 		cost = 50
 		days_remove = 30
@@ -3287,6 +3880,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = qiyong_youzi_2
 			has_country_flag = yzc_units_boost_2
+			has_country_flag = open_YZS_military_academy
 		}
 		available = {
 			has_tech = main_battle_tank_chassis

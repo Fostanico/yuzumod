@@ -1,0 +1,135 @@
+yuzu_form_yuzu_fans_land_decision_category = {         #2025.4.4,13:25,伊尔诺 我不知道为什么会有这个文件
+	hide_yuzu_culture_department = {                   #这个看起来是一个错误而没有删除的东西，我有点好奇
+		complete_effect = {                            #它为什么会在这里
+			clr_country_flag = qiyong_yuzu_culture_department
+		}
+	}
+	form_yuzu_fans_land = {
+		#icon = GFX_yuzu_land
+		cost = 50
+		available = {
+			is_ai = no
+		}
+		allowed = {
+			has_country_flag = qiyong_youzi_2
+		}
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				NOT = {
+					has_autonomy_state = autonomy_yuzu_fans_land
+				}
+			}
+			OR = {
+				NOT = {
+					is_subject_of = ROOT
+				}
+				AND = {
+					is_subject_of = ROOT
+					NOT = {
+						has_autonomy_state = autonomy_yuzu_fans_land
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+			Yuzu_has_fund_available = yes
+			Yuzu_can_form_yuzu_land = yes
+			FROM = {
+				#is_in_faction_with = ROOT
+				AND = {
+					is_subject_of = ROOT
+					NOT = {
+						has_autonomy_state = autonomy_yuzu_fans_land
+					}
+				}
+				
+			}
+		}
+		complete_effect = {
+			set_variable = {
+				yuzu_form_yuzu_land_days = 0
+			}
+			subtract_from_variable = {
+				Yuzu_fund = 1
+				tooltip = Yuzu_fund_subtract_tt
+			}
+			set_country_flag = change_puppt_to_yuzu_land
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_yuzu_fans_land
+			}
+			FROM = {
+				custom_effect_tooltip = autonomy_no_more_close_economy_tt
+				if = {
+					limit = {
+						or = {
+							has_idea = closed_economy
+							has_idea = limited_exports
+						}
+					}
+					add_ideas = export_focus
+				}
+				add_ideas = yuzu_fans_land_ide
+			}
+		}
+	}
+	unite_yuzu_fans_together = {
+		cost = 50
+		available = {
+			is_ai = no
+		}
+		allowed = {
+			has_country_flag = qiyong_youzi_2
+		}
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				has_autonomy_state = autonomy_yuzu_fans_land
+			}
+			#AND = {
+			#	is_subject_of = ROOT
+			#	has_autonomy_state = autonomy_yuzu_fans_land
+			#}
+		}
+		available = {
+			Yuzu_has_fund_available = yes
+			Yuzu_can_form_yuzu_land = yes
+			FROM = {
+				AND = {
+					is_subject_of = ROOT
+					has_autonomy_state = autonomy_yuzu_fans_land
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+                play_song = youzu29
+            }
+			custom_effect_tooltip = {
+				localization_key = play_the_song_of_best_yuzu_descision_effect_tooltip
+			}
+			set_variable = {
+				yuzu_form_yuzu_land_days = 0
+			}
+			subtract_from_variable = {
+				Yuzu_fund = 1
+				tooltip = Yuzu_fund_subtract_tt
+			}
+			set_country_flag = change_puppt_to_yuzu_land
+			every_state = {
+				limit = {
+					is_core_of = FROM
+				}
+				add_core_of = ROOT
+			}	
+			ROOT = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}

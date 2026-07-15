@@ -1,0 +1,89 @@
+scripted_gui = {
+	Kukuru_research_gui = {
+		context_type = decision_category
+		window_name = "kkr_reseach_gui"
+		visible = {
+			has_country_flag = kkr_is_researching
+		}
+		properties = {
+			ui_progressbar = {
+				frame = kkr_research_progress
+			}
+			Kukuru_research_protrait = {
+				image = "[Kukuru_research_protrait_images]"
+			}
+		}
+	}
+
+	kkr_mian_gui = {
+		context_type = decision_category
+		window_name = "kkr_mian_gui"
+		visible = {
+			has_country_flag = get_kkr
+		}
+		effects = {
+			Kukuru_change_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							kkr_clothes = 12
+						}
+					}
+					set_variable = { kkr_clothes = 1 }
+				}
+				else = {
+					add_to_variable = { kkr_clothes = 1 }
+				}
+			}
+		}
+		triggers = {
+			#Yzleader_unknown1_visible = {
+			#	not = { has_country_flag = have_YCG_FS }
+			#}
+			Kukuru_change_button_click_enabled = {
+				check_variable = {
+					kkr_favor > 149
+				}
+			}
+		}
+		properties = {
+			Kukuru_protrait = {
+				image = "[Kukuru_protrait_images]"
+			}
+			KM_bg = {
+				image = "[KM_bg_images]"
+			}
+			KM_activity_state_icon = {
+				image = "[KM_activity_state_icon_images]"
+			}
+		}
+	}
+
+	kkr_super_event_gui = {
+		window_name = "kkr_super_event"
+		context_type = player_context
+		visible = {
+			has_country_flag = kkr_super_event_visible_flag
+		} 
+
+		#图片
+
+		#triggers = {  #
+			
+		#}
+		#按钮
+		effects = {#
+			kkr_sp_event_close_button_click = {
+				clr_country_flag = kkr_super_event_visible_flag
+
+				clr_country_flag = super_event_kkr_marriage
+			}
+		}
+
+		properties = {
+			Super_event_image = {
+				image = "[Super_event_images]"
+			}
+		}
+	}
+}

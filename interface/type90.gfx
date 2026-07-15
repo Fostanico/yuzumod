@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_type90_tank_chassis_medium"
+		texturefile = "gfx/counters/YZ_TYPE90_ICON.png"
+	}
+	
+}

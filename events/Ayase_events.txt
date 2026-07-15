@@ -8,6 +8,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ayase_event.1.a
+		trigger = {
+            has_country_flag = qiyong_youzi_2
+        }
 		custom_effect_tooltip = ayase_yes	#小字
 		add_political_power = 5
 		add_stability = 0.01
@@ -17,6 +20,7 @@ country_event = {
 				generate_character = {
 				token_base = Ayase
 				name = "三司绫濑"
+				can_be_captured = no
 				gender = female
 				nationality = JAP
 					portraits = {
@@ -30,15 +34,17 @@ country_event = {
 					}
 					advisor = {  
 						slot = high_command
-						cost = 100
+						cost = 150
 						idea_token = Ayase_command
+						desc = Ayase_army_desc
 						ledger = army
-						traits = { army_chief_morale_3 }
+						traits = { Ayase_army }
 						ai_will_do = {
 							factor = 0
 						}
 					}
 					corps_commander = {
+						desc = Ayase_corps_desc
 					traits={
 						organizer 
 						panzer_leader  
@@ -73,6 +79,7 @@ country_event = {
                 generate_character = {
                     token_base = ayase_1
                     name = "三司绫濑"
+					can_be_captured = no
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -84,7 +91,19 @@ country_event = {
                     allowed_civil_war = {
                         is_ai = no
                     }
+					advisor = {  
+						slot = high_command
+						cost = 150
+						idea_token = Ayase_command
+						desc = Ayase_army_desc
+						ledger = army
+						traits = { Ayase_army }
+						ai_will_do = {
+							factor = 0
+						}
+					}
                     corps_commander = {
+						desc = Ayase_corps_desc
                 	traits={
 						organizer 
 						panzer_leader  
@@ -270,6 +289,23 @@ country_event = {
 			name = ayase_event.8.a
 			add_war_support = 0.01
 			add_threat = -15
+			add_ideas = ayase_love_1 #民族精神
+			hidden_effect = {
+				country_event = { id = ayase_event.9 days = 20 }
+			}
+		} 
+		option = {
+			name = ayase_event.8.b
+			add_war_support = 0.01
+			add_threat = 30
+			add_ideas = ayase_love_1 #民族精神
+			hidden_effect = {
+				country_event = { id = ayase_event.9 days = 20 }
+			}
+		} 
+		option = {
+			name = ayase_event.8.c
+			add_war_support = 0.01
 			add_ideas = ayase_love_1 #民族精神
 			hidden_effect = {
 				country_event = { id = ayase_event.9 days = 20 }

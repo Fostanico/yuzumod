@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+ #gui
+ Yuzusoft_sour_recurit_tooltip: "打开§O酸柚子§!招募面板"
+ parquet_tooltip: "打开parquet招募Ui"
+ parquet_started_tooltip: "parquet已经开始了喵"
+ parquet_story_tooltip: "启动parquet事件链（目前尚未制作完成，所以只有两个将领喵） \n获得§H城门翼§!与§0茨木梨乃§!"
+ #将领
+ ibaraki_rino_corps_desc: "平淡的语气和外表散发的气质很容易让人以为她是个高冷的人，但实际上她非常善良，看到有困难的人总会忍不住上前帮忙。内心也有着少女的一面，喜欢一些可爱的小玩意儿。某一天在路边试图救助跪倒在地的主人公伊吹协人，两人因此相识。"
+ kido_tsubasa_corps_desc: "性格天真开朗，为人表里如一。对美食毫无抵抗力，哪家店好吃她知道得一清二楚。目前在某咖啡店打工，选择这家店的理由据说也是“因为有好吃的”。偶然中救下了被街头混混缠上的主人公伊吹协人，两人因此相识。"
+ #flag
+ apply_bmi_device: "全面应用BMI系统"
+ parquet_started: "parquet的故事已经开始"
+ #决议
+ give_other_leader_bmi_system: "随机将领安装BMI系统"
+ give_other_leader_bmi_system_desc: "实践已经证明BMI系统是一个非常优秀的装置，我们可以给我们的将领也用上这么好的东西"
+ give_all_leaders_bmi_system: "给所有将领安装BMI系统"
+ give_all_leaders_bmi_system_desc: "我们不能只满足于给一两个将领使用如此优秀的系统，我们要给所有将领都用上这么好的东西。同时，新提拔的将领将有概率自带BMI系统（由于蠢驴的神秘机制，即使写了factor = 100任然无法让所有新将领都自带BMI特质）"
+ #将领特质
+ bmi_device: "BMI设备"
+ bmi_device_desc: "这名将领已经接入了BMI设备\n§R任何一个带有BMI设备的将领升一级，其余带有BMI设备的将领均升一级§!"
+ bmi_has_worked: "将领已升级"
+ bmi_has_worked_desc: "这名将领已经升级过一次，一天内无法使用BMI设备"
+ ibaraki_rino_only_at_night: "夜行性生物"
+ ibaraki_rino_only_at_night_desc: "因为梨乃只能在晚上出现，她的参谋已经被带成了吸血鬼作息，不过幸运的是这些参谋也开始具有吸血鬼的特质了喵。"
+ yasaidaburuninnikuaboramashimashibaagaa_trait: "蔬菜多多油脂滚滚蒜香浓浓大汉堡！"
+ yasaidaburuninnikuaboramashimashibaagaa_trait_desc: "ヤサイダブルニンニクアブラマシマシバーガー！"
+ kido_tsubasa_only_at_sun: "日行性生物"
+ kido_tsubasa_only_at_sun_desc: "因为翼只能在白天出现，所以她的参谋们个个拥有优质睡眠，大家的工作效率也有了成倍提升。"

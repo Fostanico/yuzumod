@@ -1,0 +1,430 @@
+yz_civilian_transfer = {            
+     # 1. 直接给国家增加对应的地图外民工  #如果你想抄这段代码，我建议你看船坞转移的那部分
+    add_offsite_building = {            #因为Gemini一开始给我写的是关于船坞的，民工
+        type = industrial_complex       #和军工的是我改的，有些注释我删掉了，所以逻辑有些
+        level = one_time_ompression_for_civilian_factories   #跳跃，但是船坞的那个我是
+    }                                   #完整复制下来了——2026.4.13，23：40，伊尔诺
+
+    # 2. 设置一个临时变量，作为“还需要移除的地图内民工数量” (倒扣法指标)
+    set_variable = {
+        yz_remaining_industrial_complex_to_remove = one_time_ompression_for_civilian_factories
+    }
+
+    # 3. 开始循环寻找并移除
+    while_loop_effect = {
+        # 循环继续的条件：
+        limit = {
+            # 条件A: 指标还没扣完 (> 0)
+            check_variable = {
+                var = ROOT.yz_remaining_industrial_complex_to_remove
+                value = 0
+                compare = greater_than
+            }
+        }
+
+        # 随机挑选一个当前控制的、且民工数量大于0的省份
+        random_controlled_state = {
+            limit = {
+                industrial_complex > 0
+            }
+
+            if = {
+                # 情况1：该省份的民工数量 > 我们还需要移除的指标
+                # 比如该省有 5 个，但我们只需要再拆 2 个了
+                limit = {
+                    check_variable = {
+                        var = THIS.building_level@industrial_complex
+                        value = ROOT.yz_remaining_industrial_complex_to_remove
+                        compare = greater_than
+                    }
+                }
+                # 那么只移除我们需要的数量
+                remove_building = {
+                    type = industrial_complex
+                    level = ROOT.yz_remaining_industrial_complex_to_remove
+                }
+                set_variable = { ROOT.yz_remaining_industrial_complex_to_remove = 0 }
+            }
+            else = {
+                # 情况2：该省份的民工数量 <= 我们还需要移除的指标
+                # 比如我们需要再拆 5 个，但这个省只有 3 个
+                
+                # 先在指标中扣掉这 3 个（一定要在拆除之前扣，否则读不到数据）
+                subtract_from_variable = {
+                    var = ROOT.yz_remaining_industrial_complex_to_remove
+                    value = THIS.building_level@industrial_complex
+                }
+                # 然后把这个省的 3 个民工全部拆除
+                remove_building = {
+                    type = industrial_complex
+                    level = THIS.building_level@industrial_complex
+                }
+                # 此时该省民工变为0，在下一次 while 循环时，自然会被排除在寻找范围外，完全不需要设置 state_flag！
+            }
+        }
+    }
+}
+yz_arma_transfer = {            #军工转移
+    add_offsite_building = {
+        type = arms_factory
+        level = one_time_ompression_for_arma_factories
+    }                                    
+    set_variable = {
+        yz_remaining_arms_factory_to_remove = one_time_ompression_for_arma_factories
+    }
+    while_loop_effect = {
+        limit = {
+            check_variable = {
+                var = yz_remaining_arms_factory_to_remove
+                value = 0
+                compare = greater_than
+            }
+        }
+        random_controlled_state = {
+            limit = {
+                arms_factory > 0
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        var = THIS.building_level@arms_factory
+                        value = ROOT.yz_remaining_arms_factory_to_remove
+                        compare = greater_than
+                    }
+                }
+                remove_building = {
+                    type = arms_factory
+                    level = ROOT.yz_remaining_arms_factory_to_remove
+                }
+                set_variable = { ROOT.yz_remaining_arms_factory_to_remove = 0 }
+            }
+            else = {
+                subtract_from_variable = {
+                    var = ROOT.yz_remaining_arms_factory_to_remove
+                    value = THIS.building_level@arms_factory
+                }
+                remove_building = {
+                    type = arms_factory
+                    level = THIS.building_level@arms_factory
+                }
+            }
+        }
+    }
+}
+yz_dockyard_transfer = {            #这个是Gemini给的算法，我觉得比我的优秀很多——2026.4.13，23：31，伊尔诺
+     # 1. 直接给国家增加对应的地图外船坞
+    add_offsite_building = {
+        type = dockyard
+        level = one_time_ompression_for_dockyard # 使用玩家输入的目标数值
+    }
+
+    # 2. 设置一个临时变量，作为“还需要移除的地图内船坞数量” (倒扣法指标)
+    set_variable = {
+        yz_remaining_dockyards_to_remove = one_time_ompression_for_dockyard
+    }
+
+    # 3. 开始循环寻找并移除
+    while_loop_effect = {
+        # 循环继续的条件：
+        limit = {
+            # 条件A: 指标还没扣完 (> 0)
+            check_variable = {
+                var = yz_remaining_dockyards_to_remove
+                value = 0
+                compare = greater_than
+            }
+            # 条件B (安全锁): 全国范围内必须还有地图内船坞可以拆
+            # 如果玩家输入的转移值比全国总船坞还多，没有这个条件游戏会陷入死循环卡死！
+            any_controlled_state = {
+                dockyard > 0
+            }
+        }
+
+        # 随机挑选一个当前控制的、且船坞数量大于0的省份
+        random_controlled_state = {
+            limit = {
+                dockyard > 0
+            }
+
+            if = {
+                # 情况1：该省份的船坞数量 > 我们还需要移除的指标
+                # 比如该省有 5 个，但我们只需要再拆 2 个了
+                limit = {
+                    check_variable = {
+                        var = THIS.building_level@dockyard
+                        value = ROOT.yz_remaining_dockyards_to_remove
+                        compare = greater_than
+                    }
+                }
+                # 那么只移除我们需要的数量
+                remove_building = {
+                    type = dockyard
+                    level = ROOT.yz_remaining_dockyards_to_remove
+                }
+                # 指标自我扣减，归零（循环会在下个回合自动结束）
+                #subtract_from_variable = {
+                #    var = ROOT.yz_remaining_dockyards_to_remove
+                #    value = ROOT.yz_remaining_dockyards_to_remove 
+                #}
+                set_variable = { ROOT.yz_remaining_dockyards_to_remove = 0 }
+            }
+            else = {
+                # 情况2：该省份的船坞数量 <= 我们还需要移除的指标
+                # 比如我们需要再拆 5 个，但这个省只有 3 个
+                
+                # 先在指标中扣掉这 3 个（一定要在拆除之前扣，否则读不到数据）
+                subtract_from_variable = {
+                    var = ROOT.yz_remaining_dockyards_to_remove
+                    value = THIS.building_level@dockyard
+                }
+                # 然后把这个省的 3 个船坞全部拆除
+                remove_building = {
+                    type = dockyard
+                    level = THIS.building_level@dockyard
+                }
+                # 此时该省船坞变为0，在下一次 while 循环时，自然会被排除在寻找范围外，完全不需要设置 state_flag！
+            }
+        }
+    }
+}
+yz_civilian_transfer_old = {            #民工转移   这些是旧算法，废弃不用，但是保留作为纪念——2026.4.13，23：33，伊尔诺
+    add_offsite_building = {
+        type = industrial_complex
+        level = one_time_ompression_for_civilian_factories
+    }
+    every_controlled_state = {
+        #add_to_array = {
+        #    array = tem_use_arry_for_civilian_factroies
+        #    value = THIS
+        #}
+        #add_to_array = {
+        #    array = tem_use_arry_for_civilian_factroies_number
+        #    value = THIS.industrial_complex
+        #}
+        clr_state_flag = yz_this_state_has_been_search                     #清除遍历标志
+    }
+    #set_variable = {
+    #    YZ_for_break_flag = 0
+    #}
+    set_temp_variable = {
+        YZ_break = 0
+    }
+    set_variable = {
+        total_move_for_this = 0
+    }
+    while_loop_effect = {                                                   #大家可能看不懂我这里在写什么，没事，我也看不懂——2025，8.25，21：57，伊尔诺
+        #set_temp_variable = {
+        #    YZ_for_break_flag = 0
+        #}
+        #break = YZ_for_break_flag                                            #while(YZ_for_break_flag)   在钢丝的wiki中是说退出循环用"break = <temp_variable>"，令临时变量不为0
+        limit = {                                                             #即可退出循环，但事实上在蠢驴自己写的代码中是很少使用break的，个人猜测有作用域的问题，也有一些莫名其妙的
+            #has_country_flag = YZ_industry_ompression_start_flag             #问题，比如蠢驴的“set_occupation_law”就是完全没用但还是写在wiki上，在蠢驴自己写的代码中都是
+            #check_variable = {                                               #“set_occupation_law_where_available”/*这里我可能拼错了，但是我懒得去查了*/，这里也同理
+            #    YZ_for_break_flag = 0                                        #蠢驴自己写的代码中结束循环都是用的limit中的条件，所以我也这么写
+            #}                                                                #——2025，8.26，21：29，伊尔诺
+            check_variable = {
+                var = YZ_break
+                value = 0
+                compare = equals
+            }
+        }
+        random_owned_controlled_state = {
+            limit = {
+                not = {
+                    has_state_flag = yz_this_state_has_been_search                #防止省份被重复遍历
+                }
+                industrial_complex > 0
+            }
+            add_to_variable = {
+                ROOT.total_move_for_this = THIS.building_level@industrial_complex
+            }
+            set_variable = {
+                these_land_has_far = THIS.building_level@industrial_complex
+            }
+            if = {                                                          #统计这一次转移后是否超过计划值
+                limit = {
+                    check_variable = {
+                        var = ROOT.total_move_for_this                                    #这里的“ROOT.”是代表作用域，因为现在是在state里，而“total_move_for_this”在country里，所以要
+                        value = ROOT.one_time_ompression_for_civilian_factories           #“ROOT.”，否则这里无法获取变量的值，而且从这里我们可以了解到一个关键的信息：
+                        compare = greater_than                                            #对于未初始化的变量的比较，P语言会总是抛出true——2025，8.26，21：08，伊尔诺
+                    }
+                }
+                set_variable = {
+                    over_amount_that_we_ompression = ROOT.total_move_for_this
+                }
+                subtract_from_variable = {
+                    var = over_amount_that_we_ompression
+                    value = ROOT.one_time_ompression_for_civilian_factories
+                }
+                #ROOT = {                                                                    #若全部转移就超过，则只转移缺额
+                #    add_offsite_building = {
+                #        type = industrial_complex                                           #其实这里可以就在这里添加地图外工厂，正如我上面所说，这里的“level”里没有注意到作用域
+                #        level = over_amount_that_we_ompression                              #这一行可以改成"level = ROOT.over_amount_that_we_ompression" 
+                #    }                                                                       #但是我不推荐这么做，因为这样会徒增计算量——2025，8.26，21：15，伊尔诺
+                #}
+                remove_building = {
+                    type = industrial_complex
+                    level = over_amount_that_we_ompression
+                }
+                #ROOT = {                                                              #这里是我当初为了检查代码是否生效写的，ROOT、PREV和FROM可以看出我当初根本没有找到根本问题
+                #    country_event = start_event.2                                     #2025，8.26，21：05，伊尔诺
+                #}
+                #PREV = {
+                #    country_event = start_event.2
+                #}
+                #FROM = {
+                #    country_event = start_event.2
+                #}
+                set_temp_variable = {
+                    YZ_for_break_flag = 1
+                }
+                set_temp_variable = {
+                    YZ_break = 1
+                }
+            }
+            else_if = {                                         #恰到好处，全部转移，同时停止循环
+                limit = {
+                    check_variable = {
+                        var = ROOT.total_move_for_this
+                        value = ROOT.one_time_ompression_for_civilian_factories
+                        compare = equals
+                    }
+                }
+                #ROOT = {
+                #    add_offsite_building = {
+                #        type = industrial_complex
+                #        level = these_land_has_far
+                #    }
+                #}
+                remove_building = {
+                    type = industrial_complex
+                    level = THIS.building_level@industrial_complex
+                }
+                #ROOT = {
+                #    country_event = start_event.2
+                #}
+                #PREV = {
+                #    country_event = start_event.2
+                #}
+                #FROM = {
+                #    country_event = start_event.2
+                #}
+                set_temp_variable = {
+                    YZ_for_break_flag = 1
+                }
+                set_temp_variable = {
+                    YZ_break = 1
+                }
+            }
+            else = {                                  #不足，全部转移，并继续循环
+                #ROOT = {
+                #    add_offsite_building = {
+                #        type = industrial_complex
+                #        level = these_land_has_far
+                #    }
+                #}
+                remove_building = {
+                    type = industrial_complex
+                    level = THIS.building_level@industrial_complex
+                }
+                #ROOT = {
+                #    country_event = start_event.2
+                #}
+            }
+            set_state_flag = yz_this_state_has_been_search
+        } # end random_owned_controlled_state
+    } # end while_loop_effect
+} # end effect
+yz_arma_transfer_old = {            #军工转移
+    add_offsite_building = {
+        type = arms_factory
+        level = one_time_ompression_for_arma_factories
+    }   
+    every_controlled_state = {
+        clr_state_flag = yz_this_state_has_been_search                     #清除遍历标志
+    }
+    #set_variable = {
+    #    YZ_for_break_flag = 0
+    #}
+    set_temp_variable = {
+        YZ_break = 0
+    }
+    set_variable = {
+        total_move_for_this = 0
+    }
+    while_loop_effect = {                                                      #这里的算法和下面的都是一样的，不用看了
+        limit = {
+            check_variable = {
+                var = YZ_break
+                value = 0
+                compare = equals
+            }
+        }
+        random_owned_controlled_state = {
+            limit = {
+                not = {
+                    has_state_flag = yz_this_state_has_been_search                #防止省份被重复历遍
+                }
+                arms_factory > 0
+            }
+            add_to_variable = {
+                ROOT.total_move_for_this = THIS.building_level@arms_factory
+            }
+            set_variable = {
+                these_land_has_far = THIS.building_level@arms_factory
+            }
+            if = {                                                          #统计这一次转移后是否超过计划值
+                limit = {
+                    check_variable = {
+                        var = ROOT.total_move_for_this
+                        value = ROOT.one_time_ompression_for_arma_factories
+                        compare = greater_than
+                    }
+                }
+                set_variable = {
+                    over_amount_that_we_ompression = ROOT.total_move_for_this
+                }
+                subtract_from_variable = {
+                    var = over_amount_that_we_ompression
+                    value = ROOT.one_time_ompression_for_arma_factories
+                }
+                remove_building = {
+                    type = arms_factory
+                    level = over_amount_that_we_ompression
+                }
+                set_temp_variable = {
+                    YZ_for_break_flag = 1
+                }
+                set_temp_variable = {
+                    YZ_break = 1
+                }
+            }
+            else_if = {                                         #恰到好处，全部转移，同时停止循环
+                limit = {
+                    check_variable = {
+                        var = ROOT.total_move_for_this
+                        value = ROOT.one_time_ompression_for_arma_factories
+                        compare = equals
+                    }
+                }
+                remove_building = {
+                    type = arms_factory
+                    level = THIS.building_level@arms_factory
+                }
+                set_temp_variable = {
+                    YZ_for_break_flag = 1
+                }
+                set_temp_variable = {
+                    YZ_break = 1
+                }
+            }
+            else = {                                  #不足，全部转移，并继续循环
+                remove_building = {
+                    type = arms_factory
+                    level = THIS.building_level@arms_factory
+                }
+            }
+            set_state_flag = yz_this_state_has_been_search
+        }
+    }
+}

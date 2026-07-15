@@ -1,0 +1,384 @@
+guiTypes = {
+	containerWindowType = {
+		name = "YZ_married_gui_button"
+		position = {
+			x = -77
+			y = -690
+		}
+		orientation = LOWER_RIGHT
+		size = {
+			width = 77
+			height = 60
+		}
+		background = {
+			name = "YZ_married_gui_button_background"
+			quadTextureSprite = "GFX_mini_tooltip"
+		}
+		buttonType = {
+			name = "YZ_married_gui_toggle"
+			position = {
+				x = 7
+				y = 0
+			}
+			size = {
+				width = 65
+				height = 55
+			}
+			quadTextureSprite = "GFX_idea_Married"
+			pdx_tooltip = "YZ_married_gui_button_tooltip"
+		}
+	}
+
+	containerWindowType = {
+		name = "YZ_married_gui"
+		position = { x = -575 y = -230 }
+		orientation = CENTER
+		size = { width = 1150 height = 460 }
+		moveable = yes
+		click_to_front = yes
+		background = {
+			name = "married_ui_back"
+			position = { x = 0 y = 0 }
+			size = { width = 1150 height = 460 }
+			quadTextureSprite = "GFX_yuzu_married_ui_back"
+		}
+
+		# General images
+		iconType = {
+			name = "believity_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_believity_icon"
+			pdx_tooltip = "believity_icon_tooltip"
+		}
+		# 作用：提供唯一的动态角色立绘图层；要点：实际图片由scripted GUI根据wife_id和number_of_portrait替换。署名：伊尔诺+2026-06-08+assisted by Codex
+		iconType = {
+			name = "character_portrait"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_married_portrait_43_1"
+			pdx_tooltip = "character_bac_tooltip"
+		}
+		iconType = {
+			name = "date_bac"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_date_bac"
+			pdx_tooltip = "date_bac_tooltip"
+		}
+		iconType = {
+			name = "gift_bac"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_gift_bac"
+			pdx_tooltip = "gift_bac_tooltip"
+		}
+		iconType = {
+			name = "help_bac"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_help_bac"
+			pdx_tooltip = "help_bac_tooltip"
+		}
+		iconType = {
+			name = "help_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_help_icon"
+			pdx_tooltip = "help_icon_tooltip"
+		}
+		iconType = {
+			name = "interact_bac"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_interact_bac"
+			pdx_tooltip = "interact_bac_tooltip"
+		}
+		iconType = {
+			name = "loving_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_loving_icon"
+			pdx_tooltip = "loving_icon_tooltip"
+		}
+		iconType = {
+			name = "relationship_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_yuzu_relationship_icon"
+			pdx_tooltip = "relationship_icon_tooltip"
+		}
+		# Progress bars
+		iconType = {
+			name = "believity_value"
+			position = { x = 459 y = 149 }
+			spriteType = "GFX_yuzu_believity_value"
+			pdx_tooltip = "believity_value_tooltip"
+		}
+		iconType = {
+			name = "help_value"
+			position = { x = 459 y = 251 }
+			spriteType = "GFX_yuzu_help_value"
+			pdx_tooltip = "help_value_tooltip"
+		}
+		iconType = {
+			name = "loving_value"
+			position = { x = 459 y = 96 }
+			spriteType = "GFX_yuzu_loving_value"
+			pdx_tooltip = "loving_value_tooltip"
+		}
+		iconType = {
+			name = "relationship_value"
+			position = { x = 460 y = 199 }
+			spriteType = "GFX_yuzu_relationship_value"
+			pdx_tooltip = "relationship_value_tooltip"
+		}
+		# 作用：在底部留言框左侧显示并切换当前角色SD；要点：保持95x95原尺寸，点击图片自身切换SD和留言。署名：伊尔诺+2026-06-09+assisted by Codex
+		buttonType = {
+			name = "character_sd"
+			position = { x = 337 y = 310 }
+			size = { width = 95 height = 95 }
+			quadTextureSprite = "GFX_yuzu_married_sd_43_1"
+			pdx_tooltip = "character_sd_tooltip"
+		}
+		# 作用：显示由wife_id与number_of_sd共同决定的角色留言；要点：文字位于SD右侧并限制在底部框内部。署名：伊尔诺+2026-06-09+assisted by Codex
+		instantTextBoxType = {
+			name = "character_sd_message"
+			position = { x = 428 y = 330 }
+			font = "hoi_18mbs"
+			scale = 1.0
+			text = "character_sd_message_text"
+			maxWidth = 305
+			maxHeight = 68
+			format = left
+			alwaystransparent = yes
+		}
+		# Buttons
+		buttonType = {
+			name = "change_clothes_buttom"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_change_clothes_buttom"
+			pdx_tooltip = "change_clothes_buttom_tooltip"
+		}
+		buttonType = {
+			name = "date_buttom_left_one"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_date_buttom_left_one"
+			pdx_tooltip = "date_buttom_left_one_tooltip"
+		}
+		instantTextBoxType = {
+			name = "date_buttom_left_one_text"
+			position = { x = 850 y = 116 }
+			font = "hoi_16mbs"
+			scale = 0.75
+			text = "date_buttom_left_one_text"
+			maxWidth = 43
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "date_buttom_left_two"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_date_buttom_left_two"
+			pdx_tooltip = "date_buttom_left_two_tooltip"
+		}
+		instantTextBoxType = {
+			name = "date_buttom_left_two_text"
+			position = { x = 898 y = 116 }
+			font = "hoi_16mbs"
+			scale = 0.75
+			text = "date_buttom_left_two_text"
+			maxWidth = 42
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "date_buttom_middle"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_date_buttom_middle"
+			pdx_tooltip = "date_buttom_middle_tooltip"
+		}
+		instantTextBoxType = {
+			name = "date_buttom_middle_text"
+			position = { x = 945 y = 116 }
+			font = "hoi_16mbs"
+			scale = 0.75
+			text = "date_buttom_middle_text"
+			maxWidth = 41
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "date_buttom_right_one"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_date_buttom_right_one"
+			pdx_tooltip = "date_buttom_right_one_tooltip"
+		}
+		instantTextBoxType = {
+			name = "date_buttom_right_one_text"
+			position = { x = 1038 y = 116 }
+			font = "hoi_16mbs"
+			scale = 0.75
+			text = "date_buttom_right_one_text"
+			maxWidth = 43
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "date_buttom_right_two"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_date_buttom_right_two"
+			pdx_tooltip = "date_buttom_right_two_tooltip"
+		}
+		instantTextBoxType = {
+			name = "date_buttom_right_two_text"
+			position = { x = 991 y = 116 }
+			font = "hoi_16mbs"
+			scale = 0.75
+			text = "date_buttom_right_two_text"
+			maxWidth = 42
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "gift_buttom_left"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_gift_buttom_left"
+			pdx_tooltip = "gift_buttom_left_tooltip"
+		}
+		instantTextBoxType = {
+			name = "gift_buttom_left_text"
+			position = { x = 853 y = 191 }
+			font = "hoi_18mbs"
+			text = "gift_buttom_left_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "gift_buttom_middle"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_gift_buttom_middle"
+			pdx_tooltip = "gift_buttom_middle_tooltip"
+		}
+		instantTextBoxType = {
+			name = "gift_buttom_middle_text"
+			position = { x = 930 y = 191 }
+			font = "hoi_18mbs"
+			text = "gift_buttom_middle_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "gift_buttom_right"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_gift_buttom_right"
+			pdx_tooltip = "gift_buttom_right_tooltip"
+		}
+		instantTextBoxType = {
+			name = "gift_buttom_right_text"
+			position = { x = 1006 y = 191 }
+			font = "hoi_18mbs"
+			text = "gift_buttom_right_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "help_buttom_left"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_help_buttom_left"
+			pdx_tooltip = "help_buttom_left_tooltip"
+		}
+		instantTextBoxType = {
+			name = "help_buttom_left_text"
+			position = { x = 853 y = 347 }
+			font = "hoi_18mbs"
+			text = "help_buttom_left_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "help_buttom_middle"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_help_buttom_middle"
+			pdx_tooltip = "help_buttom_middle_tooltip"
+		}
+		instantTextBoxType = {
+			name = "help_buttom_middle_text"
+			position = { x = 930 y = 347 }
+			font = "hoi_18mbs"
+			text = "help_buttom_middle_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "help_buttom_right"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_help_buttom_right"
+			pdx_tooltip = "help_buttom_right_tooltip"
+		}
+		instantTextBoxType = {
+			name = "help_buttom_right_text"
+			position = { x = 1007 y = 347 }
+			font = "hoi_18mbs"
+			text = "help_buttom_right_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "interact_buttom_left"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_interact_buttom_left"
+			pdx_tooltip = "interact_buttom_left_tooltip"
+		}
+		instantTextBoxType = {
+			name = "interact_buttom_left_text"
+			position = { x = 853 y = 264 }
+			font = "hoi_18mbs"
+			text = "interact_buttom_left_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "interact_buttom_middle"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_interact_buttom_middle"
+			pdx_tooltip = "interact_buttom_middle_tooltip"
+		}
+		instantTextBoxType = {
+			name = "interact_buttom_middle_text"
+			position = { x = 930 y = 264 }
+			font = "hoi_18mbs"
+			text = "interact_buttom_middle_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "interact_buttom_right"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_yuzu_interact_buttom_right"
+			pdx_tooltip = "interact_buttom_right_tooltip"
+		}
+		instantTextBoxType = {
+			name = "interact_buttom_right_text"
+			position = { x = 1006 y = 264 }
+			font = "hoi_18mbs"
+			text = "interact_buttom_right_text"
+			maxWidth = 70
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+	}
+}

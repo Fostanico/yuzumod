@@ -637,6 +637,10 @@ spriteTypes = {
 		name = "GFX_idea_youzi_tank"
 		texturefile = "gfx/organization/Diamonds2.png"
 	}
+	spriteType = {
+		name = "GFX_idea_youzi_ATRI"
+		texturefile = "gfx/organization/ATRI_industrial.png"
+	}
     #附属国图标我放在这里了
 	spriteType = {
 		name = "GFX_yuzu_land"
@@ -661,5 +665,10 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_idea_army_yuzusoft_spirit_special_forces"
 		texturefile = "gfx/ideas/special.png"
+	}
+	#统一事件
+	spriteType = {
+		name = "GFX_World_event.1_event"
+		texturefile = "gfx/event_pictures/World_event.1_event.png"
 	}
 }

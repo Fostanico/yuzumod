@@ -1,0 +1,19 @@
+spriteTypes = {
+	
+	#Government in Exile
+
+	
+	#柚子国的加在了这里
+	spriteType = {
+		name = "GFX_yz_button_up"
+		textureFile = "gfx/guis/yz_button_up.png"
+	}
+	spriteType = {
+		name = "GFX_yz_button_down"
+		textureFile = "gfx/guis/yz_button_down.png"
+	}
+	spriteType = {
+		name = "GFX_YZ_industry_ompression_control_ui_background"
+		textureFile = "gfx/guis/YZ_industry_ompression_control_ui_background.png"
+	}
+}

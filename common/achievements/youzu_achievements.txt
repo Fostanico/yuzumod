@@ -1,0 +1,42 @@
+unique_id = youzu_achievements
+
+#欢迎游玩柚子将mod 进攻G点！
+youzu_has_play_this_mod = { 
+	possible = {
+		difficulty > 1
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+		date > 1936.1.1
+	}
+}
+#启用青春版 有将领用就足够喽
+play_youzu1 = { 
+	possible = {
+		difficulty > 1
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+        has_country_flag = qiyong_youzi_1
+	}
+}
+#启用完整版 我要有一个完整的柚子世界！
+play_youzu2 = { 
+	possible = {
+		difficulty > 1
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+        has_country_flag = qiyong_youzi_2
+	}
+}
+#启用联机版 适当开一点就可以啦
+play_youzu3 = { 
+	possible = {
+		difficulty > 1
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+        has_country_flag = qiyong_youzi_3
+	}
+}

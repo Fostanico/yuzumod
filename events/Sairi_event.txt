@@ -1,0 +1,519 @@
+add_namespace = sairi_event     
+
+country_event= {        
+    id = sairi_event.1
+    picture = GFX_sairi_event2	
+    title = sairi_event.1.t
+    desc = sairi_event.1.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.1.a	
+        custom_effect_tooltip = sairi_warning
+        trigger = {
+            if = {
+               not = {
+                    has_country_flag = havent_married
+               }
+            }
+        }
+        country_event = { id = sairi_event.101 }
+       
+    }
+    option = {
+        name = sairi_event.1.b	
+        trigger = {
+
+        }
+        country_event = { id = sairi_event.3 }
+        
+    }
+    option = {
+        name = sairi_event.1.c
+        trigger = {
+            not = {has_country_flag = havent_married}
+            or = {
+                has_country_flag = have_noa
+                has_country_flag = have_sana
+                has_country_flag = have_murasame
+                has_country_flag = have_zaozi
+                has_country_flag = have_amane
+            }
+        }
+        hidden_effect = {
+            country_event = sairi_event.5
+        }
+    }
+
+}
+
+country_event= {        
+    id = sairi_event.2
+    picture = GFX_sairi_event1
+    title = sairi_event.2.t
+    desc = sairi_event.2.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.2.a	
+        trigger = {
+            
+        }
+        country_event = { id = sairi_event.1 days = 1  }
+       
+    }
+}
+
+country_event= {        
+    id = sairi_event.3
+    picture = GFX_sairi_event3
+    title = sairi_event.3.t
+    desc = sairi_event.3.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.3.a	
+        trigger = {
+            
+        }
+        country_event = { id = sairi_event.4  }
+       
+    }
+}
+
+country_event= {        
+    id = sairi_event.4
+    picture = GFX_sairi_event4
+    title = sairi_event.4.t
+    desc = sairi_event.4.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.4.a	
+        set_country_flag = have_kaguya
+        custom_effect_tooltip = get_kaguya
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Kaguya
+                    name = "星河辉耶"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx\leader\Kaguya.png"
+                            small = "gfx\leader\Kaguya2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                traits={
+                    maid_kaguya_trait
+                    bearer_of_artillery
+                    adaptable
+                    brilliant_strategist
+                }
+                skill = 5
+			    attack_skill = 5
+			    defense_skill = 4
+			    planning_skill = 7
+			    logistics_skill = 3
+                visible = {
+                           is_ai = no
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
+
+country_event= {        
+    id = sairi_event.5
+    picture = GFX_sairi_event5
+    title = sairi_event.5.t
+    desc = sairi_event.5.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.5.a	
+        trigger = {
+            
+        }
+        country_event = { id = sairi_event.6 days = 1 }
+       
+    }
+}
+
+country_event= {        
+    id = sairi_event.6
+    picture = GFX_sairi_event4
+    title = sairi_event.6.t
+    desc = sairi_event.6.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.6.a	
+        custom_effect_tooltip = get_kaguya
+        hidden_effect = {
+            country_event = sairi_event.7
+        }
+        set_country_flag = have_kaguya
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Kaguya
+                    name = "星河辉耶"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx\leader\Kaguya.png"
+                            small = "gfx\leader\Kaguya2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                traits={
+                    maid_kaguya_trait
+                    bearer_of_artillery
+                    adaptable
+                    brilliant_strategist
+                }
+                skill = 5
+			    attack_skill = 5
+			    defense_skill = 4
+			    planning_skill = 7
+			    logistics_skill = 3
+                visible = {
+                           is_ai = no
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
+
+country_event= {        
+    id = sairi_event.7
+    picture = GFX_sairi_event1
+    title = sairi_event.7.t
+    desc = sairi_event.7.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.7.a	
+        custom_effect_tooltip = get_sairi
+        set_country_flag = have_sairi
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Sairi
+                    name = "三国彩里"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx\leader\Sairi.png"
+                            small = "gfx\leader\Sairi2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                traits={
+                    maid_sairi_trait_2
+                    brilliant_strategist
+                }
+                id = 100121273
+                skill = 1
+			    attack_skill = 1
+			    defense_skill = 1
+			    planning_skill = 1
+			    logistics_skill = 1
+                visible = {
+                           is_ai = no
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
+
+country_event= {        
+    id = sairi_event.8      #所以我的前世是魔王咯？
+    picture = GFX_amane_event1
+    title = sairi_event.8.t
+    desc = sairi_event.8.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.8.a	
+        trigger = {
+            has_country_flag = qiyong_youzi_2
+        }
+        set_country_flag = amane_line
+        set_country_flag = have_weizi
+        custom_effect_tooltip = get_weizi
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = WeiZi
+                    name = "薇姿"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx\leader\WeiZi.png"
+                            small = "gfx\leader\WeiZi2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                    traits={
+                        yz_weizi_trait
+                        adaptable 
+                        trait_reckless
+                        brilliant_strategist
+                        urban_assault_specialist
+						trait_reckless
+						hill_fighter
+                    }
+                    attack_skill = 6
+                    defense_skill = 5
+                    planning_skill = 6
+                    logistics_skill = 5
+                    skill = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = sairi_event.8.b
+        custom_effect_tooltip = "选择此项将直接获得天音，无事件链"
+        add_political_power = -10
+		set_country_flag = have_amane
+		country_event = { id = tongyong_event.1 }
+		add_to_variable = { num_YZ_general = 2 }
+		meta_effect = {
+			text = {
+				generate_character = {
+					token_base = Amane
+					name = "谷风天音"
+                    can_be_captured = no
+					gender = female
+					nationality = JAP
+					portraits = {
+						civilian = {
+							large = "gfx\leader\Amane.png"
+							small = "gfx\leader\Amane2.png"
+						}
+					}
+					allowed_civil_war = {
+						is_ai = no
+					}
+					corps_commander = {
+					traits={
+						maid_amane_trait 
+						urban_assault_specialist
+						trait_reckless
+						hill_fighter
+					}
+					skill=5
+					attack_skill=6
+					defense_skill=4
+					planning_skill=5
+					logistics_skill=6
+					}
+				}
+			}
+		}
+    }
+}
+
+country_event= {        
+    id = sairi_event.9      #吸血鬼的特殊准备
+    picture = GFX_amane_event2
+    title = sairi_event.9.t
+    desc = sairi_event.9.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.9.a	
+        every_army_leader = { 
+            limit = {
+                has_trait = yz_weizi_trait
+            }
+            remove_unit_leader_role = yes
+        }
+    }
+}
+
+country_event= {        
+    id = sairi_event.10      #你与她的谜之觉悟
+    picture = GFX_amane_event3
+    title = sairi_event.10.t
+    desc = sairi_event.10.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.10.a	
+        custom_effect_tooltip = get_amane
+		set_country_flag = have_amane
+		country_event = { id = tongyong_event.1 }
+		add_to_variable = { num_YZ_general = 2 }
+        meta_effect = {
+			text = {
+				generate_character = {
+					token_base = Amane1
+					name = "谷风天音"
+                    can_be_captured = no
+					gender = female
+					nationality = JAP
+					portraits = {
+						civilian = {
+							large = "gfx\leader\Amane.png"
+							small = "gfx\leader\Amane2.png"
+						}
+					}
+					allowed_civil_war = {
+						is_ai = no
+					}
+					corps_commander = {
+					traits={
+						yz_amane_trait_1
+					}
+					skill=1
+					attack_skill=1
+					defense_skill=1
+					planning_skill=1
+					logistics_skill=1					
+                    }
+				}
+			}
+		}
+        if = {
+            limit = {
+                not = {
+                    has_country_flag = havent_married
+                }
+            }
+            add_ideas = xiongdinihaoxiang
+            set_country_flag = amane_special_wedding
+        }
+		
+    }
+}
+
+country_event= {        
+    id = sairi_event.102        #移除天音顾问
+    title = sairi_event.102.t
+    desc = sairi_event.102.d	
+    is_triggered_only = yes
+    trigger = {
+        has_idea = yz_amane1
+        has_country_flag = vampire_prepared
+    }
+    hidden = yes
+    immediate = {
+        remove_advisor_role = {
+            character = Amane_advisor
+            slot = political_advisor
+        }
+        country_event = sairi_event.10
+    }
+}
+
+country_event= {        
+    id = sairi_event.101
+    picture = GFX_sairi_event101	
+    title = sairi_event.101.t
+    desc = sairi_event.101.d	
+    is_triggered_only = yes
+
+    option = {
+        name = sairi_event.101.a	
+        
+        every_army_leader = {
+            remove_unit_leader_role = yes
+        }
+        
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+            long_name = sairi_party_desc
+            name = sairi_party
+        }
+        set_popularities = {
+            democratic = 0
+            neutrality = 0
+            fascism = 100
+            communism = 0
+        }
+        add_ideas = sairi_bad_end
+        recruit_character = Sairi_bad
+        kill_country_leader = yes
+        create_country_leader = {
+            name = "三国彩里？"
+            desc = "魔王之母"
+            picture = "gfx\leader\Badsairi.png"
+            expire = "2065.1.1"
+            ideology = nazism
+            traits = {
+                sairi_leader_trait
+            }
+        }
+        add_field_marshal_role = {
+            Character = Sairi_bad
+            skill = 9
+            attack_skill = 9
+            defense_skill = 9
+            planning_skill = 9
+            logistics_skill = 9
+            traits = { adaptable maid_sairi_trait_1 }
+        }
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Sairi_bad
+                    name = "三国彩里？"
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx\leader\Badsairi.png"
+                            small = "gfx\leader\Badsairi2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    field_marshal = {
+                    traits={
+                        adaptable maid_sairi_trait_1
+                    }
+                    attack_skill = 9
+                    defense_skill = 9
+                    planning_skill = 9
+                    logistics_skill = 9
+                    skill = 9
+                   }
+               }
+           }
+       }
+    }
+}

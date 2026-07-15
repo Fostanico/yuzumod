@@ -129,7 +129,7 @@ sub_units = {
 
 		priority = 610
 		ai_priority = 200
-		active = yes
+		active = no
 
 		type = {
 			mechanized

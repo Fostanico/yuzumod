@@ -1,0 +1,47 @@
+Kukuru_dynamic_modifier = {
+	icon = GFX_Kukuru_favor_idea
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_factor = KKR_political_power	#pp
+	stability_factor = KKR_stability		#st
+	research_speed_factor = KKR_research_speed_factor #研究速度
+	war_support_factor = KKR_war_support_factor 	#战争支持度
+	consumer_goods_factor = KKR_consumer_goods_factor	#消费品
+	production_speed_buildings_factor = KKR_production_speed_buildings_factor	#建造
+	industry_repair_factor = KKR_industry_repair_factor		#修复速度
+	industrial_capacity_dockyard = KKR_industrial_capacity_dockyard 
+	production_speed_infrastructure_factor = KKR_production_speed_infrastructure_factor		#基础设施
+	production_speed_industrial_complex_factor = KKR_production_speed_industrial_complex_factor		#民工
+	production_speed_arms_factory_factor = KKR_production_speed_arms_factory_factor #军工速度
+	industry_air_damage_factor = KKR_industry_air_damage_factor #空袭受损	
+	industrial_capacity_factory = KKR_industrial_capacity_factory		#产出
+	production_factory_efficiency_gain_factor = KKR_production_factory_efficiency_gain_factor		#生产效率增长
+	production_factory_max_efficiency_factor = KKR_production_factory_max_efficiency_factor    		#生产效率上限
+	production_factory_start_efficiency_factor = KKR_production_factory_start_efficiency_factor #基础生产
+	line_change_production_efficiency_factor = KKR_line_change_production_efficiency_factor 		#生产保持
+	local_resources_factor = KKR_local_resources_factor		#资源获取
+	army_org_factor = KKR_army_org_factor #组织度
+	army_core_defence_factor = KKR_army_core_defence_factor #核心防御
+	army_core_attack_factor = KKR_army_core_attack_factor #核心攻击
+	mobilization_speed = KKR_mobilization_speed #动员速度
+	recruitable_population_factor = KKR_recruitable_population_factor #适役人口
+	army_attack_factor = KKR_army_attack_factor
+	refit_ic_cost = KKR_refit_ic_cost #舰艇改装花费
+	refit_speed = KKR_refit_speed #舰船改造速度
+	repair_speed_factor = KKR_repair_speed_factor #舰船修理速度
+	subversive_activites_upkeep = KKR_subversive_activites_upkeep #情报升级
+	intelligence_agency_defense = KKR_intelligence_agency_defense #反间谍
+	resistance_growth = KKR_resistance_growth #抵抗增长
+	army_bonus_air_superiority_factor = KKR_army_bonus_air_superiority_factor #空优
+	air_superiority_bonus_in_combat = KKR_air_superiority_bonus_in_combat #战斗中空优加成
+	air_accidents_factor = KKR_air_accidents_factor #空军事故概率
+}
+
+Kukuru_atri_research_dynamic_modifier = {
+	icon = GFX_Kukuru_research_idea
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	research_speed_factor = KKR_atri_research_research_speed_factor
+}

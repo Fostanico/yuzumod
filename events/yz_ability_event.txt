@@ -1,0 +1,144 @@
+add_namespace = yz_ability_event
+country_event= {           #鹰白一夜原子力戒指隐藏事件
+    id = yz_ability_event.47994554
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_war_with = FROM
+                }
+                every_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    damage_units = {
+                        state = THIS
+                        damage = 0.6
+                        ratio = yes
+                        army = yes
+                        navy = yes
+                    }
+                }
+            }
+        }
+    }
+}
+country_event= {           #结那大招隐藏事件
+    id = yz_ability_event.114514
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_war_with = FROM
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = ROOT
+                    }
+                    damage_units = {
+                        state = THIS
+                        damage = 1
+                        ratio = yes
+                        army = yes
+                        navy = yes
+                    }
+                }
+            }
+        }
+    }
+}
+country_event= {           #萤的技能
+    id = yz_ability_event.3659153
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_war_with = FROM
+                }
+                add_timed_idea = {
+                    idea = hotaru_eat_every_thing
+                    days = 20
+                }
+            }
+        }
+    }
+}
+country_event= {           #空子的技能
+    id = yz_ability_event.53402385
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    has_war_with = FROM
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = PREV
+                    }
+                    set_temp_variable = {
+                        number_of_in = THIS.building_level@industrial_complex
+                    }
+                    multiply_temp_variable = { var = number_of_in value = 0.6 }
+                    round_temp_variable = number_of_in
+                    remove_building = {
+                        type = industrial_complex
+                        level = number_of_in
+                    }
+                    set_temp_variable = {
+                        chai_b = THIS.building_level@arms_factory
+                    }
+                    multiply_temp_variable = { var = chai_b value = 0.6 }
+                    round_temp_variable = chai_b
+                    remove_building = {
+                        type = arms_factory
+                        level = chai_b
+                    }
+                    set_temp_variable = {
+                        chai_c = THIS.building_level@infrastructure
+                    }
+                    multiply_temp_variable = { var = chai_c value = 0.6 }
+                    round_temp_variable = chai_c
+                    remove_building = {
+                        type = infrastructure
+                        level = chai_c
+                    }
+                    set_temp_variable = {
+                        chai_d = THIS.building_level@synthetic_refinery
+                    }
+                    multiply_temp_variable = { var = chai_d value = 0.6 }
+                    round_temp_variable = chai_d
+                    remove_building = {
+                        type = synthetic_refinery
+                        level = chai_d
+                    }
+                    set_temp_variable = {
+                        chai_e = THIS.building_level@fuel_silo
+                    }
+                    multiply_temp_variable = { var = chai_e value = 0.6 }
+                    round_temp_variable = chai_e
+                    remove_building = {
+                        type = fuel_silo
+                        level = chai_e
+                    }
+                    set_temp_variable = {
+                        chai_f = THIS.building_level@dockyard
+                    }
+                    multiply_temp_variable = { var = chai_f value = 0.6 }
+                    round_temp_variable = chai_f
+                    remove_building = {
+                        type = dockyard
+                        level = chai_f
+                    }
+                }
+            }
+        }
+    }
+}

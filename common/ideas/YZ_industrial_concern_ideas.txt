@@ -1,0 +1,32 @@
+ideas = {        #huhu的奇思妙想，加的新工业企业
+
+    industrial_concern = {
+        #工业企业
+        #超自然研究所
+        super_nature_science_house = {
+            icon = GFX_idea_super_nature_science_house
+            cost = 150
+            modifier = {
+                research_speed_factor = 0.25
+                consumer_goods_factor = 0.2
+                military_industrial_organization_funds_gain = 0.4
+                military_industrial_organization_research_bonus = 0.3
+                local_resources_factor = 0.5
+                local_resources_coal_factor = 0.3
+                special_project_speed_factor = 0.5
+            }
+            traits = {多功能工业企业}
+            research_bonus = {
+                armor_tech = 0.25
+                artillery_tech = 0.25
+                air_tech = 0.25
+                industry_tech = 0.25
+            }
+            visible = {
+                has_country_flag = have_ningning
+                has_country_flag = qiyong_youzi_2
+            }
+        }
+
+    }
+}

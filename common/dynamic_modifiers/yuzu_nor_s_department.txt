@@ -1,0 +1,73 @@
+obsessed_in_yuzu_galgame = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		NOT = { 
+			is_controlled_by = ROOT
+		}
+	}
+	icon = GFX_modifiers_BRA_neglected_state
+	#local_building_slots = 5
+	state_resources_factor = -0.15
+	state_production_speed_buildings_factor = -0.15
+	#local_supplies = -0.2
+	#army_speed_factor_for_controller = 0.1
+	#attrition_for_controller = -0.1
+	#local_factory_sabotage = -0.15
+	local_manpower = 0.25
+	monthly_population = 0.25
+	#mobilization_speed = 0.1
+	compliance_growth = 0.0721
+	resistance_growth = -0.0721
+}
+yz_miliatry_party_modifier = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		NOT = {
+			has_country_flag = have_set_up_ymp
+		}
+	}
+}
+
+yuzu_married_dynamic_modifier = {
+	icon = GFX_idea_Married
+	enable = {
+		has_country_flag = havent_married
+		yuzu_married_wife_id_is_registered = yes
+	}
+	remove_trigger = {
+		OR = {
+			NOT = {
+				has_country_flag = havent_married
+			}
+			NOT = {
+				yuzu_married_wife_id_is_registered = yes
+			}
+		}
+	}
+
+	# 作用：应用心情及临时效果产生的政治点、稳定度与生活消费品修正；要点：心情基础政治点最高30%，包含学习与协助计划的汇总上限为55%。署名：伊尔诺+2026-06-09+assisted by Codex
+	political_power_factor = yuzu_married_total_political_power_effect
+	stability_factor = yuzu_married_total_stability_effect
+	consumer_goods_factor = value_of_loving_consumer_goods_effect
+
+	# 作用：应用信赖产生的组织度、单位防御、科研与战争支持修正；要点：单位防御取代原伤兵复原效果。署名：伊尔诺+2026-06-09+assisted by Codex
+	army_org_factor = value_of_believity_army_org_effect
+	army_defence_factor = value_of_believity_defence_effect
+	research_speed_factor = yuzu_married_total_research_effect
+	war_support_factor = value_of_believity_war_support_effect
+
+	# 作用：应用羁绊及学习、协调生产带来的工业修正；要点：工厂产出使用汇总变量。署名：伊尔诺+2026-06-08+assisted by Codex
+	industrial_capacity_factory = yuzu_married_total_output_effect
+	production_speed_buildings_factor = yuzu_married_total_construction_effect
+	production_factory_efficiency_gain_factor = yuzu_married_total_efficiency_effect
+
+	# Temporary battlefield support
+	planning_speed = yuzu_married_assistance_planning_effect
+	supply_consumption_factor = yuzu_married_logistics_supply_effect
+	attrition = yuzu_married_logistics_attrition_effect
+	army_speed_factor = yuzu_married_logistics_speed_effect
+}

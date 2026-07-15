@@ -28,6 +28,17 @@ scripted_gui = {
 					set_country_flag = show_YzStore_window
 				}
 			}
+			open_YzModule_click = {
+				if = {
+					limit = {
+						has_country_flag = YZ_start_ui_visible
+					}
+					clr_country_flag = YZ_start_ui_visible
+				}
+				else = {
+					set_country_flag = YZ_start_ui_visible
+				}
+			}
 		}
 		triggers = {
 			Yzleader_unknown1_visible = {
@@ -65,25 +76,25 @@ scripted_gui = {
 			yz_economic_policy_1_btn_click_enabled = { ## 上三个
 				check_variable = { yz_economic_policy_1_var = 0 }
 				check_variable = { 
-					yz_money < 5000 
+					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 				check_variable = { 
-					yz_money < 5000 
+					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
 			yz_economic_policy_2_btn_click_enabled = {
 				check_variable = { yz_economic_policy_2_var = 0 }
 				check_variable = { 
-					yz_money < 5000 
+					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
 			yz_economic_policy_3_btn_click_enabled = {
 				check_variable = { yz_economic_policy_3_var = 0 }
 				check_variable = { 
-					yz_money < 5000 
+					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
@@ -124,7 +135,7 @@ scripted_gui = {
 				clamp_variable = {		#范围
 					var = yz_money
 					#min = 0
-					max = 5000
+					max = yz_money_max
 				}
 				set_country_flag = StratTreasuryBonds
 				add_political_power = -25
@@ -142,7 +153,7 @@ scripted_gui = {
 				clamp_variable = {		#范围
 					var = yz_money
 					#min = 0
-					max = 5000
+					max = yz_money_max
 				}
 				set_country_flag = StratForeignInvestment 
 				add_political_power = -20
@@ -160,7 +171,7 @@ scripted_gui = {
 				clamp_variable = {		#范围
 					var = yz_money
 					#min = 0
-					max = 5000
+					max = yz_money_max
 				}
 				set_country_flag = StratConstructionInvestment 
 				add_political_power = -30
@@ -369,31 +380,34 @@ scripted_gui = {
 				}
 				effect_tooltip = {
 					random_list = {
-						96 = { }
-						1.25 = { country_event = start_event.13 }
-						1.25 = { country_event = start_event.15 }
-						1.5 = { country_event = start_event.14 }
+						90 = { }
+						4 = { country_event = start_event.83444139 }
+						3 = { country_event = start_event.13 }
+						2 = { country_event = start_event.15 }
+						1 = { country_event = start_event.90797935 }
 					}
 				}
 				hidden_effect = {
 					random_list = {
-						99 = { }
-						0.5 = { country_event = start_event.13 }
-						0.5 = { country_event = start_event.15 }
+						90 = { }
+						4 = { country_event = start_event.83444139 }
+						3 = { country_event = start_event.13 }
+						2 = { country_event = start_event.15 }
+						1 = { country_event = start_event.90797935 }
 					}
 				}
 				subtract_from_variable = { 	
 					yz_money = 19.9
 					tooltip = yz_money_tooltip_subtain
 				}
-				if = {
-					limit = {
-						check_variable = {
-							YzStore_LuckyDarw_var = 250
-						}
-					}
-					country_event = start_event.16
-				}
+				#if = {
+				#	limit = {
+				#		check_variable = {
+				#			YzStore_LuckyDarw_var = 250
+				#		}
+				#	}
+				#	country_event = start_event.16
+				#}
 			}
 			YzStore_8_btn_click = {
 				add_to_variable = { YzStore_8_var = -1 }

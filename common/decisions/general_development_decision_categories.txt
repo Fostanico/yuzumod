@@ -1,1703 +1,2417 @@
 general_develpomen_decision_category = {
-		#########    ######         ##########       ##				 ##				   ########
-	 ##				   ##         ##		 ##      ##				 ##				 ##		   ##
-	##                 ##        ##           #		 ##				 ##				## 		    ##
-	##                 ##       ##            #	 	 ##				 ##			   ##			 ##
-	##                 ##       ##            #		 ##				 ##			   ##			 ##
-	##                 ##       ##            # 	 ##				 ##			   ##			 ##
-	##                 ##        ##           #		 ##				 ##			   ##			 ##
-	 ##                ##         ##       #### 	 ##				 ##				 ##		   ##
-		#########   ########        #######   ##	 ###########	 ###########	   ########
-	
+    #########    ######         ##########       ##				 ##				   ########
+    ##				   ##         ##		 ##      ##				 ##				 ##		   ##
+    ##                 ##        ##           #		 ##				 ##				## 		    ##
+    ##                 ##       ##            #	 	 ##				 ##			   ##			 ##
+    ##                 ##       ##            #		 ##				 ##			   ##			 ##
+    ##                 ##       ##            # 	 ##				 ##			   ##			 ##
+    ##                 ##        ##           #		 ##				 ##			   ##			 ##
+    ##                ##         ##       #### 	 ##				 ##				 ##		   ##
+    #########   ########        #######   ##	 ###########	 ###########	   ########
 
-	testyzc = {
-		visible = {
-			is_debug = yes
-		}
 
-		complete_effect = {
-			
-			division_template = {
-				name = "柚子厨0721近卫军"
-				is_locked = yes
-				regiments = {
-					yzc_infantry = { x = 0 y = 0 }
-					yzc_infantry = { x = 0 y = 1 }
-					yzc_infantry = { x = 0 y = 2 }
-					yzc_infantry = { x = 0 y = 3 }
-					yzc_infantry = { x = 1 y = 0 }
-					yzc_infantry = { x = 1 y = 1 }
-					yzc_infantry = { x = 1 y = 2 }
-					yzc_artillery_brigade = { x = 2 y = 0 }
-					yzc_artillery_brigade = { x = 2 y = 1 }
-					yzc_artillery_brigade = { x = 2 y = 2 }
-					yzc_medium_armor_aa = { x = 3 y = 0 }
-				}
-				support = {
-					YZ_engineer = { x = 0 y = 0 }
-					field_hospital = { x = 0 y = 2 }
-					recon = { x = 0 y = 1 }
-					YZ_0721_detonator_company = { x = 0 y = 3 }
-					signal_company = { x = 0 y = 4 }
-				}
-			}
-			division_template = {
-				name = "柚子厨0721机械化近卫军"
-				is_locked = yes
-				regiments = {
-					yzc_mechanized = { x = 0 y = 0 }
-					yzc_mechanized = { x = 0 y = 1 }
-					yzc_mechanized = { x = 0 y = 2 }
-					yzc_mechanized = { x = 0 y = 3 }
-					yzc_mechanized = { x = 1 y = 0 }
-					yzc_mechanized = { x = 1 y = 1 }
-					yzc_mechanized = { x = 1 y = 2 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 0 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 1 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 2 }
-					yzc_medium_armor_aa = { x = 3 y = 0 }
-				}
-				support = {
-					YZ_engineer = { x = 0 y = 0 }
-					field_hospital = { x = 0 y = 2 }
-					light_tank_recon = { x = 0 y = 1 }
-					YZ_0721_detonator_company = { x = 0 y = 3 }
-					signal_company = { x = 0 y = 4 }
-				}
-			}
-			division_template = {
-				name = "柚子厨0721现代机械化近卫军"
-				
-				is_locked = yes
-				regiments = {
-					yzc_modern_mechanized = { x = 0 y = 0 }
-					yzc_modern_mechanized = { x = 0 y = 1 }
-					yzc_modern_mechanized = { x = 0 y = 2 }
-					yzc_modern_mechanized = { x = 0 y = 3 }
-					yzc_modern_mechanized = { x = 1 y = 0 }
-					yzc_modern_mechanized = { x = 1 y = 1 }
-					yzc_modern_mechanized = { x = 1 y = 2 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 0 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 1 }
-					yzc_self_propelled_artillery_brigade = { x = 2 y = 2 }
-					yzc_modern_armor = { x = 3 y = 0 }
-				}
-				support = {
-					YZ_engineer = { x = 0 y = 0 }
-					field_hospital = { x = 0 y = 2 }
-					light_tank_recon = { x = 0 y = 1 }
-					YZ_0721_detonator_company = { x = 0 y = 3 }
-					signal_company = { x = 0 y = 4 }
-				}
-			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"柚子厨0721近卫军\" division_template = \"柚子厨0721近卫军\" start_experience_factor = 0.9" 
-					owner = FROM
-					count = 3
-				}
-				create_unit = {
-					division = "name = \"柚子厨0721现代机械化近卫军\" division_template = \"柚子厨0721现代机械化近卫军\" start_experience_factor = 0.9" 
-					owner = FROM
-					count = 3
-				}
-				create_unit = {
-					division = "name = \"柚子厨0721机械化近卫军\" division_template = \"柚子厨0721机械化近卫军\" start_experience_factor = 0.9" 
-					owner = FROM
-					count = 3
-				}
-			}
-			
-		}
-	}
+    testyzc = {
+        visible = {
+            is_debug = yes
+        }
 
-	Vampires_Special_Preparation = {		#吸血鬼的特殊准备
-	 	icon = GFX_tianyin3
-		priority = 10000
-		cost = 0
-		days_remove = 0
-		fire_only_once = yes
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = have_weizi
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			has_war = yes
-		}
+        complete_effect = {
 
-		complete_effect = {
-			set_country_flag = vampire_prepared	
-			set_country_flag = tianyin_fighting
-			add_timed_idea = {
-				idea = yz_amane1
-				days = 180
-			}
-			hidden_effect = {
-				country_event = { id = sairi_event.102 days = 180 }
-				country_event = sairi_event.9
-			}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Amane_advisor
-                    	name = "谷风天音"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Amane.png"
-                            	small = "gfx\leader\Amane2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 0
-							idea_token = Amane_advisor
-							traits = { trait_sub_Amane }
-						}
-              		}
-           		}
-       		}
-			custom_effect_tooltip = remove_amane_advisor 
-		}
-	}
+            division_template = {
+                name = "柚子厨0721近卫军"
+                is_locked = yes
+                regiments = {
+                    yzc_infantry = { x = 0 y = 0 }
+                    yzc_infantry = { x = 0 y = 1 }
+                    yzc_infantry = { x = 0 y = 2 }
+                    yzc_infantry = { x = 0 y = 3 }
+                    yzc_infantry = { x = 1 y = 0 }
+                    yzc_infantry = { x = 1 y = 1 }
+                    yzc_infantry = { x = 1 y = 2 }
+                    yzc_artillery_brigade = { x = 2 y = 0 }
+                    yzc_artillery_brigade = { x = 2 y = 1 }
+                    yzc_artillery_brigade = { x = 2 y = 2 }
+                    yzc_medium_armor_aa = { x = 3 y = 0 }
+                }
+                support = {
+                    YZ_engineer = { x = 0 y = 0 }
+                    field_hospital = { x = 0 y = 2 }
+                    recon = { x = 0 y = 1 }
+                    YZ_0721_detonator_company = { x = 0 y = 3 }
+                    signal_company = { x = 0 y = 4 }
+                }
+            }
+            division_template = {
+                name = "柚子厨0721机械化近卫军"
+                is_locked = yes
+                regiments = {
+                    yzc_mechanized = { x = 0 y = 0 }
+                    yzc_mechanized = { x = 0 y = 1 }
+                    yzc_mechanized = { x = 0 y = 2 }
+                    yzc_mechanized = { x = 0 y = 3 }
+                    yzc_mechanized = { x = 1 y = 0 }
+                    yzc_mechanized = { x = 1 y = 1 }
+                    yzc_mechanized = { x = 1 y = 2 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 0 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 1 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 2 }
+                    yzc_medium_armor_aa = { x = 3 y = 0 }
+                }
+                support = {
+                    YZ_engineer = { x = 0 y = 0 }
+                    field_hospital = { x = 0 y = 2 }
+                    light_tank_recon = { x = 0 y = 1 }
+                    YZ_0721_detonator_company = { x = 0 y = 3 }
+                    signal_company = { x = 0 y = 4 }
+                }
+            }
+            division_template = {
+                name = "柚子厨0721现代机械化近卫军"
 
-	Amane_get_weizi_skill = {		#天音继承前世技能
-		icon = GFX_tianyin
-		priority = 10000
-		cost = 0
-		days_remove = 0
-		visible = {
-			has_country_flag = vampire_prepared
-			has_country_flag = amane_line
-			not = { has_country_flag = yz_bad_end }
-		}
-		fire_only_once = yes
-		
-		complete_effect = {
-			random_army_leader = {
-				limit = {
-					or = {
-						has_trait = yz_amane_trait_1
-						has_trait = yz_amane_trait_2
-					}
-				}
-				add_attack = 2
+                is_locked = yes
+                regiments = {
+                    yzc_modern_mechanized = { x = 0 y = 0 }
+                    yzc_modern_mechanized = { x = 0 y = 1 }
+                    yzc_modern_mechanized = { x = 0 y = 2 }
+                    yzc_modern_mechanized = { x = 0 y = 3 }
+                    yzc_modern_mechanized = { x = 1 y = 0 }
+                    yzc_modern_mechanized = { x = 1 y = 1 }
+                    yzc_modern_mechanized = { x = 1 y = 2 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 0 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 1 }
+                    yzc_self_propelled_artillery_brigade = { x = 2 y = 2 }
+                    yzc_modern_armor = { x = 3 y = 0 }
+                }
+                support = {
+                    YZ_engineer = { x = 0 y = 0 }
+                    field_hospital = { x = 0 y = 2 }
+                    light_tank_recon = { x = 0 y = 1 }
+                    YZ_0721_detonator_company = { x = 0 y = 3 }
+                    signal_company = { x = 0 y = 4 }
+                }
+            }
+            random_owned_controlled_state = {
+                limit = { ROOT = { has_full_control_of_state = PREV } }
+                create_unit = {
+                    division = "name = \"柚子厨0721近卫军\" division_template = \"柚子厨0721近卫军\" start_experience_factor = 0.9"
+                    owner = FROM
+                    count = 3
+                }
+                create_unit = {
+                    division = "name = \"柚子厨0721现代机械化近卫军\" division_template = \"柚子厨0721现代机械化近卫军\" start_experience_factor = 0.9"
+                    owner = FROM
+                    count = 3
+                }
+                create_unit = {
+                    division = "name = \"柚子厨0721机械化近卫军\" division_template = \"柚子厨0721机械化近卫军\" start_experience_factor = 0.9"
+                    owner = FROM
+                    count = 3
+                }
+            }
+
+        }
+    }
+
+    Vampires_Special_Preparation = {		#吸血鬼的特殊准备
+        icon = GFX_tianyin3
+        priority = 10000
+        cost = 0
+        days_remove = 0
+        fire_only_once = yes
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = have_weizi
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            has_war = yes
+        }
+
+        complete_effect = {
+            set_country_flag = vampire_prepared
+            set_country_flag = tianyin_fighting
+            add_timed_idea = {
+                idea = yz_amane1
+                days = 180
+            }
+            hidden_effect = {
+                country_event = { id = sairi_event.102 days = 180 }
+                country_event = sairi_event.9
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Amane_advisor
+                        name = "谷风天音"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Amane.png"
+                                small = "gfx\leader\Amane2.png"
+                            }
+                        }
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {
+                            slot = political_advisor
+                            cost = 0
+                            idea_token = Amane_advisor
+                            traits = { trait_sub_Amane }
+                        }
+                    }
+                }
+            }
+            custom_effect_tooltip = remove_amane_advisor
+        }
+    }
+
+    Amane_get_weizi_skill = {		#天音继承前世技能
+        icon = GFX_tianyin
+        priority = 10000
+        cost = 0
+        days_remove = 0
+        visible = {
+            has_country_flag = vampire_prepared
+            has_country_flag = amane_line
+            has_country_flag = have_amane
+            not = { has_country_flag = yz_bad_end }
+        }
+        fire_only_once = yes
+
+        complete_effect = {
+            random_army_leader = {
+                limit = {
+                    or = {
+                        has_trait = yz_amane_trait_1
+                        has_trait = yz_amane_trait_2
+                    }
+                }
+                add_attack = 2
                 add_defense = 2
                 add_planning = 2
                 add_logistics = 2
                 add_skill_level = 2
-				
-			}
-		}
-	}
-
-	Amane_Special_Wedding = {		#独属于你与她的婚礼
-		icon = GFX_tianyin2
-		priority = 10000
-		cost = 0
-		days_remove = 0
-		fire_only_once = yes
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = amane_special_wedding
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			hidden_trigger = {
-				any_unit_leader = {
-					and = {
-						has_trait = yz_amane_trait_1
-						skill > 4
-					}	
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = amane_skill_more_than_four
-			}
-		}
-
-		complete_effect = {
-			country_event = tongyong_event.26
-		}
-	}
-
-	### 来海 ###
-	wake_up_to_past_lives = {	#唤醒前世形态
-		icon = GFX_laihai
-		priority = 10000
-		custom_cost_trigger = {
-			check_variable = {
-				var = command_power
-				value = 35
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = decision_cost_CP_35
-		days_remove = 120
-
-		visible = {
-			has_country_flag = kurumi_line
-			not = { has_country_flag = yz_bad_end }
-		}
-		complete_effect = {
-			add_to_variable = {
-				krm_wake_up_to_past_lives = 1
-			}
-			random_army_leader = {
-				limit = {
-					or = {
-						has_trait = yz_kurumi_trait0
-						has_trait = yz_kurumi_trait01
-					}
-				}
-				add_timed_unit_leader_trait = {
-					trait = yz_kurumi_trait_1
-					days = 120
-				}
-			}
-		}
-	}
-	kurumi_learn_theory = {		#给来海酱学习兵法
-		icon = GFX_laihai
-		priority = 10000
-		custom_cost_trigger = {
-			check_variable = {
-				var = army_experience
-				value = 50
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = decision_cost_50_army_xp
-		days_remove = 60
-		fire_only_once = yes
-		visible = {
-			has_country_flag = kurumi_line
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			or = {
-				has_tech = mobile_warfare
-				has_tech = superior_firepower
-				has_tech = trench_warfare
-				has_tech = mass_assault 
-			}
-		}
-		remove_effect = {
-			set_country_flag = kurumi_learned_theory
-			random_army_leader = {
-				limit = {
-					or = {
-						has_trait = yz_kurumi_trait0
-					}
-				}
-				remove_unit_leader_trait = yz_kurumi_trait0
-				add_unit_leader_trait = yz_kurumi_trait01
-			}
-		}
-	}
-	kurumi_research_past_lives = {	#陪来海去异世界探查来海前世的秘密
-		icon = GFX_laihai
-		priority = 10000
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = kurumi_learned_theory
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = {
-				krm_wake_up_to_past_lives > 1
-				tooltip = krm_wake_up_to_past_lives_tt
-			}
-		}
-		remove_effect = {
-			set_country_flag = kurumi_learned_theory
-			random_army_leader = {
-				limit = {
-					or = {
-						has_trait = yz_kurumi_trait0
-					}
-				}
-				add_unit_leader_trait = yz_kurumi_trait01
-			}
-			country_event = sairi_event.12
-		}
-	}
-
-	### 白鹿爱莉 ###
-	Airi_Crystal_Support_Company = {
-		icon = GFX_airi
-		fire_only_once = yes
-		custom_cost_trigger = {
-			check_variable = {
-				var = command_power
-				value = 50
-				compare = greater_than_or_equals
-			}
-			check_variable = {
-				var = yz_money
-				value = 750
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = decision_cost_CP50_and_750_yzmoney
-		days_remove = 15
-		visible = {
-			has_country_flag = Airi_Crystal_Support_Company
-			not = { has_country_flag = yz_bad_end }
-		}
-		modifier = {
-			consumer_goods_factor = 0.05
-			research_speed_factor = -0.1
-	   	}
-		available = { 
-			has_country_flag = set_YRI
-			has_country_flag = yz_mio_1
-			has_tech = improved_computing_machine
-			has_tech = tech_signal_company
-		}
-
-		complete_effect = {
-			add_command_power = -50
-			add_to_variable = {
-				yz_money = -750
-				tooltip = yz_money_tooltip_subtain
-			}
-		}
-
-		remove_effect = {
-			country_event = airi_event.4
-			
-		}
-	}
-	
-
-	
-	##乃爱相关
-	noa_ice_cream = {
-		icon = GFX_noa
-		cost = 5
-		days_remove = 1
-		days_re_enable = 30
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				or = {	
-				has_idea = noa_love_level_2
-				has_idea = noa_love_level_3
-				has_idea = noa_love_level_4
-				}
-				not = {
-					has_country_flag = bad_end
-					has_country_flag = yz_bad_end
-				}
-				has_country_flag = allow_noa
-			}
-			
-		}
-
-		remove_effect = {
-			noa_love_up = yes
-		}
-		
-	}
-    
-	noa_panzer_leader = {		###获得装甲指挥官
-		icon = GFX_noa
-		cost = 15
-		days_remove = 90
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				or = {
-					has_idea = noa_love_level_3
-					has_idea = noa_love_level_4
-				}
-				not = {
-					has_country_flag = bad_end
-					has_country_flag = yz_bad_end
-				}
-				has_country_flag = allow_noa
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_noa_trait
-				}
-				add_unit_leader_trait = panzer_leader  
-			}
-		}
-	}		
-
-	noa_adaptable = {		###战场适应训练
-		icon = GFX_noa
-		cost = 30
-		days_remove = 90
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				or = {
-					has_idea = noa_love_level_3
-					has_idea = noa_love_level_4
-				}
-				not = {
-					has_country_flag = bad_end
-					has_country_flag = yz_bad_end
-				}
-				has_country_flag = allow_noa
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_noa_trait
-				}
-				add_unit_leader_trait = adaptable  
-			}
-
-		}
-	}
-
-	noa_cooking = {		###学习做饭
-		icon = GFX_noa
-		cost = 5
-		days_remove = 90
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				or = {
-					has_idea = noa_love_level_3
-					has_idea = noa_love_level_4
-				}
-				not = {
-					has_country_flag = bad_end
-					has_country_flag = yz_bad_end
-				}
-				has_country_flag = allow_noa
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_noa_trait
-				}
-				add_logistics = 2  
-			}
-		}
-	}
-
-	noa_boom = {		###从宁宁学姐那里学习起爆器技术
-		icon = GFX_noa
-		cost = 10
-		days_remove = 3
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = have_noa
-				or = {
-					or = {
-						check_variable = { love_depth > 30 }
-						}
-					or = {
-						has_idea = noa_love_level_2
-						has_idea = noa_love_level_3
-						has_idea = noa_love_level_4
-					}	
-				}
-				has_country_flag = have_ningning  
-				not = {
-					has_country_flag = bad_end
-					has_country_flag = yz_bad_end
-				}
-			}
-		}
-
-		complete_effect = {
-			country_event = { id = noa_event.10 days = 3 }
-		}
-	}
-
-	kanna_cooking = {		###栞那做饼
-		icon = GFX_kanna
-		cost = 10
-		days_remove = 3
-		days_re_enable = 15000
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = have_kanna
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-			not = { has_country_flag = already_cooked }
-		}
-		complete_effect = {
-			set_country_flag = already_cooked
-		}
-		remove_effect = {
-			
-			random_list = {
-			75 = { country_event = { id = LY_event.101  } }
-			25 = { country_event = { id = LY_event.102  } }
-		}
-		}
-	}
-
-	zaozi_cooking = {		###枣子姐做饼
-		icon = GFX_zaozi
-		cost = 10
-		days_remove = 3
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = have_zaozi
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = already_cooked }
-			}
-		}
-		complete_effect = {
-			set_country_flag = already_cooked
-		}
-		remove_effect = {
-			random_list = {
-			95 = { country_event = { id = LY_event.101  } }
-			5 = { country_event = { id = LY_event.102  } }
-		}
-		}
-	}
-
-	coms_cooking = {		###石墨烯做饼
-		icon = GFX_coms
-		cost = 10
-		days_remove = 3
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = have_nozomi
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-			not = { has_country_flag = already_cooked }
-		}
-		complete_effect = {
-			set_country_flag = already_cooked
-		}
-		remove_effect = {
-			random_list = {
-			50 = { country_event = { id = LY_event.101  } }
-			50 = { country_event = { id = LY_event.102  } }
-		}
-		}
-	}
-
-	coms_studying = {		###石墨烯学习巫女
-		icon = GFX_coms
-		cost = 5
-		days_remove = 30
-		fire_only_once = yes
-
-		visible = {
-			and = {
-				has_country_flag = have_nozomi
-				has_country_flag = qiyong_youzi_2
-				check_variable = { 
-					love_depth > 80
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			has_country_flag = have_yoshino
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_nozomi_trait
-				}
-				remove_unit_leader_trait = maid_nozomi_trait
-				add_unit_leader_trait = maid_nozomi_trait_1
-			}
-		}
-	}
-
-	suzune_making_cake_1 = {		###做蛋糕
-		icon = GFX_liangyin
-		cost = 50
-		days_remove = 14
-		days_re_enable = 150
-
-		visible = {
-			and = {
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = have_suzune
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		remove_effect = {
-			random_list = {
-				16 = { country_event = { id = LY_event.103 } }
-				16 = { country_event = { id = LY_event.104 } }
-				16 = { country_event = { id = LY_event.105 } }
-				16 = { country_event = { id = LY_event.106 } }
-				16 = { country_event = { id = LY_event.107 } }
-				16 = { country_event = { id = LY_event.108 } }
-				4 = { country_event = { id = LY_event.109 } }
-			}
-		}
-
-	}
-	
-	
-	#茅羽耶相关
-	qiyuan_1 = {
-		icon = GFX_maoyuye
-		cost = 0
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = have_chihaya
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			check_variable = { 
-				love_depth > 0
-				tooltip = love_depth_tooltip_compare
-			}
-			any_unit_leader = {
-				and = {
-					has_trait = maid_chihaya_trait_1
-					skill > 0
-				}	
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_chihaya_trait_1
-				}
-				remove_unit_leader_trait = maid_chihaya_trait_1
-				add_unit_leader_trait = maid_chihaya_trait_2
-				add_skill_level = -100
-			}
-			set_country_flag = qiyuan_1
-		}
-	}
-
-	qiyuan_2 = {
-		icon = GFX_maoyuye
-		cost = 0
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = have_chihaya
-			has_country_flag = qiyuan_1
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = { 
-				love_depth > 30
-				tooltip = love_depth_tooltip_compare
-			}
-			any_unit_leader = {
-				and = {
-					has_trait = maid_chihaya_trait_2
-					skill > 1
-				}	
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_chihaya_trait_2
-				}
-				remove_unit_leader_trait = maid_chihaya_trait_2
-				add_unit_leader_trait = maid_chihaya_trait_3
-				add_skill_level = -100	
-			}
-			set_country_flag = qiyuan_2
-		}
-	}
-
-	qiyuan_3 = {
-		icon = GFX_maoyuye
-		cost = 0
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = have_chihaya
-			has_country_flag = qiyuan_2
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = { 
-				love_depth > 50
-				tooltip = love_depth_tooltip_compare
-			}
-			any_unit_leader = {
-				and = {
-					has_trait = maid_chihaya_trait_3
-					skill > 1
-				}	
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_chihaya_trait_3
-				}
-				remove_unit_leader_trait = maid_chihaya_trait_3
-				add_unit_leader_trait = maid_chihaya_trait_4
-				add_skill_level = -100
-			}
-			set_country_flag = qiyuan_3
-		}
-	}
-
-	qiyuan_4 = {
-		icon = GFX_maoyuye
-		cost = 0
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = have_chihaya
-			has_country_flag = qiyuan_3
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = { 
-				love_depth > 80
-				tooltip = love_depth_tooltip_compare
-			}
-			any_unit_leader = {
-				and = {
-					has_trait = maid_chihaya_trait_4
-					skill > 2
-				}	
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_chihaya_trait_4
-				}
-				remove_unit_leader_trait = maid_chihaya_trait_4
-				add_unit_leader_trait = maid_chihaya_trait_5
-				add_skill_level = -100
-			}
-			set_country_flag = qiyuan_4
-		}
-	}
-
-	qiyuan_5 = {
-		icon = GFX_maoyuye
-		cost = 0
-		days_remove = 3
-		fire_only_once = yes
-		visible = {
-			has_country_flag = have_chihaya
-			has_country_flag = qiyuan_4
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			check_variable = { 
-				love_depth > 100
-				tooltip = love_depth_tooltip_compare
-			}
-			any_unit_leader = {
-				and = {
-					has_trait = maid_chihaya_trait_5
-					skill > 3
-				}	
-			}
-		}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_chihaya_trait_5
-				}
-				remove_unit_leader_trait = maid_chihaya_trait_5
-				add_unit_leader_trait = maid_chihaya_trait
-				add_attack = 3
-				add_defense = 3
-				add_logistics = 3
-				add_planning = 3
-			}
-			set_country_flag = chihaya_love
-		}
-	}
-
-	gongxiangmingyun = {	#莉音任务
-		icon = GFX_liyin
-		cost = 0
-		days_remove = 0
-		fire_only_once = yes
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = have_rio
-			has_war = yes
-			not = { has_country_flag = yz_bad_end }
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		remove_effect = {
-			set_country_flag = gongxiangmingyun
-		}
-	}
-
-	xunfumingyun = {   
-		icon = GFX_liyin  
-		activation = {                         
-			has_country_flag = gongxiangmingyun
-			has_war = yes
-		}                                    
-		available = {                           
-			any_enemy_country = {
-				surrender_progress > 0.6
-			}
-			check_variable = { 
-				love_depth > 50
-				tooltip = love_depth_tooltip_compare
-			}
-		}
-		is_good = no                      
-
-		days_mission_timeout = 180
-		timeout_effect = {           
-			clr_country_flag = gongxiangmingyun              
-			random_army_leader = {
-				limit = {
-					has_trait = maid_rio_trait_1 
-				}
-				remove_unit_leader_trait = maid_rio_trait_1 
-				add_unit_leader_trait = maid_rio_trait_2 
-				add_skill_level = -10   
-				add_logistics = -10
-				add_planning = -10
-				add_defense = -10
-				add_attack = -10
-			}
-		}
-		complete_effect = {   
-			clr_country_flag = gongxiangmingyun                 
-			random_army_leader = {
-				limit = {
-					has_trait = maid_rio_trait_1 
-				}
-				add_unit_leader_trait = adaptable  
-				remove_unit_leader_trait = trait_maid_vampires
-				add_unit_leader_trait = panzer_leader  
-
-				add_attack = 1
-				add_logistics = 3
-				add_planning = 2
-				add_defense = 3
-			}  
-			set_country_flag = finished_liyin   
-			random_army_leader = {
-				limit = {
-					has_trait = maid_rio_trait_1
-				}
-				remove_unit_leader_trait = maid_rio_trait_1
-			} 
-			meta_effect = {
-				text = {
-				generate_character = {
-					token_base = Rio_advisor
-					name = "稻丛莉音"
-					gender = female
-					nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Rio.png"
-                            small = "gfx\leader\Rio2.png"
-						 }
-					 }
-					 allowed_civil_war = {
-						is_ai = no
-					 }
-					 advisor = {  
-						slot = political_advisor
-						cost = 25
-						idea_token = Rio_advisor
-						traits = { trait_sub_rio }
-					 }
-				   }
-				}
-			}   
-		}
-	}
-	masaki_supply_construction_preparing = {		###哇呼开连锁店的准备工作
-		icon = GFX_masaki
-		#cost = 10
-		days_remove = 25 #正式版需要改成25
-		
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			and = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_prepared }
-			}
-		}
-		
-		available = {
-				industrial_complex > 9
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-				check_variable = {
-					yz_money > 500
-					tooltip = yz_money_tooltip_compare
-				}
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_prepared }
-		}
-		modifier = {
-			consumer_goods_factor = 0.1
-			civilian_factory_use = 10
-	   	}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-		}
-
-		remove_effect = {
-			set_country_flag = masaki_prepared
-			tooltip = masaki_can_build_supply_nodes
-		}
-		remove_trigger = {
-			is_debug = yes
-		}
-	}
-	masaki_supply_activating_c = {		###启动哇呼开连锁店任务
-		icon = GFX_masaki
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			and = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-			}
-			OR = {
-				has_government = communism
-				has_government = neutrality
-			}
-		}
-		available = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-				check_variable = {
-					yz_money > 500
-					tooltip = yz_money_tooltip_compare
-				}
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-			set_country_flag = masaki_activating
-			add_ideas = masaki_supply_node_construction
-			set_variable = { masaki_node_goal = num_of_supply_nodes }
-			add_to_variable = { masaki_node_goal = 0.5 }
-		}
-
-	}
-	masaki_supply_activating_d = {		###启动哇呼开连锁店任务
-		icon = GFX_masaki
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			and = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-			}
-				has_government = democratic
-		}
-		available = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-				check_variable = {
-					yz_money > 500
-					tooltip = yz_money_tooltip_compare
-				}
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-			set_country_flag = masaki_activating
-			add_ideas = masaki_supply_node_construction
-			set_variable = { masaki_node_goal = num_of_supply_nodes }
-			add_to_variable = { masaki_node_goal = 0.5 }
-		}
-
-	}
-	masaki_supply_activating_f = {		###启动哇呼开连锁店任务
-		icon = GFX_masaki
-		custom_cost_trigger = {
-			check_variable = {
-				var = yz_money
-				value = 500
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = YM_500
-		visible = {
-			and = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-			}
-				has_government = fascism
-		}
-		available = {
-				has_country_flag = have_masaki
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = masaki_prepared
-				not = { has_country_flag = yz_bad_end }
-				not = { has_country_flag = masaki_activating }
-				check_variable = {
-					yz_money > 500
-					tooltip = yz_money_tooltip_compare
-				}
-		}
-		complete_effect = {
-			add_to_variable = { yz_money = -500 }
-			set_country_flag = masaki_activating
-			add_ideas = masaki_supply_node_construction
-			set_variable = { masaki_node_goal = num_of_supply_nodes }
-			add_to_variable = { masaki_node_goal = 0.5 }
-		}
-
-	}
-	masaki_supply_construction = {		###哇呼开连锁店任务
-		icon = GFX_masaki
-		#cost = 10
-		days_mission_timeout = 50
-		#fire_only_once = yes
-		is_good = no                       
-
-		activation = {                         
-				not = { has_country_flag = yz_bad_end }
-				has_country_flag = masaki_activating
-		}        
-		available = {
-			 check_variable = { masaki_node_goal < num_of_supply_nodes } #if the number of supply nodes exceeds the old number, immediately cancel
-		}
-
-		complete_effect = {
-			#add_to_variable = { yz_money = 700 } #连锁店盈利了
-			#add_research_slot = 10 #测试效果
-			#add_to_variable = { monly_YZ_masaki_money_visible = 250}
-			set_country_flag = masaki_done
-			clr_country_flag = masaki_activating
-			clr_country_flag = masaki_prepared
-			remove_ideas = masaki_supply_node_construction
-			country_event = { id = masaki_event.1 }
-		}
-		remove_effect = {
-			clr_country_flag = masaki_activating
-			clr_country_flag = masaki_prepared
-			remove_ideas = masaki_supply_node_construction
-
-		}
-	}
-	#彩里事件
-	sairi_1 = {
-		priority = 97
-		icon = GFX_caili
-		fire_only_once = yes
-		visible = { 
-			has_country_flag = qiyong_youzi_2
-			or = {
-				has_country_flag = have_noa 
-			}
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		complete_effect = {
-			country_event = { id = sairi_event.2 }
-		}
-	}
-	#柚子工程队
-	YZ_engineer_get = {
-		priority = 98
-		fire_only_once = yes
-		cost = 0
-		days_remove = 14
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-			research_speed_factor = -0.1
-	   	}
-
-		available = { 
-			has_tech = tech_engineers2
-			command_power > 29.99
-			has_army_experience > 44.99
-			industrial_complex > 10
-		}
-
-		complete_effect = {
-			add_command_power = -30
-			army_experience = -45
-		}
-
-		remove_effect = {
-			set_technology = {
-				tech_YZ_engineer = 1
-			}
-		}
-	}
-
-
-
-	YZ_MIO_1_get = {		#柚子步兵武器制造局
-		priority = 99
-		fire_only_once = yes
-		cost = 30
-		days_remove = 25
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_mio_1 }
-			not = { has_country_flag = yz_bad_end }
-			has_army_experience > 14.99
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.2
-	   	}
-
-		available = { 
-			command_power > 9.99
-			has_army_experience > 14.99
-			industrial_complex > 19
-		}
-
-		complete_effect = {
-			add_command_power = -10
-			army_experience = -15
-		}
-
-		remove_effect = {
-			set_country_flag = youzi_MIO_1
-			hidden_effect = {
-			country_event = start_event.2
-			set_country_flag = yz_mio_1
-			}
-		}
-	}
-	
-	YZ_MIO_3_get = {		#柚子海军制造总局
-		priority = 99
-		fire_only_once = yes
-		cost = 30
-		days_remove = 25
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_mio_2 }
-			not = { has_country_flag = yz_bad_end }
-			has_navy_experience > 14.99
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-	   	}
-
-		available = { 
-			command_power > 9.99
-			has_navy_experience > 14.99
-			industrial_complex > 19
-		}
-
-		complete_effect = {
-			add_command_power = -10
-			navy_experience = -15
-		}
-
-		remove_effect = {
-			set_country_flag = youzi_MIO_2
-			hidden_effect = {
-			country_event = start_event.2
-			set_country_flag = yz_mio_2
-			}
-		}
-	}
-	
-	YZ_MIO_5_get = {		#柚子海军制造总局
-		priority = 99
-		fire_only_once = yes
-		cost = 30
-		days_remove = 25
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_mio_3 }
-			not = { has_country_flag = yz_bad_end }
-			has_navy_experience > 14.99
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-	   	}
-
-		available = { 
-			command_power > 9.99
-			has_navy_experience > 14.99
-			industrial_complex > 19
-		}
-
-		complete_effect = {
-			add_command_power = -10
-			navy_experience = -15
-		}
-
-		remove_effect = {
-			set_country_flag = youzi_MIO_3
-			hidden_effect = {
-			country_event = start_event.2
-			set_country_flag = yz_mio_3
-			}
-		}
-	}
-	
-	YZ_MIO_7_get = {		#柚子空军制造总局
-		priority = 99
-		fire_only_once = yes
-		cost = 30
-		days_remove = 25
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_mio_4 }
-			not = { has_country_flag = yz_bad_end }
-			has_air_experience > 14.99
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-	   	}
-
-		available = { 
-			command_power > 9.99
-			has_air_experience > 14.99
-			industrial_complex > 19
-		}
-
-		complete_effect = {
-			add_command_power = -10
-			air_experience = -15
-		}
-
-		remove_effect = {
-			set_country_flag = youzi_MIO_4
-			hidden_effect = {
-			country_event = start_event.2
-			set_country_flag = yz_mio_4
-			}
-		}
-	}
-	
-	YZ_MIO_9_get = {		#柚子装甲生产设计中心
-		priority = 99
-		fire_only_once = yes
-		cost = 30
-		days_remove = 25
-
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_mio_5 }
-			not = { has_country_flag = yz_bad_end }
-			has_army_experience > 14.99
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-	   	}
-
-		available = { 
-			command_power > 9.99
-			has_army_experience > 14.99
-			industrial_complex > 19
-		}
-
-		complete_effect = {
-			add_command_power = -10
-			army_experience = -15
-		}
-
-		remove_effect = {
-			set_country_flag = youzi_MIO_5
-			hidden_effect = {
-			country_event = start_event.2
-			set_country_flag = yz_mio_5
-			}
-		}
-	}
-	
-	
-	
-	murasame_parfait = {		#给小丛雨吃芭菲
-		icon = GFX_congyu
-		days_remove = 45
-		cost = 20
-		custom_cost_trigger = {
-			check_variable = {
-				var = love_depth
-				value = 30
-				compare = greater_than_or_equals
-			}
-		}
-		custom_cost_text = LD_30
-		days_re_enable = 180
-		
-		visible = { 
-			has_country_flag = have_murasame
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-
-		available = {
-			command_power > 29.99
-			industrial_complex > 3
-			or = {
-				check_variable = { 
-					love_depth > 30 
-					tooltip = love_depth_tooltip_compare
-				}
-			}
-		}
-
-		complete_effect = {
-			add_to_variable = {
-				love_depth = 15
-				tooltip = love_depth_tooltip
-			}
-			clamp_variable = {		#范围
-					var = love_depth
-					min = -100
-					max = 200
-				}
-			add_command_power = -30
-			random_army_leader = {
-				limit = {
-					has_trait = maid_congyu_trait
-				}
-				add_unit_leader_trait = maid_congyu_trait_1
-			}
-			meta_effect = {
-           		text = {
-                	generate_character = {
-                    	token_base = Murasame_advisor
-                    	name = "丛雨酱"
-                    	gender = female
-                    	nationality = JAP
-                    	portraits = {
-                        	civilian = {
-                            	large = "gfx\leader\Murasame.png"
-                            	small = "gfx\leader\Murasame2.png"
-                        	}
-                    	}
-                    	allowed_civil_war = {
-                        	is_ai = no
-                    	}
-						advisor = {  
-							slot = political_advisor
-							cost = 125
-							idea_token = Murasame_advisor
-							traits = { trait_sub_murasame }
-							ai_will_do = {
-								factor = 0
-							}
-						}
-              		}
-           		}
-       		}
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.25
-			civilian_factory_use = 4
-	   	}
-
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					has_trait = maid_congyu_trait
-				}
-				remove_unit_leader_trait = maid_congyu_trait_1
-			}
-		}
-	}
-
-	sana_birthday = {
-		icon = GFX_zuonai
-		days_remove = 200
-		visible = { 
-			has_country_flag = have_sana
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = yz_bad_end }
-		}
-		available = {
-			OR = {
-				check_variable = { 
-					date_counter = 158
-				}
-				has_country_flag = debug_love_sana_everyday
-			}
-		}
-		modifier = {
-			consumer_goods_factor = -0.05
-			industrial_capacity_factory = 0.05
-			industrial_capacity_dockyard = 0.05
-			production_speed_buildings_factor = 0.1
-			political_power_gain = 0.1
-			political_power_gain_factor = 0.05
-		
-		}
-		complete_effect = {
-			hidden_effect = {
+
+            }
+        }
+    }
+
+    Amane_Special_Wedding = {		#独属于你与她的婚礼
+        icon = GFX_tianyin2
+        priority = 10000
+        cost = 0
+        days_remove = 0
+        fire_only_once = yes
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = amane_special_wedding
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            hidden_trigger = {
+                any_unit_leader = {
+                    and = {
+                        has_trait = yz_amane_trait_1
+                        skill > 4
+                    }
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = amane_skill_more_than_four
+            }
+        }
+
+        complete_effect = {
+            country_event = tongyong_event.26
+        }
+    }
+
+    ### 来海 ###
+    wake_up_to_past_lives = {	#唤醒前世形态
+        icon = GFX_laihai
+        priority = 10000
+        custom_cost_trigger = {
+            check_variable = {
+                var = command_power
+                value = 35
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = decision_cost_CP_35
+        days_remove = 120
+
+        visible = {
+            has_country_flag = kurumi_line
+            not = { has_country_flag = yz_bad_end }
+        }
+        complete_effect = {
+            add_to_variable = {
+                krm_wake_up_to_past_lives = 1
+            }
+            random_army_leader = {
+                limit = {
+                    or = {
+                        has_trait = yz_kurumi_trait0
+                        has_trait = yz_kurumi_trait01
+                    }
+                }
+                add_timed_unit_leader_trait = {
+                    trait = yz_kurumi_trait_1
+                    days = 120
+                }
+            }
+        }
+    }
+    kurumi_learn_theory = {		#给来海酱学习兵法
+        icon = GFX_laihai
+        priority = 10000
+        custom_cost_trigger = {
+            check_variable = {
+                var = army_experience
+                value = 50
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = decision_cost_50_army_xp
+        days_remove = 60
+        fire_only_once = yes
+        visible = {
+            has_country_flag = kurumi_line
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            #or = {
+            #	has_tech = mobile_warfare
+            #	has_tech = overwhelming_firepower
+            #	has_tech = grand_battle_plan
+            #	has_tech = mass_assault
+            #}
+            #hidden_trigger = {
+            any_army_leader = {
+                has_trait = yz_kurumi_trait0
+                skill > 3
+                #}
+            }
+            custom_trigger_tooltip = {
+                tooltip = kurumi_level_higher_than_3
+            }
+        }
+        remove_effect = {
+            set_country_flag = kurumi_learned_theory
+            random_army_leader = {
+                limit = {
+                    or = {
+                        has_trait = yz_kurumi_trait0
+                    }
+                }
+                remove_unit_leader_trait = yz_kurumi_trait0
+                add_unit_leader_trait = yz_kurumi_trait01
+            }
+        }
+    }
+    kurumi_research_past_lives = {	#陪来海去异世界探查来海前世的秘密
+        icon = GFX_laihai
+        priority = 10000
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            has_country_flag = kurumi_learned_theory
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                krm_wake_up_to_past_lives > 1
+                tooltip = krm_wake_up_to_past_lives_tt
+            }
+        }
+        remove_effect = {
+            set_country_flag = kurumi_learned_theory
+            random_army_leader = {
+                limit = {
+                    or = {
+                        has_trait = yz_kurumi_trait0
+                    }
+                }
+                add_unit_leader_trait = yz_kurumi_trait01
+            }
+            country_event = sairi_event.12
+        }
+    }
+
+    ### 白鹿爱莉 ###
+    Airi_Crystal_Support_Company = {
+        icon = GFX_airi
+        fire_only_once = yes
+        custom_cost_trigger = {
+            check_variable = {
+                var = command_power
+                value = 50
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = yz_money
+                value = 750
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = decision_cost_CP50_and_750_yzmoney
+        days_remove = 15
+        visible = {
+            has_country_flag = Airi_Crystal_Support_Company
+            not = { has_country_flag = yz_bad_end }
+        }
+        modifier = {
+            consumer_goods_factor = 0.05
+            research_speed_factor = -0.1
+        }
+        available = {
+            has_country_flag = set_YRI
+            has_country_flag = yz_mio_1
+            has_tech = improved_computing_machine
+            has_tech = tech_signal_company
+        }
+
+        complete_effect = {
+            add_command_power = -50
+            add_to_variable = {
+                yz_money = -750
+                tooltip = yz_money_tooltip_subtain
+            }
+        }
+
+        remove_effect = {
+            country_event = airi_event.4
+
+        }
+    }
+
+
+
+    ##乃爱相关
+    noa_ice_cream = {
+        icon = GFX_noa
+        cost = 5
+        days_remove = 1
+        days_re_enable = 30
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                or = {
+                    has_idea = noa_love_level_2
+                    has_idea = noa_love_level_3
+                    has_idea = noa_love_level_4
+                }
+                not = {
+                    has_country_flag = bad_end
+                    has_country_flag = yz_bad_end
+                }
+                has_country_flag = allow_noa
+            }
+
+        }
+
+        remove_effect = {
+            noa_love_up = yes
+        }
+
+    }
+
+    noa_panzer_leader = {		###获得装甲指挥官
+        icon = GFX_noa
+        cost = 15
+        days_remove = 90
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                or = {
+                    has_idea = noa_love_level_3
+                    has_idea = noa_love_level_4
+                }
+                not = {
+                    has_country_flag = bad_end
+                    has_country_flag = yz_bad_end
+                }
+                has_country_flag = allow_noa
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_noa_trait
+                }
+                add_unit_leader_trait = panzer_leader
+            }
+        }
+    }
+
+    noa_adaptable = {		###战场适应训练
+        icon = GFX_noa
+        cost = 30
+        days_remove = 90
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                or = {
+                    has_idea = noa_love_level_3
+                    has_idea = noa_love_level_4
+                }
+                not = {
+                    has_country_flag = bad_end
+                    has_country_flag = yz_bad_end
+                }
+                has_country_flag = allow_noa
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_noa_trait
+                }
+                add_unit_leader_trait = adaptable
+            }
+
+        }
+    }
+
+    noa_cooking = {		###学习做饭
+        icon = GFX_noa
+        cost = 5
+        days_remove = 90
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                or = {
+                    has_idea = noa_love_level_3
+                    has_idea = noa_love_level_4
+                }
+                not = {
+                    has_country_flag = bad_end
+                    has_country_flag = yz_bad_end
+                }
+                has_country_flag = allow_noa
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_noa_trait
+                }
+                add_logistics = 2
+            }
+        }
+    }
+
+    noa_boom = {		###从宁宁学姐那里学习起爆器技术
+        icon = GFX_noa
+        cost = 10
+        days_remove = 3
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                has_country_flag = have_noa
+                or = {
+                    or = {
+                        check_variable = { love_depth > 30 }
+                    }
+                    or = {
+                        has_idea = noa_love_level_2
+                        has_idea = noa_love_level_3
+                        has_idea = noa_love_level_4
+                    }
+                }
+                has_country_flag = have_ningning
+                not = {
+                    has_country_flag = bad_end
+                    has_country_flag = yz_bad_end
+                }
+            }
+        }
+
+        complete_effect = {
+            country_event = { id = noa_event.10 days = 3 }
+        }
+    }
+
+    kanna_cooking = {		###栞那做饼
+        icon = GFX_kanna
+        cost = 10
+        days_remove = 3
+        days_re_enable = 15000
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                has_country_flag = have_kanna
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = already_cooked }
+        }
+        complete_effect = {
+            set_country_flag = already_cooked
+        }
+        remove_effect = {
+
+            random_list = {
+                75 = { country_event = { id = LY_event.101  } }
+                25 = { country_event = { id = LY_event.102  } }
+            }
+        }
+    }
+
+    zaozi_cooking = {		###枣子姐做饼
+        icon = GFX_zaozi
+        cost = 10
+        days_remove = 3
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_zaozi
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = already_cooked }
+            }
+        }
+        complete_effect = {
+            set_country_flag = already_cooked
+        }
+        remove_effect = {
+            random_list = {
+                95 = { country_event = { id = LY_event.101  } }
+                5 = { country_event = { id = LY_event.102  } }
+            }
+        }
+    }
+
+    coms_cooking = {		###石墨烯做饼
+        icon = GFX_coms
+        cost = 10
+        days_remove = 3
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_nozomi
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = already_cooked }
+        }
+        complete_effect = {
+            set_country_flag = already_cooked
+        }
+        remove_effect = {
+            random_list = {
+                50 = { country_event = { id = LY_event.101  } }
+                50 = { country_event = { id = LY_event.102  } }
+            }
+        }
+    }
+
+    coms_studying = {		###石墨烯学习巫女
+        icon = GFX_coms
+        cost = 5
+        days_remove = 30
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_nozomi
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                check_variable = {
+                    love_depth > 80
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            has_country_flag = have_yoshino
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_nozomi_trait
+                }
+                remove_unit_leader_trait = maid_nozomi_trait
+                add_unit_leader_trait = maid_nozomi_trait_1
+            }
+        }
+    }
+
+    mei_cooking = {		###爱衣做饼
+        icon = GFX_mei
+        cost = 10
+        days_remove = 3
+        fire_only_once = yes
+
+        visible = {
+            and = {
+                has_country_flag = have_mei
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = already_cooked }
+            }
+        }
+        complete_effect = {
+            set_country_flag = already_cooked
+        }
+        remove_effect = {
+            random_list = {
+                75 = { country_event = { id = LY_event.101  } }
+                25 = { country_event = { id = LY_event.102  } }
+            }
+        }
+    }
+
+    suzune_making_cake_1 = {		###做蛋糕
+        icon = GFX_liangyin
+        cost = 50
+        days_remove = 14
+        days_re_enable = 150
+
+        visible = {
+            and = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                has_country_flag = have_suzune
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        remove_effect = {
+            random_list = {
+                16 = { country_event = { id = LY_event.103 } }
+                16 = { country_event = { id = LY_event.104 } }
+                16 = { country_event = { id = LY_event.105 } }
+                16 = { country_event = { id = LY_event.106 } }
+                16 = { country_event = { id = LY_event.107 } }
+                16 = { country_event = { id = LY_event.108 } }
+                4 = { country_event = { id = LY_event.109 } }
+            }
+        }
+
+    }
+
+
+    #茅羽耶相关
+    qiyuan_1 = {
+        icon = GFX_maoyuye
+        cost = 0
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = have_chihaya
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            check_variable = {
+                love_depth > 0
+                tooltip = love_depth_tooltip_compare
+            }
+            any_unit_leader = {
+                and = {
+                    has_trait = maid_chihaya_trait_1
+                    skill > 0
+                }
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_chihaya_trait_1
+                }
+                remove_unit_leader_trait = maid_chihaya_trait_1
+                add_unit_leader_trait = maid_chihaya_trait_2
+                add_skill_level = -100
+            }
+            set_country_flag = qiyuan_1
+        }
+    }
+
+    qiyuan_2 = {
+        icon = GFX_maoyuye
+        cost = 0
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            has_country_flag = have_chihaya
+            has_country_flag = qiyuan_1
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+            any_unit_leader = {
+                and = {
+                    has_trait = maid_chihaya_trait_2
+                    skill > 1
+                }
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_chihaya_trait_2
+                }
+                remove_unit_leader_trait = maid_chihaya_trait_2
+                add_unit_leader_trait = maid_chihaya_trait_3
+                add_skill_level = -100
+            }
+            set_country_flag = qiyuan_2
+        }
+    }
+
+    qiyuan_3 = {
+        icon = GFX_maoyuye
+        cost = 0
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            has_country_flag = have_chihaya
+            has_country_flag = qiyuan_2
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                love_depth > 50
+                tooltip = love_depth_tooltip_compare
+            }
+            any_unit_leader = {
+                and = {
+                    has_trait = maid_chihaya_trait_3
+                    skill > 1
+                }
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_chihaya_trait_3
+                }
+                remove_unit_leader_trait = maid_chihaya_trait_3
+                add_unit_leader_trait = maid_chihaya_trait_4
+                add_skill_level = -100
+            }
+            set_country_flag = qiyuan_3
+        }
+    }
+
+    qiyuan_4 = {
+        icon = GFX_maoyuye
+        cost = 0
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            has_country_flag = have_chihaya
+            has_country_flag = qiyuan_3
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                love_depth > 80
+                tooltip = love_depth_tooltip_compare
+            }
+            any_unit_leader = {
+                and = {
+                    has_trait = maid_chihaya_trait_4
+                    skill > 2
+                }
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_chihaya_trait_4
+                }
+                remove_unit_leader_trait = maid_chihaya_trait_4
+                add_unit_leader_trait = maid_chihaya_trait_5
+                add_skill_level = -100
+            }
+            set_country_flag = qiyuan_4
+        }
+    }
+
+    qiyuan_5 = {
+        icon = GFX_maoyuye
+        cost = 0
+        days_remove = 3
+        fire_only_once = yes
+        visible = {
+            has_country_flag = have_chihaya
+            has_country_flag = qiyuan_4
+            not = { has_country_flag = yz_bad_end }
+        }
+        available = {
+            check_variable = {
+                love_depth > 100
+                tooltip = love_depth_tooltip_compare
+            }
+            any_unit_leader = {
+                and = {
+                    has_trait = maid_chihaya_trait_5
+                    skill > 3
+                }
+            }
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_chihaya_trait_5
+                }
+                remove_unit_leader_trait = maid_chihaya_trait_5
+                add_unit_leader_trait = maid_chihaya_trait
+                add_attack = 3
+                add_defense = 3
+                add_logistics = 3
+                add_planning = 3
+            }
+            set_country_flag = chihaya_love
+        }
+    }
+
+    gongxiangmingyun = {	#莉音任务
+        icon = GFX_liyin
+        cost = 0
+        days_remove = 0
+        fire_only_once = yes
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = have_rio
+            has_war = yes
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        remove_effect = {
+            set_country_flag = gongxiangmingyun
+        }
+    }
+
+    xunfumingyun = {
+        icon = GFX_liyin
+        activation = {
+            has_country_flag = gongxiangmingyun
+            has_war = yes
+        }
+        available = {
+            any_enemy_country = {
+                surrender_progress > 0.6
+            }
+            check_variable = {
+                love_depth > 50
+                tooltip = love_depth_tooltip_compare
+            }
+        }
+        is_good = no
+
+        days_mission_timeout = 180
+        timeout_effect = {
+            clr_country_flag = gongxiangmingyun
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_rio_trait_1
+                }
+                remove_unit_leader_trait = maid_rio_trait_1
+                add_unit_leader_trait = maid_rio_trait_2
+                add_skill_level = -10
+                add_logistics = -10
+                add_planning = -10
+                add_defense = -10
+                add_attack = -10
+            }
+        }
+        complete_effect = {
+            clr_country_flag = gongxiangmingyun
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_rio_trait_1
+                }
+                add_unit_leader_trait = adaptable
+                remove_unit_leader_trait = trait_maid_vampires
+                add_unit_leader_trait = panzer_leader
+
+                add_attack = 1
+                add_logistics = 3
+                add_planning = 2
+                add_defense = 3
+            }
+            set_country_flag = finished_liyin
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_rio_trait_1
+                }
+                remove_unit_leader_trait = maid_rio_trait_1
+            }
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = Rio_advisor
+                        name = "稻丛莉音"
+                        gender = female
+                        nationality = JAP
+                        portraits = {
+                            civilian = {
+                                large = "gfx\leader\Rio.png"
+                                small = "gfx\leader\Rio2.png"
+                            }
+                        }
+                        set_character_flag = yz_government_flag
+                        allowed_civil_war = {
+                            is_ai = no
+                        }
+                        advisor = {
+                            slot = political_advisor
+                            cost = 25
+                            idea_token = Rio_advisor
+                            traits = { trait_sub_rio }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    masaki_supply_construction_preparing = {		###哇呼开连锁店的准备工作
+        icon = GFX_masaki
+        #cost = 10
+        days_remove = 25 #正式版需要改成25
+
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            and = {
+                has_country_flag = have_masaki
+                has_country_flag = qiyong_youzi_2
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = masaki_prepared }
+            }
+        }
+
+        available = {
+            industrial_complex > 9
+            check_variable = {
+                love_depth > 30
+                tooltip = love_depth_tooltip_compare
+            }
+            check_variable = {
+                yz_money > 500
+                tooltip = yz_money_tooltip_compare
+            }
+            has_country_flag = have_masaki
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = masaki_prepared }
+        }
+        modifier = {
+            consumer_goods_factor = 0.1
+            civilian_factory_use = 10
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+        }
+
+        remove_effect = {
+            set_country_flag = masaki_prepared
+            tooltip = masaki_can_build_supply_nodes
+        }
+        remove_trigger = {
+            is_debug = yes
+        }
+    }
+    masaki_supply_activating_c = {		###启动哇呼开连锁店任务
+        icon = GFX_masaki
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            and = {
+                has_country_flag = have_masaki
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = masaki_prepared
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = masaki_activating }
+            }
+            OR = {
+                has_government = communism
+                has_government = neutrality
+            }
+        }
+        available = {
+            has_country_flag = have_masaki
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = masaki_prepared
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = masaki_activating }
+            check_variable = {
+                yz_money > 500
+                tooltip = yz_money_tooltip_compare
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+            set_country_flag = masaki_activating
+            add_ideas = masaki_supply_node_construction
+            set_variable = { masaki_node_goal = num_of_supply_nodes }
+            add_to_variable = { masaki_node_goal = 0.5 }
+        }
+
+    }
+    masaki_supply_activating_d = {		###启动哇呼开连锁店任务
+        icon = GFX_masaki
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            and = {
+                has_country_flag = have_masaki
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = masaki_prepared
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = masaki_activating }
+            }
+            has_government = democratic
+        }
+        available = {
+            has_country_flag = have_masaki
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = masaki_prepared
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = masaki_activating }
+            check_variable = {
+                yz_money > 500
+                tooltip = yz_money_tooltip_compare
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+            set_country_flag = masaki_activating
+            add_ideas = masaki_supply_node_construction
+            set_variable = { masaki_node_goal = num_of_supply_nodes }
+            add_to_variable = { masaki_node_goal = 0.5 }
+        }
+
+    }
+    masaki_supply_activating_f = {		###启动哇呼开连锁店任务
+        icon = GFX_masaki
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 500
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_500
+        visible = {
+            and = {
+                has_country_flag = have_masaki
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = masaki_prepared
+                not = { has_country_flag = yz_bad_end }
+                not = { has_country_flag = masaki_activating }
+            }
+            has_government = fascism
+        }
+        available = {
+            has_country_flag = have_masaki
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = masaki_prepared
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = masaki_activating }
+            check_variable = {
+                yz_money > 500
+                tooltip = yz_money_tooltip_compare
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -500 }
+            set_country_flag = masaki_activating
+            add_ideas = masaki_supply_node_construction
+            set_variable = { masaki_node_goal = num_of_supply_nodes }
+            add_to_variable = { masaki_node_goal = 0.5 }
+        }
+
+    }
+    masaki_supply_construction = {		###哇呼开连锁店任务
+        icon = GFX_masaki
+        #cost = 10
+        days_mission_timeout = 50
+        #fire_only_once = yes
+        is_good = no
+
+        activation = {
+            not = { has_country_flag = yz_bad_end }
+            has_country_flag = masaki_activating
+        }
+        available = {
+            check_variable = { masaki_node_goal < num_of_supply_nodes } #if the number of supply nodes exceeds the old number, immediately cancel
+        }
+
+        complete_effect = {
+            #add_to_variable = { yz_money = 700 } #连锁店盈利了
+            #add_research_slot = 10 #测试效果
+            #add_to_variable = { monly_YZ_masaki_money_visible = 250}
+            set_country_flag = masaki_done
+            clr_country_flag = masaki_activating
+            clr_country_flag = masaki_prepared
+            remove_ideas = masaki_supply_node_construction
+            country_event = { id = masaki_event.1 }
+        }
+        remove_effect = {
+            clr_country_flag = masaki_activating
+            clr_country_flag = masaki_prepared
+            remove_ideas = masaki_supply_node_construction
+
+        }
+    }
+    #彩里事件
+    sairi_1 = {
+        priority = 97
+        icon = GFX_caili
+        fire_only_once = yes
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            or = {
+                has_country_flag = have_noa
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        complete_effect = {
+            country_event = { id = sairi_event.2 }
+        }
+    }
+    #柚子工程队
+    YZ_engineer_get = {
+        priority = 98
+        fire_only_once = yes
+        cost = 0
+        days_remove = 14
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.25
+            research_speed_factor = -0.1
+        }
+
+        available = {
+            has_tech = tech_engineers2
+            command_power > 29.99
+            has_army_experience > 44.99
+            industrial_complex > 10
+        }
+
+        complete_effect = {
+            add_command_power = -30
+            army_experience = -45
+        }
+
+        remove_effect = {
+            set_technology = {
+                tech_YZ_engineer = 1
+            }
+        }
+    }
+
+
+
+    YZ_MIO_1_get = {		#柚子步兵武器制造局
+        priority = 99
+        fire_only_once = yes
+        cost = 30
+        days_remove = 25
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            not = { has_country_flag = yz_mio_1 }
+            not = { has_country_flag = yz_bad_end }
+            has_army_experience > 14.99
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.2
+        }
+
+        available = {
+            command_power > 9.99
+            has_army_experience > 14.99
+            industrial_complex > 19
+        }
+
+        complete_effect = {
+            add_command_power = -10
+            army_experience = -15
+        }
+
+        remove_effect = {
+            set_country_flag = youzi_MIO_1
+            hidden_effect = {
+                country_event = start_event.2
+                set_country_flag = yz_mio_1
+            }
+        }
+    }
+
+    YZ_MIO_3_get = {		#柚子海军制造总局
+        priority = 99
+        fire_only_once = yes
+        cost = 30
+        days_remove = 25
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            not = { has_country_flag = yz_mio_2 }
+            not = { has_country_flag = yz_bad_end }
+            has_navy_experience > 14.99
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.25
+        }
+
+        available = {
+            command_power > 9.99
+            has_navy_experience > 14.99
+            industrial_complex > 19
+        }
+
+        complete_effect = {
+            add_command_power = -10
+            navy_experience = -15
+        }
+
+        remove_effect = {
+            set_country_flag = youzi_MIO_2
+            hidden_effect = {
+                country_event = start_event.2
+                set_country_flag = yz_mio_2
+            }
+        }
+    }
+
+    YZ_MIO_5_get = {		#柚子海军制造总局
+        priority = 99
+        fire_only_once = yes
+        cost = 30
+        days_remove = 25
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            date < 2000.1.1
+            not = { has_country_flag = yz_mio_3 }
+            not = { has_country_flag = yz_bad_end }
+            has_navy_experience > 14.99
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.25
+        }
+
+        available = {
+            command_power > 9.99
+            has_navy_experience > 14.99
+            industrial_complex > 19
+        }
+
+        complete_effect = {
+            add_command_power = -10
+            navy_experience = -15
+        }
+
+        remove_effect = {
+            set_country_flag = youzi_MIO_3
+            hidden_effect = {
+                country_event = start_event.2
+                set_country_flag = yz_mio_3
+            }
+        }
+    }
+
+    YZ_MIO_7_get = {		#柚子空军制造总局
+        priority = 99
+        fire_only_once = yes
+        cost = 30
+        days_remove = 25
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            date < 2000.1.1
+            not = { has_country_flag = yz_mio_4 }
+            not = { has_country_flag = yz_bad_end }
+            has_air_experience > 14.99
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.25
+        }
+
+        available = {
+            command_power > 9.99
+            has_air_experience > 14.99
+            industrial_complex > 19
+        }
+
+        complete_effect = {
+            add_command_power = -10
+            air_experience = -15
+        }
+
+        remove_effect = {
+            set_country_flag = youzi_MIO_4
+            hidden_effect = {
+                country_event = start_event.2
+                set_country_flag = yz_mio_4
+            }
+        }
+    }
+
+    YZ_MIO_9_get = {		#柚子装甲生产设计中心
+        priority = 99
+        fire_only_once = yes
+        cost = 30
+        days_remove = 25
+
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            date < 2000.1.1
+            not = { has_country_flag = yz_mio_5 }
+            not = { has_country_flag = yz_bad_end }
+            has_army_experience > 14.99
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.25
+        }
+
+        available = {
+            command_power > 9.99
+            has_army_experience > 14.99
+            industrial_complex > 19
+        }
+
+        complete_effect = {
+            add_command_power = -10
+            army_experience = -15
+        }
+
+        remove_effect = {
+            set_country_flag = youzi_MIO_5
+            hidden_effect = {
+                country_event = start_event.2
+                set_country_flag = yz_mio_5
+            }
+        }
+    }
+
+
+
+    murasame_parfait = {		#给小丛雨吃芭菲
+        icon = GFX_congyu
+        days_remove = 45
+        cost = 20
+        custom_cost_trigger = {
+            check_variable = {
+                var = love_depth
+                value = 30
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = LD_30
+        days_re_enable = 180
+
+        visible = {
+            has_country_flag = have_murasame
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+        }
+
+        available = {
+            command_power > 29.99
+            industrial_complex > 3
+            or = {
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
+            }
+        }
+
+        complete_effect = {
+            add_to_variable = {
+                love_depth = 15
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            add_command_power = -30
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_congyu_trait
+                }
+                add_unit_leader_trait = maid_congyu_trait_1
+            }
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.1
+        }
+
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = maid_congyu_trait
+                }
+                remove_unit_leader_trait = maid_congyu_trait_1
+            }
+        }
+    }
+    # 作用：由玩家开启佐奈生日自动庆祝；要点：启用本身免费，可在关闭后再次开启，之后每年6月8日自动结算并实际消耗75政治点。署名：伊尔诺+2026-06-08+assisted by Codex
+    enable_sana_automatic_birthday = {
+        icon = GFX_zuonai
+        cost = 0
+        visible = {
+            has_country_flag = have_sana
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = sana_automatic_birthday_enabled }
+        }
+        complete_effect = {
+            set_country_flag = sana_automatic_birthday_enabled
+            custom_effect_tooltip = enable_sana_automatic_birthday_tt
+        }
+    }
+
+    # 作用：允许玩家关闭佐奈生日自动庆祝；要点：清除启用旗标后，年度自动任务停止激活，手动生日与补过生日决议恢复显示。署名：伊尔诺+2026-06-08+assisted by Codex
+    disable_sana_automatic_birthday = {
+        icon = GFX_zuonai
+        cost = 0
+        visible = {
+            has_country_flag = have_sana
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            has_country_flag = sana_automatic_birthday_enabled
+        }
+        complete_effect = {
+            clr_country_flag = sana_automatic_birthday_enabled
+            custom_effect_tooltip = disable_sana_automatic_birthday_tt
+        }
+    }
+
+    # 作用：在自动模式下于每年6月8日执行普通生日的完整成长效果；要点：自动扣除75政治点，并以200天移除期保留原生日决议修正。署名：伊尔诺+2026-06-08+assisted by Codex
+    sana_automatic_birthday = {
+        icon = GFX_zuonai
+        days_mission_timeout = 1
+        days_remove = 200
+        selectable_mission = no
+        is_good = yes
+        activation = {
+            has_country_flag = sana_automatic_birthday_enabled
+            has_country_flag = have_sana
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            check_variable = {
+                date_counter = 158
+            }
+        }
+        available = {
+            always = yes
+        }
+        modifier = {
+            consumer_goods_factor = -0.05
+            industrial_capacity_factory = 0.05
+            industrial_capacity_dockyard = 0.05
+            production_speed_buildings_factor = 0.1
+            political_power_gain = 0.1
+            political_power_gain_factor = 0.05
+        }
+        complete_effect = {
+            hidden_effect = {
                 play_song = youzu22
             }
-			custom_effect_tooltip = {
-				localization_key = play_the_song_of_zuonai_descision_effect_tooltip
-			}
-			add_political_power = 70
-			if = { 
-				limit = {
-					any_army_leader = {
-						has_trait = maid_sana_birthday_boost4
-					} 
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_birthday_boost4
-					}   
-					add_unit_leader_trait = maid_sana_birthday_boost5	
-					remove_unit_leader_trait = maid_sana_birthday_boost4
-					add_skill_level = 1  
-					add_logistics = 1
-					add_planning = 1
-					add_defense = 1
-					add_attack = 1
-				}
-			}
-			else_if = {
-				limit = {
-					any_army_leader = {
-						has_trait = maid_sana_birthday_boost3
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_birthday_boost3
-					}
-					add_unit_leader_trait = maid_sana_birthday_boost4	
-					remove_unit_leader_trait = maid_sana_birthday_boost3
-				}
-			}
-			else_if = {
-				limit = {
-					any_army_leader = {
-						has_trait = maid_sana_birthday_boost2
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_birthday_boost2
-					}
-					add_unit_leader_trait = maid_sana_birthday_boost3	
-					remove_unit_leader_trait = maid_sana_birthday_boost2
-					add_skill_level = 1  
-				}
-			}
-			else_if = {
-				limit = {
-					any_army_leader = {
-						has_trait = maid_sana_birthday_boost1
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_birthday_boost1
-					}
-					remove_unit_leader_trait = maid_sana_birthday_boost1
-					add_unit_leader_trait = maid_sana_birthday_boost2	
-					add_defense = 1
-					add_attack = 1
-				}
-			}
-			else_if = {
-				limit = {
-					any_army_leader = {
-						has_trait = maid_sana_trait
-					}
-				}
-				random_army_leader = {
-					limit = {
-						has_trait = maid_sana_trait
-					}
-					add_unit_leader_trait = maid_sana_birthday_boost1	
-					add_skill_level = 1  
-					add_logistics = 1
-					add_planning = 1
-					add_defense = 1
-					add_attack = 1
-				}
-				
-			}
-			set_country_flag = sana_first_birthday
-		}
-		
-	}
-	
-	open_traot = {
-      	icon = GFX_tarot_icon
+            add_political_power = -75
+            add_to_variable = { sana_army_attack = 0.025 }
+            add_to_variable = { sana_special_forces_cap = 0.01 }
+            add_to_variable = { sana_army_org_factor = 0.025 }
+            add_to_variable = { sana_ws = 0.05 }
+            add_to_variable = { sana_st = 0.05 }
+            add_to_variable = { sana_industry = 0.05 }
+            add_to_variable = { marry_love_bonus = 5 }
+            set_country_flag = sana_birthday_succeed
+            add_dynamic_modifier = {
+                modifier = sana_birthday_dynamic_modifier
+            }
+            set_country_flag = sana_first_birthday
+            if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost4
+                        NOT = { has_trait = maid_sana_birthday_boost5 }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost4
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost5
+                    remove_unit_leader_trait = maid_sana_birthday_boost4
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost3
+                        NOT = { has_trait = maid_sana_birthday_boost4 }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost3
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost4
+                    remove_unit_leader_trait = maid_sana_birthday_boost3
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost2
+                        NOT = { has_trait = maid_sana_birthday_boost3 }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost2
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost3
+                    remove_unit_leader_trait = maid_sana_birthday_boost2
+                    add_skill_level = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost1
+                        NOT = { has_trait = maid_sana_birthday_boost2 }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost1
+                    }
+                    remove_unit_leader_trait = maid_sana_birthday_boost1
+                    add_unit_leader_trait = maid_sana_birthday_boost2
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_trait
+                        NOT = { has_trait = maid_sana_birthday_boost1 }
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_trait
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost1
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+        }
+        remove_effect = {
+            clr_country_flag = sana_birthday_succeed
+        }
+    }
 
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			not = { has_country_flag = open_traot }
-		}
+    sana_birthday = {
+        icon = GFX_zuonai
+        days_remove = 200
+        visible = {
+            has_country_flag = have_sana
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = sana_automatic_birthday_enabled }
+        }
+        available = {
+            OR = {
+                check_variable = {
+                    date_counter = 158
+                }
+                has_country_flag = debug_love_sana_everyday
+            }
+        }
+        modifier = {
+            consumer_goods_factor = -0.05
+            industrial_capacity_factory = 0.05
+            industrial_capacity_dockyard = 0.05
+            production_speed_buildings_factor = 0.1
+            political_power_gain = 0.1
+            political_power_gain_factor = 0.05
 
-		complete_effect = {
-			set_country_flag = open_traot
-		}
-	}
+        }
+        complete_effect = {
+            hidden_effect = {
+                play_song = youzu22
+            }
+            add_to_variable = {sana_army_attack = 0.025}
+            add_to_variable = {sana_special_forces_cap = 0.01}
+            add_to_variable = {sana_army_org_factor = 0.025}
+            add_to_variable = {sana_ws = 0.05}
+            add_to_variable = {sana_st = 0.05}
+            add_to_variable = {sana_industry = 0.05}
+            add_to_variable = {marry_love_bonus = 5}
+            set_country_flag = sana_birthday_succeed
+            add_political_power = 70
+            add_dynamic_modifier = {
+                modifier = sana_birthday_dynamic_modifier
+            }
+            set_country_flag = sana_first_birthday
+            if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost4
+                        NOT = {has_trait = maid_sana_birthday_boost5}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost4
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost5
+                    remove_unit_leader_trait = maid_sana_birthday_boost4
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost3
+                        NOT = {has_trait = maid_sana_birthday_boost4}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost3
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost4
+                    remove_unit_leader_trait = maid_sana_birthday_boost3
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost2
+                        NOT = {has_trait = maid_sana_birthday_boost3}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost2
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost3
+                    remove_unit_leader_trait = maid_sana_birthday_boost2
+                    add_skill_level = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost1
+                        NOT = {has_trait = maid_sana_birthday_boost2}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost1
+                    }
+                    remove_unit_leader_trait = maid_sana_birthday_boost1
+                    add_unit_leader_trait = maid_sana_birthday_boost2
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_trait
+                        NOT = {has_trait = maid_sana_birthday_boost1}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_trait
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost1
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
 
-	Yoshino_industry_five_year_open = {		#芳乃五年计划显示决议
-		icon = GFX_yoshino
-		days_remove = 1
-		cost = 0
-		
-		visible = { 
-			has_country_flag = have_yoshino
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = yoshino_industry_start
-			not = { has_country_flag = yz_bad_end }
-			not = { has_country_flag = Yoshino_industry_five_year_yes }
-			has_country_flag = finished_yoshino_industry
-		}
+            }
+            #custom_effect_tooltip = {
+            #	localization_key = play_the_song_of_zuonai_descision_effect_tooltip
+            #}
+        }
+        remove_effect = {
+            clr_country_flag = sana_birthday_succeed
+        }
+    }
+    sana_birthday_weak = {#可以补偿
+        icon = GFX_zuonai
+        days_remove = 100
+        visible = {
+            has_country_flag = have_sana
+            has_country_flag = qiyong_youzi_2
+            not = { has_country_flag = yz_bad_end }
+            not = { has_country_flag = sana_automatic_birthday_enabled }
+        }
+        available = {
+            OR = {
+                AND = {
+                    check_variable = {
+                        date_counter > 158
+                    }
+                    check_variable = {
+                        date_counter < 179
+                    }
+                    NOT = {
+                        has_country_flag = sana_birthday_succeed
+                    }
+                }
+                has_country_flag = debug_love_sana_everyday
+            }
+        }
+        modifier = {
+            consumer_goods_factor = -0.05
+            industrial_capacity_factory = 0.05
+            industrial_capacity_dockyard = 0.05
+            production_speed_buildings_factor = 0.1
+            political_power_gain = 0.1
+            political_power_gain_factor = 0.05
 
-		complete_effect = {
-			set_country_flag = Yoshino_industry_five_year_yes
-		}
-	}
+        }
+        complete_effect = {
+            hidden_effect = {
+                play_song = youzu22
+            }
+            add_to_variable = {sana_army_attack = 0.01}
+            add_to_variable = {sana_special_forces_cap = 0.004}
+            add_to_variable = {sana_army_org_factor = 0.01}
+            add_to_variable = {sana_ws = 0.02}
+            add_to_variable = {sana_st = 0.02}
+            add_to_variable = {sana_industry = 0.02}
+            add_to_variable = {marry_love_bonus = 2}
+            add_political_power = 30
+            add_dynamic_modifier = {
+                modifier = sana_birthday_dynamic_modifier
+            }
+            set_country_flag = sana_first_birthday
+            if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost4
+                        NOT = {has_trait = maid_sana_birthday_boost5}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost4
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost5
+                    remove_unit_leader_trait = maid_sana_birthday_boost4
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost3
+                        NOT = {has_trait = maid_sana_birthday_boost4}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost3
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost4
+                    remove_unit_leader_trait = maid_sana_birthday_boost3
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost2
+                        NOT = {has_trait = maid_sana_birthday_boost3}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost2
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost3
+                    remove_unit_leader_trait = maid_sana_birthday_boost2
+                    add_skill_level = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_birthday_boost1
+                        NOT = {has_trait = maid_sana_birthday_boost2}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_birthday_boost1
+                    }
+                    remove_unit_leader_trait = maid_sana_birthday_boost1
+                    add_unit_leader_trait = maid_sana_birthday_boost2
+                    add_defense = 1
+                    add_attack = 1
+                }
+            }
+            else_if = {
+                limit = {
+                    any_army_leader = {
+                        has_trait = maid_sana_trait
+                        NOT = {has_trait = maid_sana_birthday_boost1}
+                    }
+                }
+                random_army_leader = {
+                    limit = {
+                        has_trait = maid_sana_trait
+                    }
+                    add_unit_leader_trait = maid_sana_birthday_boost1
+                    add_skill_level = 1
+                    add_logistics = 1
+                    add_planning = 1
+                    add_defense = 1
+                    add_attack = 1
+                }
 
-	open_YZS_military_academy = {
-		visible = {
-			has_country_flag = qiyong_youzi_2
-		   	not = { has_country_flag = yz_bad_end }
-		   	has_yz_general = yes
-			not = { has_country_flag = open_YZS_military_academy }
-		}
+            }
+            #custom_effect_tooltip = {
+            #	localization_key = play_the_song_of_zuonai_descision_effect_tooltip
+            #}
+        }
 
-		complete_effect = {
-			set_country_flag = open_YZS_military_academy
-		}
-	}
+    }
+    ruri_s_animal_friends = {
+        icon = GFX_trait_my_doubutsu_tomodachi
+        cost = 100
+        days_remove = 30
+        fire_only_once = yes
+        visible = {
+            has_country_flag = have_ruri
+            is_ai = no
+            OR = {
+                AND = {
+                    start_date > 1935.12.31
+                    start_date < 1949.1.1
+                }
+            }
+        }
+        complete_effect = {
+            set_technology = {
+                elephantry = 1
+                popup = no
+            }
+            name = "Gajhastas"
+            is_locked = no
+            #division_names_group = NAMELIST_ID # optional
+            priority = 1 # optional
+            template_counter = 108 # optional
+            regiments = {
+                elephantry = { x = 0 y = 0 }
+                elephantry = { x = 0 y = 1 }
+                elephantry = { x = 0 y = 2 }
+                elephantry = { x = 0 y = 3 }
+                elephantry = { x = 1 y = 0 }
+                elephantry = { x = 1 y = 1 }
+                elephantry = { x = 1 y = 2 }
+                elephantry = { x = 1 y = 3 }
+            }
+            #support = {
+            #    artillery = { x = 0 y = 0 }
+            #}
+        }
+    }
+anuo_s_revenge = {    #阿诺的复仇
+    icon = GFX_traits_power_of_fox_fairy
+    cost = 0
+    days_remove = 90
+    visible = {
+        has_country_flag = have_ruri
+        any_army_leader = {
+            has_trait = wounded
+            has_trait = ruri_haa
+        }
+    }
+    modifier = {
+        army_attack_factor = 100
+        army_defence_factor = 100
+        army_org = 100
+        army_strength_factor = 100
+        army_core_attack_factor = 100
+        army_core_defence_factor = 100
+        army_speed_factor = 10
+        org_gain_factor = 100
+        max_planning = 100
+        max_planning_factor = 10
+        planning_speed = 100
+        army_org_regain = 100
+    }
+}
+revenge = {    #复仇决议，给被打伤的老婆报仇
+    icon = GFX_traits_married_trait
+    cost = 0
+    days_remove = 90
+    visible = {
+        any_army_leader = {
+            has_trait = wounded
+            has_trait = married_trait
+        }
+    }
+    modifier = {
+        army_attack_factor = 0.2
+        army_defence_factor = 0.2
+        army_org = 10
+        army_strength_factor = 0.2
+        army_core_attack_factor = 0.2
+        army_core_defence_factor = 0.2
+        army_speed_factor = 0.1
+        army_org_regain = 0.2
+        max_planning = 0.2
+        max_planning_factor = 0.1
+        planning_speed = 0.2
+    }
+}
 
-	open_industry_money = {
-		priority = 0
+open_industry_money = {
+    priority = 0
 
-		visible = {
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = had_chosen_haogan
-			not = { has_country_flag = open_industry_money }
-		}
+    visible = {
+        has_country_flag = qiyong_youzi_2
+        has_country_flag = qiyong_youzi_3
+        has_country_flag = had_chosen_haogan
+        not = { has_country_flag = open_industry_money }
+    }
 
-		complete_effect = {
-			set_country_flag = open_industry_money
-		}
-	}
+    complete_effect = {
+        set_country_flag = open_industry_money
+    }
+}
 
+bring_maya_back_to_world = {
+    priority = 0
+    visible = {
+        has_country_flag = have_takashiro_maya
+    }
+    available = {
+        has_country_flag = have_kakka_nor
+        has_country_flag = have_misaka_makoto
+    }
+    cost = 50
+    fire_only_once = yes
+    complete_effect = {
+        custom_effect_tooltip = maya_back_to_world
+        #country_event = start_event.47994554
+        hidden_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = ghost_girl_in_mirror
+                }
+                remove_trait = {
+                    trait = ghost_girl_in_mirror
+                }
+                add_trait = {
+                    trait = common_girl_in_real_world
+                }
+            }
+        }
+    }
+}
+bring_hotaru_back_to_world = {
+    priority = 0
+    visible = {
+        has_country_flag = have_hotaru
+    }
+    available = {
+        has_country_flag = have_kakka_nor
+        has_country_flag = have_misaka_makoto
+    }
+    cost = 50
+    fire_only_once = yes
+    complete_effect = {
+        custom_effect_tooltip = hotaru_back_to_world
+        #country_event = start_event.3659153
+        hidden_effect = {
+            random_army_leader = {
+                limit = {
+                    has_trait = hotaru_in_april
+                }
+                remove_trait = {
+                    trait = hotaru_in_april
+                }
+                add_trait = {
+                    trait = flower_in_may
+                }
+            }
+        }
+    }
+}
+}
+
+Roka_Koharu_decision_category = {
+    Roka_Koharu_365days = {
+        priority = 10
+        icon = GFX_Category_decision
+        activation = {
+            has_country_flag = start_roko
+        }
+        activation = {
+            not = { has_country_flag = finished_megulu_industry }
+        }
+        available = {
+            not = { has_country_flag = start_roko }
+        }
+        is_good = no
+        days_mission_timeout = 365
+        timeout_effect = {
+            clr_country_flag = start_roko
+            custom_effect_tooltip = roko_failed
+            add_stability = -0.05
+            add_political_power = -50
+            if = {
+                limit = {
+                    check_variable = {
+                        koharu_favor < 5
+                    }
+                    check_variable = {
+                        roka_favor < 5
+                    }
+                }
+                country_event = RoKo_event.101
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                love_depth = 10
+                tooltip = love_depth_tooltip
+            }
+            clamp_variable = {		#范围
+                var = love_depth
+                min = -100
+                max = 200
+            }
+            add_to_variable = {
+                yz_money = 300
+                tooltip = add_to_yz_money
+            }
+            clamp_variable = {		#范围
+                var = yz_money
+                #min = 0
+                max = yz_money_max
+            }
+        }
+    }
+    cuddle_koharu = {		#【跟小春贴贴】
+        priority = 0
+        cost = 0
+        days_remove = 20
+        icon = GFX_koharu
+        visible = {
+            has_country_flag = start_roko
+        }
+        complete_effect = {
+            add_to_variable = {
+                koharu_favor = 3
+                tooltip = koharu_favor_up
+            }
+            clamp_variable = {		#范围
+                var = koharu_favor
+                min = 0
+            }
+            subtract_from_variable = {
+                var = roka_favor
+                value = 1
+                tooltip = roka_favor_down
+            }
+            clamp_variable = {		#范围
+                var = roka_favor
+                min = 0
+            }
+            hidden_effect = {
+                roka_koharu_check = yes
+            }
+        }
+    }
+
+    cuddle_roka = {		#【跟芦花贴贴】
+        priority = 0
+        cost = 0
+        days_remove = 20
+        icon = GFX_roka
+        visible = {
+            has_country_flag = start_roko
+        }
+        complete_effect = {
+            add_to_variable = {
+                roka_favor = 3
+                tooltip = roka_favor_up
+            }
+            clamp_variable = {		#范围
+                var = roka_favor
+                min = 0
+            }
+            subtract_from_variable = {
+                koharu_favor = 1
+                tooltip = koharu_favor_down
+            }
+            clamp_variable = {		#范围
+                var = koharu_favor
+                min = 0
+            }
+            hidden_effect = {
+                roka_koharu_check = yes
+            }
+        }
+    }
+
+    roko_1 = {		#【你们都是我的翅膀】
+        priority = 0
+        cost = 0
+        days_remove = 20
+        icon = GFX_roko
+        visible = {
+            has_country_flag = start_roko
+        }
+        complete_effect = {
+            add_to_variable = {
+                roka_favor = 1
+                tooltip = roka_favor_up
+            }
+            clamp_variable = {		#范围
+                var = roka_favor
+                min = 0
+            }
+            add_to_variable = {
+                koharu_favor = 1
+                tooltip = koharu_favor_up
+            }
+            clamp_variable = {		#范围
+                var = koharu_favor
+                min = 0
+            }
+            add_to_variable = {
+                roko_intensity = 1
+                tooltip = roko_intensity_up
+            }
+            clamp_variable = {		#范围
+                var = roko_intensity
+                min = 0
+            }
+            subtract_from_variable = {
+                roko_peace_factor = 1
+                tooltip = roko_peace_factor_down
+            }
+            clamp_variable = {		#范围
+                var = roko_peace_factor
+                min = 0
+            }
+            hidden_effect = {
+                roka_koharu_check = yes
+            }
+        }
+    }
+
+    roko_2 = {		#【我真的在拉扯了】
+        priority = 0
+        cost = 0
+        days_remove = 20
+        icon = GFX_roko
+        visible = {
+            has_country_flag = start_roko
+        }
+        complete_effect = {
+            subtract_from_variable = {
+                koharu_favor = 1
+                tooltip = koharu_favor_down
+            }
+            clamp_variable = {		#范围
+                var = koharu_favor
+                min = 0
+            }
+            subtract_from_variable = {
+                roka_favor = 1
+                tooltip = roka_favor_down
+            }
+            clamp_variable = {		#范围
+                var = roka_favor
+                min = 0
+            }
+            subtract_from_variable = {
+                roko_intensity = 2
+                tooltip = roko_intensity_down
+            }
+            clamp_variable = {		#范围
+                var = roko_intensity
+                min = 0
+            }
+            add_to_variable = {
+                roko_peace_factor = 2
+                tooltip = roko_peace_factor_up
+            }
+            clamp_variable = {		#范围
+                var = roko_peace_factor
+                min = 0
+            }
+            hidden_effect = {
+                roka_koharu_check = yes
+            }
+        }
+    }
 }
 
 

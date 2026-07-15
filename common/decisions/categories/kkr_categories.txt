@@ -1,0 +1,40 @@
+
+Kukuru_debug_decision_category = {
+	picture = GFX_
+	icon = GFX_kkr_icon_2
+	priority = 15
+	visible = {
+		is_debug = yes
+	}
+}
+Kukuru_coming_decision_category = {
+	picture = GFX_
+	icon = GFX_kkr_icon_2
+	priority = 15
+}
+Kukuru_main_decision_category = {
+	picture = GFX_
+	icon = GFX_kkr_icon_2
+	priority = 15
+	scripted_gui = kkr_mian_gui
+	visible = {
+		has_country_flag = get_kkr
+	}
+}
+kkr_atri_reseasrch_decision_category = {
+	picture = GFX_
+	icon = GFX_kkr_icon_7
+	priority = 15
+	visible_when_empty = yes
+	scripted_gui = Kukuru_research_gui
+	visible = {
+		or = {
+			has_country_flag = kkr_is_preparing_research
+			has_country_flag = kkr_is_researching
+			has_country_flag = kkr_advisor_sci
+			has_country_flag = have_atri
+		}
+		not = { has_country_flag = set_kkr_research_facility }
+	}
+}
+

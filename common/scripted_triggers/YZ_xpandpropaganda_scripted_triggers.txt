@@ -1,0 +1,17 @@
+yz_poster_slot_available = {
+	custom_trigger_tooltip = {
+		tooltip = yz_poster_slot_available_tt
+		OR = {
+			has_country_flag = yzposter_1st_solt_empty
+			has_country_flag = yzposter_2nd_solt_empty
+			has_country_flag = yzposter_3rd_solt_empty
+		}
+	}
+}
+
+youzu_country = {
+	OR = {
+		has_country_flag = qiyong_youzi_1
+		has_country_flag = qiyong_youzi_2
+	}
+}

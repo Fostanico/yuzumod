@@ -1,0 +1,694 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg"
+		texturefile = "gfx/loadingscreens/load_1.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = "GFX_add_leaders_decisions"
+		texturefile = "gfx/addleaders_decisions.png"
+	}
+	spriteType = {
+		name = "GFX_update"
+		texturefile = "gfx/update.png"
+	}
+	spriteType = {
+		name = "GFX_yz_start_qrcode"
+		texturefile = "gfx/yz_start_qrcode.png"
+	}
+	##特质
+	spriteType = {
+		name = "GFX_trait_maid_ninging_trait"
+		texturefile = "gfx/traits/maid_ninging_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_meigulu_trait"
+		texturefile = "gfx/traits/maid_meigulu_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chou_trait"
+		texturefile = "gfx/traits/maid_chou_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_congyu_trait"
+		texturefile = "gfx/traits/maid_congyu_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_congyu_trait_1"
+		texturefile = "gfx/traits/maid_congyu_trait_1.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_mozi_trait"
+		texturefile = "gfx/traits/maid_mozi_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_fangnai_trait"
+		texturefile = "gfx/traits/maid_fangnai_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_cuodao_trait"
+		texturefile = "gfx/traits/maid_cuodao_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_qihai_trait"
+		texturefile = "gfx/traits/maid_qihai_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_qihai_trait_1"
+		texturefile = "gfx/traits/maid_qihai_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_kanna_trait"
+		texturefile = "gfx/traits/maid_kanna_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_noa_trait"
+		texturefile = "gfx/traits/maid_noa_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_noa1_trait"
+		texturefile = "gfx/traits/maid_noa1_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_noa2_trait"
+		texturefile = "gfx/traits/maid_noa2_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_noa3_trait"
+		texturefile = "gfx/traits/maid_ninging_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_bad_noa"
+		texturefile = "gfx/traits/bad_noa.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_sana_trait"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_zaozi_trait"
+		texturefile = "gfx/traits/maid_zaozi_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_gongping_trait"
+		texturefile = "gfx/traits/maid_gongping_trait.png"
+	}
+	spriteType = {
+		name = "maid_sana_birthday_boost1"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "maid_sana_birthday_boost2"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "maid_sana_birthday_boost3"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "maid_sana_birthday_boost4"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "maid_sana_birthday_boost5"
+		texturefile = "gfx/traits/maid_sana_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait_1"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait_2"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait_3"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait_4"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait_5"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_chihaya_trait"
+		texturefile = "gfx/traits/maid_chihaya_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_hazuki_trait"
+		texturefile = "gfx/traits/maid_hazuki_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_rio_trait_1"
+		texturefile = "gfx/traits/maid_rio_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_rio_trait_2"
+		texturefile = "gfx/traits/maid_rio_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_sairi_trait_1"
+		texturefile = "gfx/traits/maid_sairi_trait_1.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_sairi_trait_2"
+		texturefile = "gfx/traits/maid_sairi_trait_2.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_fumika_trait"
+		texturefile = "gfx/traits/maid_fumika_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_amane_trait"
+		texturefile = "gfx/traits/maid_amane_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_kurumi_trait"
+		texturefile = "gfx/traits/maid_kurumi_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_nozomi_trait"
+		texturefile = "gfx/traits/maid_nozomi_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_nozomi_trait_1"
+		texturefile = "gfx/traits/maid_nozomi_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_toko_trait"
+		texturefile = "gfx/traits/maid_toko_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_wakana_trait"
+		texturefile = "gfx/traits/maid_wakana_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_masaki_trait"
+		texturefile = "gfx/traits/maid_masaki_trait.png"
+	}
+    spriteType = {
+		name = "GFX_trait_maid_miu_trait"
+		texturefile = "gfx/traits/maid_miu_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_Mayu_trait"
+		texturefile = "gfx/traits/maid_Mayu_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_tielurenou1_trait"
+		texturefile = "gfx/traits/maid_tielurenou1_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_trait_maid_vampires"
+		texturefile = "gfx/traits/trait_maid_vampires.png"
+	}
+	spriteType = {
+		name = "GFX_trait_yz_weizi_trait"
+		texturefile = "gfx/traits/yz_weizi_trait.png"
+	}
+	
+	#爱之结晶
+	spriteType = {
+		name = "GFX_trait_married_trait"
+		texturefile = "gfx/traits/married_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_married_trait_amane"
+		texturefile = "gfx/traits/married_trait.png"
+	}
+	spriteType = {
+		name = "GFX_trait_super_married_trait"
+		texturefile = "gfx/traits/married_trait.png"
+	}
+	#技能
+	spriteType = { 
+		name = "GFX_ability_chou_witch_ability_icon"
+		texturefile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
+	}
+	SpriteType = { 
+		name = "GFX_chou_witch_ability_icon_animated"
+		texturefile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
+        #effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		effectFile = "gfx/FX/buttonstate.lua"		
+		allwaystransparent = 1
+		animation = {
+			animationmaskfile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
+			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 26.0				# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+	        #animationframes = {1 2 3 }
+		}
+	    legacy_lazy_load = no
+	}
+	spriteType = { 
+		name = "GFX_ability_nene_witch_ability_icon"
+		texturefile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
+	}
+	SpriteType = { 
+		name = "GFX_nene_witch_ability_icon_animated"
+		texturefile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
+        #effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		effectFile = "gfx/FX/buttonstate.lua"		
+		allwaystransparent = 1
+		animation = {
+			animationmaskfile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
+			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 26.0				# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+	        #animationframes = {1 2 3 }
+		}
+	    legacy_lazy_load = no
+	}
+	spriteType = { 
+		name = "GFX_ability_nanao_ability_icon"
+		texturefile = "gfx/interface/abilitylist/nanao_morin_ability.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ruri_ha_ability"
+		textureFile = "gfx/interface/abilitylist/ruri_ha_ability.png"
+	}
+	#################################
+	##############婚礼相关###########
+	#################################
+	spriteType = {
+		name = "GFX_ningning_wedding"
+		texturefile = "gfx/event_pictures/ningning_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_noa_wedding"
+		texturefile = "gfx/event_pictures/noa_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_meigulu_wedding"
+		texturefile = "gfx/event_pictures/meigulu_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_murasame_wedding"
+		texturefile = "gfx/event_pictures/murasame_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_chou_wedding"
+		texturefile = "gfx/event_pictures/chou_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_mozi_wedding"
+		texturefile = "gfx/event_pictures/mozi_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_fangnai_wedding"
+		texturefile = "gfx/event_pictures/fangnai_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_cuodao_wedding"
+		texturefile = "gfx/event_pictures/cuodao_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_qihai_wedding"
+		texturefile = "gfx/event_pictures/qihai_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_kanna_wedding"
+		texturefile = "gfx/event_pictures/kanna_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_sana_wedding"
+		texturefile = "gfx/event_pictures/sana_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_zaozi_wedding"
+		texturefile = "gfx/event_pictures/zaozi_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_hazuki_wedding"
+		texturefile = "gfx/event_pictures/hazuki_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_chihaya_wedding"
+		texturefile = "gfx/event_pictures/chihaya_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_fumika_wedding"
+		texturefile = "gfx/event_pictures/fumika_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_wakana_wedding"
+		texturefile = "gfx/event_pictures/wakana_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_toko_wedding"
+		texturefile = "gfx/event_pictures/toko_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_nozomi_wedding"
+		texturefile = "gfx/event_pictures/nozomi_wedding.png"
+	}
+    spriteType = {
+		name = "GFX_masaki_wedding"
+		texturefile = "gfx/event_pictures/masaki_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_miu_wedding"
+		texturefile = "gfx/event_pictures/miu_wedding.png"
+	}
+	spriteType = {
+		name = "GFX_Mayu_wedding"
+		texturefile = "gfx/event_pictures/Mayu_wedding.png"
+	}
+    spriteType = {
+		name = "GFX_liangyin_wedding"
+		texturefile = "gfx/event_pictures/liangyin_wedding.png"
+	}
+	
+    ###乃爱相关
+	spriteType = {
+		name = "GFX_noa_event1"
+		texturefile = "gfx/event_pictures/noa_event1.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event2"
+		texturefile = "gfx/event_pictures/noa_event2.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event4"
+		texturefile = "gfx/event_pictures/noa_event4.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event5"
+		texturefile = "gfx/event_pictures/noa_event5.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event103"
+		texturefile = "gfx/event_pictures/noa_event103.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event7"
+		texturefile = "gfx/event_pictures/noa_event7.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event8"
+		texturefile = "gfx/event_pictures/noa_event8.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event9"
+		texturefile = "gfx/event_pictures/noa_event9.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event11"
+		texturefile = "gfx/event_pictures/noa_event11.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event12"
+		texturefile = "gfx/event_pictures/noa_event12.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event13"
+		texturefile = "gfx/event_pictures/noa_event13.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event14"
+		texturefile = "gfx/event_pictures/noa_event14.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event15"
+		texturefile = "gfx/event_pictures/noa_event15.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event10001"
+		texturefile = "gfx/event_pictures/noa_event10001.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event101"
+		texturefile = "gfx/event_pictures/noa_event101.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event102"
+		texturefile = "gfx/event_pictures/noa_event102.png"
+	}
+	spriteType = {
+		name = "GFX_ningning_qibaoqi"
+		texturefile = "gfx/event_pictures/ningning_qibaoqi.png"
+	}
+
+
+	###Y芳乃相关
+	spriteType = {
+		name = "GFX_yoshino_event1"
+		texturefile = "gfx/event_pictures/yoshino_event1.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event2"
+		texturefile = "gfx/event_pictures/yoshino_event.2.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event4"
+		texturefile = "gfx/event_pictures/yoshino_event4.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event5"
+		texturefile = "gfx/event_pictures/yoshino_event5.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event103"
+		texturefile = "gfx/event_pictures/noa_event103.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event7"
+		texturefile = "gfx/event_pictures/yoshino_event7.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event8"
+		texturefile = "gfx/event_pictures/yoshino_event8.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event9"
+		texturefile = "gfx/event_pictures/yoshino_event9.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event11"
+		texturefile = "gfx/event_pictures/yoshino_event11.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event12"
+		texturefile = "gfx/event_pictures/noa_event12.png"
+	}
+	spriteType = {
+		name = "GFX_yoshino_event13"
+		texturefile = "gfx/event_pictures/noa_event13.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event14"
+		texturefile = "gfx/event_pictures/noa_event14.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event15"
+		texturefile = "gfx/event_pictures/noa_event15.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event10001"
+		texturefile = "gfx/event_pictures/noa_event10001.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event101"
+		texturefile = "gfx/event_pictures/noa_event101.png"
+	}
+	spriteType = {
+		name = "GFX_noa_event102"
+		texturefile = "gfx/event_pictures/noa_event102.png"
+	}
+	spriteType = {
+		name = "GFX_ningning_qibaoqi"
+		texturefile = "gfx/event_pictures/ningning_qibaoqi.png"
+	}
+
+	###彩里
+
+	spriteType = {
+		name = "GFX_sairi_event1"
+		texturefile = "gfx/event_pictures/sairi_event1.png"
+	}
+	spriteType = {
+		name = "GFX_sairi_event2"
+		texturefile = "gfx/event_pictures/sairi_event2.png"
+	}
+	spriteType = {
+		name = "GFX_sairi_event3"
+		texturefile = "gfx/event_pictures/sairi_event2.png"
+	}
+	spriteType = {
+		name = "GFX_sairi_event4"
+		texturefile = "gfx/event_pictures/sairi_event4.png"
+	}
+	spriteType = {
+		name = "GFX_sairi_event5"
+		texturefile = "gfx/event_pictures/sairi_event5.png"
+	}
+	spriteType = {
+		name = "GFX_sairi_event101"
+		texturefile = "gfx/event_pictures/sairi_event101.png"
+	}
+	spriteType = {
+		name = "GFX_LY_event"
+		texturefile = "gfx/event_pictures/LY_event.png"
+	}
+	
+	#科技
+	spriteType = { 
+     name = "GFX_unit_YZ_engineer_icon_medium"				
+     textureFile = "gfx/counters/unit_YZ_engineer_icon.dds"  
+     noOfFrames = 2
+   	}
+
+    spriteType = { 
+     name = "GFX_unit_YZ_engineer_icon_medium_white" 					
+     textureFile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds" 
+     noOfFrames = 2
+   	}
+
+    spriteType = {
+     name = "GFX_unit_YZ_engineer_icon_small"
+     texturefile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds"
+     legacy_lazy_load = no
+     noOfFrames = 2		
+   	}	
+	
+	spriteType = { 
+     name = "GFX_unit_YZ_field_hospital_icon_medium"				
+     textureFile = "gfx/counters/support_unit_YZ_field_hospital_icon.dds"  
+     noOfFrames = 2
+   	}
+
+    spriteType = { 
+     name = "GFX_unit_YZ_field_hospital_icon_medium_white" 					
+     textureFile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png" 
+     noOfFrames = 2
+   	}
+
+    spriteType = {
+     name = "GFX_unit_YZ_field_hospital_icon_small"
+     texturefile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png"
+     legacy_lazy_load = no
+     noOfFrames = 2		
+   	}
+
+	spriteType = {
+		name = "GFX_Yuzu_soft_Tank_organization"
+		texturefile = "gfx/organization/Yuzu_soft_Tank_organization.png"
+	}
+	spriteType = {
+		name = "GFX_Yuzu_soft_navy_and_plane_organization"
+		texturefile = "gfx/organization/Yuzu_soft_navy_and_plane_organization.png"
+	}
+	spriteType = {
+		name = "GFX_MIO_details_background_tank"
+		texturefile = "gfx/organization/thumbnail.png"
+	}
+	spriteType = {
+		name = "GFX_industry_buliding"
+		texturefile = "gfx/ideas/industry_buliding.png"
+	}
+	spriteType = {
+		name = "GFX_gloden_ten_years"
+		texturefile = "gfx/ideas/gloden_ten_years.png"
+	}
+	spriteType = {
+		name = "GFX_love_depth_tooltip"
+		texturefile = "gfx/texticons/love_depth.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_love_depth"
+		texturefile = "gfx/texticons/love_depth.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_yz_money"
+		texturefile = "gfx/texticons/yz_money.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_agricultural_mechanization"
+		texturefile = "gfx/ideas/agricultural_mechanization.png"
+		legacy_lazy_load = no
+	}
+	#制造商图标
+	spriteType = {
+		name = "GFX_idea_youzi_weaopns"
+		texturefile = "gfx/organization/AK47.png"
+	}
+	spriteType = {
+		name = "GFX_idea_youzi_screen"
+		texturefile = "gfx/organization/Ship Large4.png"
+	}
+	spriteType = {
+		name = "GFX_idea_youzi_ocean"
+		texturefile = "gfx/organization/azll.png"
+	}
+	spriteType = {
+		name = "GFX_idea_youzi_air"
+		texturefile = "gfx/organization/Wings.png"
+	}
+	spriteType = {
+		name = "GFX_idea_youzi_tank"
+		texturefile = "gfx/organization/Diamonds2.png"
+	}
+    #附属国图标我放在这里了
+	spriteType = {
+		name = "GFX_yuzu_land"
+		texturefile = "gfx/organization/Yuzu_soft_Tank_organization.png"
+	}
+
+
+
+	#军官团
+	spriteType = {
+        name = "GFX_idea_naval_yuzusoft_spirit"
+		texturefile = "gfx/ideas/navy.png"
+	}
+	spriteType = {
+        name = "GFX_idea_air_yuzusoft_spirit"
+		texturefile = "gfx/ideas/Propeller with Wings.png"
+	}
+	spriteType = {
+        name = "GFX_idea_army_yuzusoft_forces"
+		texturefile = "gfx/ideas/Hat Military.png"
+	}
+	spriteType = {
+        name = "GFX_idea_army_yuzusoft_spirit_special_forces"
+		texturefile = "gfx/ideas/special.png"
+	}
+	#统一事件
+	spriteType = {
+		name = "GFX_World_event.1_event"
+		texturefile = "gfx/event_pictures/World_event.1_event.png"
+	}
+	spriteType = {
+		name = "GFX_World_event.2_event"
+		texturefile = "gfx/event_pictures/World_event.2_event.png"
+	}
+	spriteType = {
+		name = "GFX_World_event.3_event"
+		texturefile = "gfx/event_pictures/World_event.3_event.png"
+	}
+	spriteType = {
+		name = "GFX_World_event.4_event"
+		texturefile = "gfx/event_pictures/World_event.4_event.png"
+	}
+}

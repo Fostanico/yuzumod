@@ -1,0 +1,78 @@
+yuzu_married_refresh_effect_values = {
+	if = {
+		limit = {
+			yuzu_married_wife_id_is_registered = yes
+		}
+		yuzu_married_refresh_registered_effect_values = yes
+	}
+}
+
+# 作用：仅为注册wife_id计算并刷新婚后动态修正数值；要点：外部统一调用上方包装effect，未注册角色不会执行本体。署名：伊尔诺+2026-06-09+assisted by Codex
+yuzu_married_refresh_registered_effect_values = {
+	# 作用：将心情换算为独立政治点、稳定度和生活消费品修正；要点：政治点基础效果最高30%，高心情最多降低10%生活消费品系数。署名：伊尔诺+2026-06-08+assisted by Codex
+	set_variable = { var = value_of_loving_political_power_effect value = value_of_loving }
+	multiply_variable = { value_of_loving_political_power_effect = 0.003 }
+	clamp_variable = { var = value_of_loving_political_power_effect min = 0 max = 0.3 }
+
+	set_variable = { var = value_of_loving_stability_effect value = value_of_loving }
+	multiply_variable = { value_of_loving_stability_effect = 0.0012 }
+	clamp_variable = { var = value_of_loving_stability_effect min = 0 max = 0.12 }
+
+	set_variable = { var = value_of_loving_consumer_goods_effect value = value_of_loving }
+	multiply_variable = { value_of_loving_consumer_goods_effect = -0.001 }
+	clamp_variable = { var = value_of_loving_consumer_goods_effect min = -0.1 max = 0 }
+
+	# 作用：按信赖计算陆军组织度、单位防御、科研与战争支持；要点：单位防御取代伤兵复原，满值仍为12%。署名：伊尔诺+2026-06-09+assisted by Codex
+	set_variable = { var = value_of_believity_army_org_effect value = value_of_believity }
+	multiply_variable = { value_of_believity_army_org_effect = 0.0006 }
+	clamp_variable = { var = value_of_believity_army_org_effect min = 0 max = 0.06 }
+
+	set_variable = { var = value_of_believity_defence_effect value = value_of_believity }
+	multiply_variable = { value_of_believity_defence_effect = 0.0012 }
+	clamp_variable = { var = value_of_believity_defence_effect min = 0 max = 0.12 }
+
+	set_variable = { var = value_of_believity_research_effect value = value_of_believity }
+	multiply_variable = { value_of_believity_research_effect = 0.0012 }
+	clamp_variable = { var = value_of_believity_research_effect min = 0 max = 0.12 }
+
+	set_variable = { var = value_of_believity_war_support_effect value = value_of_believity }
+	multiply_variable = { value_of_believity_war_support_effect = 0.0012 }
+	clamp_variable = { var = value_of_believity_war_support_effect min = 0 max = 0.12 }
+
+	# 作用：将羁绊换算为工厂产出、建造速度与生产效率增长；要点：最高值小幅提高至18%、12%与9%。署名：伊尔诺+2026-06-08+assisted by Codex
+	set_variable = { var = value_of_relationship_output_effect value = value_of_relationship }
+	multiply_variable = { value_of_relationship_output_effect = 0.0018 }
+	clamp_variable = { var = value_of_relationship_output_effect min = 0 max = 0.18 }
+
+	set_variable = { var = value_of_relationship_construction_effect value = value_of_relationship }
+	multiply_variable = { value_of_relationship_construction_effect = 0.0012 }
+	clamp_variable = { var = value_of_relationship_construction_effect min = 0 max = 0.12 }
+
+	set_variable = { var = value_of_relationship_efficiency_effect value = value_of_relationship }
+	multiply_variable = { value_of_relationship_efficiency_effect = 0.0009 }
+	clamp_variable = { var = value_of_relationship_efficiency_effect min = 0 max = 0.09 }
+
+	# 作用：汇总常驻属性、学习增益和强化后的战时支援动态修正；要点：政治点总加成上限提高至55%，避免协助计划被基础心情上限吞掉。署名：伊尔诺+2026-06-09+assisted by Codex
+	set_variable = { var = yuzu_married_total_political_power_effect value = value_of_loving_political_power_effect }
+	add_to_variable = { yuzu_married_total_political_power_effect = yuzu_married_assistance_political_effect }
+	add_to_variable = { yuzu_married_total_political_power_effect = yuzu_married_study_political_effect }
+	clamp_variable = { var = yuzu_married_total_political_power_effect min = 0 max = 0.55 }
+
+	set_variable = { var = yuzu_married_total_stability_effect value = value_of_loving_stability_effect }
+	add_to_variable = { yuzu_married_total_stability_effect = yuzu_married_assistance_stability_effect }
+
+	set_variable = { var = yuzu_married_total_research_effect value = value_of_believity_research_effect }
+	add_to_variable = { yuzu_married_total_research_effect = yuzu_married_study_research_effect }
+
+	set_variable = { var = yuzu_married_total_output_effect value = value_of_relationship_output_effect }
+	add_to_variable = { yuzu_married_total_output_effect = yuzu_married_production_output_effect }
+	add_to_variable = { yuzu_married_total_output_effect = yuzu_married_study_output_effect }
+
+	set_variable = { var = yuzu_married_total_construction_effect value = value_of_relationship_construction_effect }
+	add_to_variable = { yuzu_married_total_construction_effect = yuzu_married_production_construction_effect }
+
+	set_variable = { var = yuzu_married_total_efficiency_effect value = value_of_relationship_efficiency_effect }
+	add_to_variable = { yuzu_married_total_efficiency_effect = yuzu_married_production_efficiency_effect }
+
+	force_update_dynamic_modifier = yes
+}

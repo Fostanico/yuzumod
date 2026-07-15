@@ -47,7 +47,7 @@ Roka_Koharu_decision_category = {
 			clamp_variable = {		#范围
 				var = yz_money
 				#min = 0
-				max = 5000
+				max = yz_money_max
 			}
 		}
 	}

@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	#Government in Exile
+
+	
+	#柚子国的加在了这里
+	spriteType = {
+		name = "GFX_autonomy_yuzu_fans_land_icon"
+		textureFile = "gfx/organization/Yuzu_soft_Tank_organization.png"
+	}
+	
+}

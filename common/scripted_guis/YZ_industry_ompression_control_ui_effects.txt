@@ -1,0 +1,249 @@
+scripted_gui = {
+	YZ_industry_ompression_control_ui = {
+		window_name = YZ_industry_ompression_control_ui
+		context_type = decision_category
+		visible = {
+			has_country_flag = YZ_industry_ompression_start_flag
+		}
+		triggers = {
+			#民工
+			yz_industry_ompression_operation_for_civilian_factories_add_click_enable = {
+				ROOT = {
+					check_variable = {
+						var = one_time_ompression_for_civilian_factories_plus_one
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_for_civilian_factories_add_shift_click_enable = {
+				ROOT = {
+					check_variable = {
+						var = one_time_ompression_for_civilian_factories_plus_ten
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 0
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_shift_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 10
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_control_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 100
+					compare = greater_than_or_equals
+				}
+			}
+			#军工
+			yz_industry_ompression_operation_for_arma_factories_add_click_enable = {
+				ROOT = {
+					check_variable = {
+						var = one_time_ompression_for_arma_factories_plus_one
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_for_arma_factories_add_shift_click_enable = {
+				ROOT = {
+					check_variable = {
+						var = one_time_ompression_for_arma_factories_plus_ten
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 0
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_shift_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 10
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_control_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 100
+					compare = greater_than
+				}
+			}
+			#船坞
+			yz_industry_ompression_operation_for_dockyard_add_click_enable = {
+				ROOT = {
+					check_variable = {
+						var =  one_time_ompression_for_dockyard_plus_one
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_for_dockyard_add_shift_click_enable = {
+				ROOT = {
+					check_variable = {
+						var =  one_time_ompression_for_dockyard_plus_ten
+						value =  num_of_civilian_factories
+						compare = less_than_or_equals
+					}
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 0
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_shift_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 0
+					compare = greater_than
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_control_click_enabled = {
+				check_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 100
+					compare = greater_than
+				}
+			}
+		}
+		effects = {
+			#民工
+			yz_industry_ompression_operation_for_civilian_factories_add_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 1
+				}
+				#add_to_variable = {                             #我在想我到底要不要这么做——2025，8.27，12：06，伊尔诺
+				#	var = one_time_ompression_for_civilian_factories_plus_one
+				#	value = 1                                   #我决定了，我不要这么做
+				#}
+			}
+			yz_industry_ompression_operation_for_civilian_factories_add_shift_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 10
+				}
+			}
+			yz_industry_ompression_operation_for_civilian_factories_add_control_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 100
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 1
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_shift_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 10	
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_control_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_civilian_factories
+					value = 100	
+				}
+			}
+			#军工
+			yz_industry_ompression_operation_for_arma_factories_add_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 1
+				}
+			}
+			yz_industry_ompression_operation_for_arma_factories_add_shift_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 10
+				}
+			}
+			yz_industry_ompression_operation_for_arma_factories_add_control_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 100
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 1
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_shift_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 10	
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_control_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_arma_factories
+					value = 100	
+				}
+			}
+			#船坞
+			yz_industry_ompression_operation_for_dockyard_add_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 1
+				}
+			}
+			yz_industry_ompression_operation_for_dockyard_add_shift_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 10
+				}
+			}
+			yz_industry_ompression_operation_for_dockyard_add_control_click = {
+				add_to_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 100
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 1
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_shift_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 10	
+				}
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_control_click = {
+				subtract_from_variable = {
+					var = one_time_ompression_for_dockyard
+					value = 100	
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,16 @@
+sound = {
+    name = "ibaraki_rino_parquet"
+    file = "menu/ibaraki_rino_parquet.wav"
+}
+sound = {
+	name = "ibaraki_rino_yuzusoftsour"
+	file = "menu/ibaraki_rino_yuzusoftsour.wav"
+}
+sound = {
+	name = "kido_tsubasa_parquet"
+	file = "menu/kido_tsubasa_parquet.wav"
+}
+sound = {
+	name = "kido_tsubasa_yuzusoftsour"
+	file = "menu/kido_tsubasa_yuzusoftsour.wav"
+}

@@ -2,6 +2,7 @@
 
 project_tags = {
 	YZ_sp_tag_artillery
+	yz_sp_tag_type90
 	sp_tag_tank
 	sp_tag_artillery
 	sp_tag_surface_ship

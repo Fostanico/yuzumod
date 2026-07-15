@@ -190,6 +190,143 @@ defined_text = {	#研究院
 	}
 }
 
+defined_text = {	#控制面板
+	name = scr_text_1		
+	text = {
+		trigger = {
+			not = { has_country_flag = set_YzPropaganda }
+		}
+		localization_key = text_1_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_1_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_2		
+	text = {
+		trigger = {
+			not = { has_country_flag = Yoshino_industry_five_year_yes }
+		}
+		localization_key = text_2_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_2_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_3		
+	text = {
+		trigger = {
+			not = { has_country_flag = open_YZS_military_academy }
+		}
+		localization_key = text_3_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_3_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_4		
+	text = {
+		trigger = {
+			not = { has_country_flag = YZS_scientist_category_show }
+		}
+		localization_key = text_4_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_4_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_5		
+	text = {
+		trigger = {
+			not = { has_country_flag = yzc_armor_decision }
+		}
+		localization_key = text_5_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_5_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_6		
+	text = {
+		trigger = {
+			not = { has_country_flag = YzOpreative_open }
+		}
+		localization_key = text_6_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_6_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_7		
+	text = {
+		trigger = {
+			not = { has_country_flag = open_traot }
+		}
+		localization_key = text_7_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_7_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_11		
+	text = {
+		trigger = {
+			not = { has_country_flag = qiyong_yuzu_culture_department }
+		}
+		localization_key = text_11_1
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_11_2
+	}
+}
+defined_text = {	#控制面板
+	name = scr_text_12		
+	text = {
+		trigger = {
+			
+		}
+		localization_key = text_12_1
+	}
+	text = {
+		trigger = {
+			not = { has_country_flag = yz_economy_department_category_close_flag }
+		}
+		localization_key = text_12_2
+	}
+}
+
+
 
 defined_text = {
 	name = love_depth_level_localisation	#好感等级

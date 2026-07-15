@@ -39,11 +39,17 @@ spriteTypes = {
 		name = "GFX_DR"
 		texturefile = "gfx/guis/DR.png"
 	}
+
+	#夏目不是枣子姐
+	spriteType = {
+		name = "GFX_LLLJ"
+		texturefile = "gfx/guis/LLLJ.png"
+	}
+
 	spriteType = {
 		name = "GFX_YZrecruit"
 		texturefile = "gfx/guis/YZcruit.png"
 	}
-
 	#千恋万花
 	spriteType = {
 		name = "GFX_QL_recruit_bg"
@@ -58,8 +64,8 @@ spriteTypes = {
 		texturefile = "gfx/guis/recruit_murasame.png"
 	}
 	spriteType = {
-		name = "GFX_recruit_rena"
-		texturefile = "gfx/guis/recruit_rena.png"
+		name = "GFX_recruit_lena"
+		texturefile = "gfx/guis/recruit_lena.png"
 	}
 	spriteType = {
 		name = "GFX_recruit_title"
@@ -83,8 +89,8 @@ spriteTypes = {
 		texturefile = "gfx/guis/recruit_murasame1.png"
 	}
 	spriteType = {
-		name = "GFX_recruit_rena1"
-		texturefile = "gfx/guis/recruit_rena1.png"
+		name = "GFX_recruit_lena1"
+		texturefile = "gfx/guis/recruit_lena1.png"
 	}
 	spriteType = {
 		name = "GFX_recruit_yoshino1"
@@ -511,7 +517,7 @@ spriteTypes = {
 	#夏空彼方
 	spriteType = {
 		name = "GFX_NK_recruit_bg"
-		texturefile = "gfx/guis/NK_recruit_bg.png"
+		texturefile = "gfx/guis/NK_recruit_bg.dds"
 	}
 	spriteType = {
 		name = "GFX_recruit_chihaya"
@@ -533,7 +539,7 @@ spriteTypes = {
 	#天神乱漫
 	spriteType = {
 		name = "GFX_TL_recruit_bg"
-		texturefile = "gfx/guis/recruit_TL_bg.png"
+		texturefile = "gfx/guis/recruit_TL_bg.dds"
 	}
 	spriteType = {
 		name = "GFX_TL_recruit_title"
@@ -591,5 +597,67 @@ spriteTypes = {
 		name = "GFX_recruit_yukari1"
 		texturefile = "gfx/guis/recruit_yukari1.png"
 	}
-	
+	#夏目不是枣子姐
+	#聚光灯柠檬果酱
+
+	spriteType = {
+		name = "GFX_LLLJ_recruit_bg"
+		texturefile = "gfx/guis/recruit_LLLJ_bg.png"
+	}
+	spriteType = {
+		name = "GFX_LLLJ_recruit_title"
+		texturefile = "gfx/guis/recruit_LLLJ_title.png"
+	}
+	spriteType = {
+		name = "GFX_LLLJ_exit"
+		texturefile = "gfx/guis/LLLJ_exit.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_ririko"
+		texturefile = "gfx/guis/recruit_ririko.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_ririko1"
+		texturefile = "gfx/guis/recruit_ririko1.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_tsukimi"
+		texturefile = "gfx/guis/recruit_tsukimi.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_tsukimi1"
+		texturefile = "gfx/guis/recruit_tsukimi1.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_anju"
+		texturefile = "gfx/guis/recruit_anju.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_anju1"
+		texturefile = "gfx/guis/recruit_anju1.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_ena"
+		texturefile = "gfx/guis/recruit_ena.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_ena1"
+		texturefile = "gfx/guis/recruit_ena1.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_nayuka"
+		texturefile = "gfx/guis/recruit_nayuka.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_nayuka1"
+		texturefile = "gfx/guis/recruit_nayuka1.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_miku"
+		texturefile = "gfx/guis/recruit_miku.png"
+	}
+	spriteType = {
+		name = "GFX_recruit_miku1"
+		texturefile = "gfx/guis/recruit_miku1.png"
+	}
 }

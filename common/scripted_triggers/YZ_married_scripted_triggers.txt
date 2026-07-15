@@ -1,0 +1,9 @@
+# 作用：集中维护已完整接入婚后UI机制的wife_id；要点：新增角色时只需在OR中追加对应wife_id。署名：伊尔诺+2026-06-09+assisted by Codex
+yuzu_married_wife_id_is_registered = {
+	OR = {
+		check_variable = { wife_id = 43 }
+
+		# 新角色框架：
+		# check_variable = { wife_id = 新角色ID }
+	}
+}

@@ -1,0 +1,38 @@
+yz_set_poster = {
+	hidden_effect = {
+		if = { 
+			limit = {
+				has_country_flag = yzposter_1st_solt_empty
+			}
+			set_variable = { yz_poster_icon_frame_1 = TEMPyz_poster_icon_frame }
+			hidden_effect = {
+				country_event = { id = start_event.101 days = 180 }
+				set_country_flag = { flag = yzposter_1st_solt_empty_again_time days = 180 } 
+			}
+			clr_country_flag = yzposter_1st_solt_empty
+		}
+		else_if = { 
+			limit = {
+				has_country_flag = yzposter_2nd_solt_empty
+			}
+			set_variable = { yz_poster_icon_frame_2 = TEMPyz_poster_icon_frame }
+			hidden_effect = {
+				country_event = { id = start_event.102 days = 180 }
+				set_country_flag = { flag = yzposter_2nd_solt_empty_again_time days = 180 } 
+			}
+			clr_country_flag = yzposter_2nd_solt_empty
+		}
+		else_if = { 
+			limit = {
+				has_country_flag = yzposter_3rd_solt_empty
+			}
+			set_variable = { yz_poster_icon_frame_3 = TEMPyz_poster_icon_frame }
+			country_event = { id = start_event.103 days = 180 }
+			hidden_effect = {
+				
+				set_country_flag = { flag = yzposter_3rd_solt_empty_again_time days = 180 } 
+			}
+			clr_country_flag = yzposter_3rd_solt_empty
+		}
+	}
+}

@@ -1,0 +1,204 @@
+music_station = "yuzu_event"    #mod的事件音乐——2025.8.4,15:58——伊尔诺
+music = {
+	song = "youzu25"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}		
+	}	
+}
+
+music = {
+	song = "youzu26"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.33
+		}		
+	}	
+}
+music = {
+	song = "non_vult"
+	
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+		}		
+	}	
+}
+music = {
+	song = "youzu29"
+	
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+		}		
+	}	
+}
+music = {
+	song = "dokomademotsuzukukonomichiwo"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "Michael_Jackson_Bad"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "yuzu_Dies_irae"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "scp_dear_you"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "napoleon_dark_night"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "mile_likelihood"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "ReAliZe_Piano_ver"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "kkrsong1"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+		}		
+	}	
+}
+music = {
+	song = "yuzu_sing_our_moving_spring"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "yuzu_tsubasawokudasai"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.33
+		}
+	}		
+}
+music = {
+	song = "yuzu_unite_world_f"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "yuzu_unite_world_n"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "stalin_cannon_song"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "sing_our_qingchun"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "give_me_a_alwyas_lie"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "cross_mountain_cross_plain"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "a_voice_from_best_future"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "time_forward"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "Binary_Sunset"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "glory_war"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "boom_boom_talv"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "when_that_day_really_comes"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "oh_field_my_field"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "fuyuno_daiyamondo"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "battle_carry_on_violet_ver"
+	chance = {
+		factor = 0.33
+	}
+}
+music = {
+	song = "the_song_of_guanyu"
+	chance = {
+		factor = 0.33
+	}
+}

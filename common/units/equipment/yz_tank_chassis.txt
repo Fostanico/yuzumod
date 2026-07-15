@@ -1,0 +1,159 @@
+equipments = {
+	
+	### Helpful handy information: modules that depend on other modules (ie, big guns require fixed turrets)
+	### require that the module slots for their equipment archetype are defined in operational order for AI + historical templates.
+	### tldr; If your gun requires a specific turret: define the turret slot first.
+	
+	type90_tank_chassis = {
+		year = 1936
+		is_archetype = yes
+		
+		type = {
+			armor
+		}
+		group_by = archetype
+		interface_category = interface_category_armor
+		priority = 2000
+		#picture = GFX_type90_tank_chassis_medium	
+
+		module_slots = {
+
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_modern_turret_type
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_heavy_main_armament
+				}
+			}
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_suspension_type
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_engine_type
+				}
+			}
+
+			special_type_slot_1 = {
+				required = yes
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = yes
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+				}
+			}
+
+			special_type_slot_3 = {
+				required = yes
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = yes
+				allowed_module_categories = {
+					tank_special_module
+					tank_radio_module
+				}
+			}
+
+		}
+		module_count_limit = {
+			module = type90_Rh_120_120mm_gun
+			count < 2
+		}
+
+		module_count_limit = {
+			module = type90_modern_electronic_equipment
+			count < 2
+		}
+
+		module_count_limit = {
+			module = type90_auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = type90_fire_control_system
+			count < 2
+		}
+
+		module_count_limit = {
+			module = type90_machine_guns
+			count < 2
+		}
+
+		default_modules = {
+			main_armament_slot = type90_Rh_120_120mm_gun
+			turret_type_slot = type90_tank_turret
+			suspension_type_slot = type90_hydropneumatic_suspension
+			armor_type_slot = type90_composite_armor
+			engine_type_slot = type90_Mitsubishi_10ZG32WT_engine
+			#special_type_slot_1 = type90_modern_electronic_equipment
+			#special_type_slot_2 = type90_machine_guns
+			#special_type_slot_3 = type90_fire_control_system
+			#special_type_slot_4 = type90_auto_loader
+		}
+
+		fuel_consumption = 2.5
+		maximum_speed = 14
+		build_cost_ic = 50
+		reliability = 1.2
+		armor_value = 150
+		hardness = 15
+		resources = {
+			steel = 3
+			chromium = 2
+			aluminium = 1
+			tungsten = 1
+		}
+
+		lend_lease_cost = 1
+
+		manpower = 1
+
+	}
+
+	type90_tank_chassis_1 = {
+		abbreviation = "type90"
+		#derived_variant_name = type90_tank_chassis
+		visual_level = 1
+		year = 1936
+		archetype = modern_tank_chassis
+		priority = 2000
+		module_slots = inherit
+		active = no
+		
+		upgrades = {
+			tank_nsb_engine_upgrade
+			tank_nsb_armor_upgrade
+		}
+	}
+}

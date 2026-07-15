@@ -11,18 +11,56 @@ country_event = { 		##
 	option = {
 		name = LY_event.101.a
         set_country_flag = have_suzune
-		create_corps_commander = {
-            name = "汐山凉音"
-            gender = female
-            nationality = JAP
-            traits = { maid_suzune_trait organisational_leader adaptable logistics_wizard }
-            portrait_path = "gfx\leader\suzune.png"
-            id = 12345
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 9
-            skill = 5
+		meta_effect = {
+		text = {
+		generate_character = {
+			token_base = suzune
+			name = "汐山凉音"
+			gender = female
+			nationality = JAP
+			portraits = {
+				civilian = {
+					large = "gfx\leader\suzune.png"
+					small = "gfx\leader\suzune2.png"
+				}
+			}
+			allowed_civil_war = {
+				is_ai = no
+			}
+			advisor = {  
+				slot = high_command
+				cost = 100
+				idea_token = suzune_command
+				desc = suzune_army_desc
+				ledger = army
+				traits = { suzune_army  }
+				ai_will_do = {
+					factor = 0
+				}
+			}
+			corps_commander = {
+				desc = suzune_corps_desc
+			traits={
+				maid_suzune_trait
+				organisational_leader 
+				adaptable
+				logistics_wizard
+			}
+			skill=5
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=9
+			}
+		  }
+		}
+	  }
+		random_army_leader = {
+            limit = {
+                has_trait = maid_kanna_trait
+				has_trait = maid_zaozi_trait
+            }
+            add_logistics = 1
         }
 	}
 }
@@ -38,19 +76,50 @@ country_event = { 		##
 	option = {
 		name = LY_event.102.a
         set_country_flag = have_suzune
-		create_corps_commander = {
-            name = "汐山凉音"
-            gender = female
-            nationality = JAP
-            traits = { maid_suzune_trait organisational_leader adaptable }
-            portrait_path = "gfx\leader\suzune.png"
-            id = 12345
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 9
-            skill = 5
-        }
+		meta_effect = {
+		text = {
+		generate_character = {
+			token_base = suzune
+			name = "汐山凉音"
+			gender = female
+			nationality = JAP
+			portraits = {
+				civilian = {
+					large = "gfx\leader\suzune.png"
+					small = "gfx\leader\suzune2.png"
+				}
+			}
+			allowed_civil_war = {
+				is_ai = no
+			}
+			advisor = {  
+				slot = high_command
+				cost = 100
+				idea_token = suzune_command
+				desc = suzune_army_desc
+				ledger = army
+				traits = { suzune_army  }
+				ai_will_do = {
+					factor = 0
+				}
+			}
+			corps_commander = {
+				desc = suzune_corps_desc
+			traits={
+				maid_suzune_trait
+				organisational_leader 
+				adaptable
+				logistics_wizard
+			}
+			skill=5
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=9
+			}
+		  }
+		}
+	  }
 		random_army_leader = {
             limit = {
                 has_trait = maid_kanna_trait
@@ -59,6 +128,7 @@ country_event = { 		##
             add_logistics = 1
         }
 	}
+	
 }
 
 country_event = { 		##

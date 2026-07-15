@@ -1,0 +1,402 @@
+YZ_indusrty_extra_project = {
+    YZ_industry_ompression_start = {    #简单的启动决议 2025,8.20,17:10 伊尔诺
+        icon = GFX_nicola
+        visible = {
+            OR = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_3
+            }
+
+            has_country_flag = have_nicola
+            NOT = {
+                has_country_flag = YZ_industry_ompression_start_flag
+            }
+        }
+        fire_only_once = yes
+        days_remove = 10
+        modifier = {
+            consumer_goods_factor = 0.05
+        }
+        remove_effect = {
+            custom_effect_tooltip = YZ_industry_ompression_start_flag_tooltip
+            set_country_flag = YZ_industry_ompression_start_flag
+            hidden_effect = {
+                set_variable = {
+                    yz_count_for_ompression_for_factories = 1
+                }
+                set_variable = {      #前三个是上限
+                    upper_limit_of_ompression_for_civilian_factories = 70
+                }
+                set_variable = {
+                    upper_limit_of_ompression_for_arms_factories = 70
+                }
+                set_variable = {
+                    upper_limit_of_ompression_for_dockyard  = 70
+                }
+                set_variable = {    #异次元魔法
+                    upper_limit_of_Extradimensional_Magic = 10
+                }
+                set_variable = {    #单次压缩数量
+                    one_time_ompression_for_factories = 3
+                }
+                set_variable = {     #之前想的是共用一个上限，但是很明显存在有些人500军工500民工5船坞的情况——2025，8.25，14：57
+                    one_time_ompression_for_factories_subtract_one = 2
+                }
+                set_variable = {    #单次压缩数量
+                    one_time_ompression_for_civilian_factories = 3
+                }
+                set_variable = {
+                    one_time_ompression_for_arma_factories = 3
+                }
+                set_variable = {
+                    one_time_ompression_for_dockyard = 3
+                }
+                set_variable = {    #压缩总量
+                    total_amount_of_ompression_for_civilian_factories = 0
+                }
+                set_variable = {
+                    total_amount_of_ompression_for_arms_factories = 0
+                }
+                set_variable = {
+                    total_amount_of_ompression_for_dockyard= 0
+                }
+                set_variable = {   #剩余量
+                    remaining_amount_of_civilian_factories = 70
+                }
+                set_variable = {
+                    remaining_amount_of_arma_factories = 70
+                }
+                set_variable = {
+                    remaining_amount_of_dockyard = 70
+                }
+                #set_variable = {         #这些加一减一是用来判断按钮是否可点击——2025.8，25，伊尔诺
+                #    one_time_ompression_for_civilian_factories_plus_one =  4
+                #}                        #我是大啥比我是笨居居我为什么要写这么多没有用的东西——2026.4.21，20：42，伊尔诺
+            }
+        }
+    }
+    start_round_x_project = {
+        icon = generic_independence
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = YZ_industry_ompression_start_flag
+            NOT = {
+                has_country_flag = yz_we_can_ompression_now
+                has_country_flag = yuzu_now_ompressing
+            }
+        }
+        fire_only_once = no
+        cost = 15
+        days_remove = 6
+        modifier = {
+            civilian_factory_use = 3
+        }
+        remove_effect = {
+            custom_effect_tooltip = yz_start_ompression_project
+            set_variable = {
+                total_amount_of_yz_civilian_factories = 0
+            }
+            set_variable = {
+                total_amount_of_yz_arma_factories = 0
+            }
+            set_variable = {
+                total_amount_of_yz_dockyard = 0
+            }
+            activate_mission = yz_industry_ompression_mission
+            hidden_effect = {
+                set_country_flag = yz_we_can_ompression_now
+                every_controlled_state = {
+                    add_to_variable = {
+                        var = root.total_amount_of_yz_civilian_factories
+                        value = THIS.building_level@industrial_complex
+                    }
+                    add_to_variable = {
+                        var = root.total_amount_of_yz_arma_factories
+                        value = THIS.building_level@arms_factory
+                    }
+                    add_to_variable = {
+                        var = root.total_amount_of_yz_dockyard
+                        value = THIS.building_level@dockyard
+                    }
+                }
+            }
+        }
+    }
+    yz_industry_ompression_mission = {
+        activation = {
+            has_country_flag = yz_we_can_ompression_now
+        }
+        available = {
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = yz_we_can_ompression_now
+                }
+            }
+        }
+        days_mission_timeout = 5
+        is_good = no
+        timeout_effect = {
+            clr_country_flag = yz_we_can_ompression_now
+        }
+    }
+    YZ_civilian_factories_transfer = {                 #地图外民工——2025，8.22 17：39，伊尔诺
+        icon = generic_independence
+        available = {
+            check_variable = {
+                var = total_amount_of_yz_civilian_factories
+                value =  one_time_ompression_for_civilian_factories
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = remaining_amount_of_civilian_factories
+                value = one_time_ompression_for_civilian_factories
+                compare = greater_than_or_equals
+            }
+            custom_trigger_tooltip = {
+                tooltip = yz_the_requirement_for_civilian_factoires
+            }
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = yuzu_now_ompressing
+                }
+            }
+        }
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = YZ_industry_ompression_start_flag
+            has_country_flag = yz_we_can_ompression_now
+        }
+        fire_only_once = no
+        days_remove = 6  #60
+        modifier = {
+            civilian_factory_use = 3
+        }
+        complete_effect = {
+            set_country_flag = yuzu_now_ompressing
+        }
+        remove_effect = {
+            clr_country_flag = yuzu_now_ompressing
+            hidden_effect = {
+                yz_civilian_transfer = yes
+            }
+            add_to_variable = {
+                var = total_amount_of_ompression_for_civilian_factories
+                value = one_time_ompression_for_civilian_factories
+            }
+            add_to_variable = {
+                var = yz_count_for_ompression_for_factories
+                value = 1
+            }
+            subtract_from_variable = {
+                var = remaining_amount_of_civilian_factories
+                value = one_time_ompression_for_civilian_factories
+            }
+            custom_effect_tooltip = yz_we_are_transfering
+        }
+    }
+    YZ_arma_factories_transfer = {                 #获得地图外军工
+        icon = generic_independence
+        available = {
+            check_variable = {
+                var = total_amount_of_yz_arma_factories
+                value =  one_time_ompression_for_arma_factories
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = remaining_amount_of_arma_factories
+                value = one_time_ompression_for_arma_factories
+                compare = greater_than_or_equals
+            }
+            custom_trigger_tooltip = {
+                tooltip = yz_the_requirement_for_arma_factories
+            }
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = yuzu_now_ompressing
+                }
+            }
+        }
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = YZ_industry_ompression_start_flag
+            has_country_flag = yz_we_can_ompression_now
+        }
+        fire_only_once = no
+        days_remove = 6
+        modifier = {
+            civilian_factory_use = 3
+        }
+        complete_effect = {
+            set_country_flag = yuzu_now_ompressing
+        }
+        remove_effect = {
+            clr_country_flag = yuzu_now_ompressing
+            add_to_variable = {
+                var = total_amount_of_ompression_for_arms_factories
+                value = one_time_ompression_for_arma_factories
+            }
+            add_to_variable = {
+                var = yz_count_for_ompression_for_factories
+                value = 1
+            }
+            subtract_from_variable = {
+                var = remaining_amount_of_arma_factories
+                value = one_time_ompression_for_arma_factories
+            }
+            hidden_effect = {
+                yz_arma_transfer = yes
+            }
+            custom_effect_tooltip = yz_we_are_transfering
+        }
+    }
+    YZ_dockyard_factories_transfer = {             #手动地图外船坞
+        icon = generic_independence
+        available = {
+            check_variable = {
+                var = total_amount_of_yz_dockyard
+                value =  one_time_ompression_for_dockyard
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = remaining_amount_of_dockyard
+                value = one_time_ompression_for_dockyard
+                compare = greater_than_or_equals
+            }
+            custom_trigger_tooltip = {
+                tooltip = yz_the_requirement_for_dockyard
+            }
+            hidden_trigger = {
+                NOT = {
+                    has_country_flag = yuzu_now_ompressing
+                }
+            }
+        }
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = YZ_industry_ompression_start_flag
+            has_country_flag = yz_we_can_ompression_now
+        }
+        fire_only_once = no
+        days_remove = 6
+        modifier = {
+            civilian_factory_use = 5
+        }
+        complete_effect = {
+            set_country_flag = yuzu_now_ompressing
+        }
+        remove_effect = {
+            clr_country_flag = yuzu_now_ompressing
+            add_to_variable = {
+                var = total_amount_of_ompression_for_dockyard
+                value = one_time_ompression_for_dockyard
+            }
+            add_to_variable = {
+                var = yz_count_for_ompression_for_factories
+                value = 1
+            }
+            subtract_from_variable = {
+                var = remaining_amount_of_dockyard
+                value = one_time_ompression_for_dockyard
+            }
+            hidden_effect = {
+                yz_dockyard_transfer = yes
+            }
+            custom_effect_tooltip = yz_we_are_transfering
+        }
+    }
+    learn_ompression_skill_from_ayase = {
+        icon = generic_independence
+        available = {
+            has_country_flag = have_0nai
+        }
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = YZ_industry_ompression_start_flag
+        }
+        fire_only_once = yes
+        cost = 15
+        days_remove = 6
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            custom_effect_tooltip = yz_we_learn_from_ayase
+            hidden_effect = {
+                set_variable = {
+                    upper_limit_of_ompression_for_civilian_factories = 7000
+                }
+                set_variable = {
+                    upper_limit_of_ompression_for_arms_factories = 7000
+                }
+                set_variable = {
+                    upper_limit_of_ompression_for_dockyard  = 7000
+                }
+                add_to_variable = {   #剩余量
+                    remaining_amount_of_civilian_factories = 6930
+                }
+                add_to_variable = {
+                    remaining_amount_of_arma_factories = 6930
+                }
+                add_to_variable = {
+                    remaining_amount_of_dockyard = 6930
+                }
+            }
+        }
+    }
+}
+
+#YZ_civilian_factories_transfer = {                 #手动地图外民工   #尽管这个决议已经废弃不用，但是我还是要保留下来——2025.8.20,17:22,伊尔诺
+#	icon = generic_independence
+#
+#	available = {
+#		num_of_civilian_factories_available_for_projects > 4
+#	}
+#
+#	visible = {
+#		or = {
+#            has_country_flag = qiyong_youzi_2
+#            has_country_flag = qiyong_youzi_3
+#        }
+#		has_country_flag = have_nicola
+#		NOT = {
+#			has_country_flag = YZ_civilian_factories_transfer_initiate_flag
+#		}
+#	}
+#
+#	fire_only_once = no
+#   cost = 15
+#	days_remove = 60
+#
+#	modifier = {
+#		civilian_factory_use = 5
+#	}
+#   ai_will_do = {   #小萝莉是xnn的直接证据
+#		factor = 10
+#	}
+#
+#	remove_effect = {
+#		custom_effect_tooltip = youzu_factory_will_be_out_map_with_extra_one_tt
+#		random_owned_controlled_state = {
+#			limit = {
+#				industrial_complex > 2
+#				is_core_of = ROOT
+#			}
+#			remove_building = {
+#				type = industrial_complex
+#				level = 3
+#			}
+#		}
+#		add_offsite_building = {
+#			type = industrial_complex
+#			level = 4
+#		}
+#		#random_owned_controlled_state = {
+#		#	limit = {
+#		#		is_core_of = ROOT
+#		#	}
+#		#	add_extra_state_shared_building_slots = 2
+#		#}
+#	}
+#}
+

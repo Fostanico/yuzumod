@@ -1,0 +1,165 @@
+guiTypes = {
+    containerWindowType = {
+        name = "Yuzusoft_sour_base"
+        position = {
+            x = -77         #我个人还是习惯这样分行来写——伊尔诺.2025.5.28，15：42
+            y = -600
+        }
+        orientation = LOWER_RIGHT
+        size = {
+            width = 77
+            height = 60
+        }
+        background = {
+            name = "YZrecruit_BG"
+            quadTextureSprite = "GFX_mini_tooltip"
+        }
+        buttonType = {
+            name = "Start_yuzusoftour"
+            position = { 
+                x = 0 
+                y = 0 
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_yuzusoft_sour_2"
+            pdx_tooltip = "Yuzusoft_sour_recurit_tooltip"
+            clicksound = kido_tsubasa_yuzusoftsour
+        }
+    }
+    containerWindowType = {
+        name = "parquet_recruit"
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = LOWER_RIGHT
+        size = {
+            width = 960
+            height = 540
+        }
+        show_position = {
+            x = -280
+            y = -610
+        }
+        hide_position = {
+            x = -77
+            y = -610
+        }
+        animation_time = 500
+        show_animation_type = decelerated
+        hide_animation_type = accelerated
+        background = {
+            name = "parquet_logo"
+            quadTextureSprite = "GFX_parquet_logo"
+        }
+        buttonType = {
+            name = "parquet"
+            position = { 
+                x = 0 
+                y = 0 
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_parquet_logo"
+            pdx_tooltip = "parquet_tooltip"
+            clicksound = ibaraki_rino_parquet
+        }
+    }
+    containerWindowType = {      #这个是点了parquet开始之后切换的
+        name = "parquet_gaming"
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = LOWER_RIGHT
+        size = {
+            width = 960
+            height = 540
+        }
+        show_position = {
+            x = -280
+            y = -610
+        }
+        hide_position = {
+            x = -77
+            y = -610
+        }
+        animation_time = 500
+        show_animation_type = decelerated
+        hide_animation_type = accelerated
+        background = {
+            name = "parquet_logo"
+            quadTextureSprite = "GFX_parquet_logo_gaming"
+        }
+        buttonType = {
+            name = "parquet"
+            position = { 
+                x = 0 
+                y = 0 
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_parquet_logo_gaming"
+            pdx_tooltip = "parquet_started_tooltip"
+        }
+    }
+    containerWindowType = {
+        name = "parquet_recruit_ui"
+        position = {
+            x = 0
+            y = 0
+        }
+        orientation = CENTER
+        size = {
+            width = 960
+            height = 540
+        }
+        show_position = {
+            x = -400
+            y = -350
+        }
+        hide_position = {
+            x = -400
+            y = -4000
+        }
+        animation_time = 500
+        show_animation_type = decelerated
+        hide_animation_type = accelerated
+        background = {
+            name = "parquet_background"
+            quadTextureSprite = "GFX_parquet_background"
+        }
+        buttonType = {
+            name = "parquet_story_start"                    #这个或许可以换一种方法——伊尔诺.2025.5.29,23:39
+            position = {
+                x = 50
+                y = 0 
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_parquet_futari_2"
+            pdx_tooltip = "parquet_story_tooltip"
+        }
+        buttonType = {
+            name = "parquet_exit"
+            position = {
+                x = 780
+                y = 0
+            }
+            size = { 
+                width = 960 
+                height = 540 
+            }
+            quadTextureSprite = "GFX_parquet_exit"
+        }
+    }
+}

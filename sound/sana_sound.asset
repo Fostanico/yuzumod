@@ -1,0 +1,19 @@
+#百科链接https://hoi4.paradoxwikis.com/Sound_modding
+#完整的asset文件应当包括catergoty,sound_effect/music,sound/song三个条目
+sound = {
+    name = "sana_ability_sound"
+    file = "sana_sound/sana_ability_sound.wav"
+}
+category = {
+    name = "sana_ability_sound"
+    soundeffects = {
+        sana_ability_sound
+    }
+}
+soundeffect = {
+    name = sana_ability_sound
+    volume = 0.6
+    sounds = {
+        sound = sana_ability_sound
+    }
+}

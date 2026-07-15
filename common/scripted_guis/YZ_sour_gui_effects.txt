@@ -1,0 +1,243 @@
+scripted_gui = {
+    yz_sour_gui = {
+        window_name = Yuzusoft_sour_base
+        context_type = player_context
+        visible = {
+            or = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            #is_debug = yes
+        }
+        effects = {
+            Start_yuzusoftour_click ={
+                if = {
+                    limit = {
+                        has_country_flag = show_yuzusoft_sour_recruit
+                    }
+                    clr_country_flag = show_yuzusoft_sour_recruit
+                }
+                else = {
+                    set_country_flag = show_yuzusoft_sour_recruit
+                }
+            }
+        }
+        triggers = {
+            Yuzusoft_sour_base_visible = {
+                or = {
+                    has_country_flag = qiyong_youzi_1
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+            }
+        }
+    }
+    parquet_start_gui = {
+        window_name = "parquet_recruit"
+        context_type = player_context
+        visible = {
+            has_country_flag = show_yuzusoft_sour_recruit
+            not = {
+                has_country_flag = parquet_started
+            }
+        }
+        effects = {
+            parquet_click = {
+                if = {
+                    limit = {
+                        has_country_flag = show_parquet_recruit
+                    }
+                    clr_country_flag = show_parquet_recruit
+                }
+                else = {
+                    set_country_flag = show_parquet_recruit
+                }
+            }
+        }
+    }
+    parquet_started_gui = {
+        window_name = "parquet_gaming"
+        context_type = player_context
+        visible = {
+            has_country_flag = parquet_started
+			has_country_flag = show_yuzusoft_sour_recruit
+        }
+    }
+    parquet = {
+        window_name = parquet_recruit_ui
+        context_type = player_context
+        visible = {
+            has_country_flag = show_parquet_recruit
+        }
+        effects = {
+            parquet_exit_click = {
+                clr_country_flag = show_parquet_recruit
+            }
+            parquet_story_start_click = {              #因为剧情没有写好，预留——2025.5.30,11:16,伊尔诺
+                set_country_flag =  parquet_started
+				clr_country_flag = show_parquet_recruit
+				meta_effect = {
+					 text = {
+                        generate_character = {
+                            token_base = ibaraki_rino
+                            name = "茨木梨乃"
+                            can_be_captured = no
+                            gender = female
+                            nationality = JAP
+                            portraits = {
+                                civilian = {
+                                    large = "gfx\leader\ibaraki_rino.png"
+                                    small = "gfx\leader\ibaraki_rino_small.png"
+                                }
+                            }
+                            allowed_civil_war = { is_ai = no }
+                            corps_commander = {
+                                desc = ibaraki_rino_corps_desc
+                                traits = {
+                                    ibaraki_rino_only_at_night
+									bmi_device
+                                }
+                                skill = 5
+                                attack_skill = 7
+                                defense_skill = 3
+                                planning_skill = 5
+                                logistics_skill = 3
+                            }
+                        }
+                    }
+				}
+                meta_effect = {
+					text = {
+                        generate_character = {
+                            token_base = kido_tsubasa
+                            name = "城门翼"
+                            can_be_captured = no
+                            gender = female
+                            nationality = JAP
+                            portraits = {
+                                civilian = {
+                                    large = "gfx\leader\kido_tsubasa.png"
+                                    small = "gfx\leader\kido_tsubasa_small.png"
+                                }
+                            }
+                            allowed_civil_war = { is_ai = no }
+                            corps_commander = {
+                                desc = kido_tsubasa_corps_desc
+                                traits = {
+									yasaidaburuninnikuaboramashimashibaagaa_trait
+                                    kido_tsubasa_only_at_sun
+									bmi_device
+                                }
+                                skill = 5
+                                attack_skill = 3
+                                defense_skill = 7
+                                planning_skill = 6
+                                logistics_skill = 7
+                            }
+                        }
+                    }
+                }                                          
+            }                                          
+        }                                              
+    }                                                  
+}                                                      
+#这里也许我能写，也许不能，这几天我到底关于parquet有没有一个真正可行的想法呢？
+#或许有，也或许没有。到头来写这些东西还是要靠别人来想这个到底要做些什么内容。
+#这一段文字我不知道会有多少人看，也许会有，也可能不会有人在意到这一段话
+#就像很多代码里的注释，除了写下注释的人，不知道还会有多少人去看别人写的注释。
+#但是这并不代表注释是没有意义的，但是其意义是什么我也不甚明晰。
+#它的存在本身或许是一个意义，也可能是其他，我不知道。
+#But now when someone see that there is a lot of things, they may doubt:
+#who wrote this?
+#I don't knwo why I want to do that. Maybe no reasen is the best resaon.
+#在代码里塞这么一段不会有多少人看的一段话我不知道是为什么
+#我不想再写了
+#2025.5.30，11：25——伊尔诺
+
+
+
+#不知道怎么得，有些被藏起来的东西依然能被找到，
+#一些东西既然被藏起来了
+#一部分是不想被人找到
+#还有一种是不想主动让别人知道
+#其实就是想让人知道
+#没事，阿诺从来没有害怕的东西
+#阿诺就在这里，阿诺看着所有人，阿诺爱着大家
+#我好困，好困，好困
+#我好想睡觉
+#阿诺在说什么
+#阿诺在想什么
+#阿诺在做什么
+#阿诺是什么
+#阿诺
+#我在这里
+#我就在这里
+#我就在看着你
+#我不知道
+#我知道
+#是因为喜欢还是因为当初的一个奇妙的念想
+#为什么还要在这里，为什么还要坚持
+#真的知道自己吗
+#所以啊
+#所以放声歌唱吧
+#歌唱我们动荡的青春
+#歌唱我们最美好的前途
+#就这样吧
+#2026.6.12，20：32——伊尔诺
+#
+#どういうわけか、
+#隠されていたものさえ、
+#いつか誰かに見つけられることがある。
+#
+#何かを隠すのは、
+#見つけてほしくないからかもしれない。
+#
+#けれど、もうひとつ。
+#自分からは誰にも伝えたくないだけで、
+#本当は誰かに知ってほしい。
+#そんな隠し方もある。
+#
+#大丈夫。
+#アノは何も恐れたことなんてない。
+#
+#アノはここにいる。
+#アノはみんなを見つめている。
+#アノはみんなを愛している。
+#
+#眠い。眠い。眠い。
+#もう、眠ってしまいたい。
+#
+#アノは何を話しているのだろう。
+#アノは何を考えているのだろう。
+#アノは何をしているのだろう。
+#アノとは、何なのだろう。
+#
+#アノ。
+#
+#私はここにいる。
+#私は、すぐここにいる。
+#私はここで、あなたを見つめている。
+#
+#わからない。
+#わかっている。
+#
+#それは好きだからなのか。
+#それとも、あの日ふと芽生えた
+#不思議な思いつきのためなのか。
+#
+#なぜ今もここにいるのだろう。
+#なぜ今も歩み続けているのだろう。
+#
+#本当に、自分のことを
+#わかっているのだろうか。
+#
+#だから、
+#だから声の限りに歌おう。
+#
+#激動の青春を歌おう。
+#私たちの輝かしい未来を歌おう。
+#
+#それでは、これで。
+#
+#2026.6.12，20：55——イエノ

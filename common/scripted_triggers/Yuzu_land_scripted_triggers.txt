@@ -36,15 +36,32 @@ Yuzu_can_form_yuzu_land = {
 	custom_trigger_tooltip = {
 		tooltip = Yuzu_can_form_yuzu_land_tt
 		ROOT = {
-			check_variable = {
-				yuzu_form_yuzu_land_days > yuzu_form_yuzu_land_days_basic_require
+			check_variable = {  
+				var = yuzu_form_yuzu_land_days
+    			value = yuzu_form_yuzu_land_days_basic_require
+    			compare = greater_than_or_equals
 			}
 		}
 	}
 	ROOT = {
 		check_variable = {
-			yuzu_form_yuzu_land_days > yuzu_form_yuzu_land_days_basic_require
+			#yuzu_form_yuzu_land_days > yuzu_form_yuzu_land_days_basic_require
+			var = yuzu_form_yuzu_land_days
+    		value = yuzu_form_yuzu_land_days_basic_require
+    		compare = greater_than_or_equals
 		}
 	}
+}
+Yuzu_can_repay_bonds_by_yzmoney = {        #我们可以偿还
+	custom_trigger_tooltip = {
+		tooltip = we_can_repay_bonds_by_yzmoney
+	}
+	ROOT = {
+		check_variable = {
+			var = yz_money
+			value = bond_we_need_to_repay
+			compare = greater_than_or_equals
+		}
+    }
 }
 

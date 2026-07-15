@@ -40,6 +40,14 @@ spriteTypes = {
 		texturefile = "gfx/leader/Nanami.png"
 	}
 	spriteType = {
+		name = "GFX_portrait_super_ruri"
+		texturefile = "gfx/leader/ruri_capital_big.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_sirno_capital"
+		texturefile = "gfx/leader/Irno_character.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_TSL_sana"
 		texturefile = "gfx/leader/sana.png"
 	}
@@ -72,6 +80,18 @@ spriteTypes = {
 		texturefile = "gfx/traits/dahefuzi.png"
 	}
 	spriteType = {
+		name = "GFX_trait_power_of_fox_fairy"
+		texturefile = "gfx/traits/power_of_fox_fairy.png"
+	}
+	spriteType = {
+		name = "GFX_trait_profersional_see_general"
+		texturefile = "gfx/traits/profersional_see_general.png"
+	}
+	spriteType = {
+		name = "GFX_trait_ad_victorian_in_see"
+		texturefile = "gfx/traits/ad_victoriam.png"
+	}
+	spriteType = {
 		name = "GFX_trait_tielurenou"
 		texturefile = "gfx/traits/tielurenou.png"
 	}
@@ -100,7 +120,43 @@ spriteTypes = {
 		texturefile = "gfx/leader/meiyu.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_ADD_yuyue"
+		name = "GFX_leader_nor"
+		texturefile = "gfx/leader/nor_leader.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_nozomi"
+		texturefile = "gfx/leader/Nozomi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_tsumugi"
+		texturefile = "gfx/leader/chou.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_suou"
+		texturefile = "gfx/leader/suou.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_wakana"
+		texturefile = "gfx/leader/Wakana.png"
+	}
+	spriteType = {
+		name = "GFX_leader_misaka_makoto"
+		texturefile = "gfx/leader/misaka_makoto_leader.png"
+	}
+	spriteType = {
+		name = "GFX_leader_huhu"
+		texturefile = "gfx/leader/huhu_leader.png"
+	}
+	spriteType = {
+		name = "GFX_leader_chun"
+		texturefile = "gfx/leader/chun_big_leader.png"
+	}
+	spriteType = {
+		name = "GFX_leader_aragami_sayo"                            #2025.4.1,23:27,伊尔诺     
+		texturefile = "gfx/leader/sayo_leader.png"                  #<-不知道为什么，插件总是显示这个在文件夹里没找到，
+	}                                                               #但是在预览功能里却能找到这个图片，如果其他人看到这句话
+	spriteType = {                                                  #可能会发现这里没有报错，但是我不知道为什么在我电脑上
+		name = "GFX_portrait_ADD_yuyue"                             #会报错
 		texturefile = "gfx/leader/yuyue.png"
 	}
 	spriteType = {
@@ -127,10 +183,57 @@ spriteTypes = {
 		name = "GFX_portrait_toko"
 		texturefile = "gfx/leader/Toko.png"
 	}
-
+	spriteType = {
+		name = "GFX_portrait_masaki"
+		texturefile = "gfx/leader/Masaki.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ruri"
+		texturefile = "gfx/leader/Ruri.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_sayo"
+		texturefile = "gfx/leader/aragami_sayo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_sakuyahime"
+		texturefile = "gfx/leader/Sakuyahime.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_misaka_makoto"
+		texturefile = "gfx/leader/misaka_makoto.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_sayo"
+		texturefile = "gfx/leader/aragami_sayo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_sakuyahime"
+		texturefile = "gfx/leader/Sakuyahime.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_misaka_makoto"
+		texturefile = "gfx/leader/misaka_makoto.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_orie"
+		texturefile = "gfx/leader/Orie.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_kaguya"
+		texturefile = "gfx/leader/Kaguya.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_kurumi"
+		texturefile = "gfx/leader/Kurumi.png"
+	}
 	#工业企业
 	spriteType = {
 		name = "GFX_idea_aishanghuoche_train"
 		texturefile = "gfx/ideas/diguotielu.png"
+	}
+	spriteType = {
+		name = "GFX_super_nature_science_house"
+		texturefile = "gfx/ideas/chaoziranyan.png"
 	}
 }

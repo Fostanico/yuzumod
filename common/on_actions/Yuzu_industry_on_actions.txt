@@ -1,0 +1,180 @@
+on_actions = {
+	on_weekly = {        #每周计算一次需要偿还的金额
+		effect = {
+			#if = {        /*废弃，尽管看起来难看，但是处于某种目的我将其保留*/
+			#	limit = {
+			#			has_country_flag = expend_issuance_first
+			#		}
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#	set_temp_variable = {
+			#		var = temp_bond_start
+			#		value = bond_we_need_to_repay
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100.05
+			#	}
+			#	subtract_from_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = temp_bond_start
+			#	}
+			#	divide_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#}
+			#else_if = {
+			#	limit = {
+			#		has_country_flag = expend_issuance_first
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#	set_temp_variable = {
+			#		var = temp_bond_first
+			#		value = bond_we_need_to_repay
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100.1
+			#	}
+			#	subtract_from_variable = {
+			#		var = bond_we_need_to_repay
+			#	}
+			#	divide_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#}
+			#else_if = {
+			#	limit = { 
+			#		has_country_flag = expend_issuance_second
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 1.005
+			#	}
+			#}
+			#else_if = {
+			#	limit = { 
+			#		has_country_flag = expend_issuance_third
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#	set_temp_variable = {
+			#		var = temp_bond_first
+			#		value = bond_we_need_to_repay
+			#	}
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100.15
+			#	}
+			#	subtract_from_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = temp_bond_first
+			#	}
+			#	divide_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 100
+			#	}
+			#}
+			#else = {
+			#	multiply_variable = {
+			#		var = bond_we_need_to_repay
+			#		value = 1.01
+			#	}
+			#}
+			if = {
+				limit = { 
+					has_country_flag = now_we_issuing_bonds
+					NOT = {
+						has_country_flag = finished_repayment_of_bonds
+					}
+				}
+				add_to_variable = {
+					var = yz_interest_rate
+					value = 0.001
+				}
+				add_to_variable = {
+					var = yz_interest_rate_we_can_see
+					value = 0.001
+				}
+			}
+		}
+	}
+	on_weekly = {      #每周计算一次要还多少钱
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = now_we_issuing_bonds
+					NOT = {
+						has_country_flag = finished_repayment_of_bonds
+					}
+				}
+				set_temp_variable = {
+					var = tmpuse_bond
+					value = bond_we_need_to_repay
+				}
+				#multiply_temp_variable = {
+				#	var = tmpuse_bond
+				#	value = 100
+				#}
+				multiply_temp_variable = {
+					var = tmpuse_bond
+					value = yz_interest_rate_we_can_see
+				}
+				divide_temp_variable = {
+					var = tmpuse_bond
+					value = 100
+				}
+				add_to_variable = {
+					var = bond_we_need_to_repay
+					value = tmpuse_bond
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = bond_we_need_to_repay
+							value = yz_money_max
+							compare = greater_than_or_equals
+						}
+					}
+					set_country_flag = yz_debt_collapse
+					country_event = yzbonds_event.2
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = Yoshino_industry_long_term_invest_now_start
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = yz_money
+							value = basic_additional_yz_money_spend
+							compare = greater_than_or_equals
+						}
+					}
+					subtract_from_variable = {
+						yz_money = basic_additional_yz_money_spend
+					}
+				}
+				else = {
+					#country_event = yzbonds_event.7
+					set_country_flag = monly_yz_money_spent_too_much
+				}
+			}
+		}
+	}
+}

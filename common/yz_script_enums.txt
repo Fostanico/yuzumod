@@ -1,0 +1,15 @@
+
+script_enum_equipment_bonus_type = {
+	## This script enum contains all equipment types that can be used in equipment_bonus
+	## or in game/common/military_industrial_organization scripts.
+
+	## This list contains either equipment category (see script_enum_equipment_category above)
+	## or equipment archetypes & types defined in game/common/units/equipments
+
+	## This enum should be updated every time either of those is updated
+	## (there will be a log error at startup as a reminder)
+
+	# Equipment categories
+	type90_tank_chassis
+	type90_tank_chassis_1
+}

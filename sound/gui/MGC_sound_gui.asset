@@ -1,0 +1,7 @@
+soundeffect =
+{
+	name = kkr_come
+	sounds = {
+		sound = kkr_come
+	}
+}

@@ -1,0 +1,328 @@
+defined_text = {	# 立绘
+	name = Kukuru_protrait_images	
+	text = {
+		trigger = {
+			check_variable = { kkr_clothes = 1 }
+		}
+		localization_key =  Kukuru_protrait_images_1
+	}
+	text = {
+		trigger = {
+			check_variable = { kkr_clothes = 2 }
+		}
+		localization_key =  Kukuru_protrait_images_2
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 3
+			}	
+		}
+		localization_key =  Kukuru_protrait_images_3
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 4
+			}
+		}
+		localization_key =  Kukuru_protrait_images_4
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 5
+			}
+		}
+		localization_key =  Kukuru_protrait_images_5
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 6
+			}
+		}
+		localization_key =  Kukuru_protrait_images_6
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 7
+			}
+		}
+		localization_key =  Kukuru_protrait_images_7
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 8
+			}
+		}
+		localization_key =  Kukuru_protrait_images_8
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 9
+			}
+		}
+		localization_key =  Kukuru_protrait_images_9
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 10
+			}
+		}
+		localization_key =  Kukuru_protrait_images_10
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 11
+			}
+		}
+		localization_key =  Kukuru_protrait_images_11
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				kkr_clothes = 12
+			}
+		}
+		localization_key =  Kukuru_protrait_images_12
+	}
+}
+defined_text = {	# 背景
+	name = KM_bg_images	
+	text = {
+		trigger = {
+			has_country_flag = get_kkr
+		}
+		localization_key =  KM_bg_images_1
+	}
+	#text = {
+	#	trigger = {
+	##		has_country_flag = 
+	#	}
+	#	localization_key =  KM_bg_images_2
+	#}
+	#text = {
+	#	trigger = {
+	#		has_country_flag = 
+	#	}
+	#	localization_key =  KM_bg_images_3
+	#}
+	#text = {
+	#	trigger = {
+	#		has_country_flag = 
+	#	}
+	#	localization_key =  KM_bg_images_4
+	#}
+}
+defined_text = {	# 活动状态图
+	name = KM_activity_state_icon_images	
+	text = {
+		trigger = {
+			has_country_flag = get_kkr
+			not = {
+				or = {
+					has_country_flag = kkr_play_games_together
+					has_country_flag = kkr_taste_food
+					has_country_flag = kkr_appointment
+					has_country_flag = kkr_travel
+
+				}
+			}
+		}
+		localization_key =  KM_activity_state_icon_images_0
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_play_games_together
+		}
+		localization_key =  KM_activity_state_icon_images_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_taste_food
+		}
+		localization_key =  KM_activity_state_icon_images_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_appointment
+		}
+		localization_key =  KM_activity_state_icon_images_3
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_travel
+		}
+		localization_key =  KM_activity_state_icon_images_4
+	}
+}
+defined_text = {	# 活动状态文本
+	name = KM_text_2_text	
+	text = {
+		trigger = {
+			has_country_flag = get_kkr
+			not = {
+				or = {
+					has_country_flag = kkr_play_games_together
+					has_country_flag = kkr_taste_food
+					has_country_flag = kkr_appointment
+					has_country_flag = kkr_travel
+
+				}
+			}
+		}
+		localization_key =  KM_text_2_text_0
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_play_games_together
+		}
+		localization_key = KM_text_2_text_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_taste_food
+		}
+		localization_key = KM_text_2_text_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_appointment
+		}
+		localization_key = KM_text_2_text_3
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_travel
+		}
+		localization_key = KM_text_2_text_4
+	}
+}
+defined_text = {	# 感情阶段状态文本
+	name = kkr_favor_level
+	text = {
+		trigger = {
+			check_variable = { kkr_favor < 30 }
+		}
+		localization_key =  kkr_favor_level_0
+	}
+	text = {
+		trigger = {
+			check_variable = { kkr_favor > 29 }
+			check_variable = { kkr_favor < 70 }
+		}
+		localization_key =  kkr_favor_level_1
+	}
+	text = {
+		trigger = {
+			check_variable = { kkr_favor > 69 }
+			check_variable = { kkr_favor < 101 }
+		}
+		localization_key =  kkr_favor_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { kkr_favor > 100 }
+			check_variable = { kkr_favor < 150 }
+		}
+		localization_key =  kkr_favor_level_3
+	}
+	text = {
+		trigger = {
+			
+		}
+		localization_key =  kkr_favor_level_4
+	}
+}
+
+defined_text = {	# 超事件引文
+	name = get_kkr_super_event_quote	
+	text = {
+		trigger = {
+			has_country_flag = super_event_kkr_marriage
+		}
+		localization_key = get_kkr_super_event_quote_1
+	}
+}
+defined_text = {	# 超事件标题
+	name = get_kkr_super_event_title	
+	text = {
+		trigger = {
+			has_country_flag = super_event_kkr_marriage
+		}
+		localization_key = get_kkr_super_event_title_1
+	}
+}
+defined_text = {	# 超事件下面按钮
+	name = get_kkr_super_event_remark	
+	text = {
+		trigger = {
+			has_country_flag = super_event_kkr_marriage
+		}
+		localization_key = get_kkr_super_event_remark_1
+	}
+}
+defined_text = {	# 超事件背景图
+	name = Super_event_images	
+	text = {
+		trigger = {
+			has_country_flag = super_event_kkr_marriage
+		}
+		localization_key = Super_event_images_1
+	}
+}
+
+defined_text = {	# 研究立绘
+	name = Kukuru_research_protrait_images	
+	text = {
+		trigger = {
+			not = { has_country_flag = kkr_research_stop }
+			check_variable = {
+				kkr_favor < 100
+			}
+		}
+		localization_key =  Kukuru_research_protrait_images_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = kkr_research_stop
+		}
+		localization_key = Kukuru_research_protrait_images_3
+	}
+	text = {
+		trigger = {
+			not = { has_country_flag = kkr_research_stop }
+			check_variable = {
+				kkr_favor > 99
+			}	
+		}
+		localization_key =  Kukuru_research_protrait_images_2
+	}
+}
+defined_text = {	# 研究决议组标题
+	name = kkr_atri_reseasrch_decision_category_text	
+	text = {
+		trigger = {
+			or = {
+				has_country_flag = kkr_is_preparing_research
+				has_country_flag = kkr_is_researching
+			}
+			not = {
+				has_country_flag = set_kkr_research_facility
+			}
+		}
+		localization_key =  kkr_atri_reseasrch_decision_category_text_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = set_kkr_research_facility
+		}
+		localization_key =  kkr_atri_reseasrch_decision_category_text_2
+	}
+}

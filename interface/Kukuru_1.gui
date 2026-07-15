@@ -1,0 +1,222 @@
+guiTypes = {
+	containerWindowType = {#主窗口
+		name = "kkr_reseach_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 250} 
+		background = {
+			name = "Background" 
+			#quadTextureSprite = "GFX_"
+		}
+		
+
+		iconType = {	#背景
+			name = "KR_bg"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_kkr_bg_2"
+		}
+		iconType = {
+			name = "ui_progressbar"
+			position = { x = 135 y = 90 }
+			spriteType = "GFX_kkr_research_progressbar"
+		}	
+		buttonType = {	#立绘
+			name = "Kukuru_research_protrait"
+			position = { x = 19 y = 4 }
+			size = { width = 100% height = 100% }
+			quadTextureSprite = "GFX_kkr_big_bg"
+			pdx_tooltip = " "	
+		}
+
+		iconType = {	#对话框
+			name = "KM_dialog_textbox"
+			position = { x = 142 y = 7 }
+			scale = 1.15
+			spriteType = "GFX_kkr_dialog_textbox"
+		}
+		
+		instantTextboxType = {	#好感栏
+			name = "KM_text_1"
+			position = { x = 169 y = 20 }
+			font = "hoi_18mbs"
+			text = "KR_text_1"
+			maxWidth = 130
+			maxHeight = 200
+			format = left
+		}
+		instantTextboxType = {	#好感栏2
+			name = "KR_text_3"
+			position = { x = 169 y = 44 }
+			font = "hoi_18mbs"
+			text = "KR_text_3"
+			maxWidth = 160
+			maxHeight = 200
+			format = left
+		}
+	}
+	
+	containerWindowType = {
+		name = "kkr_mian_gui"
+		position = { x = 0 y = -20 }
+		size = { width = 100% height = 250} 
+		background = {
+			name = "Background" 
+			#quadTextureSprite = "GFX_"
+		}
+		iconType = {	#背景
+			name = "KM_bg"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_kkr_bg_1"
+		}
+		
+		buttonType = {	#换立绘
+			name = "Kukuru_change_button"
+			position = { x = 155 y = 175 }
+			size = { width = 100% height = 100% }
+			#scale = 0.51		###缩放
+			quadTextureSprite = "GFX_kkr_change_button"
+			pdx_tooltip = "kkr_change_clothes_tt"
+		}
+		buttonType = {	#立绘
+			name = "Kukuru_protrait"
+			position = { x = 19 y = 4 }
+			size = { width = 100% height = 100% }
+			#scale = 0.51		###缩放
+			quadTextureSprite = "GFX_kkr_big_bg"
+			pdx_tooltip = " "
+		}
+		iconType = {	#状态图
+			name = "KM_activity_state_icon"
+			position = { x = 316 y = 87 }
+			spriteType = "GFX_kkr_activity_state_bg"
+		}
+		
+		iconType = {	#右下角状态栏
+			name = "KM_dialog_textbox_2"
+			position = { x = 358 y = 195 }
+			spriteType = "GFX_kkr_button"
+			pdx_tooltip = "KM_dialog_textbox_2_tt"
+		}
+		instantTextboxType = {	#右下角状态栏
+			name = "KM_text_2"
+			position = { x = 370 y = 210 }
+			font = "hoi_16mbs"
+			text = "KM_text_2"
+			maxWidth = 120
+			maxHeight = 200
+			format = center
+		}
+		iconType = {	#对话框
+			name = "KM_dialog_textbox"
+			position = { x = 142 y = 7 }
+			scale = 1.15
+			spriteType = "GFX_kkr_dialog_textbox"
+		}
+		iconType = {	#对话框
+			name = "KM_dialog_textbox_3"
+			position = { x = 140 y = -100 }
+			spriteType = "GFX_kkr_favor_icon_small_2"
+		}
+		iconType = {	#对话框
+			name = "KM_dialog_textbox_1"
+			position = { x = 140 y = -100 }
+			spriteType = "GFX_kkr_favor_icon_small"
+		}
+		
+		instantTextboxType = {	#好感栏
+			name = "KM_text_1"
+			position = { x = 169 y = 20 }
+			font = "hoi_18mbs"
+			text = "KM_text_1"
+			maxWidth = 130
+			maxHeight = 200
+			format = left
+		}
+		instantTextboxType = {	#好感栏2
+			name = "KM_text_3"
+			position = { x = 169 y = 44 }
+			font = "hoi_18mbs"
+			text = "KM_text_3"
+			maxWidth = 160
+			maxHeight = 200
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "kkr_super_event"
+		position = { x = 0 y = -50 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = yes
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"	
+			spriteType = "GFX_super_event_kkr_marriage"
+		}
+		#事件背景图，全部用同样的位置就行，到scripted_gui里改显示条件就行——2025.8.4，16：48——伊尔诺
+		###其实scripted_gui中用properties加上scripted_loc就可以改图——2025.8.10 ——牢八 改
+		iconType = {
+			name = "Super_event_image"
+			spriteType = "GFX_super_event_kkr_marriage"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		#就这样：
+		#iconType = {
+		#	name = "Super_event_<name of you super event>"
+		#	spriteType = "图片的注册名"
+		#	position = {
+		#		x = 0
+		#		y = 0
+		#	}
+		#}
+
+
+		iconType = {
+			name = "kkr_sp_event_text_underlay"
+			spriteType = "GFX_kkr_sp_event_underlay"
+			position = { x = 195 y = 332 }
+		}
+		instantTextBoxType = {    #名言
+			name = "kkr_super_quote"
+			position = { x = 225 y = 336 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[get_kkr_super_event_quote]"
+			maxWidth = 348
+			maxHeight = 110
+			fixedsize = yes	
+			format = right
+		}
+		
+		instantTextboxType = {
+			name = "kkr_super_title"
+			position = { x = -52 y = 40 }
+			font = "hoi_24header"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_kkr_super_event_title]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "kkr_sp_event_close_button"
+			spriteType = "GFX_kkr_sp_event_close_button"
+			position = { x = 187 y = 475 }
+			clicksound = click_close
+			buttonText = "[get_kkr_super_event_remark]"
+			buttonFont = "hoi_20b"
+		}
+	}
+
+}
+
+
+

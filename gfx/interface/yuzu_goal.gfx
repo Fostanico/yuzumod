@@ -1,0 +1,26 @@
+#spriteTypes = {
+    #SpriteType = {
+        name = "GFX_focus_yuzu_independence"
+        texturefile = "gfx/interface/goals/focus_yuzu_independence.dds" # 请替换为实际图片文件名和后缀
+    }
+    #SpriteType = {
+        name = "GFX_focus_yuzu_infiltrate_japan"
+        texturefile = "gfx/interface/goals/focus_yuzu_infiltrate_japan.dds" # 请替换为实际图片文件名和后缀
+    }
+    #SpriteType = {
+        name = "GFX_focus_yuzu_overthrow_japan"
+        texturefile = "gfx/interface/goals/focus_yuzu_overthrow_japan.dds" # 请替换为实际图片文件名和后缀
+    }
+    #SpriteType = {
+        name = "GFX_focus_yuzu_cross_tsushima"
+        texturefile = "gfx/interface/goals/focus_yuzu_cross_tsushima.dds" # 请替换为实际图片文件名和后缀
+    }
+    #SpriteType = {
+        name = "GFX_focus_yuzu_aid_continent_war"
+        texturefile = "gfx/interface/goals/focus_yuzu_aid_continent_war.dds" # 请替换为实际图片文件名和后缀
+    }
+    #SpriteType = {
+        name = "GFX_focus_yuzu_stand_in_world"
+        texturefile = "gfx/interface/goals/focus_yuzu_stand_in_world.dds" # 请替换为实际图片文件名和后缀
+    }
+}

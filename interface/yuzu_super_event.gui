@@ -1,0 +1,474 @@
+guiTypes = {
+	containerWindowType = {
+		name = "yuzu_super_event"
+		position = { x = 0 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = yes
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"	
+			spriteType = "GFX_yuzu_super_event_background"
+		}
+		#事件背景图，全部用同样的位置就行，到scripted_gui里改显示条件就行——2025.8.4，16：48——伊尔诺
+		iconType = {#穗织的毁灭
+			name = "Super_event_destruction_of_hoori"
+			spriteType = "GFX_super_event_destruction_of_hoori"
+			position = {
+				x = 0 
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_destruction_of_washizu"
+			spriteType = "GFX_super_event_destruction_of_washizu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_kanna"
+			spriteType = "GFX_super_event_marry_kanna"
+			position = {
+				x = 0
+				y = 0
+			}	
+		}
+		iconType = {
+			name = "Super_event_marry_mako"
+			spriteType = "GFX_super_event_marry_mako"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_murasame"
+			spriteType = "GFX_super_event_marry_murasame"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_hazuki"
+			spriteType = "GFX_super_event_marry_hazuki"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_mibu"
+			spriteType = "GFX_super_event_marry_mibu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_yoshino"
+			spriteType = "GFX_super_event_marry_yoshino"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_tia"
+			spriteType = "GFX_super_event_marry_tia"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_koharu"
+			spriteType = "GFX_super_event_marry_koharu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_ruri"
+			spriteType = "GFX_super_event_marry_ruri"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_noa"
+			spriteType = "GFX_super_event_marry_noa"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_ayase"
+			spriteType = "GFX_super_event_marry_ayase"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_rena"
+			spriteType = "GFX_super_event_marry_rena"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_nene"
+			spriteType = "GFX_super_event_marry_nene"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_kaguya"
+			spriteType = "GFX_super_event_marry_kaguya"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_meguru"
+			spriteType = "GFX_super_event_marry_meguru"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_tsumugi"
+			spriteType = "GFX_super_event_marry_tsumugi"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_natsume"
+			spriteType = "GFX_super_event_marry_natsume"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_mayu"
+			spriteType = "GFX_super_event_marry_mayu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_sana"
+			spriteType = "GFX_super_event_marry_sana"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_sayo"
+			spriteType = "GFX_super_event_marry_sayo"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_suou"
+			spriteType = "GFX_super_event_marry_suou"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_rino"
+			spriteType = "GFX_super_event_marry_rino"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_roka"
+			spriteType = "GFX_super_event_marry_roka"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_yune"
+			spriteType = "GFX_super_event_marry_yune"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_tsubasa"
+			spriteType = "GFX_super_event_marry_tsubasa"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_mei"
+			spriteType = "GFX_super_event_marry_mei"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_nozomi"
+			spriteType = "GFX_super_event_marry_nozomi"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_wakana"
+			spriteType = "GFX_super_event_marry_wakana"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_shizuru"
+			spriteType = "GFX_super_event_marry_shizuru"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_sena"
+			spriteType = "GFX_super_event_marry_sena"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_maya"
+			spriteType = "GFX_super_event_marry_maya"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_daozhu"
+			spriteType = "GFX_super_event_marry_daozhu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_scp"
+			spriteType = "GFX_super_event_marry_scp"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_napoleon_vi"
+			spriteType = "GFX_super_event_marry_napoleon_vi"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_huhu"
+			spriteType = "GFX_super_event_marry_huhu"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_takashiro_maya"
+			spriteType = "GFX_super_event_marry_takashiro_maya"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_hotaru"
+			spriteType = "GFX_super_event_marry_hotaru"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_marry_sakuyahime"
+			spriteType = "GFX_super_event_marry_sakuyahime"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_unite_the_world_n"
+			spriteType = "GFX_Super_event_unite_the_world_n"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_unite_the_world_d"
+			spriteType = "GFX_super_event_unite_the_world_d"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_unite_the_world_c"
+			spriteType = "GFX_super_event_unite_the_world_c"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_unite_the_world_f"
+			spriteType = "GFX_super_event_unite_the_world_f"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_SCP_come_here"
+			spriteType = "GFX_super_event_SCP_come_here"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_huhu_come_here"
+			spriteType = "GFX_super_event_huhu_come_here"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_we_forward_with_irno"
+			spriteType = "GFX_super_event_we_forward_with_irno"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_we_unite_with_ilno"
+			spriteType = "GFX_super_event_we_unite_with_ilno"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_we_forward_with_makoto"
+			spriteType = "GFX_super_event_we_forward_with_makoto"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_we_unite_with_makoto"
+			spriteType = "GFX_super_event_we_unite_with_makoto"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		iconType = {
+			name = "Super_event_we_have_fukai_omo"
+			spriteType = "GFX_super_event_we_have_fukai_omo"
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		#就这样：
+		#iconType = {
+		#	name = "Super_event_<name of you super event>"
+		#	spriteType = "图片的注册名"
+		#	position = {
+		#		x = 0
+		#		y = 0
+		#	}
+		#}
+
+
+		iconType = {
+			name = "yuzu_sp_event_text_underlay"
+			spriteType = "GFX_yuzu_sp_event_underlay"
+			position = { x = 195 y = 332 }
+		}
+		instantTextBoxType = {    #名言
+			name = "yuzu_super_quote"
+			position = { x = 225 y = 336 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[get_yuzu_super_event_quote]"
+			maxWidth = 348
+			maxHeight = 110
+			fixedsize = yes	
+			format = right
+		}
+		
+		instantTextboxType = {
+			name = "yuzu_super_title"
+			position = { x = -52 y = 40 }
+			font = "hoi_24header"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_yuzu_super_event_title]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "yuzu_sp_event_close_button"
+			spriteType = "GFX_yuzu_sp_event_close_button"
+			position = { x = 187 y = 475 }
+			clicksound = click_close
+			buttonText = "[get_yuzu_super_event_remark]"
+			buttonFont = "hoi_20b"
+		}
+	}
+}

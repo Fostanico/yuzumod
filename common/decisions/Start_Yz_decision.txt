@@ -1,139 +1,483 @@
 qiyong_youzi_general_category = {
-	
-	qiyong_youzijiang_1 = {		#仅将领
-		icon = GFX_congyu
-		fire_only_once = yes
-		visible = {
-			NOT = {
-				has_country_flag = qiyong_youzi_2
-			}
-			is_ai = no
-		}
-		complete_effect = {
-			set_country_flag = qiyong_youzi_1
-		}
-	}
 
-	qiyong_youzijiang_2 = {		#全部
-		icon = GFX_congyu
-		days_remove = 1
-		fire_only_once = yes 
-		visible = {
-			NOT = {
-				has_country_flag = qiyong_youzi_1
-			}
-			is_ai = no
-		}
-		complete_effect = {
-			set_country_flag = qiyong_youzi_2
-			set_country_flag = open_traot
-			country_event = start_event.1
-			set_country_flag = open_YZS_military_academy
-			set_country_flag = open_industry_money
-			set_country_flag = qiyong_yuzu_culture_department   #2025.3.7
-			hidden_effect = {
-				set_variable = {
-					var = yz_money
-					value = 500
-				}
-				set_variable = { 
-					var = love_depth
-					tooltip = love_depth_desc
-				}
-				add_to_variable = { love_depth = num_core_states }
-				add_to_variable = { love_depth = num_of_factories }
-				multiply_variable = { love_depth = 0.1 }
-				round_variable = love_depth
-				round_variable = num_YZ_general
-				set_variable = { num_YZ_general = 0 }
-				# 军校
-				add_to_variable = { youzu_army_land_reinforce_rate = -0.01 }
-				add_to_variable = { youzu_army_training_time_army_factor = 0.1 }
-				add_to_variable = { youzu_army_army_org_factor = -0.05 }
-				add_to_variable = { youzu_army_army_core_defence_factor = 0.03 }
-				add_to_variable = { youzu_army_land_doctrine_cost_factor = 0.05 }
-				add_to_variable = { youzu_army_mobilization_speed = -0.1 }
-				add_to_variable = { youzu_army_supply_consumption_factor = 0.05 }
-				add_to_variable = { youzu_army_local_supplies = -0.05 }
-				add_to_variable = { youzu_army_promote_cost_factor = -0.05 }
-				###金圆券兑换限制
-				set_variable = { yz_money_pp = 5 }
-				set_variable = { yz_money_cp = 5 }
-				set_variable = { yz_money_xp1 = 5 }
-				set_variable = { yz_money_xp2 = 5 }
-				set_variable = { yz_money_xp3 = 5 }
-				set_variable = { YzStore_5_var = 15 }
-				set_variable = { YzStore_6_var = 10 }
-				set_variable = { YzStore_8_var = 3 }
-				set_variable = { YzStore_10_var = 5 }
-				set_variable = { YzStore_11_var = 1 }
-				set_variable = { YzStore_LuckyDarw_var = 0 }
-				set_variable = { neko_click  = 0 }
-				###经济
-				set_variable = { YzMilitary_fund_var = 0 }
-				set_variable = { YzEducation_fund_var = 0 }
-				set_variable = { YzMonthlyFund_var = 0 }
-				set_variable = { YzAdministration_fund_var = 0 }
-				set_variable = { YzMoneyOutcome_var = 0 }
-				set_variable = { YzMoneyIncome_var = 0 }
-				###柚子国相关
-				set_variable = {
-					Yuzu_fund = 0
-				}
-				set_variable = {
-					yuzu_form_yuzu_land_days = 181
-				}
-				set_variable = {
-					yuzu_form_yuzu_land_days_basic_require = 180
-				}
-				###柚子厨单位
-				set_variable = {
-					yzc_unit_recruit = 0
-				}
-			}
-		}
-		
-	}
+    qiyong_youzijiang_1 = {		#仅将领
+        icon = GFX_congyu
+        fire_only_once = yes
+        visible = {
+            NOT = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            is_ai = no
+        }
+        complete_effect = {
+            set_country_flag = qiyong_youzi_1
+            #country_event = start_event.28
+            # 要点：仅将领模式保留原有启动逻辑，同时额外打开启动 GUI 作为统一说明界面。 [2026-06-20] [伊尔诺/GPT5.5]
+            set_country_flag = YZ_start_ui_visible
+            set_country_flag = YZ_start_ui_tab_update
+            clr_country_flag = YZ_start_ui_tab_guide
+            clr_country_flag = YZ_start_ui_tab_credits
+            # 内容：每次从启动决议打开 UI 时重置 SD 彩蛋输入进度，避免残留上一次未完成序列。 [2026-06-20] [伊尔诺/GPT5.5]
+            set_variable = { YZ_start_ui_sd_progress = 0 }
+            add_ideas = Origin_of_youzu_culture   #柚子文化始源地，后面两个同理
+            set_variable = { number_of_portrait = 1 }
+            set_variable = { number_of_sd = 1 }
+            set_variable = { value_of_loving = 75 }
+            set_variable = { value_of_believity = 75 }
+            set_variable = { value_of_relationship = 75 }
+            set_variable = { value_of_help = 75 }
+            # 作用：初始化仅将领模式的共享约会冷却；要点：90代表开局即可选择任一约会。署名：伊尔诺+2026-06-08+assisted by Codex
+            set_variable = { yuzu_married_date_cooldown = 90 }
+            # 作用：初始化仅将领模式的新婚后属性换算；要点：按默认75点属性写入常驻效果、学习变量与汇总变量。署名：伊尔诺+2026-06-08+assisted by Codex
+            set_variable = { value_of_loving_political_power_effect = 0.225 }
+            set_variable = { value_of_loving_stability_effect = 0.09 }
+            set_variable = { value_of_loving_consumer_goods_effect = -0.075 }
+            set_variable = { value_of_believity_army_org_effect = 0.045 }
+            set_variable = { value_of_believity_defence_effect = 0.09 }
+            set_variable = { value_of_believity_research_effect = 0.09 }
+            set_variable = { value_of_believity_war_support_effect = 0.09 }
+            set_variable = { value_of_relationship_output_effect = 0.135 }
+            set_variable = { value_of_relationship_construction_effect = 0.09 }
+            set_variable = { value_of_relationship_efficiency_effect = 0.0675 }
+            # 作用：初始化仅将领模式的互动与赠礼冷却；要点：六个按钮开局均按90天冷却视为可用。署名：伊尔诺+2026-06-08+assisted by Codex
+            set_variable = { married_interact_kiss_cooldown = 90 }
+            set_variable = { married_interact_study_cooldown = 90 }
+            set_variable = { married_interact_play_cooldown = 90 }
+            set_variable = { married_gift_accessory_cooldown = 90 }
+            set_variable = { married_gift_cosmetics_cooldown = 90 }
+            set_variable = { married_gift_doll_cooldown = 90 }
+            set_variable = { yuzu_married_study_days = 0 }
+            set_variable = { yuzu_married_study_research_effect = 0 }
+            set_variable = { yuzu_married_study_political_effect = 0 }
+            set_variable = { yuzu_married_study_output_effect = 0 }
+            set_variable = { yuzu_married_assistance_days = 0 }
+            set_variable = { yuzu_married_logistics_days = 0 }
+            set_variable = { yuzu_married_production_days = 0 }
+            set_variable = { yuzu_married_assistance_political_effect = 0 }
+            set_variable = { yuzu_married_assistance_stability_effect = 0 }
+            set_variable = { yuzu_married_assistance_planning_effect = 0 }
+            set_variable = { yuzu_married_logistics_supply_effect = 0 }
+            set_variable = { yuzu_married_logistics_attrition_effect = 0 }
+            set_variable = { yuzu_married_logistics_speed_effect = 0 }
+            set_variable = { yuzu_married_production_output_effect = 0 }
+            set_variable = { yuzu_married_production_efficiency_effect = 0 }
+            set_variable = { yuzu_married_production_construction_effect = 0 }
+            set_variable = { yuzu_married_total_political_power_effect = 0.225 }
+            set_variable = { yuzu_married_total_stability_effect = 0.09 }
+            set_variable = { yuzu_married_total_research_effect = 0.09 }
+            set_variable = { yuzu_married_total_output_effect = 0.135 }
+            set_variable = { yuzu_married_total_construction_effect = 0.09 }
+            set_variable = { yuzu_married_total_efficiency_effect = 0.0675 }
+        }
+    }
 
-	update_sth = {
-		priority = 10000
-		icon = GFX_congyu
-		days_remove = 1
-		fire_only_once = yes
-		visible = {
-			NOT = {
-				has_country_flag = qiyong_youzi_1
-			}
-			is_ai = no
-		}
-		complete_effect = {
-			country_event = start_event.8
-		}
-	}
+    qiyong_youzijiang_2 = {		#全部
+        icon = GFX_congyu
+        days_remove = 1
+        fire_only_once = yes
+        visible = {
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_3
+            }
+            is_ai = no
+        }
+        complete_effect = {
+            set_country_flag = qiyong_youzi_2
+            set_country_flag = open_traot
+            # 要点：完全版不再弹出 start_event.1，改为由决议直接设置 GUI flag 打开启动界面。 [2026-06-20] [伊尔诺/GPT5.5]
+            # country_event = start_event.1
+            set_country_flag = YZ_start_ui_visible
+            set_country_flag = YZ_start_ui_tab_update
+            clr_country_flag = YZ_start_ui_tab_guide
+            clr_country_flag = YZ_start_ui_tab_credits
+            # 内容：每次从启动决议打开 UI 时重置 SD 彩蛋输入进度，避免残留上一次未完成序列。 [2026-06-20] [伊尔诺/GPT5.5]
+            set_variable = { YZ_start_ui_sd_progress = 0 }
+            set_country_flag = open_YZS_military_academy
+            set_country_flag = open_industry_money
+            set_country_flag = yzc_armor_decision
+            set_country_flag = qiyong_yuzu_culture_department   #2025.3.7
+            set_country_flag = YZS_scientist_category_show #2025.3.29,16:02,伊尔诺
+            add_ideas = Origin_of_youzu_culture
+            hidden_effect = {
+                set_variable = {
+                    var = yz_money
+                    value = 500
+                }
+                set_variable = {
+                    var = love_depth
+                    tooltip = love_depth_desc
+                }
+                add_to_variable = { love_depth = num_core_states }
+                add_to_variable = { love_depth = num_of_factories }
+                multiply_variable = { love_depth = 0.1 }
+                round_variable = love_depth
+                round_variable = num_YZ_general
+                set_variable = { num_YZ_general = 0 }
+                set_variable = { yz_new_works = 0 }
+                # 军校
+                add_to_variable = { youzu_army_land_reinforce_rate = -0.01 }
+                add_to_variable = { youzu_army_training_time_army_factor = 0.1 }
+                add_to_variable = { youzu_army_army_org_factor = -0.05 }
+                add_to_variable = { youzu_army_army_core_defence_factor = 0.03 }
+                add_to_variable = { youzu_army_land_doctrine_cost_factor = 0.05 }
+                add_to_variable = { youzu_army_mobilization_speed = -0.1 }
+                add_to_variable = { youzu_army_supply_consumption_factor = 0.05 }
+                add_to_variable = { youzu_army_local_supplies = -0.05 }
+                add_to_variable = { youzu_army_promote_cost_factor = -0.05 }
+                ###金圆券兑换限制
+                set_variable = { yz_money_pp = 5 }
+                set_variable = { yz_money_cp = 5 }
+                set_variable = { yz_money_xp1 = 5 }
+                set_variable = { yz_money_xp2 = 5 }
+                set_variable = { yz_money_xp3 = 5 }
+                set_variable = { YzStore_5_var = 15 }
+                set_variable = { YzStore_6_var = 10 }
+                set_variable = { YzStore_8_var = 3 }
+                set_variable = { YzStore_10_var = 5 }
+                set_variable = { YzStore_11_var = 1 }
+                set_variable = { YzStore_LuckyDarw_var = 0 }
+                set_variable = { neko_click  = 0 }
+                ###经济
+                set_variable = { YzMilitary_fund_var = 0 }
+                set_variable = { YzEducation_fund_var = 0 }
+                set_variable = { YzMonthlyFund_var = 0 }
+                set_variable = { YzAdministration_fund_var = 0 }
+                set_variable = { YzMoneyOutcome_var = 0 }
+                set_variable = { YzMoneyIncome_var = 0 }
+                ###柚子国相关
+                set_variable = {
+                    Yuzu_fund = 0
+                }
+                set_variable = {
+                    yuzu_form_yuzu_land_days = 181
+                }
+                set_variable = {
+                    yuzu_form_yuzu_land_days_basic_require = 180
+                }
+                ###柚子债券——2025.3.20,16:06，伊尔诺
+                set_variable = {
+                    var = bond_we_need_to_repay         #需偿还总额
+                    value = 0
+                }
+                set_variable = {
+                    var = yz_interest_rate        #这个变量暂时废弃——2025.3.20,16:09,伊尔诺
+                    value = 0
+                }
+                set_variable = {
+                    var = yz_interest_rate_we_can_see        #这个是实际上用到的利率
+                    value = 0
+                }
+                set_variable = {                  #柚子币上限
+                    var = yz_money_max
+                    value = 20000
+                }
+                set_variable = {
+                    var = basic_additional_yz_money_spend       #基础额外支出
+                    value = 500
+                }
+                ###柚子厨相关
+                set_variable = { yzc_manpower_k = 0 }
+                set_variable = { yzc_manpower_factor = 0.01 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { recruited_yzc_manpower = 0 }
+                set_variable = { yzc_zhandouli = 0.05 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                ###柚子海报
+                set_country_flag = yzposter_1st_solt_empty
+                set_country_flag = yzposter_2nd_solt_empty
+                set_country_flag = yzposter_3rd_solt_empty
+                set_variable = { yz_poster_icon_frame_1 = 1 }
+                set_variable = { yz_poster_icon_frame_2 = 1 }
+                set_variable = { yz_poster_icon_frame_3 = 1 }
+                #结婚互动相关数值
+                set_variable = { number_of_portrait = 1 }
+                set_variable = { number_of_sd = 1 }
+                set_variable = { value_of_loving = 75 }
+                set_variable = { value_of_believity = 75 }
+                set_variable = { value_of_relationship = 75 }
+                set_variable = { value_of_help = 75 }
+                # 作用：初始化完整模式的共享约会冷却；要点：90代表开局即可选择任一约会。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { yuzu_married_date_cooldown = 90 }
+                # 作用：初始化完整模式的新婚后属性换算；要点：按默认75点属性写入常驻效果、学习变量与汇总变量。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { value_of_loving_political_power_effect = 0.225 }
+                set_variable = { value_of_loving_stability_effect = 0.09 }
+                set_variable = { value_of_loving_consumer_goods_effect = -0.075 }
+                set_variable = { value_of_believity_army_org_effect = 0.045 }
+                set_variable = { value_of_believity_defence_effect = 0.09 }
+                set_variable = { value_of_believity_research_effect = 0.09 }
+                set_variable = { value_of_believity_war_support_effect = 0.09 }
+                set_variable = { value_of_relationship_output_effect = 0.135 }
+                set_variable = { value_of_relationship_construction_effect = 0.09 }
+                set_variable = { value_of_relationship_efficiency_effect = 0.0675 }
+                # 作用：初始化完整模式的互动与赠礼冷却；要点：六个按钮开局均按90天冷却视为可用。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { married_interact_kiss_cooldown = 90 }
+                set_variable = { married_interact_study_cooldown = 90 }
+                set_variable = { married_interact_play_cooldown = 90 }
+                set_variable = { married_gift_accessory_cooldown = 90 }
+                set_variable = { married_gift_cosmetics_cooldown = 90 }
+                set_variable = { married_gift_doll_cooldown = 90 }
+                set_variable = { yuzu_married_study_days = 0 }
+                set_variable = { yuzu_married_study_research_effect = 0 }
+                set_variable = { yuzu_married_study_political_effect = 0 }
+                set_variable = { yuzu_married_study_output_effect = 0 }
+                set_variable = { yuzu_married_assistance_days = 0 }
+                set_variable = { yuzu_married_logistics_days = 0 }
+                set_variable = { yuzu_married_production_days = 0 }
+                set_variable = { yuzu_married_assistance_political_effect = 0 }
+                set_variable = { yuzu_married_assistance_stability_effect = 0 }
+                set_variable = { yuzu_married_assistance_planning_effect = 0 }
+                set_variable = { yuzu_married_logistics_supply_effect = 0 }
+                set_variable = { yuzu_married_logistics_attrition_effect = 0 }
+                set_variable = { yuzu_married_logistics_speed_effect = 0 }
+                set_variable = { yuzu_married_production_output_effect = 0 }
+                set_variable = { yuzu_married_production_efficiency_effect = 0 }
+                set_variable = { yuzu_married_production_construction_effect = 0 }
+                set_variable = { yuzu_married_total_political_power_effect = 0.225 }
+                set_variable = { yuzu_married_total_stability_effect = 0.09 }
+                set_variable = { yuzu_married_total_research_effect = 0.09 }
+                set_variable = { yuzu_married_total_output_effect = 0.135 }
+                set_variable = { yuzu_married_total_construction_effect = 0.09 }
+                set_variable = { yuzu_married_total_efficiency_effect = 0.0675 }
+            }
+        }
+
+    }
+    qiyong_youzijiang_3 = {		#联机削弱版
+        icon = GFX_congyu
+        days_remove = 1
+        fire_only_once = yes
+        visible = {
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+                has_country_flag = qiyong_youzi_2
+            }
+            is_ai = no
+        }
+        complete_effect = {
+            set_country_flag = qiyong_youzi_3
+            set_country_flag = open_traot
+            country_event = start_event.27
+            # 要点：联机削弱版保留原有 start_event.27，同时额外打开启动 GUI 作为统一说明界面。 [2026-06-20] [伊尔诺/GPT5.5]
+            set_country_flag = YZ_start_ui_visible
+            set_country_flag = YZ_start_ui_tab_update
+            clr_country_flag = YZ_start_ui_tab_guide
+            clr_country_flag = YZ_start_ui_tab_credits
+            # 内容：每次从启动决议打开 UI 时重置 SD 彩蛋输入进度，避免残留上一次未完成序列。 [2026-06-20] [伊尔诺/GPT5.5]
+            set_variable = { YZ_start_ui_sd_progress = 0 }
+            set_country_flag = open_YZS_military_academy
+            set_country_flag = open_industry_money
+            set_country_flag = YZS_scientist_category_show #2025.3.29,16:02,伊尔诺
+            add_ideas = Origin_of_youzu_culture
+            hidden_effect = {
+                set_variable = {
+                    var = yz_money
+                    value = 500
+                }
+                set_variable = {
+                    var = love_depth
+                    tooltip = love_depth_desc
+                }
+                add_to_variable = { love_depth = num_core_states }
+                add_to_variable = { love_depth = num_of_factories }
+                multiply_variable = { love_depth = 0.1 }
+                round_variable = love_depth
+                round_variable = num_YZ_general
+                set_variable = { num_YZ_general = 0 }
+                set_variable = { yz_new_works = 0 }
+                # 军校
+                add_to_variable = { youzu_army_land_reinforce_rate = -0.01 }
+                add_to_variable = { youzu_army_training_time_army_factor = 0.1 }
+                add_to_variable = { youzu_army_army_org_factor = -0.05 }
+                add_to_variable = { youzu_army_army_core_defence_factor = 0.03 }
+                add_to_variable = { youzu_army_land_doctrine_cost_factor = 0.05 }
+                add_to_variable = { youzu_army_mobilization_speed = -0.1 }
+                add_to_variable = { youzu_army_supply_consumption_factor = 0.05 }
+                add_to_variable = { youzu_army_local_supplies = -0.05 }
+                add_to_variable = { youzu_army_promote_cost_factor = -0.05 }
+                ###金圆券兑换限制
+                set_variable = { yz_money_pp = 5 }
+                set_variable = { yz_money_cp = 5 }
+                set_variable = { yz_money_xp1 = 5 }
+                set_variable = { yz_money_xp2 = 5 }
+                set_variable = { yz_money_xp3 = 5 }
+                set_variable = { YzStore_5_var = 15 }
+                set_variable = { YzStore_6_var = 10 }
+                set_variable = { YzStore_8_var = 3 }
+                set_variable = { YzStore_10_var = 5 }
+                set_variable = { YzStore_11_var = 1 }
+                set_variable = { YzStore_LuckyDarw_var = 0 }
+                set_variable = { neko_click  = 0 }
+                ###经济
+                set_variable = { YzMilitary_fund_var = 0 }
+                set_variable = { YzEducation_fund_var = 0 }
+                set_variable = { YzMonthlyFund_var = 0 }
+                set_variable = { YzAdministration_fund_var = 0 }
+                set_variable = { YzMoneyOutcome_var = 0 }
+                set_variable = { YzMoneyIncome_var = 0 }
+                ###柚子国相关
+                set_variable = {
+                    Yuzu_fund = 0
+                }
+                set_variable = {
+                    yuzu_form_yuzu_land_days = 181
+                }
+                set_variable = {
+                    yuzu_form_yuzu_land_days_basic_require = 180
+                }
+                ###柚子债券——2025.3.20,16:06，伊尔诺
+                set_variable = {
+                    var = bond_we_need_to_repay         #需偿还总额
+                    value = 0
+                }
+                set_variable = {
+                    var = yz_interest_rate        #这个变量暂时废弃——2025.3.20,16:09,伊尔诺
+                    value = 0
+                }
+                set_variable = {
+                    var = yz_interest_rate_we_can_see        #这个是实际上用到的利率
+                    value = 0
+                }
+                set_variable = {                  #柚子币上限
+                    var = yz_money_max
+                    value = 20000
+                }
+                set_variable = {
+                    var = basic_additional_yz_money_spend       #基础额外支出
+                    value = 500
+                }
+                ###柚子厨相关
+                set_variable = { yzc_manpower_k = 0 }
+                set_variable = { yzc_manpower_factor = 0.01 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { recruited_yzc_manpower = 0 }
+                set_variable = { yzc_zhandouli = 0.05 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                set_variable = { yzc_unit_recruit = 0 }
+                ###柚子海报
+                set_country_flag = yzposter_1st_solt_empty
+                set_country_flag = yzposter_2nd_solt_empty
+                set_country_flag = yzposter_3rd_solt_empty
+                set_variable = { yz_poster_icon_frame_1 = 1 }
+                set_variable = { yz_poster_icon_frame_2 = 1 }
+                set_variable = { yz_poster_icon_frame_3 = 1 }
+                #婚后互动
+                set_variable = { number_of_portrait = 1 }
+                set_variable = { number_of_sd = 1 }
+                set_variable = { value_of_loving = 75 }
+                set_variable = { value_of_believity = 75 }
+                set_variable = { value_of_relationship = 75 }
+                set_variable = { value_of_help = 75 }
+                # 作用：初始化联机削弱模式的共享约会冷却；要点：90代表开局即可选择任一约会。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { yuzu_married_date_cooldown = 90 }
+                # 作用：初始化联机削弱模式的新婚后属性换算；要点：变量结构与另外两种开局保持一致。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { value_of_loving_political_power_effect = 0.225 }
+                set_variable = { value_of_loving_stability_effect = 0.09 }
+                set_variable = { value_of_loving_consumer_goods_effect = -0.075 }
+                set_variable = { value_of_believity_army_org_effect = 0.045 }
+                set_variable = { value_of_believity_defence_effect = 0.09 }
+                set_variable = { value_of_believity_research_effect = 0.09 }
+                set_variable = { value_of_believity_war_support_effect = 0.09 }
+                set_variable = { value_of_relationship_output_effect = 0.135 }
+                set_variable = { value_of_relationship_construction_effect = 0.09 }
+                set_variable = { value_of_relationship_efficiency_effect = 0.0675 }
+                # 作用：初始化联机削弱模式的互动与赠礼冷却；要点：六个按钮开局均按90天冷却视为可用。署名：伊尔诺+2026-06-08+assisted by Codex
+                set_variable = { married_interact_kiss_cooldown = 90 }
+                set_variable = { married_interact_study_cooldown = 90 }
+                set_variable = { married_interact_play_cooldown = 90 }
+                set_variable = { married_gift_accessory_cooldown = 90 }
+                set_variable = { married_gift_cosmetics_cooldown = 90 }
+                set_variable = { married_gift_doll_cooldown = 90 }
+                set_variable = { yuzu_married_study_days = 0 }
+                set_variable = { yuzu_married_study_research_effect = 0 }
+                set_variable = { yuzu_married_study_political_effect = 0 }
+                set_variable = { yuzu_married_study_output_effect = 0 }
+                set_variable = { yuzu_married_assistance_days = 0 }
+                set_variable = { yuzu_married_logistics_days = 0 }
+                set_variable = { yuzu_married_production_days = 0 }
+                set_variable = { yuzu_married_assistance_political_effect = 0 }
+                set_variable = { yuzu_married_assistance_stability_effect = 0 }
+                set_variable = { yuzu_married_assistance_planning_effect = 0 }
+                set_variable = { yuzu_married_logistics_supply_effect = 0 }
+                set_variable = { yuzu_married_logistics_attrition_effect = 0 }
+                set_variable = { yuzu_married_logistics_speed_effect = 0 }
+                set_variable = { yuzu_married_production_output_effect = 0 }
+                set_variable = { yuzu_married_production_efficiency_effect = 0 }
+                set_variable = { yuzu_married_production_construction_effect = 0 }
+                set_variable = { yuzu_married_total_political_power_effect = 0.225 }
+                set_variable = { yuzu_married_total_stability_effect = 0.09 }
+                set_variable = { yuzu_married_total_research_effect = 0.09 }
+                set_variable = { yuzu_married_total_output_effect = 0.135 }
+                set_variable = { yuzu_married_total_construction_effect = 0.09 }
+                set_variable = { yuzu_married_total_efficiency_effect = 0.0675 }
+            }
+        }
+
+    }
+
+    tip1_sth = {
+        priority = 10000
+        icon = GFX_congyu
+        days_remove = 1
+        visible = {
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+            }
+            is_ai = yes
+        }
+        complete_effect = {
+            country_event = start_event.23
+        }
+    }
+    tip2_sth = {
+        priority = 10000
+        icon = GFX_congyu
+        days_remove = 1
+        visible = {
+            NOT = {
+                has_country_flag = qiyong_youzi_1
+            }
+            is_ai = yes
+        }
+        complete_effect = {
+            country_event = start_event.25
+        }
+    }
 
 }
 Tarot_category = {
 
-	close_traot = {	
-		icon = GFX_tarot_icon
-		priority = 1000
-		cost = 0
-		days_remove = 0
+    close_traot = {
+        icon = GFX_tarot_icon
+        priority = 1000
+        cost = 0
+        days_remove = 0
 
-		visible = {
-			or = {
-				has_country_flag = have_toko
-				has_country_flag = have_wakana
-				has_country_flag = have_meigulu
-				has_country_flag = have_ningning
-				has_country_flag = have_chou
-			}
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = open_traot
-		}
+        visible = {
+            or = {
+                has_country_flag = have_toko
+                has_country_flag = have_wakana
+                has_country_flag = have_meigulu
+                has_country_flag = have_ningning
+                has_country_flag = have_chou
+            }
+            or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
+            has_country_flag = open_traot
+        }
 
-		complete_effect = {
-			clr_country_flag = open_traot
-		}
-	}
+        complete_effect = {
+            clr_country_flag = open_traot
+        }
+    }
 }

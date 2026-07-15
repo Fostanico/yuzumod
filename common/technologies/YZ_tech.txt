@@ -76,4 +76,17 @@ technologies = {
 			always = no
 		}
 	}
+	tech_yz_works_equipment = { 
+		enable_equipments = {
+			yz_works_equipment_0
+		}
+		
+		research_cost = 1.5
+		start_year = 1936
+		
+		allow = {
+			always = no
+		}
+	}
+	
 }

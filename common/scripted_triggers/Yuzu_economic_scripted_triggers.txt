@@ -1,0 +1,28 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+# 
+#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
+Yuzu_can_repay_bonds_by_yzmoney = {        #我们可以偿还
+	custom_trigger_tooltip = {
+		tooltip = we_can_repay_bonds_by_yzmoney
+	}
+	ROOT = {
+		check_variable = {
+			var = yz_money
+			value = bond_we_need_to_repay
+			compare = greater_than_or_equals
+		}
+    }
+}
+

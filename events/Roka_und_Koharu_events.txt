@@ -35,6 +35,7 @@ country_event = {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = Roka_corps_desc
 						traits={
 							yz_roka_trait
 						}
@@ -70,6 +71,7 @@ country_event = {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = koharu_corps_desc
 						traits={
 							yz_koharu_trait
 						}
@@ -124,6 +126,7 @@ country_event = {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = Roka_corps_desc
 						traits={
 							yz_roka_trait
 						}
@@ -154,6 +157,7 @@ country_event = {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = koharu_corps_desc
 						traits={
 							yz_koharu_trait
 						}
@@ -201,6 +205,7 @@ country_event = {
 						is_ai = no
 					} 
 					corps_commander = {
+						desc = Roka_corps_desc
 						traits={
 							yz_roka_trait
 						}
@@ -248,6 +253,7 @@ country_event = {
 						is_ai = no
 					}
 					corps_commander = {
+						desc = koharu_corps_desc
 						traits={
 							yz_koharu_trait
 						}
