@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>柚子社将领包 · Yuzuture-style credits</title>
+<style>
+  :root {
+    --ink: #222;
+    --muted: #666;
+    --line: #d7d7d7;
+    --soft-line: #ececec;
+    --yuzuture-blue: #006699;
+    --yuzuture-blue-dark: #00527a;
+    --paper: #fff;
+    --soft: #f7f7f7;
+    --black: #111;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #ececec;
+    color: var(--ink);
+    font-family: Arial, Helvetica, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .page {
+    width: 750px;
+    height: 800px;
+    overflow: hidden;
+    background: var(--paper);
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+  }
+
+  .masthead {
+    height: 46px;
+    background: var(--black);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 4px solid #d50032;
+  }
+
+  .yuzuture-mark {
+    color: #fff;
+    text-decoration: none;
+    font: 700 29px/1 Georgia, "Times New Roman", serif;
+    letter-spacing: -.035em;
+  }
+
+  .masthead-note {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid #777;
+    color: #ddd;
+    font-size: 12px;
+    letter-spacing: .03em;
+  }
+
+  .content {
+    padding: 17px 23px 20px;
+  }
+
+  .breadcrumbs {
+    color: #686868;
+    font-size: 13px;
+    margin-bottom: 18px;
+    white-space: nowrap;
+  }
+
+  .breadcrumbs a {
+    color: #555;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .breadcrumbs span {
+    margin: 0 7px;
+    color: #999;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 458px) 222px;
+    gap: 22px;
+    align-items: start;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+    color: #3c3c3c;
+    font-size: 14px;
+  }
+
+  .article-meta .rule {
+    width: 1px;
+    height: 17px;
+    background: #cfcfcf;
+  }
+
+  .article-type {
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0;
+    font: 700 45px/.98 Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+    letter-spacing: -.035em;
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: 8px;
+    color: #444;
+    font-size: 23px;
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    font-weight: 400;
+  }
+
+  .authors {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .author {
+    color: var(--yuzuture-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
+  .author:hover {
+    color: var(--yuzuture-blue-dark);
+  }
+
+  .corresponding {
+    margin-left: 2px;
+    font-size: 9px;
+    vertical-align: super;
+    text-decoration: none;
+  }
+
+  .publication {
+    margin-top: 16px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 10px;
+    align-items: baseline;
+    font-size: 13px;
+    color: #444;
+  }
+
+  .publication em {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+  }
+
+  .publication a {
+    color: var(--yuzuture-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .metrics {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 13px;
+    font-size: 13px;
+  }
+
+  .metric strong {
+    font-size: 15px;
+  }
+
+  .metric a {
+    color: var(--yuzuture-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .project-info {
+    margin-top: 17px;
+    border-top: 1px solid var(--line);
+  }
+
+  .project-info h2 {
+    margin: 12px 0 8px;
+    font: 700 17px/1.2 Georgia, "Times New Roman", "Noto Serif SC", serif;
+  }
+
+  .info-row {
+    min-height: 33px;
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    align-items: center;
+    border-top: 1px solid var(--soft-line);
+    font-size: 13px;
+  }
+
+  .info-label {
+    color: #555;
+    font-weight: 700;
+  }
+
+  .editable {
+    min-width: 80px;
+    padding: 3px 4px;
+    border-bottom: 1px dotted #aaa;
+    color: #333;
+    outline: none;
+  }
+
+  .editable:focus {
+    background: #fff9d9;
+    border-bottom-color: var(--yuzuture-blue);
+  }
+
+  .editor-hint {
+    margin-top: 7px;
+    color: #888;
+    font-size: 10px;
+  }
+
+  .access-card {
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .access-lead {
+    margin: 0 0 13px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  .access-lead strong {
+    display: inline-block;
+    margin-top: 3px;
+    color: #222;
+    font-size: 18px;
+  }
+
+  .workshop-button {
+    display: block;
+    position: relative;
+    padding: 14px 42px 14px 15px;
+    background: var(--yuzuture-blue);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background .15s ease, transform .15s ease;
+  }
+
+  .workshop-button::after {
+    content: "↗";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-53%);
+    font-size: 19px;
+  }
+
+  .workshop-button:hover {
+    background: var(--yuzuture-blue-dark);
+    transform: translateY(-1px);
+  }
+
+  .side-section {
+    margin-top: 15px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line);
+  }
+
+  .side-heading {
+    margin-bottom: 9px;
+    color: #666;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .side-section p {
+    margin: 0 0 10px;
+    font-size: 12.5px;
+    line-height: 1.48;
+    color: #3e3e3e;
+  }
+
+  .side-section strong {
+    color: #222;
+  }
+
+  .cite-button {
+    width: 100%;
+    margin-top: 4px;
+    padding: 9px 10px;
+    border: 1px solid #aaa;
+    background: #fff;
+    color: #222;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .cite-button:hover {
+    background: #f2f2f2;
+  }
+
+  .author-note {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+    line-height: 1.48;
+    color: #666;
+  }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    transform: translate(-50%, 20px);
+    padding: 10px 14px;
+    background: #222;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  @media (max-width: 760px) {
+    body { display: block; }
+    .page {
+      width: 100vw;
+      min-height: 100vh;
+      height: auto;
+      box-shadow: none;
+    }
+    .masthead,
+    .content {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .article-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; }
+    .editor-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="masthead">
+    <a class="yuzuture-mark" href="./" title="Yuzuture home">yuzuture</a>
+    <span class="masthead-note">mod-production portfolio</span>
+  </header>
+
+  <div class="content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="./">yuzuture</a>
+      <span>›</span><a href="#project-information">articles</a>
+      <span>›</span><a href="#author-note">article</a>
+    </nav>
+
+    <div class="article-grid">
+      <article>
+        <div class="article-meta">
+          <span class="article-type">Article</span>
+          <span class="rule"></span>
+          <span>更新日期：<span class="editable persistent" contenteditable="true" data-key="update-date">—</span></span>
+        </div>
+
+        <h1>
+          柚子社将领包
+          <span class="subtitle">Yuzusoft Generals Pack</span>
+        </h1>
+
+        <div class="authors"><a class="author" href="#author-note">牢八</a>, <a class="author" href="#author-note">御坂真琴</a>, <a class="author" href="#author-note">伊尔诺<sup class="corresponding" title="Corresponding author">✉</sup></a>, <a class="author" href="#author-note">VAN</a>, <a class="author" href="#author-note">岛主</a>, <a class="author" href="#author-note">在原七海（老登）</a>, <a class="author" href="#author-note">huhu<sup class="corresponding" title="Corresponding author">✉</sup></a>, <a class="author" href="#author-note">o5j</a>, <a class="author" href="#author-note">统计计划管理</a>, <a class="author" href="#author-note">暮风昔云初（芳乃）</a>, <a class="author" href="#author-note">Верный</a>, <a class="author" href="#author-note">夏目不是枣子姐</a>, <a class="author" href="#author-note">彩云赤霞</a> & <a class="author" href="#author-note">小枫</a></div>
+
+        <div class="publication">
+          <em>Yuzuture</em>
+          <strong>Mod Project</strong>
+          <span>(Steam Workshop)</span>
+          <span>·</span>
+          <a id="cite-link" href="#">Cite this article</a>
+        </div>
+
+        <div class="metrics">
+          <span class="metric"><strong>14</strong>&nbsp;Authors</span>
+          <span class="metric"><a href="#statements">Statements</a></span>
+          <span class="metric"><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3303751918" target="_blank" rel="noopener noreferrer">Metrics</a></span>
+        </div>
+
+        <section class="project-info" id="project-information">
+          <h2>Project information</h2>
+          <div class="info-row">
+            <span class="info-label">Workshop ID</span>
+            <span>3303751918</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">当前支持版本</span>
+            <span class="editable persistent" contenteditable="true" data-key="supported-version">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Mod 版本号</span>
+            <span class="editable persistent" contenteditable="true" data-key="mod-version">—</span>
+          </div>
+          <div class="editor-hint">可直接点击虚线内容编辑；浏览器会在本机保存填写结果。</div>
+        </section>
+
+        <div class="author-note" id="author-note">
+          <strong>✉ Correspondence:</strong> Requests concerning the project should be addressed to 伊尔诺 and huhu.
+        </div>
+      </article>
+
+      <aside>
+        <section class="access-card">
+          <p class="access-lead">
+            You have full access to this article via<br>
+            <strong>Steam Workshop</strong>.
+          </p>
+
+          <a class="workshop-button"
+             href="https://steamcommunity.com/sharedfiles/filedetails/?id=3303751918"
+             target="_blank"
+             rel="noopener noreferrer">
+            Open Workshop
+          </a>
+
+          <div class="side-section" id="statements">
+            <div class="side-heading">Statements</div>
+            <p>This article is a mod-production record and has not been peer reviewed.</p>
+            <p><strong>Competing interests:</strong><br>The authors declare no competing interests.</p>
+            <p><strong>Funding:</strong><br>This work received no external funding.</p>
+          </div>
+
+          <div class="side-section">
+            <div class="side-heading">Citation</div>
+            <p>牢八 et al. <em>柚子社将领包</em>. Steam Workshop, item 3303751918.</p>
+            <button class="cite-button" id="copy-citation" type="button">Copy citation</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status">Citation copied.</div>
+
+<script>
+(() => {
+  const fields = document.querySelectorAll(".persistent");
+  fields.forEach((field) => {
+    const key = "yuzusoft-yuzuture-" + field.dataset.key;
+    const saved = localStorage.getItem(key);
+    if (saved) field.textContent = saved;
+    field.addEventListener("input", () => {
+      localStorage.setItem(key, field.textContent.trim() || "—");
+    });
+  });
+
+  const citation = "牢八, 御坂真琴, 伊尔诺, VAN, 岛主, 在原七海（老登）, huhu, o5j, 统计计划管理, 暮风昔云初（芳乃）, Верный, 夏目不是枣子姐, 彩云赤霞 & 小枫. 柚子社将领包 [Hearts of Iron IV mod]. Steam Workshop item 3303751918.";
+
+  const toast = document.getElementById("toast");
+  const showToast = (text) => {
+    toast.textContent = text;
+    toast.classList.add("show");
+    window.clearTimeout(window.__toastTimer);
+    window.__toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1500);
+  };
+
+  const copyCitation = async () => {
+    try {
+      await navigator.clipboard.writeText(citation);
+      showToast("Citation copied.");
+    } catch (_) {
+      const area = document.createElement("textarea");
+      area.value = citation;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand("copy");
+      area.remove();
+      showToast("Citation copied.");
+    }
+  };
+
+  document.getElementById("copy-citation").addEventListener("click", copyCitation);
+  document.getElementById("cite-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    copyCitation();
+  });
+})();
+</script>
+</body>
+</html>
