@@ -69,10 +69,6 @@ spriteTypes = {
 		textureFile = "gfx/guis/start_ui_qun_code.png"
 		legacy_lazy_load = no
 	}
-	spriteType = {
-		name = "GFX_start_ui_nature_credits"
-		textureFile = "gfx/guis/start_ui_nature_credits.png"
-	}
     progressbartype = {
         name = "GFX_yz_miliatry_party_ui_progress_bar"
         textureFile1 = "gfx/guis/YZ_miliatry_party_ui_progress_max.dds"

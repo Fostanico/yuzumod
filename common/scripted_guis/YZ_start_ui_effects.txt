@@ -80,7 +80,7 @@ scripted_gui = {
 				else_if = {
 					limit = { check_variable = { YZ_start_ui_sd_progress = 9 } }
 					set_global_flag = mod_in_nor_mode
-					# 要点：完整输入 1001011001 后，同时写入全局 flag 和当前国家 flag；后者用于只让该国家看到 Nature 彩蛋制作人员页。 [2026-06-22] [伊尔诺/GPT5.5]
+					# 要点：完整输入 1001011001 后，同时写入全局 flag 和当前国家 flag；后者用于只让该国家启用 Yuzuture 在线鸣谢按钮。 [2026-07-15] [伊尔诺/GPT5]
 					set_country_flag = this_country_in_nor_mode
 					# 要点：阿诺模式启用后直接执行两项原招募决议的完整结算；已有对应招募旗标时跳过，防止重复生成同名将领。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
 					if = {
@@ -102,55 +102,13 @@ scripted_gui = {
 				}
 			}
 		}
-		# 内容：Nature 彩蛋页与普通右侧正文互斥显示，避免制作人员页在彩蛋状态下两套文本重叠。 [2026-06-22] [伊尔诺/GPT5.5]
+		# 内容：普通模式下鸣谢按钮切换本地正文；阿诺模式下同位置按钮改为打开公开 Yuzuture 网站。右侧正文不再被静态截图覆盖。 [2026-07-15] [伊尔诺/GPT5]
 		triggers = {
-			YZ_start_ui_content_visible = {
-				or = {
-					not = { has_country_flag = YZ_start_ui_tab_credits }
-					not = { has_country_flag = this_country_in_nor_mode }
-				}
+			YZ_start_ui_credits_button_visible = {
+				not = { has_country_flag = this_country_in_nor_mode }
 			}
-			YZ_start_ui_nature_page_bg_visible = {
-				has_country_flag = YZ_start_ui_tab_credits
+			YZ_start_ui_credits_web_button_visible = {
 				has_country_flag = this_country_in_nor_mode
-			}
-			YZ_start_ui_nature_home_button_visible = {
-				has_country_flag = YZ_start_ui_tab_credits
-				has_country_flag = this_country_in_nor_mode
-			}
-			YZ_start_ui_nature_breadcrumbs_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_meta_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_title_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_authors_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_journal_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_metrics_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_footer_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_side_lead_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_workshop_button_visible = {
-				has_country_flag = YZ_start_ui_tab_credits
-				has_country_flag = this_country_in_nor_mode
-			}
-			YZ_start_ui_nature_workshop_button_text_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
-			}
-			YZ_start_ui_nature_statements_visible = {
-				has_country_flag = YZ_start_ui_nature_text_disabled
 			}
 		}
 	}

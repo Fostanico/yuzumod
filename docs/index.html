@@ -222,23 +222,12 @@
     font-weight: 700;
   }
 
-  .editable {
+  .project-value {
     min-width: 80px;
     padding: 3px 4px;
     border-bottom: 1px dotted #aaa;
     color: #333;
-    outline: none;
-  }
-
-  .editable:focus {
-    background: #fff9d9;
-    border-bottom-color: var(--yuzuture-blue);
-  }
-
-  .editor-hint {
-    margin-top: 7px;
-    color: #888;
-    font-size: 10px;
+    font-weight: 700;
   }
 
   .access-card {
@@ -380,14 +369,13 @@
   @media print {
     body { background: #fff; }
     .page { box-shadow: none; }
-    .editor-hint { display: none; }
   }
 </style>
 </head>
 <body>
 <main class="page">
   <header class="masthead">
-    <a class="yuzuture-mark" href="./" title="Yuzuture home">yuzuture</a>
+    <a class="yuzuture-mark" href="https://www.nature.com/" target="_blank" rel="noopener noreferrer" title="Open nature.com">yuzuture</a>
     <span class="masthead-note">mod-production portfolio</span>
   </header>
 
@@ -403,7 +391,7 @@
         <div class="article-meta">
           <span class="article-type">Article</span>
           <span class="rule"></span>
-          <span>更新日期：<span class="editable persistent" contenteditable="true" data-key="update-date">—</span></span>
+          <span>更新日期：<span class="project-value" id="update-date">—</span></span>
         </div>
 
         <h1>
@@ -435,13 +423,12 @@
           </div>
           <div class="info-row">
             <span class="info-label">当前支持版本</span>
-            <span class="editable persistent" contenteditable="true" data-key="supported-version">—</span>
+            <span class="project-value" id="supported-version">—</span>
           </div>
           <div class="info-row">
             <span class="info-label">Mod 版本号</span>
-            <span class="editable persistent" contenteditable="true" data-key="mod-version">—</span>
+            <span class="project-value" id="mod-version">—</span>
           </div>
-          <div class="editor-hint">可直接点击虚线内容编辑；浏览器会在本机保存填写结果。</div>
         </section>
 
         <div class="author-note" id="author-note">
@@ -483,16 +470,19 @@
 
 <div class="toast" id="toast" role="status">Citation copied.</div>
 
+<script src="./site-data.js"></script>
 <script>
 (() => {
-  const fields = document.querySelectorAll(".persistent");
-  fields.forEach((field) => {
-    const key = "yuzusoft-yuzuture-" + field.dataset.key;
-    const saved = localStorage.getItem(key);
-    if (saved) field.textContent = saved;
-    field.addEventListener("input", () => {
-      localStorage.setItem(key, field.textContent.trim() || "—");
-    });
+  const siteData = window.YUZUTURE_SITE_DATA || {};
+  const projectFields = {
+    "update-date": siteData.updateDate,
+    "supported-version": siteData.supportedVersion,
+    "mod-version": siteData.modVersion
+  };
+  Object.entries(projectFields).forEach(([id, value]) => {
+    if (typeof value === "string" && value.trim()) {
+      document.getElementById(id).textContent = value;
+    }
   });
 
   const citation = "牢八, 御坂真琴, 伊尔诺, VAN, 岛主, 在原七海（老登）, huhu, o5j, 统计计划管理, 暮风昔云初（芳乃）, Верный, 夏目不是枣子姐, 彩云赤霞 & 小枫. 柚子社将领包 [Hearts of Iron IV mod]. Steam Workshop item 3303751918.";
