@@ -1,3 +1,4 @@
+# 核心圈决议直接修改好感、柚子厨比例和财政状态；源变量写入后立即调用统一派生值入口。
 YZ_CORE_GROUP = {
     test = {
         priority = 1000000
@@ -116,11 +117,10 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Murasame.png"
-                                small = "gfx\leader\Murasame2.png"
+                                large = "gfx/leader/Murasame.png"
+                                small = "gfx/leader/Murasame2.png"
                             }
                         }
-                        set_character_flag = yz_government_flag
                         allowed_civil_war = {
                             is_ai = no
                         }
@@ -136,10 +136,21 @@ YZ_CORE_GROUP = {
                     }
                 }
             }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_murasame
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
+                }
+            }
             add_to_variable = {
                 yzc_manpower_factor = 0.01
                 tooltip = yzc_manpower_factor_gain
             }
+            yz_refresh_love_modifier_values = yes
+            yz_refresh_yzc_manpower_values = yes
             custom_effect_tooltip = get_Murasame_advisor
         }
     }
@@ -199,6 +210,7 @@ YZ_CORE_GROUP = {
                 min = -100
                 max = 200
             }
+            yz_refresh_love_modifier_values = yes
             add_research_slot = 1
             add_to_variable = { yz_721_research_research_speed_factor = 0.01 }
             add_to_variable = { yz_721_research_consumer_goods_factor = 0.005 }
@@ -216,17 +228,14 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Nene.png"
-                                small = "gfx\leader\Nene2.png"
+                                large = "gfx/leader/Nene.png"
+                                small = "gfx/leader/Nene2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        allowed = {
-
-                        }
-                        set_character_flag = yz_government_flag
+                        # allowed = { } # generate_character 不支持该空块，原代码不会生效
                         advisor = {
                             slot = political_advisor
                             cost = 50
@@ -245,18 +254,52 @@ YZ_CORE_GROUP = {
                     }
                 }
             }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_lingdiningning
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
+                }
+            }
             custom_effect_tooltip = get_Ningning_advisor
         }
     }
+    # 旧存档的手动幂等迁移入口：修复余额/新作/长期投资源状态后重建账本。
+    # 兼容 flag 仅记录玩家已执行修复，不得据此恢复 on_daily 迁移轮询。
     chongzhiyouzibishangxian = {
         visible = {
-            has_country_flag = qiyong_youzi_2
+            OR = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
         }
         complete_effect = {
             set_variable = {
                 var = yz_money_max
                 value = 20000
             }
+            if = {
+                limit = {
+                    has_country_flag = yz_newwork_publishing
+                }
+                yz_recalculate_new_works_income = yes
+            }
+            else = {
+                set_variable = { yz_new_works = 0 }
+            }
+            if = {
+                limit = {
+                    NOT = { has_variable = basic_additional_yz_money_spend }
+                }
+                set_variable = { basic_additional_yz_money_spend = 500 }
+            }
+            clamp_variable = { var = yz_money min = 0 max = yz_money_max }
+            clr_country_flag = monly_yz_money_spent_too_much
+            set_country_flag = yz_money_overflow_fix_v1
+            set_country_flag = yz_money_overflow_fix_v2
+            yz_recalculate_monthly_money_ledger = yes
         }
     }
     Yoshino_industry = {		#芳乃振新计划
@@ -332,14 +375,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Yoshino.png"
-                                small = "gfx\leader\Yoshino2.png"
+                                large = "gfx/leader/Yoshino.png"
+                                small = "gfx/leader/Yoshino2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = political_advisor
                             cost = 35
@@ -353,6 +395,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_chaowufangnai
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
             set_country_flag = yoshino_industry_start
@@ -431,6 +482,7 @@ YZ_CORE_GROUP = {
                 min = -100
                 max = 200
             }
+            yz_refresh_love_modifier_values = yes
 
             meta_effect = {
                 text = {
@@ -441,14 +493,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Meguru.png"
-                                small = "gfx\leader\Meguru2.png"
+                                large = "gfx/leader/Meguru.png"
+                                small = "gfx/leader/Meguru2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = political_advisor
                             cost = 100
@@ -463,6 +514,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_meigulu
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
             set_country_flag = megulu_industry_start
@@ -517,6 +577,7 @@ YZ_CORE_GROUP = {
                 min = -100
                 max = 200
             }
+            yz_refresh_love_modifier_values = yes
             meta_effect = {
                 text = {
                     generate_character = {
@@ -526,14 +587,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\hazuki.png"
-                                small = "gfx\leader\hazuki2.png"
+                                large = "gfx/leader/hazuki.png"
+                                small = "gfx/leader/hazuki2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = navy_chief
                             cost = 100
@@ -546,6 +606,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_hazuki
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
             custom_effect_tooltip = get_hazuki_advisor
@@ -610,6 +679,7 @@ YZ_CORE_GROUP = {
                 min = -100
                 max = 200
             }
+            yz_refresh_love_modifier_values = yes
             add_command_power = -20
             army_experience = -25
             create_intelligence_agency = yes
@@ -622,14 +692,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Nanami.png"
-                                small = "gfx\leader\Nanami2.png"
+                                large = "gfx/leader/Nanami.png"
+                                small = "gfx/leader/Nanami2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = political_advisor
                             cost = 200
@@ -640,6 +709,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_nanami
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
             custom_effect_tooltip = get_Nanami_advisor
@@ -660,23 +738,41 @@ YZ_CORE_GROUP = {
         }
         custom_cost_text = LD_30
         available = {
-            has_country_flag = have_nanami
-            command_power > 24.99
-            has_army_experience > 34.99
-            has_tech = tech_field_hospital
-            industrial_complex > 2
-            check_variable = {
-                love_depth > 30
-                tooltip = love_depth_tooltip_compare
+            # Trigger if/else is evaluated conditionally; a flat AND block still
+            # evaluated this invalid vanilla technology in Millennium Dawn.
+            if = {
+                limit = {
+                    has_global_flag = yz_md_startup_detected
+                }
+                always = no
+            }
+            else = {
+                has_country_flag = have_nanami
+                command_power > 24.99
+                has_army_experience > 34.99
+                has_tech = tech_field_hospital
+                industrial_complex > 2
+                check_variable = {
+                    love_depth > 30
+                    tooltip = love_depth_tooltip_compare
+                }
             }
         }
 
         visible = {
-            has_country_flag = have_nanami
-            has_country_flag = qiyong_youzi_2
-            has_country_flag = set_YzCoreGroup
-            #not = { has_country_flag = have_nanami_advisor }
-            not = { has_country_flag = yz_bad_end }
+            if = {
+                limit = {
+                    has_global_flag = yz_md_startup_detected
+                }
+                always = no
+            }
+            else = {
+                has_country_flag = have_nanami
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = set_YzCoreGroup
+                #not = { has_country_flag = have_nanami_advisor }
+                not = { has_country_flag = yz_bad_end }
+            }
         }
 
         modifier = {
@@ -699,6 +795,7 @@ YZ_CORE_GROUP = {
                 min = -100
                 max = 200
             }
+            yz_refresh_love_modifier_values = yes
             hidden_effect = {
                 set_country_flag = have_nanami_high_command
             }
@@ -711,14 +808,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Nanami.png"
-                                small = "gfx\leader\Nanami2.png"
+                                large = "gfx/leader/Nanami.png"
+                                small = "gfx/leader/Nanami2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = high_command
                             cost = 200
@@ -730,6 +826,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_nanami_cheif
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
         }
@@ -744,7 +849,7 @@ YZ_CORE_GROUP = {
         }
     }
 
-    0nai_concert = { 		#让绫濑组建宣传部
+    yz_0nai_concert = { 		#让绫濑组建宣传部
         icon = GFX_lingnai
         days_remove = 7
         custom_cost_trigger = {
@@ -806,14 +911,13 @@ YZ_CORE_GROUP = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Ayase.png"
-                                small = "gfx\leader\Ayase2.png"
+                                large = "gfx/leader/Ayase.png"
+                                small = "gfx/leader/Ayase2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
-                        set_character_flag = yz_government_flag
                         advisor = {
                             slot = political_advisor
                             cost = 100
@@ -824,6 +928,15 @@ YZ_CORE_GROUP = {
                             }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_0nai
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
         }
@@ -853,7 +966,7 @@ YZ_CORE_GROUP = {
             stability_weekly = 0.01
             war_support_weekly = 0.01
             army_morale_factor = -0.50
-            army_organization_factor = -0.10
+            army_org_factor = -0.10
             army_attack_factor = -0.10
             army_defence_factor = -0.10
             experience_gain_army_unit_factor = -0.2
@@ -864,6 +977,7 @@ YZ_CORE_GROUP = {
             custom_effect_tooltip = reinforce_vampire_modifier_tt
             add_to_variable = { vampire_attack = 0.15}
             add_to_variable = { love_depth = 10}
+            yz_refresh_love_modifier_values = yes
             add_stability = 0.1
             add_war_support = 0.1
         }
@@ -895,7 +1009,7 @@ YZ_CORE_GROUP = {
             stability_weekly = 0.01
             war_support_weekly = 0.01
             army_morale_factor = -0.50
-            army_organization_factor = -0.10
+            army_org_factor = -0.10
             army_attack_factor = -0.10
             army_defence_factor = -0.10
             experience_gain_army_unit_factor = -0.2
@@ -906,6 +1020,7 @@ YZ_CORE_GROUP = {
             custom_effect_tooltip = reinforce_vampire_modifier_tt
             add_to_variable = { vampire_attack = 0.10}
             add_to_variable = { love_depth = 10}
+            yz_refresh_love_modifier_values = yes
             add_stability = 0.05
             add_war_support = 0.05
         }
@@ -934,7 +1049,7 @@ YZ_CORE_GROUP = {
             stability_weekly = 0.02
             war_support_weekly = 0.02
             army_morale_factor = -0.50
-            army_organization_factor = -0.10
+            army_org_factor = -0.10
             army_attack_factor = -0.10
             army_defence_factor = -0.10
             experience_gain_army_unit_factor = -0.2
@@ -945,6 +1060,7 @@ YZ_CORE_GROUP = {
             custom_effect_tooltip = reinforce_vampire_modifier_tt
             add_to_variable = { vampire_attack = 0.15}
             add_to_variable = { love_depth = 20}
+            yz_refresh_love_modifier_values = yes
             add_stability = 0.1
             add_war_support = 0.1
         }
@@ -1049,9 +1165,6 @@ YZ_CORE_GROUP = {
 
     country_leader_linglai_decisions_conservatism = {
         icon = GFX_lingnai
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
             check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
@@ -1070,9 +1183,6 @@ YZ_CORE_GROUP = {
 
     country_leader_ningning_decisions_conservatism = {
         icon = GFX_ningning
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
             check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
@@ -1090,9 +1200,6 @@ YZ_CORE_GROUP = {
     }
     country_leader_Murasame_decisions_conservatism = {
         icon = GFX_murasame
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
             check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
@@ -1110,9 +1217,6 @@ YZ_CORE_GROUP = {
     }
     country_leader_meiyu_decisions_conservatism = {
         icon = GFX_miu
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
 
@@ -1130,9 +1234,6 @@ YZ_CORE_GROUP = {
     }
     country_leader_aragami_sayo_decisions = {      #荒神小夜,2025.4.1,22:52,伊尔诺
         icon = GFX_aragami_sayo
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
             check_variable = { love_depth > 100 tooltip = love_depth_tooltip_compare }
@@ -1194,9 +1295,10 @@ YZ_CORE_GROUP = {
             custom_effect_tooltip = makoto_become_leader
             hidden_effect = {
                 retire_country_leader = yes
+                # 原版与 Millennium Dawn 使用不同意识形态和特质 ID，按开局兼容 flag 分流。
                 if = {
                     limit = {
-                        date < 1999.12.31
+                        NOT = { has_global_flag = yz_md_startup_detected }
                     }
                     create_country_leader = {
                         name = "御坂 真琴"
@@ -1261,7 +1363,7 @@ YZ_CORE_GROUP = {
             has_government = communism
             has_country_flag = open_yz_leaders_list
             has_country_flag = have_misaka_makoto
-            date > 1999.12.31
+            has_global_flag = yz_md_startup_detected
         }
         complete_effect = {
             custom_effect_tooltip = we_rebuild_it
@@ -1451,7 +1553,7 @@ YZ_CORE_GROUP = {
                     }
                     retire_country_leader = yes
                     create_country_leader = {
-                         name = "诺 亚"
+                        name = "诺 亚"
                         picture = "GFX_leader_chun"
                         desc = chun_leader_desc
                         expire = "2300.1.1"
@@ -1466,7 +1568,7 @@ YZ_CORE_GROUP = {
                 else = {
                     retire_country_leader = yes
                     create_country_leader = {
-                         name = "诺 亚"
+                        name = "诺 亚"
                         picture = "GFX_leader_chun"
                         desc = chun_leader_desc
                         expire = "2300.1.1"
@@ -1481,11 +1583,8 @@ YZ_CORE_GROUP = {
             }
         }
     }
-    是时候让柚子社领导国家了 = {
+    YZ_lead_the_country = {
         icon = GFX_Category_decision
-        allowed = {
-            is_ai = no
-        }
         available = {
             is_ai = no
 
@@ -2458,7 +2557,7 @@ YZ_CORE_GROUP = {
             has_country_flag = YzCoreGroup_first_secretary
             not = { has_idea = YCG_misaka_makoto }
             has_country_flag = have_misaka_makoto
-            date > 1999.12.31
+            has_global_flag = yz_md_startup_detected
         }
         complete_effect = {
             set_country_flag = YCG_FS_misaka_makoto
@@ -2475,7 +2574,7 @@ YZ_CORE_GROUP = {
             has_country_flag = YzCoreGroup_chairman
             not = { has_idea = YCG_misaka_makoto }
             has_country_flag = have_misaka_makoto
-            date > 1999.12.31
+            has_global_flag = yz_md_startup_detected
         }
         complete_effect = {
             set_country_flag = YCG_CM_misaka_makoto
@@ -2492,7 +2591,7 @@ YZ_CORE_GROUP = {
             has_country_flag = YzCoreGroup_vice_chair
             not = { has_idea = YCG_misaka_makoto }
             has_country_flag = have_misaka_makoto
-            date > 1999.12.31
+            has_global_flag = yz_md_startup_detected
         }
         complete_effect = {
             set_country_flag = YCG_VC_misaka_makoto

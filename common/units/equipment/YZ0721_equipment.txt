@@ -16,9 +16,7 @@ equipments = {
 		}
 		upgrades = {
 			tank_reliability_upgrade
-			mech_cost_upgrade
-			mech_cost_upgrade
-			mech_cost_upgrade
+			yz_mech_cost_upgrade
 		}
 		group_by = archetype
 		active = no

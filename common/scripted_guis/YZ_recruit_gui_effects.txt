@@ -2,7 +2,7 @@ scripted_gui = {
 	YZ_recruit_gui = {
 		window_name = "YZ_recurit"
 		context_type = player_context
-		visible = {	
+		visible = {
 			or = {
 				has_country_flag = qiyong_youzi_1
 				has_country_flag = qiyong_youzi_2
@@ -35,7 +35,7 @@ scripted_gui = {
 	SR_gui = {
 		window_name = "SR"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -60,7 +60,7 @@ scripted_gui = {
 	SW_gui = {
 		window_name = "SW"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -85,7 +85,7 @@ scripted_gui = {
 	RJ_gui = {
 		window_name = "RJ"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -110,7 +110,7 @@ scripted_gui = {
 	CS_gui = {
 		window_name = "CS"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -147,7 +147,7 @@ scripted_gui = {
 	TS_gui = {
 		window_name = "TS"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -172,7 +172,7 @@ scripted_gui = {
 	AIN_gui = {
 		window_name = "AIN"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -182,12 +182,12 @@ scripted_gui = {
 						has_country_flag = AIN_recruit_show
 					}
 					clr_country_flag = AIN_recruit_show
-					clr_country_flag = show_xiali 
-					clr_country_flag = show_zhenxiao 
-					clr_country_flag = show_munaixiang 
-					clr_country_flag = show_diya 
-					clr_country_flag = show_xiyin 
-					clr_country_flag = show_airi 
+					clr_country_flag = show_xiali
+					clr_country_flag = show_zhenxiao
+					clr_country_flag = show_munaixiang
+					clr_country_flag = show_diya
+					clr_country_flag = show_xiyin
+					clr_country_flag = show_airi
 				}
 				else = {
 					set_country_flag = AIN_recruit_show
@@ -213,7 +213,7 @@ scripted_gui = {
 	TL_gui = {
 		window_name = "TL"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -238,7 +238,7 @@ scripted_gui = {
 	DR_gui = {
 		window_name = "DR"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -263,7 +263,7 @@ scripted_gui = {
 	NW_gui = {
 		window_name = "NW"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -288,7 +288,7 @@ scripted_gui = {
 	NK_gui = {
 		window_name = "NK"
 		context_type = player_context
-		visible = {	
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -310,12 +310,12 @@ scripted_gui = {
 			}
 		}
 	}
-	
+
 	#夏目不是枣子姐
 	LLLJ_gui = {	#聚光灯柠檬果酱
 		window_name = "LLLJ"
 		context_type = player_context
-		visible = { 
+		visible = {
 			has_country_flag = show_recruit_button
 		}
 		effects = {
@@ -332,7 +332,9 @@ scripted_gui = {
 			}
 		}
 		triggers = {
-			has_country_flag = show_recruit_button
+			LLLJ_visible = {
+				has_country_flag = show_recruit_button
+			}
 		}
 	}
 
@@ -343,7 +345,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = QL_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_murasame_click = {
 				yzrecruit_murasame = yes
 			}
@@ -397,7 +399,7 @@ scripted_gui = {
 			recruit_luchun_visible = {
 				has_country_flag = QL_recruit_show
 			}
-			
+
 			recruit_mako1_visible = {
 				has_country_flag = have_mako
 			}
@@ -417,7 +419,7 @@ scripted_gui = {
 				has_country_flag = QL_recruit_show
 			}
 		}
-		
+
 	}
 
 	SW_recurit_gui = {		#魔宴
@@ -427,7 +429,7 @@ scripted_gui = {
 			has_country_flag = SW_recruit_show
 		}
 		effects = {
-			
+
 			recruit_nene_click = {		#宁宁
 				yzrecruit_nene = yes
 			}
@@ -482,7 +484,7 @@ scripted_gui = {
 			recruit_wakana_visible = {
 				has_country_flag = SW_recruit_show
 			}
-			
+
 			recruit_nene1_visible = {
 				has_country_flag = have_ningning
 			}
@@ -502,7 +504,7 @@ scripted_gui = {
 				has_country_flag = SW_recruit_show
 			}
 		}
-		
+
 	}
 
 	RJ_recurit_gui = {		#RJ
@@ -512,7 +514,7 @@ scripted_gui = {
 			has_country_flag = RJ_recruit_show
 		}
 		effects = {
-			
+
 			recruit_ayase_click = {		#0nai
 				yzrecruit_ayase = yes
 			}
@@ -522,7 +524,7 @@ scripted_gui = {
 			recruit_nijouin_hazuki_click = {	#羽院
 				yzrecruit_hazuki = yes
 			}
-			RJ_recruit_title_click = { 
+			RJ_recruit_title_click = {
 				if = {
 					limit = {
 						not = { has_country_flag = recruit_RJ_titile_clicked }
@@ -566,7 +568,7 @@ scripted_gui = {
 			recruit_hazuki_visible = {
 				has_country_flag = RJ_recruit_show
 			}
-			
+
 			recruit_ayase1_visible = {
 				has_country_flag = have_0nai
 			}
@@ -586,7 +588,7 @@ scripted_gui = {
 				has_country_flag = RJ_recruit_show
 			}
 		}
-		
+
 	}
 
 	CS_recurit_gui = {		#咖啡馆
@@ -605,7 +607,7 @@ scripted_gui = {
 			recruit_nozomi_click = {	#石墨烯
 				yzrecruit_nozomi = yes
 			}
-			CS_recruit_title_click = { 		
+			CS_recruit_title_click = {
 				if = {
 					limit = {
 						not = { has_country_flag = recruit_CS_titile_clicked }
@@ -624,9 +626,9 @@ scripted_gui = {
 				yzrecruit_mei = yes
 			}
 			recruit_suzune_click = {	#凉音
-				
+
 			}
-			CS_neko_click = {	
+			CS_neko_click = {
 				if = {
 					limit = {
 						check_variable = {
@@ -637,8 +639,8 @@ scripted_gui = {
 				}
 				random_list = {
 					975 = {}
-					25 = { 
-						add_political_power = 5 
+					25 = {
+						add_political_power = 5
 						add_to_variable = {
 							neko_click = 1
 						}
@@ -678,7 +680,7 @@ scripted_gui = {
 			recruit_suzune_visible = {
 				has_country_flag = CS_recruit_show
 			}
-			
+
 			recruit_kanna1_visible = {
 				has_country_flag = have_kanna
 			}
@@ -714,7 +716,7 @@ scripted_gui = {
 				has_country_flag = CS_recruit_show
 			}
 		}
-		
+
 	}
 
 	TS_recurit_gui = {		#天使纷扰
@@ -723,7 +725,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = TS_recruit_show
 		}
-		effects = {			
+		effects = {
 			recruit_noa_click = {		#乃爱
 				yzrecruit_noa = yes
 			}
@@ -733,14 +735,14 @@ scripted_gui = {
 			recruit_amane_click = {		#天音
 				yzrecruit_amane = yes
 			}
-			TS_recruit_title_click = { 
+			TS_recruit_title_click = {
 				if = {
 					limit = {
 						not = { has_country_flag = recruit_TS_titile_clicked }
 					}
 					yzrecruit_fumika = yes
 					yzrecruit_kaguya = yes
-					yzrecruit_orie = yes	
+					yzrecruit_orie = yes
 					set_country_flag = recruit_TS_titile_clicked
 				}
 				else = {
@@ -750,11 +752,11 @@ scripted_gui = {
 			recruit_kurumi_click = {	#来海
 				yzrecruit_kurumi = yes
 			}
-			recruit_kaguya_click = {	#辉夜	
-				yzrecruit_kaguya = yes		
+			recruit_kaguya_click = {	#辉夜
+				yzrecruit_kaguya = yes
 			}
 			recruit_ori_click = {	#奥莉叶
-				yzrecruit_orie = yes	
+				yzrecruit_orie = yes
 			}
 			TS_exit_click = {
 				clr_country_flag = TS_recruit_show
@@ -779,10 +781,10 @@ scripted_gui = {
 			recruit_kurumi_visible = {
 				has_country_flag = TS_recruit_show
 			}
-			recruit_ori_visible = {	
+			recruit_ori_visible = {
 				has_country_flag = TS_recruit_show
 			}
-			
+
 			recruit_noa1_visible = {
 				has_country_flag = have_noa
 			}
@@ -798,14 +800,14 @@ scripted_gui = {
 			recruit_kurumi1_visible = {
 				has_country_flag = have_kurumi
 			}
-			recruit_ori1_visible = {	
+			recruit_ori1_visible = {
 				has_country_flag = have_orie
 			}
 			TS_exit_visible = {
 				has_country_flag = TS_recruit_show
 			}
 		}
-		
+
 	}
 
 	AIN_recurit_gui = {		#天色幻想岛
@@ -833,7 +835,7 @@ scripted_gui = {
 			recruit_munaixiang_click = {
 				yzrecruit_konoka = yes
 			}
-			AIN_recruit_title_click = {	
+			AIN_recruit_title_click = {
 				if = {
 					limit = {
 						not = { has_country_flag = recruit_AIN_titile_clicked }
@@ -853,12 +855,12 @@ scripted_gui = {
 
 			AIN_exit_click = {
 				clr_country_flag = AIN_recruit_show
-                clr_country_flag = show_xiali 
-                clr_country_flag = show_zhenxiao 
-                clr_country_flag = show_munaixiang 
-                clr_country_flag = show_diya 
-                clr_country_flag = show_xiyin 
-                clr_country_flag = show_airi 
+				clr_country_flag = show_xiali
+				clr_country_flag = show_zhenxiao
+				clr_country_flag = show_munaixiang
+				clr_country_flag = show_diya
+				clr_country_flag = show_xiyin
+				clr_country_flag = show_airi
 			}
 		}
 		triggers = {
@@ -885,7 +887,7 @@ scripted_gui = {
 				has_country_flag = show_airi
 			}
 			recruit_munaixiang_title_visible = {
-				has_country_flag = show_munaixiang 
+				has_country_flag = show_munaixiang
 			}
 			recruit_zhenxiao_title_visible = {
 				has_country_flag = show_zhenxiao
@@ -899,12 +901,12 @@ scripted_gui = {
 			recruit_xiali_title_visible = {
 				has_country_flag = show_xiali
 			}
-			
+
 			AIN_exit_visible = {
 				has_country_flag = AIN_recruit_show
 			}
 		}
-		
+
 	}
 
 	DR_recurit_gui = {		#DR
@@ -913,7 +915,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = DR_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_miu_click = {	#矢来美羽
 				yzrecruit_miu = yes
 			}
@@ -932,7 +934,7 @@ scripted_gui = {
 			recruit_buliangzi_click = {		#布良梓
 				yzrecruit_buliangzi = yes
 			}
-			recruit_DR_titile_click = {	
+			recruit_DR_titile_click = {
 				if = {
 					limit = {
 						not = { has_country_flag = recruit_DR_titile_clicked }
@@ -972,12 +974,12 @@ scripted_gui = {
 			recruit_buliangzi_visible = {
 				not = { has_country_flag = have_mera_azusa }
 			}
-			
+
 			DR_exit_visible = {
 				has_country_flag = DR_recruit_show
 			}
 		}
-		
+
 	}
 
 	NW_recurit_gui = {		#NW
@@ -986,7 +988,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = NW_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_hinata_click = {	#国广日向
 				yzrecruit_hinata = yes
 			}
@@ -1038,12 +1040,12 @@ scripted_gui = {
 			recruit_sena_visible = {
 				not = { has_country_flag = have_sena }
 			}
-			
+
 			NW_exit_visible = {
 				has_country_flag = NW_recruit_show
 			}
 		}
-		
+
 	}
 
 	NK_recurit_gui = {		#夏空彼方
@@ -1052,7 +1054,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = NK_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_chihaya_click = {	#上坂茅羽耶
 				yzrecruit_chihaya = yes
 			}
@@ -1090,12 +1092,12 @@ scripted_gui = {
 			recruit_yuiko_visible = {
 				not = { has_country_flag = have_yuiko }
 			}
-			
+
 			NK_exit_visible = {
 				has_country_flag = NK_recruit_show
 			}
 		}
-		
+
 	}
 
 	TL_recurit_gui = {		#天神乱漫
@@ -1104,7 +1106,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = TL_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_sana_click = {	#千岁佐奈
 				yzrecruit_sana = yes
 			}
@@ -1176,7 +1178,7 @@ scripted_gui = {
 		visible = {
 			has_country_flag = LLLJ_recruit_show
 		}
-		effects = {	
+		effects = {
 			recruit_ena_click = {	#阳见惠凪
 				yzrecruit_ena = yes
 			}

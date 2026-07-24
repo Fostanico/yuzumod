@@ -1,92 +1,859 @@
 technologies = {
-
-	tech_YZ_engineer = { 
-
+	tech_YZ_engineer = {
 		enable_subunits = {
 			YZ_engineer
 		}
-
 		research_cost = 1.5
 		start_year = 1936
-		
 		allow = {
 			always = no
 		}
-		
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
-	tech_YZ_field_hospital = { 
-
+	#SPG_back_to_light = {		#自火复活赛打赢了，变废案了。留这吧——huhu 2026.7.13
+	#重铸自火荣光
+	#research_cost = 1.5
+	#start_year = 1936
+	#allow = {
+	#always = no
+	#}
+	#ai_will_do = {
+	#factor = 0
+	#}
+	#light_sp_artillery_brigade = {
+	#combat_width = -1
+	#}
+	#medium_sp_artillery_brigade = {
+	#combat_width = -1
+	#}
+	#heavy_sp_artillery_brigade = {
+	#combat_width = -1
+	#}
+	#category_self_propelled_artillery = {
+	#soft_attack = 0.1
+	#maximum_speed = 0.2
+	#}
+	#category_self_propelled_anti_air = {
+	#maximum_speed = 0.2
+	#}
+	#category_tank_destroyers = {
+	#maximum_speed = 0.2
+	#}
+	#}
+	yz_infantry_1 = {
+		#柚子步兵改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_light_infantry = {
+			max_strength = 5
+			max_organisation = 5
+			initiative = 0.1
+			soft_attack = 0.3
+			hard_attack = 0.3
+			defense = 0.2
+			breakthrough = 2
+			ap_attack = 5
+		}
+	}
+	yz_infantry_2 = {
+		#柚子步兵改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_artillery = {
+			combat_width = -1
+			soft_attack = 0.3
+			breakthrough = 0.5
+			initiative = 0.05
+		}
+		category_light_infantry = {
+			combat_width = -0.5
+		}
+	}
+	yz_infantry_3 = {
+		#柚子步兵改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_light_infantry = {
+			maximum_speed = 0.5
+		}
+		category_artillery = {
+			maximum_speed = 0.5
+		}
+	}
+	yz_artillery_1 = {
+		#柚子炮兵改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_artillery = {
+			soft_attack = 0.2
+			breakthrough = 0.5
+		}
+		category_anti_tank = {
+			hard_attack = 0.3
+			ap_attack = 1
+		}
+		category_anti_air = {
+			air_attack = 0.3
+		}
+		category_rocket_artillery = {
+			soft_attack = 1
+		}
+	}
+	yz_artillery_2 = {
+		#柚子炮兵改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_artillery = {
+			combat_width = -1
+		}
+		category_support_artillery = {
+			soft_attack = 0.5
+		}
+	}
+	yz_artillery_3 = {
+		#柚子炮兵改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_artillery = {
+			soft_attack = 0.3
+		}
+		category_rocket_artillery = {
+			soft_attack = 0.3
+		}
+		category_anti_tank = {
+			hard_attack = 0.3
+		}
+		category_anti_air = {
+			air_attack = 0.3
+		}
+	}
+	yz_artillery_4 = {
+		#柚子炮兵改革四阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_mobile_and_mobile_combat_sup = {
+			maximum_speed = 0.3
+		}
+	}
+	yz_artillery_5 = {
+		#柚子炮兵改革五阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_artillery = {
+			combat_width = -1
+			soft_attack = 0.25
+		}
+		category_rocket_artillery = {
+			soft_attack = 0.25
+		}
+		category_anti_tank = {
+			hard_attack = 0.25
+			maximum_speed = 0.5
+		}
+		category_anti_air = {
+			maximum_speed = 0.5
+		}
+		category_support_artillery = {
+			combat_width = 3
+			battalion_mult = {
+				category = category_army
+				soft_attack = 5
+				add = yes
+			}
+		}
+	}
+	yz_cavalry_1 = {
+		#柚子骑兵改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		army_org_regain = 0.05
+		category_cavalry = {
+			maximum_speed = 0.2
+			max_organisation = 2
+		}
+	}
+	yz_cavalry_2 = {
+		#柚子骑兵改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_cavalry = {
+			maximum_speed = 0.3
+			max_strength = 3
+			soft_attack = 0.3
+			breakthrough = 0.5
+		}
+	}
+	yz_cavalry_3 = {
+		#柚子骑兵改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_cavalry = {
+			hard_attack = 2
+			ap_attack = 5
+			supply_consumption_factor = 0.01
+		}
+	}
+	yz_cavalry_4 = {
+		#柚子骑兵改革四阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_cavalry = {
+			maximum_speed = 0.5
+			hard_attack = 3
+		}
+	}
+	yz_light_armor_1 = {
+		#柚子轻装甲改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		motorized = {
+			maximum_speed = 0.25
+		}
+		armored_car = {
+			maximum_speed = 0.25
+		}
+		light_armor = {
+			maximum_speed = 0.25
+		}
+	}
+	yz_light_armor_2 = {
+		#柚子轻装甲改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		armored_car = {
+			hard_attack = 1
+			soft_attack = 1
+		}
+		light_armor = {
+			breakthrough = 1
+			hard_attack = 0.5
+			soft_attack = 0.5
+		}
+	}
+	yz_light_armor_3 = {
+		#柚子轻装甲改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		armored_car = {
+			max_organisation = 5
+		}
+		light_armor = {
+			max_organisation = 2
+		}
+	}
+	yz_light_armor_4 = {
+		#柚子轻装甲改革四阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		light_armor = {
+			maximum_speed = 0.25
+			breakthrough = 1
+			ap_attack = 1
+		}
+		armored_car = {
+			maximum_speed = 0.25
+			hard_attack = 1
+			soft_attack = 1
+			ap_attack = 1
+		}
+		motorized = {
+			maximum_speed = 0.25
+			defense = 1
+		}
+	}
+	yz_light_armor_5 = {
+		#柚子轻装甲改革五阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		light_armor = {
+			fuel_consumption_factor = -0.5
+			forest = {
+				attack = 0.15
+				defence = 0.15
+			}
+			urban = {
+				attack = 0.15
+				defence = 0.15
+			}
+			hills = {
+				attack = 0.15
+				defence = 0.15
+			}
+			mountain = {
+				attack = 0.15
+				defence = 0.15
+			}
+			river = {
+				attack = 0.15
+				defence = 0.15
+			}
+			plains = {
+				attack = 0.15
+				defence = 0.15
+			}
+			jungle = {
+				attack = 0.15
+				defence = 0.15
+			}
+			marsh = {
+				attack = 0.15
+				defence = 0.15
+			}
+			desert = {
+				attack = 0.15
+				defence = 0.15
+			}
+		}
+		armored_car = {
+			fuel_consumption_factor = -0.5
+			forest = {
+				attack = 0.15
+				defence = 0.15
+			}
+			urban = {
+				attack = 0.15
+				defence = 0.15
+			}
+			hills = {
+				attack = 0.15
+				defence = 0.15
+			}
+			mountain = {
+				attack = 0.15
+				defence = 0.15
+			}
+			river = {
+				attack = 0.15
+				defence = 0.15
+			}
+			plains = {
+				attack = 0.15
+				defence = 0.15
+			}
+			jungle = {
+				attack = 0.15
+				defence = 0.15
+			}
+			marsh = {
+				attack = 0.15
+				defence = 0.15
+			}
+			desert = {
+				attack = 0.15
+				defence = 0.15
+			}
+		}
+		motorized = {
+			fuel_consumption_factor = -0.5
+			forest = {
+				attack = 0.15
+				defence = 0.15
+			}
+			urban = {
+				attack = 0.15
+				defence = 0.15
+			}
+			hills = {
+				attack = 0.15
+				defence = 0.15
+			}
+			mountain = {
+				attack = 0.15
+				defence = 0.15
+			}
+			river = {
+				attack = 0.15
+				defence = 0.15
+			}
+			plains = {
+				attack = 0.15
+				defence = 0.15
+			}
+			jungle = {
+				attack = 0.15
+				defence = 0.15
+			}
+			marsh = {
+				attack = 0.15
+				defence = 0.15
+			}
+			desert = {
+				attack = 0.15
+				defence = 0.15
+			}
+		}
+	}
+	yz_armored_car = {
+		#柚子装甲车
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		armored_car = {
+			max_organisation = 10
+			max_strength = 10
+			breakthrough = 1
+			hard_attack = 0.3
+			soft_attack = 0.3
+			defense = 4
+			forest = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.05
+			}
+			hills = {
+				attack = 0.05
+			}
+			mountain = {
+				attack = 0.05
+			}
+			river = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.05
+			}
+			jungle = {
+				attack = 0.05
+			}
+			marsh = {
+				attack = 0.05
+			}
+			desert = {
+				attack = 0.05
+			}
+		}
+	}
+	yz_sp_rocket = {
+		#柚子喀秋莎
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		motorized_rocket_brigade = {
+			build_cost_ic = -0.4
+			soft_attack = 1
+			hard_attack = 15
+			breakthrough = 0.5
+			defense = 1
+			combat_width = -1
+			equipment_capture_factor = 0.015
+			# build_cost_resources = { # sub_unit 科技加成不支持资源成本块，原代码不会生效
+			# 	rubber = -1
+			# }
+		}
+	}
+	yz_support_1 = {
+		#柚子火力支援改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_self_propelled_artillery = {
+			soft_attack = 0.3
+		}
+		category_self_propelled_anti_air = {
+			air_attack = 0.3
+		}
+		category_tank_destroyers = {
+			hard_attack = 0.3
+		}
+	}
+	yz_support_2 = {
+		#柚子火力支援改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_self_propelled_artillery = {
+			maximum_speed = 0.2
+		}
+		category_self_propelled_anti_air = {
+			maximum_speed = 0.2
+		}
+		category_tank_destroyers = {
+			maximum_speed = 0.2
+		}
+		light_sp_artillery_brigade = {
+			combat_width = -0.5
+		}
+		medium_sp_artillery_brigade = {
+			combat_width = -0.5
+		}
+		heavy_sp_artillery_brigade = {
+			combat_width = -0.5
+		}
+		light_tank_destroyer_brigade = {
+			combat_width = -0.5
+		}
+		medium_tank_destroyer_brigade = {
+			combat_width = -0.5
+		}
+		heavy_tank_destroyer_brigade = {
+			combat_width = -0.5
+		}
+		modern_sp_artillery_brigade = {
+			combat_width = -0.5
+		}
+		modern_tank_destroyer_brigade = {
+			combat_width = -0.5
+		}
+		light_sp_anti_air_brigade = {
+			combat_width = -0.5
+		}
+		medium_sp_anti_air_brigade = {
+			combat_width = -0.5
+		}
+		heavy_sp_anti_air_brigade = {
+			combat_width = -0.5
+		}
+		modern_sp_anti_air_brigade = {
+			combat_width = -0.5
+		}
+	}
+	yz_support_3 = {
+		#柚子火力支援改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		shore_bombardment_bonus = 1
+		invasion_preparation = -0.3
+	}
+	yz_mechanized_1 = {
+		#柚子机械化改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		mechanized = {
+			build_cost_ic = -0.3
+			reliability = 0.5
+			# production_bonus = { # 装备科技加成不支持该嵌套块，原代码不会生效
+			# 	production_resource_need_factor = -0.3
+			# }
+		}
+	}
+	yz_mechanized_2 = {
+		#柚子机械化改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		mechanized = {
+			maximum_speed = 0.15
+			soft_attack = 0.2
+			hard_attack = 0.2
+			defense = 0.1
+			supply_consumption_factor = -0.08
+		}
+	}
+	yz_mechanized_3 = {
+		#柚子机械化改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		mechanized = {
+			maximum_speed = 0.15
+			combat_width = -0.5
+		}
+	}
+	yz_mechanized_4 = {
+		#柚子机械化改革四阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		mechanized = {
+			max_strength = 5
+		}
+	}
+	yz_blitzkrieg_1 = {
+		#柚子闪电战改革一阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	yz_blitzkrieg_2 = {
+		#柚子闪电战改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		light_armor = {
+			fuel_consumption_factor = -0.3
+			supply_consumption_factor = -0.3
+		}
+		medium_armor = {
+			fuel_consumption_factor = -0.3
+			supply_consumption_factor = -0.3
+		}
+		heavy_armor = {
+			fuel_consumption_factor = -0.3
+			supply_consumption_factor = -0.3
+		}
+		modern_armor = {
+			fuel_consumption_factor = -0.3
+			supply_consumption_factor = -0.3
+		}
+	}
+	yz_blitzkrieg_3 = {
+		#柚子闪电战改革三阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		light_armor = {
+			combat_width = -0.5
+			soft_attack = 0.15
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+		medium_armor = {
+			combat_width = -0.5
+			soft_attack = 0.15
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+		heavy_armor = {
+			combat_width = -0.5
+			soft_attack = 0.15
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+		modern_armor = {
+			combat_width = -0.5
+			soft_attack = 0.15
+			hard_attack = 0.15
+			ap_attack = 0.5
+		}
+	}
+	yz_air_land_2 = {
+		#柚子空地一体化改革二阶段
+		research_cost = 1.5
+		start_year = 1936
+		allow = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		category_tank_destroyers = {
+			hard_attack = 0.3
+		}
+		category_self_propelled_artillery = {
+			soft_attack = 0.3
+		}
+	}
+	tech_YZ_field_hospital = {
 		enable_subunits = {
 			YZ_field_hospital
 		}
-
 		research_cost = 1.5
 		start_year = 1936
-		
 		allow = {
 			always = no
 		}
-		
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
-	tech_airi_crystal_support_equipment_1 = { 
-
+	tech_airi_crystal_support_equipment_1 = {
 		enable_equipments = {
 			airi_crystal_support_equipment_1
 		}
-
 		research_cost = 1
-		start_year = 2013	
+		start_year = 2013
 		allow = {
 			always = no
 		}
 	}
-	tech_airi_crystal_support = { 
-
+	tech_airi_crystal_support = {
 		enable_subunits = {
 			airi_crystal_signal_company
 		}
-
 		research_cost = 1.5
 		start_year = 1936
-		
 		allow = {
 			always = no
 		}
 	}
-	tech_YZ_0721_detonator = { 
+	tech_YZ_0721_detonator = {
 		enable_equipments = {
 			YZ_0721_detonator_equipment_1
 		}
 		enable_subunits = {
 			YZ_0721_detonator_company
 		}
-
 		research_cost = 1.5
 		start_year = 1936
-		
 		allow = {
 			always = no
 		}
 	}
-	tech_yz_works_equipment = { 
+	tech_yz_works_equipment = {
 		enable_equipments = {
 			yz_works_equipment_0
 		}
-		
 		research_cost = 1.5
 		start_year = 1936
-		
 		allow = {
 			always = no
 		}
 	}
-	
 }

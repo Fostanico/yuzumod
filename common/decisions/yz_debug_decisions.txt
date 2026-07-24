@@ -83,6 +83,8 @@ debug_yuzu_they_will_know_fear = {
                 min = -100
                 max = 500
             }
+            # 调试写入也必须刷新派生修正，避免测试界面读取旧缓存。
+            yz_refresh_love_modifier_values = yes
         }
     }
 
@@ -104,6 +106,8 @@ debug_yuzu_they_will_know_fear = {
                 min = -100
                 max = 200
             }
+            # 调试写入也必须刷新派生修正，避免测试界面读取旧缓存。
+            yz_refresh_love_modifier_values = yes
         }
     }
     I_want_to_marry_everyone = {
@@ -402,7 +406,7 @@ debug_yuzu_they_will_know_fear = {
                     #}
                     ##set_portraits = {
                     ##    civilian = {
-                    ##        large = "gfx\leader\misaka_makoto.png"
+                    ##        large = "gfx/leader/misaka_makoto.png"
                     ##    }
                     ##}
                     set_character_name = "御坂真琴"
@@ -412,44 +416,44 @@ debug_yuzu_they_will_know_fear = {
                         #set_portraits = {
                         #    character = [?we_leader_now.GetTokenKey]
                         #    civilian = {
-                        #        large = "gfx\leader\misaka_makoto.png"
+                        #        large = "gfx/leader/misaka_makoto.png"
                         #    }
                         #}
                         #set_portraits = {
                         #    character = [we_leader_now.GetTokenKey]
                         #    civilian = {
-                        #       large = "gfx\leader\misaka_makoto.png"
+                        #       large = "gfx/leader/misaka_makoto.png"
                         #    }
                         #}
                         #set_portraits = {
                         #    character = [we_leader_yuzu.GetTokenKey]
                         #    civilian = {
-                        #        large = "gfx\leader\misaka_makoto.png"
+                        #        large = "gfx/leader/misaka_makoto.png"
                         #    }
                         #}
                         #set_portraits = {
                         #    character = [?we_leader_yuzu.GetTokenKey]
                         #    civilian = {
-                        #        large = "gfx\leader\misaka_makoto.png"
+                        #        large = "gfx/leader/misaka_makoto.png"
                         #    }
                         #}
                         set_portraits = {
                             character = [we_leader_yuzu]
                             civilian = {
-                                large = "gfx\leader\misaka_makoto.png"
+                                large = "gfx/leader/misaka_makoto.png"
                             }
                         }
                         #[we_leader_yuzu] = {
                         #    set_portrait = {
                         #        civilian = {
-                        #            large = "gfx\leader\misaka_makoto.png"
+                        #            large = "gfx/leader/misaka_makoto.png"
                         #        }
                         #    }
                         #}
                         #[we_leader_now] = {
                         #    set_portrait = {
                         #        civilian = {
-                        #            large = "gfx\leader\misaka_makoto.png"
+                        #            large = "gfx/leader/misaka_makoto.png"
                         #        }
                         #    }
                         #}
@@ -592,6 +596,31 @@ debug_yuzu_they_will_know_fear = {
             add_political_power = 1000
         }
     }
+    debug_is_MD_now = {
+        visible = {
+            is_debug = yes
+            has_global_flag = yz_md_startup_detected
+        }
+        available = {
+            is_debug = yes
+            has_global_flag = yz_md_startup_detected
+        }
+        complete_effect = {
+            add_political_power = 1000
+        }
+    }
+    debug_set_MD_now = {
+        visible = {
+            is_debug = yes
+            not = { has_global_flag = yz_md_startup_detected }
+        }
+        available = {
+            is_debug = yes
+        }
+        complete_effect = {
+            set_global_flag = yz_md_startup_detected
+        }
+    }
     everyone_get_all_positive_traits = {#有新角色不必要往里面加
         icon = GFX_fumika
         visible = {
@@ -608,7 +637,7 @@ debug_yuzu_they_will_know_fear = {
             add_country_leader_trait = sairi_leader_trait
             add_country_leader_trait = gtzr
             add_country_leader_trait = CZRYJZ
-            add_country_leader_trait = 0721
+            add_country_leader_trait = yz_0721_trait
             add_country_leader_trait = JLYM
             add_country_leader_trait = RMZL
             add_country_leader_trait = KZB

@@ -81,32 +81,56 @@ defined_text = {
 		localization_key = YzAdministration_fund_min_tt
 	}
 }
-#倒计时提醒
+# timed idea 是冷却事实源；timed country flag 只为隐藏民族精神提供剩余天数。
 defined_text = {
 	name = yz_economic_policy_1_timeout_text
 	text = {
 		trigger = {
-			check_variable = { yz_economic_policy_1_var > 0 }
+			has_idea = yzguozhai
+			has_country_flag = yz_economic_policy_1_cooldown_flag
 		}
 		localization_key = yz_economic_policy_1_timeout_tt
+	}
+	text = {
+		trigger = {
+			has_idea = yzguozhai
+			NOT = { has_country_flag = yz_economic_policy_1_cooldown_flag }
+		}
+		localization_key = yz_economic_policy_legacy_timeout_tt
 	}
 }
 defined_text = {
 	name = yz_economic_policy_2_timeout_text
 	text = {
 		trigger = {
-			check_variable = { yz_economic_policy_2_var > 0 }
+			has_idea = yzjiuye
+			has_country_flag = yz_economic_policy_2_cooldown_flag
 		}
 		localization_key = yz_economic_policy_2_timeout_tt
+	}
+	text = {
+		trigger = {
+			has_idea = yzjiuye
+			NOT = { has_country_flag = yz_economic_policy_2_cooldown_flag }
+		}
+		localization_key = yz_economic_policy_legacy_timeout_tt
 	}
 }
 defined_text = {
 	name = yz_economic_policy_3_timeout_text
 	text = {
 		trigger = {
-			check_variable = { yz_economic_policy_3_var > 0 }
+			has_idea = yzjianshe
+			has_country_flag = yz_economic_policy_3_cooldown_flag
 		}
 		localization_key = yz_economic_policy_3_timeout_tt
+	}
+	text = {
+		trigger = {
+			has_idea = yzjianshe
+			NOT = { has_country_flag = yz_economic_policy_3_cooldown_flag }
+		}
+		localization_key = yz_economic_policy_legacy_timeout_tt
 	}
 }
 

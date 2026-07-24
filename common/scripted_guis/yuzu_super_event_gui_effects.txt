@@ -5,7 +5,7 @@ scripted_gui = {
         visible = {
             or = {
                 has_global_flag = yuzu_super_event_visible_flag
-				has_country_flag = yuzu_super_event_private_visible_flag
+                has_country_flag = yuzu_super_event_private_visible_flag
             }
         }
 
@@ -277,18 +277,18 @@ scripted_gui = {
 
         effects = {#其实就是一个一个清掉
             yuzu_sp_event_close_button_click = {
-				if = {
-					limit = {
-						has_global_flag = yuzu_super_event_visible_flag
-					}
-					clr_global_flag = yuzu_super_event_visible_flag
-				}
-				if = {
-					limit = {
-						has_country_flag = yuzu_super_event_private_visible_flag
-					}
-					clr_country_flag = yuzu_super_event_private_visible_flag
-				}
+                if = {
+                    limit = {
+                        has_global_flag = yuzu_super_event_visible_flag
+                    }
+                    clr_global_flag = yuzu_super_event_visible_flag
+                }
+                if = {
+                    limit = {
+                        has_country_flag = yuzu_super_event_private_visible_flag
+                    }
+                    clr_country_flag = yuzu_super_event_private_visible_flag
+                }
                 if = {
                     limit = {
                         has_global_flag = show_nuke_hoori_spevt
@@ -499,7 +499,7 @@ scripted_gui = {
                     }
                     clr_country_flag = we_marry_with_wakana
                 }
-                 if = {
+                if = {
                     limit = {
                         has_country_flag = we_marry_with_shizuru
                     }

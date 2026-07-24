@@ -21,8 +21,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                width = 960 
-                height = 540 
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_yuzusoft_sour_2"
             pdx_tooltip = "Yuzusoft_sour_recurit_tooltip"
@@ -62,8 +62,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                width = 960 
-                height = 540 
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_parquet_logo"
             pdx_tooltip = "parquet_tooltip"
@@ -103,8 +103,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                width = 960 
-                height = 540 
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_parquet_logo_gaming"
             pdx_tooltip = "parquet_started_tooltip"
@@ -143,8 +143,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                width = 960 
-                height = 540 
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_parquet_futari_2"
             pdx_tooltip = "parquet_story_tooltip"
@@ -156,8 +156,8 @@ guiTypes = {
                 y = 0
             }
             size = { 
-                width = 960 
-                height = 540 
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_parquet_exit"
         }

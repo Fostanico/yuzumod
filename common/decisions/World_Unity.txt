@@ -10,18 +10,18 @@ World_Unity_communism = {
                     is_faction_leader = yes
                     all_country = { is_in_faction_with = ROOT }
                 }
-				AND = {
-					has_government = communism
-					all_other_country = {
-						is_subject_of = ROOT
-					}
-				}
-				AND = {
-					has_government = communism
-					all_state = {
-						is_controlled_by = ROOT
-					}
-				}
+                AND = {
+                    has_government = communism
+                    all_other_country = {
+                        is_subject_of = ROOT
+                    }
+                }
+                AND = {
+                    has_government = communism
+                    all_state = {
+                        is_controlled_by = ROOT
+                    }
+                }
             }
         }
         fire_only_once = yes
@@ -68,18 +68,18 @@ World_Unity_fascism = {
                     is_faction_leader = yes
                     all_country = { is_in_faction_with = ROOT }
                 }
-				AND = {
-					has_government = fascism
-					all_other_country = {
-						is_subject_of = ROOT
-					}
-				}
-				AND = {
-					has_government = fascism
-					all_state = {
-						is_controlled_by = ROOT
-					}
-				}
+                AND = {
+                    has_government = fascism
+                    all_other_country = {
+                        is_subject_of = ROOT
+                    }
+                }
+                AND = {
+                    has_government = fascism
+                    all_state = {
+                        is_controlled_by = ROOT
+                    }
+                }
             }
         }
         fire_only_once = yes
@@ -126,18 +126,18 @@ World_Unity_democratic = {
                     is_faction_leader = yes
                     all_country = { is_in_faction_with = ROOT }
                 }
-				AND = {
-					has_government = democratic
-					all_other_country  = {
-						is_subject_of = ROOT
-					}
-				}
-				AND = {
-					has_government = democratic
-					all_state = {
-						is_controlled_by = ROOT
-					}
-				}
+                AND = {
+                    has_government = democratic
+                    all_other_country  = {
+                        is_subject_of = ROOT
+                    }
+                }
+                AND = {
+                    has_government = democratic
+                    all_state = {
+                        is_controlled_by = ROOT
+                    }
+                }
             }
         }
         fire_only_once = yes
@@ -162,8 +162,8 @@ World_Unity_democratic = {
                 }
                 add_core_of = ROOT
             }
-			set_global_flag = yuzu_super_event_visible_flag
-			set_country_flag = we_unite_the_world_d
+            set_global_flag = yuzu_super_event_visible_flag
+            set_country_flag = we_unite_the_world_d
             hidden_effect = {
                 play_song = yuzu_tsubasawokudasai
                 news_event =  { id = World_event.3 }
@@ -185,18 +185,18 @@ World_Unity_neutrality = {
                     is_faction_leader = yes
                     all_country = { is_in_faction_with = ROOT }
                 }
-				AND = {
-					has_government = neutrality
-					all_other_country = {
-						is_subject_of = ROOT
-					}
-				}
-				AND = {
-					has_government = neutrality
-					all_state = {
-						is_controlled_by = ROOT
-					}
-				}
+                AND = {
+                    has_government = neutrality
+                    all_other_country = {
+                        is_subject_of = ROOT
+                    }
+                }
+                AND = {
+                    has_government = neutrality
+                    all_state = {
+                        is_controlled_by = ROOT
+                    }
+                }
             }
         }
         fire_only_once = yes

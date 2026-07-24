@@ -222,8 +222,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\gongping.png"
-                                small = "gfx\leader\gongping2.png"
+                                large = "gfx/leader/gongping.png"
+                                small = "gfx/leader/gongping2.png"
                             }
                         }
                         allowed_civil_war = {
@@ -351,8 +351,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\ebihara_minase.png"
-                                small = "gfx\leader\ebihara_minase2.png"
+                                large = "gfx/leader/ebihara_minase.png"
+                                small = "gfx/leader/ebihara_minase2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -369,13 +369,13 @@ add_youzi_general_category = {
                             logistics_skill = 6
                         }
                         advisor = {
-					        cost = 150
+                            cost = 150
                             slot = high_command
                             idea_token = ebihara
                             ledger = army
                             traits = { ebihara_army }
                         }
-                    }    
+                    }
                 }
             }
         }
@@ -407,8 +407,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\aragami_sayo.png"
-                                small = "gfx\leader\aragami_sayo2.png"
+                                large = "gfx/leader/aragami_sayo.png"
+                                small = "gfx/leader/aragami_sayo2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -457,8 +457,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\suou.png"
-                                small = "gfx\leader\suou.png"
+                                large = "gfx/leader/suou.png"
+                                small = "gfx/leader/suou.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -506,8 +506,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\sanjo_makoto.png"
-                                small = "gfx\leader\sanjo_makoto_small.png"
+                                large = "gfx/leader/sanjo_makoto.png"
+                                small = "gfx/leader/sanjo_makoto_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -554,8 +554,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\honoka_big.png"
-                                small = "gfx\leader\honoka_small.png"
+                                large = "gfx/leader/honoka_big.png"
+                                small = "gfx/leader/honoka_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -604,8 +604,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\wataru_big.png"
-                                small = "gfx\leader\wataru_small.png"
+                                large = "gfx/leader/wataru_big.png"
+                                small = "gfx/leader/wataru_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -652,8 +652,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\kotarou_big.png"
-                                small = "gfx\leader\kotarou_small.png"
+                                large = "gfx/leader/kotarou_big.png"
+                                small = "gfx/leader/kotarou_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -699,8 +699,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\souma_nanao.png"
-                                small = "gfx\leader\souma_nanao_small.png"
+                                large = "gfx/leader/souma_nanao.png"
+                                small = "gfx/leader/souma_nanao_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -748,8 +748,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\akagi_big.png"
-                                small = "gfx\leader\akagi_small.png"
+                                large = "gfx/leader/akagi_big.png"
+                                small = "gfx/leader/akagi_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -795,8 +795,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\chiaki_minamoto_1.png"
-                                small = "gfx\leader\chiaki_minamoto_small.png"
+                                large = "gfx/leader/chiaki_minamoto_1.png"
+                                small = "gfx/leader/chiaki_minamoto_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -854,8 +854,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\yuuki_noa_big.png"
-                                small = "gfx\leader\yuuki_noa_small.png"
+                                large = "gfx/leader/yuuki_noa_big.png"
+                                small = "gfx/leader/yuuki_noa_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -911,8 +911,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\miyako_big.png"
-                                small = "gfx\leader\miyako_small.png"
+                                large = "gfx/leader/miyako_big.png"
+                                small = "gfx/leader/miyako_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -951,8 +951,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\sora_big.png"
-                                small = "gfx\leader\sora_small.png"
+                                large = "gfx/leader/sora_big.png"
+                                small = "gfx/leader/sora_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -990,8 +990,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\haruka_big.png"
-                                small = "gfx\leader\haruka_small.png"
+                                large = "gfx/leader/haruka_big.png"
+                                small = "gfx/leader/haruka_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1041,8 +1041,8 @@ add_youzi_general_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\yuna_big.png"
-                                small = "gfx\leader\yuna_small.png"
+                                large = "gfx/leader/yuna_big.png"
+                                small = "gfx/leader/yuna_small.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1077,6 +1077,7 @@ add_youzi_general_category = {
         }
 
     }
+    
 
     van_calling = {
         icon = GFX_van
@@ -1105,8 +1106,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\van.png"
-                                small = "gfx\leader\van2.png"
+                                large = "gfx/leader/van.png"
+                                small = "gfx/leader/van2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1171,8 +1172,8 @@ add_youzi_general_category = {
                         nationality = sov
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Verniy.png"
-                                small = "gfx\leader\Verniy2.png"
+                                large = "gfx/leader/Verniy.png"
+                                small = "gfx/leader/Verniy2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1237,8 +1238,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Tsukimori.png"
-                                small = "gfx\leader\Tsukimori2.png"
+                                large = "gfx/leader/Tsukimori.png"
+                                small = "gfx/leader/Tsukimori2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1289,8 +1290,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\o5j.png"
-                                small = "gfx\leader\o5j2.png"
+                                large = "gfx/leader/o5j.png"
+                                small = "gfx/leader/o5j2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1339,8 +1340,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Weiss.png"
-                                small = "gfx\leader\Weiss2.png"
+                                large = "gfx/leader/Weiss.png"
+                                small = "gfx/leader/Weiss2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1390,8 +1391,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Ukisov.png"
-                                small = "gfx\leader\Ukisov2.png"
+                                large = "gfx/leader/Ukisov.png"
+                                small = "gfx/leader/Ukisov2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1454,8 +1455,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Ling.png"
-                                small = "gfx\leader\Ling2.png"
+                                large = "gfx/leader/Ling.png"
+                                small = "gfx/leader/Ling2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1497,7 +1498,7 @@ add_youzi_general_category = {
         cost = 1
         fire_only_once = yes
         complete_effect = {
-            custom_modifier_tooltip = "将解锁玖玖瑠的招募"
+            custom_effect_tooltip = Laoba_calling_tt
             set_country_flag = have_Laoba
             meta_effect = {
                 text = {
@@ -1509,8 +1510,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Laoba.png"
-                                small = "gfx\leader\Laoba2.png"
+                                large = "gfx/leader/Laoba.png"
+                                small = "gfx/leader/Laoba2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -1580,8 +1581,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\huhu.png"
-                                    small = "gfx\leader\huhu2.png"
+                                    large = "gfx/leader/huhu.png"
+                                    small = "gfx/leader/huhu2.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -1635,6 +1636,58 @@ add_youzi_general_category = {
             }
         }
     }
+    youzi_zhaomu = {
+        icon = GFX_youzi_huhu
+        visible = {
+            is_ai = no
+            has_country_flag = have_huhu
+        }
+        cost = 10
+        fire_only_once = yes
+        complete_effect = {
+            set_country_flag = have_youzi_huhu
+            meta_effect = {
+                text = {
+                    generate_character = {
+                        token_base = youzi
+                        name = "柚子"
+                        can_be_captured = no
+                        gender = female
+                        nationality = PRC
+                        portraits = {
+                            civilian = {
+                                large = "gfx/leader/柚子.jpg"
+                                small = "gfx/leader/柚子2.png"
+                            }
+                        }
+                        allowed_civil_war = { is_ai = no }
+                        corps_commander = {
+                            desc = yuna_desc
+                            traits = {
+                                panzer_leader
+                                light_small_speak_home      #我敢说十年内没人能想出这么逆天的翻译 ——huhu 2026.7.19 1:11
+                                technology_lover        #翻译的竟然还挺合理
+                            }
+                            skill = 5
+                            attack_skill = 10
+                            defense_skill = 1
+                            planning_skill = 10
+                            logistics_skill = 10
+                        }
+                        advisor = {
+                            slot = political_advisor
+                            cost = 150
+                            idea_token = youzi_advisor
+                            traits = {
+                                trait_for_youzi
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
     A_voice_comes_from_the_brightest_future = {
         visible = {
             is_ai = no
@@ -1684,8 +1737,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\Snickers_Fisch.png"
-                                    small = "gfx\leader\Snickers_Fisch2.png"
+                                    large = "gfx/leader/Snickers_Fisch.png"
+                                    small = "gfx/leader/Snickers_Fisch2.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -1746,8 +1799,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\某科学的SCP.png"
-                                    small = "gfx\leader\某科学的SCP2.png"
+                                    large = "gfx/leader/某科学的SCP.png"
+                                    small = "gfx/leader/某科学的SCP2.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -1810,8 +1863,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\拿破仑六世.png"
-                                    small = "gfx\leader\拿破仑六世2.png"
+                                    large = "gfx/leader/拿破仑六世.png"
+                                    small = "gfx/leader/拿破仑六世2.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -1845,7 +1898,7 @@ add_youzi_general_category = {
             }
             has_country_flag = have_kakka_nor
 			# 要点：阿诺模式可能已经自动招募御坂真琴；存在招募旗标时隐藏原决议，避免再次生成同名人物。 [2026-07-03 23:02] [伊尔诺/GPT5.5]
-			not = { has_country_flag = have_misaka_makoto }
+            not = { has_country_flag = have_misaka_makoto }
         }
         cost = 2000
         fire_only_once = yes
@@ -1855,7 +1908,7 @@ add_youzi_general_category = {
         }
     }
 
-    
+
 
     takashiro_maya = {
         visible = {
@@ -1882,8 +1935,8 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
-                                    small = "gfx\leader\takashiro_maya_small.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
+                                    small = "gfx/leader/takashiro_maya_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -1914,11 +1967,11 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
-                                    small = "gfx\leader\takashiro_maya_small.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
+                                    small = "gfx/leader/takashiro_maya_small.png"
                                 }
                                 army = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
                                 }
                             }
                             scientist = {
@@ -1946,11 +1999,11 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
-                                    small = "gfx\leader\takashiro_maya_small.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
+                                    small = "gfx/leader/takashiro_maya_small.png"
                                 }
                                 army = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
                                 }
                             }
                             scientist = {
@@ -1977,11 +2030,11 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
-                                    small = "gfx\leader\takashiro_maya_small.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
+                                    small = "gfx/leader/takashiro_maya_small.png"
                                 }
                                 army = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
                                 }
                             }
                             scientist = {
@@ -2008,11 +2061,11 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
-                                    small = "gfx\leader\takashiro_maya_small.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
+                                    small = "gfx/leader/takashiro_maya_small.png"
                                 }
                                 army = {
-                                    large = "gfx\leader\takashiro_maya_big.png"
+                                    large = "gfx/leader/takashiro_maya_big.png"
                                 }
                             }
                             scientist = {
@@ -2057,8 +2110,8 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\hotaru_big.png"
-                                    small = "gfx\leader\hotaru_small.png"
+                                    large = "gfx/leader/hotaru_big.png"
+                                    small = "gfx/leader/hotaru_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2107,8 +2160,8 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\kuko_large.png"
-                                    small = "gfx\leader\kuko_small.png"
+                                    large = "gfx/leader/kuko_large.png"
+                                    small = "gfx/leader/kuko_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2155,8 +2208,8 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\koyomi_big.png"
-                                    small = "gfx\leader\koyomi_small.png"
+                                    large = "gfx/leader/koyomi_big.png"
+                                    small = "gfx/leader/koyomi_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2205,8 +2258,8 @@ add_youzi_general_category = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\shishikura_yuki_big.png"
-                                    small = "gfx\leader\shishikura_yuki_small.png"
+                                    large = "gfx/leader/shishikura_yuki_big.png"
+                                    small = "gfx/leader/shishikura_yuki_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2254,8 +2307,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\luoyi_big.png"
-                                    small = "gfx\leader\luoyi_small.png"
+                                    large = "gfx/leader/luoyi_big.png"
+                                    small = "gfx/leader/luoyi_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2309,8 +2362,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\fukai_omo_big.png"
-                                    small = "gfx\leader\fukai_omo_small.png"
+                                    large = "gfx/leader/fukai_omo_big.png"
+                                    small = "gfx/leader/fukai_omo_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2370,8 +2423,8 @@ add_youzi_general_category = {
                             nationality = PRC
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\chun_big.png"
-                                    small = "gfx\leader\chun_small.png"
+                                    large = "gfx/leader/chun_big.png"
+                                    small = "gfx/leader/chun_small.png"
                                 }
                             }
                             allowed_civil_war = {
@@ -2404,7 +2457,7 @@ add_youzi_general_category = {
         }
     }
 
-    
+
 
 
     Manbo_calling = {
@@ -2431,8 +2484,8 @@ add_youzi_general_category = {
                         nationality = prc
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Manbo.png"
-                                small = "gfx\leader\Manbo2.png"
+                                large = "gfx/leader/Manbo.png"
+                                small = "gfx/leader/Manbo2.png"
                             }
                         }
                         allowed_civil_war = { is_ai = no }
@@ -2472,876 +2525,916 @@ add_youzi_general_category = {
             }
         }
         complete_effect = {
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_congyu_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Murasame
-                    traits={
-                        brilliant_strategist
-                        trait_reckless
-                        inflexible_strategist
-                        ranger
-                        JAP_communist_sympathizer
-                        maid_congyu_trait
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_country_flag = have_murasame
+                        NOT = { any_army_leader = { has_trait = maid_congyu_trait } }
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=4
-                    planning_skill=2
-                    logistics_skill=4
-                }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_fangnai_trait } } }
-                add_corps_commander_role = {
-                    character = Yoshino
-                    traits={
-                        brilliant_strategist
-                        war_hero
-                        infantry_officer
-                        logistics_wizard
-                        trait_mountaineer
-                        adaptable
-                        skilled_staffer
-                        war_hero
-                        JAP_communist_sympathizer
-                        maid_fangnai_trait
+                    add_corps_commander_role = {
+                        character = Murasame
+                        traits={
+                            brilliant_strategist
+                            trait_reckless
+                            inflexible_strategist
+                            ranger
+                            JAP_communist_sympathizer
+                            maid_congyu_trait
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=4
+                        planning_skill=2
+                        logistics_skill=4
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=4
-                    planning_skill=5
-                    logistics_skill=6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_mozi_trait } } }
-                add_corps_commander_role = {
-                    character = Mako
-                    traits={
-                        operative_skill
-                        ranger commando
-                        offensive_doctrine
-                        victory_through_airpower
-                        trait_cautious armor_officer
-                        maid_mozi_trait
+                if = {
+                    limit = { has_country_flag = have_yoshino NOT = { any_army_leader = { has_trait = maid_fangnai_trait } } }
+                    add_corps_commander_role = {
+                        character = Yoshino
+                        traits={
+                            brilliant_strategist
+                            war_hero
+                            infantry_officer
+                            logistics_wizard
+                            trait_mountaineer
+                            adaptable
+                            skilled_staffer
+                            war_hero
+                            JAP_communist_sympathizer
+                            maid_fangnai_trait
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=4
+                        planning_skill=5
+                        logistics_skill=6
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=3
-                    planning_skill=7
-                    logistics_skill=8
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_ninging_trait } } }
-                add_corps_commander_role = {
-                    character = Ayachi_Nene
-                    traits = {
-                        trait_engineer
-                        inspirational_leader
-                        trait_reckless
-                        fortress_buster
-                        expert_delegator
-                        JAP_communist_sympathizer
-                        maid_ninging_trait
+                if = {
+                    limit = { has_country_flag = have_mako NOT = { any_army_leader = { has_trait = maid_mozi_trait } } }
+                    add_corps_commander_role = {
+                        character = Mako
+                        traits={
+                            operative_skill
+                            ranger commando
+                            offensive_doctrine
+                            victory_through_airpower
+                            trait_cautious armor_officer
+                            maid_mozi_trait
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=3
+                        planning_skill=7
+                        logistics_skill=8
                     }
-                    skill = 5
-                    attack_skill = 7
-                    defense_skill = 2
-                    planning_skill = 1
-                    logistics_skill = 6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_chou_trait } } }
-                add_corps_commander_role = {
-                    character = chou
-                    traits={
-                        maid_chou_trait
-                        organizer trait_cautious
-                        infantry_officer
-                        urban_assault_specialist
+                if = {
+                    limit = { has_country_flag = have_ningning NOT = { any_army_leader = { has_trait = maid_ninging_trait } } }
+                    add_corps_commander_role = {
+                        character = Ayachi_Nene
+                        traits = {
+                            trait_engineer
+                            inspirational_leader
+                            trait_reckless
+                            fortress_buster
+                            expert_delegator
+                            JAP_communist_sympathizer
+                            maid_ninging_trait
+                        }
+                        skill = 5
+                        attack_skill = 7
+                        defense_skill = 2
+                        planning_skill = 1
+                        logistics_skill = 6
                     }
-                    skill=5
-                    attack_skill=4
-                    defense_skill=5
-                    planning_skill=4
-                    logistics_skill=6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_meigulu_trait } } }
-                add_corps_commander_role = {
-                    character = Meguru
-                    traits={
-                        organizer
-                        trait_cautious
-                        inflexible_strategist
-                        camouflage_expert
-                        panzer_leader
-                        JAP_communist_sympathizer
-                        maid_meigulu_trait
+                if = {
+                    limit = { has_country_flag = have_chou NOT = { any_army_leader = { has_trait = maid_chou_trait } } }
+                    add_corps_commander_role = {
+                        character = chou
+                        traits={
+                            maid_chou_trait
+                            organizer trait_cautious
+                            infantry_officer
+                            urban_assault_specialist
+                        }
+                        skill=5
+                        attack_skill=4
+                        defense_skill=5
+                        planning_skill=4
+                        logistics_skill=6
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=2
-                    planning_skill=5
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_toko_trait } } }
-                add_corps_commander_role = {
-                    character = Toko
-                    traits={
-                        maid_toko_trait
-                        armor_officer
-                        brilliant_strategist
-                        logistics_wizard
-                        trait_reckless
-                        adaptable
+                if = {
+                    limit = { has_country_flag = have_meigulu NOT = { any_army_leader = { has_trait = maid_meigulu_trait } } }
+                    add_corps_commander_role = {
+                        character = Meguru
+                        traits={
+                            organizer
+                            trait_cautious
+                            inflexible_strategist
+                            camouflage_expert
+                            panzer_leader
+                            JAP_communist_sympathizer
+                            maid_meigulu_trait
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=2
+                        planning_skill=5
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=3
-                    planning_skill=5
-                    logistics_skill=6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_wakana_trait } } }
-                add_corps_commander_role = {
-                    character = Wakana
-                    traits={
-                        maid_wakana_trait
-                        brilliant_strategist
-                        adaptable
-                        urban_assault_specialist
-                        panzer_leader
-                        trait_reckless
+                if = {
+                    limit = { has_country_flag = have_toko NOT = { any_army_leader = { has_trait = maid_toko_trait } } }
+                    add_corps_commander_role = {
+                        character = Toko
+                        traits={
+                            maid_toko_trait
+                            armor_officer
+                            brilliant_strategist
+                            logistics_wizard
+                            trait_reckless
+                            adaptable
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=3
+                        planning_skill=5
+                        logistics_skill=6
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=3
-                    planning_skill=4
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_qihai_trait } } }
-                add_corps_commander_role = {
-                    character = Nanami
-                    traits={
-                        brilliant_strategist
-                        trait_reckless
-                        bearer_of_artillery
-                        urban_assault_specialist
-                        nkvd_rezident
-                        JAP_communist_sympathizer
-                        anti_fascist_agent
-                        maid_qihai_trait
+                if = {
+                    limit = { has_country_flag = have_wakana NOT = { any_army_leader = { has_trait = maid_wakana_trait } } }
+                    add_corps_commander_role = {
+                        character = Wakana
+                        traits={
+                            maid_wakana_trait
+                            brilliant_strategist
+                            adaptable
+                            urban_assault_specialist
+                            panzer_leader
+                            trait_reckless
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=3
+                        planning_skill=4
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=3
-                    planning_skill=5
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_hazuki_trait } } }
-                add_corps_commander_role = {
-                    character = Hazuki
-                    traits={
-                        maid_hazuki_trait
-                        naval_invader
-                        invader_ii
-                        naval_liason
-                        harsh_leader
+                if = {
+                    limit = { has_country_flag = have_nanami NOT = { any_army_leader = { has_trait = maid_qihai_trait } } }
+                    add_corps_commander_role = {
+                        character = Nanami
+                        traits={
+                            brilliant_strategist
+                            trait_reckless
+                            bearer_of_artillery
+                            urban_assault_specialist
+                            nkvd_rezident
+                            JAP_communist_sympathizer
+                            anti_fascist_agent
+                            maid_qihai_trait
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=3
+                        planning_skill=5
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=5
-                    planning_skill=4
-                    logistics_skill=3
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_cuodao_trait } } }
-                add_corps_commander_role = {
-                    character = Ayase
-                    traits={
-                        organizer
-                        panzer_leader
-                        politically_connected
-                        hidden_sympathies
-                        media_personality
-                        JAP_communist_sympathizer
-                        maid_cuodao_trait
+                if = {
+                    limit = { has_country_flag = have_hazuki NOT = { any_army_leader = { has_trait = maid_hazuki_trait } } }
+                    add_corps_commander_role = {
+                        character = Hazuki
+                        traits={
+                            maid_hazuki_trait
+                            naval_invader
+                            invader_ii
+                            naval_liason
+                            harsh_leader
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=5
+                        planning_skill=4
+                        logistics_skill=3
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=3
-                    planning_skill=4
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_gongping_trait } } }
-                add_corps_commander_role = {
-                    character = gongping
-                    traits={
-                        adaptable
-                        infantry_leader
-                        scavenger
-                        camouflage_expert
-                        fast_planner
-                        maid_gongping_trait
+                if = {
+                    limit = { has_idea = ayase_love_0 NOT = { any_army_leader = { has_trait = maid_cuodao_trait } } }
+                    add_corps_commander_role = {
+                        character = Ayase
+                        traits={
+                            organizer
+                            panzer_leader
+                            politically_connected
+                            hidden_sympathies
+                            media_personality
+                            JAP_communist_sympathizer
+                            maid_cuodao_trait
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=3
+                        planning_skill=4
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=3
-                    planning_skill=5
-                    logistics_skill=3
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_kanna_trait } } }
-                add_corps_commander_role = {
-                    character = kanna
-                    traits={
-                        political_dancer
-                        scavenger
-                        guerilla_fighter
-                        urban_assault_specialist
-                        winter_specialis
-                        trickster
-                        inflexible_strategist_desc
-                        panzer_leader
-                        defensive_doctrine
-                        JAP_communist_sympathizer
-                        maid_kanna_trait
+                if = {
+                    limit = { has_country_flag = have_gongping NOT = { any_army_leader = { has_trait = maid_gongping_trait } } }
+                    add_corps_commander_role = {
+                        character = gongping
+                        traits={
+                            adaptable
+                            infantry_leader
+                            scavenger
+                            camouflage_expert
+                            fast_planner
+                            maid_gongping_trait
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=3
+                        planning_skill=5
+                        logistics_skill=3
                     }
-                    skill=5
-                    attack_skill=4
-                    defense_skill=8
-                    planning_skill=7
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_zaozi_trait } } }
-                add_corps_commander_role = {
-                    character = zaozi
-                    traits={
-                        maid_zaozi_trait
-                        harsh_leader
-                        inflexible_strategist
-                        inspirational_leader
-                        trickster career_officer
+                if = {
+                    limit = { has_country_flag = have_kanna NOT = { any_army_leader = { has_trait = maid_kanna_trait } } }
+                    add_corps_commander_role = {
+                        character = kanna
+                        traits={
+                            political_dancer
+                            scavenger
+                            guerilla_fighter
+                            urban_assault_specialist
+                            winter_specialis
+                            trickster
+                            inflexible_strategist_desc
+                            panzer_leader
+                            defensive_doctrine
+                            JAP_communist_sympathizer
+                            maid_kanna_trait
+                        }
+                        skill=5
+                        attack_skill=4
+                        defense_skill=8
+                        planning_skill=7
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=2
-                    planning_skill=3
-                    logistics_skill=6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_nozomi_trait } } }
-                add_corps_commander_role = {
-                    character = Nozomi
-                    traits={
-                        maid_nozomi_trait
-                        adaptable
-                        logistics_wizard
-                        trait_reckless
+                if = {
+                    limit = { has_country_flag = have_zaozi NOT = { any_army_leader = { has_trait = maid_zaozi_trait } } }
+                    add_corps_commander_role = {
+                        character = zaozi
+                        traits={
+                            maid_zaozi_trait
+                            harsh_leader
+                            inflexible_strategist
+                            inspirational_leader
+                            trickster career_officer
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=2
+                        planning_skill=3
+                        logistics_skill=6
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=3
-                    planning_skill=3
-                    logistics_skill=8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_noa1_trait } }
-                    has_country_flag = no_noa
-                }
-                add_corps_commander_role = {
-                    character = Noa_1
-                    traits={
-                        maid_noa_trait maid_noa1_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                if = {
+                    limit = { has_country_flag = have_nozomi NOT = { any_army_leader = { has_trait = maid_nozomi_trait } } }
+                    add_corps_commander_role = {
+                        character = Nozomi
+                        traits={
+                            maid_nozomi_trait
+                            adaptable
+                            logistics_wizard
+                            trait_reckless
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=3
+                        planning_skill=3
+                        logistics_skill=8
                     }
-                    attack_skill = 6
-                    defense_skill = 3
-                    planning_skill = 5
-                    logistics_skill = 5
-                    skill = 5
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_noa_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Noa
-                    traits={
-                        maid_noa_trait maid_noa1_trait maid_noa2_trait maid_noa3_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_noa
+                        NOT = { any_army_leader = { has_trait = maid_noa1_trait } }
+                        has_country_flag = no_noa
                     }
-                    attack_skill = 6
-                    defense_skill = 3
-                    planning_skill = 5
-                    logistics_skill = 5
-                    skill = 5
-                }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_fumika_trait } } }
-                add_corps_commander_role = {
-                    character = Fumika
-                    traits={
-                        maid_fumika_trait
-                        adaptable
-                        infantry_officer
-                        cavalry_officer
-                        armor_officer
-                        trait_cautious
-                        career_officer
-                        brilliant_strategist
-                        organizer
+                    add_corps_commander_role = {
+                        character = shirayuki_Noa_1
+                        traits={
+                            maid_noa_trait maid_noa1_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                        }
+                        attack_skill = 6
+                        defense_skill = 3
+                        planning_skill = 5
+                        logistics_skill = 5
+                        skill = 5
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=2
-                    planning_skill=6
-                    logistics_skill=4
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_amane_trait } } }
-                add_corps_commander_role = {
-                    character = Amane
-                    traits={
-                        maid_amane_trait
-                        adaptable
-                        trait_cautious
-                        urban_assault_specialist
+                if = {
+                    limit = {
+                        has_country_flag = have_noa
+                        NOT = { has_country_flag = no_noa }
+                        NOT = { any_army_leader = { has_trait = maid_noa_trait } }
                     }
-                    skill=5
-                    attack_skill=4
-                    defense_skill=4
-                    planning_skill=5
-                    logistics_skill=6
-                }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_sairi_trait_2 } } }
-                add_corps_commander_role = {
-                    character = Sairi
-                    traits={
-                        maid_sairi_trait_2
-                        brilliant_strategist
+                    add_corps_commander_role = {
+                        character = shirayuki_Noa
+                        traits={
+                            maid_noa_trait maid_noa1_trait maid_noa2_trait maid_noa3_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                        }
+                        attack_skill = 6
+                        defense_skill = 3
+                        planning_skill = 5
+                        logistics_skill = 5
+                        skill = 5
                     }
-                    skill = 1
-                    attack_skill = 1
-                    defense_skill = 1
-                    planning_skill = 1
-                    logistics_skill = 1
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_kurumi_trait } } }
-                add_corps_commander_role = {
-                    character = Kurumi
-                    traits={
-                        maid_kurumi_trait
+                if = {
+                    limit = { has_country_flag = have_fumika NOT = { any_army_leader = { has_trait = maid_fumika_trait } } }
+                    add_corps_commander_role = {
+                        character = Fumika
+                        traits={
+                            maid_fumika_trait
+                            adaptable
+                            infantry_officer
+                            cavalry_officer
+                            armor_officer
+                            trait_cautious
+                            career_officer
+                            brilliant_strategist
+                            organizer
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=2
+                        planning_skill=6
+                        logistics_skill=4
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_amane
+                        NOT = { has_country_flag = amane_line }
+                        has_character = Amane
+                        NOT = { any_army_leader = { has_trait = maid_amane_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = Amane
+                        traits={
+                            maid_amane_trait
+                            adaptable
+                            trait_cautious
+                            urban_assault_specialist
+                        }
+                        skill=5
+                        attack_skill=4
+                        defense_skill=4
+                        planning_skill=5
+                        logistics_skill=6
+                    }
+                }
+                if = {
+                    limit = { has_country_flag = have_sairi NOT = { any_army_leader = { has_trait = maid_sairi_trait_2 } } }
+                    add_corps_commander_role = {
+                        character = Sairi
+                        traits={
+                            maid_sairi_trait_2
+                            brilliant_strategist
+                        }
+                        skill = 1
+                        attack_skill = 1
+                        defense_skill = 1
+                        planning_skill = 1
+                        logistics_skill = 1
+                    }
+                }
+                if = {
+                    limit = { has_country_flag = have_kurumi NOT = { any_army_leader = { has_trait = maid_kurumi_trait } } }
+                    add_corps_commander_role = {
+                        character = Kurumi
+                        traits={
+                            maid_kurumi_trait
 
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=5
+                        planning_skill=5
+                        logistics_skill=5
                     }
-                    skill=5
-                    attack_skill=5
-                    defense_skill=5
-                    planning_skill=5
-                    logistics_skill=5
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_kaguya_trait } } }
-                add_corps_commander_role = {
-                    character = Kaguya
-                    traits={
-                        maid_kaguya_trait
-                        bearer_of_artillery
-                        adaptable
-                        brilliant_strategist
+                if = {
+                    limit = { has_country_flag = have_kaguya NOT = { any_army_leader = { has_trait = maid_kaguya_trait } } }
+                    add_corps_commander_role = {
+                        character = Kaguya
+                        traits={
+                            maid_kaguya_trait
+                            bearer_of_artillery
+                            adaptable
+                            brilliant_strategist
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 4
+                        planning_skill = 7
+                        logistics_skill = 3
                     }
-                    skill = 5
-                    attack_skill = 5
-                    defense_skill = 4
-                    planning_skill = 7
-                    logistics_skill = 3
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_chihaya_trait } } }
-                add_corps_commander_role = {
-                    character = Chihaya
-                    traits={
-                        maid_chihaya_trait_5
+                if = {
+                    limit = { has_country_flag = have_chihaya NOT = { any_army_leader = { has_trait = maid_chihaya_trait } } }
+                    add_corps_commander_role = {
+                        character = Chihaya
+                        traits={
+                            maid_chihaya_trait_5
+                        }
+                        skill=1
+                        attack_skill=2
+                        defense_skill=2
+                        planning_skill=2
+                        logistics_skill=2
                     }
-                    skill=1
-                    attack_skill=2
-                    defense_skill=2
-                    planning_skill=2
-                    logistics_skill=2
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_sana_trait } } }
-                add_corps_commander_role = {
-                    character = sana
-                    traits={
-                        maid_sana_trait trait_reckless infantry_officer
+                if = {
+                    limit = { has_country_flag = have_sana NOT = { any_army_leader = { has_trait = maid_sana_trait } } }
+                    add_corps_commander_role = {
+                        character = sana
+                        traits={
+                            maid_sana_trait trait_reckless infantry_officer
+                        }
+                        skill=5
+                        attack_skill=2
+                        defense_skill=8
+                        planning_skill=3
+                        logistics_skill=6
                     }
-                    skill=5
-                    attack_skill=2
-                    defense_skill=8
-                    planning_skill=3
-                    logistics_skill=6
                 }
-            }
-            if = {
-                limit = { NOT = { any_army_leader = { has_trait = maid_rio_trait_1 } } }
-                add_corps_commander_role = {
-                    character = Rio
-                    traits={
-                        maid_rio_trait_1
-                        harsh_leader
-                        inflexible_strategist
-                        infantry_officer
+                if = {
+                    limit = { has_country_flag = have_rio NOT = { any_army_leader = { has_trait = maid_rio_trait_1 } } }
+                    add_corps_commander_role = {
+                        character = Rio
+                        traits={
+                            maid_rio_trait_1
+                            harsh_leader
+                            inflexible_strategist
+                            infantry_officer
+                        }
+                        skill=6
+                        attack_skill=6
+                        defense_skill=2
+                        planning_skill=1
+                        logistics_skill=4
                     }
-                    skill=6
-                    attack_skill=6
-                    defense_skill=2
-                    planning_skill=1
-                    logistics_skill=4
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_masaki_trait } }
-                }
-                add_corps_commander_role = {
-                    character = suzune
-                    traits={
-                        maid_rio_trait_1
-                        adaptable
-                        harsh_leader
-                        inflexible_strategist
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_suzune
+                        NOT = { any_army_leader = { has_trait = maid_masaki_trait } }
                     }
-                    skill=6
-                    attack_skill=6
-                    defense_skill=5
-                    planning_skill=3
-                    logistics_skill=7
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_masaki_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Masaki
-                    traits={
-                        trait_engineer
-                        inspirational_leader
-                        trait_reckless
-                        expert_delegator
-                        JAP_communist_sympathizer
-                        organizer
-                        maid_masaki_trait
-                        adaptable
-                        ranger
-                        winter_specialist
+                    add_corps_commander_role = {
+                        character = suzune
+                        traits={
+                            maid_rio_trait_1
+                            adaptable
+                            harsh_leader
+                            inflexible_strategist
+                            infantry_officer
+                        }
+                        skill=6
+                        attack_skill=6
+                        defense_skill=5
+                        planning_skill=3
+                        logistics_skill=7
                     }
-                    skill = 5
-                    attack_skill = 5
-                    defense_skill = 3
-                    planning_skill = 3
-                    logistics_skill = 4
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_miu_trait } }
-                }
-                add_corps_commander_role = {
-                    character = miu
-                    traits={
-                        trait_engineer
-                        JAP_communist_sympathizer
-                        maid_miu_trait
-                        trait_maid_vampires
-                        adaptable
-                        ranger
-                        urban_assault_specialist
-                        trait_mountaineer
+                if = {
+                    limit = {
+                        has_country_flag = have_masaki
+                        NOT = { any_army_leader = { has_trait = maid_masaki_trait } }
                     }
-                    skill = 5
-                    attack_skill = 7
-                    defense_skill = 1
-                    planning_skill = 3
-                    logistics_skill = 4
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_Mayu_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Mayu
-                    traits={
-                        brilliant_strategist
-                        thorough_planner
-                        organizer
-                        maid_Mayu_trait
+                    add_corps_commander_role = {
+                        character = Masaki_G
+                        traits={
+                            trait_engineer
+                            inspirational_leader
+                            trait_reckless
+                            expert_delegator
+                            JAP_communist_sympathizer
+                            organizer
+                            maid_masaki_trait
+                            adaptable
+                            ranger
+                            winter_specialist
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 3
+                        planning_skill = 3
+                        logistics_skill = 4
                     }
-                    skill = 5
-                    attack_skill = 3
-                    defense_skill = 4
-                    planning_skill = 5
-                    logistics_skill = 5
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_amane_trait_1 } }
-                }
-                add_corps_commander_role = {
-                    character = Amane1
-                    traits={
-                        yz_amane_trait_1
+                if = {
+                    limit = {
+                        has_country_flag = have_miu
+                        NOT = { any_army_leader = { has_trait = maid_miu_trait } }
                     }
-                    skill = 1
-                    attack_skill = 1
-                    defense_skill = 1
-                    planning_skill = 1
-                    logistics_skill = 1
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_amane_trait_2 } }
-                }
-                add_corps_commander_role = {
-                    character = Amane1
-                    traits={
-                        yz_amane_trait_2
+                    add_corps_commander_role = {
+                        character = miu
+                        traits={
+                            trait_engineer
+                            JAP_communist_sympathizer
+                            maid_miu_trait
+                            trait_maid_vampires
+                            adaptable
+                            ranger
+                            urban_assault_specialist
+                            trait_mountaineer
+                        }
+                        skill = 5
+                        attack_skill = 7
+                        defense_skill = 1
+                        planning_skill = 3
+                        logistics_skill = 4
                     }
-                    skill = 5
-                    attack_skill = 5
-                    defense_skill = 5
-                    planning_skill = 5
-                    logistics_skill = 5
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_kotori_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Amane1
-                    traits={
-                        maid_kotori_trait
+                if = {
+                    limit = {
+                        has_country_flag = have_Mayu
+                        NOT = { any_army_leader = { has_trait = maid_Mayu_trait } }
                     }
-                    skill = 2
-                    attack_skill = 6
-                    defense_skill = 3
-                    planning_skill = 4
-                    logistics_skill = 4
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = maid_shirley_trait } }
-                }
-                add_corps_commander_role = {
-                    character = shirley_warwick
-                    traits={
-                        maid_shirley_trait
+                    add_corps_commander_role = {
+                        character = Shikibe_Mayu
+                        traits={
+                            brilliant_strategist
+                            thorough_planner
+                            organizer
+                            maid_Mayu_trait
+                        }
+                        skill = 5
+                        attack_skill = 3
+                        defense_skill = 4
+                        planning_skill = 5
+                        logistics_skill = 5
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_airi_trait } }
-                }
-                add_corps_commander_role = {
-                    character = Shiraga_Airi
-                    traits={
-                        yz_airi_trait
-                        trait_reckless
-                        trait_cautious
-                        brilliant_strategist
-                        infantry_leader
+                if = {
+                    limit = {
+                        has_country_flag = have_amane
+                        has_country_flag = amane_line
+                        has_character = Amane1
+                        NOT = { any_army_leader = { has_trait = yz_amane_trait_1 } }
                     }
-                    skill=3
-                    attack_skill=4
-                    defense_skill=2
-                    planning_skill=4
-                    logistics_skill=6
+                    add_corps_commander_role = {
+                        character = Amane1
+                        traits={
+                            yz_amane_trait_1
+                        }
+                        skill = 1
+                        attack_skill = 1
+                        defense_skill = 1
+                        planning_skill = 1
+                        logistics_skill = 1
+                    }
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_elina_owen_trait } }
+                if = {
+                    limit = {
+                        has_country_flag = have_amane
+                        has_country_flag = amane_line
+                        has_character = Amane1
+                        NOT = { any_army_leader = { has_trait = yz_amane_trait_2 } }
+                    }
+                    add_corps_commander_role = {
+                        character = Amane1
+                        traits={
+                            yz_amane_trait_2
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 5
+                        planning_skill = 5
+                        logistics_skill = 5
+                    }
                 }
-                add_corps_commander_role = {
-                    character = elina_owen
-                    traits={
-                        yz_elina_owen_trait
-                        infantry_officer trait_maid_vampires
+                if = {
+                    limit = {
+                        has_country_flag = have_amane
+                        has_country_flag = amane_line
+                        has_character = Amane1
+                        NOT = { any_army_leader = { has_trait = maid_kotori_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = Amane1
+                        traits={
+                            maid_kotori_trait
+                        }
+                        skill = 2
+                        attack_skill = 6
+                        defense_skill = 3
+                        planning_skill = 4
+                        logistics_skill = 4
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_shirley
+                        NOT = { any_army_leader = { has_trait = maid_shirley_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = shirley_warwick
+                        traits={
+                            maid_shirley_trait
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_airi
+                        NOT = { any_army_leader = { has_trait = yz_airi_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = Shiraga_Airi
+                        traits={
+                            yz_airi_trait
+                            trait_reckless
+                            trait_cautious
+                            brilliant_strategist
+                            infantry_leader
+                        }
+                        skill=3
+                        attack_skill=4
+                        defense_skill=2
+                        planning_skill=4
+                        logistics_skill=6
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_elina_owen
+                        NOT = { any_army_leader = { has_trait = yz_elina_owen_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = elina_owen
+                        traits={
+                            yz_elina_owen_trait
+                            infantry_officer trait_maid_vampires
 
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 2
+                        planning_skill = 6
+                        logistics_skill = 4
                     }
-                    skill = 5
-                    attack_skill = 5
-                    defense_skill = 2
-                    planning_skill = 6
-                    logistics_skill = 4
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_mera_azusa_trait } }
-                }
-                add_corps_commander_role = {
-                    character = mera_azusa
-                    traits={
-                        yz_mera_azusa_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_mera_azusa
+                        NOT = { any_army_leader = { has_trait = yz_mera_azusa_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
+                    add_corps_commander_role = {
+                        character = mera_azusa
+                        traits={
+                            yz_mera_azusa_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_ebihara_minase_trait } }
-                }
-                add_corps_commander_role = {
-                    character = ebihara_minase
-                    traits = {
-                        yz_ebihara_minase_trait
-                        cavalry_officer armor_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_ebihara_minase
+                        NOT = { any_army_leader = { has_trait = yz_ebihara_minase_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = ebihara_minase
+                        traits = {
+                            yz_ebihara_minase_trait
+                            cavalry_officer armor_officer
 
+                        }
+                        skill = 5
+                        attack_skill = 4
+                        defense_skill = 5
+                        planning_skill = 3
+                        logistics_skill = 6
                     }
-                    skill = 5
-                    attack_skill = 4
-                    defense_skill = 5
-                    planning_skill = 3
-                    logistics_skill = 6
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_sakuyahime_trait } }
-                }
-                add_corps_commander_role = {
-                    character = sakuyahime
-                    traits={
-                        yz_sakuyahime_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_sakuyahime
+                        NOT = { any_army_leader = { has_trait = yz_sakuyahime_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_ruri_trait } }
-                }
-                add_corps_commander_role = {
-                    character = ruri
-                    traits={
-                        yz_ruri_trait
-                        ruri_haa
-                        my_doubutsu_tomodachi
-                        infantry_officer
+                    add_corps_commander_role = {
+                        character = sakuyahime
+                        traits={
+                            yz_sakuyahime_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_aoi_trait } }
-                }
-                add_corps_commander_role = {
-                    character = yamafuki_aoi
-                    traits={
-                        yz_aoi_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_ruri
+                        NOT = { any_army_leader = { has_trait = yz_ruri_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_yuiko_trait } }
-                }
-                add_corps_commander_role = {
-                    character = yuiko
-                    traits={
-                        yz_yuiko_trait
-                        infantry_officer
+                    add_corps_commander_role = {
+                        character = ruri
+                        traits={
+                            yz_ruri_trait
+                            ruri_haa
+                            my_doubutsu_tomodachi
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_sasara_trait } }
-                }
-                add_corps_commander_role = {
-                    character = sasara
-                    traits={
-                        yz_sasara_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_aoi
+                        NOT = { any_army_leader = { has_trait = yz_aoi_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_yune_trait } }
-                }
-                add_corps_commander_role = {
-                    character = yune_amagiri
-                    traits={
-                        yz_yune_trait
-                        infantry_officer
+                    add_corps_commander_role = {
+                        character = yamafuki_aoi
+                        traits={
+                            yz_aoi_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_hinata_trait } }
-                }
-                add_corps_commander_role = {
-                    character = kunihiru_hinata
-                    traits={
-                        yz_hinata_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_yuiko
+                        NOT = { any_army_leader = { has_trait = yz_yuiko_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_maya_trait } }
-                }
-                add_corps_commander_role = {
-                    character = nagamitsu_maya
-                    traits={
-                        yz_maya_trait
-                        infantry_officer
+                    add_corps_commander_role = {
+                        character = yuiko
+                        traits={
+                            yz_yuiko_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_sena_trait } }
-                }
-                add_corps_commander_role = {
-                    character = tsukiyama_sena
-                    traits={
-                        yz_sena_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_sasara
+                        NOT = { any_army_leader = { has_trait = yz_sasara_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
-                }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_akari_trait } }
-                }
-                add_corps_commander_role = {
-                    character = kanemoto_akari
-                    traits={
-                        yz_akari_trait
-                        infantry_officer
+                    add_corps_commander_role = {
+                        character = sasara
+                        traits={
+                            yz_sasara_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
                 }
-            }
-            if = {
-                limit = {
-                    NOT = { any_army_leader = { has_trait = yz_shizuru_trait } }
-                }
-                add_corps_commander_role = {
-                    character = shizuru
-                    traits={
-                        yz_shizuru_trait
-                        infantry_officer
+                if = {
+                    limit = {
+                        has_country_flag = have_yune
+                        NOT = { any_army_leader = { has_trait = yz_yune_trait } }
                     }
-                    skill = 5
-                    attack_skill = 1
-                    defense_skill = 8
-                    planning_skill = 1
-                    logistics_skill = 8
+                    add_corps_commander_role = {
+                        character = yune_amagiri
+                        traits={
+                            yz_yune_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_hinata
+                        NOT = { any_army_leader = { has_trait = yz_hinata_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = kunihiru_hinata
+                        traits={
+                            yz_hinata_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_maya
+                        NOT = { any_army_leader = { has_trait = yz_maya_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = nagamitsu_maya
+                        traits={
+                            yz_maya_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_sena
+                        NOT = { any_army_leader = { has_trait = yz_sena_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = tsukiyama_sena
+                        traits={
+                            yz_sena_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_akari
+                        NOT = { any_army_leader = { has_trait = yz_akari_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = kanemoto_akari
+                        traits={
+                            yz_akari_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = have_shizuru
+                        NOT = { any_army_leader = { has_trait = yz_shizuru_trait } }
+                    }
+                    add_corps_commander_role = {
+                        character = shizuru
+                        traits={
+                            yz_shizuru_trait
+                            infantry_officer
+                        }
+                        skill = 5
+                        attack_skill = 1
+                        defense_skill = 8
+                        planning_skill = 1
+                        logistics_skill = 8
+                    }
                 }
             }
         }

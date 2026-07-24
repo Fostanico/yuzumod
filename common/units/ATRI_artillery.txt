@@ -12,6 +12,7 @@ sub_units = {
 		type = {
 			infantry
 			artillery
+			support
 		}
 
 		group = support
@@ -33,11 +34,10 @@ sub_units = {
 			artillery_equipment = 36
 			motorized_equipment = 45
 			support_equipment = 10
-			ATRI_artillery_equipment = 72
+			# ATRI_artillery_equipment = 72 # 仓库中没有该装备定义，原需求不会生效
 		}
 		essential = {
 			artillery_equipment
-			ATRI_artillery_equipment
 			
 		}
 		max_strength = 50
@@ -70,79 +70,80 @@ sub_units = {
 		plains = {
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 		
 		forest = {	#森林
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		hills = {	#丘陵
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		jungle = {	#丛林
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		marsh = {	#沼泽
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		fort = {	#堡垒
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		urban = {	
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		river = {
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
 		amphibious = {
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 		
 		snow = {
 			movement = 0.5
 			attack = 1.5
-			breakthrough = 1
+			# breakthrough = 1 # 地形修正不支持该字段，原代码不会生效
 			defence = 1.5
 		}
 
-		mud = {
-			movement = 0.5
-			attack = 1.5
-			breakthrough = 1
-			defence = 1.5
-		}
+		# mud 不是 sub_unit 支持的地形键；原代码不会生效
+		# mud = {
+		# 	movement = 0.5
+		# 	attack = 1.5
+		# 	breakthrough = 1
+		# 	defence = 1.5
+		# }
 
 		can_be_parachuted = yes
 		

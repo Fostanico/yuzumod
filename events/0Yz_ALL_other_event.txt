@@ -1,10 +1,10 @@
 add_namespace = start_event     #开始事件和杂项事件
 
-country_event= {           
-    id = start_event.1           
-    picture = GFX_yz_start_qrcode 
+country_event= {
+    id = start_event.1
+    picture = GFX_yz_start_qrcode
     title = start_event.1.t
-    desc = start_event.1.d	
+    desc = start_event.1.d
     is_triggered_only = yes
 
     # 要点：启动 UI 入口已迁移到 common/decisions/Start_Yz_decision.txt；此处只保留旧写法注释，避免 start_event.1 与 GUI 重复触发。 [2026-06-20] [伊尔诺/GPT5.5]
@@ -16,86 +16,86 @@ country_event= {
     # }
 
     option = {
-        name = start_event.1.a	
+        name = start_event.1.a
         hidden_effect = {
             #country_event = { id = start_event.8  days = 0 }
-		}
+        }
     }
-	
-    
+
+
 }
-country_event= {           
+country_event= {
     id = start_event.8           #更新日志，写在开始事件后面了——VAN 修改日期2025.5.3
     picture = GFX_2026_new_year
     title = start_event.8.t
-    desc = start_event.8.d	
+    desc = start_event.8.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.8.a	
-		add_political_power = 10
+        name = start_event.8.a
+        add_political_power = 10
         #hidden_effect = { country_event = {id = start_event.28  days = 0 } }
     }
     option = {
-        name = start_event.8.b	
+        name = start_event.8.b
         hidden_effect = {
             # 内容：旧更新日志事件不再回跳 start_event.1，启动界面现在只保留 GUI 入口。 [2026-06-20] [伊尔诺/GPT5.5]
             # country_event = { id = start_event.1  days = 0 }
-		}
+        }
     }
 }
 
 country_event= {           #一位苏联工人的日记
-    id = start_event.2           
+    id = start_event.2
     title = start_event.2.t
-    desc = start_event.2.d	
+    desc = start_event.2.d
     is_triggered_only = yes
     trigger = {
         tag = SOV
     }
 
     option = {
-        name = start_event.2.a	
-		add_political_power = 1
+        name = start_event.2.a
+        add_political_power = 1
         hidden_effect = {
-		}
+        }
     }
 }
 
 country_event= {           #将领离开
-    id = start_event.3           
+    id = start_event.3
     title = start_event.3.t
-    desc = start_event.3.d	
+    desc = start_event.3.d
     is_triggered_only = yes
     trigger = {
         not = { has_country_flag = yz_bad_end }
     }
 
     option = {
-        name = start_event.3.a	
-		add_political_power = -1
+        name = start_event.3.a
+        add_political_power = -1
     }
 }
 
 country_event= {           #将领彻底失望全部离开
-    id = start_event.4           
+    id = start_event.4
     title = start_event.4.t
-    desc = start_event.4.d	
+    desc = start_event.4.d
     is_triggered_only = yes
     trigger = {
         not = { has_country_flag = yz_bad_end }
     }
 
     option = {
-        name = start_event.4.a	
-		add_political_power = -100
+        name = start_event.4.a
+        add_political_power = -100
     }
 }
 
-country_event= {           
-    id = start_event.5          
+country_event= {
+    id = start_event.5
     title = start_event.5.t
-    desc = start_event.5.d	
+    desc = start_event.5.d
     is_triggered_only = yes
     trigger = {
         not = { has_country_flag = yz_bad_end }
@@ -106,17 +106,17 @@ country_event= {
     immediate = {
         set_country_flag = finished_qry
         add_to_variable = { Yoshino_production_speed_industrial_complex_factor = 0.15 }
-		add_to_variable = { Yoshino_consumer_goods_factor = -0.05 }
-		add_to_variable = {
-			Yoshino_stability = 0.05
-		}
+        add_to_variable = { Yoshino_consumer_goods_factor = -0.05 }
+        add_to_variable = {
+            Yoshino_stability = 0.05
+        }
     }
 }
 
-country_event= {           
-    id = start_event.6         
+country_event= {
+    id = start_event.6
     title = start_event.6.t
-    desc = start_event.6.d	
+    desc = start_event.6.d
     is_triggered_only = yes
     trigger = {
         not = { has_country_flag = yz_bad_end }
@@ -129,21 +129,21 @@ country_event= {
         set_country_flag = finished_mgl
         add_to_variable = { Megulu_production_speed_buildings_factor = 0.2 }
         add_to_variable = { Megulu_consumer_goods_factor = -0.05 }
-		add_to_variable = { Megulu_production_speed_arms_factory_factor = 0.05 }
+        add_to_variable = { Megulu_production_speed_arms_factory_factor = 0.05 }
         add_to_variable = { Megulu_production_factory_efficiency_gain_factor = 0.025 }
         add_to_variable = { Megulu_production_factory_max_efficiency_factor = 0.025 }
         add_to_variable = { Megulu_production_factory_start_efficiency_factor = 0.025 }
         add_to_variable = { Megulu_line_change_production_efficiency_factor = 0.025 }
-		add_to_variable = {
-			Megulu_industrial_capacity_factory = 0.05
-		}
+        add_to_variable = {
+            Megulu_industrial_capacity_factory = 0.05
+        }
     }
 }
 
 country_event= {           #塔罗牌倒计时
-    id = start_event.7         
+    id = start_event.7
     title = start_event.7.t
-    desc = start_event.7.d	
+    desc = start_event.7.d
     is_triggered_only = yes
     hidden = yes
     immediate = {
@@ -152,18 +152,18 @@ country_event= {           #塔罗牌倒计时
     }
 
     option = {
-        name = start_event.7.a	
+        name = start_event.7.a
     }
 }
 
 country_event= {           #三军经验
-    id = start_event.9       
+    id = start_event.9
     title = start_event.9.t
-    desc = start_event.9.d	
+    desc = start_event.9.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.9.a	
+        name = start_event.9.a
         army_experience = 10
     }
     option = {
@@ -177,9 +177,9 @@ country_event= {           #三军经验
 }
 
 country_event= {           #核心圈子可以选举了
-    id = start_event.10    
+    id = start_event.10
     title = start_event.10.t
-    desc = start_event.10.d	
+    desc = start_event.10.d
     picture = GFX_core
     is_triggered_only = yes
     trigger = {
@@ -187,7 +187,7 @@ country_event= {           #核心圈子可以选举了
     }
 
     option = {
-        name = start_event.10.a	
+        name = start_event.10.a
         add_political_power = 10
         set_country_flag = YzCoreGroup_visible
         set_country_flag = set_YzCoreGroup
@@ -195,53 +195,49 @@ country_event= {           #核心圈子可以选举了
 }
 
 country_event= {           #没钱啦
-    id = start_event.11      
+    id = start_event.11
     title = start_event.11.t
-    desc = start_event.11.d	
+    desc = start_event.11.d
     is_triggered_only = yes
     trigger = {
     }
     hidden = yes
     option = {
         name = start_event.11.a
-        set_temp_variable = { auto_gain_yzmoney = 0 }	#自动判断没钱了加钱
-	    add_to_temp_variable = { auto_gain_yzmoney = YzMilitary_fund_var }
-		add_to_temp_variable = { auto_gain_yzmoney = YzAdministration_fund_var }
-		add_to_temp_variable = { auto_gain_yzmoney = YzEducation_fund_var }
-		multiply_temp_variable = { auto_gain_yzmoney = -100 }
-		add_to_variable = { YzMoneyOutcome_var = auto_gain_yzmoney }
-		set_variable = { YzMilitary_fund_var = 0 }
-		set_variable = { YzAdministration_fund_var = 0 }
-		set_variable = { YzEducation_fund_var = 0 }
-		set_variable = { YzMonthlyFund_var = 5 }
+        set_variable = { YzMilitary_fund_var = 0 }
+        set_variable = { YzAdministration_fund_var = 0 }
+        set_variable = { YzEducation_fund_var = 0 }
+        set_variable = { YzMonthlyFund_var = 5 }
         hidden_effect = {
             clr_all_YzMoney_effect = yes
         }
+        # 部门等级已归零；重建派生支出，避免财政 GUI 保留破产前缓存。
+        yz_recalculate_monthly_money_ledger = yes
 
     }
 }
 
 country_event= {           #无事发生
-    id = start_event.12    
+    id = start_event.12
     title = start_event.12.t
-    desc = start_event.12.d	
+    desc = start_event.12.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.12.a	
+        name = start_event.12.a
         add_stability = -0.001
     }
 }
 country_event= {           #小隐藏1
-    id = start_event.13    
+    id = start_event.13
     title = start_event.13.t
-    desc = start_event.13.d	
+    desc = start_event.13.d
     is_triggered_only = yes
     trigger = {
         has_country_flag = qiyong_youzi_2
     }
     option = {
-        name = start_event.13.a	
+        name = start_event.13.a
         meta_effect = {
             text = {
                 generate_character = {
@@ -251,22 +247,22 @@ country_event= {           #小隐藏1
                     nationality = PRC
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\baichazuichangyan.png"
-                            small = "gfx\leader\baichazuichangyan2.png"
+                            large = "gfx/leader/baichazuichangyan.png"
+                            small = "gfx/leader/baichazuichangyan2.png"
                         }
                     }
                     allowed_civil_war = {
                         is_ai = no
                     }
                     corps_commander = {
-                    traits={
-                        caidan_trait_baicha
-                    }
-                    skill=99
-                    attack_skill=99
-                    defense_skill=99
-                    planning_skill=99
-                    logistics_skill=99
+                        traits={
+                            caidan_trait_baicha
+                        }
+                        skill=99
+                        attack_skill=99
+                        defense_skill=99
+                        planning_skill=99
+                        logistics_skill=99
                     }
                 }
             }
@@ -275,23 +271,23 @@ country_event= {           #小隐藏1
     }
 }
 country_event= {           #小隐藏2
-    id = start_event.15    
+    id = start_event.15
     title = start_event.15.t
-    desc = start_event.15.d	
+    desc = start_event.15.d
     is_triggered_only = yes
     trigger = {
         has_country_flag = qiyong_youzi_2
     }
     option = {
-        name = start_event.15.a	
+        name = start_event.15.a
         hidden_effect = {
             every_country = {
-                    limit = {
-                        is_ai = no
-                    }
-                    set_country_flag = yuzu_super_event_private_visible_flag
-                    set_country_flag = we_forward_with_irno_flag
+                limit = {
+                    is_ai = no
                 }
+                set_country_flag = yuzu_super_event_private_visible_flag
+                set_country_flag = we_forward_with_irno_flag
+            }
             play_song = a_voice_from_best_future
             set_country_flag = have_kakka_nor
             meta_effect = {
@@ -303,25 +299,25 @@ country_event= {           #小隐藏2
                         nationality = PRC
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Irno_character.png"
-                                small = "gfx\leader\Irno_character2.png"
+                                large = "gfx/leader/Irno_character.png"
+                                small = "gfx/leader/Irno_character2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
                         corps_commander = {
-                        traits={
-                            caidan_trait_iron
-                            A_voice_from_wonderful_future
-                            First_Air_Transport_Special_Operations_Brigade
+                            traits={
+                                caidan_trait_iron
+                                A_voice_from_wonderful_future
+                                First_Air_Transport_Special_Operations_Brigade
                             #ad_victoriam
-                        }
-                        skill=99
-                        attack_skill=99
-                        defense_skill=99
-                        planning_skill=99
-                        logistics_skill=99
+                            }
+                            skill=99
+                            attack_skill=99
+                            defense_skill=99
+                            planning_skill=99
+                            logistics_skill=99
                         }
                     }
                 }
@@ -331,15 +327,15 @@ country_event= {           #小隐藏2
     }
 }
 country_event= {           #大隐藏
-    id = start_event.14    
+    id = start_event.14
     title = start_event.14.t
-    desc = start_event.14.d	
+    desc = start_event.14.d
     is_triggered_only = yes
     trigger = {
         has_country_flag = qiyong_youzi_2
     }
     option = {
-        name = start_event.14.a	
+        name = start_event.14.a
         add_political_power = 250
         add_stability = 2.5
         hidden_effect = {
@@ -352,22 +348,22 @@ country_event= {           #大隐藏
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\sana.png"
-                                small = "gfx\leader\sana2.png"
+                                large = "gfx/leader/sana.png"
+                                small = "gfx/leader/sana2.png"
                             }
                         }
                         allowed_civil_war = {
                             is_ai = no
                         }
                         corps_commander = {
-                        traits={
-                            maid_sana_trait trait_reckless infantry_officer
-                        }
-                        skill=15
-                        attack_skill=22
-                        defense_skill=18
-                        planning_skill=13
-                        logistics_skill=16
+                            traits={
+                                maid_sana_trait trait_reckless infantry_officer
+                            }
+                            skill=15
+                            attack_skill=22
+                            defense_skill=18
+                            planning_skill=13
+                            logistics_skill=16
                         }
                     }
                 }
@@ -387,15 +383,15 @@ country_event= {           #大隐藏
     }
 }
 country_event= {           #250抽的提醒
-    id = start_event.16   
+    id = start_event.16
     title = start_event.16.t
-    desc = start_event.16.d	
+    desc = start_event.16.d
     is_triggered_only = yes
     trigger = {
         has_country_flag = qiyong_youzi_2
     }
     option = {
-        name = start_event.16.a	
+        name = start_event.16.a
         add_political_power = -50
         add_named_threat = {
             threat = 100
@@ -404,23 +400,23 @@ country_event= {           #250抽的提醒
     }
 }
 country_event= {           #提醒工业
-    id = start_event.17   
+    id = start_event.17
     title = start_event.17.t
-    desc = start_event.17.d	
+    desc = start_event.17.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.17.a	
+        name = start_event.17.a
     }
 }
 country_event= {           #军工选择线路
-    id = start_event.18 
+    id = start_event.18
     title = start_event.18.t
-    desc = start_event.18.d	
+    desc = start_event.18.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.18.a	
+        name = start_event.18.a
     }
 }
 country_event= {           #紬妈立绘倒计时
@@ -434,11 +430,11 @@ country_event= {           #紬妈立绘倒计时
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\chou.png"
+                    large = "gfx/leader/chou.png"
                 }
             }
         }
-        
+
     }
 }
 country_event= {           #宁宁立绘倒计时
@@ -452,11 +448,11 @@ country_event= {           #宁宁立绘倒计时
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\Nene.png"
+                    large = "gfx/leader/Nene.png"
                 }
             }
         }
-        
+
     }
 }
 country_event= {           #七绪立绘倒计时  2026.4.5,13:02,御坂真琴
@@ -470,11 +466,11 @@ country_event= {           #七绪立绘倒计时  2026.4.5,13:02,御坂真琴
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\souma_nanao.PNG"
+                    large = "gfx/leader/souma_nanao.PNG"
                 }
             }
         }
-        
+
     }
 }
 country_event= {           #空子立绘倒计时  2026.5.24,23:25,御坂真琴
@@ -488,20 +484,38 @@ country_event= {           #空子立绘倒计时  2026.5.24,23:25,御坂真琴
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\kuko_large.PNG"
+                    large = "gfx/leader/kuko_large.PNG"
                 }
             }
         }
-        
+
+    }
+}
+country_event= {           #一夜立绘倒计时  2026.7.14,21:41,御坂真琴
+    id = start_event.47994554
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        random_unit_leader = {
+            limit = {
+                has_trait = love_in_deep_from_this_girl
+            }
+            set_portraits = {
+                army = {
+                    large = "gfx/leader/takashiro_maya_big.PNG"
+                }
+            }
+        }
+
     }
 }
 country_event= {           #娜娜米的意识形态宣传
     id = start_event.22
     title = start_event.22.t
-    desc = start_event.22.d	
+    desc = start_event.22.d
     picture = GFX_nanami_2
     is_triggered_only = yes
-    
+
     option = {
         name = start_event.22.a     #共产主义
         add_timed_idea = {
@@ -534,15 +548,15 @@ country_event= {           #娜娜米的意识形态宣传
 country_event= {           #歌舞团显示事件
     id = start_event.201
     title = start_event.201.t
-    desc = start_event.201.d	
+    desc = start_event.201.d
     picture = GFX_
     is_triggered_only = yes
     trigger = {
         has_country_flag = YuzuSongUndDanceTroupe_showing
     }
-    
+
     option = {
-        name = start_event.201.a    
+        name = start_event.201.a
         random_controlled_state = {
             limit = {
                 not = { has_state_flag = is_YuzuSongUndDanceTroupe_modifier }
@@ -555,23 +569,23 @@ country_event= {           #歌舞团显示事件
                 }
                 days = 60
             }
-        } 
+        }
         hidden_effect = {
             if = {
                 limit = {
                     has_country_flag = YuzuSongUndDanceTroupe_showing
                 }
                 set_variable_to_random = {
-					var = YuzuSongUndDanceTroupe_event_var
-					max = 9.1
-					min = 0.9
-					integer = yes
-				}
+                    var = YuzuSongUndDanceTroupe_event_var
+                    max = 9.1
+                    min = 0.9
+                    integer = yes
+                }
                 country_event = { id = start_event.201 days = 20 }
             }
         }
     }
-    
+
 }
 country_event= {           #歌舞团隐藏事件
     id = start_event.202
@@ -591,7 +605,7 @@ country_event= {           #歌舞团隐藏事件
                 days = 60
             }
             add_to_variable = { YuzuSongUndDanceTroupe_traget_state = 1 }
-        } 
+        }
         hidden_effect = {
             if = {
                 limit = {
@@ -599,18 +613,18 @@ country_event= {           #歌舞团隐藏事件
                 }
                 country_event = { id = start_event.202 days = 20 }
                 set_variable_to_random = {
-					var = YuzuSongUndDanceTroupe_event_var
-					max = 9.1
-					min = 0.9
-					integer = yes
-				}
-				country_event = start_event.202
+                    var = YuzuSongUndDanceTroupe_event_var
+                    max = 9.1
+                    min = 0.9
+                    integer = yes
+                }
+                country_event = start_event.202
             }
         }
     }
 }
 country_event= {           #柚子宣传部第一槽位
-    id = start_event.101 	
+    id = start_event.101
     is_triggered_only = yes
     hidden = yes
     immediate = {
@@ -619,7 +633,7 @@ country_event= {           #柚子宣传部第一槽位
     }
 }
 country_event= {           #柚子宣传部第二槽位
-    id = start_event.102  	
+    id = start_event.102
     is_triggered_only = yes
     hidden = yes
     immediate = {
@@ -628,7 +642,7 @@ country_event= {           #柚子宣传部第二槽位
     }
 }
 country_event= {           #柚子宣传部第三槽位
-    id = start_event.103   
+    id = start_event.103
     is_triggered_only = yes
     hidden = yes
     immediate = {
@@ -638,89 +652,89 @@ country_event= {           #柚子宣传部第三槽位
 }
 
 country_event= {             #从这里开始是新手指引事事件——VAN
-    id = start_event.23          
-    picture = GFX_yz_start_qrcode  
+    id = start_event.23
+    picture = GFX_yz_start_qrcode
     title = start_event.23.t
-    desc = start_event.23.d	
+    desc = start_event.23.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.23.a	
+        name = start_event.23.a
         hidden_effect = {
             country_event = { id = start_event.24  days = 0 }
-		}
+        }
     }
 }
 
-country_event= {           
-    id = start_event.24          
-    picture = GFX_yz_start_qrcode  
+country_event= {
+    id = start_event.24
+    picture = GFX_yz_start_qrcode
     title = start_event.24.t
     desc = start_event.24.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.24.a	
+        name = start_event.24.a
         hidden_effect = {
-		}
+        }
     }
 }
 
-country_event= {           
-    id = start_event.25          
-    picture = GFX_yz_start_qrcode  
+country_event= {
+    id = start_event.25
+    picture = GFX_yz_start_qrcode
     title = start_event.25.t
-    desc = start_event.25.d	
+    desc = start_event.25.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.25.a	
+        name = start_event.25.a
         hidden_effect = {
             country_event = { id = start_event.26  days = 0 }
-		}
+        }
     }
 }
 
-country_event= {           
-    id = start_event.26           
-    picture = GFX_yz_start_qrcode  
+country_event= {
+    id = start_event.26
+    picture = GFX_yz_start_qrcode
     title = start_event.26.t
-    desc = start_event.26.d	
+    desc = start_event.26.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.26.a	
+        name = start_event.26.a
         hidden_effect = {
-		}
+        }
     }
 }
 
-country_event= {           
-    id = start_event.27          
-    picture = GFX_yz_start_qrcode 
+country_event= {
+    id = start_event.27
+    picture = GFX_yz_start_qrcode
     title = start_event.27.t
-    desc = start_event.27.d	
+    desc = start_event.27.d
     is_triggered_only = yes
 
     option = {
-        name = start_event.27.a	
+        name = start_event.27.a
         add_political_power = 10
         hidden_effect = {
             #hidden_effect = { country_event = {id = start_event.28  days = 0 } }
-		}
+        }
     }
 }
 
 country_event = { #启用柚子将作者彩蛋
-	id = start_event.28 
-	title = start_event.28.t
-	desc = start_event.28.d
-	is_triggered_only = yes
-	option = {
-		name = start_event.28.a
+    id = start_event.28
+    title = start_event.28.t
+    desc = start_event.28.d
+    is_triggered_only = yes
+    option = {
+        name = start_event.28.a
         set_country_flag = youzu_creator_egg_flag
-	}
-	option = {
-		name = start_event.28.b
-	}
+    }
+    option = {
+        name = start_event.28.b
+    }
 }

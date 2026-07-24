@@ -19,9 +19,9 @@
 @Y_11 = 114
 
 guiTypes = {
-	containerWindowType = {		
+	containerWindowType = {
 		name = "YZ_SETTINT_open"
-		size = { width = 166 height = 80 } 
+		size = { width = 166 height = 80 }
 		position = { x = 900 y = 50 }
 		moveable = yes
 		click_to_front = yes
@@ -34,171 +34,171 @@ guiTypes = {
 		hide_animation_type = accelerated
 		background = {
 			name = "nanami_setting"
-			position = { x = 44 y = -1010 } 
+			position = { x = 44 y = -1010 }
 			quadTextureSprite = "GFX_nanami_setting"
 			pdx_tooltip = "YZ_setting_tt"
 		}
-	
-		buttonType = { 
+
+		buttonType = {
 			name = "YZ_setting"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_nanami_setting2"
 			pdx_tooltip = "YZ_setting_tt"
 			clicksound = nan_window
-		} 
-	
+		}
+
 
 		containerWindowType = {
-		name = "yz_control_panel"
-		position = { x = 50 y = 180 }
-		size = { width = 340 height = 182 } 
-		show_position = { x = @control_panel_X y = @control_panel_Y }
-		hide_position = { x = @control_panel_X y = @control_panel_Y }
-		animation_time = 100
-		show_animation_type = decelerated
-		hide_animation_type = accelerated
+			name = "yz_control_panel"
+			position = { x = 50 y = 180 }
+			size = { width = 340 height = 182 }
+			show_position = { x = @control_panel_X y = @control_panel_Y }
+			hide_position = { x = @control_panel_X y = @control_panel_Y }
+			animation_time = 100
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
 		#moveable = yes
-		click_to_front = yes
-		orientation = UPPER_LEFT
-		iconType = {
-			name = "yz_control_panel_bg"
-			quadTextureSprite = "GFX_yz_control_bg"
-			scale = 0.68
-		}
+			click_to_front = yes
+			orientation = UPPER_LEFT
+			iconType = {
+				name = "yz_control_panel_bg"
+				quadTextureSprite = "GFX_yz_control_bg"
+				scale = 0.68
+			}
 
-		buttonType = {
-			name = "button_close"
-			position = {x = -28 y = 4 }
-			scale = 0.9
-			spriteType = "GFX_NV_btn_close"
-			clicksound = click_close
-			pdx_tooltip = "CLOSE"
-			shortcut = "ESCAPE"
-			orientation = UPPER_RIGHT
-		}
+			buttonType = {
+				name = "button_close"
+				position = {x = -28 y = 4 }
+				scale = 0.9
+				spriteType = "GFX_NV_btn_close"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+				shortcut = "ESCAPE"
+				orientation = UPPER_RIGHT
+			}
 
-		instantTextBoxType = {
-			name = "text_1"
-			position = { x = @TEXT_X y = @Y_1 }
-			font = "hoi_18mbs"
-			text = "text_1"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_1"
-			position = { x = @BUTTON_X y = @Y_1 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_2"
-			position = { x = @TEXT_X y = @Y_2 }
-			font = "hoi_18mbs"
-			text = "text_2"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_2"
-			position = { x = @BUTTON_X y = @Y_2 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_3"
-			position = { x = @TEXT_X y = @Y_3 }
-			font = "hoi_18mbs"
-			text = "text_3"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_3"
-			position = { x = @BUTTON_X y = @Y_3 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_4"
-			position = { x = @TEXT_X y = @Y_4 }
-			font = "hoi_18mbs"
-			text = "text_4"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_4"
-			position = { x = @BUTTON_X y = @Y_4 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_5"
-			position = { x = @TEXT_X y = @Y_5 }
-			font = "hoi_18mbs"
-			text = "text_5"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_5"
-			position = { x = @BUTTON_X y = @Y_5 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_6"
-			position = { x = @TEXT_X_2 y = @Y_6 }
-			font = "hoi_18mbs"
-			text = "text_6"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_6"
-			position = { x = @BUTTON_X_2 y = @Y_6 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_7"
-			position = { x = @TEXT_X_2 y = @Y_7 }
-			font = "hoi_18mbs"
-			text = "text_7"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_7"
-			position = { x = @BUTTON_X_2 y = @Y_7 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_8"
-			position = { x = @TEXT_X_2 y = @Y_9 }
-			font = "hoi_18mbs"
-			text = "text_8"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
+			instantTextBoxType = {
+				name = "text_1"
+				position = { x = @TEXT_X y = @Y_1 }
+				font = "hoi_18mbs"
+				text = "text_1"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_1"
+				position = { x = @BUTTON_X y = @Y_1 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_2"
+				position = { x = @TEXT_X y = @Y_2 }
+				font = "hoi_18mbs"
+				text = "text_2"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_2"
+				position = { x = @BUTTON_X y = @Y_2 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_3"
+				position = { x = @TEXT_X y = @Y_3 }
+				font = "hoi_18mbs"
+				text = "text_3"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_3"
+				position = { x = @BUTTON_X y = @Y_3 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_4"
+				position = { x = @TEXT_X y = @Y_4 }
+				font = "hoi_18mbs"
+				text = "text_4"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_4"
+				position = { x = @BUTTON_X y = @Y_4 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_5"
+				position = { x = @TEXT_X y = @Y_5 }
+				font = "hoi_18mbs"
+				text = "text_5"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_5"
+				position = { x = @BUTTON_X y = @Y_5 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_6"
+				position = { x = @TEXT_X_2 y = @Y_6 }
+				font = "hoi_18mbs"
+				text = "text_6"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_6"
+				position = { x = @BUTTON_X_2 y = @Y_6 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_7"
+				position = { x = @TEXT_X_2 y = @Y_7 }
+				font = "hoi_18mbs"
+				text = "text_7"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_7"
+				position = { x = @BUTTON_X_2 y = @Y_7 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_8"
+				position = { x = @TEXT_X_2 y = @Y_9 }
+				font = "hoi_18mbs"
+				text = "text_8"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
 		#buttonType = {
 		#	name = "btn_8"
 		#	position = { x = @BUTTON_X_2 y = @Y_8 } 
@@ -206,15 +206,15 @@ guiTypes = {
 		#	scale = 0.71
 		#	quadTextureSprite = "GFX_backbutton32"
 		#}
-		instantTextBoxType = {
-			name = "text_9"
-			position = { x = @TEXT_X_2 y = @Y_10 }
-			font = "hoi_18mbs"
-			text = "text_9"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
+			instantTextBoxType = {
+				name = "text_9"
+				position = { x = @TEXT_X_2 y = @Y_10 }
+				font = "hoi_18mbs"
+				text = "text_9"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
 		#buttonType = {
 		#	name = "btn_9"
 		#	position = { x = @BUTTON_X_2 y = @Y_9 } 
@@ -222,85 +222,85 @@ guiTypes = {
 		#	scale = 0.71
 		#	quadTextureSprite = "GFX_backbutton32"
 		#}
-		instantTextBoxType = {
-			name = "text_10"
-			position = { x = @TEXT_X_2 y = @Y_11 }
-			font = "hoi_18mbs"
-			text = "text_10"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		instantTextBoxType = {
-			name = "text_11"
-			position = { x = @TEXT_X y = @Y_11 }
-			font = "hoi_18mbs"
-			text = "text_11"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_11"
-			position = { x = @BUTTON_X y = @Y_11 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		instantTextBoxType = {
-			name = "text_12"
-			position = { x = @TEXT_X_2 y = @Y_3 }
-			font = "hoi_18mbs"
-			text = "text_12"
-			maxWidth = 150
-			maxHeight = 30
-			alwaystransparent = yes 
-		}
-		buttonType = {
-			name = "btn_12"
-			position = { x = @BUTTON_X_2 y = @Y_3 } 
-			size = { width = 100% height = 100% }
-			scale = 0.71
-			quadTextureSprite = "GFX_backbutton32"
-		}
-		
-		buttonType = {
-			name = "yzsetting_money_btn"     
-			position = { x = 18 y = 136 } 
-			size = { width = 70 height = 30 }
-			quadTextureSprite = "GFX_yz_button_long"
-			scale = 0.46
-			pdx_tooltip = yzsetting_money_btn
-		}
-		instantTextBoxType = {
-			name = "yzsetting_money_text"
-			position = { x = 3 y = 142 } 
-			font = "hoi_18mbs"
-			text = "yzsetting_money_text"
-			maxWidth = 170
-			maxHeight = 30
-			alwaystransparent = yes
-			format = center 
-		}
-		buttonType = {
-			name = "yzsetting_money_btn_2"     
-			position = { x = 168 y = 136 } 
-			size = { width = 70 height = 30 }
-			quadTextureSprite = "GFX_yz_button_long"
-			scale = 0.46
-			pdx_tooltip = yzsetting_money_btn
-		}
-		instantTextBoxType = {
-			name = "yzsetting_money_text_2"
-			position = { x = 153 y = 142 } 
-			font = "hoi_18mbs"
-			text = "yzsetting_money_text_2"
-			maxWidth = 170
-			maxHeight = 30
-			alwaystransparent = yes
-			format = center 
+			instantTextBoxType = {
+				name = "text_10"
+				position = { x = @TEXT_X_2 y = @Y_11 }
+				font = "hoi_18mbs"
+				text = "text_10"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "text_11"
+				position = { x = @TEXT_X y = @Y_11 }
+				font = "hoi_18mbs"
+				text = "text_11"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_11"
+				position = { x = @BUTTON_X y = @Y_11 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+			instantTextBoxType = {
+				name = "text_12"
+				position = { x = @TEXT_X_2 y = @Y_3 }
+				font = "hoi_18mbs"
+				text = "text_12"
+				maxWidth = 150
+				maxHeight = 30
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "btn_12"
+				position = { x = @BUTTON_X_2 y = @Y_3 }
+				size = { x = 100% y = 100% }
+				scale = 0.71
+				quadTextureSprite = "GFX_backbutton32"
+			}
+
+			buttonType = {
+				name = "yzsetting_money_btn"
+				position = { x = 18 y = 136 }
+				size = { x = 70 y = 30 }
+				quadTextureSprite = "GFX_yz_button_long"
+				scale = 0.46
+				pdx_tooltip = yzsetting_money_btn
+			}
+			instantTextBoxType = {
+				name = "yzsetting_money_text"
+				position = { x = 3 y = 142 }
+				font = "hoi_18mbs"
+				text = "yzsetting_money_text"
+				maxWidth = 170
+				maxHeight = 30
+				alwaystransparent = yes
+				format = center
+			}
+			buttonType = {
+				name = "yzsetting_money_btn_2"
+				position = { x = 168 y = 136 }
+				size = { x = 70 y = 30 }
+				quadTextureSprite = "GFX_yz_button_long"
+				scale = 0.46
+				pdx_tooltip = yzsetting_money_btn
+			}
+			instantTextBoxType = {
+				name = "yzsetting_money_text_2"
+				position = { x = 153 y = 142 }
+				font = "hoi_18mbs"
+				text = "yzsetting_money_text_2"
+				maxWidth = 170
+				maxHeight = 30
+				alwaystransparent = yes
+				format = center
+			}
 		}
 	}
-  }
-	
+
 }

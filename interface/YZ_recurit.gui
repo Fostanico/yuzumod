@@ -1,10 +1,10 @@
 guiTypes = {
-	
-	containerWindowType = {		
+
+	containerWindowType = {
 		name = "SR"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -77 y = -830 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -16,20 +16,20 @@ guiTypes = {
 			quadTextureSprite = "GFX_SR"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "SR"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_SR"
 			pdx_tooltip = "SR"
 			clicksound = murasame_senren
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "RJ"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -77 y = -680 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -41,20 +41,20 @@ guiTypes = {
 			quadTextureSprite = "GFX_RJ"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "RJ"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_RJ"
 			pdx_tooltip = "RJ"
 			clicksound = aya_tittle
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "TS"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -80 y = -450 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -66,20 +66,20 @@ guiTypes = {
 			quadTextureSprite = "GFX_TS"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "TS"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_TS"
 			pdx_tooltip = "TS"
 			clicksound = ama_title
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "CS"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -77 y = -585 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -91,20 +91,20 @@ guiTypes = {
 			quadTextureSprite = "GFX_CS"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "CS"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_CS"
 			pdx_tooltip = "CS"
 			clicksound = kan_title
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "SW"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -77 y = -760 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -116,20 +116,20 @@ guiTypes = {
 			quadTextureSprite = "GFX_SW"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "SW"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_SW"
 			pdx_tooltip = "SW"
 			clicksound = wak_title
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "AIN"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -177 y = -540 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -140,20 +140,20 @@ guiTypes = {
 			name = "AIN_BG"
 			quadTextureSprite = "GFX_AIN"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "AIN"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_AIN"
 			pdx_tooltip = "AIN"
 			#clicksound = 
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "TL"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -147 y = -640 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -164,20 +164,20 @@ guiTypes = {
 			name = "TL_BG"
 			quadTextureSprite = "GFX_TL"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "TL"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_TL"
 			pdx_tooltip = "TL"
 			#clicksound = 
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "DR"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -77 y = -355 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -188,20 +188,20 @@ guiTypes = {
 			name = "DR_BG"
 			quadTextureSprite = "GFX_DR"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "DR"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_DR"
 			pdx_tooltip = "DR"
 			#clicksound = 
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "NW"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -177 y = -440 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -212,20 +212,20 @@ guiTypes = {
 			name = "NW_BG"
 			quadTextureSprite = "GFX_NW"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "NW"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_NW"
 			pdx_tooltip = "NW"
 			#clicksound = 
-		} 
+		}
 	}
-	containerWindowType = {		
+	containerWindowType = {
 		name = "NK"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -257 y = -490 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -236,21 +236,21 @@ guiTypes = {
 			name = "NK_BG"
 			quadTextureSprite = "GFX_NK"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "NK"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_NK"
 			pdx_tooltip = "NK"
 			#clicksound = 
-		} 
+		}
 	}
 	#夏目不是枣子姐
 	containerWindowType = {
 		name = "LLLJ"
 		position = { x = 0 y = 0 }
 		orientation = LOWER_RIGHT
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x = -145 y = -720 }
 		hide_position = { x = -77 y = -510 }
 		animation_time = 250
@@ -261,41 +261,41 @@ guiTypes = {
 			name = "LLLJ_BG"
 			quadTextureSprite = "GFX_LLLJ"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "LLLJ"
-			position = { x = 0 y = 0 }  
-			size = { width = 960 height = 540 }
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_LLLJ"
 			pdx_tooltip = "LLLJ"
 			clicksound = ena_recruit
-		} 
+		}
 	}
 
 	containerWindowType = {		##总招募按钮
 		name = "YZ_recurit"
 		position = { x = -77 y = -510 }
 		orientation = LOWER_RIGHT
-		size = { width = 77 height = 60 } 
+		size = { width = 77 height = 60 }
 		background = {
 			name = "YZrecruit_BG"
 			quadTextureSprite = "GFX_mini_tooltip"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "YZrecruit"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_YZrecruit"
 			pdx_tooltip = "YZrecruit"
 			clicksound = meg_yuzu
-		} 
+		}
 	}
 
 	containerWindowType = {		##千恋万花
 		name = "QL_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -350}
 		hide_position = { x= -280 y = -4000}
 		animation_time = 500
@@ -309,116 +309,116 @@ guiTypes = {
 
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_mako"
-			position = { x = 68 y = 206 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 68 y = 206 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_mako"
 			pdx_tooltip = "recruit_mako"
 			pdx_tooltip_delayed = "recruit_mako_1"
 			clicksound = makcoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_murasame"
-			position = { x = 780 y = 100 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 780 y = 100 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_murasame"
 			pdx_tooltip = "recruit_murasame"
 			pdx_tooltip_delayed = "recruit_murasame_1"
 			clicksound = murcoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_lena"
-			position = { x = 229 y = 352 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 229 y = 352 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_lena"
 			pdx_tooltip = "recruit_lena"
 			pdx_tooltip_delayed = "recruit_lena_1"
 			clicksound = lenacoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_title"
-			position = { x = 20 y = 10 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 20 y = 10 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_title"
 			pdx_tooltip = "recruit_title"
 			#pdx_tooltip_delayed = "recruit_title"
 			clicksound = murasame_senren
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_yoshino"
-			position = { x = 626 y = 342 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 626 y = 342 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_yoshino"
 			pdx_tooltip = "recruit_yoshino"
 			pdx_tooltip_delayed = "recruit_yoshino_1"
 			clicksound = yoscoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_luchun"
-			position = { x = 378 y = 248 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 378 y = 248 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_luchun"
 			pdx_tooltip = "recruit_luchun"
 			#pdx_tooltip_delayed = "recruit_luchun_1"
 			clicksound = rok_kohcoming
-		} 
+		}
 
-		iconType = { 
+		iconType = {
 			name = "recruit_mako1"
-			position = { x = 68 y = 206 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 68 y = 206 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_mako1"
 			pdx_tooltip = "recruit_mako"
 			pdx_tooltip_delayed = "recruit_mako_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_murasame1"
-			position = { x = 780 y = 100 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 780 y = 100 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_murasame1"
 			pdx_tooltip = "recruit_murasame"
 			pdx_tooltip_delayed = "recruit_murasame_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_lena1"
-			position = { x = 229 y = 352 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 229 y = 352 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_lena1"
 			pdx_tooltip = "recruit_lena"
 			pdx_tooltip_delayed = "recruit_lena_1"
-		} 
-		
-		iconType = { 
+		}
+
+		iconType = {
 			name = "recruit_yoshino1"
-			position = { x = 626 y = 342 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 626 y = 342 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_yoshino1"
 			pdx_tooltip = "recruit_yoshino"
 			pdx_tooltip_delayed = "recruit_yoshino_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_luchun1"
-			position = { x = 378 y = 248 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 378 y = 248 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_luchun1"
 			pdx_tooltip = "recruit_luchun"
 			#pdx_tooltip_delayed = "recruit_luchun_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "QL_exit"
-			position = { x = 893 y = 15 } 
+			position = { x = 893 y = 15 }
 			quadTextureSprite = "GFX_QL_exit"
 			shortcut = "ESCAPE"
 			clicksound = murasame_end
-		} 
+		}
 	}
 
 	containerWindowType = {		##魔宴
 		name = "SW_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -320}
 		hide_position = { x= 2000 y = -320}
 		animation_time = 350
@@ -432,108 +432,108 @@ guiTypes = {
 
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_nene"
-			position = { x = 107 y = 20 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 107 y = 20 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nene"
 			pdx_tooltip = "recruit_nene"
 			pdx_tooltip_delayed = "recruit_nene_1"
 			clicksound = nencoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_megulu"
-			position = { x = 393 y = 304 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 393 y = 304 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_megulu"
 			pdx_tooltip = "recruit_megulu"
 			pdx_tooltip_delayed = "recruit_megulu_1"
 			clicksound = megcoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_chou"
-			position = { x = 632 y = 84 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 632 y = 84 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_chou"
 			pdx_tooltip = "recruit_chou"
 			#pdx_tooltip_delayed = "recruit_chou_1"
 			clicksound = chocoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "SW_recruit_title"
-			position = { x = 0 y = 403 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 0 y = 403 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_SW_recruit_title"
 			pdx_tooltip = "SW_recruit_title"
 			clicksound = wak_title
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_wakana"
-			position = { x = 499 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 499 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_wakana"
 			pdx_tooltip = "recruit_wakana"
 			pdx_tooltip_delayed = "recruit_wakana_1"
 			clicksound = wakcoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_toko"
-			position = { x = 115 y = 212 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 115 y = 212 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_toko"
 			pdx_tooltip = "recruit_toko"
 			#pdx_tooltip_delayed = "recruit_toko_1"
 			clicksound = tokcoming
-		} 
+		}
 
-		iconType = { 
+		iconType = {
 			name = "recruit_nene1"
-			position = { x = 107 y = 20 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 107 y = 20 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_nene1"
 			pdx_tooltip = "recruit_nene"
 			pdx_tooltip_delayed = "recruit_nene_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_megulu1"
-			position = { x = 393 y = 304 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 393 y = 304 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_megulu1"
 			pdx_tooltip = "recruit_megulu"
 			pdx_tooltip_delayed = "recruit_megulu_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_chou1"
-			position = { x = 632 y = 84 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 632 y = 84 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_chou1"
 			pdx_tooltip = "recruit_chou"
 			#pdx_tooltip_delayed = "recruit_chou_1"
-		} 
-		
-		iconType = { 
+		}
+
+		iconType = {
 			name = "recruit_wakana1"
-			position = { x = 499 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 499 y = 0 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_wakana1"
 			pdx_tooltip = "recruit_wakana"
 			pdx_tooltip_delayed = "recruit_wakana_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_toko1"
-			position = { x = 115 y = 212 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 115 y = 212 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_toko1"
 			pdx_tooltip = "recruit_toko"
 			#pdx_tooltip_delayed = "recruit_toko_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "SW_exit"
-			position = { x = 893 y = 15 } 
+			position = { x = 893 y = 15 }
 			quadTextureSprite = "GFX_SW_exit"
 			shortcut = "ESCAPE"
 			clicksound = meg_exit
-		} 
+		}
 	}
 
 
@@ -541,7 +541,7 @@ guiTypes = {
 		name = "RJ_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -290}
 		hide_position = { x= -280 y = 1000}
 		animation_time = 450
@@ -555,115 +555,115 @@ guiTypes = {
 
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_ayase"
-			position = { x = 187 y = 319 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 187 y = 319 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_ayase"
 			pdx_tooltip = "recruit_ayase"
 			pdx_tooltip_delayed = "recruit_ayase_1"
 			clicksound = ayacoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_nanami"
-			position = { x = 323 y = 233 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 323 y = 233 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nanami"
 			pdx_tooltip = "recruit_nanami"
 			pdx_tooltip_delayed = "recruit_nanami_1"
 			clicksound = nancoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_nijouin_hazuki"
-			position = { x = 43 y = 247 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 43 y = 247 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_hazuki"
 			pdx_tooltip = "recruit_nijouin_hazuki"
 			#pdx_tooltip_delayed = "recruit_hazuki_1"
 			clicksound = hazcoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "RJ_recruit_title"
-			position = { x = 615 y = 145 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 615 y = 145 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_RJ_recruit_title"
 			pdx_tooltip = "RJ_recruit_title"
 			clicksound = aya_tittle
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_mayu"
-			position = { x = 271 y = 31 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 271 y = 31 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_mayu"
 			pdx_tooltip = "recruit_mayu"
 			pdx_tooltip_delayed = "recruit_mayu_1"
 			clicksound = maycoming
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_chisaki"
-			position = { x = 75 y = 55 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 75 y = 55 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_chisaki"
 			pdx_tooltip = "recruit_chisaki"
 			pdx_tooltip_delayed = "recruit_chisaki_1"
 			clicksound = chisakicoming
-		} 
+		}
 
-		iconType = { 
+		iconType = {
 			name = "recruit_ayase1"
-			position = { x = 187 y = 319 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 187 y = 319 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_ayase1"
 			pdx_tooltip = "recruit_ayase"
 			pdx_tooltip_delayed = "recruit_ayase_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_nanami1"
 			position = { x = 323 y = 233 }
-			size = { width = 960 height = 540 } 
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_nanami1"
 			pdx_tooltip = "recruit_nanami"
 			pdx_tooltip_delayed = "recruit_nanami_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_hazuki1"
-			position = { x = 43 y = 247 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 43 y = 247 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_hazuki1"
 			pdx_tooltip = "recruit_hazuki"
 			#pdx_tooltip_delayed = "recruit_hazuki_1"
-		} 
-		
-		iconType = { 
+		}
+
+		iconType = {
 			name = "recruit_mayu1"
 			position = { x = 271 y = 31 }
-			size = { width = 960 height = 540 } 
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_mayu1"
 			pdx_tooltip = "recruit_mayu"
 			pdx_tooltip_delayed = "recruit_mayu_1"
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_chisaki1"
-			position = { x = 75 y = 55 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 75 y = 55 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_chisaki1"
 			pdx_tooltip = "recruit_chisaki"
 			#pdx_tooltip_delayed = "recruit_chisaki_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "RJ_exit"
-			position = { x = 835 y = 13 } 
+			position = { x = 835 y = 13 }
 			quadTextureSprite = "GFX_RJ_exit"
 			shortcut = "ESCAPE"
 			clicksound = nan_goodbye
-		} 
+		}
 	}
 
 	containerWindowType = {		##咖啡馆
 		name = "CS_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -260}
 		hide_position = { x= -1000 y = 1000}
 		animation_time = 450
@@ -677,166 +677,166 @@ guiTypes = {
 
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_kanna"
-			position = { x = 245 y = 17 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 245 y = 17 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_kanna"
 			pdx_tooltip = "recruit_kanna"
 			pdx_tooltip_delayed = "recruit_kanna_1"
 			clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_kanna1"
-			position = { x = 245 y = 17 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 245 y = 17 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_kanna1"
 			pdx_tooltip = "recruit_kanna"
 			pdx_tooltip_delayed = "recruit_kanna_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_nozomi"
-			position = { x = 399 y = 353 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 399 y = 353 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nozomi"
 			pdx_tooltip = "recruit_nozomi"
 			pdx_tooltip_delayed = "recruit_nozomi_1"
 			clicksound = nozcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_nozomi1"
 			position = { x = 399 y = 353 }
-			size = { width = 960 height = 540 } 
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_nozomi1"
 			pdx_tooltip = "recruit_nozomi"
 			pdx_tooltip_delayed = "recruit_nozomi_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_zaozi"
-			position = { x = 653 y = 71 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 653 y = 71 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_zaozi"
 			pdx_tooltip = "recruit_zaozi"
 			#pdx_tooltip_delayed = "recruit_zaozi_1"
 			clicksound = natcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_zaozi1"
-			position = { x = 653 y = 71 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 653 y = 71 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_zaozi1"
 			pdx_tooltip = "recruit_zaozi"
 			#pdx_tooltip_delayed = "recruit_zaozi_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "CS_recruit_title"
-			position = { x = 784 y = 29 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 784 y = 29 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_CS_recruit_title"
 			pdx_tooltip = "CS_recruit_title"
 			clicksound = kan_title
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_suzune"
-			position = { x = 15 y = 375 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 15 y = 375 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_suzune"
 			pdx_tooltip = "recruit_suzune"
 			pdx_tooltip_delayed = "recruit_suzune_1"
 			clicksound = suzcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_suzune1"
 			position = { x = 15 y = 375 }
-			size = { width = 960 height = 540 } 
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_suzune1"
 			pdx_tooltip = "recruit_suzune"
 			pdx_tooltip_delayed = "recruit_suzune_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_mei"
-			position = { x = 512 y = 363 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 512 y = 363 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_mei"
 			pdx_tooltip = "recruit_mei"
 			#pdx_tooltip_delayed = "recruit_mei_1"
 			clicksound = meicoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_mei1"
-			position = { x = 512 y = 363 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 512 y = 363 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_mei1"
 			pdx_tooltip = "recruit_mei"
 			#pdx_tooltip_delayed = "recruit_mei_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "CS_neko"
-			position = { x = 441 y = 69 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 441 y = 69 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_CS_neko"
 			pdx_tooltip = "CS_neko"
 		}
-		
+
 		buttonType = { 		#右下角咖啡馆独占
 			name = "recruit_kanna_title"
-			position = { x = 627 y = 169 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 627 y = 169 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_kanna_title"
 			pdx_tooltip = "recruit_kanna_title"
 			pdx_tooltip_delayed = "recruit_kanna_title_1"
-			clicksound = kanna_yuzu
-		} 
-		buttonType = { 
+			clicksound = kan_yuzu
+		}
+		buttonType = {
 			name = "recruit_nozomi_title"
-			position = { x = 627 y = 169 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 627 y = 169 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nozomi_title"
 			pdx_tooltip = "recruit_nozomi_title"
 			pdx_tooltip_delayed = "recruit_nozomi_title_1"
 			clicksound = noz_yuzu
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_zaozi_title"
-			position = { x = 627 y = 169 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 627 y = 169 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_zaozi_title"
 			pdx_tooltip = "recruit_zaozi_title"
 			#pdx_tooltip_delayed = "recruit_zaozi_title_1"
 			clicksound = nat_yuzu
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_suzune_title"
-			position = { x = 627 y = 169 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 627 y = 169 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_suzune_title"
 			pdx_tooltip = "recruit_suzune_title"
 			pdx_tooltip_delayed = "recruit_suzune_title_1"
 			clicksound = suz_yuzu
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_mei_title"
-			position = { x = 627 y = 169 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 627 y = 169 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_mei_title"
 			pdx_tooltip = "recruit_mei_title"
 			#pdx_tooltip_delayed = "recruit_mei_title_1"
 			clicksound = mei_yuzu
 		}
-		buttonType = { 
+		buttonType = {
 			name = "CS_exit"
-			position = { x = 29 y = 17 } 
+			position = { x = 29 y = 17 }
 			quadTextureSprite = "GFX_CS_exit"
 			shortcut = "ESCAPE"
 			clicksound = nat_end
-		} 
+		}
 	}
 
 	containerWindowType = {		##天使纷扰
 		name = "TS_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -230}
 		hide_position = { x= 1000 y = 1000}
 		animation_time = 400
@@ -850,131 +850,131 @@ guiTypes = {
 
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_amane"
-			position = { x = 261 y = 279 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 261 y = 279 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_amane"
 			pdx_tooltip = "recruit_amane"
 			pdx_tooltip_delayed = "recruit_amane_1"
 			clicksound = amacoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_amane1"
-			position = { x = 261 y = 279 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 261 y = 279 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_amane1"
 			pdx_tooltip = "recruit_amane"
 			pdx_tooltip_delayed = "recruit_amane_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_kurumi"
 			position = { x = 647 y = 45 }
-			size = { width = 960 height = 540 } 
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_kurumi"
 			pdx_tooltip = "recruit_kurumi"
 			pdx_tooltip_delayed = "recruit_kurumi_1"
 			clicksound = kurcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_kurumi1"
 			position = { x = 647 y = 45 }
-			size = { width = 960 height = 540 } 
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_kurumi1"
 			pdx_tooltip = "recruit_kurumi"
 			pdx_tooltip_delayed = "recruit_kurumi_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_fumika"
-			position = { x = 501 y = 289 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 501 y = 289 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_fumika"
 			pdx_tooltip = "recruit_fumika"
 			#pdx_tooltip_delayed = "recruit_fumika_1"
 			clicksound = fumcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_fumika1"
-			position = { x = 501 y = 289 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 501 y = 289 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_fumika1"
 			pdx_tooltip = "recruit_fumika"
 			#pdx_tooltip_delayed = "recruit_fumika_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "TS_recruit_title"
-			position = { x = 677 y = 358 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 677 y = 358 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_TS_recruit_title"
 			pdx_tooltip = "TS_recruit_title"
 			clicksound = ama_title
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_kaguya"
-			position = { x = 67 y = 15 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 67 y = 15 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_kaguya"
 			pdx_tooltip = "recruit_kaguya"
 			pdx_tooltip_delayed = "recruit_kaguya_1"
 			clicksound = kagcoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_kaguya1"
-			position = { x = 67 y = 15 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 67 y = 15 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_kaguya1"
 			pdx_tooltip = "recruit_kaguya"
 			pdx_tooltip_delayed = "recruit_kaguya_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_noa"
-			position = { x = 353 y = 45 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 353 y = 45 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_noa"
 			pdx_tooltip = "recruit_noa"
 			#pdx_tooltip_delayed = "recruit_noa_1"
 			clicksound = noacoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_noa1"
-			position = { x = 353 y = 45 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 353 y = 45 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_noa1"
 			pdx_tooltip = "recruit_noa"
 			#pdx_tooltip_delayed = "recruit_noa_1"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_ori"
-			position = { x = 33 y = 289 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 33 y = 289 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_ori"
 			pdx_tooltip = "recruit_ori"
 			#pdx_tooltip_delayed = "recruit_ori_1"
 			clicksound = oricoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_ori1"
-			position = { x = 33 y = 289 }   
-			size = { width = 960 height = 540 } 
+			position = { x = 33 y = 289 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_ori1"
 			pdx_tooltip = "recruit_ori"
 			#pdx_tooltip_delayed = "recruit_ori_1"
-		} 
+		}
 
-		buttonType = { 
+		buttonType = {
 			name = "TS_exit"
-			position = { x = 903 y = 8 } 
+			position = { x = 903 y = 8 }
 			quadTextureSprite = "GFX_TS_exit"
 			shortcut = "ESCAPE"
 			clicksound = noa_goodbye
-		} 
+		}
 	}
 
 	containerWindowType = {		##天色幻想岛
 		name = "AIN_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -230}
 		hide_position = { x= -280 y = -230}
 		animation_time = 200
@@ -987,169 +987,169 @@ guiTypes = {
 			quadTextureSprite = "GFX_AIN_recruit_bg"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "AIN_recruit_title"
-			position = { x = 10 y = 4 } 
-			size = { width = 960 height = 540 }  
+			position = { x = 10 y = 4 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_AIN_recruit_title"
 			pdx_tooltip = "AIN_recruit_title"
 			#clicksound = kan_title
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_airi"
-			position = { x = 168 y = 135 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 168 y = 135 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_airi"
 			pdx_tooltip = "recruit_airi"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_airi1"
-			position = { x = 168 y = 135 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 168 y = 135 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_airi1"
 			pdx_tooltip = "recruit_airi"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_xiali"
-			position = { x = 148 y = 351 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 148 y = 351 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_xiali"
 			pdx_tooltip = "recruit_xiali"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_xiali1"
-			position = { x = 148 y = 351 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 148 y = 351 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_xiali1"
 			pdx_tooltip = "recruit_xiali"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_diya"
-			position = { x = 822 y = 81 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 822 y = 81 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_diya"
 			pdx_tooltip = "recruit_diya"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_diya1"
-			position = { x = 822 y = 81 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 822 y = 81 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_diya1"
 			pdx_tooltip = "recruit_diya"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_xiyin"
-			position = { x = 277 y = 224 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 277 y = 224 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_xiyin"
 			pdx_tooltip = "recruit_xiyin"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_xiyin1"
-			position = { x = 277 y = 224 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 277 y = 224 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_xiyin1"
 			pdx_tooltip = "recruit_xiyin"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_zhenxiao"
-			position = { x = 43 y = 261 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 43 y = 261 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_zhenxiao"
 			pdx_tooltip = "recruit_zhenxiao"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_zhenxiao1"
-			position = { x = 43 y = 261 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 43 y = 261 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_zhenxiao1"
 			pdx_tooltip = "recruit_zhenxiao"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_munaixiang"
-			position = { x = 416 y = 383 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 416 y = 383 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_munaixiang"
 			pdx_tooltip = "recruit_munaixiang"
 			#clicksound = kancoming
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_munaixiang1"
-			position = { x = 416 y = 383 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 416 y = 383 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_munaixiang1"
 			pdx_tooltip = "recruit_munaixiang"
 		}
 
-		
+
 		buttonType = { 		#右下角
 			name = "recruit_munaixiang_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GF_recruit_munaixiang_title"
 			pdx_tooltip = "recruit_munaixiang_title"
 			#clicksound = munaixiang_yuzu
-		} 
+		}
 		buttonType = { 		#右下角
 			name = "recruit_zhenxiao_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_zhenxiao_title"
 			pdx_tooltip = "recruit_zhenxiao_title"
 			#clicksound = zhenxiao_yuzu
-		} 
+		}
 		buttonType = { 		#右下角
 			name = "recruit_xiali_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_xiali_title"
 			pdx_tooltip = "recruit_xiali_title"
 			#clicksound = xiali_yuzu
-		} 
+		}
 		buttonType = { 		#右下角
 			name = "recruit_airi_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_airi_title"
 			pdx_tooltip = "recruit_airi_title"
 			#clicksound = airi_yuzu
-		} 
+		}
 		buttonType = { 		#右下角
 			name = "recruit_diya_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_diya_title"
 			pdx_tooltip = "recruit_diya_title"
 			#clicksound = diya_yuzu
-		} 
+		}
 		buttonType = { 		#右下角
 			name = "recruit_xiyin_title"
-			position = { x = 507 y = 201 }  
-			size = { width = 960 height = 540 } 
+			position = { x = 507 y = 201 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_xiyin_title"
 			pdx_tooltip = "recruit_xiyin_title"
 			#clicksound = xiyin_yuzu
-		} 
-		
-		buttonType = { 
+		}
+
+		buttonType = {
 			name = "AIN_exit"
-			position = { x = 891 y = 17 } 
+			position = { x = 891 y = 17 }
 			quadTextureSprite = "GFX_AIN_exit"
 			shortcut = "ESCAPE"
 			#clicksound = nat_end
-		} 
+		}
 	}
 
 	containerWindowType = {		##DRACU-RIOT!
 		name = "DR_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -230}
 		hide_position = { x= -280 y = -230}
 		animation_time = 200
@@ -1162,75 +1162,75 @@ guiTypes = {
 			quadTextureSprite = "GFX_DR_recruit_bg"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_miu"
-			position = { x = 414 y = 129 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 414 y = 129 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_miu"
 			pdx_tooltip = "recruit_miu"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_hiyori"
-			position = { x = 736 y = 149 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 736 y = 149 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_hiyori"
 			pdx_tooltip = "recruit_hiyori"
 			#clicksound =  
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_nigula"
-			position = { x = 136 y = 51 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 136 y = 51 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nigula"
 			pdx_tooltip = "recruit_nigula"
 			#clicksound =  
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_elina"
-			position = { x = 584 y = 152 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 584 y = 152 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_elina"
 			pdx_tooltip = "recruit_elina"
 			#clicksound =  
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_liyin"
-			position = { x = 0 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_liyin"
 			pdx_tooltip = "recruit_liyin"
 			#clicksound =  
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_buliangzi"
-			position = { x = 314 y = 159 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 314 y = 159 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_buliangzi"
 			pdx_tooltip = "recruit_buliangzi"
 			#clicksound =  
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_DR_titile"
-			position = { x = 414 y = 0 } 
+			position = { x = 414 y = 0 }
 			quadTextureSprite = "GFX_DR_recruit_title"
 			shortcut = "ESCAPE"
 			#clicksound = 
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "DR_exit"
-			position = { x = 910 y = 68 } 
+			position = { x = 910 y = 68 }
 			quadTextureSprite = "GFX_SW_exit"
 			shortcut = "ESCAPE"
 			#clicksound = 
-		} 
+		}
 	}
 
 	containerWindowType = {		##NW
 		name = "NW_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -280 y = -230}
 		hide_position = { x= -280 y = -230}
 		animation_time = 200
@@ -1243,68 +1243,68 @@ guiTypes = {
 			quadTextureSprite = "GFX_NW_recruit_bg"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_maya"
-			position = { x = 0 y = 135 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 0 y = 135 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_maya"
 			pdx_tooltip = "recruit_maya"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_akari"
-			position = { x = 342 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 342 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_akari"
 			pdx_tooltip = "recruit_akari"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_hinata"
-			position = { x = 153 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 153 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_hinata"
 			pdx_tooltip = "recruit_hinata"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_shizuru"
-			position = { x = 608 y = 0 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 608 y = 0 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_shizuru"
 			pdx_tooltip = "recruit_shizuru"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_sena"
-			position = { x = 511 y = 105 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 511 y = 105 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_sena"
 			pdx_tooltip = "recruit_sena"
 			#clicksound =  
-		} 
+		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_NW_titile"
-			position = { x = 259 y = 281 } 
+			position = { x = 259 y = 281 }
 			quadTextureSprite = "GFX_NW_recruit_title"
 			pdx_tooltip = "recruit_NW_titile"
 			#clicksound = 
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "NW_exit"
-			position = { x = 891 y = 17 } 
+			position = { x = 891 y = 17 }
 			quadTextureSprite = "GFX_SW_exit"
 			shortcut = "ESCAPE"
 			#clicksound = 
-		} 
+		}
 	}
 
 	containerWindowType = {		##夏空彼方
 		name = "NK_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -220 y = -280}
 		hide_position = { x= -220 y = -280}
 		animation_time = 200
@@ -1317,51 +1317,51 @@ guiTypes = {
 			quadTextureSprite = "GFX_NK_recruit_bg"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_chihaya"
-			position = { x = 280 y = 4 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 280 y = 4 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_chihaya"
 			pdx_tooltip = "recruit_chihaya"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_sasara"
-			position = { x = 93 y = 170 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 93 y = 170 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_sasara"
 			pdx_tooltip = "recruit_sasara"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_yuiko"
-			position = { x = 493 y = 112 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 493 y = 112 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_yuiko"
 			pdx_tooltip = "recruit_yuiko"
 			#clicksound =  
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_NK_titile"
-			position = { x = 162 y = 321 } 
+			position = { x = 162 y = 321 }
 			quadTextureSprite = "GFX_NK_recruit_title"
 			pdx_tooltip = recruit_NK_titile
 			#clicksound = 
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "NK_exit"
-			position = { x = 741 y = 12 } 
+			position = { x = 741 y = 12 }
 			quadTextureSprite = "GFX_SW_exit"
 			shortcut = "ESCAPE"
 			#clicksound = 
-		} 
+		}
 	}
 
 	containerWindowType = {		##天神乱漫
 		name = "TL_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -220 y = -280}
 		hide_position = { x= -220 y = -280}
 		animation_time = 200
@@ -1374,118 +1374,118 @@ guiTypes = {
 			quadTextureSprite = "GFX_TL_recruit_bg"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_sakuyahime"
-			position = { x = 663 y = 129 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 663 y = 129 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_sakuyahime"
 			pdx_tooltip = "recruit_sakuyahime"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_sakuyahime1"
-			position = { x = 663 y = 129 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 663 y = 129 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_sakuyahime1"
 			pdx_tooltip = "recruit_sakuyahime"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_ruri"
-			position = { x = 365 y = 147 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 365 y = 147 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_ruri"
 			pdx_tooltip = "recruit_ruri"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_ruri1"
-			position = { x = 365 y = 147 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 365 y = 147 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_ruri1"
 			pdx_tooltip = "recruit_ruri"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_aoi"
-			position = { x = 480 y = 350 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 480 y = 350 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_aoi"
 			pdx_tooltip = "recruit_aoi"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_aoi1"
-			position = { x = 480 y = 350 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 480 y = 350 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_aoi1"
 			pdx_tooltip = "recruit_aoi"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_sana"
-			position = { x = 630 y = 292 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 630 y = 292 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_sana"
 			pdx_tooltip = "recruit_sana"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_sana1"
-			position = { x = 630 y = 292 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 630 y = 292 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_sana1"
 			pdx_tooltip = "recruit_sana"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_mahiro"
-			position = { x = 121 y = 191 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 121 y = 191 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_mahiro"
 			pdx_tooltip = "recruit_mahiro"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_mahiro1"
-			position = { x = 121 y = 191 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 121 y = 191 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_mahiro1"
 			pdx_tooltip = "recruit_mahiro"
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "recruit_yukari"
-			position = { x = 223 y = 351 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 223 y = 351 }
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_yukari"
 			pdx_tooltip = "recruit_yukari"
 			#clicksound = 
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_yukari1"
-			position = { x = 223 y = 351 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 223 y = 351 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_yukari1"
 			pdx_tooltip = "recruit_yukari"
-		} 
+		}
 
-		buttonType = { 
+		buttonType = {
 			name = "TL_recruit_title"
-			position = { x = 18 y = 13 } 
+			position = { x = 18 y = 13 }
 			quadTextureSprite = "GFX_TL_recruit_title"
 			pdx_tooltip = TL_recruit_title
 			#clicksound = 
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "TL_exit"
-			position = { x = 648 y = 492 } 
+			position = { x = 648 y = 492 }
 			quadTextureSprite = "GFX_TL_exit"
 			shortcut = "ESCAPE"
 			#clicksound = 
-		} 
+		}
 	}
 	#夏目不是枣子姐
 	containerWindowType = {		##聚光灯柠檬果酱
-	name = "LLLJ_recurit"
+		name = "LLLJ_recurit"
 		position = { x = 0 y = 0 }
 		orientation = CENTER
-		size = { width = 960 height = 540 } 
+		size = { width = 960 height = 540 }
 		show_position = { x= -220 y = -280}
 		hide_position = { x= -220 y = -280}
 		animation_time = 200
@@ -1497,117 +1497,117 @@ guiTypes = {
 			name = "LLLJ_recruit_bg"
 			quadTextureSprite = "GFX_LLLJ_recruit_bg"
 		}
-		buttonType = { 
+		buttonType = {
 			name = "recruit_ena"
-			position = { x = 458 y = 240} 
-			size = { width = 960 height = 540 } 
+			position = { x = 458 y = 240}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_ena"
 			pdx_tooltip = "recruit_ena"
 			clicksound = ena_Kokuhaku
-		} 
+		}
 		iconType = {
 			name = "recruit_ena1"
-			position = { x = 458 y = 240 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 458 y = 240 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_ena1"
 			pdx_tooltip = "recruit_ena"
-		} 
+		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_anju"
-			position = { x = 212 y = 300} 
-			size = { width = 960 height = 540 } 
+			position = { x = 212 y = 300}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_anju"
 			pdx_tooltip = "recruit_anju"
 			clicksound = anju_kawaii
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_anju1"
-			position = { x = 212 y = 300 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 212 y = 300 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_anju1"
 			pdx_tooltip = "recruit_anju"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_ririko"
-			position = { x = 50 y = 3} 
-			size = { width = 960 height = 540 } 
+			position = { x = 50 y = 3}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_ririko"
 			pdx_tooltip = "recruit_ririko"
 			clicksound = ririko_suki
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_ririko1"
-			position = { x = 50 y = 3 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 50 y = 3 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_ririko1"
 			pdx_tooltip = "recruit_ririko"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_tsukimi"
-			position = { x = 60 y = 202} 
-			size = { width = 960 height = 540 } 
+			position = { x = 60 y = 202}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_tsukimi"
 			pdx_tooltip = "recruit_tsukimi"
 			clicksound = tsukimi_isshoni
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_tsukimi1"
-			position = { x = 60 y = 202 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 60 y = 202 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_tsukimi1"
 			pdx_tooltip = "recruit_tsukimi"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_nayuka"
-			position = { x = 677 y = 202} 
-			size = { width = 960 height = 540 } 
+			position = { x = 677 y = 202}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_nayuka"
 			pdx_tooltip = "recruit_nayuka"
 			clicksound = nayoka_sabishii
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_nayuka1"
-			position = { x = 677 y = 202 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 677 y = 202 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_nayuka1"
 			pdx_tooltip = "recruit_nayuka"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "recruit_miku"
-			position = { x = 841 y = 153} 
-			size = { width = 960 height = 540 } 
+			position = { x = 841 y = 153}
+			size = { x = 960 y = 540 }
 			quadTextureSprite = "GFX_recruit_miku"
 			pdx_tooltip = "recruit_miku"
 			clicksound = miku_suki
-		} 
-		iconType = { 
+		}
+		iconType = {
 			name = "recruit_miku1"
-			position = { x = 841 y = 153 } 
-			size = { width = 960 height = 540 } 
+			position = { x = 841 y = 153 }
+			# size = { width = 960 height = 540 }
 			quadTextureSprite = "GFX_recruit_miku1"
 			pdx_tooltip = "recruit_miku"
 		}
 
-		buttonType = { 
+		buttonType = {
 			name = "LLLJ_recruit_title"
-			position = { x = 645 y = 351 } 
+			position = { x = 645 y = 351 }
 			quadTextureSprite = "GFX_LLLJ_recruit_title"
 			pdx_tooltip = LLLJ_recruit_title
 			clicksound = ena_recruit
-		} 
-		buttonType = { 
+		}
+		buttonType = {
 			name = "LLLJ_exit"
-			position = { x = 20 y = 492 } 
+			position = { x = 20 y = 492 }
 			quadTextureSprite = "GFX_LLLJ_exit"
 			shortcut = "ESCAPE"
 			clicksound = LLLJ_goodbye
-		} 
+		}
 
 	}
-	
-}	
+
+}

@@ -1,72 +1,72 @@
 ######################################
 category = {
- name = "UI"
- soundeffects = {
-	Martial_Law_senreibanka
-	Martial_Law_Interface_yuri_s_Revenge_occupation
-	murcoming
-	makcoming
-	yoscoming
-	lenacoming
-	murasame_end
-	murasame_senren
-	wakcoming
-	nencoming
-	tokcoming
-	chocoming
-	megcoming
-	meg_exit
-	wak_title
-	aya_tittle
-	ayacoming
-	nan_goodbye
-	nancoming
-	hazcoming
-	maycoming
-	nat_end
-	natcoming
-	nat_yuzu
-	kan_title
-	kan_yuzu
-	kancoming
-	suz_yuzu
-	suzcoming
-	meicoming
-	mei_yuzu
-	noz_yuzu
-	nozcoming
-	meg_yuzu
-	kurcoming
-	ama_title
-	amacoming
-	oricoming
-	noa_goodbye
-	noacoming
-	fumcoming
-	oricoming
-	kagcoming
-	rok_kohcoming
-	nan_window
-	nan_yuzu
-	ena_recruit
-	LLLJ_goodbye
-	ena_Kokuhaku
-	anju_kawaii
-	tsukimi_isshoni
-	nayoka_sabishii
-	ririko_suki
-	miku_suki
- }
- 
- compressor = 
- {
-	enabled = yes
-	pregain = 3.0
-	postgain = 1.0
-	ratio = 2.0
-	threshold = -10.0
-	attacktime = 0.03
-	releasetime = 0.0
- }
+	name = "UI"
+	soundeffects = {
+		Martial_Law_Interface_yuri_s_Revenge_occupation
+		murcoming
+		makcoming
+		yoscoming
+		lenacoming
+		murasame_end
+		murasame_senren
+		wakcoming
+		nencoming
+		tokcoming
+		chocoming
+		megcoming
+		meg_exit
+		wak_title
+		aya_tittle
+		ayacoming
+		nan_goodbye
+		nancoming
+		chisakicoming
+		hazcoming
+		maycoming
+		nat_end
+		natcoming
+		nat_yuzu
+		kan_title
+		kan_yuzu
+		kancoming
+		suz_yuzu
+		suzcoming
+		meicoming
+		mei_yuzu
+		noz_yuzu
+		nozcoming
+		meg_yuzu
+		kurcoming
+		ama_title
+		amacoming
+		oricoming
+		noa_goodbye
+		noacoming
+		fumcoming
+		kagcoming
+		murasame_attention1
+		rok_kohcoming
+		nan_window
+		nan_yuzu
+		ena_recruit
+		LLLJ_goodbye
+		ena_Kokuhaku
+		anju_kawaii
+		tsukimi_isshoni
+		nayoka_sabishii
+		ririko_suki
+		miku_suki
+	}
+
+	compressor =
+	{
+		enabled = yes
+		pregain = 3.0
+		postgain = 1.0
+		ratio = 2.0
+		threshold = -10.0
+		attacktime = 0.03
+		releasetime = 0.0
+	}
 }
 

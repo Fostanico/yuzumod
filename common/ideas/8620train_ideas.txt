@@ -12,7 +12,7 @@ ideas = {
 				railway_gun_equipment = {
 					build_cost_ic = -0.65
 				}
-            }
+			}
 			modifier = {
 				army_speed_factor = 0.05
 				mobilization_speed = 0.25
@@ -24,23 +24,23 @@ ideas = {
 				local_supplies = 0.2
 				supply_node_range = 0.3
 			}
-			traits = {多功能铁路组织}
+			traits = { railway_company }
 			research_bonus = {
-                train_tech = 0.4
+				train_tech = 0.4
 			}
-            visible = {
-                has_country_flag = have_ningning
-				has_country_flag = have_Mayu 
-                has_country_flag = qiyong_youzi_2
-				}
+			visible = {
+				has_country_flag = have_ningning
+				has_country_flag = have_Mayu
+				has_country_flag = qiyong_youzi_2
+			}
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
-    }
+	}
 	country = {
-		
+
 		xiufuhuoche = {
 			picture = BLU_market_dynamism
 

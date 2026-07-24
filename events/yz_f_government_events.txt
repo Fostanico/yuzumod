@@ -1,13 +1,13 @@
 add_namespace = yzjzf_event
 
-country_event = { 
+country_event = {
 	id = yzjzf_event.1
 	title = yzjzf_event.1.t
 	desc = yzjzf_event.1.d
 	picture = GFX_yzjzf_event0
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		retire_country_leader = yes
 		name = yzjzf_event.1.a
@@ -17,15 +17,15 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "大柚子军政府"
-			        picture = "GFX_portrait_ADD_yzjzf"
-					desc = yzjzf_desc
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						JLYM
-						JGYT
-				    }
-				}
+			name = "大柚子军政府"
+			picture = "GFX_portrait_ADD_yzjzf"
+			desc = yzjzf_desc
+			expire = "2095.1.1"
+			ideology = fascism_ideology
+			traits = {
+				JLYM
+				JGYT
+			}
 		}
+	}
 }

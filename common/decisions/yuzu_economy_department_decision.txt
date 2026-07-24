@@ -1,3 +1,5 @@
+# 芳乃长期投资以 basic_additional_yz_money_spend 为月支出源值。
+# 每次启用、升级、续期或取消后立即重建显示账本；实际扣款只在统一月结算发生。
 yuzu_economy_department_category = {
 	yz_economy_department_category_close = {
 		priority = 900
@@ -12,33 +14,33 @@ yuzu_economy_department_category = {
 	}
 	Yoshino_industry_debt_cycle = {  #债务周期——2025.3.17，16：12，伊尔诺      ——2025.3.20,16:17,伊尔诺 移植这里
 		priority = 800                                                        #我决定单独开一个决议组，但是处于方便，我不改决议名称了
-		activation = {                         
+		activation = {
 			has_country_flag = now_we_issuing_bonds
 			not = { has_country_flag = finished_repayment_of_bonds }
-		}                                 
-		available = {                           
+		}
+		available = {
 			#check_variable = { 
 			#	num_yoshino_industray_completed > 12
 			#}
 			has_country_flag = finished_repayment_of_bonds
 		}
-		
-		is_good = no                       
-	
+
+		is_good = no
+
 		days_mission_timeout = 140
-		timeout_effect = {            
+		timeout_effect = {
 			custom_effect_tooltip = {
 				localization_key = we_need_to_make_choice_about_yz_bonds
 			}
 			country_event = yzbonds_event.1
 		}
-		complete_effect = {                   
+		complete_effect = {
 			clr_country_flag = now_we_issuing_bonds
 		}
 	}
-	
+
 	Expanding_debt_issuance_first_time = {    #第一次扩大债券发行
-		priority = 700 
+		priority = 700
 		fire_only_once = yes
 		days_remove = 30
 		cost = 50
@@ -75,7 +77,7 @@ yuzu_economy_department_category = {
 	}
 	Expanding_debt_issuance_second_time = {    #第二次扩大债券发行
 		fire_only_once = yes
-		priority = 700 
+		priority = 700
 		days_remove = 35
 		cost = 75
 		visible = {
@@ -97,7 +99,7 @@ yuzu_economy_department_category = {
 				var = yz_interest_rate
 				value = 0.07
 			}
-			
+
 			add_to_variable = {
 				var = bond_we_need_to_repay
 				value = 1250
@@ -113,7 +115,7 @@ yuzu_economy_department_category = {
 	}
 	Expanding_debt_issuance_third_time = {    #第三次扩大债券发行
 		fire_only_once = yes
-		priority = 700 
+		priority = 700
 		days_remove = 40
 		cost = 100
 		visible = {
@@ -136,7 +138,7 @@ yuzu_economy_department_category = {
 				var = yz_interest_rate
 				value = 0.005
 			}
-			
+
 			add_to_variable = {
 				var = bond_we_need_to_repay
 				value = 1500
@@ -280,7 +282,7 @@ yuzu_economy_department_category = {
 		priority = 2
 		visible = {
 			#NOT = {
-				has_country_flag = yz_rob_start_flag
+			has_country_flag = yz_rob_start_flag
 			#}
 		}
 		complete_effect = {
@@ -385,8 +387,8 @@ yuzu_economy_department_category = {
 				#	var = yuzu_rob_cont_to_show                                         #但是都不生效，显示出来的本地化都是if里面
 				#	value = yuzu_rob_cont                                               #的，我只能放弃了——2025.3.21,22:01,伊尔诺
 				#}
-				
-				
+
+
 			}
 			set_variable = {
 				var = yuzu_rob_cont_to_show_out
@@ -405,7 +407,7 @@ yuzu_economy_department_category = {
 		}
 	}
 	Yoshino_long_term_invest_start = {        #芳乃长期投资                         #van：给你每个耗费的柚子币都减少了，但是效果也减少了一点
-		icon = GFX_yoshino                                                          
+		icon = GFX_yoshino
 		fire_only_once = yes
 		priority = 600
 		visible = {
@@ -415,6 +417,7 @@ yuzu_economy_department_category = {
 		days_remove = 10
 		remove_effect = {
 			set_country_flag = Yoshino_industry_long_term_invest_now_start
+			yz_recalculate_monthly_money_ledger = yes
 		}
 	}
 	Yoshino_long_term_invest_in_construction = {
@@ -449,9 +452,10 @@ yuzu_economy_department_category = {
 				value = 750
 				tooltip = additional_yz_money_spend_raise
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		modifier = {
-			production_speed_buildings_factor = 0.2               
+			production_speed_buildings_factor = 0.2
 			consumer_goods_factor = -0.2
 			consumer_goods_expected_value = -0.1
 			global_building_slots_factor = 0.15
@@ -463,11 +467,12 @@ yuzu_economy_department_category = {
 			subtract_from_variable = {
 				basic_additional_yz_money_spend = 750
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		remove_effect = {
 			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
 			country_event = yzbonds_event.3
-		} 
+		}
 	}
 	Yoshino_long_term_invest_resource_extraction = {
 		icon = GFX_yoshino
@@ -501,6 +506,7 @@ yuzu_economy_department_category = {
 				value = 500
 				tooltip = additional_yz_money_spend_raise
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		modifier = {
 			country_resource_oil = 10
@@ -519,6 +525,7 @@ yuzu_economy_department_category = {
 			subtract_from_variable = {
 				basic_additional_yz_money_spend = 500
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		remove_effect = {
 			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
@@ -557,13 +564,14 @@ yuzu_economy_department_category = {
 				value = 500
 				tooltip = additional_yz_money_spend_raise
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		modifier = {
 			research_speed_factor = 0.2
 			research_sharing_per_country_bonus_factor = 0.4
 			specialization_nuclear_speed_factor = 0.15
 			#specialization_speed_factor = 0.15
-			sp_tag_rocket_speed_factor = 0.1 
+			sp_tag_rocket_speed_factor = 0.1
 		}
 		cancel_trigger = {
 			has_country_flag = monly_yz_money_spent_too_much
@@ -572,6 +580,7 @@ yuzu_economy_department_category = {
 			subtract_from_variable = {
 				basic_additional_yz_money_spend = 500
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		remove_effect = {
 			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
@@ -610,6 +619,7 @@ yuzu_economy_department_category = {
 				value = 750
 				tooltip = additional_yz_money_spend_raise
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		modifier = {
 			industrial_capacity_factory = 0.2
@@ -624,6 +634,7 @@ yuzu_economy_department_category = {
 			subtract_from_variable = {
 				basic_additional_yz_money_spend = 750
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		remove_effect = {
 			custom_effect_tooltip = decide_on_choice_about_long_effert_or_stop_it_tt
@@ -662,6 +673,7 @@ yuzu_economy_department_category = {
 				value = 250
 				tooltip = additional_yz_money_spend_raise
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 		modifier = {
 			political_advisor_cost_factor = -0.3
@@ -677,6 +689,7 @@ yuzu_economy_department_category = {
 			subtract_from_variable = {
 				basic_additional_yz_money_spend = 250
 			}
+			yz_recalculate_monthly_money_ledger = yes
 		}
 	}
 }

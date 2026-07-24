@@ -6,15 +6,14 @@ leader_traits = {
         trait_type = personality_trait
         modifier = {
             army_attack_factor = 0.15
-            fort_attack_factor = 0.3
             army_morale_factor = +0.15
-            breakthrough = 0.1
+            breakthrough_factor = 0.1
             planning_speed = 0.721
             max_planning = 0.36
             org_loss_when_moving = -0.5
             wounded_chance_factor = -0.5
             fort = {
-                attack = 0.5
+                attack = 0.8
                 defence = 0.3
             }
             urban = {
@@ -42,7 +41,7 @@ leader_traits = {
             army_armor_defence_factor = 0.3
             mechanized_attack_factor = 0.25
             mechanized_defence_factor = 0.25
-            breakthrough = 0.1
+            breakthrough_factor = 0.1
         }
         new_commander_weight = {
             factor = 0
@@ -165,7 +164,7 @@ leader_traits = {
         modifier = {
             experience_loss_factor = -0.3
             org_loss_when_moving = -0.25
-            army_strength_factor = 0.15
+            army_strength_factor = 0.3
             out_of_supply_factor = -0.3
             army_core_attack_factor = 0.25
             army_core_defence_factor = 0.25
@@ -679,7 +678,6 @@ leader_traits = {
             army_attack_factor = 0.35
             army_defence_factor = 0.35
             army_org_factor = 0.25
-            army_strength_factor = 0.15
             supply_consumption_factor = -0.20
             max_planning = 0.40
             max_dig_in = 20
@@ -867,6 +865,15 @@ leader_traits = {
             factor = 0
         }
     }
+    maid_kurumi_trait = {
+        type = land
+        trait_type = personality_trait
+        modifier = {
+        }
+        new_commander_weight = {
+            factor = 0
+        }
+    }
     #石墨烯
     #不称职的巫女
     maid_nozomi_trait = {
@@ -896,7 +903,6 @@ leader_traits = {
             org_loss_when_moving = -0.2
             out_of_supply_factor = -0.2
             experience_loss_factor = -0.1
-            army_strength_factor = 0.15
             enemy_army_bonus_air_superiority_factor = -0.25
             army_core_attack_factor = 0.1
             army_strength_factor = 0.15
@@ -953,9 +959,8 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            supply_consumption_factor = -0.3
+            supply_consumption_factor = -0.7
             no_supply_grace = 72
-            supply_consumption_factor = -0.4
             pocket_penalty = -0.3
         }
         new_commander_weight = {
@@ -974,7 +979,7 @@ leader_traits = {
             army_defence_factor = 0.3
             terrain_penalty_reduction = 0.25
             supply_consumption_factor = -0.1
-            max_plannning = 0.25
+            max_planning = 0.25
             recon_factor = 0.5
             coordination_bonus = 0.2
             land_reinforce_rate = 0.2
@@ -1323,7 +1328,7 @@ leader_traits = {
             amphibious = {
                 attack = 1.75
                 defence = 1.75
-                breakthrough = 1.75
+                # breakthrough = 1.75 # 地形修正不支持该字段，原代码不会生效
             }
             mechanized_attack_factor = 0.15
             motorized_attack_factor = 0.15
@@ -1430,7 +1435,7 @@ leader_traits = {
             army_defence_factor = 0.5
             army_attack_factor = 0.2
             cas_damage_reduction = 10
-            
+
         }
         enable_ability = nicola_bloodsucking_ability
         new_commander_weight = {
@@ -1538,7 +1543,7 @@ leader_traits = {
             supply_consumption_factor = -0.3
             army_morale_factor = 0.3
             wounded_chance_factor = -0.6
-        }    
+        }
     }
     #中之岛妙
     yz_tae_trait = {
@@ -1727,7 +1732,7 @@ leader_traits = {
             factor = 0
         }
     }
-    
+
     #国广日向
     yz_hinata_trait = {   #元气满满猫猫学妹
         type = land
@@ -1909,7 +1914,7 @@ leader_traits = {
             factor = 0
         }
         modifier = {
-            potting_chance = 0.6
+            spotting_chance = 0.6
             naval_detection = 0.6
             night_spotting_chance = 1.2
             positioning = 1
@@ -2121,13 +2126,13 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-		    army_org_factor = 0.2
-		    army_morale_factor = 0.4
-		    supply_consumption_factor = -0.5
-		    no_supply_grace = 100
-		    recon_factor = 0.2
-		    land_reinforce_rate = 0.2
-		    coordination_bonus = 0.2
+            army_org_factor = 0.2
+            army_morale_factor = 0.4
+            supply_consumption_factor = -0.5
+            no_supply_grace = 100
+            recon_factor = 0.2
+            land_reinforce_rate = 0.2
+            coordination_bonus = 0.2
         }
         new_commander_weight = {
             factor = 0
@@ -2203,7 +2208,7 @@ leader_traits = {
         }
         modifier = {
             supply_consumption_factor = -0.2
-		    no_supply_grace = 96
+            no_supply_grace = 96
             out_of_supply_factor = -0.5
             army_org = 10
             army_strength_factor = 0.2
@@ -2251,7 +2256,7 @@ leader_traits = {
             army_armor_attack_factor = 0.16
         }
     }
-    
+
     big_small_sister_good_at_sex = {    #月望特质
         trait_type = personality_trait
         type = land
@@ -2354,8 +2359,7 @@ leader_traits = {
         }
         modifier = {
             army_attack_factor = 0.25
-            army_defence_factor = -0.3
-            army_defence_factor = 1
+            army_defence_factor = 0.7
             max_planning_factor = -0.3
             max_dig_in_factor = 0.3
         }
@@ -2369,7 +2373,7 @@ leader_traits = {
         modifier = {
             cas_damage_reduction = 0.75
             special_forces_attack_factor = 0.25
-		    special_forces_defence_factor = 0.25
+            special_forces_defence_factor = 0.25
         }
     }
     nekopara_in_yuzu = {   #七绪-nekopara
@@ -2511,52 +2515,52 @@ leader_traits = {
             desert = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             hills = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             forest = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             mountain = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             plains = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             urban = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             jungle = {
                 attack = 0.15
                 defence = 0.15
-                breakthrough = 0.15
+                # breakthrough = 0.15 # 地形修正不支持该字段，原代码不会生效
             }
             marsh = {
                 attack = -0.1
                 defence = -0.2
-                breakthrough = -0.2
+                # breakthrough = -0.2 # 地形修正不支持该字段，原代码不会生效
             }
             river = {
                 attack = -0.1
                 defence = -0.1
-                breakthrough = -0.1
+                # breakthrough = -0.1 # 地形修正不支持该字段，原代码不会生效
             }
             amphibious = {
                 attack = -2.0
                 defence = -2.0
-                breakthrough = -2.0
+                # breakthrough = -2.0 # 地形修正不支持该字段，原代码不会生效
             }
         }
         new_commander_weight = {
@@ -2734,7 +2738,7 @@ leader_traits = {
         modifier = {
             army_attack_factor = 0.5
             army_defence_factor = 0.5
-            army_strength_factor = 0.5  
+            army_strength_factor = 0.5
             planning_speed = 1
             max_planning = 0.5
             max_planning_factor = 0.3
@@ -2940,7 +2944,7 @@ leader_traits = {
             army_attack_factor = 0.15
             army_defence_factor = 0.15
             cas_damage_reduction = -0.1
-            cas_attack_factor = -0.1
+            air_cas_present_factor = -0.1
             army_bonus_air_superiority_factor = -0.1
         }
         new_commander_weight = {
@@ -2975,7 +2979,9 @@ leader_traits = {
             recon_factor = 0.25
             land_night_attack = 0.2
             reassignment_duration_factor = -0.25
-            land_leader_command = 12
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 12
         }
         new_commander_weight = {
             factor = 0
@@ -3030,7 +3036,9 @@ leader_traits = {
             mechanized_defence_factor = 0.1
             cavalry_attack_factor = 0.1
             cavalry_defence_factor = 0.1
-            land_leader_command = 6
+        }
+        corps_commander_modifier = {
+            max_commander_army_size = 6
         }
         daily_effect = {
             gain_xp = 25
@@ -3049,11 +3057,11 @@ leader_traits = {
             planning_speed = 0.15
             recon_factor = 0.15
             amphibious_invasion = 0.4
-            naval_invasion_preparation = -0.35
+            invasion_preparation = -0.35
             shore_bombardment_bonus = 0.25
             equipment_capture = -0.05
             air_superiority_bonus_in_combat = 0.1
-            naval_invasion_defense = 0.25
+            amphibious_invasion_defence = 0.25
             experience_gain_factor = 0.5
             promote_cost_factor = 0.2
         }
@@ -3086,39 +3094,39 @@ leader_traits = {
     ############################################
     ############################################   以下为新群u特质
     ############################################
-	A_voice_from_wonderful_future = {         #诺卡卡特质
-		type = land
-		trait_type = personality_trait
-		modifier = {
-			army_attack_factor = 591        #桑柏颗够吗
+    A_voice_from_wonderful_future = {         #诺卡卡特质
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 591        #桑柏颗够吗
             army_attack_speed_factor = 60    #应该够吧
-			army_attack_against_major_factor = 15   #来吧
-			army_attack_against_minor_factor = 3   #试一下你妮
+            army_attack_against_major_factor = 15   #来吧
+            army_attack_against_minor_factor = 3   #试一下你妮
 			                                       #蚩尤说又是这个nang的过分的波斯
-		}                                           #它手没了，它手没了就好一点了
-		new_commander_weight = {                   #可以庄心的躲这个骷髅头
+        }                                           #它手没了，它手没了就好一点了
+        new_commander_weight = {                   #可以庄心的躲这个骷髅头
             factor = 0                              #可能我之前死了就是因为这个手
         }
-	}
-	First_Air_Transport_Special_Operations_Brigade = {  #一空输，控油！
-		type = land
-		trait_type = personality_trait  
-		modifier = {  
-			breakthrough_factor = 12    #亡了亡了
-			army_speed_factor = 1.2       #我以为我有史莱姆ang
-			army_strength_factor = 10
-			army_org_factor = 26
-			army_org_regain = 12.12
+    }
+    First_Air_Transport_Special_Operations_Brigade = {  #一空输，控油！
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            breakthrough_factor = 12    #亡了亡了
+            army_speed_factor = 1.2       #我以为我有史莱姆ang
+            army_strength_factor = 10
+            army_org_factor = 26
+            army_org_regain = 12.12
             army_morale_factor = 516
-		}
+        }
         corps_commander_modifier = {
             max_commander_army_size = 100
             dont_lose_dig_in_on_attack = 1
         }
-		new_commander_weight = {
+        new_commander_weight = {
             factor = 0
         }
-	}
+    }
     ad_victoriam = {
         trait_type = personality_trait
         type = land
@@ -3129,8 +3137,8 @@ leader_traits = {
             army_morale_factor = 100
             army_strength_factor = 100
             breakthrough_factor = 100
-			dig_in_speed = 100
-			max_dig_in_factor = 100
+            dig_in_speed = 100
+            max_dig_in_factor = 100
             max_planning = 100
             planning_speed = 1000
             experience_gain_army_unit_factor = 100
@@ -3152,8 +3160,8 @@ leader_traits = {
         modifier = {
             army_strength_factor = 2000
             army_org = 200
-			army_org_factor = 2000
-			army_org_regain = 2000
+            army_org_factor = 2000
+            army_org_regain = 2000
             army_morale_factor = 3000
             experience_loss_factor = -20
         }
@@ -3172,7 +3180,7 @@ leader_traits = {
             no_supply_grace = 10000
             supply_consumption_factor = -2
             out_of_supply_factor = -1
-            reliability = 10
+            attrition = -10
         }
         corps_commander_modifier = {
             max_commander_army_size = 2400
@@ -3197,33 +3205,33 @@ leader_traits = {
             factor = 0
         }
     }
-	the_best_Minecraft_player = {   #耄耋特质一
-		type = land
-		trait_type = personality_trait
-		modifier = {
-			army_attack_factor = 12.1
-			coordination_bonus = 1.21
-			dig_in_speed = 121
-			max_dig_in_factor = 1.21
-			initiative_factor = 1.21
-			terrain_penalty_reduction = 1.21
-		}
-		new_commander_weight = {
+    the_best_Minecraft_player = {   #耄耋特质一
+        type = land
+        trait_type = personality_trait
+        modifier = {
+            army_attack_factor = 12.1
+            coordination_bonus = 1.21
+            dig_in_speed = 121
+            max_dig_in_factor = 1.21
+            initiative_factor = 1.21
+            terrain_penalty_reduction = 1.21
+        }
+        new_commander_weight = {
             factor = 0
         }
-	}
-	the_best_namaden_player = {
-		trait_type = personality_trait
-		type = land
-		modifier = {
-			supply_consumption_factor = -1.21
-			no_supply_grace = 121
-			out_of_supply_factor = -1.21
-		}
-		new_commander_weight = {
+    }
+    the_best_namaden_player = {
+        trait_type = personality_trait
+        type = land
+        modifier = {
+            supply_consumption_factor = -1.21
+            no_supply_grace = 121
+            out_of_supply_factor = -1.21
+        }
+        new_commander_weight = {
             factor = 0
         }
-	}
+    }
     scp_cat_killer = {
         trait_type = personality_trait
         type = land
@@ -3280,7 +3288,7 @@ leader_traits = {
             breakthrough_factor = 5
             army_strength_factor = 1
             army_defence_factor = 1
-            
+
         }
         new_commander_weight = {
             factor = 0
@@ -3295,7 +3303,7 @@ leader_traits = {
             terrain_penalty_reduction = 0.2
             breakthrough_factor = 0.2
             dig_in_speed = 10
-			max_dig_in_factor = 0.2
+            max_dig_in_factor = 0.2
         }
         new_commander_weight = {
             factor = 0
@@ -3329,32 +3337,29 @@ leader_traits = {
             out_of_supply_factor = -0.5
             equipment_capture_factor = 0.5
             initiative_factor = 0.3
-            land_reinforce_rate = 0.2
+            land_reinforce_rate = 0.4
             combat_width_factor = -0.2
             coordination_bonus = 0.2
-            land_reinforce_rate = 0.2
         }
     }
     work_ai_help_you = {
         trait_type = personality_trait
         type = land
+        planning_skill = 10
         new_commander_weight = {
             factor = 0
         }
         modifier = {
             planning_speed = 1
-            max_planning_factor = 0.5
+            max_planning_factor = 1.3
             org_loss_when_moving = -0.33
             army_morale_factor = 0.2
-            dig_in_speed_factor = 0.5
+            dig_in_speed_factor = 3.86
             max_dig_in = 33.6
             max_dig_in_factor = 3.36
-            dig_in_speed_factor = 3.36
             terrain_penalty_reduction = 0.2
             pocket_penalty = -0.3
-            planning_skill = 10
             army_strength_factor = 0.2
-            max_planning_factor = 0.8
             max_planning = 0.5
             experience_gain_factor = 1
             experience_gain_army_unit_factor = 1
@@ -3370,6 +3375,38 @@ leader_traits = {
         field_marshal_modifier = {
             max_army_group_size = 5
             dont_lose_dig_in_on_attack = 1
+        }
+    }
+    light_small_speak_home = {      #柚子
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_org_factor = 0.6
+            army_strength_factor = 0.6
+            max_dig_in = 9
+            land_reinforce_rate = 0.4
+            planning_speed = 0.99
+            max_planning = 0.99
+        }
+    }
+    technology_lover = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            coordination_bonus = 0.5
+            combat_width_factor = -0.2
+            army_attack_speed_factor = 0.5
+            army_attack_factor = 0.4
+            army_defence_factor = 0.3
+            no_supply_grace = 240
+            experience_gain_factor = 0.8
+            experience_gain_army_unit_factor = 0.8
         }
     }
     man_walk_in_night = {     #洛易
@@ -3738,8 +3775,7 @@ leader_traits = {
             supply_consumption_factor = 0.2
             army_attack_factor = -0.05
             breakthrough_factor = 0.2
-            attrition = 0.1
-            reliability = -0.1
+            attrition = 0.2
             army_morale_factor = -0.1
         }
     }
@@ -3816,7 +3852,7 @@ leader_traits = {
             army_core_attack_factor = 0.2
             army_core_defence_factor = 0.2
             land_reinforce_rate = 0.1
-        }        
+        }
     }
     kabutochi = {   #居合斩
         type = land
@@ -3855,7 +3891,7 @@ leader_traits = {
         enable_ability = regression_star2
     }
     ghost_girl_in_mirror = {     #镜中的幽灵少女鹰白一夜特质——2026.3.18，伊尔诺 18：22
-        type = land 
+        type = land
         trait_type = personality_trait
         new_commander_weight = {
             factor = 0
@@ -4087,7 +4123,7 @@ leader_traits = {
             factor = 0
         }
         modifier = {
-            
+
         }
     }
     uphold_the_law = {     #维护法律
@@ -4097,7 +4133,7 @@ leader_traits = {
             factor = 0
         }
         modifier = {
-            
+
         }
     }
     injia_good_at_water = {    #茉子海军——2026.4.11 20：24，御坂真琴
@@ -4108,8 +4144,7 @@ leader_traits = {
         }
         modifier = {
             sortie_efficiency = 0.3
-            navy_carrier_air_targetting_factor = 0.2
-            navy_carrier_air_targetting_factor = 0.25
+            navy_carrier_air_targetting_factor = 0.45
             spotting_chance = 0.3
             naval_enemy_fleet_size_ratio_penalty_factor = 0.3
             navy_carrier_air_attack_factor = 0.3

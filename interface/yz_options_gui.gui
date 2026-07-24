@@ -19,21 +19,21 @@ guiTypes = {
 		iconType = {			# 背景图片
 			name = "YZ_dialog_bg"
 			position = { x = 0 y = 37 } 
-			size = { width = 100% height = 100% } 
+			# size = { width = 100% height = 100% }
 			quadTextureSprite = "GFX_yoshino_home_bg"
 			alwaystransparent = yes
 		}
 		iconType = {			# 中央大立绘
 			name = "character_bg_big"
 			position = { x = 216 y = 95 } 
-			size = { width = 100% height = 100% } 
+			# size = { width = 100% height = 100% }
 			quadTextureSprite = "GFX_character_bg_big"
 			alwaystransparent = yes
 		}
 		buttonType = { 			# 对话框黑背景
 			name = "yuzu_dialog_bg"
 			position = { x = 0 y = 433 } 
-			size = { width = 960 height = 144 } 
+			size = { x = 960 y = 144 }
 			quadTextureSprite = "GFX_yuzu_dialog_bg"
 			pdx_tooltip = "yuzu_dialog_bg"
 			clicksound = click_ok
@@ -51,14 +51,14 @@ guiTypes = {
 		iconType = {		# 左下立绘
 			name = "character_bg_small"
 			position = { x = 8 y = 438 } 
-			size = { width = 100% height = 100% } 
+			# size = { width = 100% height = 100% }
 			quadTextureSprite = "GFX_character_bg_small"
 			alwaystransparent = yes
 		}
 		buttonType = { 		# 选项1
 			name = "YZ_dialog_gui_option_1"
 			position = { x = 356 y = 159 } 
-			size = { width = 100% height = 100% } 
+			size = { x = 100% y = 100% }
 			quadTextureSprite = "GFX_yuzu_option"
 			pdx_tooltip = "dialog_gui_option_1_tooltip"
 		} 
@@ -75,7 +75,7 @@ guiTypes = {
 		buttonType = { 		# 选项2
 			name = "YZ_dialog_gui_option_2"
 			position = { x = 356 y = 225 }  
-			size = { width = 100% height = 100% } 
+			size = { x = 100% y = 100% }
 			quadTextureSprite = "GFX_yuzu_option"
 			pdx_tooltip = "dialog_gui_option_2_tooltip"
 		} 
@@ -92,7 +92,7 @@ guiTypes = {
 		buttonType = { 		# 选项3
 			name = "YZ_dialog_gui_option_3"
 			position = { x = 356 y = 289 }  
-			size = { width = 100% height = 100% } 
+			size = { x = 100% y = 100% }
 			quadTextureSprite = "GFX_yuzu_option"
 			pdx_tooltip = "dialog_gui_option_3_tooltip"
 		} 

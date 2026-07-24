@@ -35,10 +35,11 @@ equipment_modules = {
 			aluminium = 1
 		}
 	}
-	module_count_limit = {
-		module = YZ_0721_detonator_module
-		count < 3
-	}
+	# module_count_limit 属于装备定义而非模块定义；原限制不会生效，暂留注释
+	# module_count_limit = {
+	# 	module = YZ_0721_detonator_module
+	# 	count < 3
+	# }
 }
 
 

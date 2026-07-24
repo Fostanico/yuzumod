@@ -192,7 +192,7 @@ spriteTypes = {
 		name = "GFX_trait_maid_masaki_trait"
 		texturefile = "gfx/traits/maid_masaki_trait.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_trait_maid_miu_trait"
 		texturefile = "gfx/traits/maid_miu_trait.png"
 	}
@@ -212,7 +212,7 @@ spriteTypes = {
 		name = "GFX_trait_yz_weizi_trait"
 		texturefile = "gfx/traits/yz_weizi_trait.png"
 	}
-	
+
 	#爱之结晶
 	spriteType = {
 		name = "GFX_trait_married_trait"
@@ -223,19 +223,19 @@ spriteTypes = {
 		texturefile = "gfx/traits/married_trait.png"
 	}
 	#技能
-	spriteType = { 
+	spriteType = {
 		name = "GFX_ability_chou_witch_ability_icon"
 		texturefile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
 	}
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_chou_witch_ability_icon_animated"
 		texturefile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
         #effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/interface/abilitylist/chou_witch_ability_icon.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -243,24 +243,24 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 	        #animationframes = {1 2 3 }
 		}
-	    legacy_lazy_load = no
+		legacy_lazy_load = no
 	}
-	spriteType = { 
+	spriteType = {
 		name = "GFX_ability_nene_witch_ability_icon"
 		texturefile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
 	}
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_nene_witch_ability_icon_animated"
 		texturefile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
         #effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/interface/abilitylist/nene_witch_ability_icon.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -268,10 +268,10 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 	        #animationframes = {1 2 3 }
 		}
-	    legacy_lazy_load = no
+		legacy_lazy_load = no
 	}
 	#################################
 	##############婚礼相关###########
@@ -348,7 +348,7 @@ spriteTypes = {
 		name = "GFX_nozomi_wedding"
 		texturefile = "gfx/event_pictures/nozomi_wedding.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_masaki_wedding"
 		texturefile = "gfx/event_pictures/masaki_wedding.png"
 	}
@@ -360,11 +360,11 @@ spriteTypes = {
 		name = "GFX_Mayu_wedding"
 		texturefile = "gfx/event_pictures/Mayu_wedding.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_liangyin_wedding"
 		texturefile = "gfx/event_pictures/liangyin_wedding.png"
 	}
-	
+
     ###乃爱相关
 	spriteType = {
 		name = "GFX_noa_event1"
@@ -536,45 +536,45 @@ spriteTypes = {
 		name = "GFX_LY_event"
 		texturefile = "gfx/event_pictures/LY_event.png"
 	}
-	
+
 	#科技
-	spriteType = { 
-     name = "GFX_unit_YZ_engineer_icon_medium"				
-     textureFile = "gfx/counters/unit_YZ_engineer_icon.dds"  
-     noOfFrames = 2
-   	}
+	spriteType = {
+		name = "GFX_unit_YZ_engineer_icon_medium"
+		textureFile = "gfx/counters/unit_YZ_engineer_icon.dds"
+		noOfFrames = 2
+	}
 
-    spriteType = { 
-     name = "GFX_unit_YZ_engineer_icon_medium_white" 					
-     textureFile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds" 
-     noOfFrames = 2
-   	}
+	spriteType = {
+		name = "GFX_unit_YZ_engineer_icon_medium_white"
+		textureFile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds"
+		noOfFrames = 2
+	}
 
-    spriteType = {
-     name = "GFX_unit_YZ_engineer_icon_small"
-     texturefile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds"
-     legacy_lazy_load = no
-     noOfFrames = 2		
-   	}	
-	
-	spriteType = { 
-     name = "GFX_unit_YZ_field_hospital_icon_medium"				
-     textureFile = "gfx/counters/support_unit_YZ_field_hospital_icon.dds"  
-     noOfFrames = 2
-   	}
+	spriteType = {
+		name = "GFX_unit_YZ_engineer_icon_small"
+		texturefile = "gfx/counters/onmap_unit_YZ_engineer_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 
-    spriteType = { 
-     name = "GFX_unit_YZ_field_hospital_icon_medium_white" 					
-     textureFile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png" 
-     noOfFrames = 2
-   	}
+	spriteType = {
+		name = "GFX_unit_YZ_field_hospital_icon_medium"
+		textureFile = "gfx/counters/support_unit_YZ_field_hospital_icon.dds"
+		noOfFrames = 2
+	}
 
-    spriteType = {
-     name = "GFX_unit_YZ_field_hospital_icon_small"
-     texturefile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png"
-     legacy_lazy_load = no
-     noOfFrames = 2		
-   	}
+	spriteType = {
+		name = "GFX_unit_YZ_field_hospital_icon_medium_white"
+		textureFile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_YZ_field_hospital_icon_small"
+		texturefile = "gfx/counters/onmap_unit_YZ_field_hospital_icon.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 
 	spriteType = {
 		name = "GFX_Yuzu_soft_Tank_organization"
@@ -651,19 +651,19 @@ spriteTypes = {
 
 	#军官团
 	spriteType = {
-        name = "GFX_idea_naval_yuzusoft_spirit"
+		name = "GFX_idea_naval_yuzusoft_spirit"
 		texturefile = "gfx/ideas/navy.png"
 	}
 	spriteType = {
-        name = "GFX_idea_air_yuzusoft_spirit"
+		name = "GFX_idea_air_yuzusoft_spirit"
 		texturefile = "gfx/ideas/Propeller with Wings.png"
 	}
 	spriteType = {
-        name = "GFX_idea_army_yuzusoft_forces"
+		name = "GFX_idea_army_yuzusoft_forces"
 		texturefile = "gfx/ideas/Hat Military.png"
 	}
 	spriteType = {
-        name = "GFX_idea_army_yuzusoft_spirit_special_forces"
+		name = "GFX_idea_army_yuzusoft_spirit_special_forces"
 		texturefile = "gfx/ideas/special.png"
 	}
 	#统一事件

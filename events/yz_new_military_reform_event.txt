@@ -1,0 +1,37 @@
+add_namespace = military_reform_event
+
+country_event = {
+    id = military_reform_event.1
+    title = military_reform_event.1.t
+    desc = military_reform_event.1.d
+    picture = GFX_report_event_generic_read
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = military_reform_event.1.a 
+        country_event = { id = military_reform_event.2 }
+    }
+    
+    option = {
+        name = military_reform_event.1.b 
+    }
+}
+
+country_event = {
+    id = military_reform_event.2
+    title = military_reform_event.2.t
+    desc = military_reform_event.2.d
+    picture = GFX_report_event_generic_read
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = military_reform_event.2.a 
+        country_event = { id = military_reform_event.1 }
+    }
+    
+    option = {
+        name = military_reform_event.2.b 
+    }
+}

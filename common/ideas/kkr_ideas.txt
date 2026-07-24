@@ -1,10 +1,10 @@
 ideas = {
 	country = {
-		
+
 	}
-	
+
 	hidden_ideas = {
-		
+
 	}
 
 	industrial_concern = {
@@ -20,7 +20,7 @@ ideas = {
 				production_speed_buildings_factor = 1.25
 			}
 			research_bonus = {
-               	light_air = 2.5
+				light_air = 2.5
 				medium_air = 2.5
 				heavy_air = 2.5
 				armor = 2.5
@@ -133,8 +133,8 @@ ideas = {
 				pykrete_tech = 2.5
 				transport_planes_cat = 2.5
 			}
-            visible = {
-                has_country_flag = set_kkr_research_facility
+			visible = {
+				has_country_flag = set_kkr_research_facility
 			}
 		}
 	}

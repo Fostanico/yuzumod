@@ -16,7 +16,7 @@ soundeffect = {
     }
 }
 
-    soundeffect = {
+soundeffect = {
     name = hiyori_record
     volume = 3
     sounds = {
@@ -37,114 +37,114 @@ soundeffect = {
         sound = hiyori_sound_15
         sound = hiyori_sound_16
         sound = hiyori_sound_17
-        }
-    loop = 1
-    random_sound_when_looping = 1
+    }
+    loop = yes
+    random_sound_when_looping = yes
     max_audible = 5 #最多同时播放音频数量
-	max_audible_behaviour = fail #达到最大数量后行为（停止播放）
-	playbackrate_random_offset = { 0.0 -0.15 } #播放速率偏移量区间
-    prevent_random_repetition = 1 #防止重复
+    max_audible_behaviour = fail #达到最大数量后行为（停止播放）
+    playbackrate_random_offset = { 0.0 -0.15 } #播放速率偏移量区间
+    prevent_random_repetition = yes #防止重复
 }
 
 #sound
-    sound = 
-    {
-        name = "hiyori_sound_1"
-        file = "hiyori_sound/hiy_1.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_2"
-        file = "hiyori_sound/hiy_2.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_3"
-        file = "hiyori_sound/hiy_3.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_4"
-        file = "hiyori_sound/hiy_4.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_5"
-        file = "hiyori_sound/hiy_5.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_6"
-        file = "hiyori_sound/hiy_6.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_7"
-        file = "hiyori_sound/hiy_7.wav"
-    }
-    sound = 
-    {
-        name = "hiyori_sound_8"
-        file = "hiyori_sound/hiy_8.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_9"
-        file = "hiyori_sound/hiy_9.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_10"
-        file = "hiyori_sound/hiy_10.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_11"
-        file = "hiyori_sound/hiy_11.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_12"
-        file = "hiyori_sound/hiy_12.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_13"
-        file = "hiyori_sound/hiy_13.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_14"
-        file = "hiyori_sound/hiy_14.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_15"
-        file = "hiyori_sound/hiy_15.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_16"
-        file = "hiyori_sound/hiy_16.wav"
-    
-    }
-    sound = 
-    {
-        name = "hiyori_sound_17"
-        file = "hiyori_sound/hiy_17.wav"
-    
-    }
+sound =
+{
+    name = "hiyori_sound_1"
+    file = "hiyori_sound/hiy_1.wav"
+}
+sound =
+{
+    name = "hiyori_sound_2"
+    file = "hiyori_sound/hiy_2.wav"
+}
+sound =
+{
+    name = "hiyori_sound_3"
+    file = "hiyori_sound/hiy_3.wav"
+}
+sound =
+{
+    name = "hiyori_sound_4"
+    file = "hiyori_sound/hiy_4.wav"
+}
+sound =
+{
+    name = "hiyori_sound_5"
+    file = "hiyori_sound/hiy_5.wav"
+}
+sound =
+{
+    name = "hiyori_sound_6"
+    file = "hiyori_sound/hiy_6.wav"
+}
+sound =
+{
+    name = "hiyori_sound_7"
+    file = "hiyori_sound/hiy_7.wav"
+}
+sound =
+{
+    name = "hiyori_sound_8"
+    file = "hiyori_sound/hiy_8.wav"
 
-    sound = 
-    {
-        name = "hiyori_skill"
-        file = "hiyori_sound/hiy_skill_1.wav"
-    }
+}
+sound =
+{
+    name = "hiyori_sound_9"
+    file = "hiyori_sound/hiy_9.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_10"
+    file = "hiyori_sound/hiy_10.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_11"
+    file = "hiyori_sound/hiy_11.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_12"
+    file = "hiyori_sound/hiy_12.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_13"
+    file = "hiyori_sound/hiy_13.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_14"
+    file = "hiyori_sound/hiy_14.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_15"
+    file = "hiyori_sound/hiy_15.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_16"
+    file = "hiyori_sound/hiy_16.wav"
+
+}
+sound =
+{
+    name = "hiyori_sound_17"
+    file = "hiyori_sound/hiy_17.wav"
+
+}
+
+sound =
+{
+    name = "hiyori_skill"
+    file = "hiyori_sound/hiy_skill_1.wav"
+}

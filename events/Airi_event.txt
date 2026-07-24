@@ -1,28 +1,28 @@
-add_namespace = airi_event     
-country_event= {        
-    id = airi_event.1      #跟爱莉讨论一下今后的规划
+add_namespace = airi_event
+country_event= {
+	id = airi_event.1      #跟爱莉讨论一下今后的规划
     #picture = GFX_airi_event1
-    title = airi_event.1.t
-    desc = airi_event.1.d	
-    is_triggered_only = yes
+	title = airi_event.1.t
+	desc = airi_event.1.d
+	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
-        name = airi_event.1.a	
-        country_event = { id = airi_event.2 days = 3 }
-    }
+	option = {
+		name = airi_event.1.a
+		country_event = { id = airi_event.2 days = 3 }
+	}
 }
 
-country_event= {        
-    id = airi_event.2      #对不上的电波，对得上的社恐
-    picture = GFX_airi_event1
-    title = airi_event.2.t
-    desc = airi_event.2.d	
-    is_triggered_only = yes
+country_event= {
+	id = airi_event.2      #对不上的电波，对得上的社恐
+	picture = GFX_airi_event1
+	title = airi_event.2.t
+	desc = airi_event.2.d
+	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
-        name = airi_event.2.a	
+	option = {
+		name = airi_event.2.a
 		remove_advisor_role = {
 			slot = political_advisor
 			character = Airi_advisor
@@ -37,14 +37,14 @@ country_event= {
 					nationality = JAP
 					portraits = {
 						civilian = {
-							large = "gfx\leader\airi_cheif.png"
-							small = "gfx\leader\airi_cheif2.png"
+							large = "gfx/leader/airi_cheif.png"
+							small = "gfx/leader/airi_cheif2.png"
 						}
 					}
 					allowed_civil_war = {
 						is_ai = no
 					}
-					advisor = {  
+					advisor = {
 						slot = high_command
 						cost = 1
 						idea_token = airi_cheif
@@ -63,19 +63,19 @@ country_event= {
 				}
 			}
 		}
-    }
+	}
 }
 
-country_event= {        
-    id = airi_event.3      #小小的勇气
-    picture = GFX_airi_event2
-    title = airi_event.3.t
-    desc = airi_event.3.d	
-    is_triggered_only = yes
+country_event= {
+	id = airi_event.3      #小小的勇气
+	picture = GFX_airi_event2
+	title = airi_event.3.t
+	desc = airi_event.3.d
+	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
-        name = airi_event.3.a	
+	option = {
+		name = airi_event.3.a
 		remove_advisor_role = {
 			slot = high_command
 			character = airi_cheif
@@ -90,8 +90,8 @@ country_event= {
 					nationality = JAP
 					portraits = {
 						civilian = {
-							large = "gfx\leader\Airi_unit_leader.png"
-							small = "gfx\leader\Airi_unit_leader2.png"
+							large = "gfx/leader/Airi_unit_leader.png"
+							small = "gfx/leader/Airi_unit_leader2.png"
 						}
 					}
 					allowed_civil_war = {
@@ -99,18 +99,18 @@ country_event= {
 					}
 					corps_commander = {
 						desc = Airi_corps_desc
-					traits={
-						yz_airi_trait
-						trait_reckless
-						trait_cautious
-						brilliant_strategist
-						infantry_leader
-					}
-					skill=3
-					attack_skill=4
-					defense_skill=2
-					planning_skill=4
-					logistics_skill=6
+						traits={
+							yz_airi_trait
+							trait_reckless
+							trait_cautious
+							brilliant_strategist
+							infantry_leader
+						}
+						skill=3
+						attack_skill=4
+						defense_skill=2
+						planning_skill=4
+						logistics_skill=6
 					}
 				}
 			}
@@ -119,20 +119,20 @@ country_event= {
 		unlock_decision_tooltip = {
 			decision = Airi_Crystal_Support_Company
 		}
-    }
+	}
 }
 
-country_event= {        
-    id = airi_event.4      #与爱莉的奇妙发现
-    picture = GFX_airi_event3
-    title = airi_event.4.t
-    desc = airi_event.4.d	
-    is_triggered_only = yes
+country_event= {
+	id = airi_event.4      #与爱莉的奇妙发现
+	picture = GFX_airi_event3
+	title = airi_event.4.t
+	desc = airi_event.4.d
+	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
-        name = airi_event.4.a	
-        set_technology = {
+	option = {
+		name = airi_event.4.a
+		set_technology = {
 			tech_airi_crystal_support = 1
 		}
 		set_technology = {
@@ -140,6 +140,6 @@ country_event= {
 		}
 		set_country_flag = unlock_airi_marry
 		unlock_decision_tooltip = get_married_27
-    }
+	}
 }
 

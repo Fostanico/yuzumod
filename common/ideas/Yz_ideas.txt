@@ -1,10 +1,7 @@
 ideas = {
-	
 	country = {
-		
 		noa_love_level_4 = {
 			picture = FRA_market_dynamism
-
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -14,11 +11,8 @@ ideas = {
 				stability_factor = 0.02
 			}
 		}
-
 		noa_love_level_3 = {
-
 			picture = FRA_market_dynamism
-
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -28,83 +22,643 @@ ideas = {
 				stability_factor = 0.01
 			}
 		}
-		
 		noa_love_level_2 = {
-
 			picture = FRA_market_dynamism
-
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			removal_cost = -1
-			
-			
 			modifier = {
 				political_power_factor = 0.02
 				stability_factor = 0.01
 			}
 		}
-		
 		noa_love_level_1 = {
-
 			picture = FRA_market_dynamism
-
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			removal_cost = -1
-			
-			
 			modifier = {
 				political_power_factor = 0.01
 				stability_factor = 0.01
 			}
 		}
-		
 		noa_love_level_0 = {
-
 			picture = FRA_market_dynamism
-
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			removal_cost = -1
-			
-			
 			modifier = {
 				political_power_factor = 0.01
 			}
 		}
-
-		
-
-		Married_preparing = {
-
-			picture = nothing ###还没做好
-
+		youzu_infantry_I = {
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
+			modifier = {
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				special_forces_no_supply_grace = 72
+				special_forces_cap = 0.5
+			}
+		}
+		youzu_infantry_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				planning_speed = 0.5
+				max_planning = 0.3
+				land_reinforce_rate = 0.1
+				coordination_bonus = 0.2
+				initiative_factor = 0.5
+				recon_factor = 1
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				special_forces_no_supply_grace = 72
+				special_forces_cap = 0.5
+			}
+		}
+		youzu_infantry_III = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				planning_speed = 0.5
+				max_planning = 0.3
+				land_reinforce_rate = 0.1
+				coordination_bonus = 0.2
+				initiative_factor = 0.2
+				recon_factor = 1
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				special_forces_no_supply_grace = 72
+				special_forces_cap = 0.5
+				army_attack_factor = 0.1
+				army_defence_factor = 0.15
+			}
+		}
+		youzu_artillery_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				recon_factor = 2
+				air_superiority_efficiency = 0.5
+				ground_attack_factor = 0.5
+			}
+		}
+		youzu_artillery_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				recon_factor = 2
+				army_bonus_air_superiority_factor = 0.5
+				ground_attack_factor = 0.5
+			}
+		}
+		youzu_cavalry_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				cavalry_attack_factor = 0.5
+				cavalry_defence_factor = 0.5
+			}
+		}
+		youzu_cavalry_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				cavalry_attack_factor = 1
+				cavalry_defence_factor = 0.5
+				org_loss_when_moving = -0.5
+				supply_consumption_factor = -0.3
+			}
+		}
+		youzu_light_armor_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				land_reinforce_rate = 0.05
+				initiative_factor = 0.2
+				coordination_bonus = 0.2
+			}
+		}
+		youzu_light_armor_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				land_reinforce_rate = 0.1
+				initiative_factor = 0.3
+				coordination_bonus = 0.3
+				supply_consumption_factor = -0.3
+				supply_node_range = 0.25
+				supply_combat_penalties_on_core_factor = -0.5
+				no_supply_grace = 96
+			}
+		}
+		youzu_armored_car = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				armored_car_equipment = {
+					build_cost_ic = -0.3
+					reliability = 0.2
+				}
+			}
+		}
+		youzu_support_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.3
+			}
+		}
+		youzu_support_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.3
+				air_cas_efficiency = 0.25
+				ground_attack_factor = 0.25
+				air_mission_efficiency = 1
+				air_range_factor = 0.2
+			}
+		}
+		youzu_support_III = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.3
+				air_cas_efficiency = 0.25
+				ground_attack_factor = 0.25
+				air_mission_efficiency = 1
+				air_range_factor = 0.2
+				recon_factor = 2
+				army_speed_factor = 0.1
+				army_org_factor = 0.15
+				army_strength_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		youzu_mechanized_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.3
+					reliability = 0.5
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+		}
+		youzu_mechanized_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.3
+					reliability = 0.5
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				land_reinforce_rate = 0.05
+				coordination_bonus = 0.2
+				initiative_factor = 0.2
+			}
+		}
+		youzu_mechanized_III = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.3
+					reliability = 0.5
+				}
+			}
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				land_reinforce_rate = 0.05
+				coordination_bonus = 0.2
+				initiative_factor = 0.2
+				army_org_factor = 0.2
+				army_org_regain = 0.25
+			}
+		}
+		youzu_mechanized_IV = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.3
+					reliability = 0.5
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
+				army_armor_attack_factor = 0.25
+				army_armor_defence_factor = 0.25
+				land_reinforce_rate = 0.05
+				coordination_bonus = 0.2
+				initiative_factor = 0.2
+				army_org_factor = 0.2
+				army_org_regain = 0.25
+				mechanized_attack_factor = 0.15
+				mechanized_defence_factor = 0.1
+				supply_consumption_factor = 0.15
+			}
+		}
+		youzu_blitzkrieg_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.3
+					reliability = 0.2
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
 
+			}
+		}
+		youzu_blitzkrieg_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.3
+					reliability = 0.2
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
+				supply_consumption_factor = -0.15
+			}
+		}
+		youzu_blitzkrieg_III = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.3
+					reliability = 0.2
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
+				supply_consumption_factor = -0.15
+				army_armor_attack_factor = 0.2
+				army_armor_defence_factor = 0.5
+				army_armor_speed_factor = 0.2
+				terrain_penalty_reduction = 0.1
+			}
+		}
+		youzu_blitzkrieg_IV = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.3
+					reliability = 0.2
+					# production_bonus = {
+						# production_resource_need_factor = -0.3
+					# }
+				}
+			}
+			modifier = {
+				supply_consumption_factor = -0.15
+				army_armor_attack_factor = 0.2
+				army_armor_defence_factor = 0.5
+				army_armor_speed_factor = 0.2
+				terrain_penalty_reduction = 0.1
+				recon_factor = 2
+				army_bonus_air_superiority_factor = 0.5
+				ground_attack_factor = 0.5
+			}
+		}
+		youzu_air_land_I = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			modifier = {
+				experience_gain_air = 1
+				air_training_xp_gain_factor = 0.5
+				air_wing_xp_loss_when_killed_factor = -0.5
+				air_mastery_gain_factor = 3
+			}
+		}
+		youzu_air_land_II = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					reliability = 0.2
+				}
+				fighter = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				cas = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				naval_bomber = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.5
+					instant = yes
+					reliability = 0.2
+				}
+			}
+			modifier = {
+				experience_gain_air = 1
+				air_training_xp_gain_factor = 0.5
+				air_wing_xp_loss_when_killed_factor = -0.5
+				air_mastery_gain_factor = 3
+			}
+		}
+		youzu_air_land_III = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					reliability = 0.2
+				}
+				fighter = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				cas = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				naval_bomber = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.5
+					instant = yes
+					reliability = 0.2
+				}
+			}
+			modifier = {
+				experience_gain_air = 1
+				air_training_xp_gain_factor = 0.5
+				air_wing_xp_loss_when_killed_factor = -0.5
+				air_mastery_gain_factor = 3
+				recon_factor = 1
+				ground_attack_factor = 0.5
+			}
+		}
+		youzu_air_land_IV = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					reliability = 0.2
+				}
+				fighter = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				cas = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				naval_bomber = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.5
+					instant = yes
+					reliability = 0.2
+				}
+			}
+			modifier = {
+				experience_gain_air = 1
+				air_training_xp_gain_factor = 0.5
+				air_wing_xp_loss_when_killed_factor = -0.5
+				air_mastery_gain_factor = 3
+				recon_factor = 1
+				ground_attack_factor = 0.5
+				air_cas_efficiency = 0.5
+				air_nav_efficiency = 0.5
+				air_escort_efficiency = 1
+				air_range_factor = 0.25
+				air_mission_efficiency = 1
+				air_superiority_efficiency = 0.5
+				air_attack_factor = 0.5
+				air_intercept_efficiency = 0.5
+				cas_damage_reduction = 0.25
+				enemy_army_bonus_air_superiority_factor = -0.25
+				air_agility_factor = 0.5
+				air_defence_factor = 0.3
+				naval_strike_attack_factor = 0.5
+				air_night_penalty = -0.25
+			}
+		}
+		youzu_air_land_V = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
+			equipment_bonus = {
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					reliability = 0.2
+				}
+				fighter = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				cas = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				naval_bomber = {
+					build_cost_ic = -0.25
+					instant = yes
+					reliability = 0.2
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.35
+					instant = yes
+					reliability = 0.2
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.5
+					instant = yes
+					reliability = 0.2
+				}
+			}
+			modifier = {
+				experience_gain_air = 1
+				air_training_xp_gain_factor = 0.5
+				air_wing_xp_loss_when_killed_factor = -0.5
+				air_mastery_gain_factor = 3
+				recon_factor = 1
+				ground_attack_factor = 1.5
+				air_cas_efficiency = 0.5
+				air_nav_efficiency = 0.5
+				air_escort_efficiency = 1
+				air_range_factor = 0.25
+				air_mission_efficiency = 1
+				air_superiority_efficiency = 0.5
+				air_attack_factor = 0.5
+				air_intercept_efficiency = 0.5
+				cas_damage_reduction = 0.25
+				enemy_army_bonus_air_superiority_factor = -0.25
+				air_agility_factor = 0.5
+				air_defence_factor = 0.3
+				naval_strike_attack_factor = 0.5
+				air_night_penalty = -0.25
+				army_speed_factor = 0.15
+				army_org_regain = 0.3
+				army_org_factor = 0.25
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		Married_preparing = {
+			picture = nothing			###还没做好
+			allowed_civil_war = {
+				is_ai = no
+			}
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
 		}
-
 		Married = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				stability_factor = 0.025
-				war_support_factor = 0.025
+				war_support_factor = 0.05
 				political_power_factor = 0.05
 				consumer_goods_factor = -0.025
 				conversion_cost_civ_to_mil_factor = -0.1
@@ -121,7 +675,6 @@ ideas = {
 				local_resources_factor = 0.05
 				political_power_gain = 0.02
 				stability_weekly = 0.001
-				war_support_factor = 0.025
 				war_support_weekly = 0.001
 				offensive_war_stability_factor = 0.05
 				defensive_war_stability_factor = 0.1
@@ -131,22 +684,17 @@ ideas = {
 				resistance_target_on_our_occupied_states = 0.1
 				resistance_growth = -0.05
 				resistance_growth_on_our_occupied_states = 0.1
-				compliance_starting_value = 0.05
+				starting_compliance = 0.05
 				compliance_growth = 0.1
 				compliance_growth_on_our_occupied_states = -0.1
 			}
 		}
-
-		
 		###咖啡馆蛋糕决议
 		fruit_cake = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
@@ -156,15 +704,11 @@ ideas = {
 				experience_gain_air = 0.1
 			}
 		}
-
 		chocolate_donuts = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
@@ -172,15 +716,11 @@ ideas = {
 				army_org_factor = 0.1
 			}
 		}
-
 		cream_pudding = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				consumer_goods_factor = -0.2
 				industrial_capacity_factory = 0.15
@@ -188,15 +728,11 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.25
 			}
 		}
-
 		xiangcaosongbing = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				convoy_raiding_efficiency_factor = 0.1
 				refit_speed = 0.35
@@ -204,15 +740,11 @@ ideas = {
 				industrial_capacity_dockyard = 0.25
 			}
 		}
-
 		mengbulang = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				air_ace_generation_chance_factor = 0.25
 				air_superiority_efficiency = 0.3
@@ -220,15 +752,11 @@ ideas = {
 				air_escort_efficiency = 0.1
 			}
 		}
-
 		tilamisu = {
-
-			picture = nothing ###还没做好
-
+			picture = nothing			###还没做好
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				production_speed_buildings_factor = 0.15
 				global_building_slots_factor = 0.3
@@ -236,14 +764,10 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
-
-	
-
 		sairi_bad_end = {
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				political_power_factor = -0.99
 				stability_factor = -2
@@ -259,18 +783,15 @@ ideas = {
 				monthly_population = -3
 			}
 		}
-
 		agricultural_mechanization = {
 			picture = GFX_idea_agricultural_mechanization
 			allowed_civil_war = {
 				is_ai = no
 			}
-
 			modifier = {
 				stability_factor = 0.025
 				monthly_population = 0.025
 				conscription_factor = 0.05
-				
 			}
 			equipment_bonus = {
 				armor = {
@@ -280,7 +801,6 @@ ideas = {
 				}
 			}
 		}
-
 		bupingheng = {
 			picture = GFX_agricultural_mechanization
 			allowed_civil_war = {
@@ -293,7 +813,6 @@ ideas = {
 				industrial_capacity_factory = -0.05
 			}
 		}
-
 		manglujianshe = {
 			picture = GFX_agricultural_mechanization
 			allowed_civil_war = {
@@ -305,13 +824,10 @@ ideas = {
 				political_power_gain = -0.2
 			}
 		}
-
-
-
 	}
-
 	hidden_ideas = {
-		YzMilitary_fund_boost1 = {	#柚子军费
+		YzMilitary_fund_boost1 = {
+			#柚子军费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -322,7 +838,8 @@ ideas = {
 				attrition = -0.01
 			}
 		}
-		YzMilitary_fund_boost2 = {	#柚子军费
+		YzMilitary_fund_boost2 = {
+			#柚子军费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -333,7 +850,8 @@ ideas = {
 				attrition = -0.02
 			}
 		}
-		YzMilitary_fund_boost3 = {	#柚子军费
+		YzMilitary_fund_boost3 = {
+			#柚子军费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -344,7 +862,8 @@ ideas = {
 				attrition = -0.03
 			}
 		}
-		YzMilitary_fund_boost4 = {	#柚子军费
+		YzMilitary_fund_boost4 = {
+			#柚子军费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -355,7 +874,8 @@ ideas = {
 				attrition = -0.04
 			}
 		}
-		YzMilitary_fund_boost5 = {	#柚子军费
+		YzMilitary_fund_boost5 = {
+			#柚子军费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -366,8 +886,8 @@ ideas = {
 				attrition = -0.05
 			}
 		}
-
-		YzEducation_fund_boost1 = {	#柚子教育经费
+		YzEducation_fund_boost1 = {
+			#柚子教育经费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -377,7 +897,8 @@ ideas = {
 				production_speed_buildings_factor = 0.025
 			}
 		}
-		YzEducation_fund_boost2 = {	#柚子教育经费
+		YzEducation_fund_boost2 = {
+			#柚子教育经费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -387,7 +908,8 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
-		YzEducation_fund_boost3 = {	#柚子教育经费
+		YzEducation_fund_boost3 = {
+			#柚子教育经费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -397,7 +919,8 @@ ideas = {
 				production_speed_buildings_factor = 0.075
 			}
 		}
-		YzEducation_fund_boost4 = {	#柚子教育经费
+		YzEducation_fund_boost4 = {
+			#柚子教育经费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -407,7 +930,8 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
-		YzEducation_fund_boost5 = {	#柚子教育经费
+		YzEducation_fund_boost5 = {
+			#柚子教育经费
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -417,8 +941,8 @@ ideas = {
 				production_speed_buildings_factor = 0.125
 			}
 		}
-		
-		YzAdministration_fund_boost1 = {	#柚子行政开支
+		YzAdministration_fund_boost1 = {
+			#柚子行政开支
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -429,7 +953,8 @@ ideas = {
 				command_power_gain = 0.1
 			}
 		}
-		YzAdministration_fund_boost2 = {	#柚子行政开支
+		YzAdministration_fund_boost2 = {
+			#柚子行政开支
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -440,7 +965,8 @@ ideas = {
 				command_power_gain = 0.2
 			}
 		}
-		YzAdministration_fund_boost3 = {	#柚子行政开支
+		YzAdministration_fund_boost3 = {
+			#柚子行政开支
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -451,7 +977,8 @@ ideas = {
 				command_power_gain = 0.3
 			}
 		}
-		YzAdministration_fund_boost4 = {	#柚子行政开支
+		YzAdministration_fund_boost4 = {
+			#柚子行政开支
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -462,7 +989,8 @@ ideas = {
 				command_power_gain = 0.4
 			}
 		}
-		YzAdministration_fund_boost5 = {	#柚子行政开支
+		YzAdministration_fund_boost5 = {
+			#柚子行政开支
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -473,8 +1001,7 @@ ideas = {
 				command_power_gain = 0.5
 			}
 		}
-
-		yzguozhai = { 
+		yzguozhai = {
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -500,9 +1027,8 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
-
-		chose_noa = {		##一个判断条件而已
-
+		chose_noa = {
+			##一个判断条件而已
 		}
 		yz_amane1 = {
 			modifier = {
@@ -528,7 +1054,6 @@ ideas = {
 				political_power_factor = -0.1
 			}
 		}
-
 		nanami_ideology_1 = {
 			modifier = {
 				political_power_gain = -0.15
@@ -554,7 +1079,7 @@ ideas = {
 		nanami_ideology_3 = {
 			modifier = {
 				political_power_gain = -0.15
-				neutrality_drift= 1.5
+				neutrality_drift = 1.5
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -578,7 +1103,4 @@ ideas = {
 			}
 		}
 	}
-
-
 }
-

@@ -1,11 +1,11 @@
 ######################################
 category = {
- 	name = "UI"
- 	soundeffects = {
+	name = "UI"
+	soundeffects = {
 		kkr_come
- 	}
- 
- 	compressor = {
+	}
+
+	compressor = {
 		enabled = yes
 		pregain = 3.0
 		postgain = 1.0
@@ -13,6 +13,6 @@ category = {
 		threshold = -10.0
 		attacktime = 0.03
 		releasetime = 0.0
- 	}
+	}
 }
 

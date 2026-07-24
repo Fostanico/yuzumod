@@ -1,49 +1,49 @@
 add_namespace = World_event
 
-country_event = { 
+country_event = {
 	id = World_event.1
 	title = World_event.1.t
 	desc = World_event.1.d
 	picture = GFX_World_event.1_event
 	is_triggered_only = yes
-	
+
 	option = {
 		name = World_event.1.a
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = World_event.2
 	title = World_event.2.t
 	desc = World_event.2.d
 	picture = GFX_World_event.2_event
 	is_triggered_only = yes
-	
+
 	option = {
 		name = World_event.2.a
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = World_event.3
 	title = World_event.3.t
 	desc = World_event.3.d
 	picture = GFX_World_event.3_event
 	is_triggered_only = yes
-	
+
 	option = {
 		name = World_event.3.a
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = World_event.4
 	title = World_event.4.t
 	desc = World_event.4.d
 	picture = GFX_World_event.4_event
 	is_triggered_only = yes
-	
+
 	option = {
 		name = World_event.4.a
-    } 
+	}
 }

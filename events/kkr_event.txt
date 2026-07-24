@@ -1,15 +1,17 @@
-add_namespace = kkr_event     
+# 本文件事件直接修改玖玖瑠好感/研究源值；修改后统一刷新派生动态修正，
+# 研究完成则由带防重复 flag 的 scripted effect 判定。
+add_namespace = kkr_event
 
-country_event= {        
+country_event= {
     id = kkr_event.1    #初见
-    picture = GFX_kkr_event1	
+    picture = GFX_kkr_event1
     title = kkr_event.1.t
-    desc = kkr_event.1.d	
+    desc = kkr_event.1.d
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = kkr_event.1.a	
+        name = kkr_event.1.a
         country_event = { id = kkr_event.2 days = 14 }
         custom_effect_tooltip = get_kukuru_general
         meta_effect = {
@@ -22,8 +24,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\kukuru1.png"
-                            small = "gfx\leader\kukuru1_1.png"
+                            large = "gfx/leader/kukuru1.png"
+                            small = "gfx/leader/kukuru1_1.png"
                         }
                     }
                     allowed_civil_war = {
@@ -33,7 +35,7 @@ country_event= {
                         traits = {
                             brilliant_strategist
                             career_officer
-                            bearer_of_artillery		
+                            bearer_of_artillery
                             infantry_officer
                             cavalry_officer
                             armor_officer
@@ -55,22 +57,23 @@ country_event= {
 
 country_event= {        #申请试验
     id = kkr_event.2
-    picture = GFX_kkr_event2	
+    picture = GFX_kkr_event2
     title = kkr_event.2.t
-    desc = kkr_event.2.d	
+    desc = kkr_event.2.d
     is_triggered_only = yes
     trigger = {
         not = { has_country_flag = kkr_is_preparing_research }
     }
 
     option = {
-        name = kkr_event.2.a	
+        name = kkr_event.2.a
         custom_effect_tooltip = get_4kkr_scis
         set_country_flag = kkr_is_preparing_research
         add_to_variable = {
             kkr_favor = 5
             tooltip = kkr_favor_gain
         }
+        kkr_refresh_favor_outputs = yes
         unlock_decision_tooltip = kkr_research_4
         custom_effect_tooltip = you_must_click_kkr_prepare_decision
         meta_effect = {
@@ -83,12 +86,12 @@ country_event= {        #申请试验
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\kukuru2.png"
-                            small = "gfx\leader\kukuru2_1.png"
+                            large = "gfx/leader/kukuru2.png"
+                            small = "gfx/leader/kukuru2_1.png"
                         }
                     }
                     scientist = {
-                        priority = 1000
+                        # priority = 1000 # 当前 scientist 定义不支持该字段，原代码不会生效
                         traits = {
                             kkr_scientist_trait
                         }
@@ -107,12 +110,12 @@ country_event= {        #申请试验
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\kukuru2.png"
-                            small = "gfx\leader\kukuru2_1.png"
+                            large = "gfx/leader/kukuru2.png"
+                            small = "gfx/leader/kukuru2_1.png"
                         }
                     }
                     scientist = {
-                        priority = 1000
+                        # priority = 1000 # 当前 scientist 定义不支持该字段，原代码不会生效
                         traits = {
                             kkr_scientist_trait
                         }
@@ -131,12 +134,12 @@ country_event= {        #申请试验
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\kukuru2.png"
-                            small = "gfx\leader\kukuru2_1.png"
+                            large = "gfx/leader/kukuru2.png"
+                            small = "gfx/leader/kukuru2_1.png"
                         }
                     }
                     scientist = {
-                        priority = 1000
+                        # priority = 1000 # 当前 scientist 定义不支持该字段，原代码不会生效
                         traits = {
                             kkr_scientist_trait
                         }
@@ -155,12 +158,12 @@ country_event= {        #申请试验
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\kukuru2.png"
-                            small = "gfx\leader\kukuru2_1.png"
+                            large = "gfx/leader/kukuru2.png"
+                            small = "gfx/leader/kukuru2_1.png"
                         }
                     }
                     scientist = {
-                        priority = 1000
+                        # priority = 1000 # 当前 scientist 定义不支持该字段，原代码不会生效
                         traits = {
                             kkr_scientist_trait
                         }
@@ -173,26 +176,26 @@ country_event= {        #申请试验
                     }
                 }
             }
-        }    
+        }
     }
     option = {
-        name = kkr_event.2.b	
+        name = kkr_event.2.b
         custom_effect_tooltip = refuse_kkr_sci
         country_event = { id = kkr_event.2 days = 30 }
-        
+
     }
 }
 
 country_event= {        #准备完成
     id = kkr_event.3
-    picture = GFX_kkr_event3	
+    picture = GFX_kkr_event3
     title = kkr_event.3.t
-    desc = kkr_event.3.d	
+    desc = kkr_event.3.d
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = kkr_event.3.a	
+        name = kkr_event.3.a
         clr_country_flag = kkr_is_preparing_research
         add_to_variable = {
             kkr_favor = 5
@@ -201,13 +204,14 @@ country_event= {        #准备完成
         set_variable = { kkr_research_progress = 0 } #研究进度
         set_variable = { weekly_kkr_research_progress = 5  }#初始每周为5
         set_country_flag = kkr_is_researching
+        kkr_refresh_favor_outputs = yes
     }
 }
 country_event= {        #素体准备完成
     id = kkr_event.4
-    picture = GFX_kkr_event4	
+    picture = GFX_kkr_event4
     title = kkr_event.4.t
-    desc = kkr_event.4.d	
+    desc = kkr_event.4.d
     fire_only_once = yes
     trigger = {
         has_country_flag = kkr_is_researching
@@ -215,25 +219,25 @@ country_event= {        #素体准备完成
             kkr_research_progress > 19
         }
     }
-   
+
 
     option = {
         name = kkr_event.4.a
-        custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt	
+        custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
         add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
         add_tech_bonus = {
-			bonus = 1
+            bonus = 1
             ahead_reduction = 2
-			uses = 2
-			category = industry
-		}
+            uses = 2
+            category = industry
+        }
     }
 }
 country_event= {        #AI重构准备完成
     id = kkr_event.5
-    picture = GFX_kkr_event5	
+    picture = GFX_kkr_event5
     title = kkr_event.5.t
-    desc = kkr_event.5.d	
+    desc = kkr_event.5.d
     fire_only_once = yes
     trigger = {
         has_country_flag = kkr_is_researching
@@ -243,31 +247,27 @@ country_event= {        #AI重构准备完成
     }
 
     option = {
-        name = kkr_event.5.a	
+        name = kkr_event.5.a
         add_to_variable = {
             kkr_favor = 5
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
         add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
         add_tech_bonus = {
-			bonus = 2
+            bonus = 2
             ahead_reduction = 5
-			uses = 5
-			category = electronics
-		}
+            uses = 5
+            category = electronics
+        }
     }
 }
 country_event= {        #进度停滞
     id = kkr_event.6
-    picture = GFX_kkr_event6	
+    picture = GFX_kkr_event6
     title = kkr_event.6.t
-    desc = kkr_event.6.d	
+    desc = kkr_event.6.d
     fire_only_once = yes
     trigger = {
         check_variable = {
@@ -277,29 +277,25 @@ country_event= {        #进度停滞
     }
 
     option = {
-        name = kkr_event.6.a	
- 
+        name = kkr_event.6.a
+
         add_to_variable = {
             kkr_favor = 6
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         set_variable = { weekly_kkr_research_progress = 0 }#初始每周为5
         set_country_flag = kkr_research_stop
         unlock_decision_tooltip = kkr_appointment_test  #约会的尝试
         custom_effect_tooltip = kkr_research_progress_stop #研究停滞
-        
+
     }
 }
 country_event= {        #约会
     id = kkr_event.7
-    picture = GFX_kkr_event7	
+    picture = GFX_kkr_event7
     title = kkr_event.7.t
-    desc = kkr_event.7.d	
+    desc = kkr_event.7.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -307,17 +303,13 @@ country_event= {        #约会
     }
 
     option = {
-        name = kkr_event.7.a	
- 
+        name = kkr_event.7.a
+
         add_to_variable = {
             kkr_favor = 10
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         hidden_effect = {
             country_event = { id = kkr_event.8 days = 20 }
         }
@@ -325,9 +317,9 @@ country_event= {        #约会
 }
 country_event= {        #第一次尝试
     id = kkr_event.8
-    picture = GFX_kkr_event8	
+    picture = GFX_kkr_event8
     title = kkr_event.8.t
-    desc = kkr_event.8.d	
+    desc = kkr_event.8.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -335,17 +327,13 @@ country_event= {        #第一次尝试
     }
 
     option = {
-        name = kkr_event.8.a	
- 
+        name = kkr_event.8.a
+
         add_to_variable = {
             kkr_favor = 5
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         hidden_effect = {
             country_event = { id = kkr_event.9 days = 15 }
         }
@@ -353,9 +341,9 @@ country_event= {        #第一次尝试
 }
 country_event= {        #学习奇怪的知识
     id = kkr_event.9
-    picture = GFX_kkr_event9	
+    picture = GFX_kkr_event9
     title = kkr_event.9.t
-    desc = kkr_event.9.d	
+    desc = kkr_event.9.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -363,25 +351,21 @@ country_event= {        #学习奇怪的知识
     }
 
     option = {
-        name = kkr_event.9.a	
- 
+        name = kkr_event.9.a
+
         add_to_variable = {
             kkr_favor = 5
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         country_event = { id = kkr_event.10 days = 15 }
     }
 }
 country_event= {        #再次尝试
     id = kkr_event.10
-    picture = GFX_kkr_event10	
+    picture = GFX_kkr_event10
     title = kkr_event.10.t
-    desc = kkr_event.10.d	
+    desc = kkr_event.10.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -389,25 +373,21 @@ country_event= {        #再次尝试
     }
 
     option = {
-        name = kkr_event.10.a	
+        name = kkr_event.10.a
         add_to_variable = {
             kkr_favor = 20
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         unlock_decision_tooltip = kkr_first_travel  #旅游
         set_country_flag = kkr_first_travel
     }
 }
 country_event= {        #第一次旅游
     id = kkr_event.11
-    picture = GFX_kkr_event11	
+    picture = GFX_kkr_event11
     title = kkr_event.11.t
-    desc = kkr_event.11.d	
+    desc = kkr_event.11.d
     fire_only_once = yes
     is_triggered_only = yes
     trigger = {
@@ -415,19 +395,20 @@ country_event= {        #第一次旅游
     }
 
     option = {
-        name = kkr_event.11.a	
+        name = kkr_event.11.a
         set_variable = {
             kkr_favor = 100
         }
+        kkr_refresh_favor_outputs = yes
         country_event = { id = kkr_event.12 days = 14 }
     }
 }
 
 country_event= {        #仓库中的告白
     id = kkr_event.12
-    picture = GFX_kkr_event12	
+    picture = GFX_kkr_event12
     title = kkr_event.12.t
-    desc = kkr_event.12.d	
+    desc = kkr_event.12.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -435,7 +416,7 @@ country_event= {        #仓库中的告白
     }
 
     option = {
-        name = kkr_event.12.a	
+        name = kkr_event.12.a
         set_variable = {
             max_kkr_favor = 150
             tooltip = max_kkr_favor_gain_tt
@@ -444,11 +425,7 @@ country_event= {        #仓库中的告白
             kkr_favor = 15
             tooltip = kkr_favor_gain
         }
-        clamp_variable = {		#范围
-            var = kkr_favor
-            min = 0
-            max = max_kkr_favor
-        }
+        kkr_refresh_favor_outputs = yes
         add_to_variable = { weekly_kkr_research_progress = 3 tooltip = weekly_kkr_research_progress_gain }#初始每周为5
         clr_country_flag = kkr_research_stop
     }
@@ -456,9 +433,9 @@ country_event= {        #仓库中的告白
 
 country_event= {        #完成研究
     id = kkr_event.13
-    picture = GFX_kkr_event13	
+    picture = GFX_kkr_event13
     title = kkr_event.13.t
-    desc = kkr_event.13.d	
+    desc = kkr_event.13.d
     is_triggered_only = yes
     fire_only_once = yes
     trigger = {
@@ -466,7 +443,7 @@ country_event= {        #完成研究
     }
 
     option = {
-        name = kkr_event.13.a	
+        name = kkr_event.13.a
         clr_country_flag = kkr_is_researching
         set_variable = {
             kkr_mood = 100
@@ -475,7 +452,7 @@ country_event= {        #完成研究
         hidden_effect = {
             country_event = { id = kkr_event.14 days = 30 }
         }
-        
+
     }
 }
 
@@ -492,7 +469,7 @@ country_event= {        #结婚
     }
 
     option = {
-        name = kkr_event.101.a	
+        name = kkr_event.101.a
     }
 }
 

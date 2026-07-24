@@ -1,50 +1,50 @@
-add_namespace = yz_721_scientist_event     
+add_namespace = yz_721_scientist_event
 
-country_event= {       
-    id = yz_721_scientist_event.1
+country_event= {
+	id = yz_721_scientist_event.1
     #picture = 
-    title = yz_721_scientist_event.1.t
-    desc = yz_721_scientist_event.1.d	
-    is_triggered_only = yes
-    option = {
-        name = yz_721_scientist_event.1.a	
+	title = yz_721_scientist_event.1.t
+	desc = yz_721_scientist_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = yz_721_scientist_event.1.a
 		add_breakthrough_points = {
 			specialization = specialization_land
 			value = 1
 		}
-   	}
-   
-    option = {
-        name = yz_721_scientist_event.1.b
+	}
+
+	option = {
+		name = yz_721_scientist_event.1.b
 		add_breakthrough_points = {
 			specialization = specialization_nuclear
 			value = 1
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.1.c
+		name = yz_721_scientist_event.1.c
 		add_breakthrough_points = {
 			specialization = specialization_air
 			value = 1
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.1.e
+		name = yz_721_scientist_event.1.e
 		add_breakthrough_points = {
 			specialization = specialization_naval
 			value = 1
 		}
-    }
+	}
 }
 
-country_event= {       
-    id = yz_721_scientist_event.2
+country_event= {
+	id = yz_721_scientist_event.2
     #picture = 
-    title = yz_721_scientist_event.2.t
-    desc = yz_721_scientist_event.2.d	
-    is_triggered_only = yes
-    option = {
-        name = yz_721_scientist_event.2.a	
+	title = yz_721_scientist_event.2.t
+	desc = yz_721_scientist_event.2.d
+	is_triggered_only = yes
+	option = {
+		name = yz_721_scientist_event.2.a
 		random_owned_controlled_state = {
 			limit = {
 				can_construct_building = land_facility
@@ -53,10 +53,10 @@ country_event= {
 				land_facility = 1
 			}
 		}
-   	}
-   
-    option = {
-        name = yz_721_scientist_event.2.b
+	}
+
+	option = {
+		name = yz_721_scientist_event.2.b
 		random_owned_controlled_state = {
 			limit = {
 				can_construct_building = nuclear_facility
@@ -65,9 +65,9 @@ country_event= {
 				nuclear_facility = 1
 			}
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.2.c
+		name = yz_721_scientist_event.2.c
 		random_owned_controlled_state = {
 			limit = {
 				can_construct_building = air_facility
@@ -76,9 +76,9 @@ country_event= {
 				air_facility = 1
 			}
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.2.e
+		name = yz_721_scientist_event.2.e
 		random_owned_controlled_state = {
 			limit = {
 				can_construct_building = naval_facility
@@ -87,37 +87,37 @@ country_event= {
 				naval_facility = 1
 			}
 		}
-    }
+	}
 }
 
-country_event= {       
-    id = yz_721_scientist_event.3
+country_event= {
+	id = yz_721_scientist_event.3
     #picture = 
-    title = yz_721_scientist_event.3.t
-    desc = yz_721_scientist_event.3.d	
-    is_triggered_only = yes
+	title = yz_721_scientist_event.3.t
+	desc = yz_721_scientist_event.3.d
+	is_triggered_only = yes
 	trigger = {
 
 	}
-    option = {
-        name = yz_721_scientist_event.3.a	
+	option = {
+		name = yz_721_scientist_event.3.a
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
 			category = armor
 		}
-   	}
-   
-    option = {
-        name = yz_721_scientist_event.3.b
+	}
+
+	option = {
+		name = yz_721_scientist_event.3.b
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
 			category = artillery
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.3.c
+		name = yz_721_scientist_event.3.c
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
@@ -133,25 +133,25 @@ country_event= {
 			uses = 2
 			category = support_tech
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.3.e
+		name = yz_721_scientist_event.3.e
 		country_event = yz_721_scientist_event.4
-	
-    }
+
+	}
 }
 
-country_event= {       
-    id = yz_721_scientist_event.4
+country_event= {
+	id = yz_721_scientist_event.4
     #picture = 
-    title = yz_721_scientist_event.4.t
-    desc = yz_721_scientist_event.4.d	
-    is_triggered_only = yes
+	title = yz_721_scientist_event.4.t
+	desc = yz_721_scientist_event.4.d
+	is_triggered_only = yes
 	trigger = {
 
 	}
-    option = {
-        name = yz_721_scientist_event.4.a	
+	option = {
+		name = yz_721_scientist_event.4.a
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
@@ -162,28 +162,28 @@ country_event= {
 			uses = 2
 			category = naval_equipment
 		}
-   	}
-   
-    option = {
-        name = yz_721_scientist_event.4.b
+	}
+
+	option = {
+		name = yz_721_scientist_event.4.b
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
 			category = industry
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.4.c
+		name = yz_721_scientist_event.4.c
 		add_tech_bonus = {
 			bonus = 0.75
 			uses = 2
 			category = electronics
 		}
-    }
+	}
 	option = {
-        name = yz_721_scientist_event.4.e
+		name = yz_721_scientist_event.4.e
 		country_event = yz_721_scientist_event.3
-		
-    }
+
+	}
 }
 

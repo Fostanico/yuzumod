@@ -147,8 +147,8 @@ general_develpomen_decision_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Amane.png"
-                                small = "gfx\leader\Amane2.png"
+                                large = "gfx/leader/Amane.png"
+                                small = "gfx/leader/Amane2.png"
                             }
                         }
                         allowed_civil_war = {
@@ -359,18 +359,31 @@ general_develpomen_decision_category = {
         custom_cost_text = decision_cost_CP50_and_750_yzmoney
         days_remove = 15
         visible = {
-            has_country_flag = Airi_Crystal_Support_Company
-            not = { has_country_flag = yz_bad_end }
+            # The required vanilla computing and signal technologies do not exist in Millennium Dawn.
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = Airi_Crystal_Support_Company
+                not = { has_country_flag = yz_bad_end }
+            }
         }
         modifier = {
             consumer_goods_factor = 0.05
             research_speed_factor = -0.1
         }
         available = {
-            has_country_flag = set_YRI
-            has_country_flag = yz_mio_1
-            has_tech = improved_computing_machine
-            has_tech = tech_signal_company
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_country_flag = yz_mio_1
+                has_tech = improved_computing_machine
+                has_tech = tech_signal_company
+            }
         }
 
         complete_effect = {
@@ -1032,11 +1045,10 @@ general_develpomen_decision_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Rio.png"
-                                small = "gfx\leader\Rio2.png"
+                                large = "gfx/leader/Rio.png"
+                                small = "gfx/leader/Rio2.png"
                             }
                         }
-                        set_character_flag = yz_government_flag
                         allowed_civil_war = {
                             is_ai = no
                         }
@@ -1047,6 +1059,15 @@ general_develpomen_decision_category = {
                             traits = { trait_sub_rio }
                         }
                     }
+                }
+            }
+            hidden_effect = {
+                every_character = {
+                    limit = {
+                        has_trait = trait_sub_rio
+                        NOT = { has_character_flag = yz_government_flag }
+                    }
+                    set_character_flag = yz_government_flag
                 }
             }
         }
@@ -1098,7 +1119,7 @@ general_develpomen_decision_category = {
 
         remove_effect = {
             set_country_flag = masaki_prepared
-            tooltip = masaki_can_build_supply_nodes
+            custom_effect_tooltip = masaki_can_build_supply_nodes
         }
         remove_trigger = {
             is_debug = yes
@@ -1284,11 +1305,18 @@ general_develpomen_decision_category = {
         days_remove = 14
 
         visible = {
-            or = {
-                has_country_flag = qiyong_youzi_2
-                has_country_flag = qiyong_youzi_3
+            # Keep the vanilla engineer technology path out of Millennium Dawn games.
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
             }
-            not = { has_country_flag = yz_bad_end }
+            else = {
+                or = {
+                    has_country_flag = qiyong_youzi_2
+                    has_country_flag = qiyong_youzi_3
+                }
+                not = { has_country_flag = yz_bad_end }
+            }
         }
 
         modifier = {
@@ -1297,10 +1325,16 @@ general_develpomen_decision_category = {
         }
 
         available = {
-            has_tech = tech_engineers2
-            command_power > 29.99
-            has_army_experience > 44.99
-            industrial_complex > 10
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = tech_engineers2
+                command_power > 29.99
+                has_army_experience > 44.99
+                industrial_complex > 10
+            }
         }
 
         complete_effect = {
@@ -1317,6 +1351,7 @@ general_develpomen_decision_category = {
 
 
 
+    # 原版制造商只在未检测到 Millennium Dawn 时显示；不得改回年份分流。
     YZ_MIO_1_get = {		#柚子步兵武器制造局
         priority = 99
         fire_only_once = yes
@@ -1328,9 +1363,10 @@ general_develpomen_decision_category = {
                 has_country_flag = qiyong_youzi_2
                 has_country_flag = qiyong_youzi_3
             }
+            NOT = { has_global_flag = yz_md_startup_detected }
             not = { has_country_flag = yz_mio_1 }
             not = { has_country_flag = yz_bad_end }
-            has_army_experience > 14.99
+            #has_army_experience > 14.99
         }
 
         modifier = {
@@ -1370,7 +1406,7 @@ general_develpomen_decision_category = {
             }
             not = { has_country_flag = yz_mio_2 }
             not = { has_country_flag = yz_bad_end }
-            has_navy_experience > 14.99
+            #has_navy_experience > 14.99
         }
 
         modifier = {
@@ -1408,10 +1444,10 @@ general_develpomen_decision_category = {
                 has_country_flag = qiyong_youzi_2
                 has_country_flag = qiyong_youzi_3
             }
-            date < 2000.1.1
+            NOT = { has_global_flag = yz_md_startup_detected }
             not = { has_country_flag = yz_mio_3 }
             not = { has_country_flag = yz_bad_end }
-            has_navy_experience > 14.99
+            #has_navy_experience > 14.99
         }
 
         modifier = {
@@ -1449,10 +1485,10 @@ general_develpomen_decision_category = {
                 has_country_flag = qiyong_youzi_2
                 has_country_flag = qiyong_youzi_3
             }
-            date < 2000.1.1
+            NOT = { has_global_flag = yz_md_startup_detected }
             not = { has_country_flag = yz_mio_4 }
             not = { has_country_flag = yz_bad_end }
-            has_air_experience > 14.99
+            #has_air_experience > 14.99
         }
 
         modifier = {
@@ -1490,10 +1526,10 @@ general_develpomen_decision_category = {
                 has_country_flag = qiyong_youzi_2
                 has_country_flag = qiyong_youzi_3
             }
-            date < 2000.1.1
+            NOT = { has_global_flag = yz_md_startup_detected }
             not = { has_country_flag = yz_mio_5 }
             not = { has_country_flag = yz_bad_end }
-            has_army_experience > 14.99
+            #has_army_experience > 14.99
         }
 
         modifier = {
@@ -1563,6 +1599,8 @@ general_develpomen_decision_category = {
                 min = -100
                 max = 200
             }
+            # love_depth 已在上方改变；立即同步动态修正，周入口仅作兜底。
+            yz_refresh_love_modifier_values = yes
             add_command_power = -30
             random_army_leader = {
                 limit = {
@@ -1642,7 +1680,7 @@ general_develpomen_decision_category = {
             industrial_capacity_dockyard = 0.05
             production_speed_buildings_factor = 0.1
             political_power_gain = 0.1
-            political_power_gain_factor = 0.05
+            political_power_factor = 0.05
         }
         complete_effect = {
             hidden_effect = {
@@ -1777,7 +1815,7 @@ general_develpomen_decision_category = {
             industrial_capacity_dockyard = 0.05
             production_speed_buildings_factor = 0.1
             political_power_gain = 0.1
-            political_power_gain_factor = 0.05
+            political_power_factor = 0.05
 
         }
         complete_effect = {
@@ -1924,7 +1962,7 @@ general_develpomen_decision_category = {
             industrial_capacity_dockyard = 0.05
             production_speed_buildings_factor = 0.1
             political_power_gain = 0.1
-            political_power_gain_factor = 0.05
+            political_power_factor = 0.05
 
         }
         complete_effect = {
@@ -2047,8 +2085,8 @@ general_develpomen_decision_category = {
             is_ai = no
             OR = {
                 AND = {
-                    start_date > 1935.12.31
-                    start_date < 1949.1.1
+                    has_start_date > 1935.12.31
+                    has_start_date < 1949.1.1
                 }
             }
         }
@@ -2057,150 +2095,151 @@ general_develpomen_decision_category = {
                 elephantry = 1
                 popup = no
             }
-            name = "Gajhastas"
-            is_locked = no
-            #division_names_group = NAMELIST_ID # optional
-            priority = 1 # optional
-            template_counter = 108 # optional
-            regiments = {
-                elephantry = { x = 0 y = 0 }
-                elephantry = { x = 0 y = 1 }
-                elephantry = { x = 0 y = 2 }
-                elephantry = { x = 0 y = 3 }
-                elephantry = { x = 1 y = 0 }
-                elephantry = { x = 1 y = 1 }
-                elephantry = { x = 1 y = 2 }
-                elephantry = { x = 1 y = 3 }
+            division_template = {
+                name = "Gajhastas"
+                is_locked = no
+                #division_names_group = NAMELIST_ID # optional
+                priority = 1 # optional
+                template_counter = 108 # optional
+                regiments = {
+                    elephantry = { x = 0 y = 0 }
+                    elephantry = { x = 0 y = 1 }
+                    elephantry = { x = 0 y = 2 }
+                    elephantry = { x = 0 y = 3 }
+                    elephantry = { x = 1 y = 0 }
+                    elephantry = { x = 1 y = 1 }
+                    elephantry = { x = 1 y = 2 }
+                    elephantry = { x = 1 y = 3 }
+                }
             }
             #support = {
             #    artillery = { x = 0 y = 0 }
             #}
         }
     }
-anuo_s_revenge = {    #阿诺的复仇
-    icon = GFX_traits_power_of_fox_fairy
-    cost = 0
-    days_remove = 90
-    visible = {
-        has_country_flag = have_ruri
-        any_army_leader = {
-            has_trait = wounded
-            has_trait = ruri_haa
+    anuo_s_revenge = {    #阿诺的复仇
+        icon = GFX_traits_power_of_fox_fairy
+        cost = 0
+        days_remove = 90
+        visible = {
+            has_country_flag = have_ruri
+            any_army_leader = {
+                has_trait = wounded
+                has_trait = ruri_haa
+            }
+        }
+        modifier = {
+            army_attack_factor = 100
+            army_defence_factor = 100
+            army_org = 100
+            army_strength_factor = 100
+            army_core_attack_factor = 100
+            army_core_defence_factor = 100
+            army_speed_factor = 10
+            max_planning = 100
+            max_planning_factor = 10
+            planning_speed = 100
+            army_org_regain = 100
         }
     }
-    modifier = {
-        army_attack_factor = 100
-        army_defence_factor = 100
-        army_org = 100
-        army_strength_factor = 100
-        army_core_attack_factor = 100
-        army_core_defence_factor = 100
-        army_speed_factor = 10
-        org_gain_factor = 100
-        max_planning = 100
-        max_planning_factor = 10
-        planning_speed = 100
-        army_org_regain = 100
-    }
-}
-revenge = {    #复仇决议，给被打伤的老婆报仇
-    icon = GFX_traits_married_trait
-    cost = 0
-    days_remove = 90
-    visible = {
-        any_army_leader = {
-            has_trait = wounded
-            has_trait = married_trait
+    revenge = {    #复仇决议，给被打伤的老婆报仇
+        icon = GFX_traits_married_trait
+        cost = 0
+        days_remove = 90
+        visible = {
+            any_army_leader = {
+                has_trait = wounded
+                has_trait = married_trait
+            }
+        }
+        modifier = {
+            army_attack_factor = 0.2
+            army_defence_factor = 0.2
+            army_org = 10
+            army_strength_factor = 0.2
+            army_core_attack_factor = 0.2
+            army_core_defence_factor = 0.2
+            army_speed_factor = 0.1
+            army_org_regain = 0.2
+            max_planning = 0.2
+            max_planning_factor = 0.1
+            planning_speed = 0.2
         }
     }
-    modifier = {
-        army_attack_factor = 0.2
-        army_defence_factor = 0.2
-        army_org = 10
-        army_strength_factor = 0.2
-        army_core_attack_factor = 0.2
-        army_core_defence_factor = 0.2
-        army_speed_factor = 0.1
-        army_org_regain = 0.2
-        max_planning = 0.2
-        max_planning_factor = 0.1
-        planning_speed = 0.2
-    }
-}
 
-open_industry_money = {
-    priority = 0
+    open_industry_money = {
+        priority = 0
 
-    visible = {
-        has_country_flag = qiyong_youzi_2
-        has_country_flag = qiyong_youzi_3
-        has_country_flag = had_chosen_haogan
-        not = { has_country_flag = open_industry_money }
+        visible = {
+            has_country_flag = qiyong_youzi_2
+            has_country_flag = qiyong_youzi_3
+            has_country_flag = had_chosen_haogan
+            not = { has_country_flag = open_industry_money }
+        }
+
+        complete_effect = {
+            set_country_flag = open_industry_money
+        }
     }
 
-    complete_effect = {
-        set_country_flag = open_industry_money
-    }
-}
-
-bring_maya_back_to_world = {
-    priority = 0
-    visible = {
-        has_country_flag = have_takashiro_maya
-    }
-    available = {
-        has_country_flag = have_kakka_nor
-        has_country_flag = have_misaka_makoto
-    }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-        custom_effect_tooltip = maya_back_to_world
+    bring_maya_back_to_world = {
+        priority = 0
+        visible = {
+            has_country_flag = have_takashiro_maya
+        }
+        available = {
+            has_country_flag = have_kakka_nor
+            has_country_flag = have_misaka_makoto
+        }
+        cost = 50
+        fire_only_once = yes
+        complete_effect = {
+            custom_effect_tooltip = maya_back_to_world
         #country_event = start_event.47994554
-        hidden_effect = {
-            random_army_leader = {
-                limit = {
-                    has_trait = ghost_girl_in_mirror
-                }
-                remove_trait = {
-                    trait = ghost_girl_in_mirror
-                }
-                add_trait = {
-                    trait = common_girl_in_real_world
+            hidden_effect = {
+                random_army_leader = {
+                    limit = {
+                        has_trait = ghost_girl_in_mirror
+                    }
+                    remove_trait = {
+                        trait = ghost_girl_in_mirror
+                    }
+                    add_trait = {
+                        trait = common_girl_in_real_world
+                    }
                 }
             }
         }
     }
-}
-bring_hotaru_back_to_world = {
-    priority = 0
-    visible = {
-        has_country_flag = have_hotaru
-    }
-    available = {
-        has_country_flag = have_kakka_nor
-        has_country_flag = have_misaka_makoto
-    }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-        custom_effect_tooltip = hotaru_back_to_world
+    bring_hotaru_back_to_world = {
+        priority = 0
+        visible = {
+            has_country_flag = have_hotaru
+        }
+        available = {
+            has_country_flag = have_kakka_nor
+            has_country_flag = have_misaka_makoto
+        }
+        cost = 50
+        fire_only_once = yes
+        complete_effect = {
+            custom_effect_tooltip = hotaru_back_to_world
         #country_event = start_event.3659153
-        hidden_effect = {
-            random_army_leader = {
-                limit = {
-                    has_trait = hotaru_in_april
-                }
-                remove_trait = {
-                    trait = hotaru_in_april
-                }
-                add_trait = {
-                    trait = flower_in_may
+            hidden_effect = {
+                random_army_leader = {
+                    limit = {
+                        has_trait = hotaru_in_april
+                    }
+                    remove_trait = {
+                        trait = hotaru_in_april
+                    }
+                    add_trait = {
+                        trait = flower_in_may
+                    }
                 }
             }
         }
     }
-}
 }
 
 Roka_Koharu_decision_category = {
@@ -2245,6 +2284,8 @@ Roka_Koharu_decision_category = {
                 min = -100
                 max = 200
             }
+            # love_depth 已在上方改变；立即同步动态修正，周入口仅作兜底。
+            yz_refresh_love_modifier_values = yes
             add_to_variable = {
                 yz_money = 300
                 tooltip = add_to_yz_money

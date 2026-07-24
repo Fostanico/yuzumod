@@ -1,3 +1,5 @@
+# 玖玖瑠好感的源值由本文件决议修改，所有派生修正、clamp 与自动服装统一由
+# kkr_refresh_favor_outputs 负责；调用必须紧跟 kkr_favor/max_kkr_favor 写入。
 Kukuru_coming_decision_category = {
 	get_kukuru = { #获得玖玖瑠
 		icon = GFX_kkr_icon_3
@@ -54,49 +56,50 @@ Kukuru_coming_decision_category = {
 		}
 		remove_effect = {
 			set_country_flag = get_kkr
+			kkr_refresh_favor_outputs = yes
 			add_dynamic_modifier = {
 				modifier = Kukuru_dynamic_modifier
 			}
 			force_update_dynamic_modifier = yes
 			meta_effect = {
-                text = {
+				text = {
 
-                    generate_character = {
-                        token_base = Kukuru
-                        name = "夜刀玖玖瑠"
+					generate_character = {
+						token_base = Kukuru
+						name = "夜刀玖玖瑠"
 						can_be_captured = no
-                        gender = female
-                        nationality = JAP
-                        portraits = {
-                            civilian = {
-                                large = "gfx\leader\kukuru1.png"
-                                small = "gfx\leader\kukuru1_1.png"
-                            }
-                        }
-                        allowed_civil_war = {
-                            is_ai = no
-                        }
-                        corps_commander = {
-                            traits = {
+						gender = female
+						nationality = JAP
+						portraits = {
+							civilian = {
+								large = "gfx/leader/kukuru1.png"
+								small = "gfx/leader/kukuru1_1.png"
+							}
+						}
+						allowed_civil_war = {
+							is_ai = no
+						}
+						corps_commander = {
+							traits = {
 								brilliant_strategist
 								career_officer
-								bearer_of_artillery		
+								bearer_of_artillery
 								infantry_officer
 								cavalry_officer
 								armor_officer
 								kukuru_1_trait
 								kukuru_2_trait
 								kukuru_3_trait
-                            }
-                            skill = 1
-                            attack_skill = 9
-                            defense_skill = 9
-                            planning_skill = 6
-                            logistics_skill = 1
-                        }
-                    }
-                }
-            }
+							}
+							skill = 1
+							attack_skill = 9
+							defense_skill = 9
+							planning_skill = 6
+							logistics_skill = 1
+						}
+					}
+				}
+			}
 			country_event = { id = kkr_event.1 days = 0 }
 		}
 	}
@@ -118,15 +121,11 @@ Kukuru_main_decision_category = {
 
 		complete_effect = {
 			add_to_variable = {	kkr_favor = 5 tooltip = kkr_favor_gain }
-			clamp_variable = {		#范围
-				var = kkr_favor
-				min = 0
-				max = max_kkr_favor
-			}
+			kkr_refresh_favor_outputs = yes
 			set_country_flag = kkr_play_games_together
 			set_country_flag = is_staying_with_kukuru
 		}
-		
+
 		modifier = {
 			political_power_factor = 0.15
 		}
@@ -158,11 +157,7 @@ Kukuru_main_decision_category = {
 		}
 		complete_effect = {
 			add_to_variable = { kkr_favor = 5 tooltip = kkr_favor_gain }
-			clamp_variable = {		#范围
-				var = kkr_favor
-				min = 0
-				max = max_kkr_favor
-			}
+			kkr_refresh_favor_outputs = yes
 			set_country_flag = kkr_taste_food
 			set_country_flag = is_staying_with_kukuru
 		}
@@ -173,7 +168,7 @@ Kukuru_main_decision_category = {
 	}
 
 	kkr_appointment = {		#约会
-		icon = GFX_kkr_icon_6 
+		icon = GFX_kkr_icon_6
 		days_remove = 75
 		cost = 10
 
@@ -197,14 +192,10 @@ Kukuru_main_decision_category = {
 		}
 		complete_effect = {
 			add_to_variable = { kkr_favor = 10 tooltip = kkr_favor_gain }
-			clamp_variable = {		#范围
-				var = kkr_favor
-				min = 0
-				max = max_kkr_favor
-			}
+			kkr_refresh_favor_outputs = yes
 			set_country_flag = kkr_appointment
 			set_country_flag = is_staying_with_kukuru
-		} 
+		}
 		remove_effect = {
 			clr_country_flag = kkr_appointment
 			clr_country_flag = is_staying_with_kukuru
@@ -226,11 +217,7 @@ Kukuru_main_decision_category = {
 		}
 		complete_effect = {
 			add_to_variable = { kkr_favor = 15 tooltip = kkr_favor_gain }
-			clamp_variable = {		#范围
-				var = kkr_favor
-				min = 0
-				max = max_kkr_favor
-			}
+			kkr_refresh_favor_outputs = yes
 			set_country_flag = kkr_travel
 			set_country_flag = is_staying_with_kukuru
 		}
@@ -273,14 +260,10 @@ Kukuru_main_decision_category = {
 				max_kkr_favor = 200
 				tooltip = max_kkr_favor_gain_tt
 			}
-			clamp_variable = {		#范围
-				var = kkr_favor
-				min = 0
-				max = max_kkr_favor
-			}
+			kkr_refresh_favor_outputs = yes
 		}
 	}
-	
+
 	kkr_leader = {
 		icon = GFX_kkr_icon_6
 		fire_only_once = no
@@ -299,7 +282,7 @@ Kukuru_main_decision_category = {
 				}
 				create_country_leader = {
 					name = "夜刀 玖玖瑠"
-					picture = "gfx\leader\kukuru_leader.png"
+					picture = "gfx/leader/kukuru_leader.png"
 					desc = kkr_leader_desc
 					expire = "2095.1.1"
 					ideology = conservatism
@@ -316,7 +299,7 @@ Kukuru_main_decision_category = {
 				}
 				create_country_leader = {
 					name = "夜刀 玖玖瑠"
-					picture = "gfx\leader\kukuru_leader.png"
+					picture = "gfx/leader/kukuru_leader.png"
 					desc = kkr_leader_desc
 					expire = "2095.1.1"
 					ideology = fascism_ideology
@@ -333,7 +316,7 @@ Kukuru_main_decision_category = {
 				}
 				create_country_leader = {
 					name = "夜刀 玖玖瑠"
-					picture = "gfx\leader\kukuru_leader.png"
+					picture = "gfx/leader/kukuru_leader.png"
 					desc = kkr_leader_desc
 					expire = "2095.1.1"
 					ideology = despotism
@@ -350,7 +333,7 @@ Kukuru_main_decision_category = {
 				}
 				create_country_leader = {
 					name = "夜刀 玖玖瑠"
-					picture = "gfx\leader\kukuru_leader.png"
+					picture = "gfx/leader/kukuru_leader.png"
 					desc = kkr_leader_desc
 					expire = "2095.1.1"
 					ideology = marxism
@@ -362,16 +345,16 @@ Kukuru_main_decision_category = {
 				}
 			}
 		}
-		
+
 
 		remove_effect = {
-			
+
 		}
 	}
 }
-	
-	
-	
+
+
+
 
 Kukuru_debug_decision_category = {
 	add_kkr_favor = {
@@ -380,6 +363,7 @@ Kukuru_debug_decision_category = {
 				kkr_favor = 50
 				tooltip = kkr_favor_gain
 			}
+			kkr_refresh_favor_outputs = yes
 		}
 	}
 
@@ -394,11 +378,11 @@ Kukuru_debug_decision_category = {
 
 		complete_effect = {
 			set_country_flag = kkr_scientist
-			
+
 		}
 
 		remove_effect = {
-			
+
 		}
 	}
 
@@ -411,24 +395,24 @@ Kukuru_debug_decision_category = {
 		complete_effect = {
 			set_country_flag = kkr_advisor_sci
 			meta_effect = {
-                text = {
+				text = {
 
-                    generate_character = {
-                        token_base = Kukuru_advisor_1
-                        name = "夜刀玖玖瑠"
-                        gender = female
-                        nationality = JAP
-                        portraits = {
-                            civilian = {
-                                large = "gfx\leader\kukuru2.png"
-                                small = "gfx\leader\kukuru2_1.png"
-                            }
-                        }
-                        allowed_civil_war = {
-                            is_ai = no
-                        }
-                        advisor = {  
-							priority = 1000
+					generate_character = {
+						token_base = Kukuru_advisor_1
+						name = "夜刀玖玖瑠"
+						gender = female
+						nationality = JAP
+						portraits = {
+							civilian = {
+								large = "gfx/leader/kukuru2.png"
+								small = "gfx/leader/kukuru2_1.png"
+							}
+						}
+						allowed_civil_war = {
+							is_ai = no
+						}
+						advisor = {
+							# priority = 1000 # 当前 advisor 定义不支持该字段，原代码不会生效
 							slot = political_advisor
 							cost = 50
 							idea_token = Kukuru_advisor_1
@@ -442,16 +426,16 @@ Kukuru_debug_decision_category = {
 								factor = 0
 							}
 						}
-                    }
-                }
-            }
+					}
+				}
+			}
 		}
 
 		remove_effect = {
-			
+
 		}
 	}
-	
+
 	use_kkr_advisor_eco = {	#经济顾问
 		#icon = GFX_kkr_icon_1
 		fire_only_once = no
@@ -461,24 +445,24 @@ Kukuru_debug_decision_category = {
 		complete_effect = {
 			set_country_flag = kkr_advisor_eco
 			meta_effect = {
-                text = {
+				text = {
 
-                    generate_character = {
-                        token_base = Kukuru_advisor_2
-                        name = "夜刀玖玖瑠"
-                        gender = female
-                        nationality = JAP
-                        portraits = {
-                            civilian = {
-                                large = "gfx\leader\kukuru1.png"
-                                small = "gfx\leader\kukuru1_1.png"
-                            }
-                        }
-                        allowed_civil_war = {
-                            is_ai = no
-                        }
-                        advisor = {  
-							priority = 1000
+					generate_character = {
+						token_base = Kukuru_advisor_2
+						name = "夜刀玖玖瑠"
+						gender = female
+						nationality = JAP
+						portraits = {
+							civilian = {
+								large = "gfx/leader/kukuru1.png"
+								small = "gfx/leader/kukuru1_1.png"
+							}
+						}
+						allowed_civil_war = {
+							is_ai = no
+						}
+						advisor = {
+							# priority = 1000 # 当前 advisor 定义不支持该字段，原代码不会生效
 							slot = political_advisor
 							cost = 50
 							idea_token = Kukuru_advisor_2
@@ -487,13 +471,13 @@ Kukuru_debug_decision_category = {
 								factor = 0
 							}
 						}
-                    }
-                }
-            }
+					}
+				}
+			}
 		}
 
 		remove_effect = {
-			
+
 		}
 	}
 }

@@ -4,7 +4,7 @@ ideas = {        #huhu的奇思妙想，加的新工业企业
         #工业企业
         #超自然研究所
         super_nature_science_house = {
-            icon = GFX_idea_super_nature_science_house
+            picture = GFX_idea_super_nature_science_house
             cost = 150
             modifier = {
                 research_speed_factor = 0.25
@@ -15,7 +15,7 @@ ideas = {        #huhu的奇思妙想，加的新工业企业
                 local_resources_coal_factor = 0.3
                 special_project_speed_factor = 0.5
             }
-            traits = {多功能工业企业}
+            traits = { industrial_concern }
             research_bonus = {
                 armor_tech = 0.25
                 artillery_tech = 0.25

@@ -1,3 +1,5 @@
+# 长期投资事件会改变 basic_additional_yz_money_spend 与对应 idea。
+# 每个选项结束时重建显示账本；真实投资费用仍由唯一月结算入口扣除。
 add_namespace = yzbonds_event
 country_event = {
 	id = yzbonds_event.1
@@ -132,6 +134,7 @@ country_event = {
 			value = 500
 		}
 		add_ideas = yz_long_term_invest_in_construction
+		yz_recalculate_monthly_money_ledger = yes
 	}
 	option = {
 		name = yzbonds_event.3.b
@@ -139,6 +142,7 @@ country_event = {
 			var = basic_additional_yz_money_spend
 			value = 750
 		}
+		yz_recalculate_monthly_money_ledger = yes
 	}
 }
 country_event = {
@@ -154,6 +158,7 @@ country_event = {
 			value = 250
 		}
 		add_ideas = yz_long_term_invest_resource_extraction
+		yz_recalculate_monthly_money_ledger = yes
 	}
 	option = {
 		name = yzbonds_event.4.b
@@ -161,6 +166,7 @@ country_event = {
 			var = basic_additional_yz_money_spend
 			value = 500
 		}
+		yz_recalculate_monthly_money_ledger = yes
 	}
 }
 country_event = {
@@ -176,6 +182,7 @@ country_event = {
 			value = 250
 		}
 		add_ideas = yz_long_term_invest_in_research
+		yz_recalculate_monthly_money_ledger = yes
 	}
 	option = {
 		name = yzbonds_event.4.b
@@ -183,6 +190,7 @@ country_event = {
 			var = basic_additional_yz_money_spend
 			value = 500
 		}
+		yz_recalculate_monthly_money_ledger = yes
 	}
 }
 country_event = {
@@ -198,6 +206,7 @@ country_event = {
 			value = 500
 		}
 		add_ideas = yz_long_term_invest_in_industrialization
+		yz_recalculate_monthly_money_ledger = yes
 	}
 	option = {
 		name = yzbonds_event.6.b
@@ -205,5 +214,6 @@ country_event = {
 			var = basic_additional_yz_money_spend
 			value = 750
 		}
+		yz_recalculate_monthly_money_ledger = yes
 	}
 }

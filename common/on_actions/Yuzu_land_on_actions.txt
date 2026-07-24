@@ -1,110 +1,52 @@
+# 自动占领法按国家每周运行，并对受控非核心州只扫描一次。
+# 分支互斥：高抵抗优先；低抵抗再按州类别选择；20..40 保留现行占领法。
 on_actions = {
-	on_daily = {       #计算上次整合经过的时间
-		effect= {
-			if = {
-				limit = {
-					has_country_flag = change_puppt_to_yuzu_land
-			    }
-				add_to_variable = {
-					yuzu_form_yuzu_land_days = 1
-				}
-			}
-		}
-	}
-	on_weekly = {        #自动切换柚里的复仇式管理  
+	on_weekly = {        #每周统一检查并自动切换占领法
 		effect = {
 			if = {
 				limit = {
 					has_country_flag = now_auto_switch_occupation_law
 				}
-				ROOT = {
-					every_controlled_state = {
+				every_controlled_state = {
+					limit = {
+						NOT = { is_core_of = ROOT }
+					}
+
+					if = {
 						limit = {
-							set_temp_variable = { resistance_limit = 40 }
-							resistance > resistance_limit
-							#OR = {
-							#	has_state_category = rural
-							#	has_state_category = town
-							#	has_state_category = pastoral
-							#	has_state_category = large_town
-							#}
-							NOT = {
-								is_core_of = ROOT
-							}
+							resistance > 40
 						}
-						set_state_flag = can_use_yuri_style
-						clr_state_flag = can_use_hoori_style
-						clr_state_flag = can_use_washizu_style
 						set_occupation_law_where_available = yuri_s_Revenge_occupation
 					}
-				}
-			}
-		}
-	}
-	on_weekly = {        #自动切换穗织式管理   ——2025.3.12
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = now_auto_switch_occupation_law
-				}
-				ROOT = {
-					every_controlled_state = {
+					else_if = {
 						limit = {
-							#is_controlled_by = ROOT
-							set_temp_variable = { resistance_limit = 20 }
-							resistance < resistance_limit
+							resistance < 20
 							OR = {
 								has_state_category = rural
 								has_state_category = town
 								has_state_category = pastoral
 								has_state_category = large_town
-								has_state_category = enclave 
-                     			has_state_category = small_island 
-                      			has_state_category = tiny_island 
-                      			has_state_category = pastoral 
-							}
-							NOT = {
-								is_core_of = ROOT
+								has_state_category = enclave
+								has_state_category = small_island
+								has_state_category = tiny_island
 							}
 						}
-						clr_state_flag = can_use_yuri_style
-						set_state_flag = can_use_hoori_style
-						clr_state_flag = can_use_washizu_style
 						set_occupation_law_where_available = hoori_style_occupation
 					}
-				}
-			}
-		}
-	}
-	on_weekly = {        #自动切换鹫逗式管理  
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = now_auto_switch_occupation_law
-				}
-				ROOT = {
-					every_controlled_state = {
+					else_if = {
 						limit = {
-							#is_controlled_by = ROOT 
-							set_temp_variable = { resistance_limit = 20 }        #检测抵抗度
-							resistance < resistance_limit
+							resistance < 20
 							OR = {
 								has_state_category = city
 								has_state_category = large_city
 								has_state_category = metropolis
 								has_state_category = megalopolis
 							}
-							NOT = {
-								is_core_of = ROOT
-							}
 						}
-						clr_state_flag = can_use_yuri_style
-						clr_state_flag = can_use_hoori_style
-						set_state_flag = can_use_washizu_style
-						set_occupation_law_where_available  = washizu_style_occupation
+						set_occupation_law_where_available = washizu_style_occupation
 					}
 				}
 			}
 		}
-	}   
+	}
 }

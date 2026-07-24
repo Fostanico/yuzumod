@@ -20,6 +20,12 @@ country_event = {
 			defense_skill = 3
 			maneuvering_skill = 7
 			coordination_skill = 8
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = injia_good_at_water
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -33,6 +39,12 @@ country_event = {
 			defense_skill = 8
 			maneuvering_skill = 7
 			coordination_skill = 5
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = fixible_command
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -47,6 +59,12 @@ country_event = {
 			defense_skill = 2
 			maneuvering_skill = 1
 			coordination_skill = 6
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = little_guy_under_water
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -61,6 +79,12 @@ country_event = {
 			defense_skill = 3
 			maneuvering_skill = 5
 			coordination_skill = 5
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = best_hacker
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -75,6 +99,12 @@ country_event = {
 			defense_skill = 4
 			maneuvering_skill = 4
 			coordination_skill = 5
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = lucky_or_unlucky
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -91,6 +121,12 @@ country_event = {
 			defense_skill = 4
 			maneuvering_skill = 4
 			coordination_skill = 4
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = dahefuzi
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
@@ -104,6 +140,12 @@ country_event = {
 			defense_skill = 2
 			maneuvering_skill = 4
 			coordination_skill = 4
+		}
+		every_navy_leader = {
+			limit = {
+				has_trait = power_of_fox_fairy
+				NOT = { has_character_flag = yz_navy_flag }
+			}
 			set_character_flag = yz_navy_flag
 		}
 		

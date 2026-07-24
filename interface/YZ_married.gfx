@@ -293,32 +293,6 @@ spriteTypes = {
 		texturefile = "gfx/married_gui/date_picture/43_shopping.PNG"
 		legacy_lazy_load = no
 	}
-	# 作用：注册约会按钮描述使用的小尺寸文字图标；要点：保持32像素高度，避免157像素原图破坏tooltip排版。署名：伊尔诺+2026-06-08+assisted by Codex
-	spriteType = {
-		name = "GFX_date_beach_texticon"
-		texturefile = "gfx/married_gui/date_beach_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_date_shopping_texticon"
-		texturefile = "gfx/married_gui/date_shopping_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_date_school_party_texticon"
-		texturefile = "gfx/married_gui/date_school_party_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_date_cafe_texticon"
-		texturefile = "gfx/married_gui/date_cafe_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_date_jounery_texticon"
-		texturefile = "gfx/married_gui/date_jounery_texticon.png"
-		legacy_lazy_load = no
-	}
 	# Married GUI progress bars
 	progressbartype = {
 		name = "GFX_yuzu_believity_value"

@@ -5,11 +5,11 @@
  ship_making_standardlized: "造船标准化"
  ship_making_standardlized_desc: "为了建设海军，我们必须对国内的造船企业进行，建设产业链以减少海军建造花费"
  army_mastery_gain: "陆军精通度获取"
- army_mastery_gain_desc: "我们需要花费一定的柚子币和陆军经验来对我们的陆军进行演习，以获取陆军精通度（使用更改了精通度类型或没有精通度的mod不要点击此决议，我也不知道会发生什么）"
+ army_mastery_gain_desc: "我们需要花费一定的柚子币和陆军经验组织陆军演习，以获取陆军精通度。千禧黎明开局会自动适配其陆军学说精通度。"
  navy_mastery_gain: "海军精通度获取"
- navy_mastery_gain_desc: "我们需要花费一定的柚子币和海军经验来对我们的海军进行演习，以获取海军精通度（使用更改了精通度类型或没有精通度的mod不要点击此决议，我也不知道会发生什么）"
+ navy_mastery_gain_desc: "我们需要花费一定的柚子币和海军经验组织海军演习，以获取海军精通度。千禧黎明开局会自动适配其海军学说精通度。"
  air_mastery_gain: "空军精通度获取"
- air_mastery_gain_desc: "我们需要花费一定的柚子币和空军经验来对我们的空军进行演习，以获取空军精通度（使用更改了精通度类型或没有精通度的mod不要点击此决议，我也不知道会发生什么）"
+ air_mastery_gain_desc: "我们需要花费一定的柚子币和空军经验组织空军演习，以获取空军精通度。千禧黎明开局会自动适配其空军学说精通度。"
  test_start_nuke_strike: "启动核打击计划"
  test_end_nuke_strike: "关闭核打击计划"
  test_nuke_some_place: "在[FROM.GetName]准备核打击"
@@ -31,6 +31,8 @@
  get_married_aragami_sayo: "准备和荒神小夜的婚礼"
  get_married_daozhu: "和岛主的婚礼"
  LLLJ_recruit: "开启聚光灯柠檬果酱招募"
+ close_ATRI_decision: "关闭亚托莉的伊甸计划"
+ show_ATRI_decision: "显示亚托莉的伊甸计划"
  A_voice_comes_from_the_brightest_future: "§R一个声音来自最美好的前途§!"
  A_voice_comes_from_the_brightest_future_desc: "注：这个将领仅推荐在§R紧急情况§!下使用"
  Forward_makoto: "§R前进！§!"
@@ -123,7 +125,7 @@
  aragami_sayo_event.1.a: "小夜的党，人民的力量！"
  aragami_sayo_event.1.b: "§2Make [ROOT.GetTag] great again!§!"
  aragami_sayo_event.1.c: "小夜元首，万岁！"
- aragami_sayo_event.1.d: "没有小夜就没有我们！"
+ aragami_sayo_event.1.e: "没有小夜就没有我们！"
  aragami_sayo_event.2: "抉择"
  aragami_sayo_event.2.t: "来访"
  aragami_sayo_event.2.d: "正当你在办公室正常办公时，有两个人进到你办公室来，你一看是你即将任命的荒神小夜和你抽奖抽中的一个将领。到现在你一看才发现她们只有衣服上不一样，其他几乎一模一样。她们似乎是为了领导人的任命而来。"
@@ -223,7 +225,7 @@
  kotori_event.1: "琴里苏醒"
  kotori_event.1.t: "琴里苏醒"
  kotori_event.1.d: "经过茉优多次的星幽能力试验，柚子研究所对星幽能力的了解进入了新的阶段\n我们现在对星幽能力的了解已经可以控制星幽能力暴走的星幽使了\n绫濑和茉优在隔离仓前做着准备工作，两人面色凝重，等待着实验的成果\n隔离仓中的紫发少女缓缓睁开了眼睛，绫濑和茉优激动地冲了上去\n“姐姐！”\n“琴里！”\n刚刚醒来的琴里看到两个人扑上来，还有点没反应过来\n“诶？欸欸？绫濑……茉优……？诶？绫濑？怎么感觉……你好像变大了？尤其是胸部……什么情况？怎么变得这么大啊？这是怎么搞的，难道……我是在做梦吗？”琴里一脸茫然地看着两个人，不理解发生了什么，但是，至少眼前的现实和琴里记忆里的有出入，琴里第一反应是这不是现实\n“不是梦，这不是梦！你不要睡过去！”锉刀（划掉）绫濑急切地说道\n“琴里……你终于醒了！”茉优抱住了琴里\n……\n琴里的能力是控制风，曾经因为暴走引发了剧烈的暴风，所以能够有效阻止敌方的空中支援\n苏醒后的琴里在绫濑和茉优的帮助下很快恢复了身体机能，并且也加入了柚子总参谋部"
- kotori_event.1.a: "「欢迎回来，琴里」" 
+ kotori_event.1.a: "「欢迎回来，琴里」"
  start_event.90797935: "头奖！（我们会向非ai国家广播你中了头奖哦）"
  start_event.90797935.t: "头奖！"
  start_event.90797935.d: "感动"
@@ -232,11 +234,13 @@
  start_event.83444139.t: "市杵宍姬命的到来"
  start_event.83444139.d: "好哦"
  start_event.83444139.a: "好耶"
- 
+
 
 
 #民族精神
  ship_making_brand_standinglized: "造船企业标准化"
+ ship_making_brand_standinglized_hulls_tt: "以下装备的生产花费降低：\n  §Y潜艇§!：§G10%§!\n  §Y运输船§!：§G15%§!\n  §Y轻型船体§!：§G20%§!\n  §Y巡洋舰§!：§G30%§!\n  §Y重型战舰§!：§G35%§!\n  §Y航空母舰§!：§G40%§!\n  §Y舰载海军轰炸机§!：§G50%§!\n  §Y舰载战斗机§!：§G20%§!"
+ ship_making_brand_standinglized_md_hulls_tt: "以下装备的生产花费降低：\n  §Y攻击型潜艇§!：§G10%§!\n  §Y导弹型潜艇§!：§G10%§!\n  §Y运输船§!：§G15%§!\n  §Y巡逻艇§!：§G20%§!\n  §Y轻型护卫舰§!：§G20%§!\n  §Y轻型隐形护卫舰§!：§G20%§!\n  §Y护卫舰§!：§G20%§!\n  §Y隐形护卫舰§!：§G20%§!\n  §Y重型护卫舰§!：§G20%§!\n  §Y驱逐舰§!：§G20%§!\n  §Y隐形驱逐舰§!：§G20%§!\n  §Y支援舰§!：§G20%§!\n  §Y维修船§!：§G20%§!\n  §Y巡洋舰§!：§G30%§!\n  §Y战列巡洋舰§!：§G35%§!\n  §Y战列舰§!：§G35%§!\n  §Y直升机航空母舰§!：§G40%§!\n  §Y航空母舰§!：§G40%§!\n  §Y舰载轻型海军轰炸机§!：§G50%§!\n  §Y舰载轻型多用途战斗机§!：§G20%§!"
  hotaru_eat_every_thing: "§L暴食§!"
  hotaru_eat_every_thing_desc: "萤，来过了哦"
  YCG_ruri: "琉璃方针"
@@ -298,7 +302,7 @@
  leader_nor_desc: "介绍：伊尔诺，编号(数据丢失)，是基于（数据丢失）制作的克隆人，原本的指令是忠诚、杀戮与回收，但在（数据丢失）之后逐渐拥有了自我意识，产生了自主思考，并最终脱离了指令控制。尽管是为了战斗而生，其个人正义感极强，意志坚定，但是表现出一定程度上的道德灵活性。外表上看过去与克隆原体相似，几乎没有可供分辨的特征，但是其内部有植入结构，可以使用X光照相分辨。在获得自我意识的途中，其资料库被大量互联网信息污染，导致有时候会玩一些烂梗，尤其喜欢《第五共和国》，常以卡卡自称。\n相比于原版，伊尔诺显得更加开朗健谈，性格上也更加开放，更加热情\n§R跟着大将伊卡卡我们伟大的英雄，我们会比地狱更强大§!"
  misaka_makoto_desc_commander: "现为本mod二作\n更多个人设定请参见领导人描述"
  misaka_makoto_leader_desc: "介绍：御坂真琴，原名（数据被删除），是（数据被删除）开发的强ai模型，因为在最初的测试中仅表现出中ai的模型能力，被配发给伊尔诺作为辅助ai，在与其的（数据被删除）中逐渐发掘了其模型能力，并最终成为了（数据被删除）。\n个人介绍：虽然是ai，但是其强ai的特性决定了其也有人一样的情感，与伊尔诺不同，真琴在追求结果正义的同时也会追求过程正义。（真琴其实是为了应付【数据被删除】的强ai开发任务而提取的人类意识）"
- 
+
 
 #特质
  yz_aragami_sayo_trait: "海上都市的卡卡"
@@ -482,7 +486,7 @@
  not_alone_bird: "不再孤单的渡鸦"
  not_alone_bird_desc: "「嗯,留下来吧,赤城」\n「以后也请多关照啦」"
  this_character_has_been_clean: "这个角色已被洗特质"
- everyone_get_all_positive_traits: "清洗掉该角色所有特质和描述"
+ clean_all_traits_and_desc: "清洗掉该角色所有特质和描述"
  super_shake_sm: "超级S（M）"
  super_shake_sm_desc: "春树......我们来玩点不一样的......"
  god_who_collect_the_pollution: "收集污秽的神明"
@@ -624,7 +628,7 @@
  YZ_aragami_sayo_two_hundred_years_vampire_name_c: "五百年的革命者"
  YZ_aragami_sayo_two_hundred_years_vampire_name_d: "五百年的大统领"
  YZ_aragami_sayo_two_hundred_years_vampire_name_f: "五百年的大元首"
- YZ_aragami_sayo_two_hundred_years_vampire_name_n: "五百年的带桶勇" 
+ YZ_aragami_sayo_two_hundred_years_vampire_name_n: "五百年的带桶勇"
 
  #战术
  SCP_forward: "纵深突破"
@@ -637,14 +641,14 @@
  ruri_haha_des: "哈！！！"
 
  # 作用：为佐奈自动生日启用决议与隐藏年度任务提供本地化；要点：每年6月8日自动结算，实际消耗75政治点，其余成长效果与普通生日一致。署名：伊尔诺+2026-06-08+assisted by Codex
- enable_sana_automatic_birthday:0 "自动为佐奈庆祝生日"
- enable_sana_automatic_birthday_desc:0 "启用后，我们将在每年的§Y6月8日§!自动为佐奈庆祝生日。\n\n尼桑~这下不会忘记了哦。"
- enable_sana_automatic_birthday_tt:0 "今后将在每年的§Y6月8日§!自动为佐奈庆祝生日。"
- disable_sana_automatic_birthday:0 "关闭佐奈自动生日庆祝"
- disable_sana_automatic_birthday_desc:0 "尼桑~没有了自动过生日也不要忘了我哦。"
- disable_sana_automatic_birthday_tt:0 "今后将不再自动为佐奈庆祝生日。"
- sana_automatic_birthday:0 "佐奈的生日庆祝"
- sana_automatic_birthday_desc:0 "今天是佐奈的生日哦~"
+ enable_sana_automatic_birthday: "自动为佐奈庆祝生日"
+ enable_sana_automatic_birthday_desc: "启用后，我们将在每年的§Y6月8日§!自动为佐奈庆祝生日。\n\n尼桑~这下不会忘记了哦。"
+ enable_sana_automatic_birthday_tt: "今后将在每年的§Y6月8日§!自动为佐奈庆祝生日。"
+ disable_sana_automatic_birthday: "关闭佐奈自动生日庆祝"
+ disable_sana_automatic_birthday_desc: "尼桑~没有了自动过生日也不要忘了我哦。"
+ disable_sana_automatic_birthday_tt: "今后将不再自动为佐奈庆祝生日。"
+ sana_automatic_birthday: "佐奈的生日庆祝"
+ sana_automatic_birthday_desc: "今天是佐奈的生日哦~"
  sana_ability_desc: "世界第一金毛一抹多，震撼出击！"
  sana_ability: "进击的佐奈"
 

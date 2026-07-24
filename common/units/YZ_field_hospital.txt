@@ -1,6 +1,6 @@
 sub_units = {
 	YZ_field_hospital = {
-		picture = GFX_unit_YZ_field_hospital_icon_small
+		# picture = GFX_unit_YZ_field_hospital_icon_small # sub_unit 不支持该字段，原代码不会生效
 		abbreviation = "YZHOS"
 		sprite = infantry
 		map_icon_category = infantry
@@ -39,8 +39,8 @@ sub_units = {
 		# Important Ability
 		casualty_trickleback = 0.721
 		experience_loss_factor = -0.45
-		attrition = -0.2
-		army_morale_factor = 0.15
+		# attrition = -0.2 # sub_unit 不支持该字段，原代码不会生效
+		# army_morale_factor = 0.15 # sub_unit 不支持该字段，原代码不会生效
 
 		forest = {	#森林
 			defence = 0.05

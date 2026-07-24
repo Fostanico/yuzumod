@@ -1,6 +1,6 @@
 add_namespace = RoKo_event
 
-country_event = { 
+country_event = {
 	id = RoKo_event.1 	#好船
 	title = RoKo_event.1.t
 	desc = RoKo_event.1.d
@@ -11,7 +11,7 @@ country_event = {
 		hidden_effect = {
 			play_song = koto_battle	#向着悲伤的彼岸
 		}
-		clr_country_flag = start_roko 
+		clr_country_flag = start_roko
 	}
 	option = {
 		name = RoKo_event.1.a	#芦花
@@ -21,15 +21,15 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Roka
-				name = "马庭芦花"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Roka
+					name = "马庭芦花"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Roka.png"
-                            small = "gfx\leader\Roka2.png"
-                        }
+							large = "gfx/leader/Roka.png"
+							small = "gfx/leader/Roka2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
@@ -57,15 +57,15 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Koharu
-				name = "鞍马小春"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Koharu
+					name = "鞍马小春"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Koharu.png"
-                            small = "gfx\leader\Koharu2.png"
-                        }
+							large = "gfx/leader/Koharu.png"
+							small = "gfx/leader/Koharu2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
@@ -85,9 +85,9 @@ country_event = {
 			}
 		}
 	}
-}	
+}
 
-country_event = { 
+country_event = {
 	id = RoKo_event.2   #暂时的和平
 	title = RoKo_event.2.t
 	desc = RoKo_event.2.d
@@ -97,7 +97,7 @@ country_event = {
 	immediate = {
 		clr_country_flag = start_roko
 	}
-	
+
 	option = {
 		name = RoKo_event.2.a
 		if = {
@@ -112,15 +112,15 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Roka
-				name = "马庭芦花"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Roka
+					name = "马庭芦花"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Roka.png"
-                            small = "gfx\leader\Roka2.png"
-                        }
+							large = "gfx/leader/Roka.png"
+							small = "gfx/leader/Roka2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
@@ -143,15 +143,15 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Koharu
-				name = "鞍马小春"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Koharu
+					name = "鞍马小春"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Koharu.png"
-                            small = "gfx\leader\Koharu2.png"
-                        }
+							large = "gfx/leader/Koharu.png"
+							small = "gfx/leader/Koharu2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
@@ -170,10 +170,10 @@ country_event = {
 				}
 			}
 		}
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = RoKo_event.3  #直接获得芦花
 	title =  RoKo_event.3.t
 	desc =  RoKo_event.3.d
@@ -185,25 +185,25 @@ country_event = {
 	}
 	option = {
 		name = RoKo_event.3.a
-        custom_effect_tooltip = get_roka_tt #小字
+		custom_effect_tooltip = get_roka_tt #小字
 		set_country_flag = have_roka
 		clr_country_flag = start_roko
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Roka
-				name = "马庭芦花"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Roka
+					name = "马庭芦花"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Roka.png"
-                            small = "gfx\leader\Roka2.png"
-                        }
+							large = "gfx/leader/Roka.png"
+							small = "gfx/leader/Roka2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
-					} 
+					}
 					corps_commander = {
 						desc = Roka_corps_desc
 						traits={
@@ -218,10 +218,10 @@ country_event = {
 				}
 			}
 		}
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = RoKo_event.4  #直接获得小春
 	title =  RoKo_event.4.t
 	desc =  RoKo_event.4.d
@@ -230,24 +230,24 @@ country_event = {
 	immediate = {
 		clr_country_flag = start_roko
 	}
-	
+
 	option = {
 		name = RoKo_event.4.a
-        custom_effect_tooltip = get_koharu_tt #小字
+		custom_effect_tooltip = get_koharu_tt #小字
 		set_country_flag = have_koharu
 		clr_country_flag = start_roko
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Kurama_Koharu
-				name = "鞍马小春"
-				gender = female
-				nationality = JAP
+					token_base = Kurama_Koharu
+					name = "鞍马小春"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-                            large = "gfx\leader\Koharu.png"
-                            small = "gfx\leader\Koharu2.png"
-                        }
+							large = "gfx/leader/Koharu.png"
+							small = "gfx/leader/Koharu2.png"
+						}
 					}
 					allowed_civil_war = {
 						is_ai = no
@@ -266,12 +266,12 @@ country_event = {
 				}
 			}
 		}
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = RoKo_event.101  #你是旮旯废物
-	title =  RoKo_event.101.t 
+	title =  RoKo_event.101.t
 	desc =  RoKo_event.101.d
 	picture = GFX_failed_event
 	is_triggered_only = yes
@@ -281,9 +281,9 @@ country_event = {
 	}
 	option = {
 		name = RoKo_event.101.a
-        custom_effect_tooltip = gal_feiwu_tt
+		custom_effect_tooltip = gal_feiwu_tt
 		clr_country_flag = start_roko
-    } 
+	}
 }
 
 

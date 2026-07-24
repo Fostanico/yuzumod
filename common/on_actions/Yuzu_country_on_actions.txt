@@ -1,5 +1,5 @@
 on_actions = {
     on_declare_war = {
-        events = { yuzu_event.1 }
+        # events = { yuzu_event.1 } # 仓库中没有该事件定义，原调用不会生效
     }
 }

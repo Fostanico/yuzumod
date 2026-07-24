@@ -1,18 +1,20 @@
+# 这些决议直接写入玖玖瑠好感或研究进度；写入后调用统一刷新/完成门，
+# 保证动态修正与研究事件立即可见，同时避免重新引入 on_daily 计算。
 kkr_atri_reseasrch_decision_category = {
 
-	kkr_atri_reseasrch_240days = {  
+	kkr_atri_reseasrch_240days = {
 		icon = GFX_kkr_icon_7
-		priority = 1000   
-		activation = {                         
+		priority = 1000
+		activation = {
 			has_country_flag = kkr_is_researching
-		}                                 
-		available = {                           
+		}
+		available = {
 			not = { has_country_flag = kkr_is_researching }
 		}
-		is_good = no                       
+		is_good = no
 		days_mission_timeout = 300
-		timeout_effect = {            
-			clr_country_flag = kkr_is_researching   
+		timeout_effect = {
+			clr_country_flag = kkr_is_researching
 			clr_country_flag = get_kkr
 			add_stability = -0.5
 			add_political_power = -500
@@ -22,8 +24,8 @@ kkr_atri_reseasrch_decision_category = {
 					has_trait = kukuru_2_trait
 					has_trait = kukuru_3_trait
 				}
-                remove_unit_leader_role = yes
-            }
+				remove_unit_leader_role = yes
+			}
 			hidden_effect = {
 				every_scientist = {
 					limit = {
@@ -40,8 +42,8 @@ kkr_atri_reseasrch_decision_category = {
 				modifier = Kukuru_atri_research_dynamic_modifier
 			}
 		}
-		complete_effect = {         
-			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt          
+		complete_effect = {
+			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
 			add_to_variable = {
 				KKR_atri_research_research_speed_factor = 0.5
 				tooltip = research_speed_factor_tt
@@ -62,13 +64,15 @@ kkr_atri_reseasrch_decision_category = {
 		remove_effect = {
 			add_to_variable = {
 				kkr_favor = 2
-            	tooltip = kkr_favor_gain
+				tooltip = kkr_favor_gain
 			}
 			add_to_variable = {
 				kkr_research_progress = 5
-            	tooltip = kkr_research_progress_gain_tt
+				tooltip = kkr_research_progress_gain_tt
 			}
-		} 
+			kkr_refresh_favor_outputs = yes
+			kkr_check_research_completion = yes
+		}
 
 	}
 	kkr_research_2 = {		#批准实验经费
@@ -86,19 +90,20 @@ kkr_atri_reseasrch_decision_category = {
 		complete_effect = {
 			add_to_variable = {
 				weekly_kkr_research_progress = 1
-            	tooltip = weekly_kkr_research_progress_gain
+				tooltip = weekly_kkr_research_progress_gain
 			}
 		}
 		remove_effect = {
 			add_to_variable = {
 				kkr_favor = 2
-            	tooltip = kkr_favor_gain
+				tooltip = kkr_favor_gain
 			}
 			add_to_variable = {
 				weekly_kkr_research_progress = -1
-            	tooltip = weekly_kkr_research_progress_decress
+				tooltip = weekly_kkr_research_progress_decress
 			}
-		} 
+			kkr_refresh_favor_outputs = yes
+		}
 	}
 	kkr_research_3 = {		#任命研究所长
 		icon = GFX_kkr_icon_8
@@ -114,42 +119,43 @@ kkr_atri_reseasrch_decision_category = {
 				tooltip = kkr_favor_compare_more_than
 			}
 		}
-		
+
 		remove_effect = {
 			add_to_variable = { KKR_atri_research_research_speed_factor = 0.1 }
 			add_dynamic_modifier = {
 				modifier = Kukuru_atri_research_dynamic_modifier
-			}	
+			}
 			force_update_dynamic_modifier = yes
 			add_to_variable = {
 				kkr_favor = 3
-            	tooltip = kkr_favor_gain
+				tooltip = kkr_favor_gain
 			}
 			add_to_variable = {
 				weekly_kkr_research_progress = 1
-            	tooltip = weekly_kkr_research_progress_gain
+				tooltip = weekly_kkr_research_progress_gain
 			}
+			kkr_refresh_favor_outputs = yes
 			custom_effect_tooltip = get_kkr_advisor_sci
 			set_country_flag = kkr_advisor_sci
 			meta_effect = {
-                text = {
+				text = {
 
-                    generate_character = {
-                        token_base = Kukuru_advisor_1
-                        name = "夜刀玖玖瑠"
-                        gender = female
-                        nationality = JAP
-                        portraits = {
-                            civilian = {
-                                large = "gfx\leader\kukuru2.png"
-                                small = "gfx\leader\kukuru2_1.png"
-                            }
-                        }
-                        allowed_civil_war = {
-                            is_ai = no
-                        }
-                        advisor = {  
-							priority = 1000
+					generate_character = {
+						token_base = Kukuru_advisor_1
+						name = "夜刀玖玖瑠"
+						gender = female
+						nationality = JAP
+						portraits = {
+							civilian = {
+								large = "gfx/leader/kukuru2.png"
+								small = "gfx/leader/kukuru2_1.png"
+							}
+						}
+						allowed_civil_war = {
+							is_ai = no
+						}
+						advisor = {
+							# priority = 1000 # 当前 advisor 定义不支持该字段，原代码不会生效
 							slot = political_advisor
 							cost = 50
 							idea_token = Kukuru_advisor_1
@@ -163,10 +169,10 @@ kkr_atri_reseasrch_decision_category = {
 								factor = 0
 							}
 						}
-                    }
-                }
-            }
-		} 
+					}
+				}
+			}
+		}
 
 	}
 	kkr_research_4 = {		#立项前的准备
@@ -182,11 +188,12 @@ kkr_atri_reseasrch_decision_category = {
 			consumer_goods_factor = 0.1
 		}
 		remove_effect = {
-			add_ideas = kkr_Research_Director	
+			add_ideas = kkr_Research_Director
 			add_to_variable = {
 				kkr_favor = 1
-            	tooltip = kkr_favor_gain
+				tooltip = kkr_favor_gain
 			}
+			kkr_refresh_favor_outputs = yes
 			country_event = kkr_event.3
 			set_technology = {
 				electronic_mechanical_engineering = 1
@@ -204,10 +211,10 @@ kkr_atri_reseasrch_decision_category = {
 				improved_computing_machine = 1
 				advanced_computing_machine = 1
 			}
-		} 
+		}
 
 	}
-	
+
 	kkr_appointment_test = {
 		icon = GFX_kkr_icon_6
 		fire_only_once = yes
@@ -221,12 +228,12 @@ kkr_atri_reseasrch_decision_category = {
 		complete_effect = {
 			set_country_flag = kkr_appointment
 		}
-		remove_effect = {	
+		remove_effect = {
 			hidden_effect = {
 				country_event = kkr_event.7
 			}
 			clr_country_flag = kkr_appointment
-		} 
+		}
 	}
 	kkr_first_travel = {
 		icon = GFX_kkr_icon_9
@@ -239,12 +246,12 @@ kkr_atri_reseasrch_decision_category = {
 		visible = {
 			has_country_flag = kkr_first_travel
 		}
-		remove_effect = {	
+		remove_effect = {
 			hidden_effect = {
 				country_event = kkr_event.11
 			}
 			clr_country_flag = kkr_travel
-		} 
+		}
 	}
 
 	kkr_set_research_facility = {
@@ -260,9 +267,10 @@ kkr_atri_reseasrch_decision_category = {
 		}
 		complete_effect = {
 			add_to_variable = {
-				kkr_favor = 5 
+				kkr_favor = 5
 				tooltip = kkr_favor_gain
 			}
+			kkr_refresh_favor_outputs = yes
 		}
 		remove_effect = {
 			set_country_flag = set_kkr_research_facility
@@ -300,27 +308,27 @@ kkr_atri_reseasrch_decision_category = {
 					nuclear_facility = 1
 				}
 			}
-		
+
 			add_breakthrough_points = {
 				specialization = specialization_land
 				value = 100
 			}
-		
+
 			add_breakthrough_points = {
 				specialization = specialization_nuclear
 				value = 100
 			}
-			
+
 			add_breakthrough_points = {
 				specialization = specialization_air
 				value = 100
 			}
-			
+
 			add_breakthrough_points = {
 				specialization = specialization_naval
 				value = 100
 			}
-    
+
 			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
 			add_to_variable = {
 				KKR_atri_research_research_speed_factor = 0.5

@@ -1,10 +1,13 @@
 ####### 你还没给柚子军服役呢! #######
 
+# 海报会修改好感、柚子厨比例或新作收入。源值写入后立即刷新对应派生值；
+# 新作开始/结束还需重建财政账本，但真实余额仍只由月结算入口统一处理。
+
 X_youzu_propaganda_category = {
 
 	yz_poster_1 = {		#绫濑演唱会
 		icon = GFX_lingnai
-		 
+
 		available = {
 			yz_poster_slot_available = yes		#有空闲槽位可选判定
 		}
@@ -13,12 +16,11 @@ X_youzu_propaganda_category = {
 		days_re_enable = 180
 		modifier = {
 			consumer_goods_factor = -0.1
-            civilian_factory_use = 1
-            production_factory_efficiency_gain_factor = 0.15
-            industrial_capacity_factory = 0.15
-            research_speed_factor = 0.1
-            industrial_capacity_factory = 0.1
-            production_speed_buildings_factor = 0.125
+			civilian_factory_use = 1
+			production_factory_efficiency_gain_factor = 0.15
+			industrial_capacity_factory = 0.25
+			research_speed_factor = 0.1
+			production_speed_buildings_factor = 0.125
 			mobilization_speed = 0.15
 			army_morale_factor = 0.1
 			army_attack_factor = 0.05
@@ -28,15 +30,17 @@ X_youzu_propaganda_category = {
 			set_temp_variable = { TEMPyz_poster_icon_frame = 8 }	#这里的数字是海报图中第n-1张（第一张是透明底）
 			yz_set_poster = yes		#显示海报
 			hidden_effect = {
-                play_song = youzu28
-            }
-            custom_effect_tooltip = {
-                localization_key = play_the_song_of_linglai_descision_effect_tooltip
-            }
+				play_song = youzu28
+			}
+			custom_effect_tooltip = {
+				localization_key = play_the_song_of_linglai_descision_effect_tooltip
+			}
 			add_to_variable = {
 				yzc_manpower_factor = 0.01
 				tooltip = yzc_manpower_factor_gain
 			}
+			yz_refresh_love_modifier_values = yes
+			yz_refresh_yzc_manpower_values = yes
 		}
 	}
 
@@ -71,6 +75,8 @@ X_youzu_propaganda_category = {
 				yzc_manpower_factor = 0.005
 				tooltip = yzc_manpower_factor_gain
 			}
+			yz_refresh_love_modifier_values = yes
+			yz_refresh_yzc_manpower_values = yes
 		}
 
 	}
@@ -144,19 +150,21 @@ X_youzu_propaganda_category = {
 				yzc_manpower_factor = 0.025
 				tooltip = yzc_manpower_factor_gain
 			}
+			yz_refresh_love_modifier_values = yes
+			yz_refresh_yzc_manpower_values = yes
 			hidden_effect = {
 				clr_country_flag = YuzuSongUndDanceTroupe_showing
 				every_state = {
 					clr_state_flag = is_YuzuSongUndDanceTroupe_modifier
-				}  
+				}
 			}
-			
+
 		}
 	}
 
 	yz_poster_3 = {		#娜娜米的意识形态宣传工作
 		icon = GFX_qihai
-		 
+
 		available = {
 			yz_poster_slot_available = yes
 		}
@@ -227,16 +235,13 @@ X_youzu_propaganda_category = {
 			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.1
 			political_power_factor = 0.2
-			
+
 		}
 		complete_effect = {
 			set_temp_variable = { TEMPyz_poster_icon_frame = 9 }
 			yz_set_poster = yes
-			set_temp_variable = { temp_yz_new_works = max_manpower_k }
-			multiply_temp_variable = { temp_yz_new_works = num_of_factories }
-			multiply_temp_variable = { temp_yz_new_works = 0.01 }
-			multiply_temp_variable = { temp_yz_new_works = 0.06 }
-			set_variable = { yz_new_works = temp_yz_new_works }
+			yz_recalculate_new_works_income = yes
+			yz_recalculate_monthly_money_ledger = yes
 			add_equipment_to_stockpile = {
 				type = yz_works_equipment
 				amount = -15000
@@ -247,6 +252,8 @@ X_youzu_propaganda_category = {
 				yzc_manpower_factor = 0.025
 				tooltip = yzc_manpower_factor_gain
 			}
+			yz_refresh_love_modifier_values = yes
+			yz_refresh_yzc_manpower_values = yes
 			add_to_variable = {
 				yz_money = -500
 				tooltip = yz_money_tooltip_subtain
@@ -255,12 +262,13 @@ X_youzu_propaganda_category = {
 		remove_effect = {
 			set_variable = { yz_new_works = 0 }	#这是游戏购买量
 			clr_country_flag = yz_newwork_publishing
+			yz_recalculate_monthly_money_ledger = yes
 		}
 	}
 
 	yz_poster_5 = {		#柚子厨们，团结起来建设新国家！
 		icon = GFX_decision_generic_civil_support
-		 
+
 		available = {
 			yz_poster_slot_available = yes
 			check_variable = {
@@ -292,12 +300,14 @@ X_youzu_propaganda_category = {
 				yzc_manpower_factor = 0.015
 				tooltip = yzc_manpower_factor_gain
 			}
+			yz_refresh_love_modifier_values = yes
+			yz_refresh_yzc_manpower_values = yes
 		}
 	}
 
 	yz_poster_6 = {		#科教兴国，人才强国
 		icon = GFX_research_up
-		 
+
 		available = {
 			yz_poster_slot_available = yes
 			check_variable = {
@@ -312,7 +322,7 @@ X_youzu_propaganda_category = {
 			research_speed_factor = 0.25
 			local_resources_factor = 0.1
 			equipment_capture_factor = 0.1
-			
+
 		}
 		complete_effect = {
 			set_temp_variable = { TEMPyz_poster_icon_frame = 6 }
@@ -474,14 +484,14 @@ X_youzu_propaganda_category = {
 						airforce_intel = 5
 					}
 				}
-			} 
+			}
 			every_state = {
 				limit = {
 					is_core_of = ROOT
 					not = { is_controlled_by = root }
 				}
 				random_list = {
-					10 = {	
+					10 = {
 						damage_building = {
 							type = industrial_complex
 							damage = 1
@@ -517,7 +527,7 @@ X_youzu_propaganda_category = {
 
 	yz_poster_10 = {		#攻心为上，攻城为下
 		icon = GFX_decision_generic_nationalism
-		 
+
 		available = {
 			yz_poster_slot_available = yes
 			has_war = yes
@@ -528,7 +538,7 @@ X_youzu_propaganda_category = {
 		modifier = {
 			resistance_target = -0.25
 			resistance_growth = -0.3
-			compliance_starting_value = 0.2
+			starting_compliance = 0.2
 			compliance_growth = 0.25
 			non_core_manpower = 0.25
 			annex_cost_factor = -0.1
@@ -545,7 +555,7 @@ X_youzu_propaganda_category = {
 
 	yz_poster_11 = {		#敌人奸诈，谨言慎行
 		icon = GFX_decision_onmap_recruit_operative
-		 
+
 		available = {
 			yz_poster_slot_available = yes
 			has_war = yes

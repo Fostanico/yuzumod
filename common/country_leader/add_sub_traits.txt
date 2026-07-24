@@ -7,7 +7,7 @@ leader_traits = {
         military_industrial_organization_funds_gain = 0.8
         military_industrial_organization_research_bonus = 0.2
         military_industrial_organization_industrial_manufacturer_assign_cost = -1
-        resources = -0.05
+        production_lack_of_resource_penalty_factor = -0.05
         equipment_bonus = {
             armor = {
                 build_cost_ic = -0.15
@@ -39,14 +39,13 @@ leader_traits = {
             motorized_equipment = {
                 build_cost_ic = -0.4
             }
-         }
+        }
     }
     trait_sub_shirayuki_noa = {
         random = no
-        ground_attack_factor = 0.2
+        ground_attack_factor = 0.4
         experience_gain_air = 0.4
         air_strategic_bomber_bombing_factor = 0.2
-        ground_attack_factor = 0.2
         air_range_factor = 0.1
     }
 
@@ -99,7 +98,7 @@ leader_traits = {
         experience_gain_army_factor = 0.1
         experience_gain_army = 0.09
         coordination_bonus = 0.05
-        initiative = 0.25
+        initiative_factor = 0.25
         army_core_attack_factor = 0.05
         army_core_defence_factor = 0.05
         casualty_trickleback = 0.5 #伤兵复原
@@ -119,7 +118,7 @@ leader_traits = {
         resistance_target_on_our_occupied_states = 0.35
         resistance_growth = -0.2
         resistance_growth_on_our_occupied_states = 0.4
-        compliance_starting_value = 0.4
+        starting_compliance = 0.4
         compliance_growth = 0.5
         compliance_growth_on_our_occupied_states = -1
         non_core_manpower = 0.1
@@ -190,7 +189,7 @@ leader_traits = {
         resistance_target_on_our_occupied_states = 0.5
         resistance_growth = -0.4
         resistance_growth_on_our_occupied_states = 0.5
-        compliance_starting_value = 0.5
+        starting_compliance = 0.5
         compliance_growth = 0.5
         compliance_growth_on_our_occupied_states = -1
         stability_weekly_factor = 0.0025
@@ -285,7 +284,11 @@ leader_traits = {
         navy_screen_attack_factor = 0.1
         navy_capital_ship_defence_factor = 0.1
         navy_capital_ship_attack_factor = 0.1
-        lg_attack = 0.1
+        equipment_bonus = {
+            mio_cat_eq_all_ships_no_convoys = {
+                lg_attack = 0.1
+            }
+        }
         naval_light_gun_hit_chance_factor = 0.05
     }
     scp_navy = {    #SCP的海军特质
@@ -300,7 +303,11 @@ leader_traits = {
         navy_screen_attack_factor = 0.2
         navy_capital_ship_defence_factor = 0.2
         navy_capital_ship_attack_factor = 0.2
-        lg_attack = 0.2
+        equipment_bonus = {
+            mio_cat_eq_all_ships_no_convoys = {
+                lg_attack = 0.2
+            }
+        }
         naval_light_gun_hit_chance_factor = 0.1
         sortie_efficiency = 0.5
     }
@@ -326,7 +333,11 @@ leader_traits = {
         army_defence_factor = 0.1
         army_org_regain = 0.3
         army_armor_speed_factor = 0.1
-        army_mechanized_speed_factor = 0.1
+        equipment_bonus = {
+            mechanized_equipment = {
+                maximum_speed = 0.1
+            }
+        }
     }
     Fumika_chief = { #风实花 柚子军校校长
         random = no
@@ -452,7 +463,7 @@ leader_traits = {
         army_strength_factor = -0.15
         army_org_regain = 0.4
         org_loss_when_moving = -0.5
-        army_throughput_factor = 0.15
+        supply_factor = 0.15
     }
     huhu_general = {
         random = no
@@ -515,6 +526,17 @@ leader_traits = {
         production_factory_start_efficiency_factor = 1
         political_power_factor = 30
     }
+    trait_for_youzi = {
+        random = no
+        conscription_factor = 0.7
+        resistance_growth = -0.1
+        compliance_growth = 0.5
+        non_core_manpower = 0.7
+        weekly_manpower = 777
+        research_speed_factor = 0.3
+        consumer_goods_factor = 0.05
+        monthly_population = 0.9
+    }
     trait_for_sorana_omo = {
         random = no
         political_power_factor = 1
@@ -538,7 +560,7 @@ leader_traits = {
     trait_for_chun = {
         random = no
         conscription = 0.2
-		conscription_factor = 0.3
+        conscription_factor = 0.3
         monthly_population = 0.75
         industrial_capacity_factory = -0.3
         production_factory_max_efficiency_factor = -0.15
@@ -561,7 +583,7 @@ leader_traits = {
         conscription_factor = 0.25
     }
     trait_for_miyako = {
-        random = 0
+        random = no
         consumer_goods_factor = -0.5
         consumer_goods_expected_value = -0.05
         industrial_capacity_factory = 0.5
@@ -582,7 +604,7 @@ leader_traits = {
         air_attack_factor = 1
         equipment_bonus = {
             anti_air_equipment = {
-                combat_width = -1
+                # combat_width = -1 # 装备加成不支持战斗宽度，原代码不会生效
                 build_cost_ic = -0.8
                 instant = yes
             }

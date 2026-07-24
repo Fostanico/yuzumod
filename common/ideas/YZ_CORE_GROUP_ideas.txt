@@ -66,7 +66,7 @@ ideas = {
                 army_morale_factor = 0.05
                 max_dig_in_factor = 0.05
                 industrial_capacity_factory = 0.05
-                conscription_total_factor = 0.05
+                conscription_factor = 0.05
                 land_reinforce_rate = 0.01
                 non_core_manpower = 0.05
                 resistance_growth_on_our_occupied_states = 0.2
@@ -124,9 +124,8 @@ ideas = {
                 navy_anti_air_attack_factor = 0.1
                 navy_max_range_factor = 0.15
                 experience_gain_navy_factor = 0.1
-                industrial_capacity_dockyard = 0.1
                 unit_marine_design_cost_factor = -0.5
-                industrial_capacity_dockyard = 0.15
+                industrial_capacity_dockyard = 0.25
                 naval_invasion_capacity = 10
             }
         }
@@ -143,17 +142,16 @@ ideas = {
                 military_industrial_organization_funds_gain = 0.2       #经费获取
                 military_industrial_organization_research_bonus = 0.1       #研究加成
                 production_speed_arms_factory_factor = 0.2
-                production_speed_dockyard_factor = 0.2
+                production_speed_dockyard_factor = 0.3
                 stability_factor = -0.05
                 production_factory_efficiency_gain_factor = 0.2
-                production_speed_dockyard_factor = 0.1
                 industrial_capacity_factory = 0.1
                 industrial_capacity_dockyard = 0.1
-                equipment_bonus = {
-                    armor = {
-                        build_cost_ic = -0.05
-                        instant = yes
-                    }
+            }
+            equipment_bonus = {
+                armor = {
+                    build_cost_ic = -0.05
+                    instant = yes
                 }
             }
         }
@@ -170,7 +168,7 @@ ideas = {
                 operative_slot = 1
                 experience_gain_army_factor = 0.1
                 coordination_bonus = 0.05
-                initiative = 0.2
+                initiative_factor = 0.2
                 army_core_attack_factor = 0.05
                 army_core_defence_factor = 0.05
                 casualty_trickleback = 0.3 #伤兵复原
@@ -396,7 +394,7 @@ ideas = {
                 social_cost_multiplier_modifier = -0.5
                 police_cost_multiplier_modifier = -0.5
                 bureaucracy_cost_multiplier_modifier = -0.5
-				army_personnel_cost_multiplier_modifier = -0.99
+                army_personnel_cost_multiplier_modifier = -0.99
                 navy_personnel_cost_multiplier_modifier = -0.99
                 airforce_personnel_cost_multiplier_modifier = -0.99
                 corporate_tax_income_multiplier_modifier = 0.5
@@ -411,7 +409,7 @@ ideas = {
                 consumer_goods_expected_value = -0.15
                 global_building_slots_factor = 2
                 production_speed_buildings_factor = 0.5
-				industrial_capacity_dockyard = 1
+                industrial_capacity_dockyard = 1
             }
         }
         YCG_suou = {
@@ -454,7 +452,7 @@ ideas = {
                 production_factory_max_efficiency_factor = 0.15
                 political_power_factor = -0.1
                 stability_factor = 0.1
-                war_support_factor = 0.1               
+                war_support_factor = 0.1
             }
         }
         YCG_nozomi = {

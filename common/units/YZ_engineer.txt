@@ -1,6 +1,6 @@
 sub_units = {
 	YZ_engineer = {
-		picture = GFX_unit_YZ_engineer_icon_medium
+		# picture = GFX_unit_YZ_engineer_icon_medium # sub_unit 不支持该字段，原代码不会生效
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -127,9 +127,10 @@ sub_units = {
 			defence = 0.3
 		}
 
-		mud = {
-			movement = 0.35
-		}
+		# mud 不是 sub_unit 支持的地形键；原代码不会生效
+		# mud = {
+		# 	movement = 0.35
+		# }
 
 		#same_support_type = engineer
 	}

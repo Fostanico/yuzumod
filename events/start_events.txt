@@ -37,8 +37,8 @@ country_event= {           #抽到真琴
                         nationality = PRC
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\misaka_makoto.png"
-                                small = "gfx\leader\misaka_makoto_small.png"
+                                large = "gfx/leader/misaka_makoto.png"
+                                small = "gfx/leader/misaka_makoto_small.png"
                             }
                         }
                         allowed_civil_war = {
@@ -84,8 +84,8 @@ country_event= {           #抽到市杵宍姬命——2026.5.28，22：47，御
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\itsukishishishihimenomikoto_big.png"
-                                small = "gfx\leader\itsukishishishihimenomikoto_small.png"
+                                large = "gfx/leader/itsukishishishihimenomikoto_big.png"
+                                small = "gfx/leader/itsukishishishihimenomikoto_small.png"
                             }
                         }
                         allowed_civil_war = {
@@ -123,7 +123,7 @@ country_event= {           #佐奈立绘倒计时
             }
             set_portraits = {
                 army = {
-                    large = "gfx\leader\sana.png"
+                    large = "gfx/leader/sana.png"
                 }
             }
         }

@@ -1,44 +1,49 @@
-add_namespace = masaki_event           
+# 真咲事件同时发放即时余额并修改持久月收入源值；后者改变后重建显示账本，
+# 不在事件中执行月度扣款。
+add_namespace = masaki_event
 
-country_event= {       
+country_event= {
     id = masaki_event.1
-    picture = GFX_masaki_event.1 	
+    picture = GFX_masaki_event.1
     title = masaki_event.1.t
-    desc = masaki_event.1.d	
+    desc = masaki_event.1.d
     is_triggered_only = yes
     option = {
-        name = masaki.1.a	
-	add_to_variable = { yz_money = 700 } #连锁店盈利了
-	add_to_variable = { monly_YZ_masaki_money_visible = 250}
-	custom_effect_tooltip = masaki_get_money_c_tt
- 		trigger = {
-			OR = {
-				has_government = communism
-				has_government = neutrality
-			}
-		}
-   }
-    option = {
-        name = masaki.1.a	
-	add_to_variable = { yz_money = 840 } #连锁店盈利了
-	add_to_variable = { monly_YZ_masaki_money_visible = 300}
-	custom_effect_tooltip = masaki_get_money_d_tt
- 		trigger = {
-				has_government = democratic
-		}
+        name = masaki.1.a
+        add_to_variable = { yz_money = 700 } #连锁店盈利了
+        add_to_variable = { monly_YZ_masaki_money_visible = 250}
+        yz_recalculate_monthly_money_ledger = yes
+        custom_effect_tooltip = masaki_get_money_c_tt
+        trigger = {
+            OR = {
+                has_government = communism
+                has_government = neutrality
+            }
+        }
     }
     option = {
-        name = masaki.1.a	
-	add_to_variable = { yz_money = 840 } #连锁店盈利了
-	add_to_variable = { monly_YZ_masaki_money_visible = 300}
-	custom_effect_tooltip = masaki_get_money_f_tt
- 		trigger = {
-				has_government = fascism
-		}
+        name = masaki.1.a
+        add_to_variable = { yz_money = 840 } #连锁店盈利了
+        add_to_variable = { monly_YZ_masaki_money_visible = 300}
+        yz_recalculate_monthly_money_ledger = yes
+        custom_effect_tooltip = masaki_get_money_d_tt
+        trigger = {
+            has_government = democratic
+        }
+    }
+    option = {
+        name = masaki.1.a
+        add_to_variable = { yz_money = 840 } #连锁店盈利了
+        add_to_variable = { monly_YZ_masaki_money_visible = 300}
+        yz_recalculate_monthly_money_ledger = yes
+        custom_effect_tooltip = masaki_get_money_f_tt
+        trigger = {
+            has_government = fascism
+        }
     }
     option = {
         name = masaki.1.b
-	add_ideas = chocolate_donuts_weeken
+        add_ideas = chocolate_donuts_weeken
     }
 }
 

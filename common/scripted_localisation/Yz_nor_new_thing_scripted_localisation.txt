@@ -17,122 +17,122 @@
 #	}
 #}
 defined_text = {      #这个是柚子债券决议组的描述
-    name = yz_economy_department_category_describe
-    text = {
-        trigger = {
-            NOT = {
-                has_country_flag = Yoshino_industry_long_term_invest_now_start
-            }
-        }
-        localization_key = we_dont_start_yz_invest
-    }
-    text = {
-        trigger = {
-            has_country_flag = Yoshino_industry_long_term_invest_now_start
-        }
-        localization_key = we_now_start_yoshino_industry_long_term_invest
-    }
-}
-defined_text = {       #这个是柚子社文化局的传播柚子文化条件的描述
-    name = Yuzu_can_form_yuzu_land_describe
-    text = {
-        trigger = {
-            has_country_flag = change_puppt_to_yuzu_land
-        }
-        localization_key = Yuzu_can_form_yuzu_land_describe_start
-    }
-    text = {
-        trigger = {
-            NOT = {
-                has_country_flag = change_puppt_to_yuzu_land
-            }
-        }
-        localization_key = Yuzu_can_form_yuzu_land_describe_start_first
-    }
-}
-defined_text = {     #小夜市长特质
-    name = YZ_aragami_sayo_our_role_model_of_victory_name
-    text = {
-        trigger = {
-            OR = {
-                has_government = communism
-                has_country_flag = aragami_sayo_trait_show_c
-            }
-        }
-        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_c
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_government = democratic
-                has_country_flag = aragami_sayo_trait_show_d
-            }
-        }
-        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_d
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_country_flag = aragami_sayo_trait_show_f
-                has_government = fascism
-            }
-        }
-        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_f
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_government = neutrality
-                has_country_flag = aragami_sayo_trait_show_n
-            }
-        }
-        localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_n
-    }
-}
-defined_text = {      #小夜吸血鬼特质
-    name = YZ_aragami_sayo_two_hundred_years_vampire_name
-    text = {
-        trigger = {
-            OR = {
-                has_government = communism
-                has_country_flag = aragami_sayo_trait_show_c
-            }
-        }
-        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_c
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_government = democratic
-                has_country_flag = aragami_sayo_trait_show_d
-            }
-        }
-        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_d
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_country_flag = aragami_sayo_trait_show_f
-                has_government = fascism
-            }
-        }
-        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_f
-    }
-    text = {
-        trigger = {
-            OR = {
-                has_government = neutrality
-                has_country_flag = aragami_sayo_trait_show_n
-            }
-        }
-        localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_n
-    }
-}
-defined_text = {      #参谋总长头像——2026.5.3，12：26，御坂真琴
-    name = YZ_miliatry_party_cos_guys
+	name = yz_economy_department_category_describe
 	text = {
 		trigger = {
-			has_country_flag = yz_cos_ayase  
+			NOT = {
+				has_country_flag = Yoshino_industry_long_term_invest_now_start
+			}
+		}
+		localization_key = we_dont_start_yz_invest
+	}
+	text = {
+		trigger = {
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+		}
+		localization_key = we_now_start_yoshino_industry_long_term_invest
+	}
+}
+defined_text = {       #这个是柚子社文化局的传播柚子文化条件的描述
+	name = Yuzu_can_form_yuzu_land_describe
+	text = {
+		trigger = {
+			has_country_flag = change_puppt_to_yuzu_land
+		}
+		localization_key = Yuzu_can_form_yuzu_land_describe_start
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = change_puppt_to_yuzu_land
+			}
+		}
+		localization_key = Yuzu_can_form_yuzu_land_describe_start_first
+	}
+}
+defined_text = {     #小夜市长特质
+	name = YZ_aragami_sayo_our_role_model_of_victory_name
+	text = {
+		trigger = {
+			OR = {
+				has_government = communism
+				has_country_flag = aragami_sayo_trait_show_c
+			}
+		}
+		localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_c
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_country_flag = aragami_sayo_trait_show_d
+			}
+		}
+		localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_d
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = aragami_sayo_trait_show_f
+				has_government = fascism
+			}
+		}
+		localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_f
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = neutrality
+				has_country_flag = aragami_sayo_trait_show_n
+			}
+		}
+		localization_key = YZ_aragami_sayo_our_role_model_of_victory_name_n
+	}
+}
+defined_text = {      #小夜吸血鬼特质
+	name = YZ_aragami_sayo_two_hundred_years_vampire_name
+	text = {
+		trigger = {
+			OR = {
+				has_government = communism
+				has_country_flag = aragami_sayo_trait_show_c
+			}
+		}
+		localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_c
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_country_flag = aragami_sayo_trait_show_d
+			}
+		}
+		localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_d
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = aragami_sayo_trait_show_f
+				has_government = fascism
+			}
+		}
+		localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_f
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = neutrality
+				has_country_flag = aragami_sayo_trait_show_n
+			}
+		}
+		localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_n
+	}
+}
+defined_text = {      #参谋总长头像——2026.5.3，12：26，御坂真琴
+	name = YZ_miliatry_party_cos_guys
+	text = {
+		trigger = {
+			has_country_flag = yz_cos_ayase
 		}
 		localization_key =  YzLeader_ayase_image
 	}
@@ -144,13 +144,13 @@ defined_text = {      #参谋总长头像——2026.5.3，12：26，御坂真琴
 	}
 	text = {
 		trigger = {
-			has_country_flag = yz_cos_miu 
+			has_country_flag = yz_cos_miu
 		}
 		localization_key =  YzLeader_miu_image
 	}
 	text = {
 		trigger = {
-			has_country_flag = yz_cos_toko 
+			has_country_flag = yz_cos_toko
 		}
 		localization_key =  YzLeader_toko_image
 	}

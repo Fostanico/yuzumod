@@ -12,62 +12,62 @@ spriteTypes = {
 		texturefile = "gfx/ideas/ayase3.png"
 	}
 ###事件
-spriteType = {
-	name = "GFX_ayase_event.1"
-	texturefile = "gfx/event_pictures/ayase_event.1.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.2"
-	texturefile = "gfx/event_pictures/ayase_event.2.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.3"
-	texturefile = "gfx/event_pictures/ayase_event.3.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.4"
-	texturefile = "gfx/event_pictures/ayase_event.4.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.5"
-	texturefile = "gfx/event_pictures/ayase_event.5.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.6"
-	texturefile = "gfx/event_pictures/ayase_event.6.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.7"
-	texturefile = "gfx/event_pictures/ayase_event.7.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.8"
-	texturefile = "gfx/event_pictures/ayase_event.8.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.9"
-	texturefile = "gfx/event_pictures/ayase_event.9.png"
-}
-spriteType = {
-	name = "GFX_ayase_event.10"
-	texturefile = "gfx/event_pictures/ayase_event.10.png"
-}
+	spriteType = {
+		name = "GFX_ayase_event.1"
+		texturefile = "gfx/event_pictures/ayase_event.1.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.2"
+		texturefile = "gfx/event_pictures/ayase_event.2.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.3"
+		texturefile = "gfx/event_pictures/ayase_event.3.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.4"
+		texturefile = "gfx/event_pictures/ayase_event.4.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.5"
+		texturefile = "gfx/event_pictures/ayase_event.5.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.6"
+		texturefile = "gfx/event_pictures/ayase_event.6.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.7"
+		texturefile = "gfx/event_pictures/ayase_event.7.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.8"
+		texturefile = "gfx/event_pictures/ayase_event.8.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.9"
+		texturefile = "gfx/event_pictures/ayase_event.9.png"
+	}
+	spriteType = {
+		name = "GFX_ayase_event.10"
+		texturefile = "gfx/event_pictures/ayase_event.10.png"
+	}
 #特质
-spriteType = {
-	name = "GFX_trait_maid_cuodao_trait1"
-	texturefile = "gfx/traits/maid_cuodao_trait1.png"
-}
-spriteType = {
-	name = "GFX_trait_maid_cuodao_trait2"
-	texturefile = "gfx/traits/maid_cuodao_trait2.png"
-}
-spriteType = {
-	name = "GFX_trait_maid_cuodao_trait3"
-	texturefile = "gfx/traits/maid_cuodao_trait3.png"
-}
+	spriteType = {
+		name = "GFX_trait_maid_cuodao_trait1"
+		texturefile = "gfx/traits/maid_cuodao_trait1.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_cuodao_trait2"
+		texturefile = "gfx/traits/maid_cuodao_trait2.png"
+	}
+	spriteType = {
+		name = "GFX_trait_maid_cuodao_trait3"
+		texturefile = "gfx/traits/maid_cuodao_trait3.png"
+	}
 #美羽领导人
-spriteType = {
-	name = "GFX_portrait_ADD_meiyu"
-	texturefile = "gfx/leader/meiyu.png"
-}
+	spriteType = {
+		name = "GFX_portrait_ADD_meiyu"
+		texturefile = "gfx/leader/meiyu.png"
+	}
 }

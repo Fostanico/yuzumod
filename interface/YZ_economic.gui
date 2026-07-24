@@ -2,7 +2,7 @@ guiTypes = {
     containerWindowType = {
         name = "Yuzusoft_economic_describe"
         position = {
-            x = 0         
+            x = 0
             y = 0
         }
         size = {
@@ -39,13 +39,13 @@ guiTypes = {
         }
         buttonType = {                               #其实我一开始就想的是直接用按钮上显示文本，后面发现不行——2025.6.2，18：08，伊尔诺
             name = "open_yz_economic_operation"
-            position = { 
+            position = {
                 x = 30
                 y = 100
             }
-            size = { 
-                width = 960 
-                height = 540 
+            size = {
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_yz_button_long"     #"GFX_yz_button_long"
             scale = 0.6
@@ -53,13 +53,13 @@ guiTypes = {
         }
         instantTextBoxType = {
             name = "open_yz_economic_operation_text"
-            position = { x = 25 y = 113 } 
-			font = "hoi_18mbs"
-			text = "open_yz_economic_operation_text_show"
-			maxWidth = 200
-			maxHeight = 30
-			alwaystransparent = yes
-			format = center 
+            position = { x = 25 y = 113 }
+            font = "hoi_18mbs"
+            text = "open_yz_economic_operation_text_show"
+            maxWidth = 200
+            maxHeight = 30
+            alwaystransparent = yes
+            format = center
         }
         buttonType = {
             name = "open_yz_invest_ui"
@@ -68,21 +68,21 @@ guiTypes = {
                 y = 100
             }
             size = {
-                width = 960
-                height = 540
+                x = 960
+                y = 540
             }
             quadTextureSprite = "GFX_yz_button_long"
             scale = 0.6
         }
         instantTextBoxType = {
             name = "open_yz_invest_ui_text"
-            position = { x = 265 y = 113 } 
-			font = "hoi_18mbs"
-			text = "open_yz_invest_ui_text_show"
-			maxWidth = 200
-			maxHeight = 30
-			alwaystransparent = yes
-			format = center 
+            position = { x = 265 y = 113 }
+            font = "hoi_18mbs"
+            text = "open_yz_invest_ui_text_show"
+            maxWidth = 200
+            maxHeight = 30
+            alwaystransparent = yes
+            format = center
         }
     }
     containerWindowType = {                     #经济操作ui
@@ -102,17 +102,17 @@ guiTypes = {
         }
         moveable = yes
         buttonType = {                                   #关闭键
-			name = "yz_bonds_ui_close_button"
-			position = { 
-                x = -40 
-                y = 6 
+            name = "yz_bonds_ui_close_button"
+            position = {
+                x = -40
+                y = 6
             }
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "Main_14_black"
-			Orientation = "UPPER_RIGHT"
-			clicksound = click_close
-			pdx_tooltip = "CLOSE"
-		}
+            quadTextureSprite ="GFX_closebutton"
+            buttonFont = "Main_14_black"
+            Orientation = "UPPER_RIGHT"
+            clicksound = click_close
+            pdx_tooltip = "CLOSE"
+        }
         instantTextBoxType = {                                  #标题
             name = "yz_bonds_operations_ui_title"
             position = {
@@ -123,7 +123,7 @@ guiTypes = {
             maxHeight = 30
             maxWidth = 360
             font = "hoi_33"
-			text = "yz_bonds_operations_ui_title_text"
+            text = "yz_bonds_operations_ui_title_text"
             pdx_tooltip = "suggestion_for_this_yz_part"
         }
         instantTextBoxType = {                         #信用评级
@@ -215,7 +215,7 @@ guiTypes = {
                 y = 220
             }
             spriteType = "GFX_generic_bg2"
-        }   
+        }
         instantTextBoxType = {       #操作债券的文本
             name = "control_real_interest_showtext"
             position = {
@@ -227,6 +227,6 @@ guiTypes = {
             font = "hoi_24header"
             text = "control_real_interest_text"
         }
-                                                                     
+
     }
 }

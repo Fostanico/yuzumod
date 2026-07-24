@@ -1,7 +1,6 @@
-#Applied on the project level to group together Projects with the purpose of generating modifiers 
-
+# Project-owned tags live in a uniquely named fragment so the active base game
+# or total conversion keeps its own tags.txt registry.
 project_tags = {
 	YZ_sp_tag_artillery
 	yz_sp_tag_type90
-	
 }

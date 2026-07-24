@@ -1,14 +1,14 @@
-add_namespace = sairi_event     
+add_namespace = sairi_event
 
-country_event= {        
+country_event= {
     id = sairi_event.1
-    picture = GFX_sairi_event2	
+    picture = GFX_sairi_event2
     title = sairi_event.1.t
-    desc = sairi_event.1.d	
+    desc = sairi_event.1.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.1.a	
+        name = sairi_event.1.a
         custom_effect_tooltip = sairi_warning
         trigger = {
             not = {
@@ -16,15 +16,15 @@ country_event= {
             }
         }
         country_event = { id = sairi_event.101 }
-       
+
     }
     option = {
-        name = sairi_event.1.b	
+        name = sairi_event.1.b
         trigger = {
 
         }
         country_event = { id = sairi_event.3 }
-        
+
     }
     option = {
         name = sairi_event.1.c
@@ -45,49 +45,49 @@ country_event= {
 
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.2
     picture = GFX_sairi_event1
     title = sairi_event.2.t
-    desc = sairi_event.2.d	
+    desc = sairi_event.2.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.2.a	
+        name = sairi_event.2.a
         trigger = {
-            
+
         }
         country_event = { id = sairi_event.1 days = 1  }
-       
+
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.3
     picture = GFX_sairi_event3
     title = sairi_event.3.t
-    desc = sairi_event.3.d	
+    desc = sairi_event.3.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.3.a	
+        name = sairi_event.3.a
         trigger = {
-            
+
         }
         country_event = { id = sairi_event.4  }
-       
+
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.4
     picture = GFX_sairi_event4
     title = sairi_event.4.t
-    desc = sairi_event.4.d	
+    desc = sairi_event.4.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.4.a	
+        name = sairi_event.4.a
         set_country_flag = have_kaguya
         custom_effect_tooltip = get_kaguya
         meta_effect = {
@@ -100,8 +100,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Kaguya.png"
-                            small = "gfx\leader\Kaguya2.png"
+                            large = "gfx/leader/Kaguya.png"
+                            small = "gfx/leader/Kaguya2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -109,53 +109,53 @@ country_event= {
                     }
                     corps_commander = {
                         desc = Kaguya_corps_desc
-                traits={
-                    maid_kaguya_trait
-                    bearer_of_artillery
-                    adaptable
-                    brilliant_strategist
+                        traits={
+                            maid_kaguya_trait
+                            bearer_of_artillery
+                            adaptable
+                            brilliant_strategist
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 4
+                        planning_skill = 7
+                        logistics_skill = 3
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                skill = 5
-			    attack_skill = 5
-			    defense_skill = 4
-			    planning_skill = 7
-			    logistics_skill = 3
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
+            }
+        }
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.5
     picture = GFX_sairi_event5
     title = sairi_event.5.t
-    desc = sairi_event.5.d	
+    desc = sairi_event.5.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.5.a	
+        name = sairi_event.5.a
         trigger = {
-            
+
         }
         country_event = { id = sairi_event.6 days = 1 }
-       
+
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.6
     picture = GFX_sairi_event4
     title = sairi_event.6.t
-    desc = sairi_event.6.d	
+    desc = sairi_event.6.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.6.a	
+        name = sairi_event.6.a
         custom_effect_tooltip = get_kaguya
         hidden_effect = {
             country_event = sairi_event.7
@@ -171,8 +171,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Kaguya.png"
-                            small = "gfx\leader\Kaguya2.png"
+                            large = "gfx/leader/Kaguya.png"
+                            small = "gfx/leader/Kaguya2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -180,36 +180,36 @@ country_event= {
                     }
                     corps_commander = {
                         desc = Kaguya_corps_desc
-                traits={
-                    maid_kaguya_trait
-                    bearer_of_artillery
-                    adaptable
-                    brilliant_strategist
+                        traits={
+                            maid_kaguya_trait
+                            bearer_of_artillery
+                            adaptable
+                            brilliant_strategist
+                        }
+                        skill = 5
+                        attack_skill = 5
+                        defense_skill = 4
+                        planning_skill = 7
+                        logistics_skill = 3
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                skill = 5
-			    attack_skill = 5
-			    defense_skill = 4
-			    planning_skill = 7
-			    logistics_skill = 3
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
+            }
+        }
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.7
     picture = GFX_sairi_event1
     title = sairi_event.7.t
-    desc = sairi_event.7.d	
+    desc = sairi_event.7.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.7.a	
+        name = sairi_event.7.a
         custom_effect_tooltip = get_sairi
         set_country_flag = have_sairi
         meta_effect = {
@@ -222,8 +222,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Sairi.png"
-                            small = "gfx\leader\Sairi2.png"
+                            large = "gfx/leader/Sairi.png"
+                            small = "gfx/leader/Sairi2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -231,35 +231,35 @@ country_event= {
                     }
                     corps_commander = {
                         desc = Sairi_corps_desc
-                traits={
-                    maid_sairi_trait_2
-                    brilliant_strategist
+                        traits={
+                            maid_sairi_trait_2
+                            brilliant_strategist
+                        }
+                # id = 100121273 # 当前 corps_commander 定义不支持数值 id，原代码不会生效
+                        skill = 1
+                        attack_skill = 1
+                        defense_skill = 1
+                        planning_skill = 1
+                        logistics_skill = 1
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                id = 100121273
-                skill = 1
-			    attack_skill = 1
-			    defense_skill = 1
-			    planning_skill = 1
-			    logistics_skill = 1
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
+            }
+        }
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.8      #所以我的前世是魔王咯？
     picture = GFX_amane_event1
     title = sairi_event.8.t
-    desc = sairi_event.8.d	
+    desc = sairi_event.8.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.8.a	
+        name = sairi_event.8.a
         trigger = {
             has_country_flag = qiyong_youzi_2
         }
@@ -276,8 +276,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\WeiZi.png"
-                            small = "gfx\leader\WeiZi2.png"
+                            large = "gfx/leader/WeiZi.png"
+                            small = "gfx/leader/WeiZi2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -285,20 +285,20 @@ country_event= {
                     }
                     corps_commander = {
                         desc = WeiZi_corps_desc
-                    traits={
-                        yz_weizi_trait
-                        adaptable 
-                        trait_reckless
-                        brilliant_strategist
-                        urban_assault_specialist
-						trait_reckless
-						hill_fighter
-                    }
-                    attack_skill = 6
-                    defense_skill = 5
-                    planning_skill = 6
-                    logistics_skill = 5
-                    skill = 5
+                        traits={
+                            yz_weizi_trait
+                            adaptable
+                            trait_reckless
+                            brilliant_strategist
+                            urban_assault_specialist
+                            trait_reckless
+                            hill_fighter
+                        }
+                        attack_skill = 6
+                        defense_skill = 5
+                        planning_skill = 6
+                        logistics_skill = 5
+                        skill = 5
                     }
                 }
             }
@@ -308,56 +308,56 @@ country_event= {
         name = sairi_event.8.b
         custom_effect_tooltip = "选择此项将直接获得天音，无事件链"
         add_political_power = -10
-		set_country_flag = have_amane
-		country_event = { id = tongyong_event.1 }
-		add_to_variable = { num_YZ_general = 2 }
-		meta_effect = {
-			text = {
-				generate_character = {
-					token_base = Amane
-					name = "谷风天音"
+        set_country_flag = have_amane
+        country_event = { id = tongyong_event.1 }
+        add_to_variable = { num_YZ_general = 2 }
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Amane
+                    name = "谷风天音"
                     can_be_captured = no
-					gender = female
-					nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Amane.png"
-							small = "gfx\leader\Amane2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Amane.png"
+                            small = "gfx/leader/Amane2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
                         desc = Amane_corps_desc
-					traits={
-						maid_amane_trait 
-						urban_assault_specialist
-						trait_reckless
-						hill_fighter
-					}
-					skill=5
-					attack_skill=6
-					defense_skill=4
-					planning_skill=5
-					logistics_skill=6
-					}
-				}
-			}
-		}
+                        traits={
+                            maid_amane_trait
+                            urban_assault_specialist
+                            trait_reckless
+                            hill_fighter
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=4
+                        planning_skill=5
+                        logistics_skill=6
+                    }
+                }
+            }
+        }
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.9      #吸血鬼的特殊准备
     picture = GFX_amane_event2
     title = sairi_event.9.t
-    desc = sairi_event.9.d	
+    desc = sairi_event.9.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.9.a	
-        every_army_leader = { 
+        name = sairi_event.9.a
+        every_army_leader = {
             limit = {
                 has_trait = yz_weizi_trait
             }
@@ -366,50 +366,50 @@ country_event= {
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.10      #你与她的谜之觉悟
     picture = GFX_amane_event3
     title = sairi_event.10.t
-    desc = sairi_event.10.d	
+    desc = sairi_event.10.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.10.a	
+        name = sairi_event.10.a
         custom_effect_tooltip = get_amane
-		set_country_flag = have_amane
-		country_event = { id = tongyong_event.1 }
-		add_to_variable = { num_YZ_general = 2 }
+        set_country_flag = have_amane
+        country_event = { id = tongyong_event.1 }
+        add_to_variable = { num_YZ_general = 2 }
         meta_effect = {
-			text = {
-				generate_character = {
-					token_base = Amane1
-					name = "谷风天音"
+            text = {
+                generate_character = {
+                    token_base = Amane1
+                    name = "谷风天音"
                     can_be_captured = no
-					gender = female
-					nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Amane.png"
-							small = "gfx\leader\Amane2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-                        desc = Amane_corps_desc
-					traits={
-						yz_amane_trait_1
-					}
-					skill=1
-					attack_skill=1
-					defense_skill=1
-					planning_skill=1
-					logistics_skill=1					
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Amane.png"
+                            small = "gfx/leader/Amane2.png"
+                        }
                     }
-				}
-			}
-		}
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        desc = Amane_corps_desc
+                        traits={
+                            yz_amane_trait_1
+                        }
+                        skill=1
+                        attack_skill=1
+                        defense_skill=1
+                        planning_skill=1
+                        logistics_skill=1
+                    }
+                }
+            }
+        }
         if = {
             limit = {
                 not = {
@@ -419,19 +419,19 @@ country_event= {
             add_ideas = xiongdinihaoxiang
             set_country_flag = amane_special_wedding
         }
-		
+
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.11      #魔法少女小云雀，变身！
     picture = GFX_kurumi_event1
     title = sairi_event.11.t
-    desc = sairi_event.11.d	
+    desc = sairi_event.11.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.11.a	
+        name = sairi_event.11.a
         trigger = {
             has_country_flag = qiyong_youzi_2
         }
@@ -449,8 +449,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Kurumi.png"
-                            small = "gfx\leader\Kurumi2.png"
+                            large = "gfx/leader/Kurumi.png"
+                            small = "gfx/leader/Kurumi2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -458,14 +458,14 @@ country_event= {
                     }
                     corps_commander = {
                         desc = Kurumi_corps_desc
-                    traits={
-                        yz_kurumi_trait0 
-                    }
-                    skill=1
-                    attack_skill=1
-                    defense_skill=1
-                    planning_skill=1
-                    logistics_skill=1
+                        traits={
+                            yz_kurumi_trait0
+                        }
+                        skill=1
+                        attack_skill=1
+                        defense_skill=1
+                        planning_skill=1
+                        logistics_skill=1
                     }
                 }
             }
@@ -474,7 +474,7 @@ country_event= {
     option = {
         name = sairi_event.11.b
         custom_effect_tooltip = "选择此项将直接获得来海，无事件链"
-		meta_effect = {
+        meta_effect = {
             text = {
                 generate_character = {
                     token_base = Kurumi
@@ -484,8 +484,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Kurumi.png"
-                            small = "gfx\leader\Kurumi2.png"
+                            large = "gfx/leader/Kurumi.png"
+                            small = "gfx/leader/Kurumi2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -493,15 +493,15 @@ country_event= {
                     }
                     corps_commander = {
                         desc = Kurumi_corps_desc
-                    traits={
-                        yz_kurumi_trait 
-                        
-                    }
-                    skill=5
-                    attack_skill=6
-                    defense_skill=5
-                    planning_skill=7
-                    logistics_skill=5
+                        traits={
+                            yz_kurumi_trait
+
+                        }
+                        skill=5
+                        attack_skill=6
+                        defense_skill=5
+                        planning_skill=7
+                        logistics_skill=5
                     }
                 }
             }
@@ -509,18 +509,18 @@ country_event= {
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.12      #以心传心的旅行
     picture = GFX_kurumi_event2
     title = sairi_event.12.t
-    desc = sairi_event.12.d	
+    desc = sairi_event.12.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.12.a	
-        every_army_leader = { 
+        name = sairi_event.12.a
+        every_army_leader = {
             limit = {
-                or = {  
+                or = {
                     has_trait = yz_kurumi_trait_1
                     has_trait = yz_kurumi_trait01
                 }
@@ -534,10 +534,10 @@ country_event= {
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.102        #移除天音顾问
     title = sairi_event.102.t
-    desc = sairi_event.102.d	
+    desc = sairi_event.102.d
     is_triggered_only = yes
     trigger = {
         has_idea = yz_amane1
@@ -553,20 +553,20 @@ country_event= {
     }
 }
 
-country_event= {        
+country_event= {
     id = sairi_event.101
-    picture = GFX_sairi_event101	
+    picture = GFX_sairi_event101
     title = sairi_event.101.t
-    desc = sairi_event.101.d	
+    desc = sairi_event.101.d
     is_triggered_only = yes
 
     option = {
-        name = sairi_event.101.a	
-        
+        name = sairi_event.101.a
+
         every_army_leader = {
             remove_unit_leader_role = yes
         }
-        
+
         set_politics = {
             ruling_party = fascism
             elections_allowed = no
@@ -580,26 +580,16 @@ country_event= {
             communism = 0
         }
         add_ideas = sairi_bad_end
-        recruit_character = Sairi_bad
         kill_country_leader = yes
         create_country_leader = {
             name = "三国彩里？"
             desc = "魔王之母"
-            picture = "gfx\leader\Badsairi.png"
+            picture = "gfx/leader/Badsairi.png"
             expire = "2065.1.1"
             ideology = nazism
             traits = {
                 sairi_leader_trait
             }
-        }
-        add_field_marshal_role = {
-            Character = Sairi_bad
-            skill = 9
-            attack_skill = 9
-            defense_skill = 9
-            planning_skill = 9
-            logistics_skill = 9
-            traits = { adaptable maid_sairi_trait_1 }
         }
         meta_effect = {
             text = {
@@ -612,25 +602,25 @@ country_event= {
                     desc = Sairi_corps_desc
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Badsairi.png"
-                            small = "gfx\leader\Badsairi2.png"
+                            large = "gfx/leader/Badsairi.png"
+                            small = "gfx/leader/Badsairi2.png"
                         }
                     }
                     allowed_civil_war = {
                         is_ai = no
                     }
                     field_marshal = {
-                    traits={
-                        adaptable maid_sairi_trait_1
+                        traits={
+                            adaptable maid_sairi_trait_1
+                        }
+                        attack_skill = 9
+                        defense_skill = 9
+                        planning_skill = 9
+                        logistics_skill = 9
+                        skill = 9
                     }
-                    attack_skill = 9
-                    defense_skill = 9
-                    planning_skill = 9
-                    logistics_skill = 9
-                    skill = 9
-                   }
-               }
-           }
-       }
+                }
+            }
+        }
     }
 }

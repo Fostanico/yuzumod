@@ -1,8 +1,10 @@
+# 财政 GUI 只消费国家级持久账本变量：打开窗口前、等级按钮修改源值后立即重建。
+# 三项经济政策的 timed idea 是冷却唯一事实源，不再维护每日递减计数器。
 scripted_gui = {
 	Yz_leader_gui = {	#核心圈
 		window_name = "Yz_leader"
 		context_type = decision_category
-		visible = {	
+		visible = {
 			has_country_flag = YzCoreGroup_visible
 		}
 		effects = {
@@ -14,6 +16,7 @@ scripted_gui = {
 					clr_country_flag = show_yz_money_window
 				}
 				else = {
+					yz_recalculate_monthly_money_ledger = yes
 					set_country_flag = show_yz_money_window
 				}
 			}
@@ -62,43 +65,43 @@ scripted_gui = {
 				image = "[Yzleader_portrait3_images]"
 			}
 		}
-		
+
 	}
 
 	yz_money_window_gui = {	#经济界面
 		window_name = "yz_money_window"
 		context_type = player_context
-		visible = {	 
+		visible = {
 			has_country_flag = show_yz_money_window
 		}
-	
+
 		triggers = {
 			yz_economic_policy_1_btn_click_enabled = { ## 上三个
-				check_variable = { yz_economic_policy_1_var = 0 }
-				check_variable = { 
+				NOT = { has_idea = yzguozhai }
+				check_variable = {
 					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
-				check_variable = { 
+				check_variable = {
 					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
 			yz_economic_policy_2_btn_click_enabled = {
-				check_variable = { yz_economic_policy_2_var = 0 }
-				check_variable = { 
+				NOT = { has_idea = yzjiuye }
+				check_variable = {
 					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
 			yz_economic_policy_3_btn_click_enabled = {
-				check_variable = { yz_economic_policy_3_var = 0 }
-				check_variable = { 
+				NOT = { has_idea = yzjianshe }
+				check_variable = {
 					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
 				}
 			}
-			YzMonthlyFund_fund_down_button_click_enabled = {	
+			YzMonthlyFund_fund_down_button_click_enabled = {
 				check_variable = { YzMonthlyFund_var > 0 }
 			}
 			YzMonthlyFund_fund_up_button_click_enabled = {
@@ -137,11 +140,14 @@ scripted_gui = {
 					#min = 0
 					max = yz_money_max
 				}
-				set_country_flag = StratTreasuryBonds
 				add_political_power = -25
-				add_to_variable = { yz_economic_policy_1_var = 365 }
 				add_timed_idea = {
 					idea = yzguozhai
+					days = 365
+				}
+				# 隐藏民族精神仍控制冷却；同期 flag 仅向 GUI 提供可读的剩余天数。
+				set_country_flag = {
+					flag = yz_economic_policy_1_cooldown_flag
 					days = 365
 				}
 			}
@@ -155,11 +161,13 @@ scripted_gui = {
 					#min = 0
 					max = yz_money_max
 				}
-				set_country_flag = StratForeignInvestment 
 				add_political_power = -20
-				add_to_variable = { yz_economic_policy_2_var = 60 }
 				add_timed_idea = {
 					idea = yzjiuye
+					days = 60
+				}
+				set_country_flag = {
+					flag = yz_economic_policy_2_cooldown_flag
 					days = 60
 				}
 			}
@@ -173,51 +181,55 @@ scripted_gui = {
 					#min = 0
 					max = yz_money_max
 				}
-				set_country_flag = StratConstructionInvestment 
 				add_political_power = -30
-				add_to_variable = { yz_economic_policy_3_var = 45 }
 				add_timed_idea = {
 					idea = yzjianshe
 					days = 45
 				}
+				set_country_flag = {
+					flag = yz_economic_policy_3_cooldown_flag
+					days = 45
+				}
 			}
-			YzMonthlyFund_fund_down_button_click = {	
+			YzMonthlyFund_fund_down_button_click = {
 				add_to_variable = { YzMonthlyFund_var = -1 }
+				yz_recalculate_monthly_money_ledger = yes
 				custom_effect_tooltip = YzMonthlyFund_fund_down_tt
 			}
 			YzMonthlyFund_fund_up_button_click = {
 				add_to_variable = { YzMonthlyFund_var = 1 }
+				yz_recalculate_monthly_money_ledger = yes
 				custom_effect_tooltip = YzMonthlyFund_fund_up_tt
 			}
 			YzEducation_fund_down_button_click = {
 				add_to_variable = { YzEducation_fund_var = -1 }
-				add_to_variable = { YzMoneyOutcome_var = -100 }
 				YzEducation_fund_level_down = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 			YzEducation_fund_up_button_click = {
 				add_to_variable = { YzEducation_fund_var = 1 }
-				add_to_variable = { YzMoneyOutcome_var = 100 }
 				YzEducation_fund_level_up = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 			YzAdministration_fund_down_button_click = {
 				add_to_variable = { YzAdministration_fund_var = -1 }
-				add_to_variable = { YzMoneyOutcome_var = -100 }
 				YzAdministration_fund_level_down = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 			YzAdministration_fund_up_button_click = {
 				add_to_variable = { YzAdministration_fund_var = 1 }
-				add_to_variable = { YzMoneyOutcome_var = 100 }
 				YzAdministration_fund_level_up = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 			YzMilitary_fund_down_button_click = {
 				add_to_variable = { YzMilitary_fund_var = -1 }
-				add_to_variable = { YzMoneyOutcome_var = -100 }
 				YzMilitary_fund_level_down = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 			YzMilitary_fund_up_button_click = {
 				add_to_variable = { YzMilitary_fund_var = 1 }
-				add_to_variable = { YzMoneyOutcome_var = 100 }
 				YzMilitary_fund_level_up = yes
+				yz_recalculate_monthly_money_ledger = yes
 			}
 		}
 	}
@@ -225,10 +237,10 @@ scripted_gui = {
 	YzStore_window_gui = {	###商店界面
 		window_name = "YzStore_window"
 		context_type = player_context
-		visible = {	 
+		visible = {
 			has_country_flag = show_YzStore_window
 		}
-	
+
 		triggers = {
 			#点数
 			YzStore_1_btn_click_enabled = {
@@ -291,7 +303,7 @@ scripted_gui = {
 			YzStore_1_btn_click = {
 				add_political_power = 50
 				add_to_variable = { yz_money_pp = -1 }
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 250
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -300,7 +312,7 @@ scripted_gui = {
 			YzStore_2_btn_click = {
 				add_command_power = 25
 				add_to_variable = { yz_money_cp = -1 }
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 150
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -309,7 +321,7 @@ scripted_gui = {
 			YzStore_3_btn_click = {
 				army_experience = 25
 				add_to_variable = { yz_money_xp1 = -1 }
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 150
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -318,7 +330,7 @@ scripted_gui = {
 			YzStore_4_btn_click = {
 				air_experience = 25
 				add_to_variable = { yz_money_xp2 = -1 }
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 150
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -327,7 +339,7 @@ scripted_gui = {
 			YzStore_9_btn_click = {
 				navy_experience = 25
 				add_to_variable = { yz_money_xp3 = -1 }
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 150
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -345,7 +357,8 @@ scripted_gui = {
 					min = -100
 					max = 200
 				}
-				subtract_from_variable = { 	
+				yz_refresh_love_modifier_values = yes
+				subtract_from_variable = {
 					yz_money = 15
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -362,7 +375,8 @@ scripted_gui = {
 					min = -100
 					max = 200
 				}
-				subtract_from_variable = { 	
+				yz_refresh_love_modifier_values = yes
+				subtract_from_variable = {
 					yz_money = 30
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -378,6 +392,7 @@ scripted_gui = {
 					min = -100
 					max = 200
 				}
+				yz_refresh_love_modifier_values = yes
 				effect_tooltip = {
 					random_list = {
 						90 = { }
@@ -396,7 +411,7 @@ scripted_gui = {
 						1 = { country_event = start_event.90797935 }
 					}
 				}
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 19.9
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -420,13 +435,14 @@ scripted_gui = {
 					min = -100
 					max = 200
 				}
+				yz_refresh_love_modifier_values = yes
 				random_unit_leader = {
 					limit = {
 						yz_general = yes
 					}
 					add_unit_leader_trait = maid_noa3_trait
 				}
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 100
 					tooltip = yz_money_tooltip_subtain
 				}
@@ -437,29 +453,26 @@ scripted_gui = {
 					idea = yuzu_super_vip
 					days = 365
 				}
-				subtract_from_variable = { 	
+				subtract_from_variable = {
 					yz_money = 3600
 					tooltip = yz_money_tooltip_subtain
 				}
-				set_variable = {
-					yuzu_form_yuzu_land_days_basic_require = 30
-					tooltip = yuzu_form_yuzu_land_days_basic_require_change_tt
-				}
+				custom_effect_tooltip = yuzu_super_vip_cooldown_tt
 				custom_effect_tooltip = YzStore_10_less_than_tt
 			}
 			YzStore_11_btn_click = {      #2025.3.6添加内容，柚子基金
-			   	add_to_variable = {
-				Yuzu_fund  = 1
-				tooltip = yuzu_fund_add
-			  	 }
-			   	subtract_from_variable = {
-				YzStore_11_var = 1
-			   	}
-			   	subtract_from_variable = {
-				    yz_money = 721
+				add_to_variable = {
+					Yuzu_fund  = 1
+					tooltip = yuzu_fund_add
+				}
+				subtract_from_variable = {
+					YzStore_11_var = 1
+				}
+				subtract_from_variable = {
+					yz_money = 721
 					tooltip = yz_money_tooltip_subtain
-			   	}
-			   	custom_effect_tooltip = YzStore_11_less_than_tt
+				}
+				custom_effect_tooltip = YzStore_11_less_than_tt
 			}
 		}
 	}

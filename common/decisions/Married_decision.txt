@@ -2085,9 +2085,9 @@ general_married_decision_category = {
 			}
 		}
 	}
-    get_married_makoto = {
+	get_married_makoto = {
 		#群主的结婚——2026，3.25，19：51，御坂真琴     #现在不是群主了——2026.5.1，23：37，伊尔诺
-		cost = 1		
+		cost = 1
 		days_remove = 7
 		fire_only_once = yes
 		visible = {

@@ -11,7 +11,7 @@ equipments = {
 		group_by = archetype
 		active = no
 		upgrades = {
-			mech_cost_upgrade
+			yz_mech_cost_upgrade
 		}
 		
 		interface_category = interface_category_land

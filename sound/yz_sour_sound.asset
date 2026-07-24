@@ -1,6 +1,6 @@
 sound = {
-    name = "ibaraki_rino_parquet"
-    file = "menu/ibaraki_rino_parquet.wav"
+	name = "ibaraki_rino_parquet"
+	file = "menu/ibaraki_rino_parquet.wav"
 }
 sound = {
 	name = "ibaraki_rino_yuzusoftsour"

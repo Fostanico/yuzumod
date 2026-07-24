@@ -1,12 +1,12 @@
 add_namespace = shabichunlv_event     #蠢驴木琴被界徐盛酒古锭刀火杀了
-country_event= {        
-    id = shabichunlv_event.1
-    title = shabichunlv_event.1.t
-    desc = shabichunlv_event.1.d	
-    is_triggered_only = yes
+country_event= {
+	id = shabichunlv_event.1
+	title = shabichunlv_event.1.t
+	desc = shabichunlv_event.1.d
+	is_triggered_only = yes
 
-    option = {
-        name = shabichunlv_event.1.a	
+	option = {
+		name = shabichunlv_event.1.a
 		if = {
 			limit = {
 				or = {
@@ -42,6 +42,6 @@ country_event= {
 			}
 			remove_core_of = tib
 		}
-    }
-    
+	}
+
 }

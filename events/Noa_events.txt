@@ -1,4 +1,4 @@
-add_namespace = noa_event 
+add_namespace = noa_event
 
 country_event= {
     id = noa_event.1  #乃爱，堂堂降临！
@@ -11,15 +11,14 @@ country_event= {
         name = noa_event.1.a	#真正的天使！
         trigger = {
             or = {
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = qiyong_youzi_3
-			}
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
         }
         custom_effect_tooltip = noa_notice	#小字
-        stability_factor = 0.01
-		add_political_power = 1
-		add_stability = 0.01
-        custom_effect_tooltip = noa_yes 
+        add_political_power = 1
+        add_stability = 0.01
+        custom_effect_tooltip = noa_yes
         country_event= { id = noa_event.2 days = 3 }
         country_event= { id = noa_event.103 days = 60 }
         set_country_flag = noa_geilaozichufadierge      ###当时出bug急眼了写的
@@ -34,8 +33,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Noa.png"
-                            small = "gfx\leader\Noa2.png"
+                            large = "gfx/leader/Noa.png"
+                            small = "gfx/leader/Noa2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -43,50 +42,34 @@ country_event= {
                     }
                     corps_commander = {
                         desc = noa_corps_desc
-                traits={
-                    maid_noa_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
-                }
-                id = 1001211
-                attack_skill = 3
-                defense_skill = 1
-                planning_skill = 2
-                logistics_skill = 1
-                skill = 2
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
-        
-		hidden_effect = {
-            add_ideas = chose_noa
-            if = {
-                not = {  
-                    and = {
-                        has_country_flag = have_noa
-                    
-                        or = {
-                            has_idea = love_level_4
-                            has_idea = love_level_3
-                            has_idea = love_level_2
-                            has_idea = love_level_1
-                            has_idea = love_level_0
+                        traits={
+                            maid_noa_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                        }
+                # id = 1001211 # 当前 corps_commander 定义不支持数值 id，原代码不会生效
+                        attack_skill = 3
+                        defense_skill = 1
+                        planning_skill = 2
+                        logistics_skill = 1
+                        skill = 2
+                        visible = {
+                            is_ai = no
                         }
                     }
                 }
             }
-            
-		}
+        }
+
+        hidden_effect = {
+            add_ideas = chose_noa
+        }
     }
 
 
-	option = {
+    option = {
         name = noa_event.1.b   	#我不想走乃爱线（）
         country_event = { id = tongyong_event.1 }
-		add_political_power = 1
-		custom_effect_tooltip = noa_hide	#小字
+        add_political_power = 1
+        custom_effect_tooltip = noa_hide	#小字
         set_country_flag = no_noa
         meta_effect = {
             text = {
@@ -98,8 +81,8 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\Noa.png"
-                            small = "gfx\leader\Noa2.png"
+                            large = "gfx/leader/Noa.png"
+                            small = "gfx/leader/Noa2.png"
                         }
                     }
                     allowed_civil_war = {
@@ -107,22 +90,22 @@ country_event= {
                     }
                     corps_commander = {
                         desc = noa_corps_desc
-                traits={
-                    maid_noa_trait maid_noa1_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                        traits={
+                            maid_noa_trait maid_noa1_trait JAP_communist_sympathizer Brilliant_Strategist armor_officer
+                        }
+                # id = 1001212 # 当前 corps_commander 定义不支持数值 id，原代码不会生效
+                        attack_skill = 6
+                        defense_skill = 3
+                        planning_skill = 5
+                        logistics_skill = 5
+                        skill = 5
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                id = 1001212
-                attack_skill = 6
-                defense_skill = 3
-                planning_skill = 5
-                logistics_skill = 5
-                skill = 5
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
+            }
+        }
     }
 }
 
@@ -135,38 +118,40 @@ country_event= {
 
     option = {
         name = noa_event.2.a
-		add_political_power = 15
+        add_political_power = 15
         custom_effect_tooltip = noa_happy1	#天使小姐看起来很开心
         country_event= { id =  noa_event.4 days = 20 }
-		hidden_effect = {
-			add_stability = 0.01
-			
-		}
+        hidden_effect = {
+            add_stability = 0.01
+
+        }
     }
 }
 
 country_event= {
-    id = noa_event.103  
-    picture = GFX_noa_event103 	
+    id = noa_event.103
+    picture = GFX_noa_event103
     title = noa_event.103.t
-    desc = noa_event.103.d	
+    desc = noa_event.103.d
     is_triggered_only = yes
 
     option = {
         name = noa_event.103.a
         custom_effect_tooltip = noa_happy1	#天使小姐看起来很开
         noa_love_up = yes
-		add_political_power = 1
+        add_political_power = 1
         hidden_effect = {
-			set_country_flag = happy_noa    #激活买冰激凌决议
-		}
+            set_country_flag = happy_noa    #激活买冰激凌决议
+        }
     }
 
     option = {
         name = noa_event.103.b
-		add_political_power = -1
-        consumer_goods_factor = -0.01
-		
+        add_political_power = -1
+        add_dynamic_modifier = {
+            modifier = YZ_noa_event_103_consumer_goods_modifier
+        }
+
     }
 }
 
@@ -180,36 +165,36 @@ country_event= {
 
     option = {
         name = noa_event.4.a	#看乃爱
-		add_political_power = 10
+        add_political_power = 10
         add_stability = 0.01
-		hidden_effect = {
-			country_event = { id = noa_event.5 days = 15 }
-		}
+        hidden_effect = {
+            country_event = { id = noa_event.5 days = 15 }
+        }
     }
 
-	option = {
+    option = {
         name = noa_event.4.b	#休息一下
-		add_political_power = 1
-		hidden_effect = {
-			country_event = { id = noa_event.101 days = 1 }		#风实花
-		}
+        add_political_power = 1
+        hidden_effect = {
+            country_event = { id = noa_event.101 days = 1 }		#风实花
+        }
     }
 }
 
 country_event= {
     id = noa_event.101  #风实花？
     picture = GFX_noa_event101	#风实花常服立绘
-    title = noa_event.101.t	
+    title = noa_event.101.t
     desc = noa_event.101.d	#居然在这里遇到了风实花，常服给人带来的感觉跟平日里课堂上完全不一样，非常可爱。
     is_triggered_only = yes
 
     option = {
         name = noa_event.101.a
-		add_political_power = 5
+        add_political_power = 5
         custom_effect_tooltip = noa_nothing		#选择此项无任何影响
-		hidden_effect = {
-			country_event = { id = noa_event.5 days = 25 }			
-		}
+        hidden_effect = {
+            country_event = { id = noa_event.5 days = 25 }
+        }
     }
 }
 
@@ -241,18 +226,18 @@ country_event = {
 }
 
 country_event= {
-    id = noa_event.102  
-    picture = GFX_noa_event102	
-    title = noa_event.102.t	
-    desc = noa_event.102.d	
+    id = noa_event.102
+    picture = GFX_noa_event102
+    title = noa_event.102.t
+    desc = noa_event.102.d
     is_triggered_only = yes
 
     option = {
         name = noa_event.102.a
-		add_political_power = 5
-		hidden_effect = {
-				
-		}
+        add_political_power = 5
+        hidden_effect = {
+
+        }
     }
 }
 
@@ -265,14 +250,13 @@ country_event= {
 
     option = {
         name = noa_event.8.a	#
-        stability_factor = 0.01
-		add_political_power = 5
-		add_stability = 0.01
+        add_political_power = 5
+        add_stability = 0.01
         noa_love_up = yes
-		hidden_effect = {
+        hidden_effect = {
 
             country_event = { id = noa_event.9 days = 7 }
-		}
+        }
     }
 }
 
@@ -283,17 +267,17 @@ country_event= {
     desc = noa_event.9.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
         name = noa_event.9.a	#战乙女
-        stability_factor = 0.01
-		add_political_power = 5
+        add_stability = 0.01
+        add_political_power = 5
         noa_love_up = yes
-		random_army_leader = {
+        random_army_leader = {
             limit = {
                 has_trait = maid_noa_trait
             }
@@ -302,7 +286,7 @@ country_event= {
         }
         hidden_effect = {
             country_event = { id = noa_event.11 days = 10 }
-		}
+        }
     }
 }
 
@@ -313,19 +297,19 @@ country_event= {
     desc = noa_event.11.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
-        name = noa_event.11.a	
-		add_political_power = 5
-		custom_effect_tooltip = noa_happy1
+        name = noa_event.11.a
+        add_political_power = 5
+        custom_effect_tooltip = noa_happy1
         noa_love_up = yes
-		hidden_effect = {
+        hidden_effect = {
             country_event = { id =  noa_event.12 days = 14 }
-		}
+        }
     }
 }
 
@@ -336,24 +320,24 @@ country_event= {
     desc = noa_event.12.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
         name = noa_event.12.a	#你有些奇怪
-        
-		add_political_power = -5
-		hidden_effect = {
+
+        add_political_power = -5
+        hidden_effect = {
             country_event = { id = noa_event.13 }
-		}
+        }
     }
 
     option = {
         name = noa_event.12.b	#来酣畅淋漓的大干一场吧！
         custom_effect_tooltip = noa_bad_end     #丸辣！！！！！
-		add_political_power = 5
+        add_political_power = 5
         set_country_flag = noa_bad_end_1
         noa_love_up = yes
         hidden_effect = {
@@ -364,7 +348,7 @@ country_event= {
                 }
                 add_unit_leader_trait = maid_noa4_trait
             }
-		}
+        }
     }
 }
 
@@ -375,18 +359,18 @@ country_event= {
     desc = noa_event.13.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
-        name = noa_event.13.a	
-		add_political_power = 15
+        name = noa_event.13.a
+        add_political_power = 15
         add_stability = -0.015
-		hidden_effect = {
+        hidden_effect = {
             country_event = { id =  noa_event.14 days = 7 }
-		}
+        }
     }
 }
 
@@ -397,26 +381,26 @@ country_event= {
     desc = noa_event.14.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
-        name = noa_event.14.a	
-		add_political_power = 20
+        name = noa_event.14.a
+        add_political_power = 20
         add_stability = 0.03
-        war_support_factor = 0.01
+        add_war_support = 0.01
         random_army_leader = {
             limit = {
                 has_trait = maid_noa_trait
             }
             add_planning = 1
-			add_defense = 1
+            add_defense = 1
         }
-		hidden_effect = {
+        hidden_effect = {
             country_event = { id =  noa_event.15 days = 14 }
-		}
+        }
     }
 }
 
@@ -427,15 +411,15 @@ country_event= {
     desc = noa_event.15.d
     is_triggered_only = yes
     trigger = {
-		and = {
-			has_country_flag = allow_noa
-		}
-	}
+        and = {
+            has_country_flag = allow_noa
+        }
+    }
 
     option = {
-        name = noa_event.15.a	
-		add_political_power = 50
-		custom_effect_tooltip = noa_thanks
+        name = noa_event.15.a
+        add_political_power = 50
+        custom_effect_tooltip = noa_thanks
         noa_love_up = yes
         random_army_leader = {
             limit = {
@@ -448,7 +432,7 @@ country_event= {
         hidden_effect = {
             remove_ideas = chose_noa
             play_song = youzu17
-		}
+        }
     }
 }
 
@@ -458,34 +442,34 @@ country_event= {
     title = noa_event.16.t
     desc = noa_event.16.d
     is_triggered_only = yes
-    
+
 
     option = {
-        name = noa_event.16.a	
-		add_political_power = 15
+        name = noa_event.16.a
+        add_political_power = 15
         add_stability = -0.015
-		every_army_leader = {
+        every_army_leader = {
             limit = {
                 has_trait = maid_noa_trait
             }
             remove_unit_leader_role = yes
         }
         hidden_effect = {
-            
-		}
+
+        }
     }
 }
 
 country_event= {
-    id = noa_event.10001  
-    picture = GFX_noa_event10001	
-    title = noa_event.10001.t	
-    desc = noa_event.10001.d	
+    id = noa_event.10001
+    picture = GFX_noa_event10001
+    title = noa_event.10001.t
+    desc = noa_event.10001.d
     is_triggered_only = yes
 
     option = {
         name = noa_event.10001.a
-		add_political_power = -50
+        add_political_power = -50
         add_stability = -0.05
         set_country_flag = bad_end
         hidden_effect = {
@@ -494,65 +478,65 @@ country_event= {
             remove_ideas = love_level_2
             remove_ideas = love_level_1
             remove_ideas = love_level_0
-		}
+        }
         random_army_leader = {
             limit = {
                 has_trait = maid_noa_trait
             }
-            
+
             remove_unit_leader_trait = maid_noa3_trait
             remove_unit_leader_trait = maid_noa1_trait
             remove_unit_leader_trait = maid_noa2_trait
             remove_unit_leader_trait = maid_noa_trait
             remove_unit_leader_trait = guerilla_fighter     ###从大力丸借鉴（抄）的
-			remove_unit_leader_trait = expert_improviser
-			remove_unit_leader_trait = camouflage_expert
-			remove_unit_leader_trait = Brilliant_Strategist
-			remove_unit_leader_trait = skirmisher
-			remove_unit_leader_trait = naval_liason			
-			remove_unit_leader_trait = logistics_wizard
-			remove_unit_leader_trait = offensive_doctrine
-			remove_unit_leader_trait = armor_officer
-			remove_unit_leader_trait = fast_planner
-			remove_unit_leader_trait = thorough_planner
-			remove_unit_leader_trait = unyielding_defender
-			remove_unit_leader_trait = aggressive_assaulter
-			remove_unit_leader_trait = organisational_leader
-			remove_unit_leader_trait = inspirational_leader
-			remove_unit_leader_trait = expert_delegator
-			remove_unit_leader_trait = organizer
-			remove_unit_leader_trait = winter_expert
-			remove_unit_leader_trait = cavalry_leader
-			remove_unit_leader_trait = infantry_leader
-			remove_unit_leader_trait = commando
-			remove_unit_leader_trait = desert_fox
-			remove_unit_leader_trait = swamp_fox
-			remove_unit_leader_trait = skilled_staffer
-			remove_unit_leader_trait = trickster
-			remove_unit_leader_trait = winter_specialist
-			remove_unit_leader_trait = ranger
-			remove_unit_leader_trait = adaptable
-			remove_unit_leader_trait = jungle_rat
-			remove_unit_leader_trait = trait_engineer
-			remove_unit_leader_trait = panzer_leader
-			remove_unit_leader_trait = trait_mountaineer
-			remove_unit_leader_trait = hill_fighter
-			remove_unit_leader_trait = urban_assault_specialist
-			remove_unit_leader_trait = naval_invader
-			remove_unit_leader_trait = panzer_expert
-			remove_unit_leader_trait = combined_arms_expert
-			remove_unit_leader_trait = cavalry_expert
-			remove_unit_leader_trait = fortress_buster
-			remove_unit_leader_trait = scavenger
-			remove_unit_leader_trait = infantry_expert
-			remove_unit_leader_trait = ambusher
-			remove_unit_leader_trait = invader_ii
+            remove_unit_leader_trait = expert_improviser
+            remove_unit_leader_trait = camouflage_expert
+            remove_unit_leader_trait = Brilliant_Strategist
+            remove_unit_leader_trait = skirmisher
+            remove_unit_leader_trait = naval_liason
+            remove_unit_leader_trait = logistics_wizard
+            remove_unit_leader_trait = offensive_doctrine
+            remove_unit_leader_trait = armor_officer
+            remove_unit_leader_trait = fast_planner
+            remove_unit_leader_trait = thorough_planner
+            remove_unit_leader_trait = unyielding_defender
+            remove_unit_leader_trait = aggressive_assaulter
+            remove_unit_leader_trait = organisational_leader
+            remove_unit_leader_trait = inspirational_leader
+            remove_unit_leader_trait = expert_delegator
+            remove_unit_leader_trait = organizer
+            remove_unit_leader_trait = winter_expert
+            remove_unit_leader_trait = cavalry_leader
+            remove_unit_leader_trait = infantry_leader
+            remove_unit_leader_trait = commando
+            remove_unit_leader_trait = desert_fox
+            remove_unit_leader_trait = swamp_fox
+            remove_unit_leader_trait = skilled_staffer
+            remove_unit_leader_trait = trickster
+            remove_unit_leader_trait = winter_specialist
+            remove_unit_leader_trait = ranger
+            remove_unit_leader_trait = adaptable
+            remove_unit_leader_trait = jungle_rat
+            remove_unit_leader_trait = trait_engineer
+            remove_unit_leader_trait = panzer_leader
+            remove_unit_leader_trait = trait_mountaineer
+            remove_unit_leader_trait = hill_fighter
+            remove_unit_leader_trait = urban_assault_specialist
+            remove_unit_leader_trait = naval_invader
+            remove_unit_leader_trait = panzer_expert
+            remove_unit_leader_trait = combined_arms_expert
+            remove_unit_leader_trait = cavalry_expert
+            remove_unit_leader_trait = fortress_buster
+            remove_unit_leader_trait = scavenger
+            remove_unit_leader_trait = infantry_expert
+            remove_unit_leader_trait = ambusher
+            remove_unit_leader_trait = invader_ii
             add_skill_level = -10    ###满级直接废掉
-			add_logistics = -10
-			add_planning = -10
-			add_defense = -10
-			add_attack = -10
-            
+            add_logistics = -10
+            add_planning = -10
+            add_defense = -10
+            add_attack = -10
+
         }
     }
 }
@@ -570,7 +554,7 @@ country_event = {
     option = {
         name = ningning_qibaoqi.1.a
         add_political_power = 1
-        custom_effect_tooltip = qibaoqi 	
+        custom_effect_tooltip = qibaoqi
         random_army_leader = {
             limit = {
                 has_trait = maid_noa_trait

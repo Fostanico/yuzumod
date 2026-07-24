@@ -1,13 +1,13 @@
 add_namespace = GP_event
 
-country_event = { 
+country_event = {
 	id = GP_event.1
 	title = GP_event.1.t
 	desc = GP_event.1.d
 	picture = GFX_GP_event0
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		retire_country_leader = yes
 		name = GP_event.1.a
@@ -21,17 +21,17 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "恭平"
-			        picture = "GFX_portrait_ADD_gongping"
-					expire = "2095.1.1"
-				    ideology = marxism
-					 traits = {
-						mhtm
-				    }
-				}
+			name = "恭平"
+			picture = "GFX_portrait_ADD_gongping"
+			expire = "2095.1.1"
+			ideology = marxism
+			traits = {
+				mhtm
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = GP_event.2.a
 		trigger = {
@@ -44,17 +44,17 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "恭平"
-			        picture = "GFX_portrait_ADD_gongping"
-					expire = "2095.1.1"
-				    ideology = conservatism
-					 traits = {
-						mhtm
-				    }
-				}
+			name = "恭平"
+			picture = "GFX_portrait_ADD_gongping"
+			expire = "2095.1.1"
+			ideology = conservatism
+			traits = {
+				mhtm
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = GP_event.3.a
 		trigger = {
@@ -67,17 +67,17 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "恭平"
-			        picture = "GFX_portrait_ADD_gongping"
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						mhtm
-				    }
-				}
+			name = "恭平"
+			picture = "GFX_portrait_ADD_gongping"
+			expire = "2095.1.1"
+			ideology = fascism_ideology
+			traits = {
+				mhtm
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = GP_event.4.a
 		trigger = {
@@ -90,35 +90,35 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "恭平"
-			        picture = "GFX_portrait_ADD_gongping"
-					expire = "2095.1.1"
-				    ideology = despotism
-					 traits = {
-						mhtm
-				    }
-				}
+			name = "恭平"
+			picture = "GFX_portrait_ADD_gongping"
+			expire = "2095.1.1"
+			ideology = despotism
+			traits = {
+				mhtm
+			}
 		}
+	}
 
 
 }
 
 country_event= {            ###是否启用恭平
-    id = GP_event.5          
-   
-    title = GP_event.5.t
-    desc = GP_event.5.d	
-    is_triggered_only = yes
+	id = GP_event.5
+
+	title = GP_event.5.t
+	desc = GP_event.5.d
+	is_triggered_only = yes
 	trigger = {
 		has_country_flag = qiyong_youzi_2
 	}
 
-    option = {
-        name = GP_event.5.a	
+	option = {
+		name = GP_event.5.a
 		custom_effect_tooltip = get_gongping
 		set_country_flag = woyaogongping
-    }
+	}
 	option = {
-        name = GP_event.5.b	
-    }
+		name = GP_event.5.b
+	}
 }

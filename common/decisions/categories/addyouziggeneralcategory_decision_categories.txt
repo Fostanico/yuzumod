@@ -88,6 +88,10 @@ establish_the_atri_special_brigade = {
 	icon = GFX_Category_decision
 	priority = 10
 }
+atri_heading_utopia = {
+	icon = GFX_Category_decision
+	priority = 10
+}
 QRYleaders_category = {
 	picture = GFX_QRYleaders_decisions
 	icon = GFX_Category_decision
@@ -107,7 +111,7 @@ World_Unity_communism = {
 			has_country_flag = qiyong_youzi_3
 		}
 		or = {
-		has_government = communism
+			has_government = communism
 		}
 	}
 }

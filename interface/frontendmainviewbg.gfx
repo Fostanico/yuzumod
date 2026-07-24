@@ -203,7 +203,7 @@ spriteTypes = {
 		name = "GFX_trait_maid_masaki_trait"
 		texturefile = "gfx/traits/maid_masaki_trait.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_trait_maid_miu_trait"
 		texturefile = "gfx/traits/maid_miu_trait.png"
 	}
@@ -229,7 +229,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_maid_shirley_trait"
-		texturefile = "gfx/traits/maid_shirley_trait.png" 
+		texturefile = "gfx/traits/maid_shirley_trait.png"
 	}
 	spriteType = {
 		name = "GFX_trait_maid_tielurenou1_trait"
@@ -485,7 +485,7 @@ spriteTypes = {
 		name = "GFX_trait_maid_van_trait"
 		texturefile = "gfx/traits/maid_van_trait.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_trait_maid_Weiss_trait"
 		texturefile = "gfx/traits/maid_Weiss_trait.png"
 	}
@@ -573,7 +573,15 @@ spriteTypes = {
 		name = "GFX_trait_work_ai_help_you"
 		textureFile = "gfx/traits/work_ai_help_you.png"
 	}
-	
+	spriteType = {
+		name = "GFX_trait_light_small_speak_home"
+		textureFile = "gfx/traits/light_small_speak_home.png"
+	}
+	spriteType = {
+		name = "GFX_trait_technology_lover"
+		textureFile = "gfx/traits/technology_lover.png"
+	}
+
 	spriteType = {
 		name = "GFX_trait_futsuuna_shoujo_no_kokoro"
 		textureFile = "gfx/traits/futsuuna_shoujo_no_kokoro.png"
@@ -790,7 +798,7 @@ spriteTypes = {
 		name = "GFX_trait_human_eating_girl"
 		textureFile = "gfx/traits/human_eating_girl.png"
 	}
-	
+
 	spriteType = {
 		name = "GFX_trait_a_always_lie_to_me"
 		textureFile = "gfx/traits/a_always_lie_to_me.png"
@@ -879,7 +887,7 @@ spriteTypes = {
 		name = "GFX_nozomi_wedding"
 		texturefile = "gfx/event_pictures/nozomi_wedding.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_masaki_wedding"
 		texturefile = "gfx/event_pictures/masaki_wedding.png"
 	}
@@ -1030,7 +1038,7 @@ spriteTypes = {
 		name = "GFX_luoyi_wedding"
 		texturefile = "gfx/event_pictures/luoyi_wedding.png"
 	}
-	
+
 
 	spriteType = {        #穗织核爆  2025.4.4,17:06,伊尔诺
 		name = "GFX_nuke_hoori"
@@ -1267,21 +1275,21 @@ spriteTypes = {
 		name = "GFX_airi_event3"
 		texturefile = "gfx/event_pictures/airi_event_3.png"
 	}
-	
+
 	#科技
-	   spriteType = {
+	spriteType = {
 		name = "GFX_unit_airi_crystal_signal_company_icon_medium"
-		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds" 
+		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_airi_crystal_signal_company_icon_medium_white"
-		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds"  
+		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_airi_crystal_signal_company_icon_small"
-		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds"  
+		texturefile = "gfx/counters/airi_crystal_signal_company_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
@@ -1293,28 +1301,28 @@ spriteTypes = {
 		name = "GFX_YZ_0721_detonator_equipment_medium"
 		texturefile = "gfx/counters/YZ_0721_detonator_equipment.dds"
 	}
-	spriteType = { 
-		name = "GFX_unit_YZ_0721_detonator_company_icon_medium"				
-		textureFile = "gfx/counters/YZ_0721_detonator_company_icon.dds"  
+	spriteType = {
+		name = "GFX_unit_YZ_0721_detonator_company_icon_medium"
+		textureFile = "gfx/counters/YZ_0721_detonator_company_icon.dds"
 		noOfFrames = 2
-   	}
+	}
 	spriteType = {
 		name = "GFX_EMI_YZ_0721_detonator_module"
 		textureFile = "gfx/counters/YZ_0721_detonator_module_icon.dds"
 		legacy_lazy_load = no
 	}
-    spriteType = { 
-		name = "GFX_unit_YZ_0721_detonator_company_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_YZ_0721_detonator_company_icon.png" 
+	spriteType = {
+		name = "GFX_unit_YZ_0721_detonator_company_icon_medium_white"
+		textureFile = "gfx/counters/onmap_YZ_0721_detonator_company_icon.png"
 		noOfFrames = 2
-   	}
+	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_unit_YZ_0721_detonator_company_icon_small"
 		texturefile = "gfx/counters/onmap_YZ_0721_detonator_company_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-   	}
+		noOfFrames = 2
+	}
 	spriteType = {
 		name = "GFX_YZ_sp_land_detonator"
 		texturefile = "gfx/special_projects/sp_YZ_0721_detonator.dds"
@@ -1322,113 +1330,113 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_unit_yzc_artillery_brigade_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_art_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_art_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_artillery_brigade_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_art_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_art_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_artillery_brigade_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_art_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_art_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_infantry_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_infantry_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_infantry_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_infantry_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_infantry_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_infantry_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_infantry_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_infantry_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_infantry_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_mechanized_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_mechanized_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_mechanized_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_mechanized_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_mechanized_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_mechanized_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_mechanized_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_mechanized_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_mechanized_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_armor_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_modern_armor_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_modern_armor_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_armor_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_modern_armor_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_medium_armor_aa_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_medium_tank_antiair_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_medium_tank_antiair_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_medium_armor_aa_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_antiair_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_antiair_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_medium_armor_aa_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_antiair_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_antiair_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_self_propelled_artillery_brigade_icon_medium"
-		texturefile = "gfx/counters/yzc_units/unit_yzc_medium_tank_artillery_icon.png" 
+		texturefile = "gfx/counters/yzc_units/unit_yzc_medium_tank_artillery_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_self_propelled_artillery_brigade_icon_medium_white"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_artillery_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_artillery_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
 		name = "GFX_unit_yzc_self_propelled_artillery_brigade_icon_small"
-		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_artillery_icon.png" 
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_medium_tank_artillery_icon.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
@@ -1436,7 +1444,7 @@ spriteTypes = {
 		name = "GFX_yz_works_equipment_medium"
 		texturefile = "gfx/counters/yz_works_equipment.png"
 	}
-	   
+
 
 	spriteType = {
 		name = "GFX_Yuzu_soft_Tank_organization"
@@ -1506,19 +1514,19 @@ spriteTypes = {
 	}
 	#军官团
 	spriteType = {
-        name = "GFX_idea_naval_yuzusoft_spirit"
+		name = "GFX_idea_naval_yuzusoft_spirit"
 		texturefile = "gfx/ideas/navy.png"
 	}
 	spriteType = {
-        name = "GFX_idea_air_yuzusoft_spirit"
+		name = "GFX_idea_air_yuzusoft_spirit"
 		texturefile = "gfx/ideas/Propeller with Wings.png"
 	}
 	spriteType = {
-        name = "GFX_idea_army_yuzusoft_forces"
+		name = "GFX_idea_army_yuzusoft_forces"
 		texturefile = "gfx/ideas/Hat Military.png"
 	}
 	spriteType = {
-        name = "GFX_idea_army_yuzusoft_spirit_special_forces"
+		name = "GFX_idea_army_yuzusoft_spirit_special_forces"
 		texturefile = "gfx/ideas/special.png"
 	}
 	#统一决议

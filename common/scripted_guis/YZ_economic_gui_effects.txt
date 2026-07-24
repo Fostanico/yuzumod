@@ -11,7 +11,7 @@ scripted_gui = {
             #is_debug = yes
         }
         effects = {
-           open_yz_economic_operation_click = {
+            open_yz_economic_operation_click = {
                 if = {
                     limit = {
                         has_country_flag = show_yz_bonds_ui
@@ -21,8 +21,8 @@ scripted_gui = {
                 else = {
                     set_country_flag = show_yz_bonds_ui
                 }
-           }
-           open_yz_invest_ui_click = {
+            }
+            open_yz_invest_ui_click = {
                 if = {
                     limit = {
                         has_country_flag = show_yoshino_invest_ui
@@ -32,7 +32,7 @@ scripted_gui = {
                 else = {
                     set_country_flag = show_yoshino_invest_ui
                 }
-           }
+            }
         }
         triggers = {
             open_yz_economic_operation_click_enable = {
@@ -53,5 +53,5 @@ scripted_gui = {
                 clr_country_flag = show_yz_bonds_ui
             }
         }
-    }                                
-}                                                      
+    }
+}

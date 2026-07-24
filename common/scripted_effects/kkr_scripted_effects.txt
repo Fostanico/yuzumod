@@ -1,0 +1,96 @@
+# 玖玖瑠系统的国家级派生值入口。好感和研究源变量由事件、决议或每周入口写入；
+# 修改源变量后调用这里，避免用 on_daily 重复计算动态修正和服装档位。
+
+# Clamp kkr_favor 后一次性重建动态修正变量与自动服装档位。
+# 好感达到 150 后不再覆盖 kkr_clothes，以保留玩家手动换装选择。
+kkr_refresh_favor_outputs = {
+	if = {
+		limit = { has_country_flag = get_kkr }
+		clamp_variable = {
+			var = kkr_favor
+			min = 0
+			max = max_kkr_favor
+		}
+
+		set_temp_variable = { temp_kkr_favor_buff_caculate_1 = kkr_favor }
+		multiply_temp_variable = { temp_kkr_favor_buff_caculate_1 = 0.05 }
+		set_temp_variable = { temp_kkr_favor_buff_caculate_2 = temp_kkr_favor_buff_caculate_1 }
+		set_temp_variable = { temp_kkr_favor_buff_caculate_3 = temp_kkr_favor_buff_caculate_1 }
+		set_temp_variable = { temp_kkr_favor_buff_caculate_4 = temp_kkr_favor_buff_caculate_1 }
+		multiply_temp_variable = { temp_kkr_favor_buff_caculate_2 = 0.05 }
+		multiply_temp_variable = { temp_kkr_favor_buff_caculate_3 = 0.25 }
+		multiply_temp_variable = { temp_kkr_favor_buff_caculate_4 = -0.25 }
+		set_variable = { KKR_political_power = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_stability = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_research_speed_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_war_support_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_consumer_goods_factor = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_production_speed_buildings_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_industry_repair_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_speed_infrastructure_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_speed_industrial_complex_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_speed_arms_factory_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_industry_air_damage_factor = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_industrial_capacity_factory = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_factory_efficiency_gain_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_factory_max_efficiency_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_production_factory_start_efficiency_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_line_change_production_efficiency_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_local_resources_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_army_org_factor = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_army_core_defence_factor = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_army_core_attack_factor = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_mobilization_speed = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_recruitable_population_factor = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_army_attack_factor = temp_kkr_favor_buff_caculate_2 }
+		set_variable = { KKR_refit_ic_cost = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_refit_speed = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_repair_speed_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_subversive_activites_upkeep = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_intelligence_agency_defense = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_resistance_growth = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_army_bonus_air_superiority_factor = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_air_superiority_bonus_in_combat = temp_kkr_favor_buff_caculate_3 }
+		set_variable = { KKR_air_accidents_factor = temp_kkr_favor_buff_caculate_4 }
+		set_variable = { KKR_industrial_capacity_dockyard = temp_kkr_favor_buff_caculate_3 }
+
+		if = {
+			limit = { check_variable = { kkr_favor < 30 } }
+			set_variable = { kkr_clothes = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { kkr_favor > 29 }
+				check_variable = { kkr_favor < 70 }
+			}
+			set_variable = { kkr_clothes = 2 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { kkr_favor > 69 }
+				check_variable = { kkr_favor < 101 }
+			}
+			set_variable = { kkr_clothes = 3 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { kkr_favor > 100 }
+				check_variable = { kkr_favor < 150 }
+			}
+			set_variable = { kkr_clothes = 4 }
+		}
+	}
+}
+
+# 研究完成的幂等门。kkr_event_13_happened 防止决议直加与周结算同周重复触发事件。
+kkr_check_research_completion = {
+	if = {
+		limit = {
+			has_country_flag = kkr_is_researching
+			NOT = { has_country_flag = kkr_event_13_happened }
+			check_variable = { kkr_research_progress > 99 }
+		}
+		country_event = kkr_event.13
+		set_country_flag = kkr_event_13_happened
+	}
+}

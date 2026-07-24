@@ -1,2394 +1,2420 @@
 yzrecruit_murasame = {
-	add_political_power = -10
-	set_country_flag = have_murasame
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Murasame
-				name = "丛雨酱"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Murasame.png"
-						small = "gfx\leader\Murasame2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				advisor = {  
-					slot = high_command
-					cost = 150
-					idea_token = Murasame_command
-					desc = Murasame_army_desc
-					ledger = army
-					traits = { Murasame_army }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				corps_commander = {
-					desc = Murasame_corps_desc
-				traits={
-					brilliant_strategist 
-					trait_reckless 
-					inflexible_strategist 
-					ranger 
-					JAP_communist_sympathizer 
-					maid_congyu_trait
-				}
-				skill=5
-				attack_skill=6
-				defense_skill=4
-				planning_skill=2
-				logistics_skill=4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_murasame
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Murasame
+                name = "丛雨酱"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Murasame.png"
+                        small = "gfx/leader/Murasame2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = high_command
+                    cost = 150
+                    idea_token = Murasame_command
+                    desc = Murasame_army_desc
+                    traits = { Murasame_army }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                corps_commander = {
+                    desc = Murasame_corps_desc
+                    traits={
+                        brilliant_strategist
+                        trait_reckless
+                        inflexible_strategist
+                        ranger
+                        JAP_communist_sympathizer
+                        maid_congyu_trait
+                    }
+                    skill=5
+                    attack_skill=6
+                    defense_skill=4
+                    planning_skill=2
+                    logistics_skill=4
+                }
+            }
+        }
+    }
 }
 yzrecruit_lena = {
-	add_political_power = -10
-	set_country_flag = have_lena
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {    
-		text = {
-			generate_character = {
-				token_base = Lena
-				name = "蕾娜·列支敦瑙尔"
-				can_be_captured = no
-				gender = female
-				nationality = FIN
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Lena.png"
-						small = "gfx\leader\Lena2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Lena_corps_desc
-				traits={
-					jaeger
-					winter_specialist
-					trait_engineer
-					maid_lena_trait
-				}
-				skill=5
-				attack_skill=3
-				defense_skill=6
-				planning_skill=3
-				logistics_skill=6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_lena
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Lena
+                name = "蕾娜·列支敦瑙尔"
+                can_be_captured = no
+                gender = female
+                nationality = FIN
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Lena.png"
+                        small = "gfx/leader/Lena2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Lena_corps_desc
+                    traits={
+                        jaeger
+                        winter_specialist
+                        trait_engineer
+                        maid_lena_trait
+                    }
+                    skill=5
+                    attack_skill=3
+                    defense_skill=6
+                    planning_skill=3
+                    logistics_skill=6
+                }
+            }
+        }
+    }
 }
 yzrecruit_mako = {
-	add_political_power = -10
-	set_country_flag = have_mako
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Mako
-				name = "常陆茉子"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Mako.png"
-						small = "gfx\leader\Mako2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				advisor = {  
-					slot = high_command
-					cost = 150
-					idea_token = Mako_command
-					desc = Mako_army_desc
-					ledger = army
-					traits = { Mako_army }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				corps_commander = {
-					desc = Mako_corps_desc
-				traits={
-					operative_skill 
-					ranger commando 
-					offensive_doctrine 
-					victory_through_airpower  
-					trait_cautious armor_officer  
-					maid_mozi_trait
-				}
-				skill=5
-				attack_skill=6
-				defense_skill=3
-				planning_skill=7
-				logistics_skill=8
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_mako
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Mako
+                name = "常陆茉子"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Mako.png"
+                        small = "gfx/leader/Mako2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = high_command
+                    cost = 150
+                    idea_token = Mako_command
+                    desc = Mako_army_desc
+                    traits = { Mako_army }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                corps_commander = {
+                    desc = Mako_corps_desc
+                    traits={
+                        operative_skill
+                        ranger commando
+                        offensive_doctrine
+                        victory_through_airpower
+                        trait_cautious armor_officer
+                        maid_mozi_trait
+                    }
+                    skill=5
+                    attack_skill=6
+                    defense_skill=3
+                    planning_skill=7
+                    logistics_skill=8
+                }
+            }
+        }
+    }
 }
 yzrecruit_yoshino = {
-	add_political_power = -10
-	country_event = { id = yoshino_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	set_country_flag = have_yoshino
-	hidden_effect = {
-		play_song = youzu27
-	}
+    add_political_power = -10
+    country_event = { id = yoshino_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    set_country_flag = have_yoshino
+    hidden_effect = {
+        play_song = youzu27
+    }
 }
 yzrecruit_luchun = {
-	set_country_flag = have_luchun
-	if = {
-		limit = {
-			has_country_flag = qiyong_youzi_2
-		}
-		set_country_flag = start_roko
-		add_to_variable = { num_YZ_general = 2 }
-		set_variable = { koharu_favor = 0 }
-		set_variable = { roka_favor = 0 }
-		set_variable = { roko_intensity = 0 }
-		set_variable = { roko_peace_factor = 0 }
-	}
-	else = {
-		custom_effect_tooltip = roko_peace_tt
-		set_country_flag = have_roka
-		meta_effect = {
-			text = {
-				generate_character = {
-				token_base = Kurama_Roka
-				name = "马庭芦花"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Roka.png"
-							small = "gfx\leader\Roka2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-						desc = Roka_corps_desc
-						traits={
-							yz_roka_trait
-						}
-						skill=5
-						attack_skill=5
-						defense_skill=5
-						planning_skill=5
-						logistics_skill=5
-					}
-				}
-			}
-		}
-		set_country_flag = have_koharu
-		meta_effect = {
-			text = {
-				generate_character = {
-				token_base = Kurama_Koharu
-				name = "鞍马小春"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Koharu.png"
-							small = "gfx\leader\Koharu2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-						desc = koharu_corps_desc
-						traits={
-							yz_koharu_trait
-						}
-						skill=5
-						attack_skill=5
-						defense_skill=5
-						planning_skill=5
-						logistics_skill=5
-					}
-				}
-			}
-		}
-	}
-	add_political_power = -20			
+    set_country_flag = have_luchun
+    if = {
+        limit = {
+            has_country_flag = qiyong_youzi_2
+        }
+        set_country_flag = start_roko
+        add_to_variable = { num_YZ_general = 2 }
+        set_variable = { koharu_favor = 0 }
+        set_variable = { roka_favor = 0 }
+        set_variable = { roko_intensity = 0 }
+        set_variable = { roko_peace_factor = 0 }
+    }
+    else = {
+        custom_effect_tooltip = roko_peace_tt
+        set_country_flag = have_roka
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Kurama_Roka
+                    name = "马庭芦花"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Roka.png"
+                            small = "gfx/leader/Roka2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        desc = Roka_corps_desc
+                        traits={
+                            yz_roka_trait
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=5
+                        planning_skill=5
+                        logistics_skill=5
+                    }
+                }
+            }
+        }
+        set_country_flag = have_koharu
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Kurama_Koharu
+                    name = "鞍马小春"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Koharu.png"
+                            small = "gfx/leader/Koharu2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        desc = koharu_corps_desc
+                        traits={
+                            yz_koharu_trait
+                        }
+                        skill=5
+                        attack_skill=5
+                        defense_skill=5
+                        planning_skill=5
+                        logistics_skill=5
+                    }
+                }
+            }
+        }
+    }
+    add_political_power = -20
 }
 yzrecruit_nene = {
-	add_political_power = -10
-	set_country_flag = have_ningning     ##宣称我已经有宁宁了（不是）
-	country_event = { id = tongyong_event.1 } ##触发好感度事件
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				legacy_id = 10001
-				token_base = Ayachi_Nene
-				name = "绫地宁宁"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\0d00.png"
-						small = "gfx\leader\Nene2.png"
-					}
-					army = {
-						large = "gfx\leader\Nene.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_nuclear_specialist
-						scientist_trait_nuclear_power_expert 
-						scientist_trait_brilliant_theorist 
-					}
-					skills = {
-						specialization_nuclear = 3
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = ningning_corps_desc
-					traits = {
-						trait_engineer
-						inspirational_leader
-						trait_reckless
-						fortress_buster
-						expert_delegator
-						JAP_communist_sympathizer
-						maid_ninging_trait
-					}
-					skill = 5
-					attack_skill = 7
-					defense_skill = 2
-					planning_skill = 1
-					logistics_skill = 6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_ningning     ##宣称我已经有宁宁了（不是）
+    country_event = { id = tongyong_event.1 } ##触发好感度事件
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Ayachi_Nene
+                # legacy_id = 10001 # Unsupported by generate_character in HOI4 1.19.2.
+                name = "绫地宁宁"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/0d00.png"
+                        small = "gfx/leader/Nene2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Nene.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_nuclear_specialist
+                        scientist_trait_nuclear_power_expert
+                        scientist_trait_brilliant_theorist
+                    }
+                    skills = {
+                        specialization_nuclear = 3
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = ningning_corps_desc
+                    traits = {
+                        trait_engineer
+                        inspirational_leader
+                        trait_reckless
+                        fortress_buster
+                        expert_delegator
+                        JAP_communist_sympathizer
+                        maid_ninging_trait
+                    }
+                    skill = 5
+                    attack_skill = 7
+                    defense_skill = 2
+                    planning_skill = 1
+                    logistics_skill = 6
+                }
+            }
+        }
+    }
 }
 yzrecruit_chou = {
-	add_political_power = -10
-	set_country_flag = have_chou
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = chou
-				name = "椎叶䌷"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\chou.png"
-						small = "gfx\leader\chou2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = chou_corps_desc
-				traits={
-					maid_chou_trait  
-					organizer trait_cautious 
-					infantry_officer 
-					urban_assault_specialist
-					defensive_doctrine
-					skilled_staffer
-				}           
-				skill=5
-				attack_skill=4
-				defense_skill=5
-				planning_skill=4
-				logistics_skill=6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_chou
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = chou
+                name = "椎叶䌷"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/chou.png"
+                        small = "gfx/leader/chou2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = chou_corps_desc
+                    traits={
+                        maid_chou_trait
+                        organizer trait_cautious
+                        infantry_officer
+                        urban_assault_specialist
+                        defensive_doctrine
+                        skilled_staffer
+                    }
+                    skill=5
+                    attack_skill=4
+                    defense_skill=5
+                    planning_skill=4
+                    logistics_skill=6
+                }
+            }
+        }
+    }
 }
 yzrecruit_megulu = {
-	add_political_power = -10
-	set_country_flag = have_meigulu
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Meguru
-				name = "因幡爱瑠"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Inaba_Meguru.png"
-						small = "gfx\leader\Meguru2.png"
-					}
-					army = {
-						large = "gfx\leader\Meguru.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_armored_specialist
-						scientist_trait_fast_learner
-					}
-					skills = {
-						specialization_land = 2
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				advisor = {  
-					slot = high_command
-					cost = 150
-					idea_token = Meguru_command
-					desc = Meguru_army_desc
-					ledger = army
-					traits = { Meguru_army }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				corps_commander = {
-					desc = Meguru_corps_desc
-				traits={
-					organizer 
-					trait_cautious 
-					inflexible_strategist 
-					camouflage_expert 
-					panzer_leader 
-					JAP_communist_sympathizer 
-					maid_meigulu_trait
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=2
-				planning_skill=5
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_meigulu
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Meguru
+                name = "因幡爱瑠"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Inaba_Meguru.png"
+                        small = "gfx/leader/Meguru2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Meguru.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_armored_specialist
+                        scientist_trait_fast_learner
+                    }
+                    skills = {
+                        specialization_land = 2
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = high_command
+                    cost = 150
+                    idea_token = Meguru_command
+                    desc = Meguru_army_desc
+                    traits = { Meguru_army }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                corps_commander = {
+                    desc = Meguru_corps_desc
+                    traits={
+                        organizer
+                        trait_cautious
+                        inflexible_strategist
+                        camouflage_expert
+                        panzer_leader
+                        JAP_communist_sympathizer
+                        maid_meigulu_trait
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=2
+                    planning_skill=5
+                    logistics_skill=5
+                }
+            }
+        }
+    }
 }
 yzrecruit_toko = {
-	add_political_power = -10
-	set_country_flag = have_toko
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Toko
-				name = "户隐憧子"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Toko.png"
-						small = "gfx\leader\Toko2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				set_character_flag = yz_government_flag
-				advisor = {  
-					slot = army_chief
-					cost = 150
-					idea_token = toko_chief
-					desc = Toko_army_desc
-					ledger = army
-					traits = { Toko_army }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_gifted_engineer
-						scientist_trait_brilliant_theorist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_land = 3
-					}
-				}
-				corps_commander = {
-					desc = Toko_corps_desc
-				traits={
-					maid_toko_trait
-					cavalry_officer 
-					harsh_leader
-					logistics_wizard
-					trait_reckless
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=3
-				planning_skill=5
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_toko
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Toko
+                name = "户隐憧子"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Toko.png"
+                        small = "gfx/leader/Toko2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = army_chief
+                    cost = 150
+                    idea_token = toko_chief
+                    desc = Toko_army_desc
+                    traits = { Toko_army }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_gifted_engineer
+                        scientist_trait_brilliant_theorist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_land = 3
+                    }
+                }
+                corps_commander = {
+                    desc = Toko_corps_desc
+                    traits={
+                        maid_toko_trait
+                        cavalry_officer
+                        harsh_leader
+                        logistics_wizard
+                        trait_reckless
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=3
+                    planning_skill=5
+                    logistics_skill=5
+                }
+            }
+        }
+    }
+    hidden_effect = {
+        every_character = {
+            limit = {
+                has_trait = Toko_army
+                NOT = { has_character_flag = yz_government_flag }
+            }
+            set_character_flag = yz_government_flag
+        }
+    }
 }
 yzrecruit_wakana = {
-	add_political_power = -10
-	set_country_flag = have_wakana
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Wakana
-				name = "仮屋和奏"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Wakana.png"
-						small = "gfx\leader\Wakana2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = wakana_corps_desc
-				traits={
-					maid_wakana_trait 
-					infantry_officer
-					urban_assault_specialist
-					war_hero
-					trait_reckless
-				}
-				skill=4
-				attack_skill=4
-				defense_skill=4
-				planning_skill=3
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_wakana
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Wakana
+                name = "仮屋和奏"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Wakana.png"
+                        small = "gfx/leader/Wakana2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = wakana_corps_desc
+                    traits={
+                        maid_wakana_trait
+                        infantry_officer
+                        urban_assault_specialist
+                        war_hero
+                        trait_reckless
+                    }
+                    skill=4
+                    attack_skill=4
+                    defense_skill=4
+                    planning_skill=3
+                    logistics_skill=5
+                }
+            }
+        }
+    }
 }
 yzrecruit_ayase = {
-	set_country_flag = have_0nai
-	hidden_effect = {
-		play_song = youzu9
-	}
-	add_political_power = -10
-	country_event = { id = ayase_event.1 }
-	country_event = { id = tongyong_event.1 }   #2025.3.10
-	add_to_variable = { num_YZ_general = 2 }
+    set_country_flag = have_0nai
+    hidden_effect = {
+        play_song = youzu9
+    }
+    add_political_power = -10
+    country_event = { id = ayase_event.1 }
+    country_event = { id = tongyong_event.1 }   #2025.3.10
+    add_to_variable = { num_YZ_general = 2 }
 }
 yzrecruit_nanami = {
-	add_political_power = -10
-	set_country_flag = have_nanami
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Nanami
-				name = "在原七海"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Nanami.png"
-						small = "gfx\leader\Nanami2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Nanami_corps_desc
-				traits={
-					brilliant_strategist 
-					trait_reckless 
-					bearer_of_artillery 
-					urban_assault_specialist 
-					nkvd_rezident 
-					JAP_communist_sympathizer 
-					anti_fascist_agent 
-					maid_qihai_trait
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=3
-				planning_skill=5
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_nanami
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Nanami
+                name = "在原七海"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Nanami.png"
+                        small = "gfx/leader/Nanami2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Nanami_corps_desc
+                    traits={
+                        brilliant_strategist
+                        trait_reckless
+                        bearer_of_artillery
+                        urban_assault_specialist
+                        nkvd_rezident
+                        JAP_communist_sympathizer
+                        anti_fascist_agent
+                        maid_qihai_trait
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=3
+                    planning_skill=5
+                    logistics_skill=5
+                }
+            }
+        }
+    }
 }
 yzrecruit_hazuki = {
-	set_country_flag = have_hazuki
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	add_political_power = -10
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = nijouin_Hazuki
-				name = "二条院羽月"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Nijōin_Hazuki.png"
-						small = "gfx\leader\Hazuki2.png"
-					}
-					army = {
-						large = "gfx\leader\Hazuki.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_surface_ship_specialist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_naval = 2
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = hazuki_corps_desc
-				traits={
-					maid_hazuki_trait
-					naval_invader
-					invader_ii
-					naval_liason
-					harsh_leader
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=5
-				planning_skill=4
-				logistics_skill=3
-				}
-			}
-		}
-	}
+    set_country_flag = have_hazuki
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    add_political_power = -10
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = nijouin_Hazuki
+                name = "二条院羽月"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Nijōin_Hazuki.png"
+                        small = "gfx/leader/Hazuki2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Hazuki.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_surface_ship_specialist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_naval = 2
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = hazuki_corps_desc
+                    traits={
+                        maid_hazuki_trait
+                        naval_invader
+                        invader_ii
+                        naval_liason
+                        harsh_leader
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=5
+                    planning_skill=4
+                    logistics_skill=3
+                }
+            }
+        }
+    }
 }
 yzrecruit_mayu = {
-	add_political_power = -10
-	set_country_flag = have_Mayu     
-	country_event = { id = tongyong_event.1 } 
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Shikibe_Mayu
-				name = "式部茉优"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Shikibe_Mayu.png"
-						small = "gfx\leader\Mayu2.png"
-					}
-					army = {
-						large = "gfx\leader\Mayu.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_aircraft_specialist
-						scientist_trait_rocketry_specialist
-						scientist_trait_electronics_specialist 
-						scientist_trait_genius
-						scientist_trait_gifted_engineer
-						scientist_trait_brilliant_theorist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_air = 5
-						specialization_land = 5
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Mayu_corps_desc
-					traits = {
-						brilliant_strategist
-						thorough_planner
-						organizer
-						maid_Mayu_trait
-					}
-					skill = 5
-					attack_skill = 3
-					defense_skill = 4
-					planning_skill = 5
-					logistics_skill = 5
-				}
-			}
-		}
-	}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Shikibe_Mayu_1
-				name = "式部茉优"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Shikibe_Mayu.png"
-						small = "gfx\leader\Mayu2.png"
-					}
-					army = {
-						large = "gfx\leader\Mayu.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_aircraft_specialist
-						scientist_trait_rocketry_specialist
-						scientist_trait_electronics_specialist 
-						scientist_trait_genius
-						scientist_trait_gifted_engineer
-						scientist_trait_brilliant_theorist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_land = 5
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-			}
-		}
-	}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Shikibe_Mayu_2
-				name = "式部茉优"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Shikibe_Mayu.png"
-						small = "gfx\leader\Mayu2.png"
-					}
-					army = {
-						large = "gfx\leader\Mayu.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_aircraft_specialist
-						scientist_trait_rocketry_specialist
-						scientist_trait_electronics_specialist 
-						scientist_trait_genius
-						scientist_trait_gifted_engineer
-						scientist_trait_brilliant_theorist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_nuclear = 5
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-			}
-		}
-	}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Shikibe_Mayu_3
-				name = "式部茉优"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Shikibe_Mayu.png"
-						small = "gfx\leader\Mayu2.png"
-					}
-					army = {
-						large = "gfx\leader\Mayu.png"
-					}
-				}
-				scientist = {
-					traits = {
-						scientist_trait_aircraft_specialist
-						scientist_trait_rocketry_specialist
-						scientist_trait_electronics_specialist 
-						scientist_trait_genius
-						scientist_trait_gifted_engineer
-						scientist_trait_brilliant_theorist
-						scientist_trait_resourceful
-					}
-					skills = {
-						specialization_naval = 5
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_Mayu
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Shikibe_Mayu
+                name = "式部茉优"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Shikibe_Mayu.png"
+                        small = "gfx/leader/Mayu2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Mayu.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_aircraft_specialist
+                        scientist_trait_rocketry_specialist
+                        scientist_trait_electronics_specialist
+                        scientist_trait_genius
+                        scientist_trait_gifted_engineer
+                        scientist_trait_brilliant_theorist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_air = 5
+                        specialization_land = 5
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Mayu_corps_desc
+                    traits = {
+                        brilliant_strategist
+                        thorough_planner
+                        organizer
+                        maid_Mayu_trait
+                    }
+                    skill = 5
+                    attack_skill = 3
+                    defense_skill = 4
+                    planning_skill = 5
+                    logistics_skill = 5
+                }
+            }
+        }
+    }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Shikibe_Mayu_1
+                name = "式部茉优"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Shikibe_Mayu.png"
+                        small = "gfx/leader/Mayu2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Mayu.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_aircraft_specialist
+                        scientist_trait_rocketry_specialist
+                        scientist_trait_electronics_specialist
+                        scientist_trait_genius
+                        scientist_trait_gifted_engineer
+                        scientist_trait_brilliant_theorist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_land = 5
+                        specialization_air = 1
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+            }
+        }
+    }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Shikibe_Mayu_2
+                name = "式部茉优"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Shikibe_Mayu.png"
+                        small = "gfx/leader/Mayu2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Mayu.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_aircraft_specialist
+                        scientist_trait_rocketry_specialist
+                        scientist_trait_electronics_specialist
+                        scientist_trait_genius
+                        scientist_trait_gifted_engineer
+                        scientist_trait_brilliant_theorist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_nuclear = 5
+                        specialization_air = 1
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+            }
+        }
+    }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Shikibe_Mayu_3
+                name = "式部茉优"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Shikibe_Mayu.png"
+                        small = "gfx/leader/Mayu2.png"
+                    }
+                    army = {
+                        large = "gfx/leader/Mayu.png"
+                    }
+                }
+                scientist = {
+                    traits = {
+                        scientist_trait_aircraft_specialist
+                        scientist_trait_rocketry_specialist
+                        scientist_trait_electronics_specialist
+                        scientist_trait_genius
+                        scientist_trait_gifted_engineer
+                        scientist_trait_brilliant_theorist
+                        scientist_trait_resourceful
+                    }
+                    skills = {
+                        specialization_naval = 5
+                        specialization_air = 1
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+            }
+        }
+    }
 }
 yzrecruit_chisaki = {
-	add_political_power = -10
-	set_country_flag = have_chisaki
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = chisaki
-				name = "壬生千咲"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\chisaki.png"
-						small = "gfx\leader\chisaki2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = chisaki_corps_desc
-				traits={
-					infantry_leader
-					paratrooper
-					maid_chisaki_trait
-					inflexible_strategist
-				}
-				skill=5
-				attack_skill=4 
-				defense_skill=4
-				planning_skill=4
-				logistics_skill=4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_chisaki
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = chisaki
+                name = "壬生千咲"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/chisaki.png"
+                        small = "gfx/leader/chisaki2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = chisaki_corps_desc
+                    traits={
+                        infantry_leader
+                        paratrooper
+                        maid_chisaki_trait
+                        inflexible_strategist
+                    }
+                    skill=5
+                    attack_skill=4
+                    defense_skill=4
+                    planning_skill=4
+                    logistics_skill=4
+                }
+            }
+        }
+    }
 }
 yzrecruit_kanna = {
-	add_political_power = -10
-	set_country_flag = have_kanna
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = kanna
-				name = "明月栞那"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\kanna.png"
-						small = "gfx\leader\kanna2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				set_character_flag = yz_government_flag
-				advisor = {  
-					slot = air_chief
-					cost = 150
-					idea_token = kanna_chief
-					desc = kanna_air_desc
-					ledger = army
-					traits = { kanna_chief }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				corps_commander = {
-					desc = kanna_corps_desc
-				traits={
-					political_dancer  
-					guerilla_fighter 
-					urban_assault_specialist 
-					trickster 
-					panzer_leader 
-					maid_kanna_trait 
-				}
-				skill=5
-				attack_skill=7
-				defense_skill=5
-				planning_skill=7
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_kanna
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = kanna
+                name = "明月栞那"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/kanna.png"
+                        small = "gfx/leader/kanna2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = air_chief
+                    cost = 150
+                    idea_token = kanna_chief
+                    desc = kanna_air_desc
+                    traits = { kanna_chief }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                corps_commander = {
+                    desc = kanna_corps_desc
+                    traits={
+                        political_dancer
+                        guerilla_fighter
+                        urban_assault_specialist
+                        trickster
+                        panzer_leader
+                        maid_kanna_trait
+                    }
+                    skill=5
+                    attack_skill=7
+                    defense_skill=5
+                    planning_skill=7
+                    logistics_skill=5
+                }
+            }
+        }
+    }
+    hidden_effect = {
+        every_character = {
+            limit = {
+                has_trait = kanna_chief
+                NOT = { has_character_flag = yz_government_flag }
+            }
+            set_character_flag = yz_government_flag
+        }
+    }
 }
 yzrecruit_zaozi = {
-	add_political_power = -10
-	set_country_flag = have_zaozi
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = zaozi
-				name = "四季夏目"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\zaozi.png"
-						small = "gfx\leader\zaozi2.png"
-					}
-				}
-				advisor = {  
-					slot = high_command
-					cost = 150
-					idea_token = Zaozi_command
-					desc = zaozi_air_desc
-					ledger = army
-					traits = { zaozi_air }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				
-				corps_commander = {
-					desc = zaozi_corps_desc
-				traits={
-					maid_zaozi_trait 
-					harsh_leader 
-					inflexible_strategist 
-					inspirational_leader 
-					trickster career_officer 
-				}
-				skill=5
-				attack_skill=6
-				defense_skill=2
-				planning_skill=3
-				logistics_skill=6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_zaozi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = zaozi
+                name = "四季夏目"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/zaozi.png"
+                        small = "gfx/leader/zaozi2.png"
+                    }
+                }
+                advisor = {
+                    slot = high_command
+                    cost = 150
+                    idea_token = Zaozi_command
+                    desc = zaozi_air_desc
+                    traits = { zaozi_air }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+
+                corps_commander = {
+                    desc = zaozi_corps_desc
+                    traits={
+                        maid_zaozi_trait
+                        harsh_leader
+                        inflexible_strategist
+                        inspirational_leader
+                        trickster career_officer
+                    }
+                    skill=5
+                    attack_skill=6
+                    defense_skill=2
+                    planning_skill=3
+                    logistics_skill=6
+                }
+            }
+        }
+    }
 }
 yzrecruit_nozomi = {
-	add_political_power = -10
-	set_country_flag = have_nozomi
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Nozomi
-				name = "墨染希"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Nozomi.png"
-						small = "gfx\leader\Nozomi2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Nozomi_corps_desc
-				traits={
-					maid_nozomi_trait 
-					adaptable
-					logistics_wizard
-					trait_reckless
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=3
-				planning_skill=8
-				logistics_skill=5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_nozomi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Nozomi
+                name = "墨染希"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Nozomi.png"
+                        small = "gfx/leader/Nozomi2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Nozomi_corps_desc
+                    traits={
+                        maid_nozomi_trait
+                        adaptable
+                        logistics_wizard
+                        trait_reckless
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=3
+                    planning_skill=8
+                    logistics_skill=5
+                }
+            }
+        }
+    }
 }
 yzrecruit_mei = {
-	set_country_flag = have_mei
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Hiuchidani_Mei
-				name = "火打谷爱衣"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Mei.png"
-						small = "gfx\leader\Mei2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Hiuchidani_corps_desc
-					traits = {
-						yz_mei_trait
-						infantry_officer
-						yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 8
-					defense_skill = 2
-					planning_skill = 2
-					logistics_skill = 6
-				}
-			}
-		}
-	}
+    set_country_flag = have_mei
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Hiuchidani_Mei
+                name = "火打谷爱衣"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Mei.png"
+                        small = "gfx/leader/Mei2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Hiuchidani_corps_desc
+                    traits = {
+                        yz_mei_trait
+                        infantry_officer
+                        yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 8
+                    defense_skill = 2
+                    planning_skill = 2
+                    logistics_skill = 6
+                }
+            }
+        }
+    }
 }
 yzrecruit_fumika = {
-	add_political_power = -10
-	set_country_flag = have_fumika
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Fumika
-				name = "百里风实花"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Fumika.png"
-						small = "gfx\leader\Fumika2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				set_character_flag = yz_government_flag
-				advisor = {  
-					slot = army_chief
-					cost = 150
-					idea_token = fumika_chief
-					desc = Fumika_chief_desc
-					ledger = army
-					traits = { Fumika_chief }
-					ai_will_do = {
-						factor = 0
-					}
-				}
-				corps_commander = {
-					desc = Fumika_corps_desc
-				traits={
-					maid_fumika_trait 
-					old_guard
-					infantry_officer
-					cavalry_officer
-					trait_cautious
-					career_officer
-					organizer
-				}
-				skill=5
-				attack_skill=5
-				defense_skill=2
-				planning_skill=6
-				logistics_skill=4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_fumika
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Fumika
+                name = "百里风实花"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Fumika.png"
+                        small = "gfx/leader/Fumika2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                advisor = {
+                    slot = army_chief
+                    cost = 150
+                    idea_token = fumika_chief
+                    desc = Fumika_chief_desc
+                    traits = { Fumika_chief }
+                    ai_will_do = {
+                        factor = 0
+                    }
+                }
+                corps_commander = {
+                    desc = Fumika_corps_desc
+                    traits={
+                        maid_fumika_trait
+                        old_guard
+                        infantry_officer
+                        cavalry_officer
+                        trait_cautious
+                        career_officer
+                        organizer
+                    }
+                    skill=5
+                    attack_skill=5
+                    defense_skill=2
+                    planning_skill=6
+                    logistics_skill=4
+                }
+            }
+        }
+    }
+    hidden_effect = {
+        every_character = {
+            limit = {
+                has_trait = Fumika_chief
+                NOT = { has_character_flag = yz_government_flag }
+            }
+            set_character_flag = yz_government_flag
+        }
+    }
 }
 yzrecruit_orie = {
-	set_country_flag = have_orie
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Takadate_Orie
-				name = "高楯奥利叶"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Orie.png"
-						small = "gfx\leader\Orie2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Orie_corps_desc
-					traits = {
-						yz_orie_trait
-						infantry_officer
-						yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 8
-					logistics_skill = 8
-				}
-			}
-		}
-	}
+    set_country_flag = have_orie
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Takadate_Orie
+                name = "高楯奥利叶"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Orie.png"
+                        small = "gfx/leader/Orie2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Orie_corps_desc
+                    traits = {
+                        yz_orie_trait
+                        infantry_officer
+                        yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 8
+                    logistics_skill = 8
+                }
+            }
+        }
+    }
 }
 yzrecruit_noa = {
-	add_political_power = -10
-	country_event = { id = noa_event.1 }
-	set_country_flag = have_noa
+    add_political_power = -10
+    country_event = { id = noa_event.1 }
+    set_country_flag = have_noa
 }
 yzrecruit_amane = {
-	country_event = sairi_event.8
-	set_country_flag = have_amane
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
+    country_event = sairi_event.8
+    set_country_flag = have_amane
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
 }
 yzrecruit_kurumi = {
-	add_political_power = -10
-	set_country_flag = have_kurumi
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	country_event = sairi_event.11
+    add_political_power = -10
+    set_country_flag = have_kurumi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    country_event = sairi_event.11
 }
 yzrecruit_kaguya = {
-	add_political_power = -10
-	set_country_flag = have_kaguya
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Kaguya
-				name = "星河辉耶"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Kaguya.png"
-						small = "gfx\leader\Kaguya2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Kaguya_corps_desc
-					traits={
-						maid_kaguya_trait
-						bearer_of_artillery
-						adaptable
-						brilliant_strategist
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 4
-					planning_skill = 7
-					logistics_skill = 3  
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_kaguya
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Kaguya
+                name = "星河辉耶"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Kaguya.png"
+                        small = "gfx/leader/Kaguya2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Kaguya_corps_desc
+                    traits={
+                        maid_kaguya_trait
+                        bearer_of_artillery
+                        adaptable
+                        brilliant_strategist
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 4
+                    planning_skill = 7
+                    logistics_skill = 3
+                }
+            }
+        }
+    }
 }
 yzrecruit_airi = {
-	add_political_power = -10
-	set_country_flag = have_airi    
-	country_event = { id = tongyong_event.1 }       
-	add_to_variable = { num_YZ_general = 2 }
-	if = {
-		limit = {
-			has_country_flag = qiyong_youzi_2
-		}
-		set_country_flag = have_airi
-		set_country_flag = all_airi
-		custom_effect_tooltip = get_airi_advisor
-		meta_effect = {
-			text = {
-				generate_character = {
-					token_base = Airi_advisor
-					name = "白鹿爱莉"
-					can_be_captured = no
-					gender = female
-					nationality = JAP
-				set_character_flag = yz_government_flag
-					portraits = {
-						civilian = {
-							large = "gfx\leader\airi_advisor.png"
-							small = "gfx\leader\airi_advisor2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					allowed = {
-						
-					}
-					advisor = {  
-						slot = political_advisor
-						cost = 1
-						idea_token = Airi_advisor
-						traits = { trait_sub_Airi }
-						on_add = {
-							owner = {
-								custom_effect_tooltip = airi_60days
-								country_event = { id = airi_event.1 days = 60 }
-							}
-						}
-						ai_will_do = {
-							factor = 0
-						}
-					}
-				}
-			}
-		}
-	}
-	else = {
-		set_country_flag = have_airi
-		meta_effect = {
-			text = {
-				generate_character = {
-					token_base = Airi_1
-					name = "白鹿爱莉"
-					can_be_captured = no
-					gender = female
-					nationality = JAP
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Airi_unit_leader.png"
-							small = "gfx\leader\Airi_unit_leader2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-						traits={
-							yz_airi_trait
-							trait_reckless
-							trait_cautious
-							brilliant_strategist
-							infantry_leader
-						}
-						skill=3
-						attack_skill=4
-						defense_skill=2
-						planning_skill=4
-						logistics_skill=6
-					}
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_airi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    if = {
+        limit = {
+            has_country_flag = qiyong_youzi_2
+        }
+        set_country_flag = have_airi
+        set_country_flag = all_airi
+        custom_effect_tooltip = get_airi_advisor
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Airi_advisor
+                    name = "白鹿爱莉"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/airi_advisor.png"
+                            small = "gfx/leader/airi_advisor2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    # allowed = { } # generate_character 不支持该空块，原代码不会生效
+                    advisor = {
+                        slot = political_advisor
+                        cost = 1
+                        idea_token = Airi_advisor
+                        traits = { trait_sub_Airi }
+                        on_add = {
+                            owner = {
+                                custom_effect_tooltip = airi_60days
+                                country_event = { id = airi_event.1 days = 60 }
+                            }
+                        }
+                        ai_will_do = {
+                            factor = 0
+                        }
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            every_character = {
+                limit = {
+                    has_trait = trait_sub_Airi
+                    NOT = { has_character_flag = yz_government_flag }
+                }
+                set_character_flag = yz_government_flag
+            }
+        }
+    }
+    else = {
+        set_country_flag = have_airi
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Airi_1
+                    name = "白鹿爱莉"
+                    can_be_captured = no
+                    gender = female
+                    nationality = JAP
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Airi_unit_leader.png"
+                            small = "gfx/leader/Airi_unit_leader2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        traits={
+                            yz_airi_trait
+                            trait_reckless
+                            trait_cautious
+                            brilliant_strategist
+                            infantry_leader
+                        }
+                        skill=3
+                        attack_skill=4
+                        defense_skill=2
+                        planning_skill=4
+                        logistics_skill=6
+                    }
+                }
+            }
+        }
+    }
 }
 yzrecruit_shirley = {
-	add_political_power = -10
-	set_country_flag = have_shirley     
-	country_event = { id = tongyong_event.1 }       
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = shirley_warwick
-				name = "夏莉·沃里克"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\shirley.png" 
-						small = "gfx\leader\shirley2.png" 
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = shirley_corps_desc
-					traits = {
-					JAP_communist_sympathizer
-					maid_shirley_trait
-				}
-					skill = 5
-					attack_skill = 1
-					defense_skill = 8
-					planning_skill = 1
-					logistics_skill = 8
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_shirley
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = shirley_warwick
+                name = "夏莉·沃里克"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/shirley.png"
+                        small = "gfx/leader/shirley2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = shirley_corps_desc
+                    traits = {
+                        JAP_communist_sympathizer
+                        maid_shirley_trait
+                    }
+                    skill = 5
+                    attack_skill = 1
+                    defense_skill = 8
+                    planning_skill = 1
+                    logistics_skill = 8
+                }
+            }
+        }
+    }
 }
 yzrecruit_xiyin = {
-	add_political_power = -10
-	set_country_flag = have_yune
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = yune_amagiri
-				name = "天雾夕音"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Yune.png"
-						small = "gfx\leader\Yune2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = amagiri_corps_desc
-					traits = {
-						yz_yune_trait
-						#yz_baiban_trait
-						adaptable
-					}
-					skill = 7
-					attack_skill = 11
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 9
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_yune
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = yune_amagiri
+                name = "天雾夕音"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Yune.png"
+                        small = "gfx/leader/Yune2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = amagiri_corps_desc
+                    traits = {
+                        yz_yune_trait
+                        #yz_baiban_trait
+                        adaptable
+                    }
+                    skill = 7
+                    attack_skill = 11
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 9
+                }
+            }
+        }
+    }
 }
 yzrecruit_zhenxiao = {
-	add_political_power = -10
-	set_country_flag = have_masaki     
-	country_event = { id = tongyong_event.1 }       
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Masaki_G
-				name = "真咲·加亚尔"
-				can_be_captured = no
-				gender = female
-				nationality = FRA
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Masaki.png" 
-						small = "gfx\leader\Masaki2.png" 
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Masaki_corps_desc
-					traits = {
-						trait_engineer
-						inspirational_leader
-						trait_reckless
-						expert_delegator
-						JAP_communist_sympathizer
-						organizer 
-						maid_masaki_trait
-						adaptable
-						ranger 
-						winter_specialist 
-				}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 3
-					planning_skill = 3
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_masaki
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Masaki_G
+                name = "真咲·加亚尔"
+                can_be_captured = no
+                gender = female
+                nationality = FRA
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Masaki.png"
+                        small = "gfx/leader/Masaki2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Masaki_corps_desc
+                    traits = {
+                        trait_engineer
+                        inspirational_leader
+                        trait_reckless
+                        expert_delegator
+                        JAP_communist_sympathizer
+                        organizer
+                        maid_masaki_trait
+                        adaptable
+                        ranger
+                        winter_specialist
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 3
+                    planning_skill = 3
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_konoka = {
-	set_country_flag = have_konoka
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = hinomiya_konoka
-				name = "火宫木乃香"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Konoka.png"
-						small = "gfx\leader\Konoka2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Konoka_corps_desc
-					traits = {
-						#yz_konoda_trait
-						yz_konoka_trait
-						infantry_officer
-						yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_konoka
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = hinomiya_konoka
+                name = "火宫木乃香"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Konoka.png"
+                        small = "gfx/leader/Konoka2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Konoka_corps_desc
+                    traits = {
+                        #yz_konoda_trait
+                        yz_konoka_trait
+                        infantry_officer
+                        yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_tia = {
-	set_country_flag = have_tia
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Tia_Hohenwerfen 
-				name = "缇娅·霍芬威尔芬"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Tia.png"
-						small = "gfx\leader\Tia2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Tia_corps_desc
-					traits = {
-						yz_tia_trait
-						infantry_officer
-						#yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 7
-					defense_skill = 3
-					planning_skill = 9
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_tia
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Tia_Hohenwerfen
+                name = "缇娅·霍芬威尔芬"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Tia.png"
+                        small = "gfx/leader/Tia2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Tia_corps_desc
+                    traits = {
+                        yz_tia_trait
+                        infantry_officer
+                        #yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 7
+                    defense_skill = 3
+                    planning_skill = 9
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_miu = {
-	add_political_power = -10
-	set_country_flag = have_miu     
-	country_event = { id = tongyong_event.1 }       
-	add_to_variable = { num_YZ_general = 2 }
-	add_dynamic_modifier = {
-		modifier = YZ_vampire_modifier
-	}
-	custom_effect_tooltip = reinforce_vampire_modifier_tt
-	add_to_variable = { vampire_attack = 0.05}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Miu
-				name = "矢来美羽"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Miu.png" 
-						small = "gfx\leader\Miu2.png" 
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-				    desc = Miu_corps_desc
-					traits = {
-					trait_engineer
-					JAP_communist_sympathizer
-					maid_miu_trait
-					trait_maid_vampires
-					adaptable
-					ranger 
-					urban_assault_specialist
-					trait_mountaineer
-				}
-					skill = 5
-					attack_skill = 7
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 4
-				}
-				advisor = {
-					cost = 75
+    add_political_power = -10
+    set_country_flag = have_miu
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    add_dynamic_modifier = {
+        modifier = YZ_vampire_modifier
+    }
+    custom_effect_tooltip = reinforce_vampire_modifier_tt
+    add_to_variable = { vampire_attack = 0.05}
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Miu
+                name = "矢来美羽"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Miu.png"
+                        small = "gfx/leader/Miu2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Miu_corps_desc
+                    traits = {
+                        trait_engineer
+                        JAP_communist_sympathizer
+                        maid_miu_trait
+                        trait_maid_vampires
+                        adaptable
+                        ranger
+                        urban_assault_specialist
+                        trait_mountaineer
+                    }
+                    skill = 5
+                    attack_skill = 7
+                    defense_skill = 2
+                    planning_skill = 3
+                    logistics_skill = 4
+                }
+                advisor = {
+                    cost = 75
                     slot = political_advisor
                     idea_token = miu_advisor
-                    traits = { trait_sub_miu }      
+                    traits = { trait_sub_miu }
                 }
-			}
-		}
-	}
+            }
+        }
+    }
 }
 yzrecruit_hiyori = {
-	set_country_flag = have_bighouse
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = ofusa_hiyori
-				name = "大房妃依里"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\bighouse.png"
-						small = "gfx\leader\bighouse2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					traits = {
-						alexander_bartender
-					}
-					skill = 5
-					attack_skill = 4
-					defense_skill = 4
-					planning_skill = 6
-					logistics_skill = 8
-				}
-			}
-		}
-	}
+    set_country_flag = have_bighouse
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = ofusa_hiyori
+                name = "大房妃依里"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/bighouse.png"
+                        small = "gfx/leader/bighouse2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    traits = {
+                        alexander_bartender
+                    }
+                    skill = 5
+                    attack_skill = 4
+                    defense_skill = 4
+                    planning_skill = 6
+                    logistics_skill = 8
+                }
+            }
+        }
+    }
 }
 yzrecruit_nicola = {
-	set_country_flag = have_nicola
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	add_to_variable = { vampire_attack = 0.10}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Nicola_Cepheus
-				name = "尼古拉·凯菲乌斯"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Nicola.png"
-						small = "gfx\leader\Nicola2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Nicola_corps_desc
-					traits = {
-						yz_nicola_trait
-						infantry_officer
-						trait_maid_vampires
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_nicola
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    add_to_variable = { vampire_attack = 0.10}
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Nicola_Cepheus
+                name = "尼古拉·凯菲乌斯"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Nicola.png"
+                        small = "gfx/leader/Nicola2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Nicola_corps_desc
+                    traits = {
+                        yz_nicola_trait
+                        infantry_officer
+                        trait_maid_vampires
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_elina = {
-	add_political_power = -10
-	set_country_flag = have_elina_owen
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	add_to_variable = { vampire_attack = 0.05}
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = elina_owen
-				name = "艾莉娜·欧文"
-				can_be_captured = no
-				gender = female
-				nationality = SOV
-				portraits = {
-					civilian = {
-						large = "gfx\leader\elina_owen.png"
-						small = "gfx\leader\elina_owen2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = elina_corps_desc
-					traits = {
-						yz_elina_owen_trait
-						infantry_officer 
-						trait_maid_vampires
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 2
-					planning_skill = 6
-					logistics_skill = 4
-				}
-				add_dynamic_modifier = {
-					modifier = YZ_vampire_modifier
-				}
-				custom_effect_tooltip = reinforce_vampire_modifier_tt
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_elina_owen
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    add_to_variable = { vampire_attack = 0.05}
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = elina_owen
+                name = "艾莉娜·欧文"
+                can_be_captured = no
+                gender = female
+                nationality = SOV
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/elina_owen.png"
+                        small = "gfx/leader/elina_owen2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = elina_corps_desc
+                    traits = {
+                        yz_elina_owen_trait
+                        infantry_officer
+                        trait_maid_vampires
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 2
+                    planning_skill = 6
+                    logistics_skill = 4
+                }
+                add_dynamic_modifier = {
+                    modifier = YZ_vampire_modifier
+                }
+                custom_effect_tooltip = reinforce_vampire_modifier_tt
+            }
+        }
+    }
 }
 yzrecruit_liyin = {
-	add_political_power = -10
-	set_country_flag = have_rio
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Rio
-				name = "稻丛莉音"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Rio.png"
-						small = "gfx\leader\Rio2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Rio_corps_desc
-				traits={
-					maid_rio_trait_1
-					trait_maid_vampires
-					harsh_leader
-					inflexible_strategist
-					infantry_officer
-				}
-				skill=6
-				attack_skill=6
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=4
-				}
-			}
-		}
-	}
-	add_dynamic_modifier = {
-		modifier = YZ_vampire_modifier
-	}
-	custom_effect_tooltip = reinforce_vampire_modifier_tt
-	add_to_variable = { vampire_attack = 0.05}
+    add_political_power = -10
+    set_country_flag = have_rio
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Rio
+                name = "稻丛莉音"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Rio.png"
+                        small = "gfx/leader/Rio2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Rio_corps_desc
+                    traits={
+                        maid_rio_trait_1
+                        trait_maid_vampires
+                        harsh_leader
+                        inflexible_strategist
+                        infantry_officer
+                    }
+                    skill=6
+                    attack_skill=6
+                    defense_skill=3
+                    planning_skill=3
+                    logistics_skill=4
+                }
+            }
+        }
+    }
+    add_dynamic_modifier = {
+        modifier = YZ_vampire_modifier
+    }
+    custom_effect_tooltip = reinforce_vampire_modifier_tt
+    add_to_variable = { vampire_attack = 0.05}
 }
 yzrecruit_buliangzi = {
-	add_political_power = -10
-	set_country_flag = have_mera_azusa
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = mera_azusa
-				name = "布良梓"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\mera_azusa.png"
-						small = "gfx\leader\mera_azusa2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = azusa_corps_desc
-					traits = {
-						yz_mera_azusa_trait
-						infantry_officer
+    add_political_power = -10
+    set_country_flag = have_mera_azusa
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = mera_azusa
+                name = "布良梓"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/mera_azusa.png"
+                        small = "gfx/leader/mera_azusa2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = azusa_corps_desc
+                    traits = {
+                        yz_mera_azusa_trait
+                        infantry_officer
 
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_hinata = {
-	add_political_power = -10
-	set_country_flag = have_hinata
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = kunihiru_hinata
-				name = "国广日向"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Hinata.png"
-						small = "gfx\leader\Hinata2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Hinata_corps_desc
-					traits = {
-						yz_hinata_trait
-						false_big_sister
-						koise_jodan
-					}
-					skill = 4
-					attack_skill = 7
-					defense_skill = 1
-					planning_skill = 3
-					logistics_skill = 9
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_hinata
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = kunihiru_hinata
+                name = "国广日向"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Hinata.png"
+                        small = "gfx/leader/Hinata2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Hinata_corps_desc
+                    traits = {
+                        yz_hinata_trait
+                        false_big_sister
+                        koise_jodan
+                    }
+                    skill = 4
+                    attack_skill = 7
+                    defense_skill = 1
+                    planning_skill = 3
+                    logistics_skill = 9
+                }
+            }
+        }
+    }
 }
 yzrecruit_maya = {
-	add_political_power = -10
-	set_country_flag = have_maya
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = nagamitsu_maya
-				name = "长光麻夜"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Maya.png"
-						small = "gfx\leader\Maya2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Maya_corps_desc
-					traits = {
-						yz_maya_trait
-						infantry_officer
-						help_from_haishangdushi
-					}
-					skill = 7
-					attack_skill = 8
-					defense_skill = 6
-					planning_skill = 3
-					logistics_skill = 3
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_maya
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = nagamitsu_maya
+                name = "长光麻夜"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Maya.png"
+                        small = "gfx/leader/Maya2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Maya_corps_desc
+                    traits = {
+                        yz_maya_trait
+                        infantry_officer
+                        help_from_haishangdushi
+                    }
+                    skill = 7
+                    attack_skill = 8
+                    defense_skill = 6
+                    planning_skill = 3
+                    logistics_skill = 3
+                }
+            }
+        }
+    }
 }
 yzrecruit_sena = {
-	add_political_power = -10
-	set_country_flag = have_sena
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = tsukiyama_sena
-				name = "月山濑奈"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Sena.png"
-						small = "gfx\leader\Sena2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Sena_corps_desc
-					traits = {
-						yz_sena_trait
-						infantry_officer
-						sena_gainianshen_da
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 3
-					logistics_skill = 13
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_sena
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = tsukiyama_sena
+                name = "月山濑奈"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Sena.png"
+                        small = "gfx/leader/Sena2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Sena_corps_desc
+                    traits = {
+                        yz_sena_trait
+                        infantry_officer
+                        sena_gainianshen_da
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 3
+                    logistics_skill = 13
+                }
+            }
+        }
+    }
 }
 yzrecruit_akari = {
-	set_country_flag = have_akari
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = kanemoto_akari
-				name = "兼元灯里"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Akari.png"
-						small = "gfx\leader\Akari2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = akari_corps_desc
-					traits = {
-						yz_akari_trait
-						infantry_officer
-						aojiao_de_daxiaojie
-						akari_dahefuzi
-					}
-					skill = 6
-					attack_skill = 3
-					defense_skill = 6
-					planning_skill = 8
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_akari
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = kanemoto_akari
+                name = "兼元灯里"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Akari.png"
+                        small = "gfx/leader/Akari2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = akari_corps_desc
+                    traits = {
+                        yz_akari_trait
+                        infantry_officer
+                        aojiao_de_daxiaojie
+                        akari_dahefuzi
+                    }
+                    skill = 6
+                    attack_skill = 3
+                    defense_skill = 6
+                    planning_skill = 8
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_shizuru = {
-	add_political_power = -10
-	set_country_flag = have_shizuru
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = shizuru
-				name = "正宗静流"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Shizuru.png"
-						small = "gfx\leader\Shizuru2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Shizuru_corps_desc
-					traits = {
-						yz_shizuru_trait
-						oupai_nai_kenjuuna_juse
-					}
-					skill = 6
-					attack_skill = 8
-					defense_skill = 3
-					planning_skill = 7
-					logistics_skill = 7
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_shizuru
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = shizuru
+                name = "正宗静流"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Shizuru.png"
+                        small = "gfx/leader/Shizuru2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Shizuru_corps_desc
+                    traits = {
+                        yz_shizuru_trait
+                        oupai_nai_kenjuuna_juse
+                    }
+                    skill = 6
+                    attack_skill = 8
+                    defense_skill = 3
+                    planning_skill = 7
+                    logistics_skill = 7
+                }
+            }
+        }
+    }
 }
 yzrecruit_chihaya = {
-	add_political_power = -10
-	set_country_flag = have_chihaya
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Chihaya
-				name = "上坂茅羽耶"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Chihaya.png"
-						small = "gfx\leader\Chihaya2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = Chihaya_corps_desc
-				traits={
-					maid_chihaya_trait_1
-				}
-				skill=1
-				attack_skill=1
-				defense_skill=1
-				planning_skill=1
-				logistics_skill=1
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_chihaya
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Chihaya
+                name = "上坂茅羽耶"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Chihaya.png"
+                        small = "gfx/leader/Chihaya2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = Chihaya_corps_desc
+                    traits={
+                        maid_chihaya_trait_1
+                    }
+                    skill=1
+                    attack_skill=1
+                    defense_skill=1
+                    planning_skill=1
+                    logistics_skill=1
+                }
+            }
+        }
+    }
 }
 yzrecruit_sasara = {
-	add_political_power = -10
-	set_country_flag = have_sasara
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = sasara
-				name = "七条沙沙罗"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Sasara.png"
-						small = "gfx\leader\Sasara2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = sasara_corps_desc
-					traits = {
-						yz_sasara_trait
-						yz_baiban_trait
+    add_political_power = -10
+    set_country_flag = have_sasara
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = sasara
+                name = "七条沙沙罗"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Sasara.png"
+                        small = "gfx/leader/Sasara2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = sasara_corps_desc
+                    traits = {
+                        yz_sasara_trait
+                        yz_baiban_trait
 
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_yuiko = {
-	add_political_power = -10
-	set_country_flag = have_yuiko
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = yuiko
-				name = "三好由比子"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Yuiko.png"
-						small = "gfx\leader\Yuiko2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Yuiko_corps_desc
-					traits = {
-						yz_yuiko_trait
-						yz_baiban_trait
+    add_political_power = -10
+    set_country_flag = have_yuiko
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = yuiko
+                name = "三好由比子"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Yuiko.png"
+                        small = "gfx/leader/Yuiko2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Yuiko_corps_desc
+                    traits = {
+                        yz_yuiko_trait
+                        yz_baiban_trait
 
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_sana = {
-	add_political_power = -10
-	set_country_flag = have_sana
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = sana
-				name = "千岁佐奈"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\sana.png"
-						small = "gfx\leader\sana2.png"
-					}
-				}
-				allowed_civil_war = {
-					is_ai = no
-				}
-				corps_commander = {
-					desc = sana_corps_desc
-				traits={
-					maid_sana_trait trait_reckless infantry_officer
-				}
-				skill=5
-				attack_skill=2
-				defense_skill=8
-				planning_skill=3
-				logistics_skill=6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_sana
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = sana
+                name = "千岁佐奈"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/sana.png"
+                        small = "gfx/leader/sana2.png"
+                    }
+                }
+                allowed_civil_war = {
+                    is_ai = no
+                }
+                corps_commander = {
+                    desc = sana_corps_desc
+                    traits={
+                        maid_sana_trait trait_reckless infantry_officer
+                    }
+                    skill=5
+                    attack_skill=2
+                    defense_skill=8
+                    planning_skill=3
+                    logistics_skill=6
+                }
+            }
+        }
+    }
 }
 yzrecruit_aoi = {
-	add_political_power = -10
-	set_country_flag = have_aoi
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = yamafuki_aoi
-				name = "山吹葵"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Aoi.png"
-						small = "gfx\leader\Aoi2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Aoi_corps_desc
-					traits = {
-						yz_aoi_trait
-						yz_baiban_trait
+    add_political_power = -10
+    set_country_flag = have_aoi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = yamafuki_aoi
+                name = "山吹葵"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Aoi.png"
+                        small = "gfx/leader/Aoi2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Aoi_corps_desc
+                    traits = {
+                        yz_aoi_trait
+                        yz_baiban_trait
 
-					}
-					skill = 5
-					attack_skill = 3
-					defense_skill = 4
-					planning_skill = 7
-					logistics_skill = 7
-				}
-			}
-		}
-	}
+                    }
+                    skill = 5
+                    attack_skill = 3
+                    defense_skill = 4
+                    planning_skill = 7
+                    logistics_skill = 7
+                }
+            }
+        }
+    }
 }
 yzrecruit_ruri = {
-	add_political_power = -10
-	set_country_flag = have_ruri
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = ruri
-				name = "龙胆琉璃"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Ruri.png"
-						small = "gfx\leader\Ruri2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Ruri_corps_desc
-					traits = {
-						yz_ruri_trait
-						ruri_haa
-						my_doubutsu_tomodachi
-					}
-					skill = 5
-					attack_skill = 15
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_ruri
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = ruri
+                name = "龙胆琉璃"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Ruri.png"
+                        small = "gfx/leader/Ruri2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Ruri_corps_desc
+                    traits = {
+                        yz_ruri_trait
+                        ruri_haa
+                        my_doubutsu_tomodachi
+                    }
+                    skill = 5
+                    attack_skill = 15
+                    defense_skill = 1
+                    planning_skill = 1
+                    logistics_skill = 1
+                }
+            }
+        }
+    }
 }
 yzrecruit_mahiro = {
-	set_country_flag = have_mahiro
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Tokiwa_Mahiro
-				name = "常盘真寻"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Mahiro.png"
-						small = "gfx\leader\Mahiro2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Mahiro_corps_desc
-					traits = {
-						yz_mahiro_trait
-						infantry_officer
-						yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_mahiro
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Tokiwa_Mahiro
+                name = "常盘真寻"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Mahiro.png"
+                        small = "gfx/leader/Mahiro2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Mahiro_corps_desc
+                    traits = {
+                        yz_mahiro_trait
+                        infantry_officer
+                        yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_yukari = {
-	set_country_flag = have_yukari
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Karasuba_Yukari
-				name = "乌羽紫"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Yukari.png"
-						small = "gfx\leader\Yukari2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Yukari_corps_desc
-					traits = {
-						yz_yukari_trait
-						infantry_officer
-						yz_baiban_trait
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    set_country_flag = have_yukari
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Karasuba_Yukari
+                name = "乌羽紫"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Yukari.png"
+                        small = "gfx/leader/Yukari2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Yukari_corps_desc
+                    traits = {
+                        yz_yukari_trait
+                        infantry_officer
+                        yz_baiban_trait
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_sakuyahime = {
-	add_political_power = -10
-	set_country_flag = have_sakuyahime
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = sakuyahime
-				name = "卯花之佐久夜姫"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Sakuyahime.png"
-						small = "gfx\leader\Sakuyahime2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = sakuyahime_corps_desc
-					traits = {
-						yz_sakuyahime_trait
-						yz_baiban_trait
-						yz_kamikaranokisu_trait
-					}
-					skill = 5
-					attack_skill = 7
-					defense_skill = 3
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_sakuyahime
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = sakuyahime
+                name = "卯花之佐久夜姫"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Sakuyahime.png"
+                        small = "gfx/leader/Sakuyahime2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = sakuyahime_corps_desc
+                    traits = {
+                        yz_sakuyahime_trait
+                        yz_baiban_trait
+                        yz_kamikaranokisu_trait
+                    }
+                    skill = 5
+                    attack_skill = 7
+                    defense_skill = 3
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 yzrecruit_yuki = {
-	set_country_flag = have_yuki
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Hibariga_oka_Yuki
-				name = "云雀丘由贵"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Yuki.png"
-						small = "gfx\leader\Yuki2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Yuki_corps_desc
-					traits = {
-						yz_yuki_trait
-						yz_yuki_trait_2
-						panzer_leader
-						thorough_planner
-						inspiring_leader
-					}
-					skill = 6
-					attack_skill = 6
-					defense_skill = 2
-					planning_skill = 7
-					logistics_skill = 7
-				}
-			}
-		}
-	}
+    set_country_flag = have_yuki
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Hibariga_oka_Yuki
+                name = "云雀丘由贵"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Yuki.png"
+                        small = "gfx/leader/Yuki2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Yuki_corps_desc
+                    traits = {
+                        yz_yuki_trait
+                        yz_yuki_trait_2
+                        panzer_leader
+                        thorough_planner
+                        inspiring_leader
+                    }
+                    skill = 6
+                    attack_skill = 6
+                    defense_skill = 2
+                    planning_skill = 7
+                    logistics_skill = 7
+                }
+            }
+        }
+    }
 }
 yzrecruit_sumi = {
-	set_country_flag = have_sumi
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Mikage_Sumi
-				name = "御影须美"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Sumi.png"
-						small = "gfx\leader\Sumi2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Sumi_corps_desc
-					traits = {
-						yz_sumi_trait
-						yz_sumi_trait_2
-						panzer_leader
-						adaptable
-					}
-					skill = 2
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 5
-					logistics_skill = 3
-				}
-			}
-		}
-	}
+    set_country_flag = have_sumi
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Mikage_Sumi
+                name = "御影须美"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Sumi.png"
+                        small = "gfx/leader/Sumi2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Sumi_corps_desc
+                    traits = {
+                        yz_sumi_trait
+                        yz_sumi_trait_2
+                        panzer_leader
+                        adaptable
+                    }
+                    skill = 2
+                    attack_skill = 1
+                    defense_skill = 1
+                    planning_skill = 5
+                    logistics_skill = 3
+                }
+            }
+        }
+    }
 }
 yzrecruit_noriko = {
-	set_country_flag = have_noriko
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Imamiya_Noriko
-				name = "今宫纪子"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Noriko.png"
-						small = "gfx\leader\Noriko2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Noriko_corps_desc
-					traits = {
-						yz_noriko_trait
-						yz_noriko_trait_2
-						infantry_leader
-						political_analyst
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 3
-					planning_skill = 7
-					logistics_skill = 1
-				}
-			}
-		}
-	}
-}	
+    set_country_flag = have_noriko
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Imamiya_Noriko
+                name = "今宫纪子"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Noriko.png"
+                        small = "gfx/leader/Noriko2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Noriko_corps_desc
+                    traits = {
+                        yz_noriko_trait
+                        yz_noriko_trait_2
+                        infantry_leader
+                        political_analyst
+                    }
+                    skill = 4
+                    attack_skill = 5
+                    defense_skill = 3
+                    planning_skill = 7
+                    logistics_skill = 1
+                }
+            }
+        }
+    }
+}
 yzrecruit_tae = {
-	set_country_flag = have_tae
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Naka_no_shima_Tae
-				name = "中之岛妙"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\Tae.png"
-						small = "gfx\leader\Tae2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = Tae_corps_desc
-					traits = {
-						yz_tae_trait
-						yz_tae_trait_2
-						panzer_leader
-						inspiring_leader
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 1
-					planning_skill = 6
-					logistics_skill = 6
-				}
-			}
-		}
-	}
+    set_country_flag = have_tae
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Naka_no_shima_Tae
+                name = "中之岛妙"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/Tae.png"
+                        small = "gfx/leader/Tae2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = Tae_corps_desc
+                    traits = {
+                        yz_tae_trait
+                        yz_tae_trait_2
+                        panzer_leader
+                        inspiring_leader
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 1
+                    planning_skill = 6
+                    logistics_skill = 6
+                }
+            }
+        }
+    }
 }
 yzrecruit_ena = {
-	add_political_power = -10
-	set_country_flag = have_ena
-	hidden_effect = {
-		play_song = youzu33
-	}
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = Yōmi_Enagi
-				name = "阳见惠凪"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\ena.png"
-						small = "gfx\leader\ena2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = ena_corps_desc
-					traits = {
-						#yz_baiban_trait
-						hanakyu
-						influencing_singer
-					}
-					skill = 5
-					attack_skill = 6
-					defense_skill = 5
-					planning_skill = 3
-					logistics_skill = 5
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_ena
+    hidden_effect = {
+        play_song = youzu33
+    }
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = Yōmi_Enagi
+                name = "阳见惠凪"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/ena.png"
+                        small = "gfx/leader/ena2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = ena_corps_desc
+                    traits = {
+                        #yz_baiban_trait
+                        hanakyu
+                        influencing_singer
+                    }
+                    skill = 5
+                    attack_skill = 6
+                    defense_skill = 5
+                    planning_skill = 3
+                    logistics_skill = 5
+                }
+            }
+        }
+    }
 }
 
 yzrecruit_anju = {
@@ -2404,13 +2430,13 @@ yzrecruit_anju = {
             generate_character = {
                 token_base = anju
                 name = "隐杏珠"
-				can_be_captured = no
+                can_be_captured = no
                 gender = female
                 nationality = JAP
                 portraits = {
                     civilian = {
-                        large = "gfx\leader\anju.png"
-                        small = "gfx\leader\anju2.png"
+                        large = "gfx/leader/anju.png"
+                        small = "gfx/leader/anju2.png"
                     }
                 }
                 allowed_civil_war = { is_ai = no }
@@ -2428,11 +2454,10 @@ yzrecruit_anju = {
                     logistics_skill = 5
                 }
                 advisor = {
-					cost = 32
+                    cost = 32
                     slot = theorist
                     idea_token = anju
-                    ledger = army
-                    traits = { anju_theorist }      
+                    traits = { anju_theorist }
                 }
             }
         }
@@ -2440,266 +2465,265 @@ yzrecruit_anju = {
 }
 
 yzrecruit_ririko = {
-	add_political_power = -10
-	set_country_flag = have_ririko
-	hidden_effect = {
-		play_song = youzu33
-	}
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = ririko
-				name = "二见原莉莉子"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\ririko.png"
-						small = "gfx\leader\ririko2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = ririko_corps_desc
-					traits = {
-						#yz_baiban_trait
-						good_woman_ririko
-						broker_of_band
-					}
-					skill = 5
-					attack_skill = 3
-					defense_skill = 3
-					planning_skill = 7
-					logistics_skill = 7
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_ririko
+    hidden_effect = {
+        play_song = youzu33
+    }
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = ririko
+                name = "二见原莉莉子"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/ririko.png"
+                        small = "gfx/leader/ririko2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = ririko_corps_desc
+                    traits = {
+                        #yz_baiban_trait
+                        good_woman_ririko
+                        broker_of_band
+                    }
+                    skill = 5
+                    attack_skill = 3
+                    defense_skill = 3
+                    planning_skill = 7
+                    logistics_skill = 7
+                }
+            }
+        }
+    }
 }
 
 yzrecruit_tsukimi = {
-	add_political_power = -10
-	set_country_flag = have_tsukimi
-	hidden_effect = {
-		play_song = youzu33
-	}
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = tsukimi
-				name = "嶌越月望"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\tsukimi.png"
-						small = "gfx\leader\tsukimi2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = tsukimi_corps_desc
-					traits = {
-						#yz_baiban_trait
-						big_small_sister_good_at_sex
-						yuzusoft_fans_girl
-					}
-					skill = 5
-					attack_skill = 2
-					defense_skill = 8
-					planning_skill = 3
-					logistics_skill = 6
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_tsukimi
+    hidden_effect = {
+        play_song = youzu33
+    }
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = tsukimi
+                name = "嶌越月望"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/tsukimi.png"
+                        small = "gfx/leader/tsukimi2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = tsukimi_corps_desc
+                    traits = {
+                        #yz_baiban_trait
+                        big_small_sister_good_at_sex
+                        yuzusoft_fans_girl
+                    }
+                    skill = 5
+                    attack_skill = 2
+                    defense_skill = 8
+                    planning_skill = 3
+                    logistics_skill = 6
+                }
+            }
+        }
+    }
 }
 
 yzrecruit_nayuka = {
-	add_political_power = -10
-	set_country_flag = have_nayuka
-	hidden_effect = {
-		play_song = youzu33
-	}
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = nayuka
-				name = "茶园那优花"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\nayuka.png"
-						small = "gfx\leader\nayuka2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = nayuka_corps_desc
-					traits = {
-						#yz_baiban_trait
-						best_music_maker
-					}
-					skill = 5
-					attack_skill = 4
-					defense_skill = 4
-					planning_skill = 5
-					logistics_skill = 6
-				}
-				advisor = {
-					cost = 300
+    add_political_power = -10
+    set_country_flag = have_nayuka
+    hidden_effect = {
+        play_song = youzu33
+    }
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = nayuka
+                name = "茶园那优花"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/nayuka.png"
+                        small = "gfx/leader/nayuka2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = nayuka_corps_desc
+                    traits = {
+                        #yz_baiban_trait
+                        best_music_maker
+                    }
+                    skill = 5
+                    attack_skill = 4
+                    defense_skill = 4
+                    planning_skill = 5
+                    logistics_skill = 6
+                }
+                advisor = {
+                    cost = 300
                     slot = theorist
                     idea_token = nayuka
-                    ledger = army
-                    traits = { nayuka_theorist }      
+                    traits = { nayuka_theorist }
                 }
-			}
-		}
-	}
+            }
+        }
+    }
 }
 
 yzrecruit_miku = {
-	add_political_power = -10
-	set_country_flag = have_miku
-	hidden_effect = {
-		play_song = youzu33
-	}
-	country_event = { id = tongyong_event.1 }
-	add_to_variable = { num_YZ_general = 2 }
-	meta_effect = {
-		text = {
-			generate_character = {
-				token_base = miku
-				name = "砾川美玖"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
-				portraits = {
-					civilian = {
-						large = "gfx\leader\miku.png"
-						small = "gfx\leader\miku2.png"
-					}
-				}
-				allowed_civil_war = { is_ai = no }
-				corps_commander = {
-					desc = miku_corps_desc
-					traits = {
-						#yz_baiban_trait
-						internet_oppose_line_little_princess
-					}
-					skill = 5
-					attack_skill = 5
-					defense_skill = 5
-					planning_skill = 5
-					logistics_skill = 4
-				}
-			}
-		}
-	}
+    add_political_power = -10
+    set_country_flag = have_miku
+    hidden_effect = {
+        play_song = youzu33
+    }
+    country_event = { id = tongyong_event.1 }
+    add_to_variable = { num_YZ_general = 2 }
+    meta_effect = {
+        text = {
+            generate_character = {
+                token_base = miku
+                name = "砾川美玖"
+                can_be_captured = no
+                gender = female
+                nationality = JAP
+                portraits = {
+                    civilian = {
+                        large = "gfx/leader/miku.png"
+                        small = "gfx/leader/miku2.png"
+                    }
+                }
+                allowed_civil_war = { is_ai = no }
+                corps_commander = {
+                    desc = miku_corps_desc
+                    traits = {
+                        #yz_baiban_trait
+                        internet_oppose_line_little_princess
+                    }
+                    skill = 5
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 4
+                }
+            }
+        }
+    }
 }
 
 # 要点：统一封装伊尔诺的完整招募结算，供原招募决议与阿诺模式共同调用，保留提示、超级事件旗标、音乐和人物数据。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
 yzrecruit_irno_full = {
-	custom_effect_tooltip = we_have_ilro_now
-	hidden_effect = {
-		every_country = {
-			limit = {
-				is_ai = no
-			}
-			set_country_flag = yuzu_super_event_private_visible_flag
-			set_country_flag = we_forward_with_irno_flag
-		}
-		play_song = a_voice_from_best_future
-		set_country_flag = have_kakka_nor
-		meta_effect = {
-			text = {
-				generate_character = {
-					token_base = YzIron
-					name = "伊尔诺"
-					can_be_captured = no
-					gender = male
-					nationality = PRC
-					portraits = {
-						civilian = {
-							large = "gfx\leader\Irno_character.png"
-							small = "gfx\leader\Irno_character2.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-						traits = {
-							caidan_trait_iron
-							A_voice_from_wonderful_future
-							First_Air_Transport_Special_Operations_Brigade
-						}
-						skill = 99
-						attack_skill = 99
-						defense_skill = 99
-						planning_skill = 99
-						logistics_skill = 99
-					}
-				}
-			}
-		}
-	}
+    custom_effect_tooltip = we_have_ilro_now
+    hidden_effect = {
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            set_country_flag = yuzu_super_event_private_visible_flag
+            set_country_flag = we_forward_with_irno_flag
+        }
+        play_song = a_voice_from_best_future
+        set_country_flag = have_kakka_nor
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = YzIron
+                    name = "伊尔诺"
+                    can_be_captured = no
+                    gender = male
+                    nationality = PRC
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/Irno_character.png"
+                            small = "gfx/leader/Irno_character2.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        traits = {
+                            caidan_trait_iron
+                            A_voice_from_wonderful_future
+                            First_Air_Transport_Special_Operations_Brigade
+                        }
+                        skill = 99
+                        attack_skill = 99
+                        defense_skill = 99
+                        planning_skill = 99
+                        logistics_skill = 99
+                    }
+                }
+            }
+        }
+    }
 }
 
 # 要点：统一封装御坂真琴的完整招募结算，供原招募决议与阿诺模式共同调用，保留超级事件旗标、音乐和人物数据。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
 yzrecruit_misaka_makoto_full = {
-	hidden_effect = {
-		set_country_flag = have_misaka_makoto
-		every_country = {
-			limit = {
-				is_ai = no
-			}
-			set_country_flag = yuzu_super_event_private_visible_flag
-			set_country_flag = we_forward_with_makoto_flag
-		}
-		play_song = time_forward
-		meta_effect = {
-			text = {
-				generate_character = {
-					token_base = Yzmisakamakoto
-					name = "御坂真琴"
-					can_be_captured = no
-					gender = female
-					nationality = PRC
-					portraits = {
-						civilian = {
-							large = "gfx\leader\misaka_makoto.png"
-							small = "gfx\leader\misaka_makoto_small.png"
-						}
-					}
-					allowed_civil_war = {
-						is_ai = no
-					}
-					corps_commander = {
-						desc = misaka_makoto_desc_commander
-						traits = {
-							futsuuna_shoujo_no_kokoro
-							strong_ai
-							world_type_maho
-						}
-						skill = 100
-						attack_skill = 100
-						defense_skill = 100
-						planning_skill = 100
-						logistics_skill = 100
-					}
-				}
-			}
-		}
-	}
+    hidden_effect = {
+        set_country_flag = have_misaka_makoto
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            set_country_flag = yuzu_super_event_private_visible_flag
+            set_country_flag = we_forward_with_makoto_flag
+        }
+        play_song = time_forward
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = Yzmisakamakoto
+                    name = "御坂真琴"
+                    can_be_captured = no
+                    gender = female
+                    nationality = PRC
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/misaka_makoto.png"
+                            small = "gfx/leader/misaka_makoto_small.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    corps_commander = {
+                        desc = misaka_makoto_desc_commander
+                        traits = {
+                            futsuuna_shoujo_no_kokoro
+                            strong_ai
+                            world_type_maho
+                        }
+                        skill = 100
+                        attack_skill = 100
+                        defense_skill = 100
+                        planning_skill = 100
+                        logistics_skill = 100
+                    }
+                }
+            }
+        }
+    }
 }

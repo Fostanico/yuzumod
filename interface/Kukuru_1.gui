@@ -22,7 +22,7 @@ guiTypes = {
 		buttonType = {	#立绘
 			name = "Kukuru_research_protrait"
 			position = { x = 19 y = 4 }
-			size = { width = 100% height = 100% }
+			size = { x = 100% y = 100% }
 			quadTextureSprite = "GFX_kkr_big_bg"
 			pdx_tooltip = " "	
 		}
@@ -71,7 +71,7 @@ guiTypes = {
 		buttonType = {	#换立绘
 			name = "Kukuru_change_button"
 			position = { x = 155 y = 175 }
-			size = { width = 100% height = 100% }
+			size = { x = 100% y = 100% }
 			#scale = 0.51		###缩放
 			quadTextureSprite = "GFX_kkr_change_button"
 			pdx_tooltip = "kkr_change_clothes_tt"
@@ -79,7 +79,7 @@ guiTypes = {
 		buttonType = {	#立绘
 			name = "Kukuru_protrait"
 			position = { x = 19 y = 4 }
-			size = { width = 100% height = 100% }
+			size = { x = 100% y = 100% }
 			#scale = 0.51		###缩放
 			quadTextureSprite = "GFX_kkr_big_bg"
 			pdx_tooltip = " "

@@ -1,6 +1,6 @@
 sub_units = {
 	atri_engineer = {
-		picture = GFX_unit_atri_engineer_icon_medium
+		# picture = GFX_unit_atri_engineer_icon_medium # sub_unit 不支持该字段，原代码不会生效
 
 		sprite = infantry
 		map_icon_category = infantry
@@ -147,11 +147,12 @@ sub_units = {
 			defence = 0.05
 		}
 
-		mud = {
-			movement = 0.05
-			attack = 0.1
-			defence = 0.05
-		}
+		# mud 不是 sub_unit 支持的地形键；原代码不会生效
+		# mud = {
+		# 	movement = 0.05
+		# 	attack = 0.1
+		# 	defence = 0.05
+		# }
 
 	}
 }

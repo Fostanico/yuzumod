@@ -16,7 +16,7 @@ equipments = {
 		interface_category = interface_category_land
 		upgrades = {
 			tank_reliability_upgrade
-			mech_cost_upgrade
+			yz_mech_cost_upgrade
 		}
 		reliability = 1
 

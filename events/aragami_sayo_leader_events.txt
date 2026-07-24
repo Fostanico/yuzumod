@@ -97,7 +97,7 @@ country_event = {
     option = {
         custom_effect_tooltip = yz_sorry_i_try_my_best_on_scripted_localisation_tt
         retire_country_leader = yes
-        name = aragami_sayo_event.1.d
+        name = aragami_sayo_event.1.e
         trigger = {
             has_government = neutrality
         }
@@ -133,7 +133,8 @@ country_event = {
     option = {     #诺酱
         name = aragami_sayo_event.2.b
         trigger = {
-            date < 1999.12.30
+            # 原版领导人使用 vanilla 意识形态与特质。
+            NOT = { has_global_flag = yz_md_startup_detected }
         }
         set_rule = {
             can_send_volunteers = yes
@@ -155,7 +156,7 @@ country_event = {
     option = {
         name = aragami_sayo_event.2.c
         trigger = {
-            date > 1999.12.31
+            has_global_flag = yz_md_startup_detected
         }
         create_country_leader = {
             name = "伊尔 诺"

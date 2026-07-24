@@ -40,30 +40,30 @@ leader_traits = {
             sickness_chance = -10
             wounded_chance_factor = -10
             #只要能一直在你身边，妃爱就很开心
-                experience_loss_factor = -0.025
-                attrition = -0.025
-                equipment_capture_factor = 0.01
-                land_night_attack = 0.05
-                army_attack_factor = 0.025
-                breakthrough_factor = 0.02
-                army_defence_factor = 0.025
-                army_speed_factor = 0.025
-                army_org_factor = 0.025
-                army_morale_factor = 0.05
-                org_loss_when_moving = -0.025
-                planning_speed = 0.025
-                max_planning = 0.025
-                supply_consumption_factor = -0.02
-                no_supply_grace = 6
-                recon_factor = 0.025
-                land_reinforce_rate = 0.02
-                coordination_bonus = 0.02
-                max_dig_in = 0.5
-                out_of_supply_factor = -0.025
-                terrain_penalty_reduction = 0.025
+            experience_loss_factor = -0.025
+            attrition = -0.025
+            equipment_capture_factor = 0.01
+            land_night_attack = 0.05
+            army_attack_factor = 0.025
+            breakthrough_factor = 0.02
+            army_defence_factor = 0.025
+            army_speed_factor = 0.025
+            army_org_factor = 0.025
+            army_morale_factor = 0.05
+            org_loss_when_moving = -0.025
+            planning_speed = 0.025
+            max_planning = 0.025
+            supply_consumption_factor = -0.02
+            no_supply_grace = 6
+            recon_factor = 0.025
+            land_reinforce_rate = 0.02
+            coordination_bonus = 0.02
+            max_dig_in = 0.5
+            out_of_supply_factor = -0.025
+            terrain_penalty_reduction = 0.025
         }
         new_commander_weight = {
             factor = 0
-    }
+        }
     }
 }

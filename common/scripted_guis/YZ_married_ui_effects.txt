@@ -43,7 +43,7 @@ scripted_gui = {
         triggers = {
             # 作用：五个约会共用资源门槛和按周推进的90天互斥冷却；要点：每次需要150政治点与600柚子币。署名：伊尔诺+2026-07-04+assisted by Codex
             date_buttom_left_one_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
                 NOT = {
                     check_variable = {
@@ -53,7 +53,7 @@ scripted_gui = {
                 }
             }
             date_buttom_left_two_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
                 NOT = {
                     check_variable = {
@@ -63,7 +63,7 @@ scripted_gui = {
                 }
             }
             date_buttom_middle_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
                 NOT = {
                     check_variable = {
@@ -73,7 +73,7 @@ scripted_gui = {
                 }
             }
             date_buttom_right_one_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
                 NOT = {
                     check_variable = {
@@ -83,7 +83,7 @@ scripted_gui = {
                 }
             }
             date_buttom_right_two_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = { yz_money > 599 tooltip = yuzu_married_date_money_tt }
                 NOT = {
                     check_variable = {
@@ -104,7 +104,7 @@ scripted_gui = {
 
             # 作用：为互动加入政治点成本，并限制学习在心情不足时使用；要点：各自90天冷却现按周推进。署名：伊尔诺+2026-07-04+assisted by Codex
             interact_buttom_left_click_enabled = {
-                political_power > 99
+                has_political_power > 99
                 NOT = {
                     check_variable = {
                         married_interact_kiss_cooldown < 90
@@ -114,7 +114,7 @@ scripted_gui = {
 
             }
             interact_buttom_middle_click_enabled = {
-                political_power > 149
+                has_political_power > 149
                 check_variable = {
                     value_of_loving > 1
                     tooltip = yuzu_married_study_mood_tt
@@ -128,7 +128,7 @@ scripted_gui = {
 
             }
             interact_buttom_right_click_enabled = {
-                political_power > 124
+                has_political_power > 124
                 NOT = {
                     check_variable = {
                         married_interact_play_cooldown < 90

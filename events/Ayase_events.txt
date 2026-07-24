@@ -1,6 +1,6 @@
 add_namespace = ayase_event
 
-country_event = { 
+country_event = {
 	id = ayase_event.1 #初见绫濑
 	title = ayase_event.1.t
 	desc = ayase_event.1.d
@@ -9,8 +9,8 @@ country_event = {
 	option = {
 		name = ayase_event.1.a
 		trigger = {
-            has_country_flag = qiyong_youzi_2
-        }
+			has_country_flag = qiyong_youzi_2
+		}
 		custom_effect_tooltip = ayase_yes	#小字
 		add_political_power = 5
 		add_stability = 0.01
@@ -18,21 +18,21 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Ayase
-				name = "三司绫濑"
-				can_be_captured = no
-				gender = female
-				nationality = JAP
+					token_base = Ayase
+					name = "三司绫濑"
+					can_be_captured = no
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
-							large = "gfx\leader\Ayase.png"
-							small = "gfx\leader\Ayase2.png"
+							large = "gfx/leader/Ayase.png"
+							small = "gfx/leader/Ayase2.png"
 						}
 					}
 					allowed_civil_war = {
 						is_ai = no
 					}
-					advisor = {  
+					advisor = {
 						slot = high_command
 						cost = 150
 						idea_token = Ayase_command
@@ -45,53 +45,53 @@ country_event = {
 					}
 					corps_commander = {
 						desc = Ayase_corps_desc
-					traits={
-						organizer 
-						panzer_leader  
-						media_personality 
-						JAP_communist_sympathizer 
-						maid_cuodao_trait
-						brilliant_strategist
-						urban_assault_specialist
-						trickster
-					}
-					skill=3
-					attack_skill=3
-					defense_skill=1
-					planning_skill=2
-					logistics_skill=2
+						traits={
+							organizer
+							panzer_leader
+							media_personality
+							JAP_communist_sympathizer
+							maid_cuodao_trait
+							brilliant_strategist
+							urban_assault_specialist
+							trickster
+						}
+						skill=3
+						attack_skill=3
+						defense_skill=1
+						planning_skill=2
+						logistics_skill=2
 					}
 				}
 			}
 		}
 		hidden_effect = {
 			country_event = { id = ayase_event.2 days = 15 }
-        }
+		}
 	}
 	option = {
-        name = ayase_event.1.b   	#我不想绫濑线（）
-        country_event = { id = tongyong_event.1 }
+		name = ayase_event.1.b   	#我不想绫濑线（）
+		country_event = { id = tongyong_event.1 }
 		add_political_power = 1
 		custom_effect_tooltip = ayase_hide	#小字
-        set_country_flag = no_ayase
-        meta_effect = {
-            text = {
-                generate_character = {
-                    token_base = ayase_1
-                    name = "三司绫濑"
+		set_country_flag = no_ayase
+		meta_effect = {
+			text = {
+				generate_character = {
+					token_base = ayase_1
+					name = "三司绫濑"
 					can_be_captured = no
-                    gender = female
-                    nationality = JAP
-                    portraits = {
-                        civilian = {
-							large = "gfx\leader\Ayase.png"
-							small = "gfx\leader\Ayase2.png"
+					gender = female
+					nationality = JAP
+					portraits = {
+						civilian = {
+							large = "gfx/leader/Ayase.png"
+							small = "gfx/leader/Ayase2.png"
 						}
-                    }
-                    allowed_civil_war = {
-                        is_ai = no
-                    }
-					advisor = {  
+					}
+					allowed_civil_war = {
+						is_ai = no
+					}
+					advisor = {
 						slot = high_command
 						cost = 150
 						idea_token = Ayase_command
@@ -102,89 +102,89 @@ country_event = {
 							factor = 0
 						}
 					}
-                    corps_commander = {
+					corps_commander = {
 						desc = Ayase_corps_desc
-                	traits={
-						organizer 
-						panzer_leader  
-						politically_connected 
-						hidden_sympathies 
-						media_personality 
-						JAP_communist_sympathizer 
-						maid_cuodao_trait
-                	}
-                	attack_skill = 6
-                	defense_skill = 3
-                	planning_skill = 4
-                	logistics_skill = 5
-                	skill = 5
-                    }
-                }
-        	}
-        }
-    }
-}	
+						traits={
+							organizer
+							panzer_leader
+							politically_connected
+							hidden_sympathies
+							media_personality
+							JAP_communist_sympathizer
+							maid_cuodao_trait
+						}
+						attack_skill = 6
+						defense_skill = 3
+						planning_skill = 4
+						logistics_skill = 5
+						skill = 5
+					}
+				}
+			}
+		}
+	}
+}
 
 
-     
 
-country_event = { 
+
+country_event = {
 	id = ayase_event.2   #看到了不得了的东西（叫谁太平公主啊？！）
 	title = ayase_event.2.t
 	desc = ayase_event.2.d
 	picture = GFX_ayase_event.2
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	option = {
 		name = ayase_event.2.a
-		custom_effect_tooltip = ayase_2	#小字	
+		custom_effect_tooltip = ayase_2	#小字
 		random_army_leader = {
-            limit = {
-                has_trait = maid_cuodao_trait
-            }
-            add_skill_level = 1
-            add_attack = 1
-            add_logistics = 1
-        }
+			limit = {
+				has_trait = maid_cuodao_trait
+			}
+			add_skill_level = 1
+			add_attack = 1
+			add_logistics = 1
+		}
 		hidden_effect = {
 			country_event = { id = ayase_event.3 days = 10 }
-        }
-    } 
+		}
+	}
 }
 
-add_unit_leader_trait = maid_cuodao_trait1 #特质制作
+# add_unit_leader_trait = maid_cuodao_trait1 # 原位于事件外部，当前引擎不会执行；保留为注释以维持现有行为
 
 
-country_event = { 
+country_event = {
 	id = ayase_event.3  #去学生会室看看
 	title = ayase_event.3.t
 	desc = ayase_event.3.d
 	picture = GFX_ayase_event.3
 	is_triggered_only = yes
-	
+
 	option = {
 		name = ayase_event.3.a
-        add_political_power = 1
+		add_political_power = 1
 		random_army_leader = {
-            limit = {
-                has_trait = maid_cuodao_trait
-            }
+			limit = {
+				has_trait = maid_cuodao_trait
+			}
 			add_unit_leader_trait = maid_cuodao_trait1 #特质制作
-        }
+		}
 		hidden_effect = {
 			country_event = { id = ayase_event.4 days = 20 }
-        }
-    } 
+		}
+	}
 }
 
 
 
 
-country_event = { 
+country_event = {
 	id = ayase_event.4   #资深猫奴
 	title = ayase_event.4.t
 	desc = ayase_event.4.d
 	picture = GFX_ayase_event.4
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	option = {
 		name = ayase_event.4.a
 		add_political_power = -1
@@ -192,10 +192,10 @@ country_event = {
 			limit = {
 				has_trait = maid_cuodao_trait
 			}
-			add_unit_leader_trait = adaptable 
+			add_unit_leader_trait = adaptable
 			add_unit_leader_trait = aggressive_assaulter
 			add_unit_leader_trait = offensive_doctrine
-		} 
+		}
 		hidden_effect = {
 			country_event = { id = ayase_event.5 days = 20 }
 		}
@@ -204,13 +204,13 @@ country_event = {
 
 
 
-country_event = { 
+country_event = {
 	id = ayase_event.5   #芝士小猫（喵喵）
 	title = ayase_event.5.t
 	desc = ayase_event.5.d
 	picture = GFX_ayase_event.5
 	is_triggered_only = yes
-		
+
 	option = {
 		name = ayase_event.5.a
 		custom_effect_tooltip = ayase_miaomiao	#小字
@@ -219,145 +219,145 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = ayase_event.6 days = 15 }
 		}
-	} 
+	}
 }
 
 
 
-	country_event = { 
-		id = ayase_event.6   #陪绫濑打电动
-		title = ayase_event.6.t
-		desc = ayase_event.6.d
-		picture = GFX_ayase_event.6
-		is_triggered_only = yes
-		
-		option = {
-			name = ayase_event.6.a
-			add_political_power = -5
-			add_war_support = 0.01
-			random_army_leader = {
-				limit = {
-					has_trait = maid_cuodao_trait
-				}
-				add_skill_level = 1
-				add_defense = 1
-				add_planning = 1
+country_event = {
+	id = ayase_event.6   #陪绫濑打电动
+	title = ayase_event.6.t
+	desc = ayase_event.6.d
+	picture = GFX_ayase_event.6
+	is_triggered_only = yes
+
+	option = {
+		name = ayase_event.6.a
+		add_political_power = -5
+		add_war_support = 0.01
+		random_army_leader = {
+			limit = {
+				has_trait = maid_cuodao_trait
 			}
-			hidden_effect = {
-				country_event = { id = ayase_event.7 days = 2 }
-			}
-		} 
+			add_skill_level = 1
+			add_defense = 1
+			add_planning = 1
+		}
+		hidden_effect = {
+			country_event = { id = ayase_event.7 days = 2 }
+		}
 	}
+}
 
 
 
 
-	country_event = { 
-		id = ayase_event.7   #你有意见？（意外表白）
-		title = ayase_event.7.t
-		desc = ayase_event.7.d
-		picture = GFX_ayase_event.7
-		is_triggered_only = yes
-		
-		option = {
-			name = ayase_event.7.a
-			custom_effect_tooltip = ayase_3	#小字
-			add_political_power = 1
-			add_stability = 0.01
-			add_war_support = 0.01
-			random_army_leader = {
-				limit = {
-					has_trait = maid_cuodao_trait
-				}
-				add_unit_leader_trait = maid_cuodao_trait2 #特质制作
+country_event = {
+	id = ayase_event.7   #你有意见？（意外表白）
+	title = ayase_event.7.t
+	desc = ayase_event.7.d
+	picture = GFX_ayase_event.7
+	is_triggered_only = yes
+
+	option = {
+		name = ayase_event.7.a
+		custom_effect_tooltip = ayase_3	#小字
+		add_political_power = 1
+		add_stability = 0.01
+		add_war_support = 0.01
+		random_army_leader = {
+			limit = {
+				has_trait = maid_cuodao_trait
 			}
-			hidden_effect = {
-				country_event = { id = ayase_event.8 days = 15 }
-			}
-		} 
+			add_unit_leader_trait = maid_cuodao_trait2 #特质制作
+		}
+		hidden_effect = {
+			country_event = { id = ayase_event.8 days = 15 }
+		}
 	}
+}
 
 
-	country_event = { 
-		id = ayase_event.8   #成功撸猫
-		title = ayase_event.8.t
-		desc = ayase_event.8.d
-		picture = GFX_ayase_event.8
-		is_triggered_only = yes
-		
-		option = {
-			name = ayase_event.8.a
-			add_war_support = 0.01
-			add_threat = -15
-			add_ideas = ayase_love_1 #民族精神
-			hidden_effect = {
-				country_event = { id = ayase_event.9 days = 20 }
-			}
-		} 
-		option = {
-			name = ayase_event.8.b
-			add_war_support = 0.01
-			add_threat = 30
-			add_ideas = ayase_love_1 #民族精神
-			hidden_effect = {
-				country_event = { id = ayase_event.9 days = 20 }
-			}
-		} 
-		option = {
-			name = ayase_event.8.c
-			add_war_support = 0.01
-			add_ideas = ayase_love_1 #民族精神
-			hidden_effect = {
-				country_event = { id = ayase_event.9 days = 20 }
-			}
-		} 
+country_event = {
+	id = ayase_event.8   #成功撸猫
+	title = ayase_event.8.t
+	desc = ayase_event.8.d
+	picture = GFX_ayase_event.8
+	is_triggered_only = yes
+
+	option = {
+		name = ayase_event.8.a
+		add_war_support = 0.01
+		add_threat = -15
+		add_ideas = ayase_love_1 #民族精神
+		hidden_effect = {
+			country_event = { id = ayase_event.9 days = 20 }
+		}
 	}
-	 
-	country_event = { 
-		id = ayase_event.9   #起誓
-		title = ayase_event.9.t
-		desc = ayase_event.9.d
-		picture = GFX_ayase_event.9
-		is_triggered_only = yes
-		
-		option = {
-			name = ayase_event.9.a
-			add_war_support = 0.01
-			add_political_power = 5
-			hidden_effect = {
-				country_event = { id = ayase_event.10 days = 15 }
-			}
-		} 
+	option = {
+		name = ayase_event.8.b
+		add_war_support = 0.01
+		add_threat = 30
+		add_ideas = ayase_love_1 #民族精神
+		hidden_effect = {
+			country_event = { id = ayase_event.9 days = 20 }
+		}
 	}
-
-
-
-	country_event = { 
-		id = ayase_event.10    #一直这样互相喜欢下去
-		title = ayase_event.10.t
-		desc = ayase_event.10.d
-		picture = GFX_ayase_event.10
-		is_triggered_only = yes
-		
-		option = {
-			name = ayase_event.10.a
-			custom_effect_tooltip = ayase_end	#小字
-			add_political_power = 25
-			add_stability = 0.05
-			add_war_support = 0.025
-			add_ideas = ayase_love_2 #民族精神
-			random_army_leader = {
-				limit = {
-					has_trait = maid_cuodao_trait
-				}
-				add_unit_leader_trait = maid_cuodao_trait3 #特质制作
-				add_skill_level = 1
-				add_attack = 1
-				add_planning = 1
-				add_logistics = 1
-			}
-			hidden_effect = {
-				play_song = youzu9
-			}
-		} 
+	option = {
+		name = ayase_event.8.c
+		add_war_support = 0.01
+		add_ideas = ayase_love_1 #民族精神
+		hidden_effect = {
+			country_event = { id = ayase_event.9 days = 20 }
+		}
 	}
+}
+
+country_event = {
+	id = ayase_event.9   #起誓
+	title = ayase_event.9.t
+	desc = ayase_event.9.d
+	picture = GFX_ayase_event.9
+	is_triggered_only = yes
+
+	option = {
+		name = ayase_event.9.a
+		add_war_support = 0.01
+		add_political_power = 5
+		hidden_effect = {
+			country_event = { id = ayase_event.10 days = 15 }
+		}
+	}
+}
+
+
+
+country_event = {
+	id = ayase_event.10    #一直这样互相喜欢下去
+	title = ayase_event.10.t
+	desc = ayase_event.10.d
+	picture = GFX_ayase_event.10
+	is_triggered_only = yes
+
+	option = {
+		name = ayase_event.10.a
+		custom_effect_tooltip = ayase_end	#小字
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = 0.025
+		add_ideas = ayase_love_2 #民族精神
+		random_army_leader = {
+			limit = {
+				has_trait = maid_cuodao_trait
+			}
+			add_unit_leader_trait = maid_cuodao_trait3 #特质制作
+			add_skill_level = 1
+			add_attack = 1
+			add_planning = 1
+			add_logistics = 1
+		}
+		hidden_effect = {
+			play_song = youzu9
+		}
+	}
+}

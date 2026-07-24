@@ -1,11 +1,11 @@
-                                                                                                                                                                                                     
+
    ##    #####   #    #    ##    #    #   ####   ######  #####         ##    #####   #####  #  #       #       ######  #####   #   #      #####   #####    ####        #  ######   ####   #####   ####  
   #  #   #    #  #    #   #  #   ##   #  #    #  #       #    #       #  #   #    #    #    #  #       #       #       #    #   # #       #    #  #    #  #    #       #  #       #    #    #    #      
  #    #  #    #  #    #  #    #  # #  #  #       #####   #    #      #    #  #    #    #    #  #       #       #####   #    #    #        #    #  #    #  #    #       #  #####   #         #     ####  
  ######  #    #  #    #  ######  #  # #  #       #       #    #      ######  #####     #    #  #       #       #       #####     #        #####   #####   #    #       #  #       #         #         # 
  #    #  #    #   #  #   #    #  #   ##  #    #  #       #    #      #    #  #   #     #    #  #       #       #       #   #     #        #       #   #   #    #  #    #  #       #    #    #    #    # 
  #    #  #####     ##    #    #  #    #   ####   ######  #####       #    #  #    #    #    #  ######  ######  ######  #    #    #        #       #    #   ####    ####   ######   ####     #     ####  
-                                                                                                                                                                                               
+
 
 YZ_sp_land_detonator = {
 	specialization = specialization_land
@@ -15,13 +15,13 @@ YZ_sp_land_detonator = {
 	allowed = {
 		has_dlc = "Gotterdammerung"
 	}
-	
+
 	available = {
 		FROM = {
 			has_country_flag = start_research_0721_detonator
 		}
 	}
-	
+
 	prototype_time = sp_time.prototype.short
 
 	complexity = sp_complexity.medium
@@ -30,11 +30,11 @@ YZ_sp_land_detonator = {
 	}
 
 	resource_cost = {
-		resources = { 
+		resources = {
 			aluminium = 1
 		}
 	}
-	
+
 	project_output = {
 		enable_subunits = {	#起爆器支援连
 			YZ_0721_detonator_company
@@ -55,7 +55,7 @@ YZ_sp_land_detonator = {
 			}
 			add_unit_bonus = {
 				category_artillery = {
-				  	soft_attack = 0.1
+					soft_attack = 0.1
 					hard_attack = 0.15
 					breakthrough = 0.05
 				}
@@ -91,7 +91,7 @@ YZ_sp_land_detonator = {
 		sp_land_reward_detonator_focus_preference = {
 			fire_only_once = yes
 
-			threshold = { 
+			threshold = {
 				min = 30
 				max = 70
 			}
@@ -102,7 +102,7 @@ YZ_sp_land_detonator = {
 
 			option = {
 				token = sp_land_reward_option_detonator_focus_preference_balance
-				
+
 				iteration_output = {
 					country_effects = {
 						custom_effect_tooltip = {
@@ -115,7 +115,7 @@ YZ_sp_land_detonator = {
 
 			option = {
 				token = sp_land_reward_option_detonator_focus_preference_firepower
-				
+
 				iteration_output = {
 					equipment_bonus = {
 						YZ_0721_detonator_equipment_1 = {
@@ -129,7 +129,7 @@ YZ_sp_land_detonator = {
 
 			option = {
 				token = sp_land_reward_option_detonator_focus_preference_production
-				
+
 				iteration_output = {
 					equipment_bonus = {
 						YZ_0721_detonator_equipment_1 = {
@@ -157,24 +157,24 @@ sp_land_yz_type_90 = {
 	allowed = {
 		has_dlc = "No Step Back"
 	}
-	
+
 	available = {
 		from = {
 			has_country_flag = research_yz_type90
 		}
-		
+
 	}
 
 	breakthrough_cost = {
 		specialization_land = 1
 	}
-	
+
 	complexity = sp_complexity.insane
-	prototype_time = sp_time.prototype.long	
-	
+	prototype_time = sp_time.prototype.long
+
 	project_output = {
 		country_effects = {
-			hidden_effect = { 
+			hidden_effect = {
 				root = {
 					#country_event = yz_type90_event.1	#预备的事件
 					set_technology = {
@@ -182,7 +182,7 @@ sp_land_yz_type_90 = {
 					}
 					create_equipment_variant = {
 						name = "柚子YIWG-90式主战坦克"
-						type = type90_tank_chassis
+						type = type90_tank_chassis_1
 						parent_version = 0
 						modules = {
 							main_armament_slot = type90_Rh_120_120mm_gun
@@ -203,12 +203,12 @@ sp_land_yz_type_90 = {
 						design_team = mio:youzi_tank_design_and_production_Center_organization_0
 					}
 				}
-				
+
 			}
 
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = tech_YZ_type90	
+				TECH = tech_YZ_type90
 			}
 		}
 

@@ -3,9 +3,6 @@ Miyako_steal_decision = {
 	awakening = {
 		priority = 10
 		icon = GFX_decision_miyako_steal
-		allowed = {
-			is_ai = no
-		}
 		visible = {
 			is_ai = no
 			or = {
@@ -603,7 +600,7 @@ Miyako_steal_decision = {
 					# 扣除对方实体省份的民工（执行两次，每次扣1个）
 					random_owned_controlled_state = {
 						limit = {
-							has_building = industrial_complex
+							industrial_complex > 0
 						}
 						remove_building = {
 							type = industrial_complex
@@ -612,7 +609,7 @@ Miyako_steal_decision = {
 					}
 					random_owned_controlled_state = {
 						limit = {
-							has_building = industrial_complex
+							industrial_complex > 0
 						}
 						remove_building = {
 							type = industrial_complex
@@ -659,7 +656,7 @@ Miyako_steal_decision = {
 					# 扣除对方军工
 					random_owned_controlled_state = {
 						limit = {
-							has_building = arms_factory
+							arms_factory > 0
 						}
 						remove_building = {
 							type = arms_factory
@@ -668,7 +665,7 @@ Miyako_steal_decision = {
 					}
 					random_owned_controlled_state = {
 						limit = {
-							has_building = arms_factory
+							arms_factory > 0
 						}
 						remove_building = {
 							type = arms_factory
@@ -677,7 +674,7 @@ Miyako_steal_decision = {
 					}
 					random_owned_controlled_state = {
 						limit = {
-							has_building = arms_factory
+							arms_factory > 0
 						}
 						remove_building = {
 							type = arms_factory
@@ -724,7 +721,7 @@ Miyako_steal_decision = {
 					# 扣除对方船坞
 					random_owned_controlled_state = {
 						limit = {
-							has_building = dockyard
+							dockyard > 0
 						}
 						remove_building = {
 							type = dockyard
@@ -733,7 +730,7 @@ Miyako_steal_decision = {
 					}
 					random_owned_controlled_state = {
 						limit = {
-							has_building = dockyard
+							dockyard > 0
 						}
 						remove_building = {
 							type = dockyard
@@ -742,7 +739,7 @@ Miyako_steal_decision = {
 					}
 					random_owned_controlled_state = {
 						limit = {
-							has_building = dockyard
+							dockyard > 0
 						}
 						remove_building = {
 							type = dockyard

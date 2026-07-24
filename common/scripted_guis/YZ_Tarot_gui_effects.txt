@@ -3,16 +3,16 @@ scripted_gui = {
 		window_name = "YZ_Tarot"
 		context_type = decision_category
 		visible = {
-			
+
 		}
 		effects = {
 			tarot_empty_click = {
 				set_country_flag = choued_tarot
 				set_country_flag = tarot_timeout
 				random_list = {
-					10 = { 
-						set_country_flag = tarot_the_chariot 
-						add_ideas = the_chariot 
+					10 = {
+						set_country_flag = tarot_the_chariot
+						add_ideas = the_chariot
 					}
 					10 = { set_country_flag = tarot_the_chariot_down add_ideas = the_chariot_down }
 					10 = { set_country_flag = tarot_the_sun add_ideas = the_sun }
@@ -39,7 +39,7 @@ scripted_gui = {
 					10 = { set_country_flag = tarot_the_fool_down add_ideas = the_fool_down }
 					10 = { set_country_flag = tarot_the_hanged_man add_ideas = the_hanged_man }
 					10 = { set_country_flag = tarot_the_hanged_man_down add_ideas = the_hanged_man_down
-				 }
+					}
 					10 = { set_country_flag = tarot_the_hermit add_ideas = the_hermit }
 					10 = { set_country_flag = tarot_the_hermit_down add_ideas = the_hermit_down }
 					10 = { set_country_flag = tarot_the_hierophant add_ideas = the_hierophant }
@@ -58,7 +58,7 @@ scripted_gui = {
 					10 = { set_country_flag = tarot_the_world_down add_ideas = the_world_down }
 					10 = { set_country_flag = tarot_wheel_of_fortune add_ideas = wheel_of_fortune }
 					10 = { set_country_flag = tarot_wheel_of_fortune_down add_ideas = wheel_of_fortune_down }
-					
+
 				}
 				country_event = { id = start_event.7 days = 15 }
 			}
@@ -80,9 +80,9 @@ scripted_gui = {
 				has_country_flag = choued_tarot
 				has_country_flag = tarot_timeout
 			}
-			
+
 		}
-		
+
 		properties = {
 			tarot_cards = {
 				image = "[tarot_picture]"

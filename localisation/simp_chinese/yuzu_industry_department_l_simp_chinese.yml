@@ -7,7 +7,7 @@
  bond_we_issuing_tooltip: "我们获得£GFX_yz_money §Y4000§!的债券"
  Yoshino_industry_540days_by_loan: "芳乃的穗织振兴计划"
  Yoshino_industry_540days_by_loan_desc: "尽管芳乃的穗织振兴计划为我国工业化发展绘制出了一个美好的前景，但是债券的发行以及芳乃本身在国内的支持率并不高，除非芳乃小姐可以在2年内拿出成绩，不然她很难继续在建设部门中任职了。\n§R同时，我们发行的债券也是不可忽视的§!"
- 
+
  yuzu_auto_industrialization: "自动化工业投资"
  yuzu_auto_industrialization_desc: "芳乃同志决定在工业领域开展一项投资计划。（如果我们柚子币不足投资计划会自动停止）"
  Yoshino_industry_five_year_industrial_complex_by_bonds_1: "一阶段工业投资"
@@ -40,12 +40,12 @@
  Yoshino_industry_five_year_5_by_bonds: "投资工农业协同发展"
  Yoshino_industry_five_year_5_by_bonds_desc: "我国的工业与农业之前任然存在不平衡，人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾已经开始逐渐激化，芳乃决定在工农重点产业进行投资。"
  Yoshino_industry_five_year_20_by_bonds: "投资农业机械化"
- Yoshino_industry_five_year_20_by_bonds_desc: "在实现了我国农业的迅猛发展之后，我们需要把投资我国的农业机械化进程，实现我国农业的高质量发展。" 
+ Yoshino_industry_five_year_20_by_bonds_desc: "在实现了我国农业的迅猛发展之后，我们需要把投资我国的农业机械化进程，实现我国农业的高质量发展。"
  #经济决议：
  yuzu_economy_department_category: "柚子经济部"
  yuzu_economy_department_category_desc: "[yz_economy_department_category_describe]"
  we_dont_start_yz_invest: "我们选择了以债券投资的方式启动了我们的工业化项目，现在我们运营着我们国家的债券，如果我们操作得当的话债券是绝对有利于我们的，§R前提是我们操作得当§! \n\n当前我们的周利息为[?yz_interest_rate_we_can_see|.3+Y]§G%§!，需要偿还的柚子币£GFX_yz_money：[?bond_we_need_to_repay|.0+Y]"
- we_now_start_yoshino_industry_long_term_invest: "我们选择了以债券投资的方式启动了我们的工业化项目，现在我们运营着我们的芳乃ciallo券，如果我们操作得当的话债券是绝对有利于我们的，芳乃同志的投资计划也是绝对利国利民的，§R前提是我们操作得当§! \n\n当前我们的周利息为[?yz_interest_rate_we_can_see|.3+Y]§G%§!，需要偿还的柚子币£GFX_yz_money：[?bond_we_need_to_repay|.0+Y] \n\n我们现在正在进行芳乃的投资计划，目前我们每月的额外柚子币消耗为£GFX_yz_money [?basic_additional_yz_money_spend|.0+Y]" 
+ we_now_start_yoshino_industry_long_term_invest: "我们选择了以债券投资的方式启动了我们的工业化项目，现在我们运营着我们的芳乃ciallo券，如果我们操作得当的话债券是绝对有利于我们的，芳乃同志的投资计划也是绝对利国利民的，§R前提是我们操作得当§! \n\n当前我们的周利息为[?yz_interest_rate_we_can_see|.3+Y]§G%§!，需要偿还的柚子币£GFX_yz_money：[?bond_we_need_to_repay|.0+Y] \n\n我们现在正在进行芳乃的投资计划，目前我们每月的额外柚子币消耗为£GFX_yz_money [?basic_additional_yz_money_spend|.0+Y]"
  Yoshino_industry_debt_cycle: "债务周期"
  Yoshino_industry_debt_cycle_desc: "我们正在发行芳乃穗织券。每周我们的债务以及周利息都会增加。"
  we_need_to_make_choice_about_yz_bonds: "§R我们需要在债务上做出选择§!"
@@ -146,7 +146,7 @@
  yzbonds_event.6.d: "我们的工业投资已经到期，你希望转为长期投资吗？这样虽然会降低效果，但是同时会减少柚子币花费，并提供一个永久buff"
  yzbonds_event.6.a: "继续投资"
  yzbonds_event.6.b: "结束投资"
- 
+
 #民族精神
  yz_long_term_invest_in_construction: "芳乃长期建设投资"
  yz_long_term_invest_resource_extraction: "芳乃长期资源开采投资"
@@ -160,7 +160,7 @@
  we_choice_to_long_yz_invest_in_ressearch: "我们选择进行长期科研投资，我们的每月额外消耗会减少，但是同时效果也会减弱"
  we_choice_to_long_yz_invest_in_indus: "我们选择进行长期工业化投资，我们的每月额外消耗会减少，但是同时效果也会减弱"
  monly_yz_money_spent_too_much: "每月柚子币花费多余你的柚子余额"
- 
+
 #额外
- chongzhiyouzibishangxian: "重置柚子币上限（针对新版本加载旧存档时柚子币上限为零的问题）"
- chongzhiyouzibishangxian_desc: "这个是重置柚子币上限的，当然，正常游戏也可以使用，这个效果是把柚子币上限调回20000"
+ chongzhiyouzibishangxian: "重置柚子币上限与月度账本"
+ chongzhiyouzibishangxian_desc: "将柚子币上限恢复为20000，并重新计算新作收入、月度收入、支出和净变化。旧存档出现柚子币或账本异常时使用。"

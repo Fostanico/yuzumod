@@ -1,3 +1,5 @@
+# 控制面板打开财政窗口前重建一次派生账本，确保工厂等外部输入显示为当前值；
+# 该按需刷新是性能设计的一部分，不要改成 on_daily。
 scripted_gui = {
 	YZ_SETTINT_open_gui = {
 		context_type = player_context
@@ -5,7 +7,7 @@ scripted_gui = {
 		visible = {
 			not = { has_country_flag = close_yz_setting_open_btn }
 			or = {
-                has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_2
 				has_country_flag = qiyong_youzi_3
 			}
 		}
@@ -45,9 +47,9 @@ scripted_gui = {
 				if = {
 					limit = {
 						not = { OR = {
-							has_country_flag = Yoshino_industry_five_year_yes
-							has_country_flag = Yoshino_industry_five_year_yes_by_loan
-						} }
+								has_country_flag = Yoshino_industry_five_year_yes
+								has_country_flag = Yoshino_industry_five_year_yes_by_loan
+							} }
 					}
 					set_country_flag = Yoshino_industry_five_year_yes
 				}
@@ -142,6 +144,7 @@ scripted_gui = {
 					clr_country_flag = show_yz_money_window
 				}
 				else = {
+					yz_recalculate_monthly_money_ledger = yes
 					set_country_flag = show_yz_money_window
 				}
 			}
@@ -159,22 +162,22 @@ scripted_gui = {
 		}
 		triggers = {
 			btn_1_click_enabled = {
-				
+
 			}
 			btn_2_click_enabled = {
 				has_country_flag = finished_yoshino_industry
 			}
 			btn_3_click_enabled = {
-				
+
 			}
 			btn_4_click_enabled = {
 				has_country_flag = set_YRI
 			}
 			btn_5_click_enabled = {
-				
+
 			}
 			btn_6_click_enabled = {
-				
+
 			}
 			btn_7_click_enabled = {
 				or = {

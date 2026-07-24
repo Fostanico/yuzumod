@@ -3,9 +3,6 @@ Haruka_sky_mind_decision = {
 	sky_mind_advent = {
 		priority = 10
 		icon = GFX_decision_haruka_decision
-		allowed = {
-			is_ai = no
-		}
 		visible = {
 			or = {
 				has_country_flag = qiyong_youzi_2
@@ -274,7 +271,7 @@ Haruka_sky_mind_decision = {
 		}
 		days_remove = 14
 		modifier = {
-			intelligence_network_gain = 0.20
+			intel_network_gain_factor = 0.20
 			civilian_intel_factor = 1
 			army_intel_factor = 1
 			navy_intel_factor = 1

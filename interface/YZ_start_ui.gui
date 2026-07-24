@@ -66,7 +66,7 @@ guiTypes = {
 			name = "YZ_start_ui_credits_button_text"
 			position = { x = 25 y = 217 }
 			font = "hoi_18mbs"
-			scale = 0.92
+			# scale = 0.92
 			text = "YZ_start_ui_credits_button_text"
 			maxWidth = 186
 			maxHeight = 24
@@ -85,7 +85,7 @@ guiTypes = {
 			name = "YZ_start_ui_close_button_text"
 			position = { x = 25 y = 297 }
 			font = "hoi_18mbs"
-			scale = 0.92
+			# scale = 0.92
 			text = "YZ_start_ui_close_button_text"
 			maxWidth = 186
 			maxHeight = 24
@@ -113,7 +113,7 @@ guiTypes = {
 			name = "YZ_start_ui_content"
 			position = { x = 278 y = 58 }
 			font = "hoi_18mbs"
-			scale = 0.72
+			# scale = 0.72
 			text = "YZ_start_ui_content_text"
 			maxWidth = 680
 			maxHeight = 735

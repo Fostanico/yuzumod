@@ -115,11 +115,12 @@ sub_units = {
 			defence = 0.15
 		}
 
-		mud = {
-			movement = -0.1
-			attack = -0.05
-			defence = -0.05
-		}
+		# mud 不是 sub_unit 支持的地形键；原代码不会生效
+		# mud = {
+		# 	movement = -0.1
+		# 	attack = -0.05
+		# 	defence = -0.05
+		# }
 	}
 
 	atri_mechanized = {
@@ -239,11 +240,12 @@ sub_units = {
 			defence = 0.15
 		}
 
-		mud = {
-			movement = -0.1
-			attack = -0.05
-			defence = -0.05
-		}
+		# mud 不是 sub_unit 支持的地形键；原代码不会生效
+		# mud = {
+		# 	movement = -0.1
+		# 	attack = -0.05
+		# 	defence = -0.05
+		# }
 
 		#hardness = 0.2 moving these buffs to unit stats
 	}

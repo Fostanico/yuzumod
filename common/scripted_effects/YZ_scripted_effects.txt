@@ -1,3 +1,225 @@
+# 柚子核心系统的派生值统一入口。以下效果均要求国家 scope；调用方修改源变量后
+# 应立即刷新，并由既定周/月入口兜底。不要为界面即时性恢复全局 on_daily 轮询。
+
+# 根据当前工厂数与千人人力计算新作月收入 yz_new_works（0..2000000）。
+# 两个输入必须先缩放再相乘，并在乘法前做饱和判断，避免定点数中间值溢出。
+yz_recalculate_new_works_income = {
+	set_temp_variable = { temp_yz_new_works_factory_factor = num_of_factories }
+	multiply_temp_variable = { temp_yz_new_works_factory_factor = 0.01 }
+	clamp_temp_variable = {
+		var = temp_yz_new_works_factory_factor
+		min = 0
+	}
+
+	set_temp_variable = { temp_yz_new_works_manpower_factor = max_manpower_k }
+	multiply_temp_variable = { temp_yz_new_works_manpower_factor = 0.06 }
+	clamp_temp_variable = {
+		var = temp_yz_new_works_manpower_factor
+		min = 0
+	}
+
+	set_variable = { yz_new_works = 0 }
+	if = {
+		limit = {
+			check_variable = { temp_yz_new_works_factory_factor > 0 }
+			check_variable = { temp_yz_new_works_manpower_factor > 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { temp_yz_new_works_factory_factor < 1 }
+			}
+			multiply_temp_variable = {
+				temp_yz_new_works_factory_factor = temp_yz_new_works_manpower_factor
+			}
+			clamp_temp_variable = {
+				var = temp_yz_new_works_factory_factor
+				min = 0
+				max = 2000000
+			}
+			set_variable = { yz_new_works = temp_yz_new_works_factory_factor }
+		}
+		else = {
+			set_temp_variable = { temp_yz_new_works_threshold = 2000000 }
+			divide_temp_variable = {
+				temp_yz_new_works_threshold = temp_yz_new_works_factory_factor
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = temp_yz_new_works_manpower_factor
+						value = temp_yz_new_works_threshold
+						compare = greater_than
+					}
+				}
+				set_variable = { yz_new_works = 2000000 }
+			}
+			else = {
+				multiply_temp_variable = {
+					temp_yz_new_works_factory_factor = temp_yz_new_works_manpower_factor
+				}
+				set_variable = { yz_new_works = temp_yz_new_works_factory_factor }
+			}
+		}
+	}
+}
+
+# 重建财政 GUI 和月结算共用的国家级派生账本；本效果不修改真实余额 yz_money。
+# 工厂、拨款、真咲、新作和长期投资任一来源改变后调用，月结算前必须再调用一次。
+yz_recalculate_monthly_money_ledger = {
+	clamp_variable = { var = YzMonthlyFund_var min = 0 max = 5 }
+	clamp_variable = { var = YzEducation_fund_var min = 0 max = 5 }
+	clamp_variable = { var = YzAdministration_fund_var min = 0 max = 5 }
+	clamp_variable = { var = YzMilitary_fund_var min = 0 max = 5 }
+
+	set_temp_variable = { temp_yz_money_factory_count = num_of_factories }
+	clamp_temp_variable = { var = temp_yz_money_factory_count min = 0 }
+	set_variable = { monthly_YZ_money_factory_income = 0 }
+	if = {
+		limit = { check_variable = { temp_yz_money_factory_count < 30 } }
+		multiply_temp_variable = { temp_yz_money_factory_count = 3 }
+		set_variable = { monthly_YZ_money_factory_income = temp_yz_money_factory_count }
+	}
+	else_if = {
+		limit = { check_variable = { temp_yz_money_factory_count < 80 } }
+		add_to_temp_variable = { temp_yz_money_factory_count = -30 }
+		multiply_temp_variable = { temp_yz_money_factory_count = 2.5 }
+		add_to_temp_variable = { temp_yz_money_factory_count = 90 }
+		set_variable = { monthly_YZ_money_factory_income = temp_yz_money_factory_count }
+	}
+	else = {
+		add_to_temp_variable = { temp_yz_money_factory_count = -80 }
+		multiply_temp_variable = { temp_yz_money_factory_count = 1.5 }
+		add_to_temp_variable = { temp_yz_money_factory_count = 215 }
+		clamp_temp_variable = {
+			var = temp_yz_money_factory_count
+			min = 0
+			max = 100000
+		}
+		set_variable = { monthly_YZ_money_factory_income = temp_yz_money_factory_count }
+	}
+
+	set_variable = { monthly_YZ_money_fund_income = YzMonthlyFund_var }
+	multiply_variable = { monthly_YZ_money_fund_income = 150 }
+
+	set_variable = { monthly_YZ_money_masaki_income = monly_YZ_masaki_money_visible }
+	clamp_variable = {
+		var = monthly_YZ_money_masaki_income
+		min = 0
+		max = 10000
+	}
+	if = {
+		limit = { NOT = { has_variable = yz_new_works } }
+		set_variable = { yz_new_works = 0 }
+	}
+	clamp_variable = { var = yz_new_works min = 0 max = 2000000 }
+
+	set_variable = { monthly_YZ_money_income = monthly_YZ_money_factory_income }
+	add_to_variable = { monthly_YZ_money_income = monthly_YZ_money_fund_income }
+	add_to_variable = { monthly_YZ_money_income = monthly_YZ_money_masaki_income }
+	add_to_variable = { monthly_YZ_money_income = yz_new_works }
+	clamp_variable = { var = monthly_YZ_money_income min = 0 max = 2100000 }
+
+	set_variable = { YzMoneyOutcome_var = YzEducation_fund_var }
+	add_to_variable = { YzMoneyOutcome_var = YzAdministration_fund_var }
+	add_to_variable = { YzMoneyOutcome_var = YzMilitary_fund_var }
+	multiply_variable = { YzMoneyOutcome_var = 100 }
+
+	set_variable = { monthly_YZ_money_industry_outcome = 0 }
+	if = {
+		limit = { has_country_flag = Yoshino_industry_long_term_invest_now_start }
+		set_variable = { monthly_YZ_money_industry_outcome = basic_additional_yz_money_spend }
+		clamp_variable = {
+			var = monthly_YZ_money_industry_outcome
+			min = 0
+			max = 100000
+		}
+	}
+
+	set_variable = { monthly_YZ_money_total_outcome = YzMoneyOutcome_var }
+	add_to_variable = { monthly_YZ_money_total_outcome = monthly_YZ_money_industry_outcome }
+	set_variable = { monly_YZ_money_visible = monthly_YZ_money_income }
+	subtract_from_variable = { monly_YZ_money_visible = monthly_YZ_money_total_outcome }
+}
+
+# 计算下次月结算将增加的好感，输出 monly_num_YZ_love_depth。
+# 该值是界面预测缓存；月结算前重算，周入口仅负责避免显示长期陈旧。
+yz_recalculate_monthly_love_gain = {
+	if = {
+		limit = {
+			has_variable = love_depth
+			has_variable = num_YZ_general
+		}
+		clear_variable = monly_num_YZ_love_depth
+		set_temp_variable = { temp_yz_love_factory_count = num_of_factories }
+		multiply_temp_variable = { temp_yz_love_factory_count = 0.1 }
+		round_temp_variable = temp_yz_love_factory_count
+		clamp_temp_variable = {
+			var = temp_yz_love_factory_count
+			min = 0
+		}
+		set_variable = { monly_num_YZ_love_depth = num_YZ_general }
+		add_to_variable = { monly_num_YZ_love_depth = temp_yz_love_factory_count }
+		add_to_variable = { monly_num_YZ_love_depth = stability }
+		round_variable = monly_num_YZ_love_depth
+	}
+}
+
+# 由 love_depth 与 yzc_manpower_factor 重建动态修正使用的持久变量。
+# 每个离散写入点立即调用，周入口再根据人口等外部变化兜底。
+yz_refresh_love_modifier_values = {
+	if = {
+		limit = {
+			has_variable = love_depth
+			has_variable = num_YZ_general
+			has_country_flag = qiyong_youzi_2
+		}
+		set_temp_variable = { temp_love_depth = love_depth }
+		set_temp_variable = { temp_yzc_factor = yzc_manpower_factor }
+		add_to_temp_variable = { temp_yzc_factor = 1.5 }
+		multiply_temp_variable = { temp_love_depth = temp_yzc_factor }
+		set_variable = { love_political_power = temp_love_depth }
+		multiply_variable = { love_political_power = 0.002 }
+		set_variable = { love_stability = temp_love_depth }
+		multiply_variable = { love_stability = 0.001 }
+		set_variable = { love_war_support_factor = temp_love_depth }
+		multiply_variable = { love_war_support_factor = 0.001 }
+		set_variable = { love_consumer_goods_factor = temp_love_depth }
+		multiply_variable = { love_consumer_goods_factor = -0.001 }
+		set_variable = { love_industrial_capacity_factory = temp_love_depth }
+		multiply_variable = { love_industrial_capacity_factory = 0.001 }
+	}
+}
+
+# 重建柚子厨总量和可招募量。recruited_yzc_manpower 是已投入部队的人力，
+# 既参与总量回填也参与最终可招募量修正；不要改成每日累加或清空。
+yz_refresh_yzc_manpower_values = {
+	if = {
+		limit = {
+			has_country_flag = qiyong_youzi_2
+		}
+		clamp_variable = {
+			var = yzc_manpower_factor
+			min = 0
+			max = 1
+		}
+		set_variable = { yzc_manpower_k = 0 }
+		set_temp_variable = { temp_yzc_unit_recruit = 0 }
+		set_temp_variable = { temp_yzc_manpower = max_manpower_k }
+		multiply_temp_variable = { temp_yzc_manpower = yzc_manpower_factor }
+		add_to_variable = { yzc_manpower_k = temp_yzc_manpower }
+		add_to_variable = { yzc_manpower_k = recruited_yzc_manpower }
+		add_to_temp_variable = { temp_yzc_unit_recruit = yzc_manpower_k }
+		set_temp_variable = { temp_yzc_zhandouli = yzc_zhandouli }
+		add_to_temp_variable = { temp_yzc_zhandouli = -0.025 }
+		multiply_temp_variable = { temp_yzc_unit_recruit = temp_yzc_zhandouli }
+		set_variable = { yzc_unit_recruit = temp_yzc_unit_recruit }
+		add_to_variable = {
+			var = yzc_unit_recruit
+			value = recruited_yzc_manpower
+		}
+	}
+}
+
 YzOpreative_level_up = {
 	if = {
 		limit = { has_idea = YzOpreative_boost1 }
@@ -324,7 +546,7 @@ clr_YzCoreGroup = {
 	clr_country_flag = YCG_FS_yoshino
 	clr_country_flag = YCG_CM_yoshino
 	clr_country_flag = YCG_VC_yoshino
-	
+
 	clr_country_flag = YCG_FS_nanami
 	clr_country_flag = YCG_CM_nanami
 	clr_country_flag = YCG_VC_nanami
@@ -455,7 +677,7 @@ yoshino_love_up = {			###yoshino好感度增加
 	}
 }
 
-roka_koharu_check = {   #芦花小春触发事件判定 
+roka_koharu_check = {   #芦花小春触发事件判定
 	if = {
 		limit = {
 			check_variable = {
@@ -505,12 +727,12 @@ roka_koharu_check = {   #芦花小春触发事件判定
 		country_event = RoKo_event.4
 	}
 	else = {
-		
+
 	}
 }
 
 turn_to_yzc = {	#变成柚子厨
-	if = {		
+	if = {
 		limit = {
 			has_equipment = {
 				yz_works_equipment > 9
@@ -536,7 +758,7 @@ turn_to_yzc = {	#变成柚子厨
 }
 
 
-clr_tarot_flags = {		
+clr_tarot_flags = {
 	clr_country_flag = tarot_the_chariot
 	clr_country_flag = tarot_the_chariot_down
 	clr_country_flag = tarot_the_sun
@@ -580,285 +802,285 @@ clr_tarot_flags = {
 	clr_country_flag = tarot_the_world
 	clr_country_flag = tarot_the_world_down
 	clr_country_flag = tarot_wheel_of_fortune
-	clr_country_flag = tarot_wheel_of_fortune_down       
+	clr_country_flag = tarot_wheel_of_fortune_down
 }
 clean_all_traits_and_desc = {
 	if = {
-        limit = { THIS = { has_ideology = nazism } }
-        remove_country_leader_role = { ideology = nazism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = nazism
+		limit = { THIS = { has_ideology = nazism } }
+		remove_country_leader_role = { ideology = nazism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = nazism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
     # 2. 法西斯主义 (fascism_ideology)
-    else_if = {
-        limit = { THIS = { has_ideology = fascism_ideology } }
-        remove_country_leader_role = { ideology = fascism_ideology }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = fascism_ideology
-				traits = {  }
-            }
-        }
-    }
-    else_if = {
-        limit = { THIS = { has_ideology = gen_nazism } }
-        remove_country_leader_role = { ideology = gen_nazism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = gen_nazism
-				traits = {  }
-            }
-        }
-    }
 	else_if = {
-        limit = { THIS = { has_ideology = falangism } }
-        remove_country_leader_role = { ideology = falangism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = falangism
+		limit = { THIS = { has_ideology = fascism_ideology } }
+		remove_country_leader_role = { ideology = fascism_ideology }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = fascism_ideology
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = rexism } }
-        remove_country_leader_role = { ideology = rexism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = rexism
+		limit = { THIS = { has_ideology = gen_nazism } }
+		remove_country_leader_role = { ideology = gen_nazism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = gen_nazism
 				traits = {  }
-            }
-        }
-    }
-	
+			}
+		}
+	}
+	else_if = {
+		limit = { THIS = { has_ideology = falangism } }
+		remove_country_leader_role = { ideology = falangism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = falangism
+				traits = {  }
+			}
+		}
+	}
+	else_if = {
+		limit = { THIS = { has_ideology = rexism } }
+		remove_country_leader_role = { ideology = rexism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = rexism
+				traits = {  }
+			}
+		}
+	}
+
     # ============ 民主主义组 (Democratic) ============
     # 3. 保守主义 (conservatism)
-    else_if = {
-        limit = { THIS = { has_ideology = conservatism } }
-        remove_country_leader_role = { ideology = conservatism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = conservatism
+	else_if = {
+		limit = { THIS = { has_ideology = conservatism } }
+		remove_country_leader_role = { ideology = conservatism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
     # 4. 自由主义 (liberalism)
-    else_if = {
-        limit = { THIS = { has_ideology = liberalism } }
-        remove_country_leader_role = { ideology = liberalism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = liberalism
+	else_if = {
+		limit = { THIS = { has_ideology = liberalism } }
+		remove_country_leader_role = { ideology = liberalism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = liberalism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 
 	else_if = {
-        limit = { THIS = { has_ideology = socialism } }
-        remove_country_leader_role = { ideology = socialism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = socialism
+		limit = { THIS = { has_ideology = socialism } }
+		remove_country_leader_role = { ideology = socialism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 
 	else_if = {
-        limit = { THIS = { has_ideology = populism } }
-        remove_country_leader_role = { ideology = populism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = populism
+		limit = { THIS = { has_ideology = populism } }
+		remove_country_leader_role = { ideology = populism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = populism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
     # ============ 共产主义组 (Communism) ============
     # 5. 马克思主义 (marxism)
-    else_if = {
-        limit = { THIS = { has_ideology = marxism } }
-        remove_country_leader_role = { ideology = marxism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = marxism
+	else_if = {
+		limit = { THIS = { has_ideology = marxism } }
+		remove_country_leader_role = { ideology = marxism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
     # 6. 斯大林主义 (stalinism)
-    else_if = {
-        limit = { THIS = { has_ideology = stalinism } }
-        remove_country_leader_role = { ideology = stalinism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = stalinism
+	else_if = {
+		limit = { THIS = { has_ideology = stalinism } }
+		remove_country_leader_role = { ideology = stalinism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = stalinism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 
 	else_if = {
-        limit = { THIS = { has_ideology = leninism } }
-        remove_country_leader_role = { ideology = leninism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = leninism
+		limit = { THIS = { has_ideology = leninism } }
+		remove_country_leader_role = { ideology = leninism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = leninism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = anti_revisionism } }
-        remove_country_leader_role = { ideology = anti_revisionism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = anti_revisionism
+		limit = { THIS = { has_ideology = anti_revisionism } }
+		remove_country_leader_role = { ideology = anti_revisionism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = anti_revisionism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = anarchist_communism } }
-        remove_country_leader_role = { ideology = anarchist_communism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = anarchist_communism
+		limit = { THIS = { has_ideology = anarchist_communism } }
+		remove_country_leader_role = { ideology = anarchist_communism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = anarchist_communism
 				traits = {  }
-            }
-        }
-    }
-	
+			}
+		}
+	}
+
     # ============ 中立主义组 (Neutrality) ============
     # 7. 专制主义 (despotism)
-    else_if = {
-        limit = { THIS = { has_ideology = despotism } }
-        remove_country_leader_role = { ideology = despotism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = despotism
-				traits = {  }
-            }
-        }
-    }
 	else_if = {
-        limit = { THIS = { has_ideology = oligarchism } }
-        remove_country_leader_role = { ideology = oligarchism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = oligarchism
+		limit = { THIS = { has_ideology = despotism } }
+		remove_country_leader_role = { ideology = despotism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = anarchism } }
-        remove_country_leader_role = { ideology = anarchism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = anarchism
+		limit = { THIS = { has_ideology = oligarchism } }
+		remove_country_leader_role = { ideology = oligarchism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = oligarchism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = despotism } }
-        remove_country_leader_role = { ideology = despotism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = despotism
+		limit = { THIS = { has_ideology = anarchism } }
+		remove_country_leader_role = { ideology = anarchism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = anarchism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = moderatism } }
-        remove_country_leader_role = { ideology = moderatism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = moderatism
+		limit = { THIS = { has_ideology = despotism } }
+		remove_country_leader_role = { ideology = despotism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = centrism } }
-        remove_country_leader_role = { ideology = centrism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = centrism
+		limit = { THIS = { has_ideology = moderatism } }
+		remove_country_leader_role = { ideology = moderatism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = moderatism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = japan_militarism_ideology } }
-        remove_country_leader_role = { ideology = japan_militarism_ideology }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = japan_militarism_ideology
+		limit = { THIS = { has_ideology = centrism } }
+		remove_country_leader_role = { ideology = centrism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = centrism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = buddhist_socialism } }
-        remove_country_leader_role = { ideology = buddhist_socialism }
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = buddhist_socialism
+		limit = { THIS = { has_ideology = japan_militarism_ideology } }
+		remove_country_leader_role = { ideology = japan_militarism_ideology }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = japan_militarism_ideology
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = emperor_fascism } }
-        remove_country_leader_role = { ideology = emperor_fascism}
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = emperor_fascism
+		limit = { THIS = { has_ideology = buddhist_socialism } }
+		remove_country_leader_role = { ideology = buddhist_socialism }
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = buddhist_socialism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
 	else_if = {
-        limit = { THIS = { has_ideology = Communist-State } }
-        remove_country_leader_role = { ideology = Communist-State}
-        add_country_leader_role = {
-            promote_leader = yes
-            country_leader = {
-                ideology = Communist-State
+		limit = { THIS = { has_ideology = emperor_fascism } }
+		remove_country_leader_role = { ideology = emperor_fascism}
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = emperor_fascism
 				traits = {  }
-            }
-        }
-    }
+			}
+		}
+	}
+	else_if = {
+		limit = { THIS = { has_ideology = Communist-State } }
+		remove_country_leader_role = { ideology = Communist-State}
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = Communist-State
+				traits = {  }
+			}
+		}
+	}
 }

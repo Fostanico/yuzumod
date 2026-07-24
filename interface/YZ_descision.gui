@@ -23,7 +23,7 @@ guiTypes = {
 		buttonType = {
 			name = "open_YzModule"
 			position = { x = 420 y = -8 }
-			size = { width = 180 height = 230 }
+			size = { x = 180 y = 230 }
 			scale = 0.6		###缩放
 			quadTextureSprite = "GFX_murasame_3"
 			pdx_tooltip = "open_start_ui_tt"
@@ -41,7 +41,7 @@ guiTypes = {
 		buttonType = {
 			name = "Yzleader_portrait1"
 			position = { x = 74 y = 73 }
-			size = { width = 180 height = 230 }
+			size = { x = 180 y = 230 }
 			scale = 0.51		###缩放
 			quadTextureSprite = "GFX_yzleader_bg"
 			pdx_tooltip = " "
@@ -50,7 +50,7 @@ guiTypes = {
 		iconType = { 
 			name = "Yzleader_box1"
 			position = { x = 64 y = 63 }
-			size = { width = 180 height = 230 }
+			# size = { width = 180 height = 230 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_box"
 			pdx_tooltip = " "
@@ -60,7 +60,7 @@ guiTypes = {
 		iconType = { 
 			name = "Yzleader_unknown1"
 			position = { x = 64 y = 60 }
-			size = { width = 180 height = 230 }
+			# size = { width = 180 height = 230 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_unknown"
 			pdx_tooltip = " "
@@ -70,7 +70,7 @@ guiTypes = {
 		buttonType = {
 			name = "Yzleader_portrait2"
 			position = { x = 210 y = 44 } 
-			size = { width = 180 height = 220 }
+			size = { x = 180 y = 220 }
 			scale = 0.52		###缩放
 			quadTextureSprite = "GFX_yzleader_bg"
 			pdx_tooltip = " "
@@ -79,7 +79,7 @@ guiTypes = {
 		iconType = { 
 			name = "Yzleader_box2"
 			position = { x = 201 y = 35 }
-			size = { width = 180 height = 210 }
+			# size = { width = 180 height = 210 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_box"
 			pdx_tooltip = " "
@@ -89,7 +89,7 @@ guiTypes = {
 		buttonType = { 
 			name = "Yzleader_unknown2"
 			position = { x = 201 y = 35 } 
-			size = { width = 180 height = 210 }
+			size = { x = 180 y = 210 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_unknown"
 			pdx_tooltip = " "
@@ -99,7 +99,7 @@ guiTypes = {
 		buttonType = {
 			name = "Yzleader_portrait3"
 			position = { x = 348 y = 69 } 
-			size = { width = 180 height = 230 }
+			size = { x = 180 y = 230 }
 			scale = 0.51		###缩放
 			quadTextureSprite = "GFX_yzleader_bg"
 			pdx_tooltip = " "
@@ -108,7 +108,7 @@ guiTypes = {
 		iconType = { 
 			name = "Yzleader_box3"
 			position = { x = 338 y = 60 } 
-			size = { width = 180 height = 230 }
+			# size = { width = 180 height = 230 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_box"
 			pdx_tooltip = " "
@@ -118,7 +118,7 @@ guiTypes = {
 		buttonType = { 
 			name = "Yzleader_unknown3"
 			position = { x = 338 y = 60 } 
-			size = { width = 180 height = 230 }
+			size = { x = 180 y = 230 }
 			scale = 0.55		###缩放
 			quadTextureSprite = "GFX_yzleader_unknown"
 			pdx_tooltip = " "
@@ -143,7 +143,7 @@ guiTypes = {
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
-			format = middle
+			format = center
 		}
 		instantTextBoxType = {
 			name = "Yzleader_title3"
@@ -170,7 +170,7 @@ guiTypes = {
 			buttonType = {
 				name = "open_yz_money_btn"
 				position = { x = 240 y = 80 } 
-				size = { width = 70 height = 30 }
+				size = { x = 70 y = 30 }
 				quadTextureSprite = "GFX_yz_button_long"
 				scale = 0.55
 				pdx_tooltip = yz_money_desc_tt	
@@ -188,7 +188,7 @@ guiTypes = {
 			buttonType = {
 				name = "open_YzStore_btn"
 				position = { x = 30 y = 80 } 
-				size = { width = 70 height = 30 }
+				size = { x = 70 y = 30 }
 				quadTextureSprite = "GFX_yz_button_long"
 				scale = 0.55
 				pdx_tooltip = open_YzStore_btn_tt
@@ -282,7 +282,7 @@ guiTypes = {
 		buttonType = {
 			name = "yz_economic_policy_1_btn"
 			position = { x = 18 y = 60 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = yz_economic_policy_1_btn_tt
@@ -300,7 +300,7 @@ guiTypes = {
 		buttonType = {
 			name = "yz_economic_policy_2_btn"
 			position = { x = 18 y = 100 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = yz_economic_policy_2_btn_tt
@@ -318,7 +318,7 @@ guiTypes = {
 		buttonType = {
 			name = "yz_economic_policy_3_btn"
 			position = { x = 18 y = 140 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = yz_economic_policy_3_btn_tt
@@ -541,7 +541,7 @@ guiTypes = {
 		buttonType = {	###pp
 			name = "YzStore_1_btn"
 			position = { x = 18 y = 80 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_1_btn_tt
@@ -559,7 +559,7 @@ guiTypes = {
 		buttonType = {	###cp
 			name = "YzStore_2_btn"
 			position = { x = 18 y = 120 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_2_btn_tt
@@ -577,7 +577,7 @@ guiTypes = {
 		buttonType = {	###xp陆军
 			name = "YzStore_3_btn"
 			position = { x = 18 y = 160 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_3_btn_tt
@@ -595,7 +595,7 @@ guiTypes = {
 		buttonType = {	###空军xp
 			name = "YzStore_4_btn"
 			position = { x = 18 y = 200 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_4_btn_tt
@@ -613,7 +613,7 @@ guiTypes = {
 		buttonType = {	###海军xp
 			name = "YzStore_9_btn"
 			position = { x = 18 y = 240 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_9_btn_tt
@@ -642,7 +642,7 @@ guiTypes = {
 		buttonType = {	###冰
 			name = "YzStore_5_btn"
 			position = { x = 238 y = 80 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_5_btn_tt
@@ -660,7 +660,7 @@ guiTypes = {
 		buttonType = {	###粽子
 			name = "YzStore_6_btn"
 			position = { x = 238 y = 120 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_6_btn_tt
@@ -678,7 +678,7 @@ guiTypes = {
 		buttonType = {	###收藏
 			name = "YzStore_7_btn"
 			position = { x = 238 y = 160 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_7_btn_tt
@@ -696,7 +696,7 @@ guiTypes = {
 		buttonType = {	###起爆器
 			name = "YzStore_8_btn"
 			position = { x = 238 y = 200 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_8_btn_tt
@@ -714,7 +714,7 @@ guiTypes = {
 		buttonType = {    #柚子超级会员
 			name = "YzStore_10_btn"
 			position = { x = 238 y = 240 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_10_btn_tt
@@ -732,7 +732,7 @@ guiTypes = {
 		buttonType = {
 			name = "YzStore_11_btn"     #柚子基金
 			position = { x = 238 y = 280 } 
-			size = { width = 70 height = 30 }
+			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
 			pdx_tooltip = YzStore_11_btn_tt
@@ -757,16 +757,16 @@ guiTypes = {
 		buttonType = { 
 			name = "tarot_cards"
 			position = { x = 120 y = -10 } 
-			size = { width = 500 height = 500 }
+			size = { x = 500 y = 500 }
 			quadTextureSprite = "GFX_meigulu"
 			pdx_tooltip = "all_tarot_name"
 			pdx_tooltip_delayed = "all_tarot_desc"
-			clicksound = clicksound
+			clicksound = click_default
 		} 
 		iconType = {
 			name = "tarot_cards_image"
 			position = { x = 120 y = -10 } 
-			size = { width = 500 height = 500 }
+			# size = { width = 500 height = 500 }
 			spriteType = "GFX_meigulu"		
 			
 			pdx_tooltip = "all_tarot_name"
@@ -779,7 +779,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tarot_empty"
 
 			pdx_tooltip = "tarot_empty_desc"
-			clicksound = clicksound
+			clicksound = click_default
 		} 
 	}
 

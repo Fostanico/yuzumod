@@ -10,7 +10,8 @@ ideas = {
                 monthly_population = 0.3
             }
         }
-        yuzu_super_vip = {
+			# 超级会员只改变文化传播所需的 flag 年龄阈值；冷却状态不存放在 idea 内。
+			yuzu_super_vip = {
             name = yuzu_super_vip
             picture = idea_yuzu_super_vip
             modifier = {
@@ -18,12 +19,7 @@ ideas = {
                 political_power_factor = 0.2
                 monthly_population = 0.3
             }
-            on_remove = {
-                set_variable = {
-                    yuzu_form_yuzu_land_days_basic_require = 180
-                }
-            }
-        }
+			}
         now_we_repay_the_bonds_without_yzmoney = {
             name = now_we_repay_the_bonds_without_yzmoney     #2025.3.19,18:26，伊尔诺——小萝莉帮我弄民族精神图标
             picture = idea_yuzu_fans_land_ide
@@ -34,44 +30,155 @@ ideas = {
         }
         ship_making_brand_standinglized = {
             name = ship_making_brand_standinglized
-            picture = GFX_idea_YCG_hazuki
+            picture = ship_making_brand_standinglized
             modifier = {
                 production_speed_dockyard_factor = 1
                 industrial_capacity_dockyard = 2
-                
+                custom_modifier_tooltip = ship_making_brand_standinglized_hulls_tt
             }
-			equipment_bonus = {
-                ship_hull_submarine = {
-                    build_cost_ic = -0.1
-                    instant = yes
+            # 获得民族精神时再生成装备加成，避免静态定义同时解析原版与千禧的互斥装备 ID。
+            on_add = {
+                meta_effect = {
+                    text = {
+                        add_equipment_bonus = {
+                            name = ship_making_brand_standinglized
+                            bonus = {
+                                ship_hull_submarine = {
+                                    build_cost_ic = -0.1
+                                    instant = yes
+                                }
+                                convoy = {
+                                    build_cost_ic = -0.15
+                                    instant = yes
+                                }
+                                ship_hull_light = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                ship_hull_cruiser = {
+                                    build_cost_ic = -0.30
+                                    instant = yes
+                                }
+                                ship_hull_heavy = {
+                                    build_cost_ic = -0.35
+                                    instant = yes
+                                }
+                                ship_hull_carrier = {
+                                    build_cost_ic = -0.4
+                                    instant = yes
+                                }
+                                cv_small_plane_naval_bomber_airframe = {
+                                    build_cost_ic = -0.5
+                                    instant = yes
+                                }
+                                cv_small_plane_airframe = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                            }
+                        }
+                    }
                 }
-				convoy = {
-                    build_cost_ic = -0.15
-                    instant = yes
-                }
-				ship_hull_light = {
-                    build_cost_ic = -0.2
-                    instant = yes
-                }
-				ship_hull_cruiser = {
-                    build_cost_ic = -0.30
-                    instant = yes
-                }
-				ship_hull_heavy = {
-                    build_cost_ic = -0.35
-                    instant = yes
-                }
-				ship_hull_carrier = {
-                    build_cost_ic = -0.4
-                    instant = yes
-                }
-                cv_small_plane_naval_bomber_airframe = {
-                    build_cost_ic = -0.5
-                    instant = yes
-                }
-				cv_small_plane_airframe = {
-                    build_cost_ic = -0.2
-                    instant = yes
+            }
+        }
+        ship_making_brand_standinglized_md = {
+            name = ship_making_brand_standinglized
+            picture = ship_making_brand_standinglized_md
+            modifier = {
+                production_speed_dockyard_factor = 1
+                industrial_capacity_dockyard = 2
+                custom_modifier_tooltip = ship_making_brand_standinglized_md_hulls_tt
+            }
+            # 保留原有分级折扣，并覆盖两套已安装千禧黎明共同使用的全部舰艇 archetype。
+            on_add = {
+                meta_effect = {
+                    text = {
+                        add_equipment_bonus = {
+                            name = ship_making_brand_standinglized
+                            bonus = {
+                                attack_submarine = {
+                                    build_cost_ic = -0.1
+                                    instant = yes
+                                }
+                                missile_submarine = {
+                                    build_cost_ic = -0.1
+                                    instant = yes
+                                }
+                                convoy = {
+                                    build_cost_ic = -0.15
+                                    instant = yes
+                                }
+                                patrol_boat = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                corvette = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                stealth_corvette = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                frigate = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                stealth_frigate = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                heavy_frigate = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                destroyer = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                stealth_destroyer = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                support_ship_hull = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                repair_ship_hull = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                                cruiser = {
+                                    build_cost_ic = -0.30
+                                    instant = yes
+                                }
+                                battle_cruiser = {
+                                    build_cost_ic = -0.35
+                                    instant = yes
+                                }
+                                battleship_hull_0 = {
+                                    build_cost_ic = -0.35
+                                    instant = yes
+                                }
+                                helicopter_operator = {
+                                    build_cost_ic = -0.4
+                                    instant = yes
+                                }
+                                carrier = {
+                                    build_cost_ic = -0.4
+                                    instant = yes
+                                }
+                                cv_small_plane_naval_bomber_airframe = {
+                                    build_cost_ic = -0.5
+                                    instant = yes
+                                }
+                                cv_small_plane_airframe = {
+                                    build_cost_ic = -0.2
+                                    instant = yes
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

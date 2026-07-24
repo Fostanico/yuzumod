@@ -40,7 +40,7 @@
 #	}
 #}
 on_actions = {
-    on_unit_leader_level_up = {   #Gemini版BMI机制_2026.4.29,23:14,伊尔诺
+	on_unit_leader_level_up = {   #Gemini版BMI机制_2026.4.29,23:14,伊尔诺
 		effect = {
 			if = {
 				limit = {

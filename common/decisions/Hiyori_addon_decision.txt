@@ -14,19 +14,19 @@ general_develpomen_decision_category = {
 		}
 
 		remove_effect = {
-			add_to_variable = { 
-			yz_money = 500 
-			tooltip = add_to_yz_money
+			add_to_variable = {
+				yz_money = 500
+				tooltip = add_to_yz_money
 			}
 			clamp_variable = {		#范围
 				var = yz_money
 				#min = 0
 				max = 5000
-			}			
+			}
 			add_stability = 0.05
 			add_political_power = 25
-			country_event = { id = hiyori_event.1  } 
-			
+			country_event = { id = hiyori_event.1  }
+
 
 		}
 	}

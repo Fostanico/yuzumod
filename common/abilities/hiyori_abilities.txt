@@ -1,34 +1,33 @@
 ability = {
-    hiyori_radio = { #妃爱电台
-        name = ABILITY_hiyoriradio
-	    desc = ABILITY_hiyoriradio_desc #额外描述
-        sound_effect = hiyori_skill #声音
-        icon = GFX_ability_hiyoriradio
-	    type = army_leader #是陆军将领
+	hiyori_radio = { #妃爱电台
+		name = ABILITY_hiyoriradio
+		desc = ABILITY_hiyoriradio_desc #额外描述
+		sound_effect = hiyori_skill #声音
+		icon = GFX_ability_hiyoriradio
+		type = army_leader #是陆军将领
 
-	    allowed = { #要求
+		allowed = { #要求
 			has_ability = hiyori_radio #有技能=
 
-	    }
-	    cost = 0
-	    duration = 168 #持续时间（小时） 
-	    cooldown = 0 #冷却（小时）
-        unit_modifiers = { #单位加成
-            army_speed_factor = 0.10 #部队速度 5％
-            army_morale_factor = 0.05 #组织度恢复 15％
-        }
-        one_time_effect = { #单次加成
-            add_temporary_buff_to_units = {
-                combat_offense = 0.10 #攻击
-                combat_breakthrough = 0.10 #突破
-                org_damage_multiplier = -0.10 #受到的组织度损伤
-                str_damage_multiplier = -0.10 #受到的兵力损伤
-                days = 7 #为部队添加10天上面的加成
-            }
-            custom_effect_tooltip = ability_hiyoriradio_tt #技能描述
-            ai_will_do = { factor = 0 }
-        }
-    }
+		}
+		cost = 0
+		duration = 168 #持续时间（小时）
+		cooldown = 0 #冷却（小时）
+		unit_modifiers = { #单位加成
+			army_speed_factor = 0.10 #部队速度 5％
+			army_morale_factor = 0.05 #组织度恢复 15％
+			offence = 0.10 #攻击
+			breakthrough_factor = 0.10 #突破
+			org_damage_multiplier = -0.10 #受到的组织度损伤
+			str_damage_multiplier = -0.10 #受到的兵力损伤
+		}
+		one_time_effect = { #单次加成
+			custom_effect_tooltip = ability_hiyoriradio_tt #技能描述
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 #检修中（），妃爱换装系列技能 #起效果了（吗？）
 	hiyori_Skin_Ability_1 = {
 		name = hiyori_Skin_Ability_1
@@ -39,7 +38,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_1
-			has_country_flag = hiy_por_15
+			OWNER = { has_country_flag = hiy_por_15 }
 		}
 		cost = 0
 		duration = 0
@@ -52,9 +51,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_1
-			clr_country_flag = hiy_por_15
+			OWNER = {
+				set_country_flag = hiy_por_1
+				clr_country_flag = hiy_por_15
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -69,7 +70,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_2
-			has_country_flag = hiy_por_1
+			OWNER = { has_country_flag = hiy_por_1 }
 		}
 		cost = 0
 		duration = 0
@@ -82,9 +83,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_2
-			clr_country_flag = hiy_por_1
+			OWNER = {
+				set_country_flag = hiy_por_2
+				clr_country_flag = hiy_por_1
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -99,7 +102,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_3
-			has_country_flag = hiy_por_2
+			OWNER = { has_country_flag = hiy_por_2 }
 		}
 		cost = 0
 		duration = 0
@@ -112,9 +115,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_3
-			clr_country_flag = hiy_por_2
+			OWNER = {
+				set_country_flag = hiy_por_3
+				clr_country_flag = hiy_por_2
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -129,7 +134,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_4
-			has_country_flag = hiy_por_3
+			OWNER = { has_country_flag = hiy_por_3 }
 		}
 		cost = 0
 		duration = 0
@@ -142,9 +147,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_4
-			clr_country_flag = hiy_por_3
+			OWNER = {
+				set_country_flag = hiy_por_4
+				clr_country_flag = hiy_por_3
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -159,7 +166,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_5
-			has_country_flag = hiy_por_4
+			OWNER = { has_country_flag = hiy_por_4 }
 		}
 		cost = 0
 		duration = 0
@@ -172,9 +179,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_5
-			clr_country_flag = hiy_por_4
+			OWNER = {
+				set_country_flag = hiy_por_5
+				clr_country_flag = hiy_por_4
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -189,7 +198,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_6
-			has_country_flag = hiy_por_5
+			OWNER = { has_country_flag = hiy_por_5 }
 		}
 		cost = 0
 		duration = 0
@@ -202,9 +211,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_6
-			clr_country_flag = hiy_por_5
+			OWNER = {
+				set_country_flag = hiy_por_6
+				clr_country_flag = hiy_por_5
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -219,7 +230,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_7
-			has_country_flag = hiy_por_6
+			OWNER = { has_country_flag = hiy_por_6 }
 		}
 		cost = 0
 		duration = 0
@@ -232,9 +243,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_7
-			clr_country_flag = hiy_por_6
+			OWNER = {
+				set_country_flag = hiy_por_7
+				clr_country_flag = hiy_por_6
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -249,7 +262,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_8
-			has_country_flag = hiy_por_7
+			OWNER = { has_country_flag = hiy_por_7 }
 		}
 		cost = 0
 		duration = 0
@@ -262,9 +275,11 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_8
-			clr_country_flag = hiy_por_7
+			OWNER = {
+				set_country_flag = hiy_por_8
+				clr_country_flag = hiy_por_7
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
@@ -279,7 +294,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_9
-			has_country_flag = hiy_por_8
+			OWNER = { has_country_flag = hiy_por_8 }
 		}
 		cost = 0
 		duration = 0
@@ -292,8 +307,10 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_9
-			clr_country_flag = hiy_por_8
+			OWNER = {
+				set_country_flag = hiy_por_9
+				clr_country_flag = hiy_por_8
+			}
 		}
 		ai_will_do = {
 			factor = -1
@@ -309,7 +326,7 @@ ability = {
 
 		allowed = {
 			has_ability = hiyori_Skin_Ability_10
-			has_country_flag = hiy_por_9
+			OWNER = { has_country_flag = hiy_por_9 }
 		}
 		cost = 0
 		duration = 0
@@ -322,160 +339,172 @@ ability = {
 					}
 				}
 			}
-			set_country_flag = hiy_por_10
-			clr_country_flag = hiy_por_9
+			OWNER = {
+				set_country_flag = hiy_por_10
+				clr_country_flag = hiy_por_9
 			}
+		}
 		ai_will_do = {
 			factor = -1
 		}
 	}
 	hiyori_Skin_Ability_11 = {
-        name = hiyori_Skin_Ability_11
-        desc = hiyori_Skin_Ability_11_desc
-        icon = GFX_trait_hiyohiyo
-        type = army_leader
-        sound_effect = hiyori_record #声音
+		name = hiyori_Skin_Ability_11
+		desc = hiyori_Skin_Ability_11_desc
+		icon = GFX_trait_hiyohiyo
+		type = army_leader
+		sound_effect = hiyori_record #声音
 
-        allowed = {
-            has_ability = hiyori_Skin_Ability_11
-            has_country_flag = hiy_por_10
-        }
-        cost = 0
-        duration = 0
-        cooldown = 0
-        one_time_effect = {
-            hidden_effect = {
-                set_portraits = {
-                    army = {
-                        large = "GFX_hiy_11"
-                    }
-                }
-            }
-            set_country_flag = hiy_por_11
-            clr_country_flag = hiy_por_10
-            }
-        ai_will_do = {
-            factor = -1
-        }
-    }
+		allowed = {
+			has_ability = hiyori_Skin_Ability_11
+			OWNER = { has_country_flag = hiy_por_10 }
+		}
+		cost = 0
+		duration = 0
+		cooldown = 0
+		one_time_effect = {
+			hidden_effect = {
+				set_portraits = {
+					army = {
+						large = "GFX_hiy_11"
+					}
+				}
+			}
+			OWNER = {
+				set_country_flag = hiy_por_11
+				clr_country_flag = hiy_por_10
+			}
+		}
+		ai_will_do = {
+			factor = -1
+		}
+	}
 
 	hiyori_Skin_Ability_12 = {
-			name = hiyori_Skin_Ability_12
-			desc = hiyori_Skin_Ability_12_desc
-			icon = GFX_trait_hiyohiyo
-			type = army_leader
-			sound_effect = hiyori_record #声音
+		name = hiyori_Skin_Ability_12
+		desc = hiyori_Skin_Ability_12_desc
+		icon = GFX_trait_hiyohiyo
+		type = army_leader
+		sound_effect = hiyori_record #声音
 
-			allowed = {
-				has_ability = hiyori_Skin_Ability_12
-				has_country_flag = hiy_por_11
-			}
-			cost = 0
-			duration = 0
-			cooldown = 0
-			one_time_effect = {
-				hidden_effect = {
-					set_portraits = {
-						army = {
-							large = "GFX_hiy_12"
-						}
+		allowed = {
+			has_ability = hiyori_Skin_Ability_12
+			OWNER = { has_country_flag = hiy_por_11 }
+		}
+		cost = 0
+		duration = 0
+		cooldown = 0
+		one_time_effect = {
+			hidden_effect = {
+				set_portraits = {
+					army = {
+						large = "GFX_hiy_12"
 					}
 				}
+			}
+			OWNER = {
 				set_country_flag = hiy_por_12
 				clr_country_flag = hiy_por_11
-				}
-			ai_will_do = {
-				factor = -1
 			}
 		}
+		ai_will_do = {
+			factor = -1
+		}
+	}
 
 	hiyori_Skin_Ability_13 = {
-			name = hiyori_Skin_Ability_13
-			desc = hiyori_Skin_Ability_13_desc
-			icon = GFX_trait_hiyohiyo
-			type = army_leader
-			sound_effect = hiyori_record #声音
+		name = hiyori_Skin_Ability_13
+		desc = hiyori_Skin_Ability_13_desc
+		icon = GFX_trait_hiyohiyo
+		type = army_leader
+		sound_effect = hiyori_record #声音
 
-			allowed = {
-				has_ability = hiyori_Skin_Ability_13
-				has_country_flag = hiy_por_12
-			}
-			cost = 0
-			duration = 0
-			cooldown = 0
-			one_time_effect = {
-				hidden_effect = {
-					set_portraits = {
-						army = {
-							large = "GFX_hiy_13"
-						}
+		allowed = {
+			has_ability = hiyori_Skin_Ability_13
+			OWNER = { has_country_flag = hiy_por_12 }
+		}
+		cost = 0
+		duration = 0
+		cooldown = 0
+		one_time_effect = {
+			hidden_effect = {
+				set_portraits = {
+					army = {
+						large = "GFX_hiy_13"
 					}
 				}
+			}
+			OWNER = {
 				set_country_flag = hiy_por_13
 				clr_country_flag = hiy_por_12
-				}
-			ai_will_do = {
-				factor = -1
 			}
 		}
+		ai_will_do = {
+			factor = -1
+		}
+	}
 
 	hiyori_Skin_Ability_14 = {
-			name = hiyori_Skin_Ability_14
-			desc = hiyori_Skin_Ability_14_desc
-			icon = GFX_trait_hiyohiyo
-			type = army_leader
-			sound_effect = hiyori_record #声音
+		name = hiyori_Skin_Ability_14
+		desc = hiyori_Skin_Ability_14_desc
+		icon = GFX_trait_hiyohiyo
+		type = army_leader
+		sound_effect = hiyori_record #声音
 
-			allowed = {
-				has_ability = hiyori_Skin_Ability_14
-				has_country_flag = hiy_por_13
-			}
-			cost = 0
-			duration = 0
-			cooldown = 0
-			one_time_effect = {
-				hidden_effect = {
-					set_portraits = {
-						army = {
-							large = "GFX_hiy_14"
-						}
+		allowed = {
+			has_ability = hiyori_Skin_Ability_14
+			OWNER = { has_country_flag = hiy_por_13 }
+		}
+		cost = 0
+		duration = 0
+		cooldown = 0
+		one_time_effect = {
+			hidden_effect = {
+				set_portraits = {
+					army = {
+						large = "GFX_hiy_14"
 					}
 				}
+			}
+			OWNER = {
 				set_country_flag = hiy_por_14
 				clr_country_flag = hiy_por_13
-				}
-			ai_will_do = {
-				factor = -1
 			}
 		}
+		ai_will_do = {
+			factor = -1
+		}
+	}
 
 	hiyori_Skin_Ability_15 = {
-			name = hiyori_Skin_Ability_15
-			desc = hiyori_Skin_Ability_15_desc
-			icon = GFX_trait_hiyohiyo
-			type = army_leader
-			sound_effect = hiyori_record #声音
+		name = hiyori_Skin_Ability_15
+		desc = hiyori_Skin_Ability_15_desc
+		icon = GFX_trait_hiyohiyo
+		type = army_leader
+		sound_effect = hiyori_record #声音
 
-			allowed = {
-				has_ability = hiyori_Skin_Ability_15
-				has_country_flag = hiy_por_14
-			}
-			cost = 0
-			duration = 0
-			cooldown = 0
-			one_time_effect = {
-				hidden_effect = {
-					set_portraits = {
-						army = {
-							large = "GFX_hiy_15"
-						}
+		allowed = {
+			has_ability = hiyori_Skin_Ability_15
+			OWNER = { has_country_flag = hiy_por_14 }
+		}
+		cost = 0
+		duration = 0
+		cooldown = 0
+		one_time_effect = {
+			hidden_effect = {
+				set_portraits = {
+					army = {
+						large = "GFX_hiy_15"
 					}
 				}
+			}
+			OWNER = {
 				set_country_flag = hiy_por_15
 				clr_country_flag = hiy_por_14
-				}
-			ai_will_do = {
-				factor = -1
 			}
 		}
+		ai_will_do = {
+			factor = -1
+		}
+	}
 }

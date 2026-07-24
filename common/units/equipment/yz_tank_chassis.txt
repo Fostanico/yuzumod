@@ -53,6 +53,14 @@ equipments = {
 				}
 			}
 
+			# Millennium Dawn weapon modules extend this slot with their required
+			# ammunition categories. It stays optional and empty in vanilla.
+			ammunition_load_slot = {
+				required = no
+				allowed_module_categories = {
+				}
+			}
+
 			special_type_slot_1 = {
 				required = yes
 				allowed_module_categories = {
@@ -146,7 +154,7 @@ equipments = {
 		#derived_variant_name = type90_tank_chassis
 		visual_level = 1
 		year = 1936
-		archetype = modern_tank_chassis
+		archetype = type90_tank_chassis
 		priority = 2000
 		module_slots = inherit
 		active = no

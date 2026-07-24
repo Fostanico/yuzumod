@@ -21,8 +21,8 @@ guiTypes = {
 				y = 0
 			}
 			size = {
-				width = 65
-				height = 55
+				x = 65
+				y = 55
 			}
 			quadTextureSprite = "GFX_idea_Married"
 			pdx_tooltip = "YZ_married_gui_button_tooltip"
@@ -39,7 +39,7 @@ guiTypes = {
 		background = {
 			name = "married_ui_back"
 			position = { x = 0 y = 0 }
-			size = { width = 1150 height = 460 }
+			size = { x = 1150 y = 460 }
 			quadTextureSprite = "GFX_yuzu_married_ui_back"
 		}
 
@@ -128,7 +128,7 @@ guiTypes = {
 		buttonType = {
 			name = "character_sd"
 			position = { x = 337 y = 310 }
-			size = { width = 95 height = 95 }
+			size = { x = 95 y = 95 }
 			quadTextureSprite = "GFX_yuzu_married_sd_43_1"
 			pdx_tooltip = "character_sd_tooltip"
 		}
@@ -137,7 +137,7 @@ guiTypes = {
 			name = "character_sd_message"
 			position = { x = 428 y = 330 }
 			font = "hoi_18mbs"
-			scale = 1.0
+			# scale = 1.0
 			text = "character_sd_message_text"
 			maxWidth = 305
 			maxHeight = 68
@@ -161,7 +161,7 @@ guiTypes = {
 			name = "date_buttom_left_one_text"
 			position = { x = 850 y = 116 }
 			font = "hoi_16mbs"
-			scale = 0.75
+			# scale = 0.75
 			text = "date_buttom_left_one_text"
 			maxWidth = 43
 			maxHeight = 20
@@ -178,7 +178,7 @@ guiTypes = {
 			name = "date_buttom_left_two_text"
 			position = { x = 898 y = 116 }
 			font = "hoi_16mbs"
-			scale = 0.75
+			# scale = 0.75
 			text = "date_buttom_left_two_text"
 			maxWidth = 42
 			maxHeight = 20
@@ -195,7 +195,7 @@ guiTypes = {
 			name = "date_buttom_middle_text"
 			position = { x = 945 y = 116 }
 			font = "hoi_16mbs"
-			scale = 0.75
+			# scale = 0.75
 			text = "date_buttom_middle_text"
 			maxWidth = 41
 			maxHeight = 20
@@ -212,7 +212,7 @@ guiTypes = {
 			name = "date_buttom_right_one_text"
 			position = { x = 1038 y = 116 }
 			font = "hoi_16mbs"
-			scale = 0.75
+			# scale = 0.75
 			text = "date_buttom_right_one_text"
 			maxWidth = 43
 			maxHeight = 20
@@ -229,7 +229,7 @@ guiTypes = {
 			name = "date_buttom_right_two_text"
 			position = { x = 991 y = 116 }
 			font = "hoi_16mbs"
-			scale = 0.75
+			# scale = 0.75
 			text = "date_buttom_right_two_text"
 			maxWidth = 42
 			maxHeight = 20

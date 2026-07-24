@@ -1,8 +1,8 @@
 spriteTypes = {
-	
+
 	#Government in Exile
 
-	
+
 	#柚子国的加在了这里
 	spriteType = {
 		name = "GFX_yz_button_up"
@@ -69,13 +69,13 @@ spriteTypes = {
 		textureFile = "gfx/guis/start_ui_qun_code.png"
 		legacy_lazy_load = no
 	}
-    progressbartype = {
-        name = "GFX_yz_miliatry_party_ui_progress_bar"
-        textureFile1 = "gfx/guis/YZ_miliatry_party_ui_progress_max.dds"
-        textureFile2 = "gfx/guis/YZ_miliatry_party_ui_progress_none.dds"
-        size = { x = 200 y = 20 }
-        effectFile = "gfx/FX/progress.lua"
-        horizontal = yes
-        steps = 100
-    }
+	progressbartype = {
+		name = "GFX_yz_miliatry_party_ui_progress_bar"
+		textureFile1 = "gfx/guis/YZ_miliatry_party_ui_progress_max.png"
+		textureFile2 = "gfx/guis/YZ_miliatry_party_ui_progress_none.PNG"
+		size = { x = 200 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		steps = 100
+	}
 }

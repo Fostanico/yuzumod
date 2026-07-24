@@ -1,54 +1,54 @@
-#	Example:
-# 
-#	example_trigger = {
-#		tag = GER
-#		is_ai = no
-#	}
-#
-#
-#	In a script file:
-#
-#	trigger = {
-#		example_trigger = yes
-#	}
-# 
-#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
-Yuzu_has_fund_available = {  
+# 柚子领系统的国家 scope 公共触发器。tooltip 分支与真实触发分支必须保持同构，
+# 否则界面会显示可用但点击失败，或反过来。
+Yuzu_has_fund_available = {
 	custom_trigger_tooltip = {
 		tooltip = Yuzu_has_fund_available_tt
-		ROOT = {   
+		ROOT = {
 			check_variable = {
-				var = Yuzu_fund 
+				var = Yuzu_fund
 				value = 1
 				compare = greater_than_or_equals
 			}
 		}
 	}
-	ROOT = {   
+	ROOT = {
 		check_variable = {
-			var = Yuzu_fund 
+			var = Yuzu_fund
 			value = 1
 			compare = greater_than_or_equals
 		}
 	}
 }
 Yuzu_can_form_yuzu_land = {
+	# change_puppt_to_yuzu_land 的 flag 年龄是冷却的唯一状态所有者。
+	# 每次传播用 clr+set 重置时间戳；超级会员为 30 天，普通状态为 180 天。
 	custom_trigger_tooltip = {
 		tooltip = Yuzu_can_form_yuzu_land_tt
 		ROOT = {
-			check_variable = {  
-				var = yuzu_form_yuzu_land_days
-    			value = yuzu_form_yuzu_land_days_basic_require
-    			compare = greater_than_or_equals
+			OR = {
+				NOT = { has_country_flag = change_puppt_to_yuzu_land }
+				AND = {
+					has_idea = yuzu_super_vip
+					has_country_flag = { flag = change_puppt_to_yuzu_land days > 29 }
+				}
+				AND = {
+					NOT = { has_idea = yuzu_super_vip }
+					has_country_flag = { flag = change_puppt_to_yuzu_land days > 179 }
+				}
 			}
 		}
 	}
 	ROOT = {
-		check_variable = {
-			#yuzu_form_yuzu_land_days > yuzu_form_yuzu_land_days_basic_require
-			var = yuzu_form_yuzu_land_days
-    		value = yuzu_form_yuzu_land_days_basic_require
-    		compare = greater_than_or_equals
+		OR = {
+			NOT = { has_country_flag = change_puppt_to_yuzu_land }
+			AND = {
+				has_idea = yuzu_super_vip
+				has_country_flag = { flag = change_puppt_to_yuzu_land days > 29 }
+			}
+			AND = {
+				NOT = { has_idea = yuzu_super_vip }
+				has_country_flag = { flag = change_puppt_to_yuzu_land days > 179 }
+			}
 		}
 	}
 }
@@ -62,6 +62,6 @@ Yuzu_can_repay_bonds_by_yzmoney = {        #我们可以偿还
 			value = bond_we_need_to_repay
 			compare = greater_than_or_equals
 		}
-    }
+	}
 }
 

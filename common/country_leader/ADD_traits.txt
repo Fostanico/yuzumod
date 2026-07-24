@@ -60,7 +60,7 @@ leader_traits = {
         own_operative_detection_chance_factor = -0.1
         enemy_operative_detection_chance_factor = 0.15
         command_abilities_cost_factor = -0.2
-        research_time_factor = -0.1
+        research_speed_factor = 0.111111
         annex_cost_factor = -0.25
         send_volunteer_divisions_required = -0.3
         subjects_autonomy_gain = -0.25
@@ -95,7 +95,7 @@ leader_traits = {
         consumer_goods_factor = 0.025
     }
     #彩蛋特质
-    0721 = {
+    yz_0721_trait = {
         army_artillery_defence_factor = 0.07
         army_artillery_attack_factor = 0.21
         unit_artillery_brigade_design_cost_factor = -1
@@ -112,7 +112,9 @@ leader_traits = {
         drift_defence_factor = 0.15
         production_speed_buildings_factor = 0.05
         surrender_limit = 0.15
-        xp_gain_factor = 0.1
+        experience_gain_army_factor = 0.1
+        experience_gain_navy_factor = 0.1
+        experience_gain_air_factor = 0.1
         recruitable_population_factor = 0.15
     }
     #人民之力
@@ -130,9 +132,8 @@ leader_traits = {
     KZB = {
         decryption_factor = 0.1
         opinion_gain_monthly_factor = 0.2
-        research_speed_factor = 0.05
+        research_speed_factor = -0.125
         production_speed_industrial_complex_factor = 0.15
-        research_time_factor = 0.2
         compliance_gain = 0.1
         propaganda_mission_factor = 0.2
         democratic_drift = 0.1
@@ -156,7 +157,8 @@ leader_traits = {
         max_dig_in_factor = 0.1
         army_intel_to_others = -5
         intelligence_agency_defense = 3
-        building_convertion = 0.1
+        conversion_cost_civ_to_mil_factor = -0.1
+        conversion_cost_mil_to_civ_factor = -0.1
         neutrality_drift = 0.1
         military_leader_cost_factor = 0.1
     }
@@ -191,9 +193,8 @@ leader_traits = {
         navy_anti_air_attack_factor = 0.15
         navy_max_range_factor = 0.15
         experience_gain_navy_factor = 0.2
-        industrial_capacity_dockyard = 0.2
+        industrial_capacity_dockyard = 0.45
         unit_marine_design_cost_factor = -0.5
-        industrial_capacity_dockyard = 0.25
         naval_invasion_capacity = 10
         equipment_bonus = {
             carrier = {
@@ -212,21 +213,9 @@ leader_traits = {
                 instant = yes
                 build_cost_ic = -0.05
             }
-            battleship = {
-                instant = yes
-                build_cost_ic = -0.05
-            }
-            heavy_cruiser = {
-                instant = yes
-                build_cost_ic = -0.05
-            }
             capital_ship = {
                 instant = yes
                 build_cost_ic = -0.05
-            }
-            sh_battleship = {
-                instant = yes
-                build_cost_ic = -0.075
             }
         }
     }
@@ -273,7 +262,7 @@ leader_traits = {
         war_support_factor = 0.15 # 战争支持度40%
         offensive_war_stability_factor = 0.20 # 侵略战争对稳定度修正+20%
         defensive_war_stability_factor = 0.20 # 防御战争对稳定度修正+20%
-        resistance = -0.20 # 地区抵抗－20%
+        resistance_target = -0.20 # 地区抵抗－20%
         resistance_growth_on_our_occupied_states = 0.35	#我们被敌人占领地区的抵抗增长速度
         compliance_growth = 0.155	#顺从度增长速度
         resistance_growth = -0.255 # 抵抗增长－60%
@@ -468,7 +457,7 @@ leader_traits = {
         population_tax_income_multiplier_modifier = 0.333
         productivity_growth_modifier = 10
         economic_cycles_cost_factor = -0.4
-        
+
     }
     comrade_we_forward = {    #同志们，勇敢地前进！
         offices_worker_requirement_modifier = -0.33
@@ -555,7 +544,7 @@ leader_traits = {
         ground_attack_factor = 1
         air_defence_factor = 1
         experience_gain_air = 1
-        air_mastery_gain = 1
+        air_mastery_gain_factor = 1
     }
     war_lover_in_war_lover_field = {  #h
         compliance_growth = 0.5
@@ -584,20 +573,20 @@ leader_traits = {
     }
     pastisen_of_boomer = {
         equipment_bonus = {
-			large_plane_airframe = {
+            large_plane_airframe = {
                 air_bombing = 1
                 build_cost_ic = -0.5
                 air_range = 0.75
                 air_defence = 0.75
                 air_attack = 0.5
-				instant = yes
-			}
+                instant = yes
+            }
             medium_plane_fighter_airframe = {
-				build_cost_ic = -0.5
-				instant = yes
-			}
-		}
-        
+                build_cost_ic = -0.5
+                instant = yes
+            }
+        }
+
         experience_gain_air = 2
     }
     best_solve_in_keiei = {
@@ -617,6 +606,6 @@ leader_traits = {
         army_org_factor = 0.1
     }
     this_character_has_been_clean = {
-        
+
     }
 }

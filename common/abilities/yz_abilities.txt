@@ -47,24 +47,15 @@ ability = {
                 movement = 0.25
             }
 
-            mud = {
-                movement = 0.25
-            }
             army_morale_factor = 0.5 #组织度恢复 50％
-        }
-        one_time_effect = { #单次加成
-            add_temporary_buff_to_units = {
-                combat_offense = 0.25 #攻击
-                combat_breakthrough = 0.20 #突破
-                org_damage_multiplier = -1.0 #受到的组织度损伤
-                str_damage_multiplier = -0.30 #受到的兵力损伤
-                days = 10 #为部队添加10天上面的加成
-            }
-            #custom_effect_tooltip = ability_xxx_tt #技能描述
+            offence = 0.25 #攻击
+            breakthrough_factor = 0.20 #突破
+            org_damage_multiplier = -1.0 #受到的组织度损伤
+            str_damage_multiplier = -0.30 #受到的兵力损伤
         }
     }
 
-   chou_witch_ability = { #紬妈魔女技能
+    chou_witch_ability = { #紬妈魔女技能
         name = chou_witch_ability
         desc = chou_witch_ability_desc #额外描述
         sound_effect = chocoming #声音
@@ -85,24 +76,21 @@ ability = {
             max_planning = 0.5
             planning_speed = 10
             out_of_supply_factor = -0.5
+            offence = 0.5 #攻击
+            breakthrough_factor = 0.5 #突破
+            org_damage_multiplier = -1 #受到的组织度损伤
+            str_damage_multiplier = -1 #受到的兵力损伤
         }
         one_time_effect = { #单次加成
             hidden_effect = {
                 set_portraits = {
                     army = {
-                        large = "gfx\leader\Chou_witch.png"
+                        large = "gfx/leader/Chou_witch.png"
                     }
                 }
                 FROM = {
                     country_event = { id = start_event.19 days = 15 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                combat_offense = 0.5 #攻击
-                combat_breakthrough = 0.5 #突破
-                org_damage_multiplier = -1 #受到的组织度损伤
-                str_damage_multiplier = -1 #受到的兵力损伤
-                days = 15 #为部队添加10天上面的加成
             }
             #custom_effect_tooltip = chou_witch_ability_tt #技能描述
         }
@@ -136,24 +124,21 @@ ability = {
             urban = {
                 attack = 0.3
             }
+            offence = 0.5 #攻击
+            breakthrough_factor = 0.5 #突破
+            org_damage_multiplier = -1 #受到的组织度损伤
+            str_damage_multiplier = -1 #受到的兵力损伤
         }
         one_time_effect = { #单次加成
             hidden_effect = {
                 set_portraits = {
                     army = {
-                        large = "gfx\leader\Nene_witch.png"
+                        large = "gfx/leader/Nene_witch.png"
                     }
                 }
                 FROM = {
                     country_event = { id = start_event.20 days = 15 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                combat_offense = 0.5 #攻击
-                combat_breakthrough = 0.5 #突破
-                org_damage_multiplier = -1 #受到的组织度损伤
-                str_damage_multiplier = -1 #受到的兵力损伤
-                days = 15 #为部队添加10天上面的加成
             }
             #custom_effect_tooltip = nene_witch_ability_tt #技能描述
         }
@@ -161,6 +146,7 @@ ability = {
     elina_bloodsucking_ability = { #艾莉娜吸血技能
         name = elina_bloodsucking_ability
         desc = elina_bloodsucking_ability_desc #额外描述
+        sound_effect = command_power_ability_offensive
         icon = GFX_trait_yz_elina_owen_trait
         type = army_leader #是陆军将领
 
@@ -186,6 +172,7 @@ ability = {
     nicola_bloodsucking_ability = { #尼古拉吸血技能
         name = nicola_bloodsucking_ability
         desc = nicola_bloodsucking_ability_desc #额外描述
+        sound_effect = command_power_ability_offensive
         icon = GFX_trait_yz_nicola_trait
         type = army_leader #是陆军将领
 
@@ -220,6 +207,7 @@ ability = {
     miu_bloodsucking_ability = { #美羽吸血技能
         name = miu_bloodsucking_ability
         desc = miu_bloodsucking_ability_desc #额外描述
+        sound_effect = command_power_ability_offensive
         icon = GFX_trait_maid_miu_trait
         type = army_leader #是陆军将领
 
@@ -243,6 +231,7 @@ ability = {
     rio_bloodsucking_ability = { #莉音吸血技能
         name = rio_bloodsucking_ability
         desc = rio_bloodsucking_ability_desc #额外描述
+        sound_effect = command_power_ability_offensive
         icon = GFX_trait_maid_rio_trait_1
         type = army_leader #是陆军将领
 
@@ -287,6 +276,7 @@ ability = {
     aragami_sayo_bloodsucking_ability = { #小夜吸血技能
         name = aragami_sayo_bloodsucking_ability
         desc = aragami_sayo_bloodsucking_ability_desc #额外描述
+        sound_effect = command_power_ability_offensive
         icon = GFX_trait_yz_aragami_sayo_trait
         type = army_leader #是陆军将领
 
@@ -349,24 +339,21 @@ ability = {
             planning_speed = 1
             land_reinforce_rate = 1
             coordination_bonus = 1
+            offence = 0.75
+            breakthrough_factor = 0.75
+            org_damage_multiplier = -0.75
+            str_damage_multiplier = -0.75
         }
         one_time_effect = { #单次加成
             hidden_effect = {
                 set_portraits = {
                     army = {
-                        large = "gfx\leader\souba_nanao_in_morin_a.png"
+                        large = "gfx/leader/souba_nanao_in_morin_a.png"
                     }
                 }
                 FROM = {
                     country_event = { id = start_event.70205860 days = 25 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                combat_offense = 0.75
-                combat_breakthrough = 0.75
-                org_damage_multiplier = -0.75
-                str_damage_multiplier = -0.75
-                days = 25
             }
         }
     }
@@ -392,14 +379,8 @@ ability = {
             terrain_penalty_reduction = 1
             combat_width_factor = 0.1
             pocket_penalty = -1
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 30
-            }
-
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     sana_ability = { #佐奈技能  @统计计划管理 数值美工改一下就可以了
@@ -430,24 +411,21 @@ ability = {
             urban = {
                 attack = 0.5
             }
+            offence = 0.5 #攻击
+            breakthrough_factor = 0.5 #突破
+            org_damage_multiplier = -1 #受到的组织度损伤
+            str_damage_multiplier = -1 #受到的兵力损伤
         }
         one_time_effect = { #单次加成
             hidden_effect = {
                 set_portraits = {
                     army = {
-                        large = "gfx\leader\Ling.png"
+                        large = "gfx/leader/Ling.png"
                     }
                 }
                 FROM = {
                     country_event = { id = start_event.21 days = 15 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                combat_offense = 0.5 #攻击
-                combat_breakthrough = 0.5 #突破
-                org_damage_multiplier = -1 #受到的组织度损伤
-                str_damage_multiplier = -1 #受到的兵力损伤
-                days = 15 #为部队添加10天上面的加成
             }
             #custom_effect_tooltip = nene_witch_ability_tt #技能描述
         }
@@ -491,15 +469,9 @@ ability = {
             initiative_factor = 0.2
             coordination_bonus = 0.2
             terrain_penalty_reduction = 1
-            MODIFIER_POCKET_PENALTY = -1
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 14
-            }
-
+            pocket_penalty = -1
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     call_from_king_s_power = {   #喵都技能——2026.4.28，18：42，伊尔诺
@@ -524,13 +496,8 @@ ability = {
             equipment_capture_factor = 0.99
             coordination_bonus = 0.99
             land_reinforce_rate = 0.99
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 7
-            }
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     god_hidding_clothes = {
@@ -553,13 +520,8 @@ ability = {
             air_attack_factor = 1
             terrain_penalty_reduction = 0.5
             air_cas_present_factor = 1
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 7
-            }
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     NEU_student_home_three_c = {
@@ -583,13 +545,8 @@ ability = {
             coordination_bonus = 10
             land_reinforce_rate = 10
             combat_width_factor = -0.5
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 7
-            }
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     the_command = {
@@ -614,13 +571,8 @@ ability = {
             army_bonus_air_superiority_factor = 0.5
             cas_damage_reduction = 1
             terrain_penalty_reduction = 1
-        }
-        one_time_effect = {
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -0.5
-                days = 7
-            }
+            org_damage_multiplier = -1
+            str_damage_multiplier = -0.5
         }
     }
     regression_star = {
@@ -662,7 +614,7 @@ ability = {
             custom_effect_tooltip = regression_star2_attack
             hidden_effect = {
                 owner = {
-                   country_event = { id = yz_ability_event.114514 } 
+                    country_event = { id = yz_ability_event.114514 }
                 }
             }
         }
@@ -682,20 +634,25 @@ ability = {
         unit_modifiers = {
             army_attack_factor = 150
             army_defence_factor = 150
+            org_damage_multiplier = -1
+            str_damage_multiplier = -1
         }
         one_time_effect = {
             custom_effect_tooltip = takashiro_boom_all
             hidden_effect = {
                 owner = {
-                   country_event = { id = yz_ability_event.47994554 } 
+                    country_event = { id = yz_ability_event.47994554 }
+                }
+                set_portraits = {
+                    army = {
+                        large = "gfx/leader/maya_in_power.PNG"
+                    }
+                }
+                FROM = {
+                    country_event = { id = start_event.70205861 days = 20 }
                 }
             }
-            
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -1
-                days = 10
-            }
+
         }
     }
     eat_people = {
@@ -716,18 +673,15 @@ ability = {
             breakthrough_factor = 100
             supply_consumption_factor = -10
             no_supply_grace = 100000
+            org_damage_multiplier = -1
+            str_damage_multiplier = -1
         }
         one_time_effect = {
             custom_effect_tooltip = hotaru_eat_all
             hidden_effect = {
                 owner = {
-                   country_event = { id = yz_ability_event.3659153 } 
+                    country_event = { id = yz_ability_event.3659153 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -1
-                days = 7
             }
         }
     }
@@ -747,26 +701,23 @@ ability = {
             army_attack_factor = 4000
             army_defence_factor = 1
             breakthrough_factor = 100
+            org_damage_multiplier = -1
+            str_damage_multiplier = -1
         }
         one_time_effect = {
             custom_effect_tooltip = kuko_use_her_power
             hidden_effect = {
                 owner = {
-                   country_event = { id = yz_ability_event.53402385 } 
+                    country_event = { id = yz_ability_event.53402385 }
                 }
                 set_portraits = {
                     army = {
-                        large = "gfx\leader\kuko_in_bluse_roes.png"
+                        large = "gfx/leader/kuko_in_bluse_roes.png"
                     }
                 }
                 FROM = {
                     country_event = { id = start_event.70205861 days = 20 }
                 }
-            }
-            add_temporary_buff_to_units = {
-                org_damage_multiplier = -1
-                str_damage_multiplier = -1
-                days = 7
             }
         }
     }

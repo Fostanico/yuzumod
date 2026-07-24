@@ -12,139 +12,139 @@ spriteTypes = {
 		name = "GFX_ATRI_equipment_medium"
 		texturefile = "gfx/counters/ATRI_zhuangbei.dds"
 	}
-	
+
 	#科技
-	spriteType = { 
-     	name = "GFX_unit_atri_engineer_icon_medium"				
-     	textureFile = "gfx/counters/atri_armored_engineer_icon.dds"  
-     	noOfFrames = 2
-   	}
-
-    spriteType = { 
-     	name = "GFX_unit_atri_engineer_icon_medium_white" 					
-     	textureFile = "gfx/counters/onmap_atri_armored_engineer_icon.png" 
-     	noOfFrames = 2
-   	}
-
-    spriteType = {
-     	name = "GFX_unit_arti_engineer_icon_small"
-     	texturefile = "gfx/counters/onmap_atri_armored_engineer_icon.png"
-     	legacy_lazy_load = no
-     	noOfFrames = 2		
-   	}	
-	
-	spriteType = { 
-		name = "GFX_unit_atri_heavy_armor_icon_medium"				
-		textureFile = "gfx/counters/atri_heavy_armor_icon.dds"  
+	spriteType = {
+		name = "GFX_unit_atri_engineer_icon_medium"
+		textureFile = "gfx/counters/atri_armored_engineer_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_heavy_armor_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_heavy_armor_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_engineer_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_armored_engineer_icon.png"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_arti_engineer_icon_small"
+		texturefile = "gfx/counters/onmap_atri_armored_engineer_icon.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_atri_heavy_armor_icon_medium"
+		textureFile = "gfx/counters/atri_heavy_armor_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_atri_heavy_armor_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_heavy_armor_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_heavy_armor_icon_small"
 		texturefile = "gfx/counters/onmap_atri_heavy_armor_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-	}
-
-	spriteType = { 
-		name = "GFX_unit_atri_infantry_icon_medium"				
-		textureFile = "gfx/counters/atri_infantry_icon.dds"  
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_infantry_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_infantry_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_infantry_icon_medium"
+		textureFile = "gfx/counters/atri_infantry_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_atri_infantry_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_infantry_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_infantry_icon_small"
 		texturefile = "gfx/counters/onmap_atri_infantry_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-	}
-
-	spriteType = { 
-		name = "GFX_unit_atri_modern_armor_icon_medium"				
-		textureFile = "gfx/counters/atri_modern_armor_icon.dds"  
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_modern_armor_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_modern_armor_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_modern_armor_icon_medium"
+		textureFile = "gfx/counters/atri_modern_armor_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_atri_modern_armor_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_modern_armor_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_modern_armor_icon_small"
 		texturefile = "gfx/counters/onmap_atri_modern_armor_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-	}
-
-	spriteType = { 
-		name = "GFX_unit_atri_mechanized_icon_medium"				
-		textureFile = "gfx/counters/atri_mechanized_icon.dds"  
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_mechanized_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_mechanized_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_mechanized_icon_medium"
+		textureFile = "gfx/counters/atri_mechanized_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_atri_mechanized_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_mechanized_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_mechanized_icon_small"
 		texturefile = "gfx/counters/onmap_atri_mechanized_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-	}
-
-	spriteType = { 
-		name = "GFX_unit_atri_medium_armor_icon_medium"				
-		textureFile = "gfx/counters/atri_medium_tank_icon.dds"  
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_medium_armor_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_medium_tank_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_medium_armor_icon_medium"
+		textureFile = "gfx/counters/atri_medium_tank_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_atri_medium_armor_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_medium_tank_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_medium_armor_icon_small"
 		texturefile = "gfx/counters/onmap_atri_medium_tank_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
-	}
-
-	spriteType = { 
-		name = "GFX_unit_atri_recon_icon_medium"				
-		textureFile = "gfx/counters/atri_recon_icon.dds"  
 		noOfFrames = 2
 	}
 
-    spriteType = { 
-		name = "GFX_unit_atri_recon_icon_medium_white" 					
-		textureFile = "gfx/counters/onmap_atri_recon_icon.png" 
+	spriteType = {
+		name = "GFX_unit_atri_recon_icon_medium"
+		textureFile = "gfx/counters/atri_recon_icon.dds"
 		noOfFrames = 2
 	}
 
-    spriteType = {
+	spriteType = {
+		name = "GFX_unit_atri_recon_icon_medium_white"
+		textureFile = "gfx/counters/onmap_atri_recon_icon.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_unit_atri_recon_icon_small"
 		texturefile = "gfx/counters/onmap_atri_recon_icon.png"
 		legacy_lazy_load = no
-		noOfFrames = 2		
+		noOfFrames = 2
 	}
 
 }

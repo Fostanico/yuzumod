@@ -118,12 +118,6 @@ Megulu_industry_dynamic_modifier = {
 	trade_opinion_factor = Megulu_trade_opinion_factor		#贸易协定关系修正
 
 	attrition = Megulu_attrition		#损耗
-	equipment_bonus = {		#装甲ic
-		armor = {
-			build_cost_ic = Megulu_armor_build_cost_ic
-			instant = yes
-		}
-	}
 }
 
 Megulu_industry_finished_dynamic_modifier = {
@@ -179,7 +173,7 @@ youzu_military_dynamic_modifier = {
 	supply_consumption_factor = youzu_army_supply_consumption_factor #补给消耗
 	local_supplies = youzu_army_local_supplies #补给范围
 	promote_cost_factor = youzu_army_promote_cost_factor #晋升花费
-	xp_gain_army_factor = youzu_army_xp_gain_army_factor #陆军经验增长
+	experience_gain_army_factor = youzu_army_xp_gain_army_factor #陆军经验增长
 	recruitable_population_factor = youzu_army_recruitable_population_factor #适役人口
 	army_org_regain = youzu_army_army_org_regain #组织度恢复
 	command_power_gain = youzu_army_command_power_gain #每日指挥点获得
@@ -227,7 +221,7 @@ youzu_military_finished_dynamic_modifier = {
 	supply_consumption_factor = youzu_army_supply_consumption_factor #补给消耗
 	local_supplies = youzu_army_local_supplies #补给范围
 	promote_cost_factor = youzu_army_promote_cost_factor #晋升花费
-	xp_gain_army_factor = youzu_army_xp_gain_army_factor #陆军经验增长
+	experience_gain_army_factor = youzu_army_xp_gain_army_factor #陆军经验增长
 	recruitable_population_factor = youzu_army_recruitable_population_factor #适役人口
 	army_org_regain = youzu_army_army_org_regain #组织度恢复
 	command_power_gain = youzu_army_command_power_gain #每日指挥点获得
@@ -275,10 +269,8 @@ youzu_air_dynamic_modifier = {
 	experience_gain_air = youzu_air_experience_gain_air #空军经验获取速度
 	experience_gain_air_factor = youzu_experience_gain_air_factor #空军经验获取速度
 	air_agility_factor = youzu_air_agility_factor
-	air_defense_factor = youzu_air_defence_factor
 	air_defence_factor = youzu_air_defence_factor
-	air_speed_factor = youzu_air_speed_factor ###不生效
-	air_speed = youzu_air_speed_factor ###不生效
+	air_maximum_speed_factor = youzu_air_speed_factor
 	air_cas_present_factor = youzu_air_cas_present_factor #核心攻击
 	air_attack_factor = youzu_air_attack_factor #陆军学说
 	air_range_factor = youzu_air_range_factor #动员速度
@@ -300,4 +292,9 @@ sana_birthday_dynamic_modifier = {
 	production_factory_efficiency_gain_factor = sana_industry		#生产效率增长
 	production_factory_max_efficiency_factor = sana_industry    		#生产效率上限
 	production_factory_start_efficiency_factor = sana_industry #基础生产
+}
+
+YZ_noa_event_103_consumer_goods_modifier = {
+	enable = { always = yes }
+	consumer_goods_factor = -0.01
 }

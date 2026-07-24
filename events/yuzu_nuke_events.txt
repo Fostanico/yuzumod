@@ -58,6 +58,13 @@ news_event = {
 			astral_breakthrough_point_total = 1 
 			tooltip = add_astral_breakthrough_point_tt
 		}
+		if = {
+			limit = {
+				check_variable = { astral_breakthrough_point_total > 4 }
+				NOT = { has_country_flag = have_kotori }
+			}
+			country_event = kotori_event.1
+		}
 	}
 	option = {
 		name = nuke_dropped.7102.b
@@ -73,6 +80,13 @@ news_event = {
 		add_to_variable = { 
 			astral_breakthrough_point_total = 1 
 			tooltip = add_astral_breakthrough_point_tt
+		}
+		if = {
+			limit = {
+				check_variable = { astral_breakthrough_point_total > 4 }
+				NOT = { has_country_flag = have_kotori }
+			}
+			country_event = kotori_event.1
 		}
 	}
 }

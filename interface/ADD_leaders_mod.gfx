@@ -7,7 +7,7 @@ spriteTypes = {
 		name = "GFX_portrait_chaowufangnai"
 		texturefile = "gfx/leader/chaowufangnai_leader.png"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_portrait_ADD_gongping"
 		texturefile = "gfx/leader/gongping3.png"
 	}
@@ -152,7 +152,7 @@ spriteTypes = {
 		texturefile = "gfx/leader/chun_big_leader.png"
 	}
 	spriteType = {
-		name = "GFX_leader_aragami_sayo"                            #2025.4.1,23:27,伊尔诺     
+		name = "GFX_leader_aragami_sayo"                            #2025.4.1,23:27,伊尔诺
 		texturefile = "gfx/leader/sayo_leader.png"                  #<-不知道为什么，插件总是显示这个在文件夹里没找到，
 	}                                                               #但是在预览功能里却能找到这个图片，如果其他人看到这句话
 	spriteType = {                                                  #可能会发现这里没有报错，但是我不知道为什么在我电脑上

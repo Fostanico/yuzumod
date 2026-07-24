@@ -5,10 +5,10 @@ characters={
 		gender = female
 		portraits={
 			army = {
-				large="gfx\leader\Mako.png"
+				large="gfx/leader/Mako.png"
 			}
 			navy = {
-				small="gfx\leader\Mako2.png"
+				small="gfx/leader/Mako2.png"
 			}
 		}
 
@@ -32,10 +32,10 @@ characters={
 		gender = female
 		portraits={
 			army = {
-				large="gfx\leader\Nene.png"
+				large="gfx/leader/Nene.png"
 			}
 			navy = {
-				small="gfx\leader\Nene2.png"
+				small="gfx/leader/Nene2.png"
 			}
 		}
 
@@ -62,10 +62,10 @@ characters={
 		gender = female
 		portraits={
 			army = {
-				large="gfx\leader\kanna.png"
+				large="gfx/leader/kanna.png"
 			}
 			navy = {
-				small="gfx\leader\kanna2.png"
+				small="gfx/leader/kanna2.png"
 			}
 		}
 
@@ -92,10 +92,10 @@ characters={
 		gender = female
 		portraits={
 			army = {
-				large="gfx\leader\Nanami.png"
+				large="gfx/leader/Nanami.png"
 			}
 			navy = {
-				small="gfx\leader\Nanami2.png"
+				small="gfx/leader/Nanami2.png"
 			}
 		}
 

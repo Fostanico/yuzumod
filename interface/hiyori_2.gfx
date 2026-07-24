@@ -16,80 +16,80 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/hiy_event_4.png"
 	}
 	spriteType = {
-			name = "GFX_portrait_izumi_hiyori"
-			texturefile = "gfx/leader/hiy_1.png"
-		}
+		name = "GFX_portrait_izumi_hiyori"
+		texturefile = "gfx/leader/hiy_1.png"
+	}
 
 
 	spriteType = {
 		name = "GFX_trait_hiyohiyo"
-		texturefile = "gfx/traits/hiyori_trait_1.png" 
+		texturefile = "gfx/traits/hiyori_trait_1.png"
 	}
 #立绘
 	spriteType = {
 		name = "GFX_hiy_can"
-		texturefile = "gfx/leader/hiy_cabinet.png" 
+		texturefile = "gfx/leader/hiy_cabinet.png"
 	}
-spriteType = {
-        name = "GFX_hiy_1"
-        texturefile = "gfx/leader/hiy_1.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_2"
-        texturefile = "gfx/leader/hiy_2.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_3"
-        texturefile = "gfx/leader/hiy_3.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_4"
-        texturefile = "gfx/leader/hiy_4.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_5"
-        texturefile = "gfx/leader/hiy_5.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_6"
-        texturefile = "gfx/leader/hiy_6.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_7"
-        texturefile = "gfx/leader/hiy_7.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_8"
-        texturefile = "gfx/leader/hiy_8.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_9"
-        texturefile = "gfx/leader/hiy_9.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_10"
-        texturefile = "gfx/leader/hiy_10.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_11"
-        texturefile = "gfx/leader/hiy_11.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_12"
-        texturefile = "gfx/leader/hiy_12.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_13"
-        texturefile = "gfx/leader/hiy_13.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_14"
-        texturefile = "gfx/leader/hiy_14.png" 
-    }
-spriteType = {
-        name = "GFX_hiy_15"
-        texturefile = "gfx/leader/hiy_15.png" 
-    }
+	spriteType = {
+		name = "GFX_hiy_1"
+		texturefile = "gfx/leader/hiy_1.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_2"
+		texturefile = "gfx/leader/hiy_2.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_3"
+		texturefile = "gfx/leader/hiy_3.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_4"
+		texturefile = "gfx/leader/hiy_4.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_5"
+		texturefile = "gfx/leader/hiy_5.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_6"
+		texturefile = "gfx/leader/hiy_6.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_7"
+		texturefile = "gfx/leader/hiy_7.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_8"
+		texturefile = "gfx/leader/hiy_8.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_9"
+		texturefile = "gfx/leader/hiy_9.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_10"
+		texturefile = "gfx/leader/hiy_10.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_11"
+		texturefile = "gfx/leader/hiy_11.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_12"
+		texturefile = "gfx/leader/hiy_12.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_13"
+		texturefile = "gfx/leader/hiy_13.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_14"
+		texturefile = "gfx/leader/hiy_14.png"
+	}
+	spriteType = {
+		name = "GFX_hiy_15"
+		texturefile = "gfx/leader/hiy_15.png"
+	}
 
 #技能
 	spriteType = { #妃爱-技能1-广播
@@ -100,11 +100,11 @@ spriteType = {
 		name = "GFX_hiyoriradio_animated"
 		texturefile = "gfx/interface/abilitylist/Trumpet.png"
         #effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/interface/abilitylist/Trumpet.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -112,21 +112,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 	        #animationframes = {1 2 3 }
 		}
-	    legacy_lazy_load = no
-	}	
+		legacy_lazy_load = no
+	}
 #换立绘交互设置？
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_1_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -134,21 +134,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_2_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -156,21 +156,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_3_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -178,21 +178,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_4_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -200,21 +200,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_5_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -222,21 +222,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_6_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -244,21 +244,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_7_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -266,21 +266,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_8_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -288,21 +288,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_9_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -310,21 +310,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_10_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -332,21 +332,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_11_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -354,21 +354,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_12_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -376,21 +376,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_13_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -398,21 +398,21 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
 
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_14_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -420,20 +420,20 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
-	SpriteType = { 
+	SpriteType = {
 		name = "GFX_hiyori_Skin_Ability_15_animated"
 		texturefile = "gfx/traits/hiyori_trait_1.png"
 		#effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		effectFile = "gfx/FX/buttonstate.lua"		
-		allwaystransparent = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		allwaystransparent = yes
 		animation = {
 			animationmaskfile = "gfx/traits/hiyori_trait_1.png"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -441,10 +441,10 @@ spriteType = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			#animationframes = {1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
-}	
+}
 

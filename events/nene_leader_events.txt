@@ -10,7 +10,7 @@ country_event= {
     option = {
         name = ningning_event.2.Z
         add_political_power = 1
-        experience_army = 5
+        army_experience = 5
         custom_effect_tooltip = ningning_love1	#魔女服
         country_event= { id =  ningning_event.4 days = 0 }
         hidden_effect = {
@@ -20,7 +20,7 @@ country_event= {
     option = {
         name = ningning_event.2.X
         add_political_power = 1
-        experience_army = 5
+        army_experience = 5
         custom_effect_tooltip = ningning_love1	#制服
         country_event= { id =  ningning_event.5 days = 0 }
         hidden_effect = {
@@ -55,7 +55,7 @@ country_event = {
             ideology = marxism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -80,7 +80,7 @@ country_event = {
             ideology = conservatism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -105,7 +105,7 @@ country_event = {
             ideology = fascism_ideology
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -130,7 +130,7 @@ country_event = {
             ideology = despotism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -163,7 +163,7 @@ country_event = {
             ideology = marxism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -188,7 +188,7 @@ country_event = {
             ideology = conservatism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -213,7 +213,7 @@ country_event = {
             ideology = fascism_ideology
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }
@@ -238,7 +238,7 @@ country_event = {
             ideology = despotism
             traits = {
                 CZRYJZ 
-                0721
+                yz_0721_trait
             }
         }
     }

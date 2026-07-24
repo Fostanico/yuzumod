@@ -15,8 +15,8 @@ soundeffect = {
     }
 }
 
-    sound = 
-    {
-        name = "ebi_practice"
-        file = "ebi_sound/ebi_practice.wav"
-    }
+sound =
+{
+    name = "ebi_practice"
+    file = "ebi_sound/ebi_practice.wav"
+}

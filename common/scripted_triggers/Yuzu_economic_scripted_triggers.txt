@@ -23,6 +23,6 @@ Yuzu_can_repay_bonds_by_yzmoney = {        #我们可以偿还
 			value = bond_we_need_to_repay
 			compare = greater_than_or_equals
 		}
-    }
+	}
 }
 

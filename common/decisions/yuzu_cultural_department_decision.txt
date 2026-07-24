@@ -1,3 +1,5 @@
+# 文化传播冷却由 change_puppt_to_yuzu_land 的 flag 年龄持有。
+# 每次成功传播先 clr 再 set 才能可靠重置时间戳；不再维护每日计数变量。
 yuzu_cultural_department_category = {
 	hide_yuzu_culture_department = {
 		complete_effect = {
@@ -10,7 +12,7 @@ yuzu_cultural_department_category = {
 		available = {
 			is_ai = no
 		}
-		allowed = {
+		visible = {
 			has_country_flag = qiyong_youzi_2
 		}
 		target_trigger = {
@@ -44,17 +46,15 @@ yuzu_cultural_department_category = {
 						has_autonomy_state = autonomy_yuzu_fans_land
 					}
 				}
-				
+
 			}
 		}
 		complete_effect = {
-			set_variable = {
-				yuzu_form_yuzu_land_days = 0
-			}
 			subtract_from_variable = {
 				Yuzu_fund = 1
-				tooltip =  Yuzu_fund_subtract_tt  
+				tooltip =  Yuzu_fund_subtract_tt
 			}
+			clr_country_flag = change_puppt_to_yuzu_land
 			set_country_flag = change_puppt_to_yuzu_land
 			set_autonomy = {
 				target = FROM
@@ -80,7 +80,7 @@ yuzu_cultural_department_category = {
 		available = {
 			is_ai = no
 		}
-		allowed = {
+		visible = {
 			has_country_flag = qiyong_youzi_2
 		}
 		target_trigger = {
@@ -105,18 +105,16 @@ yuzu_cultural_department_category = {
 		}
 		complete_effect = {
 			hidden_effect = {
-                play_song = youzu29
-            }
+				play_song = youzu29
+			}
 			custom_effect_tooltip = {
 				localization_key = play_the_song_of_best_yuzu_descision_effect_tooltip
-			}
-			set_variable = {
-				yuzu_form_yuzu_land_days = 0
 			}
 			subtract_from_variable = {
 				Yuzu_fund = 1
 				tooltip = Yuzu_fund_subtract_tt
 			}
+			clr_country_flag = change_puppt_to_yuzu_land
 			set_country_flag = change_puppt_to_yuzu_land
 			every_state = {
 				limit = {
@@ -128,7 +126,7 @@ yuzu_cultural_department_category = {
 				transfer_navy = {
 					target = ROOT
 				}
-			}	
+			}
 			ROOT = {
 				annex_country = {
 					target = FROM
@@ -143,17 +141,12 @@ yuzu_cultural_department_category = {
 			Yuzu_has_fund_available = yes
 		}
 		visible = {
+			has_country_flag = qiyong_youzi_2
 			NOT = {
 				has_country_flag = has_auto_switch_occupation_law
 			}
 		}
-		allowed = {
-			has_country_flag = qiyong_youzi_2
-		}
 		complete_effect = {
-			#set_variable = {
-			#	yuzu_form_yuzu_land_days = 0
-			#}
 			subtract_from_variable = {
 				Yuzu_fund = 1
 				tooltip = Yuzu_occupation_law_fund_subtract_tt

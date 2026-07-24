@@ -16,15 +16,12 @@
  autonomy_no_more_close_economy_tt: "如果我们的附属国采取了封闭经济或有限出口，他们将被切换成重视出口"
  Yuzu_has_fund_available_tt: "我们有可用的柚金金"
  Yuzu_fund_subtract_tt: "一份柚金金用于在[FROM.GetName]传播柚子文化"
- yuzu_form_yuzu_land_days_basic_require_change_tt: "将传播柚子文化的冷却时间改为30天（这个网盘里有柚子社四大名著的说）"
  play_the_song_of_best_yuzu_descision_effect_tooltip: "播放§R最优质的柚子！§!"
  play_the_song_of_zuonai_descision_effect_tooltip: "播放§Ywith you!§!"
  play_the_song_of_linglai_descision_effect_tooltip: "播放§tastral ability§!"
  yuzu_super_vip: "柚子网盘超级会员"
  yuzu_super_vip_desc: "一个神秘的小网盘，里面有柚子社全套作品（ExE除外）"
  Yuzu_can_form_yuzu_land_tt: "[Yuzu_can_form_yuzu_land_describe]"
- Yuzu_can_form_yuzu_land_describe_start: "我们得在[?yuzu_form_yuzu_land_days_basic_require|.0+Y]天之后才能再次传播柚子文化，现在已经过了[?yuzu_form_yuzu_land_days|.0+Y]天"
+ Yuzu_can_form_yuzu_land_describe_start: "再次传播柚子文化需与上次间隔§Y180天§!；§Y柚子网盘超级会员§!生效期间缩短为§Y30天§!。"
  Yuzu_can_form_yuzu_land_describe_start_first: "我们尚未进行柚子文化传播"
  yuzu_fund_add: "我们的柚金金增加了"
-
- 

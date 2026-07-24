@@ -1,5 +1,5 @@
 establish_the_atri_special_brigade = { #招募亚托莉特种旅团
-	组建亚托莉特种旅 = {		
+	YZ_establish_ATRI_special_brigade = {
 		visible = {
 			has_country_flag = have_ATRI
 		}
@@ -12,28 +12,28 @@ establish_the_atri_special_brigade = { #招募亚托莉特种旅团
 			custom_effect_tooltip = 获得亚托莉装甲合成旅编制
 			hidden_effect = {
 				division_template = {
-						name = "独立亚托莉步兵旅"
-						is_locked = yes
-						force_allow_recruiting = yes
-						division_cap = 12
-						regiments = {
-							atri_infantry = { x = 0 y = 0 }
-							atri_infantry = { x = 0 y = 1 }
-							atri_infantry = { x = 0 y = 2 }
-							atri_infantry = { x = 0 y = 3 }
-							atri_infantry = { x = 0 y = 4 }
-						}	
-						support = {
-							atri_recon = { x = 0 y = 1 }
-						}
+					name = "独立亚托莉步兵旅"
+					is_locked = yes
+					force_allow_recruiting = yes
+					division_cap = 12
+					regiments = {
+						atri_infantry = { x = 0 y = 0 }
+						atri_infantry = { x = 0 y = 1 }
+						atri_infantry = { x = 0 y = 2 }
+						atri_infantry = { x = 0 y = 3 }
+						atri_infantry = { x = 0 y = 4 }
 					}
-					random_owned_controlled_state = {
-						limit = { is_in_home_area = yes }
-						create_unit = {
-							division =  "gfx/counters/atri_infantry_icon.dds"
-							owner = ROOT
-						}
+					support = {
+						atri_recon = { x = 0 y = 1 }
 					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_in_home_area = yes }
+					create_unit = {
+						division =  "gfx/counters/atri_infantry_icon.dds"
+						owner = ROOT
+					}
+				}
 				division_template = {
 					name = "独立亚托莉装甲合成旅"
 					is_locked = yes
@@ -104,6 +104,9 @@ atri_heading_utopia = {
 	yz_ATRI_start_utopia_plan = {
 		#name = YUZ_integrate_fans
 		icon = generic_nationalism
+		visible = {
+			has_country_flag = have_ATRI
+		}
 		available = {
 			always = yes
 		}
@@ -113,7 +116,26 @@ atri_heading_utopia = {
 			custom_effect_tooltip = atri_start_plan_tt
 		}
 	}
-
+	show_ATRI_decision = {
+		visible = {
+			has_country_flag = atri_start_plan
+			NOT = {
+				has_country_flag = show_atri_plan
+			}
+		}
+		complete_effect = {
+			set_country_flag = show_atri_plan
+		}
+	}
+	close_ATRI_decision = {
+		visible = {
+			has_country_flag = atri_start_plan
+			has_country_flag = show_atri_plan
+		}
+		complete_effect = {
+			clr_country_flag = show_atri_plan
+		}
+	}
 	yz_ATRI_expand_buildings = {
 		#name = YUZ_integrate_fans
 		icon = generic_nationalism
@@ -174,15 +196,16 @@ atri_heading_utopia = {
 			has_country_flag = atri_start_plan
 			has_country_flag = finished_yoshino_industry
 			has_country_flag = finished_megulu_industry
+			has_country_flag = show_atri_plan
 		}
 
 		complete_effect = {
 			add_to_variable = { yz_money = -100 }
-				add_equipment_to_stockpile = {
-					type = atri_equipment_1
-					amount = -5                  #是在当地融入生活了，不是死了
-					producer = ROOT
-				}
+			add_equipment_to_stockpile = {
+				type = atri_equipment_1
+				amount = -5                  #是在当地融入生活了，不是死了
+				producer = ROOT
+			}
 		}
 		modifier = {
 			civilian_factory_use = 10
@@ -258,15 +281,16 @@ atri_heading_utopia = {
 			has_country_flag = atri_start_plan
 			has_country_flag = finished_yoshino_industry
 			has_country_flag = finished_megulu_industry
+			has_country_flag = show_atri_plan
 		}
 
 		complete_effect = {
 			add_to_variable = { yz_money = -100 }
-				add_equipment_to_stockpile = {
-					type = atri_equipment_1
-					amount = -5                  #是在当地融入生活了，不是死了
-					producer = ROOT
-				}
+			add_equipment_to_stockpile = {
+				type = atri_equipment_1
+				amount = -5                  #是在当地融入生活了，不是死了
+				producer = ROOT
+			}
 		}
 		modifier = {
 			civilian_factory_use = 10

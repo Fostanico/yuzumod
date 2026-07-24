@@ -1,30 +1,29 @@
-add_namespace = yoshino_event 
+add_namespace = yoshino_event
 
 country_event= {
     id = yoshino_event.1  #春日祭(初次相遇)
     picture = GFX_yoshino_event1
     title = yoshino_event.1.t
     desc = yoshino_event.1.d
-    play_song = youzu27
+    # play_song = youzu27 # 事件根级不执行 effect；暂留注释以维持现有行为
     is_triggered_only = yes
 
     option = {
         name = yoshino_event.1.a	#去看看吗
         trigger = {
             or = {
-				has_country_flag = qiyong_youzi_2
-				has_country_flag = qiyong_youzi_3
-			}
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+            }
         }
         custom_effect_tooltip = yoshino_yes	#小字
         add_stability = 0.01
-		add_political_power = 1
-		add_stability = 0.01
-        custom_effect_tooltip = yoshino_yes 
+        add_political_power = 1
+        add_stability = 0.01
+        custom_effect_tooltip = yoshino_yes
         country_event= { id = yoshino_event.2 days = 3 }
         country_event= { id = tongyong_event.1 } #待定
         set_country_flag = yoshino_geilaozichufadierge      ###当时出bug急眼了写的
-        add_ideas = /
         meta_effect = {
             text = {
                 generate_character = {
@@ -35,11 +34,11 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\chaowufangnai_leader.png"
-                            small = "gfx\leader\yoshino2.png"
+                            large = "gfx/leader/chaowufangnai_leader.png"
+                            small = "gfx/leader/yoshino2.png"
                         }
                         army = {
-                            large = "gfx\leader\yoshino.png"
+                            large = "gfx/leader/yoshino.png"
                         }
                     }
                     allowed_civil_war = {
@@ -47,34 +46,34 @@ country_event= {
                     }
                     corps_commander = {
                         desc = yoshino_corps_desc
-                traits={
-                    maid_fangnai_trait JAP_communist_sympathizer brilliant_strategist war_hero infantry_officer logistics_wizard marxist_academic trait_mountaineer adaptable skilled_staffer
+                        traits={
+                            maid_fangnai_trait JAP_communist_sympathizer brilliant_strategist war_hero infantry_officer logistics_wizard marxist_academic trait_mountaineer adaptable skilled_staffer
+                        }
+                # id = 1001222 # 当前 corps_commander 定义不支持数值 id，原代码不会生效
+                        attack_skill = 2
+                        defense_skill = 1
+                        planning_skill = 2
+                        logistics_skill = 1
+                        skill = 2
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                id = 1001222
-                attack_skill = 2
-                defense_skill = 1
-                planning_skill = 2
-                logistics_skill = 1
-                skill = 2
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
-        
-		hidden_effect = {
-            add_ideas = chose_yoshino   
-		}
+            }
+        }
+
+        hidden_effect = {
+            add_ideas = chose_yoshino
+        }
     }
 
 
-	option = {
+    option = {
         name = yoshino_event.1.b   	#我不想走芳乃线（）
         country_event = { id = tongyong_event.1 }
-		add_political_power = 1
-		custom_effect_tooltip = yoshino_hide	#小字
+        add_political_power = 1
+        custom_effect_tooltip = yoshino_hide	#小字
         set_country_flag = no_yoshino
         meta_effect = {
             text = {
@@ -86,11 +85,11 @@ country_event= {
                     nationality = JAP
                     portraits = {
                         civilian = {
-                            large = "gfx\leader\chaowufangnai_leader.png"
-                            small = "gfx\leader\yoshino2.png"
+                            large = "gfx/leader/chaowufangnai_leader.png"
+                            small = "gfx/leader/yoshino2.png"
                         }
                         army = {
-                            large = "gfx\leader\yoshino.png"
+                            large = "gfx/leader/yoshino.png"
                         }
                     }
                     allowed_civil_war = {
@@ -98,30 +97,30 @@ country_event= {
                     }
                     corps_commander = {
                         desc = yoshino_corps_desc
-                traits={
-                    maid_fangnai_trait 
-                    JAP_communist_sympathizer 
-                    brilliant_strategist 
-                    war_hero 
-                    infantry_officer 
-                    logistics_wizard 
-                    marxist_academic 
-                    trait_mountaineer 
-                    adaptable skilled_staffer
+                        traits={
+                            maid_fangnai_trait
+                            JAP_communist_sympathizer
+                            brilliant_strategist
+                            war_hero
+                            infantry_officer
+                            logistics_wizard
+                            marxist_academic
+                            trait_mountaineer
+                            adaptable skilled_staffer
+                        }
+                # id = 1001221 # 当前 corps_commander 定义不支持数值 id，原代码不会生效
+                        attack_skill = 6
+                        defense_skill = 3
+                        planning_skill = 5
+                        logistics_skill = 5
+                        skill = 5
+                        visible = {
+                            is_ai = no
+                        }
+                    }
                 }
-                id = 1001221
-                attack_skill = 6
-                defense_skill = 3
-                planning_skill = 5
-                logistics_skill = 5
-                skill = 5
-                visible = {
-                           is_ai = no
-                       }
-                   }
-               }
-           }
-       }
+            }
+        }
     }
 }
 
@@ -134,10 +133,10 @@ country_event= {
 
     option = {
         name = yoshino_event.2.a
-		add_political_power = 15
+        add_political_power = 15
         add_to_variable = { experience_army = 5 }
         custom_effect_tooltip = yoshino_love1	#初次袱禊
-         random_army_leader = {
+        random_army_leader = {
             limit = {
                 has_trait = maid_fangnai_trait
             }
@@ -147,10 +146,10 @@ country_event= {
             add_logistics = 1
         }
         country_event= { id =  yoshino_event.4 days = 20 }
-		hidden_effect = {
-			add_stability = 0.01
-			
-		}
+        hidden_effect = {
+            add_stability = 0.01
+
+        }
     }
 }
 
@@ -163,11 +162,11 @@ country_event= {
 
     option = {
         name = yoshino_event.4.a	#指导芳乃
-		add_political_power = 10
+        add_political_power = 10
         add_stability = 0.01
-		hidden_effect = {
-			country_event = { id = yoshino_event.5 days = 15 }
-		}
+        hidden_effect = {
+            country_event = { id = yoshino_event.5 days = 15 }
+        }
     }
 }
 
@@ -200,8 +199,8 @@ country_event = {
     option = {
         name = yoshino_event.8.b	#
         add_stability = 0.01
-		add_political_power = 10
-		add_stability = 0.01
+        add_political_power = 10
+        add_stability = 0.01
         random_army_leader = {
             limit = {
                 has_trait = maid_fangnai2_trait
@@ -230,15 +229,15 @@ country_event = {
         add_to_variable = { experience_army = 15 }
         add_to_variable = { experience_air = 10 }
         add_to_variable = { experience_navy = 10 }
-		add_political_power = -5
-		random_army_leader = {
+        add_political_power = -5
+        random_army_leader = {
             limit = {
                 has_trait = maid_yoshino_trait
             }
         }
         hidden_effect = {
             country_event = { id = yoshino_event.11 days = 10 }
-		}
+        }
     }
 }
 
@@ -249,13 +248,13 @@ country_event = {
     desc = yoshino_event.11.d
     is_triggered_only = yes
 
-     option = {
-        name = yoshino_event.11.a	
-		add_political_power = 50
-		custom_effect_tooltip = yoshino_happy1
+    option = {
+        name = yoshino_event.11.a
+        add_political_power = 50
+        custom_effect_tooltip = yoshino_happy1
         add_ideas = yoshino_love_level_1
         yoshino_love_up = yes
-		hidden_effect = {
+        hidden_effect = {
             play_song = youzu6
         }
     }

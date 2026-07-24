@@ -1,47 +1,46 @@
 ﻿l_simp_chinese:
- YZGalgame_name:0 "[YZGalgame_name_text]" # 左上角游戏名
- yuzu_dialog_bg:0 "[yuzu_dialog_bg_text]" # 跳过对话提示
- Dialog_text:0 "[Dialog_text_defined]"       # 对话框内容
- dialog_gui_option_1_tooltip:0 "[dialog_gui_option_1_tooltip_text]"   # 选项提示
- dialog_gui_option_2_tooltip:0 "[dialog_gui_option_2_tooltip_text]"    
- dialog_gui_option_3_tooltip:0 "[dialog_gui_option_3_tooltip_text]"    
- YZ_dialog_gui_option_1_text:0 "[YZ_dialog_gui_option_1_text_defined]"   # 选项内容
- YZ_dialog_gui_option_2_text:0 "[YZ_dialog_gui_option_2_text_defined]"    
- YZ_dialog_gui_option_3_text:0 "[YZ_dialog_gui_option_3_text_defined]"    
- 
+ YZGalgame_name: "[YZGalgame_name_text]" # 左上角游戏名
+ yuzu_dialog_bg: "[yuzu_dialog_bg_text]" # 跳过对话提示
+ Dialog_text: "[Dialog_text_defined]"       # 对话框内容
+ dialog_gui_option_1_tooltip: "[dialog_gui_option_1_tooltip_text]"   # 选项提示
+ dialog_gui_option_2_tooltip: "[dialog_gui_option_2_tooltip_text]"
+ dialog_gui_option_3_tooltip: "[dialog_gui_option_3_tooltip_text]"
+ YZ_dialog_gui_option_1_text: "[YZ_dialog_gui_option_1_text_defined]"   # 选项内容
+ YZ_dialog_gui_option_2_text: "[YZ_dialog_gui_option_2_text_defined]"
+ YZ_dialog_gui_option_3_text: "[YZ_dialog_gui_option_3_text_defined]"
+
  ## 对话内容
- mur_dialog_1:0 "【丛雨酱】\n喜欢做爱？"
- 
+ mur_dialog_1: "【丛雨酱】\n喜欢做爱？"
+
 
  ## 背景
- YZ_dialog_bg_images_1:0 "GFX_yoshino_home_bg"
+ YZ_dialog_bg_images_1: "GFX_yoshino_home_bg"
 
  ## 立绘
- mur_image_1:0 "GFX_murasame_01a"
- mur_image_1_0:0 "GFX_murasame_01b"
- 
+ mur_image_1: "GFX_murasame_01a"
+ mur_image_1_0: "GFX_murasame_01b"
+
 
  ##选项
- mur_option_1:0 "TRUE"
- mur_option_tooltip_1:0 "选择后将进入§G丛雨线§!"
- mur_option_2:0 "FALSE"
- mur_option_tooltip_2:0 "无事发生"
- mur_option_3:0 "容我回避这个问题"
- mur_option_tooltip_3:0 "无事发生？"
+ mur_option_1: "TRUE"
+ mur_option_tooltip_1: "选择后将进入§G丛雨线§!"
+ mur_option_2: "FALSE"
+ mur_option_tooltip_2: "无事发生"
+ mur_option_3: "容我回避这个问题"
+ mur_option_tooltip_3: "无事发生？"
 
  # 游戏标题
- SR_game_title:0 "千恋 * 万花"
- SW_game_title:0 "魔女的夜宴"
- RJ_game_title:0 "RIDDLE JOKER!"
- TS_game_title:0 "天使☆嚣嚣 RE-BOOT!"
- CS_game_title:0 "星光咖啡馆与死神之蝶"
- DR_game_title:0 "DRACU-RIOT!"
- AI_game_title:0 "天色幻想岛"
- NW_game_title:0 "NOBLE☆WORKS"
- LU_game_title:0 "天神乱漫"
- NK_game_title:0 "夏之彼方"
- EE_game_title:0 "ExE"
- BB_game_title:0 "管乐恋曲！~The bonds of melody~"
- 
- yuzu_dialog_bg_text_0:0 "点击跳到下一句~"
- 
+ SR_game_title: "千恋 * 万花"
+ SW_game_title: "魔女的夜宴"
+ RJ_game_title: "RIDDLE JOKER!"
+ TS_game_title: "天使☆嚣嚣 RE-BOOT!"
+ CS_game_title: "星光咖啡馆与死神之蝶"
+ DR_game_title: "DRACU-RIOT!"
+ AI_game_title: "天色幻想岛"
+ NW_game_title: "NOBLE☆WORKS"
+ LU_game_title: "天神乱漫"
+ NK_game_title: "夏之彼方"
+ EE_game_title: "ExE"
+ BB_game_title: "管乐恋曲！~The bonds of melody~"
+
+ yuzu_dialog_bg_text_0: "点击跳到下一句~"

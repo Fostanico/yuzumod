@@ -61,7 +61,7 @@ scripted_gui = {
         context_type = player_context
         visible = {
             has_country_flag = parquet_started
-			has_country_flag = show_yuzusoft_sour_recruit
+            has_country_flag = show_yuzusoft_sour_recruit
         }
     }
     parquet = {
@@ -76,9 +76,9 @@ scripted_gui = {
             }
             parquet_story_start_click = {              #因为剧情没有写好，预留——2025.5.30,11:16,伊尔诺
                 set_country_flag =  parquet_started
-				clr_country_flag = show_parquet_recruit
-				meta_effect = {
-					 text = {
+                clr_country_flag = show_parquet_recruit
+                meta_effect = {
+                    text = {
                         generate_character = {
                             token_base = ibaraki_rino
                             name = "茨木梨乃"
@@ -87,8 +87,8 @@ scripted_gui = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\ibaraki_rino.png"
-                                    small = "gfx\leader\ibaraki_rino_small.png"
+                                    large = "gfx/leader/ibaraki_rino.png"
+                                    small = "gfx/leader/ibaraki_rino_small.png"
                                 }
                             }
                             allowed_civil_war = { is_ai = no }
@@ -96,7 +96,7 @@ scripted_gui = {
                                 desc = ibaraki_rino_corps_desc
                                 traits = {
                                     ibaraki_rino_only_at_night
-									bmi_device
+                                    bmi_device
                                 }
                                 skill = 5
                                 attack_skill = 7
@@ -106,9 +106,9 @@ scripted_gui = {
                             }
                         }
                     }
-				}
+                }
                 meta_effect = {
-					text = {
+                    text = {
                         generate_character = {
                             token_base = kido_tsubasa
                             name = "城门翼"
@@ -117,17 +117,17 @@ scripted_gui = {
                             nationality = JAP
                             portraits = {
                                 civilian = {
-                                    large = "gfx\leader\kido_tsubasa.png"
-                                    small = "gfx\leader\kido_tsubasa_small.png"
+                                    large = "gfx/leader/kido_tsubasa.png"
+                                    small = "gfx/leader/kido_tsubasa_small.png"
                                 }
                             }
                             allowed_civil_war = { is_ai = no }
                             corps_commander = {
                                 desc = kido_tsubasa_corps_desc
                                 traits = {
-									yasaidaburuninnikuaboramashimashibaagaa_trait
+                                    yasaidaburuninnikuaboramashimashibaagaa_trait
                                     kido_tsubasa_only_at_sun
-									bmi_device
+                                    bmi_device
                                 }
                                 skill = 5
                                 attack_skill = 3
@@ -137,11 +137,11 @@ scripted_gui = {
                             }
                         }
                     }
-                }                                          
-            }                                          
-        }                                              
-    }                                                  
-}                                                      
+                }
+            }
+        }
+    }
+}
 #这里也许我能写，也许不能，这几天我到底关于parquet有没有一个真正可行的想法呢？
 #或许有，也或许没有。到头来写这些东西还是要靠别人来想这个到底要做些什么内容。
 #这一段文字我不知道会有多少人看，也许会有，也可能不会有人在意到这一段话

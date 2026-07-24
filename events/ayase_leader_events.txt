@@ -1,12 +1,12 @@
 add_namespace = linglai_event
 
-country_event = { 
+country_event = {
 	id = linglai_event.1
 	title = linglai_event.1.t
 	desc = linglai_event.1.d
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		retire_country_leader = yes
 		name = linglai_event.1.a
@@ -20,20 +20,19 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "sansilinglai"
-			        picture = GFX_portrait_ADD_linglai
-					desc = linglai_desc
-					expire = "2095.1.1"
-				    ideology = marxism
-					 traits = {
-						gtzr 
-						lsly 
-						oppz
-				    }
-				}
+			name = "sansilinglai"
+			picture = GFX_portrait_ADD_linglai
+			desc = linglai_desc
+			expire = "2095.1.1"
+			ideology = marxism
+			traits = {
+				gtzr
+				oppz
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = linglai_event.2.a
 		trigger = {
@@ -46,20 +45,19 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "sansilinglai"
-			        picture = GFX_portrait_ADD_linglai
-					desc = linglai_desc
-					expire = "2095.1.1"
-				    ideology = conservatism
-					 traits = {
-						gtzr 
-						lsly 
-						oppz
-				    }
-				}
+			name = "sansilinglai"
+			picture = GFX_portrait_ADD_linglai
+			desc = linglai_desc
+			expire = "2095.1.1"
+			ideology = conservatism
+			traits = {
+				gtzr
+				oppz
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = linglai_event.3.a
 		trigger = {
@@ -72,20 +70,19 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "sansilinglai"
-			        picture = GFX_portrait_ADD_linglai
-					desc = linglai_desc
-					expire = "2095.1.1"
-				    ideology = fascism_ideology
-					 traits = {
-						gtzr 
-						lsly 
-						oppz
-				    }
-				}
+			name = "sansilinglai"
+			picture = GFX_portrait_ADD_linglai
+			desc = linglai_desc
+			expire = "2095.1.1"
+			ideology = fascism_ideology
+			traits = {
+				gtzr
+				oppz
+			}
 		}
+	}
 
-		option = {
+	option = {
 		retire_country_leader = yes
 		name = linglai_event.4.a
 		trigger = {
@@ -98,49 +95,48 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-					name = "sansilinglai"
-			        picture = GFX_portrait_ADD_linglai
-					desc = linglai_desc
-					expire = "2095.1.1"
-				    ideology = despotism
-					 traits = {
-						gtzr 
-						lsly 
-						oppz
-				    }
-		        }
+			name = "sansilinglai"
+			picture = GFX_portrait_ADD_linglai
+			desc = linglai_desc
+			expire = "2095.1.1"
+			ideology = despotism
+			traits = {
+				gtzr
+				oppz
+			}
 		}
-country_event = {
-    id = linglai_event.01   #被质疑的欧派真实性（开始大清洗）
-    picture = GFX_linglai_event01
-    title = linglai_event.01.t
-    desc = linglai_event.01.d
-    is_triggered_only = yes
-
-    option = {
-        name = linglai_event.01.a
-        add_political_power = 1
-        set_country_flag = allow_linglai
-        custom_effect_tooltip = linglai_alone
-        hidden_effect = {
-        }
-    }
+	}
 }
 country_event = {
-    id = linglai_event.02   #被质疑的欧派真实性（开始大清洗）
-    picture = GFX_linglai_event02
-    title = linglai_event.02.t
-    desc = linglai_event.02.d
-    is_triggered_only = yes
+	id = linglai_event.101  #被质疑的欧派真实性（开始大清洗）
+	picture = GFX_linglai_event01
+	title = linglai_event.01.t
+	desc = linglai_event.01.d
+	is_triggered_only = yes
 
-    option = {
-        name = linglai_event.02.a
-        add_political_power = 1
-        set_country_flag = allow_linglai
-        custom_effect_tooltip = linglai_alone
-        hidden_effect = {
-            country_event = { id = linglai_event.02 days = 15 }
-        }
-    }
+	option = {
+		name = linglai_event.01.a
+		add_political_power = 1
+		set_country_flag = allow_linglai
+		custom_effect_tooltip = linglai_alone
+		hidden_effect = {
+		}
+	}
 }
+country_event = {
+	id = linglai_event.02   #被质疑的欧派真实性（开始大清洗）
+	picture = GFX_linglai_event02
+	title = linglai_event.02.t
+	desc = linglai_event.02.d
+	is_triggered_only = yes
+
+	option = {
+		name = linglai_event.02.a
+		add_political_power = 1
+		set_country_flag = allow_linglai
+		custom_effect_tooltip = linglai_alone
+		hidden_effect = {
+			country_event = { id = linglai_event.02 days = 15 }
+		}
+	}
 }

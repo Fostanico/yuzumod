@@ -1,7 +1,84 @@
 # Millennium Dawn 专用军工组织决议。
 # 复用原决议的标题、说明、成本与完成时间，只切换为现代装备组织旗标。
+# 显隐必须读取开局兼容 flag；日期本身不能证明 Millennium Dawn 已加载。
 
 general_develpomen_decision_category = {
+	YZ_MD_MIO_6_get = {
+		name = YZ_MD_MIO_6_get
+		desc = YZ_MD_MIO_6_get_desc
+		priority = 99
+		fire_only_once = yes
+		cost = 30
+		days_remove = 25
+
+		visible = {
+			OR = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			has_global_flag = yz_md_startup_detected
+			NOT = { has_country_flag = yz_mio_6 }
+			NOT = { has_country_flag = yz_bad_end }
+			has_air_experience > 14.99
+		}
+
+		modifier = { consumer_goods_factor = 0.25 }
+		available = {
+			command_power > 9.99
+			has_air_experience > 14.99
+			industrial_complex > 19
+		}
+		complete_effect = {
+			add_command_power = -10
+			air_experience = -15
+		}
+		remove_effect = {
+			set_country_flag = youzi_MD_MIO_6
+			hidden_effect = {
+				country_event = start_event.2
+				set_country_flag = yz_mio_6
+			}
+		}
+	}
+
+	YZ_MD_MIO_1_get = {
+		name = YZ_MIO_1_get
+		desc = YZ_MIO_1_get_desc
+		priority = 99
+		fire_only_once = yes
+		cost = 30
+		days_remove = 25
+
+		visible = {
+			OR = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			has_global_flag = yz_md_startup_detected
+			NOT = { has_country_flag = yz_mio_1 }
+			NOT = { has_country_flag = yz_bad_end }
+			has_army_experience > 14.99
+		}
+
+		modifier = { consumer_goods_factor = 0.2 }
+		available = {
+			command_power > 9.99
+			has_army_experience > 14.99
+			industrial_complex > 14
+		}
+		complete_effect = {
+			add_command_power = -10
+			army_experience = -15
+		}
+		remove_effect = {
+			set_country_flag = youzi_MD_MIO_1
+			hidden_effect = {
+				country_event = start_event.2
+				set_country_flag = yz_mio_1
+			}
+		}
+	}
+
 	YZ_MD_MIO_5_get = {
 		name = YZ_MIO_5_get
 		desc = YZ_MIO_5_get_desc
@@ -15,7 +92,7 @@ general_develpomen_decision_category = {
 				has_country_flag = qiyong_youzi_2
 				has_country_flag = qiyong_youzi_3
 			}
-			date > 1999.12.31
+			has_global_flag = yz_md_startup_detected
 			NOT = { has_country_flag = yz_mio_3 }
 			NOT = { has_country_flag = yz_bad_end }
 			has_navy_experience > 14.99
@@ -58,7 +135,7 @@ general_develpomen_decision_category = {
 				has_country_flag = qiyong_youzi_2
 				has_country_flag = qiyong_youzi_3
 			}
-			date > 1999.12.31
+			has_global_flag = yz_md_startup_detected
 			NOT = { has_country_flag = yz_mio_4 }
 			NOT = { has_country_flag = yz_bad_end }
 			has_air_experience > 14.99
@@ -101,7 +178,7 @@ general_develpomen_decision_category = {
 				has_country_flag = qiyong_youzi_2
 				has_country_flag = qiyong_youzi_3
 			}
-			date > 1999.12.31
+			has_global_flag = yz_md_startup_detected
 			NOT = { has_country_flag = yz_mio_5 }
 			NOT = { has_country_flag = yz_bad_end }
 			has_army_experience > 14.99

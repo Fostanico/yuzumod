@@ -5,63 +5,63 @@ country_event = { 		##
 	title = LY_event.101.t
 	desc = LY_event.101.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = LY_event.101.a
-        set_country_flag = have_suzune
+		set_country_flag = have_suzune
 		meta_effect = {
-		text = {
-		generate_character = {
-			token_base = suzune
-			name = "汐山凉音"
-			gender = female
-			nationality = JAP
-			portraits = {
-				civilian = {
-					large = "gfx\leader\suzune.png"
-					small = "gfx\leader\suzune2.png"
+			text = {
+				generate_character = {
+					token_base = suzune
+					name = "汐山凉音"
+					gender = female
+					nationality = JAP
+					portraits = {
+						civilian = {
+							large = "gfx/leader/suzune.png"
+							small = "gfx/leader/suzune2.png"
+						}
+					}
+					allowed_civil_war = {
+						is_ai = no
+					}
+					advisor = {
+						slot = high_command
+						cost = 100
+						idea_token = suzune_command
+						desc = suzune_army_desc
+						ledger = army
+						traits = { suzune_army  }
+						ai_will_do = {
+							factor = 0
+						}
+					}
+					corps_commander = {
+						desc = suzune_corps_desc
+						traits={
+							maid_suzune_trait
+							organisational_leader
+							adaptable
+							logistics_wizard
+						}
+						skill=5
+						attack_skill=3
+						defense_skill=3
+						planning_skill=3
+						logistics_skill=9
+					}
 				}
 			}
-			allowed_civil_war = {
-				is_ai = no
-			}
-			advisor = {  
-				slot = high_command
-				cost = 100
-				idea_token = suzune_command
-				desc = suzune_army_desc
-				ledger = army
-				traits = { suzune_army  }
-				ai_will_do = {
-					factor = 0
-				}
-			}
-			corps_commander = {
-				desc = suzune_corps_desc
-			traits={
-				maid_suzune_trait
-				organisational_leader 
-				adaptable
-				logistics_wizard
-			}
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=9
-			}
-		  }
 		}
-	  }
 		random_army_leader = {
-            limit = {
-                has_trait = maid_kanna_trait
+			limit = {
+				has_trait = maid_kanna_trait
 				has_trait = maid_zaozi_trait
-            }
-            add_logistics = 1
-        }
+			}
+			add_logistics = 1
+		}
 	}
 }
 
@@ -70,65 +70,65 @@ country_event = { 		##
 	title = LY_event.102.t
 	desc = LY_event.102.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = LY_event.102.a
-        set_country_flag = have_suzune
+		set_country_flag = have_suzune
 		meta_effect = {
-		text = {
-		generate_character = {
-			token_base = suzune
-			name = "汐山凉音"
-			gender = female
-			nationality = JAP
-			portraits = {
-				civilian = {
-					large = "gfx\leader\suzune.png"
-					small = "gfx\leader\suzune2.png"
+			text = {
+				generate_character = {
+					token_base = suzune
+					name = "汐山凉音"
+					gender = female
+					nationality = JAP
+					portraits = {
+						civilian = {
+							large = "gfx/leader/suzune.png"
+							small = "gfx/leader/suzune2.png"
+						}
+					}
+					allowed_civil_war = {
+						is_ai = no
+					}
+					advisor = {
+						slot = high_command
+						cost = 100
+						idea_token = suzune_command
+						desc = suzune_army_desc
+						ledger = army
+						traits = { suzune_army  }
+						ai_will_do = {
+							factor = 0
+						}
+					}
+					corps_commander = {
+						desc = suzune_corps_desc
+						traits={
+							maid_suzune_trait
+							organisational_leader
+							adaptable
+							logistics_wizard
+						}
+						skill=5
+						attack_skill=3
+						defense_skill=3
+						planning_skill=3
+						logistics_skill=9
+					}
 				}
 			}
-			allowed_civil_war = {
-				is_ai = no
-			}
-			advisor = {  
-				slot = high_command
-				cost = 100
-				idea_token = suzune_command
-				desc = suzune_army_desc
-				ledger = army
-				traits = { suzune_army  }
-				ai_will_do = {
-					factor = 0
-				}
-			}
-			corps_commander = {
-				desc = suzune_corps_desc
-			traits={
-				maid_suzune_trait
-				organisational_leader 
-				adaptable
-				logistics_wizard
-			}
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=9
-			}
-		  }
 		}
-	  }
 		random_army_leader = {
-            limit = {
-                has_trait = maid_kanna_trait
+			limit = {
+				has_trait = maid_kanna_trait
 				has_trait = maid_zaozi_trait
-            }
-            add_logistics = 1
-        }
+			}
+			add_logistics = 1
+		}
 	}
-	
+
 }
 
 country_event = { 		##
@@ -136,20 +136,18 @@ country_event = { 		##
 	title = LY_event.103.t
 	desc = LY_event.103.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = fruit_cake }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = fruit_cake }
 	}
-	
+
 	option = {
 		name = LY_event.103.a
 		add_timed_idea = {
-        idea = fruit_cake		
-		days = 70
+			idea = fruit_cake
+			days = 70
 		}
 		add_political_power = 15
 	}
@@ -160,23 +158,21 @@ country_event = { 		##
 	title = LY_event.104.t
 	desc = LY_event.104.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = chocolate_donuts }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = chocolate_donuts }
 	}
-	
+
 	option = {
 		name = LY_event.104.a
 		add_timed_idea = {
-        idea = chocolate_donuts
-		days = 70
+			idea = chocolate_donuts
+			days = 70
 		}
 		add_political_power = 15
-				
+
 	}
 }
 
@@ -185,21 +181,19 @@ country_event = { 		##
 	title = LY_event.105.t
 	desc = LY_event.105.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = cream_pudding }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = cream_pudding }
 	}
-	
+
 	option = {
 		name = LY_event.105.a
 		add_timed_idea = {
-        idea = cream_pudding	
-		days = 70
-		}	
+			idea = cream_pudding
+			days = 70
+		}
 		add_political_power = 15
 	}
 }
@@ -209,22 +203,20 @@ country_event = { 		##
 	title = LY_event.106.t
 	desc = LY_event.106.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = xiangcaosongbing }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = xiangcaosongbing }
 	}
-	
+
 	option = {
 		name = LY_event.106.a
 		add_timed_idea = {
-        idea = xiangcaosongbing	
-		days = 70
+			idea = xiangcaosongbing
+			days = 70
 		}
-		add_political_power = 15	
+		add_political_power = 15
 	}
 }
 
@@ -233,22 +225,20 @@ country_event = { 		##
 	title = LY_event.107.t
 	desc = LY_event.107.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = mengbulang }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = mengbulang }
 	}
-	
+
 	option = {
 		name = LY_event.107.a
 		add_timed_idea = {
-        idea = mengbulang
-		days = 75
-		}	
-		add_political_power = 15	
+			idea = mengbulang
+			days = 75
+		}
+		add_political_power = 15
 	}
 }
 
@@ -257,21 +247,19 @@ country_event = { 		##
 	title = LY_event.108.t
 	desc = LY_event.108.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-			not = { has_idea = tilamisu }
-		}
+	trigger = {
+		has_country_flag = have_suzune
+		NOT = { has_idea = tilamisu }
 	}
-	
+
 	option = {
 		name = LY_event.108.a
-	add_timed_idea = {
-        idea = tilamisu	
-		days = 70	
-	    }
+		add_timed_idea = {
+			idea = tilamisu
+			days = 70
+		}
 	}
 }
 
@@ -280,17 +268,15 @@ country_event = { 		##
 	title = LY_event.109.t
 	desc = LY_event.109.d
 	picture = GFX_LY_event
-	
+
 	is_triggered_only = yes
-	visible = {
-		and = {
-			has_country_flag = have_suzune
-		}
+	trigger = {
+		has_country_flag = have_suzune
 	}
-	
+
 	option = {
 		name = LY_event.109.a
-        add_political_power = 30
+		add_political_power = 30
 	}
 }
 

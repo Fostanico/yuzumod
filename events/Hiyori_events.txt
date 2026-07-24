@@ -1,6 +1,6 @@
 add_namespace = hiyori_event
 
-country_event = { 
+country_event = {
 	id = hiyori_event.1 #meet hiyori
 	title = hiyori_event.1.t
 	desc = hiyori_event.1.d
@@ -13,10 +13,10 @@ country_event = {
 		meta_effect = {
 			text = {
 				generate_character = {
-				token_base = Izumi_hiyori
-				name = "和泉妃爱"
-				gender = female
-				nationality = JAP
+					token_base = Izumi_hiyori
+					name = "和泉妃爱"
+					gender = female
+					nationality = JAP
 					portraits = {
 						civilian = {
 							large = "GFX_hiy_1" #记得在int注册
@@ -27,27 +27,27 @@ country_event = {
 						is_ai = no
 					}
 					advisor = { #顾问
-					slot = political_advisor #类型-政治顾问
+						slot = political_advisor #类型-政治顾问
 					#slot = theorist #类型-理论家
 					#slot = army_chief #类型-陆军部长
 					#slot = navy_chief #类型-海军部长
 					#slot = air_chief #类型-空军部长
 					#slot = high_command #类型-总司令
-					traits = { super_hiyori_together } #技能 
-					cost = 0
-				}
-				corps_commander = {
-					traits={
-						media_personality 
-						JAP_communist_sympathizer 
-						brilliant_strategist
-						hiyohiyo
+						traits = { super_hiyori_together } #技能
+						cost = 0
 					}
-					skill=1
-					attack_skill=1
-					defense_skill=1
-					planning_skill=1
-					logistics_skill=2
+					corps_commander = {
+						traits={
+							media_personality
+							JAP_communist_sympathizer
+							brilliant_strategist
+							hiyohiyo
+						}
+						skill=1
+						attack_skill=1
+						defense_skill=1
+						planning_skill=1
+						logistics_skill=2
 					}
 				}
 			}
@@ -55,46 +55,46 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = hiy_por_1
 			country_event = { id = hiyori_event.2 days = 0 }
-        }
+		}
 	}
 	option = {
-        name = hiyori_event.1.b   	#结束事件链，什么都没有
+		name = hiyori_event.1.b   	#结束事件链，什么都没有
 		add_political_power = 1
 		custom_effect_tooltip = hiyori_event_1_b_tt  	#小字
-    }
-}	
+	}
+}
 
 
-     
 
-country_event = { 
-	id = hiyori_event.2   #vocation, night talks 
+
+country_event = {
+	id = hiyori_event.2   #vocation, night talks
 	title = hiyori_event.t
 	desc = hiyori_event.2.d
 	picture = GFX_hiyori_event.2
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	option = {
 		name = hiyori_event.2.a
-		custom_effect_tooltip = hiyori_event_2_a_tt	#小字	
+		custom_effect_tooltip = hiyori_event_2_a_tt	#小字
 		random_army_leader = {
-            limit = {
-                has_trait = hiyohiyo
-            }
+			limit = {
+				has_trait = hiyohiyo
+			}
 			add_unit_leader_trait = Heart_Creation #特质制作
-        }
+		}
 		#文案工作完成前，后续事件链不开放，特质将直接获得
 		#hidden_effect = {
 		#	country_event = { id = hiyori_event.3 days = 0 }
         #}
-    } 
+	}
 	option = {
 		name = hiyori_event.2.b
-		custom_effect_tooltip = hiyori_event_2_b_tt #小字	
+		custom_effect_tooltip = hiyori_event_2_b_tt #小字
 
-    } 
+	}
 }
 
-country_event = { 
+country_event = {
 	id = hiyori_event.3  #raid
 	title =  hiyori_event.3.t
 	desc =  hiyori_event.3.d
@@ -102,23 +102,23 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = hiyori_event.3.a
-        add_political_power = -10
+		add_political_power = -10
 
 		hidden_effect = {
 			country_event = { id = hiyori_event.4 days = 0 }
-        }
-    } 
+		}
+	}
 }
 
 
 
 
-country_event = { 
+country_event = {
 	id = hiyori_event.4   #speech in the trenches
 	title = hiyori_event.4.t
 	desc = hiyori_event.4.d
 	picture = GFX_hiyori_event.4
-	is_triggered_only = yes	
+	is_triggered_only = yes
 	option = {
 		name = hiyori_event.4.a
 		hidden_effect = {
@@ -129,7 +129,7 @@ country_event = {
 
 
 
-country_event = { 
+country_event = {
 	id = hiyori_event.5   #precious daily
 	title = hiyori_event.5.t
 	desc = hiyori_event.5.d
@@ -143,22 +143,22 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = hiyori_event.6 days = 0 }
 		}
-	} 
+	}
 }
 
 
 
-	country_event = { 
-		id = hiyori_event.6   #something never concieved #need to add trait!
-		title = hiyori_event.6.t
-		desc = hiyori_event.6.d
-		picture = GFX_hiyori_event.6
-		is_triggered_only = yes
-		option = {
-			name = hiyori_event.6.a
-			add_political_power = 50
-			add_stability = 0.2
+country_event = {
+	id = hiyori_event.6   #something never concieved #need to add trait!
+	title = hiyori_event.6.t
+	desc = hiyori_event.6.d
+	picture = GFX_hiyori_event.6
+	is_triggered_only = yes
+	option = {
+		name = hiyori_event.6.a
+		add_political_power = 50
+		add_stability = 0.2
 
-		} 
 	}
+}
 

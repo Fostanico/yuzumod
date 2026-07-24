@@ -45,13 +45,13 @@ YZS_scientist_category = {
                 add_equipment_production = {
                     equipment = {
                         type = type90_tank_chassis_1
+                        version_name = "柚子YIWG-90式主战坦克"
                     }
                     requested_factories = 1
                     progress = 0
                     efficiency = 90
                     amount = 0
                     industrial_manufacturer = mio:youzi_tank_design_and_production_Center_organization_0
-                    version_name = "柚子YIWG-90式主战坦克"
                 }
             }
         }
@@ -450,6 +450,13 @@ YZS_scientist_category = {
             add_to_variable = {
                 astral_breakthrough_point_total = 1
                 tooltip = add_astral_breakthrough_point_tt
+            }
+            if = {
+                limit = {
+                    check_variable = { astral_breakthrough_point_total > 4 }
+                    NOT = { has_country_flag = have_kotori }
+                }
+                country_event = kotori_event.1
             }
         }
 
@@ -969,8 +976,8 @@ YZS_scientist_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\Noa.png"
-                                small = "gfx\leader\Noa2.png"
+                                large = "gfx/leader/Noa.png"
+                                small = "gfx/leader/Noa2.png"
                             }
                         }
                         allowed_civil_war = {
@@ -1076,21 +1083,34 @@ YZS_scientist_category = {
         custom_cost_text = YM_1000
 
         visible = {
-            has_country_flag = have_ATRI
-            NOT = {
-                has_country_flag = qiyong_youzi_1
-                has_country_flag = qiyong_youzi_3
+            # ATRI's original research chain uses vanilla industry technologies.
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = have_ATRI
+                NOT = {
+                    has_country_flag = qiyong_youzi_1
+                    has_country_flag = qiyong_youzi_3
+                }
             }
         }
         available = {
-            check_variable = {
-                love_depth > 100
-                tooltip = love_depth_tooltip_compare
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
             }
-            has_country_flag = yz_mio_1
-            has_country_flag = yz_mio_5
-            has_tech = improved_computing_machine
-            has_tech = advanced_machine_tools
+            else = {
+                check_variable = {
+                    love_depth > 100
+                    tooltip = love_depth_tooltip_compare
+                }
+                has_country_flag = yz_mio_1
+                has_country_flag = yz_mio_5
+                has_tech = improved_computing_machine
+                has_tech = advanced_machine_tools
+            }
         }
 
         modifier = {
@@ -1121,18 +1141,31 @@ YZS_scientist_category = {
         custom_cost_text = YM_5000
 
         visible = {
-            has_country_flag = set_YRI
-            NOT = {
-                has_country_flag = qiyong_youzi_1
-                has_country_flag = qiyong_youzi_3
+            # ATRI's original unlock uses vanilla radio and computing technologies.
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                NOT = {
+                    has_country_flag = qiyong_youzi_1
+                    has_country_flag = qiyong_youzi_3
+                }
             }
         }
 
         available = {
-            has_army_experience > 99.99
-            has_tech = radio
-            has_tech = computing_machine
-            has_tech = improved_machine_tools
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_army_experience > 99.99
+                has_tech = radio
+                has_tech = computing_machine
+                has_tech = improved_machine_tools
+            }
         }
 
         modifier = {
@@ -1161,8 +1194,8 @@ YZS_scientist_category = {
                         nationality = JAP
                         portraits = {
                             civilian = {
-                                large = "gfx\leader\ATRI_.png"
-                                small = "gfx\leader\ATRI_2.png"
+                                large = "gfx/leader/ATRI_.png"
+                                small = "gfx/leader/ATRI_2.png"
                             }
                         }
                         allowed_civil_war = {
@@ -1208,27 +1241,24 @@ YZS_scientist_category = {
         }
     }
     mayu_and_nene_advanced_atri = {
-		icon = "GFX_ATRI_1"
-		fire_only_once = yes
-		days_remove = 30
-		cost = 10
-		
-		visible = {
-			has_country_flag = have_ATRI
-		}
-		modifier = {
-			consumer_goods_factor = 0.2
-			research_speed_factor = -1
-		}
-		remove_effect = {	
-			set_country_flag = kkr_MIO_1
-			unlock_mio_policy_tooltip = kkr_military_industrial_organization_0
-			set_technology = {
-				tech_advenced_ATRI_equipment = 1
-			}
-		} 
-	}
-	give_other_leader_bmi_system = {   #给其他将领上bmi特质——2025.8.6，17：27
+        icon = "GFX_ATRI_1"
+        fire_only_once = yes
+        days_remove = 30
+        cost = 10
+
+        visible = {
+            has_country_flag = have_ATRI
+        }
+        modifier = {
+            consumer_goods_factor = 0.2
+            research_speed_factor = -1
+        }
+        remove_effect = {
+            set_country_flag = kkr_MIO_1
+            custom_effect_tooltip = kkr_military_industrial_organization_0
+        }
+    }
+    give_other_leader_bmi_system = {   #给其他将领上bmi特质——2025.8.6，17：27
         icon = "GFX_trait_bmi_device"
         days_remove = 10
         visible = {
@@ -1242,23 +1272,23 @@ YZS_scientist_category = {
                 compare = greater_than_or_equals
             }
         }
-		custom_cost_text = YM_58
-		available = {
-			has_country_flag =  parquet_started
-		}
-		remove_effect = {
-			random_army_leader = {
-				limit = {
-					NOT = {
-						has_trait = bmi_device
-					}
-				}
-				add_unit_leader_trait = bmi_device
-			}
-		}
+        custom_cost_text = YM_58
+        available = {
+            has_country_flag =  parquet_started
+        }
+        remove_effect = {
+            random_army_leader = {
+                limit = {
+                    NOT = {
+                        has_trait = bmi_device
+                    }
+                }
+                add_unit_leader_trait = bmi_device
+            }
+        }
     }
-	give_all_leaders_bmi_system = {
-		icon = "GFX_trait_bmi_device"
+    give_all_leaders_bmi_system = {
+        icon = "GFX_trait_bmi_device"
         days_remove = 10
         visible = {
             has_country_flag = have_set_0721_facility
@@ -1271,25 +1301,25 @@ YZS_scientist_category = {
                 compare = greater_than_or_equals
             }
         }
-		custom_cost_text = YM_3000
-		available = {
-			has_country_flag = 	parquet_started
+        custom_cost_text = YM_3000
+        available = {
+            has_country_flag = 	parquet_started
 			#NOT = {
 			#		has_country_flag = apply_bmi_device
 			#}
-		}
-		remove_effect = {
-			every_army_leader = {
-				limit = {
-					NOT = {
-						has_trait = bmi_device
-					} 
-				}
-				add_unit_leader_trait = bmi_device
-			}
-			set_country_flag = apply_bmi_device
-		}
-	}
+        }
+        remove_effect = {
+            every_army_leader = {
+                limit = {
+                    NOT = {
+                        has_trait = bmi_device
+                    }
+                }
+                add_unit_leader_trait = bmi_device
+            }
+            set_country_flag = apply_bmi_device
+        }
+    }
     start_research_on_yuzu_little_car = {   #2025/11/28,21:43,伊尔诺
         visible = {
             has_country_flag = have_set_0721_facility
@@ -1304,6 +1334,8 @@ YZS_scientist_category = {
 }
 
 YZS_scientist_aromors_category = {
+    # These variants use vanilla NSB tank technologies and modules, so every
+    # playable entry in this category is hidden after Millennium Dawn detection.
     ########  #######  ##     ## #### ########  ##     ## ######## ##    ## ########
     ##       ##     ## ##     ##  ##  ##     ## ###   ### ##       ###   ##    ##
     ##       ##     ## ##     ##  ##  ##     ## #### #### ##       ####  ##    ##
@@ -1323,15 +1355,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = basic_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_artillery_2 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = basic_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_artillery_2 }
+            }
         }
         available = {
-            has_tech = basic_medium_tank_chassis
-            has_tech = artillery1
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = basic_medium_tank_chassis
+                has_tech = artillery1
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1385,15 +1429,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = improved_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_artillery_3 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = improved_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_artillery_3 }
+            }
         }
         available = {
-            has_tech = artillery2
-            has_tech = improved_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = artillery2
+                has_tech = improved_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1459,14 +1515,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = advanced_medium_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = advanced_medium_tank_chassis
+            }
         }
         available = {
-            has_tech = artillery3
-            has_tech = advanced_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = artillery3
+                has_tech = advanced_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1522,15 +1590,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = basic_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_2 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = basic_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_2 }
+            }
         }
         available = {
-            has_tech = antitank1
-            has_tech = basic_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank1
+                has_tech = basic_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1585,15 +1665,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = improved_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_3 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = improved_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_3 }
+            }
         }
         available = {
-            has_tech = antitank3
-            has_tech = improved_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank3
+                has_tech = improved_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1648,14 +1740,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = advanced_medium_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = advanced_medium_tank_chassis
+            }
         }
         available = {
-            has_tech = antitank3
-            has_tech = advanced_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank3
+                has_tech = advanced_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1710,14 +1814,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = main_battle_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = main_battle_tank_chassis
+            }
         }
         available = {
-            has_tech = artillery4
-            has_tech = main_battle_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = artillery4
+                has_tech = main_battle_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1771,15 +1887,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = basic_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_aa_2 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = basic_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_aa_2 }
+            }
         }
         available = {
-            has_tech = antiair1
-            has_tech = basic_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antiair1
+                has_tech = basic_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1834,15 +1962,27 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = improved_medium_tank_chassis
-            not = { has_country_flag = yz_medium_tank_aa_3 }
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = improved_medium_tank_chassis
+                not = { has_country_flag = yz_medium_tank_aa_3 }
+            }
         }
         available = {
-            has_tech = antiair2
-            has_tech = improved_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antiair2
+                has_tech = improved_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1897,14 +2037,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = advanced_medium_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = advanced_medium_tank_chassis
+            }
         }
         available = {
-            has_tech = antiair1
-            has_tech = advanced_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antiair1
+                has_tech = advanced_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -1959,14 +2111,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = basic_medium_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = basic_medium_tank_chassis
+            }
         }
         available = {
-            has_tech = antitank2
-            has_tech = basic_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank2
+                has_tech = basic_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -2021,14 +2185,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = improved_medium_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = improved_medium_tank_chassis
+            }
         }
         available = {
-            has_tech = antitank5
-            has_tech = improved_medium_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank5
+                has_tech = improved_medium_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -2083,14 +2259,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = improved_heavy_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = improved_heavy_tank_chassis
+            }
         }
         available = {
-            has_tech = antitank2
-            has_tech = improved_heavy_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank2
+                has_tech = improved_heavy_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -2145,14 +2333,26 @@ YZS_scientist_aromors_category = {
         }
         custom_cost_text = YM_750
         visible = {
-            has_country_flag = set_YRI
-            has_tech = advanced_heavy_tank_chassis
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_country_flag = set_YRI
+                has_tech = advanced_heavy_tank_chassis
+            }
         }
         available = {
-            has_tech = antitank5
-            has_tech = improved_heavy_tank_chassis
-            has_country_flag = yz_mio_5
-            has_country_flag = has_YZ_0721_detonator_tech
+            if = {
+                limit = { has_global_flag = yz_md_startup_detected }
+                always = no
+            }
+            else = {
+                has_tech = antitank5
+                has_tech = improved_heavy_tank_chassis
+                has_country_flag = yz_mio_5
+                has_country_flag = has_YZ_0721_detonator_tech
+            }
         }
         complete_effect = {
             add_to_variable = {
@@ -2195,6 +2395,6 @@ YZS_scientist_aromors_category = {
             set_country_flag = yz_heavy_tank_2
         }
     }
-    
+
 }
 

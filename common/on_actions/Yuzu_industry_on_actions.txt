@@ -1,5 +1,7 @@
+# 芳乃工业这里只维护债券利率与债务。长期投资的柚子币扣款已并入
+# YZ_on_actions.txt 的唯一月结算入口；不得在此恢复第二次月度扣款。
 on_actions = {
-	on_weekly = {        #每周计算一次需要偿还的金额
+	on_weekly = {        #每周统一结算债券利率和需要偿还的金额
 		effect = {
 			#if = {        /*废弃，尽管看起来难看，但是处于某种目的我将其保留*/
 			#	limit = {
@@ -106,18 +108,7 @@ on_actions = {
 					var = yz_interest_rate_we_can_see
 					value = 0.001
 				}
-			}
-		}
-	}
-	on_weekly = {      #每周计算一次要还多少钱
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = now_we_issuing_bonds
-					NOT = {
-						has_country_flag = finished_repayment_of_bonds
-					}
-				}
+
 				set_temp_variable = {
 					var = tmpuse_bond
 					value = bond_we_need_to_repay
@@ -148,31 +139,6 @@ on_actions = {
 					}
 					set_country_flag = yz_debt_collapse
 					country_event = yzbonds_event.2
-				}
-			}
-		}
-	}
-	on_monthly = {
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = Yoshino_industry_long_term_invest_now_start
-				}
-				if = {
-					limit = {
-						check_variable = {
-							var = yz_money
-							value = basic_additional_yz_money_spend
-							compare = greater_than_or_equals
-						}
-					}
-					subtract_from_variable = {
-						yz_money = basic_additional_yz_money_spend
-					}
-				}
-				else = {
-					#country_event = yzbonds_event.7
-					set_country_flag = monly_yz_money_spent_too_much
 				}
 			}
 		}

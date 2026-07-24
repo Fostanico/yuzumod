@@ -1,12 +1,5 @@
 soundeffect =
 {
-	name = Martial_Law_senreibanka
-	sounds = {
-		sound = Martial_Law_senreibanka
-	}
-}
-soundeffect =
-{
 	name = Martial_Law_Interface_yuri_s_Revenge_occupation
 	sounds = {
 		sound = Martial_Law_Interface_yuri_s_Revenge_occupation

@@ -1,3 +1,5 @@
+# 两个启用分支都先初始化持久源变量，再调用统一效果建立好感、柚子厨和财政派生值。
+# 初始化顺序属于旧存档/新开局契约；不要把这些刷新改成后台每日轮询。
 qiyong_youzi_general_category = {
 
     qiyong_youzijiang_1 = {		#仅将领
@@ -150,12 +152,6 @@ qiyong_youzi_general_category = {
                 set_variable = {
                     Yuzu_fund = 0
                 }
-                set_variable = {
-                    yuzu_form_yuzu_land_days = 181
-                }
-                set_variable = {
-                    yuzu_form_yuzu_land_days_basic_require = 180
-                }
                 ###柚子债券——2025.3.20,16:06，伊尔诺
                 set_variable = {
                     var = bond_we_need_to_repay         #需偿还总额
@@ -179,15 +175,18 @@ qiyong_youzi_general_category = {
                 }
                 ###柚子厨相关
                 set_variable = { yzc_manpower_k = 0 }
-                set_variable = { yzc_manpower_factor = 0.01 }
+				set_variable = { yzc_manpower_factor = 0.01 }
+				set_variable = { yzc_unit_recruit = 0 }
+				set_variable = { recruited_yzc_manpower = 0 }
+				set_variable = { yzc_zhandouli = 0.05 }
+				yz_recalculate_monthly_love_gain = yes
+				yz_refresh_love_modifier_values = yes
                 set_variable = { yzc_unit_recruit = 0 }
-                set_variable = { recruited_yzc_manpower = 0 }
-                set_variable = { yzc_zhandouli = 0.05 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
-                set_variable = { yzc_unit_recruit = 0 }
+				yz_refresh_yzc_manpower_values = yes
                 ###柚子海报
                 set_country_flag = yzposter_1st_solt_empty
                 set_country_flag = yzposter_2nd_solt_empty
@@ -244,6 +243,7 @@ qiyong_youzi_general_category = {
                 set_variable = { yuzu_married_total_output_effect = 0.135 }
                 set_variable = { yuzu_married_total_construction_effect = 0.09 }
                 set_variable = { yuzu_married_total_efficiency_effect = 0.0675 }
+                yz_recalculate_monthly_money_ledger = yes
             }
         }
 
@@ -324,12 +324,6 @@ qiyong_youzi_general_category = {
                 set_variable = {
                     Yuzu_fund = 0
                 }
-                set_variable = {
-                    yuzu_form_yuzu_land_days = 181
-                }
-                set_variable = {
-                    yuzu_form_yuzu_land_days_basic_require = 180
-                }
                 ###柚子债券——2025.3.20,16:06，伊尔诺
                 set_variable = {
                     var = bond_we_need_to_repay         #需偿还总额
@@ -353,15 +347,18 @@ qiyong_youzi_general_category = {
                 }
                 ###柚子厨相关
                 set_variable = { yzc_manpower_k = 0 }
-                set_variable = { yzc_manpower_factor = 0.01 }
+				set_variable = { yzc_manpower_factor = 0.01 }
+				set_variable = { yzc_unit_recruit = 0 }
+				set_variable = { recruited_yzc_manpower = 0 }
+				set_variable = { yzc_zhandouli = 0.05 }
+				yz_recalculate_monthly_love_gain = yes
+				yz_refresh_love_modifier_values = yes
                 set_variable = { yzc_unit_recruit = 0 }
-                set_variable = { recruited_yzc_manpower = 0 }
-                set_variable = { yzc_zhandouli = 0.05 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
                 set_variable = { yzc_unit_recruit = 0 }
-                set_variable = { yzc_unit_recruit = 0 }
+				yz_refresh_yzc_manpower_values = yes
                 ###柚子海报
                 set_country_flag = yzposter_1st_solt_empty
                 set_country_flag = yzposter_2nd_solt_empty
@@ -418,6 +415,7 @@ qiyong_youzi_general_category = {
                 set_variable = { yuzu_married_total_output_effect = 0.135 }
                 set_variable = { yuzu_married_total_construction_effect = 0.09 }
                 set_variable = { yuzu_married_total_efficiency_effect = 0.0675 }
+                yz_recalculate_monthly_money_ledger = yes
             }
         }
 
