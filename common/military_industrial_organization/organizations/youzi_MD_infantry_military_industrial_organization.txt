@@ -184,7 +184,7 @@ youzi_military_industrial_organization_0_MD = {
 		position = { x = 8 y = 0 }
 		all_parents = { youzi_mechanized_12_MD }
 		limit_to_equipment_type = { artillery_equipment L_AT_Equipment H_AT_Equipment AA_Equipment infantry_weapons_type util_vehicle_type }
-		production_bonus = { production_resource_need_factor = -0.100 production_resource_penalty_factor = -0.100 }
+		production_bonus = { production_resource_need_factor = -0.150 production_resource_penalty_factor = -0.100 }
 	}
 	trait = {
 		token = youzi_mechanized_14_MD

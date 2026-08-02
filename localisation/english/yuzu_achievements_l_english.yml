@@ -1,0 +1,18 @@
+﻿l_english:
+ youzu_achievements: "Yuzu Mod Achievements"
+ ################################################
+ youzu_has_play_this_mod_NAME: "Welcome to the Yuzu Mod"
+ youzu_has_play_this_mod_DESC: "Attack the G-spot!"
+ play_youzu1_NAME: "Enable Lite Version"
+ play_youzu1_DESC: "Having generals to use is good enough."
+ play_youzu2_NAME: "Enable Full Version"
+ play_youzu2_DESC: "I want a complete Yuzu world!"
+ play_youzu3_NAME: "Enable Multiplayer Version"
+ play_youzu3_DESC: "Just enable a moderate amount and it'll be fine."
+
+
+
+ #Option Localization
+ qiyong_youzi_1: "Enable Lite Version"
+ qiyong_youzi_2: "Enable Full Version"
+ qiyong_youzi_3: "Enable Multiplayer Version"

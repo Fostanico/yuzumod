@@ -569,6 +569,10 @@ spriteTypes = {
 		textureFile = "gfx/ideas/chaoziranyan.png"
 	}
 	spriteType = {
+		name = "GFX_idea_tooth_and_claw_s_animal_pavilion"
+		textureFile = "gfx/ideas/tooth_and_claw_s_animal_pavilion.png"
+	}
+	spriteType = {
 		name = "GFX_idea_YzOpreative_boost1"
 		textureFile = "gfx/ideas/youzu_intelligence_agency1.png"
 	}

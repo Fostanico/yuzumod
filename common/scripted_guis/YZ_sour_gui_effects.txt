@@ -1,41 +1,9 @@
 scripted_gui = {
-    yz_sour_gui = {
-        window_name = Yuzusoft_sour_base
-        context_type = player_context
-        visible = {
-            or = {
-                has_country_flag = qiyong_youzi_1
-                has_country_flag = qiyong_youzi_2
-                has_country_flag = qiyong_youzi_3
-            }
-            #is_debug = yes
-        }
-        effects = {
-            Start_yuzusoftour_click ={
-                if = {
-                    limit = {
-                        has_country_flag = show_yuzusoft_sour_recruit
-                    }
-                    clr_country_flag = show_yuzusoft_sour_recruit
-                }
-                else = {
-                    set_country_flag = show_yuzusoft_sour_recruit
-                }
-            }
-        }
-        triggers = {
-            Yuzusoft_sour_base_visible = {
-                or = {
-                    has_country_flag = qiyong_youzi_1
-                    has_country_flag = qiyong_youzi_2
-                    has_country_flag = qiyong_youzi_3
-                }
-            }
-        }
-    }
     parquet_start_gui = {
         window_name = "parquet_recruit"
         context_type = player_context
+        # Keep the expanded Parquet launcher attached to the shared bar.
+        parent_scripted_gui = YZ_recruit_gui
         visible = {
             has_country_flag = show_yuzusoft_sour_recruit
             not = {
@@ -59,6 +27,7 @@ scripted_gui = {
     parquet_started_gui = {
         window_name = "parquet_gaming"
         context_type = player_context
+        parent_scripted_gui = YZ_recruit_gui
         visible = {
             has_country_flag = parquet_started
             has_country_flag = show_yuzusoft_sour_recruit

@@ -49,6 +49,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_YZrecruit"
 		texturefile = "gfx/guis/YZcruit.png"
+		transparencecheck = yes
 	}
 	#千恋万花
 	spriteType = {

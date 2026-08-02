@@ -1413,8 +1413,6 @@ yzrecruit_konoka = {
                     traits = {
                         #yz_konoda_trait
                         yz_konoka_trait
-                        infantry_officer
-                        yz_baiban_trait
                     }
                     skill = 5
                     attack_skill = 5
@@ -1457,6 +1455,12 @@ yzrecruit_tia = {
                     defense_skill = 3
                     planning_skill = 9
                     logistics_skill = 4
+                }
+                advisor = {
+                    cost = 60
+                    slot = high_command
+                    idea_token = tia_advisor
+                    traits = { tia_army }
                 }
             }
         }

@@ -1,0 +1,57 @@
+modifiers = {
+	# These scripted AC7 easter-egg aces must never enter the random ace pool.
+	# Ace effects accept air-category modifiers; every field below is verified
+	# against vanilla ace consumers or the current generated modifier database.
+	yz_ac7_trigger_legendary = {
+		type = { fighter }
+		chance = 0
+
+		effect = {
+			air_attack_factor = 100.0
+			air_defence_factor = 100.0
+			air_maximum_speed_factor = 10.0
+			air_agility_factor = 50.0
+			ground_attack_factor = 50.0
+			naval_strike_attack_factor = 50.0
+			naval_strike_targetting_factor = 25.0
+			air_strategic_bomber_bombing_factor = 50.0
+			air_range_factor = 10.0
+		}
+	}
+
+	# Count is Osea's number-two ace: exceptional, but deliberately far below Trigger.
+	yz_ac7_count_number_two = {
+		type = { fighter }
+		chance = 0
+
+		effect = {
+			air_attack_factor = 10.0
+			air_defence_factor = 8.0
+			air_maximum_speed_factor = 2.0
+			air_agility_factor = 5.0
+			ground_attack_factor = 5.0
+			naval_strike_attack_factor = 5.0
+			naval_strike_targetting_factor = 3.0
+			air_strategic_bomber_bombing_factor = 3.0
+			air_range_factor = 2.0
+		}
+	}
+
+	# Wiseman represents a veteran squadron leader with broad mission capability.
+	yz_ac7_wiseman_squadron_leader = {
+		type = { fighter }
+		chance = 0
+
+		effect = {
+			air_attack_factor = 5.0
+			air_defence_factor = 5.0
+			air_maximum_speed_factor = 1.0
+			air_agility_factor = 2.5
+			ground_attack_factor = 3.0
+			naval_strike_attack_factor = 3.0
+			naval_strike_targetting_factor = 2.0
+			air_strategic_bomber_bombing_factor = 2.0
+			air_range_factor = 1.5
+		}
+	}
+}

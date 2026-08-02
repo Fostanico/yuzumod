@@ -1,0 +1,18 @@
+﻿l_japanese:
+ youzu_achievements: "柚子Mod実績"
+ ################################################
+ youzu_has_play_this_mod_NAME: "柚子Modへようこそ"
+ youzu_has_play_this_mod_DESC: "Gスポットを攻略せよ！"
+ play_youzu1_NAME: "ライト版を有効化"
+ play_youzu1_DESC: "将軍が使えれば十分だよ"
+ play_youzu2_NAME: "完全版を有効化"
+ play_youzu2_DESC: "完全な柚子の世界が欲しい！"
+ play_youzu3_NAME: "マルチ版を有効化"
+ play_youzu3_DESC: "適度に有効にすれば大丈夫"
+
+
+
+ #オプション翻訳
+ qiyong_youzi_1: "ライト版を有効化"
+ qiyong_youzi_2: "完全版を有効化"
+ qiyong_youzi_3: "マルチ版を有効化"

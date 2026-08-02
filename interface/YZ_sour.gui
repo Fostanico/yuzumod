@@ -1,52 +1,22 @@
 guiTypes = {
     containerWindowType = {
-        name = "Yuzusoft_sour_base"
-        position = {
-            x = -77         #我个人还是习惯这样分行来写——伊尔诺.2025.5.28，15：42
-            y = -600
-        }
-        orientation = LOWER_RIGHT
-        size = {
-            width = 77
-            height = 60
-        }
-        background = {
-            name = "YZrecruit_BG"
-            quadTextureSprite = "GFX_mini_tooltip"
-        }
-        buttonType = {
-            name = "Start_yuzusoftour"
-            position = { 
-                x = 0 
-                y = 0 
-            }
-            size = { 
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_yuzusoft_sour_2"
-            pdx_tooltip = "Yuzusoft_sour_recurit_tooltip"
-            clicksound = kido_tsubasa_yuzusoftsour
-        }
-    }
-    containerWindowType = {
         name = "parquet_recruit"
         position = {
             x = 0
             y = 0
         }
-        orientation = LOWER_RIGHT
+        orientation = UPPER_LEFT
         size = {
-            width = 960
-            height = 540
+            width = 200
+            height = 80
         }
         show_position = {
-            x = -280
-            y = -610
+            x = -202
+            y = -2
         }
         hide_position = {
-            x = -77
-            y = -610
+            x = 1
+            y = -2
         }
         animation_time = 500
         show_animation_type = decelerated
@@ -62,8 +32,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                x = 960
-                y = 540
+                x = 200
+                y = 80
             }
             quadTextureSprite = "GFX_parquet_logo"
             pdx_tooltip = "parquet_tooltip"
@@ -76,18 +46,18 @@ guiTypes = {
             x = 0
             y = 0
         }
-        orientation = LOWER_RIGHT
+        orientation = UPPER_LEFT
         size = {
-            width = 960
-            height = 540
+            width = 200
+            height = 80
         }
         show_position = {
-            x = -280
-            y = -610
+            x = -202
+            y = -2
         }
         hide_position = {
-            x = -77
-            y = -610
+            x = 1
+            y = -2
         }
         animation_time = 500
         show_animation_type = decelerated
@@ -103,8 +73,8 @@ guiTypes = {
                 y = 0 
             }
             size = { 
-                x = 960
-                y = 540
+                x = 200
+                y = 80
             }
             quadTextureSprite = "GFX_parquet_logo_gaming"
             pdx_tooltip = "parquet_started_tooltip"

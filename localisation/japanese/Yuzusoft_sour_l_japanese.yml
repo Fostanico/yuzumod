@@ -1,0 +1,28 @@
+﻿l_japanese:
+ # GUI
+ Yuzusoft_sour_recurit_tooltip: "§OゆずソフトSOUR§!のリクルートパネルを開く"
+ parquet_tooltip: "『PARQUET』のリクルートパネルを開く"
+ parquet_started_tooltip: "『PARQUET』の物語はもう始まっているにゃん～"
+ parquet_story_tooltip: "『PARQUET』のイベントチェーンを開始する（現在開発中のため、登場する将軍はまだ2人だけにゃん）\n§H城門ツバサ§!と§0茨木リノ§!を獲得する"
+ # 将軍
+ ibaraki_rino_corps_desc: "素っ気ない口調とクールな雰囲気から冷たい人物と思われがちだが、実はとても優しく、困っている人を見ると放っておけない。可愛い小物が好きという、女の子らしい一面もある。ある日、道端で倒れていた主人公・伊吹カナトを助けようと声をかけたことをきっかけに、二人は知り合った。"
+ kido_tsubasa_corps_desc: "天真爛漫で明るく、裏表のない性格。美味しいものには目がなく、美味しい店にも詳しい。現在はとあるカフェでアルバイトをしており、その店を選んだ理由も「メニューが美味しいから」らしい。ある日、街のチンピラに絡まれていた主人公・伊吹カナトを偶然助けたことをきっかけに、二人は知り合った。"
+ # フラグ
+ apply_bmi_device: "BMIシステムを全面導入"
+ parquet_started: "『PARQUET』の物語はすでに始まっている"
+ # ディシジョン
+ give_other_leader_bmi_system: "無作為に選んだ将軍にBMIシステムを搭載"
+ give_other_leader_bmi_system_desc: "実地運用により、BMIシステムが極めて優れた装置であることは証明された。我が軍の将軍にも、この技術を搭載させよう。"
+ give_all_leaders_bmi_system: "すべての将軍にBMIシステムを搭載"
+ give_all_leaders_bmi_system_desc: "一人や二人の将軍に導入しただけで満足してはならない。すべての将軍にこの優れたシステムを搭載させるのだ。また、新たに昇進した将軍も一定確率でBMI特性を持った状態で登場する。（Paradoxの謎めいた仕様により、factor = 100に設定しても、すべての新任将軍にBMI特性が付くとは限らない。）"
+ # 将軍特性
+ bmi_device: "BMIデバイス"
+ bmi_device_desc: "この将軍はBMIデバイスに接続されている。\n§RBMIデバイスを装備した将軍がレベルアップすると、同じくBMIデバイスを装備した他の将軍も全員レベルアップする。§!"
+ bmi_has_worked: "BMI強化済み"
+ bmi_has_worked_desc: "この将軍はすでに一度強化されているため、本日はBMIデバイスの効果を再び受けることができない。"
+ ibaraki_rino_only_at_night: "夜行性生物"
+ ibaraki_rino_only_at_night_desc: "リノは夜にしか表に出られないため、彼女の参謀たちまで吸血鬼のような生活リズムを強いられている。幸い、参謀たち自身もだんだん吸血鬼じみてきたにゃん。"
+ yasaidaburuninnikuaboramashimashibaagaa_trait: "ヤサイダブルニンニクアブラマシマシバーガー！"
+ yasaidaburuninnikuaboramashimashibaagaa_trait_desc: "ヤサイダブルニンニクアブラマシマシバーガー！"
+ kido_tsubasa_only_at_sun: "昼行性生物"
+ kido_tsubasa_only_at_sun_desc: "ツバサは昼間にしか表に出られないため、彼女の参謀たちは毎晩ぐっすり眠れるようになり、仕事の能率も大幅に向上した。"

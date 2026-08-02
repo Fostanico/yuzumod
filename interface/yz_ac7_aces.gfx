@@ -1,0 +1,238 @@
+spriteTypes = {
+	# Named ace portraits are resolved as GFX_<country tag>_ace_<name>_<surname>.
+	# Keep generic fallbacks, then cover the most commonly played vanilla and MD tags.
+	spriteType = {
+		name = "GFX_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# United States
+	spriteType = {
+		name = "GFX_USA_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_USA_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Soviet Union / Millennium Dawn Russia
+	spriteType = {
+		name = "GFX_SOV_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# United Kingdom
+	spriteType = {
+		name = "GFX_ENG_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ENG_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ENG_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# France
+	spriteType = {
+		name = "GFX_FRA_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_FRA_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_FRA_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Germany
+	spriteType = {
+		name = "GFX_GER_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_GER_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_GER_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Italy
+	spriteType = {
+		name = "GFX_ITA_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ITA_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_ITA_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Japan
+	spriteType = {
+		name = "GFX_JAP_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# China and Communist China
+	spriteType = {
+		name = "GFX_CHI_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# India
+	spriteType = {
+		name = "GFX_RAJ_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_RAJ_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_RAJ_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Canada
+	spriteType = {
+		name = "GFX_CAN_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CAN_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Australia
+	spriteType = {
+		name = "GFX_AST_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_AST_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_AST_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Brazil
+	spriteType = {
+		name = "GFX_BRA_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_BRA_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_BRA_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Turkey
+	spriteType = {
+		name = "GFX_TUR_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_TUR_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_TUR_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Poland
+	spriteType = {
+		name = "GFX_POL_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_POL_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_POL_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+
+	# Korea
+	spriteType = {
+		name = "GFX_KOR_ace_Strider_1"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_KOR_ace_Strider_2"
+		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_KOR_ace_Cyclops_1"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+	}
+}

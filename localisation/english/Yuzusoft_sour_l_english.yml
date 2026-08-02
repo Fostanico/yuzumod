@@ -1,0 +1,28 @@
+﻿l_english:
+ # GUI
+ Yuzusoft_sour_recurit_tooltip: "Open the §OYuzusoft Sour§! Recruitment Panel"
+ parquet_tooltip: "Open the PARQUET Recruitment Panel"
+ parquet_started_tooltip: "The PARQUET story is already underway, nya~"
+ parquet_story_tooltip: "Begin the PARQUET event chain (currently still in development, so only two generals are available, nya~)\nRecruit §HKido Tsubasa§! and §0Ibaraki Rino§!"
+ # Generals
+ ibaraki_rino_corps_desc: "Her curt manner and cool demeanor often make her seem aloof, but she is actually very kind and cannot help reaching out to people in need. She also has a girlish side and a fondness for cute little trinkets. One day, she found the protagonist, Ibuki Kanato, collapsed by the roadside and stopped to help him. That was how the two met."
+ kido_tsubasa_corps_desc: "Cheerful, innocent, and completely genuine, she has no resistance to good food and knows all the best places to eat. She currently works part-time at a café, apparently because \"the menu is delicious.\" One day, she happened to rescue the protagonist, Ibuki Kanato, from a group of street thugs. That was how the two met."
+ # Flags
+ apply_bmi_device: "Deploy the BMI System Across the Board"
+ parquet_started: "The PARQUET Story Has Begun"
+ # Decisions
+ give_other_leader_bmi_system: "Fit a Random General with the BMI System"
+ give_other_leader_bmi_system_desc: "Experience has proven the BMI system to be an exceptional piece of technology. We should equip one of our generals with it as well."
+ give_all_leaders_bmi_system: "Fit Every General with the BMI System"
+ give_all_leaders_bmi_system_desc: "Fitting only one or two generals with such an excellent system is not enough. Every general should have access to it. Newly promoted generals will also have a chance to begin with the BMI trait. (Due to Paradox's inscrutable mechanics, even setting factor = 100 does not guarantee that every newly promoted general will receive the trait.)"
+ # General Traits
+ bmi_device: "BMI Device"
+ bmi_device_desc: "This general is connected to a BMI device.\n§RWhenever a general equipped with a BMI device gains a level, every other general equipped with one also gains a level.§!"
+ bmi_has_worked: "BMI Boost Already Applied"
+ bmi_has_worked_desc: "This general has already received one boost and cannot benefit from the BMI device again today."
+ ibaraki_rino_only_at_night: "Nocturnal Creature"
+ ibaraki_rino_only_at_night_desc: "Since Rino can only come out at night, her staff officers have been forced to adopt a vampire's sleep schedule. Fortunately, they are starting to become rather vampiric themselves, nya~"
+ yasaidaburuninnikuaboramashimashibaagaa_trait: "Yasai Double Ninniku Abura Mashimashi Burger!"
+ yasaidaburuninnikuaboramashimashibaagaa_trait_desc: "YASAI DOUBLE NINNIKU ABURA MASHIMASHI BURGER!"
+ kido_tsubasa_only_at_sun: "Diurnal Creature"
+ kido_tsubasa_only_at_sun_desc: "Since Tsubasa can only come out during the day, her staff officers all get a good night's sleep, and their productivity has risen dramatically."

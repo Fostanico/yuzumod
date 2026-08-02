@@ -21,6 +21,17 @@ scripted_gui = {
 					set_country_flag = show_recruit_button
 				}
 			}
+			Start_yuzusoftour_click = {
+				if = {
+					limit = {
+						has_country_flag = show_yuzusoft_sour_recruit
+					}
+					clr_country_flag = show_yuzusoft_sour_recruit
+				}
+				else = {
+					set_country_flag = show_yuzusoft_sour_recruit
+				}
+			}
 		}
 		triggers = {
 			YZrecruit_visible = {
@@ -30,11 +41,21 @@ scripted_gui = {
 					has_country_flag = qiyong_youzi_3
 				}
 			}
+			Start_yuzusoftour_visible = {
+				or = {
+					has_country_flag = qiyong_youzi_1
+					has_country_flag = qiyong_youzi_2
+					has_country_flag = qiyong_youzi_3
+				}
+			}
 		}
 	}
+	# All launchers are attached to the shared draggable recruitment bar.
+	# Their GUI coordinates are therefore offsets from YZ_recurit, not the screen.
 	SR_gui = {
 		window_name = "SR"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -60,6 +81,7 @@ scripted_gui = {
 	SW_gui = {
 		window_name = "SW"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -85,6 +107,7 @@ scripted_gui = {
 	RJ_gui = {
 		window_name = "RJ"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -110,6 +133,7 @@ scripted_gui = {
 	CS_gui = {
 		window_name = "CS"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -147,6 +171,7 @@ scripted_gui = {
 	TS_gui = {
 		window_name = "TS"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -172,6 +197,7 @@ scripted_gui = {
 	AIN_gui = {
 		window_name = "AIN"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -213,6 +239,7 @@ scripted_gui = {
 	TL_gui = {
 		window_name = "TL"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -238,6 +265,7 @@ scripted_gui = {
 	DR_gui = {
 		window_name = "DR"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -263,6 +291,7 @@ scripted_gui = {
 	NW_gui = {
 		window_name = "NW"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -288,6 +317,7 @@ scripted_gui = {
 	NK_gui = {
 		window_name = "NK"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}
@@ -315,6 +345,7 @@ scripted_gui = {
 	LLLJ_gui = {	#聚光灯柠檬果酱
 		window_name = "LLLJ"
 		context_type = player_context
+		parent_scripted_gui = YZ_recruit_gui
 		visible = {
 			has_country_flag = show_recruit_button
 		}

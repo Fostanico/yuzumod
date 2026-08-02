@@ -15,7 +15,7 @@ ideas = {        #huhu的奇思妙想，加的新工业企业
                 local_resources_coal_factor = 0.3
                 special_project_speed_factor = 0.5
             }
-            traits = { industrial_concern }
+            traits = { electronics_concern }
             research_bonus = {
                 armor_tech = 0.25
                 artillery_tech = 0.25
@@ -24,9 +24,34 @@ ideas = {        #huhu的奇思妙想，加的新工业企业
             }
             visible = {
                 has_country_flag = have_ningning
+                or = {
                 has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+                }
             }
         }
-
+        tooth_and_claw_s_animal_pavilion = {        #雷霆翻译发力了
+            #工业企业
+            #牙与爪的兽亭
+            picture = GFX_idea_tooth_and_claw_s_animal_pavilion
+            cost = 150
+            modifier = {
+                supply_factor = 0.25
+                consumer_goods_factor = -0.2
+                consumer_goods_expected_value = -0.05
+                supply_consumption_factor = -0.15
+                production_speed_buildings_factor = 0.1
+                
+            }
+            
+            traits = { construction_company }
+            visible = {
+                has_country_flag = have_masaki
+                or = {
+                has_country_flag = qiyong_youzi_2
+                has_country_flag = qiyong_youzi_3
+                }
+            }
+        }
     }
 }

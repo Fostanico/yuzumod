@@ -17,6 +17,10 @@ spriteTypes = {
 		textureFile = "gfx/event_pictures/rena_wedding.png"
 	}
 	spriteType = {
+		name = "GFX_chisaki_wedding"
+		textureFile = "gfx/event_pictures/chisaki_wedding.png"
+	}
+	spriteType = {
 		name = "GFX_kaguya_wedding"
 		textureFile = "gfx/event_pictures/kaguya_wedding.png"
 	}

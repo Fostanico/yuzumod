@@ -55,7 +55,7 @@ ideas = {
 			}
 		}
 		youzu_infantry_I = {
-			picture = nothing			###还没做好
+			picture = yuzu_infantry
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -67,7 +67,7 @@ ideas = {
 			}
 		}
 		youzu_infantry_II = {
-			picture = nothing			###还没做好
+			picture = yuzu_infantry
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -85,7 +85,7 @@ ideas = {
 			}
 		}
 		youzu_infantry_III = {
-			picture = nothing			###还没做好
+			picture = yuzu_infantry
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -105,7 +105,7 @@ ideas = {
 			}
 		}
 		youzu_artillery_I = {
-			picture = nothing			###还没做好
+			picture = yuzu_artillery
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -116,7 +116,7 @@ ideas = {
 			}
 		}
 		youzu_artillery_II = {
-			picture = nothing			###还没做好
+			picture = yuzu_artillery
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -127,7 +127,7 @@ ideas = {
 			}
 		}
 		youzu_cavalry_I = {
-			picture = nothing			###还没做好
+			picture = yuzu_cavalry
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -137,7 +137,7 @@ ideas = {
 			}
 		}
 		youzu_cavalry_II = {
-			picture = nothing			###还没做好
+			picture = yuzu_cavalry
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -149,7 +149,7 @@ ideas = {
 			}
 		}
 		youzu_light_armor_I = {
-			picture = nothing			###还没做好
+			picture = yuzu_light_armor
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -160,7 +160,7 @@ ideas = {
 			}
 		}
 		youzu_light_armor_II = {
-			picture = nothing			###还没做好
+			picture = yuzu_light_armor
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -175,7 +175,7 @@ ideas = {
 			}
 		}
 		youzu_armored_car = {
-			picture = nothing			###还没做好
+			picture = yuzu_armored_car
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -228,7 +228,7 @@ ideas = {
 			}
 		}
 		youzu_mechanized_I = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_mechanized
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -243,7 +243,7 @@ ideas = {
 			}
 		}
 		youzu_mechanized_II = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_mechanized
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -265,7 +265,7 @@ ideas = {
 			}
 		}
 		youzu_mechanized_III = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_mechanized
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -286,7 +286,7 @@ ideas = {
 			}
 		}
 		youzu_mechanized_IV = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_mechanized
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -313,13 +313,13 @@ ideas = {
 			}
 		}
 		youzu_blitzkrieg_I = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_lighting_krieg
 			allowed_civil_war = {
 				is_ai = no
 			}
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.3
+					build_cost_ic = -0.2
 					reliability = 0.2
 					# production_bonus = {
 						# production_resource_need_factor = -0.3
@@ -331,13 +331,13 @@ ideas = {
 			}
 		}
 		youzu_blitzkrieg_II = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_lighting_krieg
 			allowed_civil_war = {
 				is_ai = no
 			}
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.3
+					build_cost_ic = -0.2
 					reliability = 0.2
 					# production_bonus = {
 						# production_resource_need_factor = -0.3
@@ -349,13 +349,13 @@ ideas = {
 			}
 		}
 		youzu_blitzkrieg_III = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_lighting_krieg
 			allowed_civil_war = {
 				is_ai = no
 			}
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.3
+					build_cost_ic = -0.2
 					reliability = 0.2
 					# production_bonus = {
 						# production_resource_need_factor = -0.3
@@ -371,13 +371,13 @@ ideas = {
 			}
 		}
 		youzu_blitzkrieg_IV = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_yuzu_lighting_krieg
 			allowed_civil_war = {
 				is_ai = no
 			}
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.3
+					build_cost_ic = -0.2
 					reliability = 0.2
 					# production_bonus = {
 						# production_resource_need_factor = -0.3
@@ -396,7 +396,7 @@ ideas = {
 			}
 		}
 		youzu_air_land_I = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_air_yuzusoft_spirit
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -408,7 +408,7 @@ ideas = {
 			}
 		}
 		youzu_air_land_II = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_air_yuzusoft_spirit
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -457,7 +457,7 @@ ideas = {
 			}
 		}
 		youzu_air_land_III = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_air_yuzusoft_spirit
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -508,7 +508,7 @@ ideas = {
 			}
 		}
 		youzu_air_land_IV = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_air_yuzusoft_spirit
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -573,7 +573,7 @@ ideas = {
 			}
 		}
 		youzu_air_land_V = {
-			picture = nothing			###还没做好
+			picture = GFX_idea_air_yuzusoft_spirit
 			allowed_civil_war = {
 				is_ai = no
 			}

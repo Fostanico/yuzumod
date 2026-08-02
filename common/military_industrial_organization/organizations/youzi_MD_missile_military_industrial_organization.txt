@@ -192,7 +192,7 @@ youzi_little_flying_stick_company_organization_MD = {
 		all_parents = { youzi_little_flying_stick_15_MD }
 		limit_to_equipment_type = { nuclear_ballistic_missile_equipment }
 		equipment_bonus = { air_range = 0.30 build_cost_ic = 0.07 }
-		production_bonus = { production_resource_need_factor = -0.100 }
+		production_bonus = { production_resource_need_factor = -0.150 }
 	}
 
 	# 洲际弹道导弹：主线及两个可同时获取的末级节点

@@ -1331,6 +1331,257 @@ YZS_scientist_category = {
             set_country_flag = start_yuzu_little_car
         }
     }
+
+    # Millennium Dawn Arsenal Bird blueprints. Each temporary idea is present
+    # only while its variant is created, so the bonus belongs to that design.
+    yz_arsenal_bird_justice_plan = {
+        icon = GFX_military_industrial_organization_mothership_equipment
+        fire_only_once = yes
+        days_remove = 15
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 15000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_15000
+        visible = {
+            has_global_flag = yz_md_startup_detected
+            has_country_flag = have_set_0721_facility
+            is_special_project_completed = sp:sp_arsenal_bird
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = yz_arsenal_bird_requires_modern_air_mio_tt
+                has_country_flag = yz_mio_4
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -15000 }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_arsenal_bird_justice_design_bonus
+            }
+            create_equipment_variant = {
+                name = "正义号"
+                type = mothership_equipment_1
+                parent_version = 0
+                modules = {
+                    fixed_primary_command_operations = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_1 = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_2 = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_3 = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_4 = weap_missile_bay_1
+                    fixed_drone_doc_slot_5 = weap_missile_bay_1
+                    engine_type_slot = engine_nuclear_eight_1
+                    avionics_type_slot = avionics_manned_4
+                    wingform_type_slot = wing_blended
+                    special_slot_type_1 = spec_countermeasures_3
+                    special_slot_type_2 = fully_autonomous_computer_system_arsenal
+                    special_slot_type_3 = spec_redundant_3
+                    special_slot_type_4 = spec_protection_3
+                    special_slot_type_5 = spec_stealthshape_3
+                }
+                upgrades = {
+                    plane_bba_radar_upgrade = 5
+                    plane_bba_engine_upgrade = 3
+                }
+                icon = "gfx/interface/military_industrial_organization/department_icons/arsenal_bird_equipment.dds"
+                design_team = mio:youzi_air_force_aviation_administration_0_MD
+            }
+            hidden_effect = {
+                remove_ideas = yz_arsenal_bird_justice_design_bonus
+                set_country_flag = yz_arsenal_bird_justice_design_created
+            }
+            custom_effect_tooltip = yz_arsenal_bird_justice_design_bonus_tt
+        }
+    }
+
+    yz_arsenal_bird_liberty_plan = {
+        icon = GFX_military_industrial_organization_mothership_equipment
+        fire_only_once = yes
+        days_remove = 15
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 15000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_15000
+        visible = {
+            has_global_flag = yz_md_startup_detected
+            has_country_flag = have_set_0721_facility
+            is_special_project_completed = sp:sp_arsenal_bird
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = yz_arsenal_bird_requires_modern_air_mio_tt
+                has_country_flag = yz_mio_4
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -15000 }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_arsenal_bird_liberty_design_bonus
+            }
+            create_equipment_variant = {
+                name = "自由号"
+                type = mothership_equipment_1
+                parent_version = 0
+                modules = {
+                    fixed_primary_command_operations = weap_missile_bay_1
+                    fixed_drone_doc_slot_1 = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_2 = weap_droneswarm_bomber_1
+                    fixed_drone_doc_slot_3 = weap_droneswarm_bomber_1
+                    fixed_drone_doc_slot_4 = weap_droneswarm_anti_ship_1
+                    fixed_drone_doc_slot_5 = weap_missile_bay_1
+                    engine_type_slot = engine_nuclear_eight_1
+                    avionics_type_slot = avionics_manned_4
+                    wingform_type_slot = wing_blended
+                    special_slot_type_1 = spec_countermeasures_3
+                    special_slot_type_2 = fully_autonomous_computer_system_arsenal
+                    special_slot_type_3 = spec_protection_3
+                    special_slot_type_4 = spec_stealthshape_3
+                    special_slot_type_5 = spec_stealthmats_3
+                }
+                upgrades = {
+                    plane_bba_radar_upgrade = 3
+                    plane_bba_engine_upgrade = 5
+                }
+                icon = "gfx/interface/military_industrial_organization/department_icons/arsenal_bird_equipment.dds"
+                design_team = mio:youzi_air_force_aviation_administration_0_MD
+            }
+            hidden_effect = {
+                remove_ideas = yz_arsenal_bird_liberty_design_bonus
+                set_country_flag = yz_arsenal_bird_liberty_design_created
+            }
+            custom_effect_tooltip = yz_arsenal_bird_liberty_design_bonus_tt
+        }
+    }
+
+    yz_arsenal_bird_integrated_plan = {
+        icon = GFX_military_industrial_organization_mothership_equipment
+        fire_only_once = yes
+        days_remove = 15
+        custom_cost_trigger = {
+            check_variable = {
+                var = yz_money
+                value = 15000
+                compare = greater_than_or_equals
+            }
+        }
+        custom_cost_text = YM_15000
+        visible = {
+            has_global_flag = yz_md_startup_detected
+            has_country_flag = have_set_0721_facility
+            is_special_project_completed = sp:sp_arsenal_bird
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = yz_arsenal_bird_requires_modern_air_mio_tt
+                has_country_flag = yz_mio_4
+            }
+        }
+        complete_effect = {
+            add_to_variable = { yz_money = -15000 }
+        }
+        modifier = {
+            research_speed_factor = -0.05
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ideas = yz_arsenal_bird_integrated_design_bonus
+            }
+            create_equipment_variant = {
+                name = "军械巨鸟综合型"
+                type = mothership_equipment_1
+                parent_version = 0
+                modules = {
+                    fixed_primary_command_operations = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_1 = weap_droneswarm_fighter_1
+                    fixed_drone_doc_slot_2 = weap_droneswarm_bomber_1
+                    fixed_drone_doc_slot_3 = weap_droneswarm_anti_ship_1
+                    fixed_drone_doc_slot_4 = weap_missile_bay_1
+                    fixed_drone_doc_slot_5 = weap_missile_bay_1
+                    engine_type_slot = engine_nuclear_eight_1
+                    avionics_type_slot = avionics_manned_4
+                    wingform_type_slot = wing_blended
+                    special_slot_type_1 = spec_countermeasures_3
+                    special_slot_type_2 = fully_autonomous_computer_system_arsenal
+                    special_slot_type_3 = spec_redundant_3
+                    special_slot_type_4 = spec_stealthshape_3
+                    special_slot_type_5 = spec_stealthmats_3
+                }
+                upgrades = {
+                    plane_bba_radar_upgrade = 4
+                    plane_bba_engine_upgrade = 4
+                }
+                icon = "gfx/interface/military_industrial_organization/department_icons/arsenal_bird_equipment.dds"
+                design_team = mio:youzi_air_force_aviation_administration_0_MD
+            }
+            hidden_effect = {
+                remove_ideas = yz_arsenal_bird_integrated_design_bonus
+                set_country_flag = yz_arsenal_bird_integrated_design_created
+            }
+            custom_effect_tooltip = yz_arsenal_bird_integrated_design_bonus_tt
+        }
+    }
+
+    # All three Arsenal Bird designs must exist before the LRSSG aces arrive.
+    # MD defines mothership wings as fighters, so fighter ace modifiers apply to them.
+    yz_ac7_legendary_aces_program = {
+        icon = GFX_military_industrial_organization_mothership_equipment
+        fire_only_once = yes
+        days_remove = 1
+        cost = 0
+        visible = {
+            has_country_flag = yz_arsenal_bird_justice_design_created
+            has_country_flag = yz_arsenal_bird_liberty_design_created
+            has_country_flag = yz_arsenal_bird_integrated_design_created
+            NOT = { has_country_flag = yz_ac7_legendary_aces_recruited }
+        }
+        remove_effect = {
+            hidden_effect = {
+                add_ace = {
+                    name = "Strider"
+                    surname = "1"
+                    callsign = "Trigger"
+                    type = yz_ac7_trigger_legendary
+                    is_female = no
+                }
+                add_ace = {
+                    name = "Strider"
+                    surname = "2"
+                    callsign = "Count"
+                    type = yz_ac7_count_number_two
+                    is_female = no
+                }
+                add_ace = {
+                    name = "Cyclops"
+                    surname = "1"
+                    callsign = "Wiseman"
+                    type = yz_ac7_wiseman_squadron_leader
+                    is_female = no
+                }
+                set_country_flag = yz_ac7_legendary_aces_recruited
+            }
+            custom_effect_tooltip = yz_ac7_legendary_aces_program_tt
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }
 
 YZS_scientist_aromors_category = {

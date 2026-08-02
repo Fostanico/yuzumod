@@ -1,0 +1,31 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_yz_md_decision_oil"
+		texturefile = "gfx/interface/decisions/yz_md_resources/oil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_decision_aluminium"
+		texturefile = "gfx/interface/decisions/yz_md_resources/aluminium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_decision_rubber"
+		texturefile = "gfx/interface/decisions/yz_md_resources/rubber.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_decision_tungsten"
+		texturefile = "gfx/interface/decisions/yz_md_resources/tungsten.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_decision_steel"
+		texturefile = "gfx/interface/decisions/yz_md_resources/steel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_decision_chromium"
+		texturefile = "gfx/interface/decisions/yz_md_resources/chromium.dds"
+	}
+}

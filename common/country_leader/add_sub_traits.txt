@@ -347,6 +347,16 @@ leader_traits = {
         training_time_army_factor = -0.05
         minimum_training_level = -0.15
     }
+    tia_army = { #缇娅 资深教师
+        random = no
+        experience_gain_army = 0.5
+        experience_gain_factor = 0.5
+        minimum_training_level = -0.1
+        training_time_army_factor = -0.2
+        experience_gain_army = 0.3
+        experience_gain_air = 0.3
+        experience_gain_navy = 0.3
+    }
     zaozi_air = { #夏目 孤高的击坠王
         random = no
         experience_gain_air = 0.2

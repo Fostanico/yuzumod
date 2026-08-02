@@ -1,0 +1,39 @@
+spriteTypes = {
+	# The related ideas use explicit GFX_idea_* picture tokens. Keeping these
+	# registrations isolated prevents an error here from invalidating older GFX files.
+	spriteType = {
+		name = "GFX_idea_yuzu_infantry"
+		texturefile = "gfx/ideas/yuzu_infantry.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_artillery"
+		texturefile = "gfx/ideas/yuzu_artillery.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_cavalry"
+		texturefile = "gfx/ideas/yuzu_cavalry.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_light_armor"
+		texturefile = "gfx/ideas/yuzu_light_armor.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_armored_car"
+		texturefile = "gfx/ideas/yuzu_armored_car.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_mechanized"
+		texturefile = "gfx/ideas/yuzu_mechanized.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_idea_yuzu_lighting_krieg"
+		texturefile = "gfx/ideas/yuzu_lighting_krieg.png"
+		legacy_lazy_load = no
+	}
+}
