@@ -148,6 +148,7 @@ scripted_gui = {
 				# 隐藏民族精神仍控制冷却；同期 flag 仅向 GUI 提供可读的剩余天数。
 				set_country_flag = {
 					flag = yz_economic_policy_1_cooldown_flag
+					value = 1
 					days = 365
 				}
 			}
@@ -168,6 +169,7 @@ scripted_gui = {
 				}
 				set_country_flag = {
 					flag = yz_economic_policy_2_cooldown_flag
+					value = 1
 					days = 60
 				}
 			}
@@ -188,6 +190,7 @@ scripted_gui = {
 				}
 				set_country_flag = {
 					flag = yz_economic_policy_3_cooldown_flag
+					value = 1
 					days = 45
 				}
 			}

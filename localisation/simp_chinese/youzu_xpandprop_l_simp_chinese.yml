@@ -38,7 +38,8 @@
  yzc_factor_gain_tt: "§Y £GFX_yzmanpower_texticon 柚子厨比例§!增加$RIGHT|Y.0$"
  yzc_zhandouli_gain_tt: "可用 £GFX_yzmanpower_texticon §Y柚子厨人力§!增加$RIGHT|G.0%$\n目前可用于§Y征召为 £GFX_yzmanpower_texticon_1 柚子厨近卫军§!的§Y柚子厨§!有[?yzc_unit_recruit|Y.0]§Yk§!"
  yz_manpower_decrease_tt: "£GFX_yzmanpower_texticon 柚子厨人力减少$RIGHT|R0$§Rk§!"
- yz_new_works_income_tt: "预计 £GFX_yz_money §Y每月柚子币收入增加§!:[?yz_new_works|Y0]!"
+ yz_new_works_income_tt: "£GFX_yz_money §Y每月柚子币收入将根据工厂数和人口数增加§!!"
+ #yz_new_works_income_tt: "预计 £GFX_yz_money §Y每月柚子币收入增加§!:[?yz_new_works|Y0]!"
  yzc_general_gain_tt: "随着§Y柚子军改§!的进行，会有更多的§Y将领§!加入§Y柚子厨§!的行列！"
  yzc_manpower_factor_more_than_tt: "§Y £GFX_yzmanpower_texticon 柚子厨比例§!大于$RIGHT|Y.0%$ "
 
