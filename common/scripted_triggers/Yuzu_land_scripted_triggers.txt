@@ -52,16 +52,4 @@ Yuzu_can_form_yuzu_land = {
 		}
 	}
 }
-Yuzu_can_repay_bonds_by_yzmoney = {        #我们可以偿还
-	custom_trigger_tooltip = {
-		tooltip = we_can_repay_bonds_by_yzmoney
-	}
-	ROOT = {
-		check_variable = {
-			var = yz_money
-			value = bond_we_need_to_repay
-			compare = greater_than_or_equals
-		}
-	}
-}
 

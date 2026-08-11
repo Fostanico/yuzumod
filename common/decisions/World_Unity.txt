@@ -1,8 +1,13 @@
-World_Unity_communism = {
+# One category owns all four ideology outcomes. Visibility on each decision
+# keeps the player-facing choice synchronized with the current government.
+World_Unity = {
     World_Unity_communism_World = {
         allowed = {
         }
-        visible = { is_ai = no }
+        visible = {
+            is_ai = no
+            has_government = communism
+        }
         available = {
             or = {
                 AND = {
@@ -55,12 +60,13 @@ World_Unity_communism = {
             }
         }
     }
-}
-World_Unity_fascism = {
     World_Unity_fascism_World = {
         allowed = {
         }
-        visible = { is_ai = no }
+        visible = {
+            is_ai = no
+            has_government = fascism
+        }
         available = {
             or = {
                 AND = {
@@ -113,12 +119,13 @@ World_Unity_fascism = {
             }
         }
     }
-}
-World_Unity_democratic = {
     World_Unity_democratic_World = {
         allowed = {
         }
-        visible = { is_ai = no }
+        visible = {
+            is_ai = no
+            has_government = democratic
+        }
         available = {
             or = {
                 AND = {
@@ -171,13 +178,13 @@ World_Unity_democratic = {
             }
         }
     }
-}
-
-World_Unity_neutrality = {
     World_Unity_neutrality_World = {
         allowed = {
         }
-        visible = { is_ai = no }
+        visible = {
+            is_ai = no
+            has_government = neutrality
+        }
         available = {
             or = {
                 AND = {

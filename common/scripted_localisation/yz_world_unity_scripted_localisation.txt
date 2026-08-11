@@ -1,0 +1,71 @@
+# The merged category keeps the original ideology-specific title and prose.
+defined_text = {
+    name = yz_world_unity_category_title
+    text = {
+        trigger = { has_government = communism }
+        localization_key = World_Unity_communism
+    }
+    text = {
+        trigger = { has_government = fascism }
+        localization_key = World_Unity_fascism
+    }
+    text = {
+        trigger = { has_government = democratic }
+        localization_key = World_Unity_democratic
+    }
+    text = {
+        trigger = { has_government = neutrality }
+        localization_key = World_Unity_neutrality
+    }
+    text = {
+        localization_key = World_Unity_neutrality
+    }
+}
+
+defined_text = {
+    name = yz_world_unity_category_desc
+    text = {
+        trigger = { has_government = communism }
+        localization_key = World_Unity_communism_gui_desc
+    }
+    text = {
+        trigger = { has_government = fascism }
+        localization_key = World_Unity_fascism_gui_desc
+    }
+    text = {
+        trigger = { has_government = democratic }
+        localization_key = World_Unity_democratic_gui_desc
+    }
+    text = {
+        trigger = { has_government = neutrality }
+        localization_key = World_Unity_neutrality_gui_desc
+    }
+    text = {
+        localization_key = World_Unity_neutrality_gui_desc
+    }
+}
+
+# The merged category preserves the picture that belonged to each old
+# ideology-specific category. The localisation values resolve to GFX tokens.
+defined_text = {
+    name = yz_world_unity_category_image
+    text = {
+        trigger = { has_government = communism }
+        localization_key = World_Unity_communism_gui_image
+    }
+    text = {
+        trigger = { has_government = fascism }
+        localization_key = World_Unity_fascism_gui_image
+    }
+    text = {
+        trigger = { has_government = democratic }
+        localization_key = World_Unity_democratic_gui_image
+    }
+    text = {
+        trigger = { has_government = neutrality }
+        localization_key = World_Unity_neutrality_gui_image
+    }
+    text = {
+        localization_key = World_Unity_neutrality_gui_image
+    }
+}

@@ -1,7 +1,8 @@
 ﻿l_simp_chinese:
 #开始决议
  yuzu_cultural_department_category: "Y.U.Z.U.S.O.F.T."
- yuzu_cultural_department_category_desc: "§CYouth United Zone for Universal Synergy of Original Folklore & Traditions§!，\n全球青年柚子文化造新公社，要让一伙儿有劲的年轻人，扎堆搞事情，把柚子社的好东西玩出新花样！  \n我们先进的文化可以让我们的§R附属国§!变成充满柚子厨的§C柚子厨之国§!，为了传播柚子的先进文化而不花费过多的资金，我们可以在网盘上下载柚子社四大名著，只不过以某盘的速度可能稍微要一点时间，§R如果我们有柚子网盘超级会员的话能快很多§!。\n 此外，传播柚子文化还是需要柚金金的，我们的柚金金剩余为：[?Yuzu_fund|.0+Y] \n除此之外，我们的文化局还能在我们的殖民领地上使用合适的占领法案，我们的雇员会自动帮我们执行的，只要我们给他们柚金金。"
+ yuzu_cultural_department_category_desc: " "
+ yuzu_cultural_department_category_gui_desc: "§CYouth United Zone for Universal Synergy of Original Folklore & Traditions§!，\n全球青年柚子文化造新公社，要让一伙儿有劲的年轻人，扎堆搞事情，把柚子社的好东西玩出新花样！  \n我们先进的文化可以让我们的§R附属国§!变成充满柚子厨的§C柚子厨之国§!，为了传播柚子的先进文化而不花费过多的资金，我们可以在网盘上下载柚子社四大名著，只不过以某盘的速度可能稍微要一点时间，§R如果我们有柚子网盘超级会员的话能快很多§!。\n 此外，传播柚子文化还是需要柚金金的，我们的柚金金剩余为：[?Yuzu_fund|.0+Y] \n除此之外，我们的文化局还能在我们的殖民领地上使用合适的占领法案，我们的雇员会自动帮我们执行的，只要我们给他们柚金金。"
  form_yuzu_fans_land: "在[FROM.GetName]免费发放柚子社游戏资源"
  form_yuzu_fans_land_desc: "你说的对，但是《千恋万花》是由柚子社出版发行的一款美少女冒险游戏。游戏发生在一个被称作穗织的世外桃源，在这里，被石中刀选中的人将被授予丛雨丸，导引古神之力。你将扮演一位名为「有地将臣」的归家探亲者，在小镇的生活中邂逅性格各异、能力独特的姑娘们，和他们一起击败祟神，找回失散的水晶碎片——同时，逐步发掘「朝武家族的诅咒」的真相。"
  yuzu_fans_land_ide: "最优质的柚子厨"

@@ -94,7 +94,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Kaguya
-                    name = "星河辉耶"
+                    name = YZ_character_name_kaguya
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -110,6 +110,7 @@ country_event= {
                     corps_commander = {
                         desc = Kaguya_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             maid_kaguya_trait
                             bearer_of_artillery
                             adaptable
@@ -165,7 +166,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Kaguya
-                    name = "星河辉耶"
+                    name = YZ_character_name_kaguya
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -181,6 +182,7 @@ country_event= {
                     corps_commander = {
                         desc = Kaguya_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             maid_kaguya_trait
                             bearer_of_artillery
                             adaptable
@@ -216,7 +218,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Sairi
-                    name = "三国彩里"
+                    name = YZ_character_name_mikuni_sairi
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -232,6 +234,7 @@ country_event= {
                     corps_commander = {
                         desc = Sairi_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             maid_sairi_trait_2
                             brilliant_strategist
                         }
@@ -270,7 +273,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = WeiZi
-                    name = "薇姿"
+                    name = YZ_character_name_wiz
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -286,6 +289,7 @@ country_event= {
                     corps_commander = {
                         desc = WeiZi_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             yz_weizi_trait
                             adaptable
                             trait_reckless
@@ -315,7 +319,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Amane
-                    name = "谷风天音"
+                    name = YZ_character_name_tanikaze_amane
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -331,6 +335,7 @@ country_event= {
                     corps_commander = {
                         desc = Amane_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             maid_amane_trait
                             urban_assault_specialist
                             trait_reckless
@@ -383,7 +388,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Amane1
-                    name = "谷风天音"
+                    name = YZ_character_name_tanikaze_amane
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -399,6 +404,7 @@ country_event= {
                     corps_commander = {
                         desc = Amane_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             yz_amane_trait_1
                         }
                         skill=1
@@ -443,7 +449,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Kurumi_1
-                    name = "小云雀来海"
+                    name = YZ_character_name_kohibari_kurume
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -459,6 +465,7 @@ country_event= {
                     corps_commander = {
                         desc = Kurumi_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             yz_kurumi_trait0
                         }
                         skill=1
@@ -478,7 +485,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Kurumi
-                    name = "小云雀来海"
+                    name = YZ_character_name_kohibari_kurume
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -494,6 +501,7 @@ country_event= {
                     corps_commander = {
                         desc = Kurumi_corps_desc
                         traits={
+                            yz_yuzusoft_character
                             yz_kurumi_trait
 
                         }
@@ -582,7 +590,7 @@ country_event= {
         add_ideas = sairi_bad_end
         kill_country_leader = yes
         create_country_leader = {
-            name = "三国彩里？"
+            name = YZ_character_name_mikuni_sairi
             desc = "魔王之母"
             picture = "gfx/leader/Badsairi.png"
             expire = "2065.1.1"
@@ -595,7 +603,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Sairi_bad
-                    name = "三国彩里？"
+                    name = YZ_character_name_mikuni_sairi
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -611,6 +619,7 @@ country_event= {
                     }
                     field_marshal = {
                         traits={
+                            yz_yuzusoft_character
                             adaptable maid_sairi_trait_1
                         }
                         attack_skill = 9

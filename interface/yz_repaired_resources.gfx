@@ -1,0 +1,115 @@
+spriteTypes = {
+    # Decision and idea sprites recovered from assets that were present but never registered.
+    # Recruitment decisions use dedicated thumbnails; full-size GUI art and leader portraits
+    # are too large for the decision-list icon slot and overflow across neighbouring rows.
+    spriteType = {
+        name = "GFX_LLLJ_title"
+        texturefile = "gfx/decision/yz_lllj_title.png"
+    }
+    spriteType = {
+        name = "GFX_van"
+        texturefile = "gfx/decision/yz_author_van.png"
+    }
+    spriteType = {
+        name = "GFX_Verniy"
+        texturefile = "gfx/decision/yz_author_verniy.png"
+    }
+    spriteType = {
+        name = "GFX_Tsukimori"
+        texturefile = "gfx/decision/yz_author_tsukimori.png"
+    }
+    spriteType = {
+        name = "GFX_o5j"
+        texturefile = "gfx/decision/yz_author_o5j.png"
+    }
+    spriteType = {
+        name = "GFX_Weiss"
+        texturefile = "gfx/decision/yz_author_weiss.png"
+    }
+    spriteType = {
+        name = "GFX_Ukisov"
+        texturefile = "gfx/decision/yz_author_ukisov.png"
+    }
+    spriteType = {
+        name = "GFX_Ling"
+        texturefile = "gfx/decision/yz_author_ling.png"
+    }
+    spriteType = {
+        name = "GFX_Laoba"
+        texturefile = "gfx/decision/yz_author_laoba.png"
+    }
+    spriteType = {
+        name = "GFX_youzi_huhu"
+        texturefile = "gfx/decision/yz_author_huhu.png"
+    }
+    spriteType = {
+        name = "GFX_Manbo"
+        texturefile = "gfx/decision/yz_author_manbo.png"
+    }
+    spriteType = {
+        name = "GFX_meigulu_2"
+        texturefile = "gfx/decision/megulu_2.png"
+    }
+    spriteType = {
+        name = "GFX_traits_power_of_fox_fairy"
+        texturefile = "gfx/traits/power_of_fox_fairy.PNG"
+    }
+    spriteType = {
+        name = "GFX_traits_married_trait"
+        texturefile = "gfx/decision/traits_married_trait.png"
+    }
+    spriteType = {
+        name = "GFX_mera_azusa"
+        texturefile = "gfx/decision/mera_azusa.png"
+    }
+    spriteType = {
+        name = "GFX_idea_toko_core"
+        texturefile = "gfx/ideas/toko_core.png"
+    }
+    spriteType = {
+        name = "GFX_idea_Origin_of_youzu_culture"
+        texturefile = "gfx/ideas/Yuzu_soft_organization.png"
+    }
+
+    # Event tokens retain their original callers and use the nearest existing series asset.
+    spriteType = {
+        name = "GFX_linglai_event01"
+        texturefile = "gfx/event_pictures/ayase_event.1.png"
+    }
+    spriteType = {
+        name = "GFX_linglai_event02"
+        texturefile = "gfx/event_pictures/ayase_event.2.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.1"
+        texturefile = "gfx/event_pictures/hiy_event_1.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.2"
+        texturefile = "gfx/event_pictures/hiy_event_2.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.3"
+        texturefile = "gfx/event_pictures/hiy_event_3.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.4"
+        texturefile = "gfx/event_pictures/hiy_event_4.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.5"
+        texturefile = "gfx/event_pictures/hiy_event_5.png"
+    }
+    spriteType = {
+        name = "GFX_hiyori_event.6"
+        texturefile = "gfx/event_pictures/hiy_event_6.png"
+    }
+    spriteType = {
+        name = "GFX_ningning_event2"
+        texturefile = "gfx/event_pictures/ningning_qibaoqi.png"
+    }
+    spriteType = {
+        name = "GFX_noa_event16"
+        texturefile = "gfx/event_pictures/noa_event15.png"
+    }
+}

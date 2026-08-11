@@ -1,0 +1,20 @@
+﻿l_japanese:
+#大概以后每次更新加的内容我都加到新的本地化文件里了（出于不要动一些可以运行的代码的原则）——伊尔诺，2025.3.10
+ play_the_song_of_hachiroku_effect_tooltip: "§R動輪が回り出す§!を再生"
+ debug_love_sana_everyday: "今日は佐奈の誕生日！（毎年6月8日だよ！）"
+ yuri_s_Revenge_occupation: "ユリの復讐"
+ loc_yuri_occupation: "柚子厨すら恐れないとは、これはただの暴徒ではない。徹底的な反撃が必要だ！（自動切り替え時、抵抗度が40%を超える地域では自動的にこの法案が適用される）"
+ hoori_style_occupation: "穂織式管理モデル"
+ loc_hoori_occupation: "穂織民族の偉大な復興の輝かしい成果を目の当たりにした以上、この成功体験を広大な田舎の植民地に広めることができる。（自動切り替え時、田舎地域ではこの法案が適用される）"
+ washizu_style_occupation: "鷲逗式管理モデル"
+ loc_washizu_occupation: "あやせ同志は鷲逗市を中規模都市から国際的な大都市へと発展させた。我々は彼女の成功体験を参考にできる。（自動切り替え時、都市地域ではこの法案が適用される）"
+ let_them_fly_occupation: "彼らを上場させろ！"                                        #不一定出现在正式版中
+ auto_switch_occupation_law: "占領法を自動切り替え（ゆず法案のみ）"
+ auto_switch_occupation_law_desc: "ゆず金を1つ消費すれば、文化局の職員が広大な植民地の統治に尽力してくれるのだ。（自動切り替えはオフにでき、再度オンにする際にゆず金は消費されない）"
+ Yuzu_occupation_law_fund_subtract_tt: "文化局の職員に働いてもらうためのゆず金1つ"
+ auto_switch_occupation_law_descision_effect_tooltip: "文化局が適切な地域に適切な占領法を適用する"
+ #let_usa_fly: "§R让美国人飞起来！§!"                                            #不一定出现在正式版中
+ #let_usa_fly_desc: "把所有美国的核心领土占领法案切换成把他们上市！"               #不一定出现在正式版中
+ #auto_switch_occupation_law_in_usa_descision_effect_tooltip: "把美国人上市"     #不一定出现在正式版中
+ auto_switch_occupation_off: "占領法の自動切り替えをオフ"
+ auto_switch_occupation_again: "占領法の自動切り替えを再度オン"

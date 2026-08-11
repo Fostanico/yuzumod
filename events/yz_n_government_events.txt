@@ -4,7 +4,7 @@ country_event = {
 	id = yzyh_event.1
 	title = yzyh_event.1.t
 	desc = yzyh_event.1.d
-	picture = GFX_yzyh_event0
+	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
 
@@ -17,7 +17,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "柚子皇家议会"
+			name = yzyh
 			picture = "GFX_portrait_ADD_yzyh"
 			desc = yzyh_desc
 			expire = "2095.1.1"

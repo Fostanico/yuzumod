@@ -20,7 +20,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "sansilinglai"
+			name = sansilinglai
 			picture = GFX_portrait_ADD_linglai
 			desc = linglai_desc
 			expire = "2095.1.1"
@@ -45,7 +45,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "sansilinglai"
+			name = sansilinglai
 			picture = GFX_portrait_ADD_linglai
 			desc = linglai_desc
 			expire = "2095.1.1"
@@ -70,7 +70,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "sansilinglai"
+			name = sansilinglai
 			picture = GFX_portrait_ADD_linglai
 			desc = linglai_desc
 			expire = "2095.1.1"
@@ -95,7 +95,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "sansilinglai"
+			name = sansilinglai
 			picture = GFX_portrait_ADD_linglai
 			desc = linglai_desc
 			expire = "2095.1.1"

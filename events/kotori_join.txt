@@ -3,7 +3,7 @@ country_event = {
     id = kotori_event.1
     title = kotori_event.1.t
     desc = kotori_event.1.d
-    picture = GFX_kotori_wake
+    picture = GFX_report_event_generic_read_write
     is_triggered_only = yes
 
     # trigger = {
@@ -25,7 +25,7 @@ country_event = {
                 generate_character = {
 
                     token_base = yz_kotori
-                    name = "伊势琴里"
+                    name = YZ_character_name_ise_kotori
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -42,6 +42,7 @@ country_event = {
                     corps_commander = {
                         desc = kotori_corps_desc
                         traits = {
+                            yz_yuzusoft_character
                             maid_kotori_trait
                         }
                         attack_skill = 2

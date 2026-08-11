@@ -1,0 +1,111 @@
+﻿l_japanese:
+ yz_auto_recruit: "\n§4必要な将軍を未獲得のため、以下の将軍を§4自動登用§!します。効果：§!"
+ #千恋万花#"
+ recruit_mako: "§C常陸茉子§!\n§Yレベル:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:7  £trait_logistics:8\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_yoshino: "朝武芳乃\n§Yレベル:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§t芳乃イベントチェーンが開始されます§!\n§Y芳乃工業化決議グループを解放\n§Y指導者§!に選択可能\n内閣オプションを解放§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_murasame: "§Gムラサメちゃん§!\n§Yレベル:5§!\n £trait_attack:7  £trait_defense:5\n £trait_planning:3  £trait_logistics:5\n§Y指導者§!に選択可能\n§Yムラサメ顧問決議を解放\n陸軍大臣を獲得§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_lena: "§Hレナ・リヒテナウアー§!\n§Yレベル:5 §!\n £trait_attack:3  £trait_defense:6 \n £trait_planning:3  £trait_logistics:6\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_luchun: "[recruit_luchun_text]"
+ recruit_luchun_1: "馬庭芦花、鞍馬小春\n\n§t特殊登用！§!\n決議：§Y妹と姉の修羅場§!を解放\n(将軍は§Y今後の決議とイベントで解放されます！§!)\n\n消費：£GFX_pol_power §Y20§!"
+ recruit_luchun_2: "§Y馬庭芦花§!\n§Yレベル:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n§Y鞍馬小春§!\n§Yレベル:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n\n消費：£GFX_pol_power §Y20§!"
+ recruit_title: "§G 千恋＊万花！ §!\nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ SR: "§G 千恋＊万花！ §!"
+
+ #魔宴#
+ recruit_nene: "綾地寧々\n§Yレベル:5 §!\n £trait_attack:7  £trait_defense:2 \n £trait_planning:1  £trait_logistics:6\n§Y721研究所および内閣§!決議グループを解放\n§Y指導者§!に選択可能\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_megulu: "§O因幡めぐる§!\n§Yレベル:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§Yめぐる工業化決議グループと内閣オプションを解放§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_chou: "椎葉紬\n§Yレベル:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:6\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_toko: "戸隠憧子\n§Yレベル:6 §!\n £trait_attack:3£trait_defense:5 \n £trait_planning:5  £trait_logistics:8\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_wakana: "§O仮屋和奏§!\n§Yレベル:4 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:3  £trait_logistics:5\n\n消費：£GFX_pol_power §Y10§!"
+ SW_recruit_title: "§0Sabbita of the witch!!!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ SW: "§0Sabbita of the witch!!!§!"
+
+ #RJ#
+ recruit_ayase: "§t三司あやせ§!\n§Yレベル:5 §!\n £trait_attack:6  £trait_defense:3 \n £trait_planning:4  £trait_logistics:5\n§Yライブと内閣§!決議を解放\n§Y指導者§!に選択可能\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_nanami: "§Y在原七海§!\n§Yレベル:5 §!\n £trait_attack:6  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§Y内閣と陸軍大臣§!決議を解放\n§Y特殊支援中隊§!を獲得可能\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_nijouin_hazuki: "§C二条院羽月§!\n§Yレベル:5 §!\n £trait_attack:6  £trait_defense:5 \n £trait_planning:4  £trait_logistics:3\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_mayu: "式部茉優\n§Yレベル:5 §!\n £trait_attack:4£trait_defense:4 \n £trait_planning:6  £trait_logistics:5\n§Y科学者§!を解放し、§Y茉優§!を§Y721研究所§!に勤務させられます\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_chisaki: "§1壬生千咲§!\n§Yレベル:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:5\n\n消費：£GFX_pol_power §Y10§!"
+ RJ_recruit_title: "§2 RIDDLE JOKER!!! §! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ RJ: "§2 RIDDLE JOKER!!! §!"
+
+ #咖啡馆#
+ recruit_kanna: "§C明月栞那§!\n§Yレベル:5 §!\n £trait_attack:4  £trait_defense:8 \n £trait_planning:7  £trait_logistics:5\n§Yお菓子作り決議§!を解放\nこの決議で§Y涼音§!を登用できます\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_nozomi: "§Y墨染希§!\n§Yレベル:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:5  £trait_logistics:5\n§Yお菓子作り決議§!を解放\nこの決議で§Y涼音§!を登用できます\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_zaozi: "§R四季ナツメ§!\n§Yレベル:5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:3  £trait_logistics:7\n§Yお菓子作り決議§!を解放\nこの決議で§Y涼音§!を登用できます\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_suzune: "汐山涼音\n§Yレベル:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:3 £trait_logistics:9\n§t特殊登用！§!\n§Yナツメ§!、§Y栞那§!、§Y墨染希§!を登用した後\n§Yお菓子作り決議§!で涼音姐さんを登用！\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_mei: "§7火打谷愛衣§!\n§Yレベル:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:6\n\n\n消費：£GFX_pol_power §Y10§!"
+ CS_recruit_title: " カフェ・ステラと死神の蝶!!! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§!  "
+ CS: " カフェ・ステラと死神の蝶!!! "
+ CS_neko: "[CS_neko_text]"
+ CS_neko1: "クリックで2.5%の確率で§Y猫糧§! (£GFX_pol_power §Y5§!) がドロップ！"
+ CS_neko2: "§Y猫糧§!を食べ尽くした！"
+
+ #天使纷扰#
+ recruit_amane: "§C谷風天音§!\n§Yレベル:5 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:5  £trait_logistics:6\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_fumika: "§t百里風実花§!\n§Yレベル:5 §!\n £trait_attack:5  £trait_defense:2 \n £trait_planning:6  £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_kaguya: "§b輝耶§!\n§Yレベル:5 §!\n £trait_attack:6  £trait_defense:4 \n £trait_planning:8  £trait_logistics:3\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_kurumi: "§C小雲雀来海§!\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:5\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_noa: "§Y白雪乃愛§!\n§Yレベル:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:6 £trait_logistics:5\n§t§Y乃愛ルート§!への突入を選択可能§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_ori: "§G高楯オーリエ§!\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:8 £trait_logistics:8\n\n消費：£GFX_pol_power §Y10§!"
+ TS_recruit_title: " §C天使☆騒々RE-BOOT!!!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§!  "
+ TS: " §C天使☆騒々RE-BOOT!!!§! "
+
+ #天色幻想岛#
+ recruit_airi: "§4白鹿愛莉§!\n[!recruit_airi_click]\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_xiali: "§Yシャーリー・ウォリック§!\n§Yレベル:5 §!\n £trait_attack:1 £trait_defense:8 \n £trait_planning:1 £trait_logistics:8\n§Y戦線維持特化の将軍、高い指揮上限！§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_zhenxiao: "§R真咲・ガイヤール！§!\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\n§Y真咲チェーン店§!決議を解放し、§Y補給所§!を急速建設、§Yボーナス柚子コイン§!！\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_xiyin: "天霧夕音\n§tレベル:7 §!\n £trait_attack:11 £trait_defense:5 \n £trait_planning:5 £trait_logistics:9\nよよよ……§! \n\n消費：£GFX_pol_power §Y10§!"
+ recruit_munaixiang: "§W木乃香§!\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_diya: "§Gティア・ホーエンヴェルフェン§!\n§tレベル:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:9 £trait_logistics:4\nわ、私は別にHな教師なんかじゃないんだからね！§!\n\n消費：£GFX_pol_power §Y10§!"
+ AIN_recruit_title: "§4天色Islenauts!!!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ AIN: "§4天色Islenauts!!!§!"
+
+ #DRACU-RIOT!#
+ recruit_miu: "§R矢来美羽§!\n§Yレベル:5 §!\n £trait_attack:7 £trait_defense:2 \n £trait_planning:3 £trait_logistics:4\n[!recruit_miu_click]\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_hiyori: "§W大房ひより§!\n§Yレベル:5§!\n  £trait_attack:4 £trait_defense:4 \n £trait_planning:6 £trait_logistics:8\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_elina: "§Rエリナ・オレゴヴナ・アヴェーン§!\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:2 \n £trait_planning:6 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_liyin: "§C稲叢莉音§!\n§Yレベル:6 §!\n £trait_attack:6 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\n[!recruit_liyin_click]\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_buliangzi: "布良梓\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_nigula: "§Yニコラ・ケフェウス\n§Yレベル:5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_DR_title: "§RDRACU-RIOT!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y60§! "
+ DR: "§RDRACU-RIOT!§!"
+
+ #nobleworks#
+ recruit_maya: "§B長光麻夜§!\n£trait_attack:8 £trait_defense:6 \n £trait_planning:3 £trait_logistics:3 \n\n消費：£GFX_pol_power §Y10§!"
+ recruit_akari: "§Y兼元灯里§!\n£trait_attack:3 £trait_defense:6 \n £trait_planning:8 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_hinata: "§Y国広ひなた§!\n£trait_attack:7 £trait_defense:1 \n £trait_planning:3 £trait_logistics:9\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_shizuru: "§W正宗静流§!\n£trait_attack:8 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_sena: "§7月山瀬奈§!\n£trait_attack:5 £trait_defense:5 \n £trait_planning:3 £trait_logistics:13\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_NW_titile: "§YNOBLEWORKS!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ NW: "§YNOBLEWORKS!§!"
+
+ #夏空彼方#
+ recruit_chihaya: "茅羽耶\n§Y専用の将軍強化決議チェーン§!あり！\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_sasara: "§W七条沙沙羅§!\n§tこの将軍はまだ白紙の将軍で、簡単な四能力と白紙専用特性のみ§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_yuiko: "§O三好由比子§!\n§tこの将軍はまだ白紙の将軍で、簡単な四能力と白紙専用特性のみ§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_NK_title: "§4夏空カナタ§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ NK: "§4夏空カナタ§!"
+
+ #天神乱漫#
+ recruit_sakuyahime: "§R卯花之佐久夜姫§!\n§Yレベル:5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:5 £trait_logistics:4\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_ruri: "§W竜胆ルリ§!\nレベル:5 §!\n £trait_attack:15 £trait_defense:1 \n £trait_planning:1 £trait_logistics:1\nふんふんっ！§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_aoi: "§R山吹葵§!\n§Yレベル:5 §!\n £trait_attack:3 £trait_defense:4 \n £trait_planning:7 £trait_logistics:7\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_sana: "§Y千歳佐奈§!\n§Yレベル:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6\n\n毎年6月8日の佐奈の誕生日に、§Y決議§!で§Y佐奈の誕生日を祝う§!と§Y超大量のボーナス§!を獲得できます！\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_mahiro: "§W常盤真尋§!\n§tこの将軍はまだ白紙の将軍で、簡単な四能力と白紙専用特性のみ§!\n\n消費：£GFX_pol_power §Y10§!"
+ recruit_yukari: "§R烏羽紫§!\n§tこの将軍はまだ白紙の将軍で、簡単な四能力と白紙専用特性のみ§!\n\n消費：£GFX_pol_power §Y10§!"
+ TL_recruit_title: "§Y天神乱漫 LUCKY or UNLUCKY?!§! \nこのタイトルをクリックすると、本作品の§Y全キャラクター§!を§Yワンクリック登用§!！\n消費：£GFX_pol_power §Y50§! "
+ TL: "§Y天神乱漫 LUCKY or UNLUCKY?!§!"
+
+ baibanjiang: "§tこの将軍はまだ白紙の将軍で、簡単な四能力と白紙専用特性のみ§!"
+ YZrecruit: "§Yゆずソフト登用パネル§!を開く"
+ YZ_recruit_drag_tooltip: "背景をクリック＆ドラッグで登用ボタンを移動"
+
+#聚光灯柠檬果酱#
+ LLLJ: "§Oライムライト・レモネードジャム!!!§! "
+ recruit_ena: "§t陽見恵凪§!\n§Yレベル:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:3 £trait_logistics:5\nありがとありがと！！"
+ recruit_anju: "§0隠杏株§!\n§Yレベル:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:5\nB地点にフラッシュ投げるぞ！"
+ recruit_tsukimi: "§Y嶌越月望§!\n§Yレベル:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6"
+ recruit_ririko: "§R二見原リリコ§!\n§Yレベル:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\nだって私はいい女だもの～"
+ recruit_nayuka: "§1茶園那優花§!\n§Yレベル:5 §!\n £trait_attack:4 £trait_defense:4 \n £trait_planning:5 £trait_logistics:6"
+ recruit_miku: "§g礫川美玖§!\n§Yレベル:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:4 £trait_logistics:4"

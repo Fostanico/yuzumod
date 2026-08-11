@@ -353,7 +353,6 @@ leader_traits = {
         experience_gain_factor = 0.5
         minimum_training_level = -0.1
         training_time_army_factor = -0.2
-        experience_gain_army = 0.3
         experience_gain_air = 0.3
         experience_gain_navy = 0.3
     }

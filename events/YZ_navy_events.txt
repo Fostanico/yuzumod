@@ -3,12 +3,12 @@ country_event = {
 	id = YZHJ_event.1
 	title = YZHJ_event.1.t
 	desc = YZHJ_event.1.d
-	picture = GFX_YZHJ_event.0
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
 		name = YZHJ_event.1.a
 		create_navy_leader = {
-			name = "changlumozi"
+			name = changlumozi
 			gfx = "GFX_portrait_JCL_mako"
 			traits = {
 				injia_good_at_water
@@ -29,7 +29,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "mingyuekanna"
+			name = mingyuekanna
 			gfx = "GFX_portrait_CSS_kanna"
 			traits = {
 				fixible_command
@@ -48,7 +48,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "lingdiningning"
+			name = lingdiningning
 			gfx = "GFX_portrait_STW_Nene"
 			traits = {
 				little_guy_under_water
@@ -68,7 +68,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "zaiyuanqihai"
+			name = zaiyuanqihai
 			gfx = "GFX_portrait_RGR_Nanami"
 			traits = {
 				best_hacker
@@ -88,7 +88,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "qiansuizuonai"
+			name = qiansuizuonai
 			gfx = "GFX_portrait_TSL_sana"
 			traits = {
 				lucky_or_unlucky
@@ -108,7 +108,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "ertiaoyuanyuyue"
+			name = ertiaoyuanyuyue
 			gfx = "GFX_portrait_RGR_hazuki"
 			traits = {
 				dahefuzi
@@ -130,7 +130,7 @@ country_event = {
 			set_character_flag = yz_navy_flag
 		}
 		create_navy_leader = {
-			name = "龙胆琉璃"
+			name = Yuzu_luli
 			gfx = "GFX_portrait_super_ruri"
 			traits = {
 				power_of_fox_fairy

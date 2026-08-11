@@ -46,7 +46,7 @@ kkr_atri_reseasrch_decision_category = {
 			custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
 			add_to_variable = {
 				KKR_atri_research_research_speed_factor = 0.5
-				tooltip = research_speed_factor_tt
+				tooltip = YZ_research_speed_factor_tt
 			}
 		}
 	}
@@ -142,7 +142,7 @@ kkr_atri_reseasrch_decision_category = {
 
 					generate_character = {
 						token_base = Kukuru_advisor_1
-						name = "夜刀玖玖瑠"
+						name = YZ_character_name_yato_kukuru
 						gender = female
 						nationality = JAP
 						portraits = {

@@ -1,0 +1,1941 @@
+{
+  "generatedOn": "2026-08-11",
+  "generator": "tools/build-japanese-font-fallback.py",
+  "source": {
+    "project": "Noto Sans CJK JP",
+    "repository": "https://github.com/notofonts/noto-cjk",
+    "commit": "f8d157532fbfaeda587e826d4cd5b21a49186f7c",
+    "regularSha256": "68A3FC98800B2A27B371F2FB79991DAF3633BD89309D4FFAA6946FD587F375B5",
+    "boldSha256": "E53DCB0DCB2922E45D01AAE1EBD2F382BB81D4229B18B6B883BD170678AF1F76",
+    "licenseSha256": "6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2",
+    "license": "SIL Open Font License 1.1",
+    "symbolProject": "Noto Sans Symbols 2",
+    "symbolRepository": "https://github.com/notofonts/noto-fonts",
+    "symbolCommit": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+    "symbolSha256": "630846D528DBE4C4981370A4D0A9475A1FD1491A129BB411F8E157CDB5DE13C6",
+    "symbolLicenseSha256": "0DAB92D0544F7B233403F14B84A663BDBFA746982EDA629E7F4F9FFE1B036FEB"
+  },
+  "installedReference": "D:\\SteamLibrary\\steamapps\\common\\Hearts of Iron IV\\gfx\\fonts\\japanese\\hoi_18mbs.fnt",
+  "localisationEntriesScanned": 4972,
+  "missingGlyphCount": 288,
+  "symbolFallbackCodepoints": [
+    "U+2764"
+  ],
+  "characters": [
+    {
+      "character": "α",
+      "codepoint": "U+03B1",
+      "name": "GREEK SMALL LETTER ALPHA"
+    },
+    {
+      "character": "ω",
+      "codepoint": "U+03C9",
+      "name": "GREEK SMALL LETTER OMEGA"
+    },
+    {
+      "character": "↑",
+      "codepoint": "U+2191",
+      "name": "UPWARDS ARROW"
+    },
+    {
+      "character": "↓",
+      "codepoint": "U+2193",
+      "name": "DOWNWARDS ARROW"
+    },
+    {
+      "character": "∠",
+      "codepoint": "U+2220",
+      "name": "ANGLE"
+    },
+    {
+      "character": "⌒",
+      "codepoint": "U+2312",
+      "name": "ARC"
+    },
+    {
+      "character": "①",
+      "codepoint": "U+2460",
+      "name": "CIRCLED DIGIT ONE"
+    },
+    {
+      "character": "②",
+      "codepoint": "U+2461",
+      "name": "CIRCLED DIGIT TWO"
+    },
+    {
+      "character": "③",
+      "codepoint": "U+2462",
+      "name": "CIRCLED DIGIT THREE"
+    },
+    {
+      "character": "★",
+      "codepoint": "U+2605",
+      "name": "BLACK STAR"
+    },
+    {
+      "character": "☆",
+      "codepoint": "U+2606",
+      "name": "WHITE STAR"
+    },
+    {
+      "character": "♡",
+      "codepoint": "U+2661",
+      "name": "WHITE HEART SUIT"
+    },
+    {
+      "character": "❤",
+      "codepoint": "U+2764",
+      "name": "HEAVY BLACK HEART"
+    },
+    {
+      "character": "　",
+      "codepoint": "U+3000",
+      "name": "IDEOGRAPHIC SPACE"
+    },
+    {
+      "character": "《",
+      "codepoint": "U+300A",
+      "name": "LEFT DOUBLE ANGLE BRACKET"
+    },
+    {
+      "character": "》",
+      "codepoint": "U+300B",
+      "name": "RIGHT DOUBLE ANGLE BRACKET"
+    },
+    {
+      "character": "【",
+      "codepoint": "U+3010",
+      "name": "LEFT BLACK LENTICULAR BRACKET"
+    },
+    {
+      "character": "】",
+      "codepoint": "U+3011",
+      "name": "RIGHT BLACK LENTICULAR BRACKET"
+    },
+    {
+      "character": "〖",
+      "codepoint": "U+3016",
+      "name": "LEFT WHITE LENTICULAR BRACKET"
+    },
+    {
+      "character": "〗",
+      "codepoint": "U+3017",
+      "name": "RIGHT WHITE LENTICULAR BRACKET"
+    },
+    {
+      "character": "ぅ",
+      "codepoint": "U+3045",
+      "name": "HIRAGANA LETTER SMALL U"
+    },
+    {
+      "character": "ぇ",
+      "codepoint": "U+3047",
+      "name": "HIRAGANA LETTER SMALL E"
+    },
+    {
+      "character": "ぴ",
+      "codepoint": "U+3074",
+      "name": "HIRAGANA LETTER PI"
+    },
+    {
+      "character": "ゅ",
+      "codepoint": "U+3085",
+      "name": "HIRAGANA LETTER SMALL YU"
+    },
+    {
+      "character": "乃",
+      "codepoint": "U+4E43",
+      "name": "CJK UNIFIED IDEOGRAPH-4E43"
+    },
+    {
+      "character": "产",
+      "codepoint": "U+4EA7",
+      "name": "CJK UNIFIED IDEOGRAPH-4EA7"
+    },
+    {
+      "character": "佑",
+      "codepoint": "U+4F51",
+      "name": "CJK UNIFIED IDEOGRAPH-4F51"
+    },
+    {
+      "character": "你",
+      "codepoint": "U+4F60",
+      "name": "CJK UNIFIED IDEOGRAPH-4F60"
+    },
+    {
+      "character": "佩",
+      "codepoint": "U+4F69",
+      "name": "CJK UNIFIED IDEOGRAPH-4F69"
+    },
+    {
+      "character": "侠",
+      "codepoint": "U+4FA0",
+      "name": "CJK UNIFIED IDEOGRAPH-4FA0"
+    },
+    {
+      "character": "俱",
+      "codepoint": "U+4FF1",
+      "name": "CJK UNIFIED IDEOGRAPH-4FF1"
+    },
+    {
+      "character": "倚",
+      "codepoint": "U+501A",
+      "name": "CJK UNIFIED IDEOGRAPH-501A"
+    },
+    {
+      "character": "倦",
+      "codepoint": "U+5026",
+      "name": "CJK UNIFIED IDEOGRAPH-5026"
+    },
+    {
+      "character": "偕",
+      "codepoint": "U+5055",
+      "name": "CJK UNIFIED IDEOGRAPH-5055"
+    },
+    {
+      "character": "兜",
+      "codepoint": "U+515C",
+      "name": "CJK UNIFIED IDEOGRAPH-515C"
+    },
+    {
+      "character": "兮",
+      "codepoint": "U+516E",
+      "name": "CJK UNIFIED IDEOGRAPH-516E"
+    },
+    {
+      "character": "军",
+      "codepoint": "U+519B",
+      "name": "CJK UNIFIED IDEOGRAPH-519B"
+    },
+    {
+      "character": "凪",
+      "codepoint": "U+51EA",
+      "name": "CJK UNIFIED IDEOGRAPH-51EA"
+    },
+    {
+      "character": "刬",
+      "codepoint": "U+522C",
+      "name": "CJK UNIFIED IDEOGRAPH-522C"
+    },
+    {
+      "character": "劈",
+      "codepoint": "U+5288",
+      "name": "CJK UNIFIED IDEOGRAPH-5288"
+    },
+    {
+      "character": "办",
+      "codepoint": "U+529E",
+      "name": "CJK UNIFIED IDEOGRAPH-529E"
+    },
+    {
+      "character": "卜",
+      "codepoint": "U+535C",
+      "name": "CJK UNIFIED IDEOGRAPH-535C"
+    },
+    {
+      "character": "厨",
+      "codepoint": "U+53A8",
+      "name": "CJK UNIFIED IDEOGRAPH-53A8"
+    },
+    {
+      "character": "厲",
+      "codepoint": "U+53B2",
+      "name": "CJK UNIFIED IDEOGRAPH-53B2"
+    },
+    {
+      "character": "叉",
+      "codepoint": "U+53C9",
+      "name": "CJK UNIFIED IDEOGRAPH-53C9"
+    },
+    {
+      "character": "叢",
+      "codepoint": "U+53E2",
+      "name": "CJK UNIFIED IDEOGRAPH-53E2"
+    },
+    {
+      "character": "吞",
+      "codepoint": "U+541E",
+      "name": "CJK UNIFIED IDEOGRAPH-541E"
+    },
+    {
+      "character": "啼",
+      "codepoint": "U+557C",
+      "name": "CJK UNIFIED IDEOGRAPH-557C"
+    },
+    {
+      "character": "喵",
+      "codepoint": "U+55B5",
+      "name": "CJK UNIFIED IDEOGRAPH-55B5"
+    },
+    {
+      "character": "嘔",
+      "codepoint": "U+5614",
+      "name": "CJK UNIFIED IDEOGRAPH-5614"
+    },
+    {
+      "character": "噌",
+      "codepoint": "U+564C",
+      "name": "CJK UNIFIED IDEOGRAPH-564C"
+    },
+    {
+      "character": "垢",
+      "codepoint": "U+57A2",
+      "name": "CJK UNIFIED IDEOGRAPH-57A2"
+    },
+    {
+      "character": "奶",
+      "codepoint": "U+5976",
+      "name": "CJK UNIFIED IDEOGRAPH-5976"
+    },
+    {
+      "character": "妝",
+      "codepoint": "U+599D",
+      "name": "CJK UNIFIED IDEOGRAPH-599D"
+    },
+    {
+      "character": "妾",
+      "codepoint": "U+59BE",
+      "name": "CJK UNIFIED IDEOGRAPH-59BE"
+    },
+    {
+      "character": "姐",
+      "codepoint": "U+59D0",
+      "name": "CJK UNIFIED IDEOGRAPH-59D0"
+    },
+    {
+      "character": "姨",
+      "codepoint": "U+59E8",
+      "name": "CJK UNIFIED IDEOGRAPH-59E8"
+    },
+    {
+      "character": "娟",
+      "codepoint": "U+5A1F",
+      "name": "CJK UNIFIED IDEOGRAPH-5A1F"
+    },
+    {
+      "character": "娥",
+      "codepoint": "U+5A25",
+      "name": "CJK UNIFIED IDEOGRAPH-5A25"
+    },
+    {
+      "character": "嫦",
+      "codepoint": "U+5AE6",
+      "name": "CJK UNIFIED IDEOGRAPH-5AE6"
+    },
+    {
+      "character": "嬋",
+      "codepoint": "U+5B0B",
+      "name": "CJK UNIFIED IDEOGRAPH-5B0B"
+    },
+    {
+      "character": "嬌",
+      "codepoint": "U+5B0C",
+      "name": "CJK UNIFIED IDEOGRAPH-5B0C"
+    },
+    {
+      "character": "孵",
+      "codepoint": "U+5B75",
+      "name": "CJK UNIFIED IDEOGRAPH-5B75"
+    },
+    {
+      "character": "宍",
+      "codepoint": "U+5B8D",
+      "name": "CJK UNIFIED IDEOGRAPH-5B8D"
+    },
+    {
+      "character": "寓",
+      "codepoint": "U+5BD3",
+      "name": "CJK UNIFIED IDEOGRAPH-5BD3"
+    },
+    {
+      "character": "寞",
+      "codepoint": "U+5BDE",
+      "name": "CJK UNIFIED IDEOGRAPH-5BDE"
+    },
+    {
+      "character": "屹",
+      "codepoint": "U+5C79",
+      "name": "CJK UNIFIED IDEOGRAPH-5C79"
+    },
+    {
+      "character": "嶌",
+      "codepoint": "U+5D8C",
+      "name": "CJK UNIFIED IDEOGRAPH-5D8C"
+    },
+    {
+      "character": "嶽",
+      "codepoint": "U+5DBD",
+      "name": "CJK UNIFIED IDEOGRAPH-5DBD"
+    },
+    {
+      "character": "巫",
+      "codepoint": "U+5DEB",
+      "name": "CJK UNIFIED IDEOGRAPH-5DEB"
+    },
+    {
+      "character": "已",
+      "codepoint": "U+5DF2",
+      "name": "CJK UNIFIED IDEOGRAPH-5DF2"
+    },
+    {
+      "character": "廻",
+      "codepoint": "U+5EFB",
+      "name": "CJK UNIFIED IDEOGRAPH-5EFB"
+    },
+    {
+      "character": "弯",
+      "codepoint": "U+5F2F",
+      "name": "CJK UNIFIED IDEOGRAPH-5F2F"
+    },
+    {
+      "character": "怕",
+      "codepoint": "U+6015",
+      "name": "CJK UNIFIED IDEOGRAPH-6015"
+    },
+    {
+      "character": "恰",
+      "codepoint": "U+6070",
+      "name": "CJK UNIFIED IDEOGRAPH-6070"
+    },
+    {
+      "character": "悍",
+      "codepoint": "U+608D",
+      "name": "CJK UNIFIED IDEOGRAPH-608D"
+    },
+    {
+      "character": "悵",
+      "codepoint": "U+60B5",
+      "name": "CJK UNIFIED IDEOGRAPH-60B5"
+    },
+    {
+      "character": "惆",
+      "codepoint": "U+60C6",
+      "name": "CJK UNIFIED IDEOGRAPH-60C6"
+    },
+    {
+      "character": "愈",
+      "codepoint": "U+6108",
+      "name": "CJK UNIFIED IDEOGRAPH-6108"
+    },
+    {
+      "character": "慵",
+      "codepoint": "U+6175",
+      "name": "CJK UNIFIED IDEOGRAPH-6175"
+    },
+    {
+      "character": "憐",
+      "codepoint": "U+6190",
+      "name": "CJK UNIFIED IDEOGRAPH-6190"
+    },
+    {
+      "character": "憫",
+      "codepoint": "U+61AB",
+      "name": "CJK UNIFIED IDEOGRAPH-61AB"
+    },
+    {
+      "character": "懶",
+      "codepoint": "U+61F6",
+      "name": "CJK UNIFIED IDEOGRAPH-61F6"
+    },
+    {
+      "character": "懺",
+      "codepoint": "U+61FA",
+      "name": "CJK UNIFIED IDEOGRAPH-61FA"
+    },
+    {
+      "character": "懼",
+      "codepoint": "U+61FC",
+      "name": "CJK UNIFIED IDEOGRAPH-61FC"
+    },
+    {
+      "character": "拈",
+      "codepoint": "U+62C8",
+      "name": "CJK UNIFIED IDEOGRAPH-62C8"
+    },
+    {
+      "character": "拌",
+      "codepoint": "U+62CC",
+      "name": "CJK UNIFIED IDEOGRAPH-62CC"
+    },
+    {
+      "character": "掏",
+      "codepoint": "U+638F",
+      "name": "CJK UNIFIED IDEOGRAPH-638F"
+    },
+    {
+      "character": "掟",
+      "codepoint": "U+639F",
+      "name": "CJK UNIFIED IDEOGRAPH-639F"
+    },
+    {
+      "character": "插",
+      "codepoint": "U+63D2",
+      "name": "CJK UNIFIED IDEOGRAPH-63D2"
+    },
+    {
+      "character": "撩",
+      "codepoint": "U+64A9",
+      "name": "CJK UNIFIED IDEOGRAPH-64A9"
+    },
+    {
+      "character": "擾",
+      "codepoint": "U+64FE",
+      "name": "CJK UNIFIED IDEOGRAPH-64FE"
+    },
+    {
+      "character": "攬",
+      "codepoint": "U+652C",
+      "name": "CJK UNIFIED IDEOGRAPH-652C"
+    },
+    {
+      "character": "敲",
+      "codepoint": "U+6572",
+      "name": "CJK UNIFIED IDEOGRAPH-6572"
+    },
+    {
+      "character": "旎",
+      "codepoint": "U+65CE",
+      "name": "CJK UNIFIED IDEOGRAPH-65CE"
+    },
+    {
+      "character": "旖",
+      "codepoint": "U+65D6",
+      "name": "CJK UNIFIED IDEOGRAPH-65D6"
+    },
+    {
+      "character": "昂",
+      "codepoint": "U+6602",
+      "name": "CJK UNIFIED IDEOGRAPH-6602"
+    },
+    {
+      "character": "晦",
+      "codepoint": "U+6666",
+      "name": "CJK UNIFIED IDEOGRAPH-6666"
+    },
+    {
+      "character": "朔",
+      "codepoint": "U+6714",
+      "name": "CJK UNIFIED IDEOGRAPH-6714"
+    },
+    {
+      "character": "杏",
+      "codepoint": "U+674F",
+      "name": "CJK UNIFIED IDEOGRAPH-674F"
+    },
+    {
+      "character": "杰",
+      "codepoint": "U+6770",
+      "name": "CJK UNIFIED IDEOGRAPH-6770"
+    },
+    {
+      "character": "杵",
+      "codepoint": "U+6775",
+      "name": "CJK UNIFIED IDEOGRAPH-6775"
+    },
+    {
+      "character": "柊",
+      "codepoint": "U+67CA",
+      "name": "CJK UNIFIED IDEOGRAPH-67CA"
+    },
+    {
+      "character": "柚",
+      "codepoint": "U+67DA",
+      "name": "CJK UNIFIED IDEOGRAPH-67DA"
+    },
+    {
+      "character": "栞",
+      "codepoint": "U+681E",
+      "name": "CJK UNIFIED IDEOGRAPH-681E"
+    },
+    {
+      "character": "梓",
+      "codepoint": "U+6893",
+      "name": "CJK UNIFIED IDEOGRAPH-6893"
+    },
+    {
+      "character": "梟",
+      "codepoint": "U+689F",
+      "name": "CJK UNIFIED IDEOGRAPH-689F"
+    },
+    {
+      "character": "棗",
+      "codepoint": "U+68D7",
+      "name": "CJK UNIFIED IDEOGRAPH-68D7"
+    },
+    {
+      "character": "椀",
+      "codepoint": "U+6900",
+      "name": "CJK UNIFIED IDEOGRAPH-6900"
+    },
+    {
+      "character": "椒",
+      "codepoint": "U+6912",
+      "name": "CJK UNIFIED IDEOGRAPH-6912"
+    },
+    {
+      "character": "椿",
+      "codepoint": "U+693F",
+      "name": "CJK UNIFIED IDEOGRAPH-693F"
+    },
+    {
+      "character": "楓",
+      "codepoint": "U+6953",
+      "name": "CJK UNIFIED IDEOGRAPH-6953"
+    },
+    {
+      "character": "槃",
+      "codepoint": "U+69C3",
+      "name": "CJK UNIFIED IDEOGRAPH-69C3"
+    },
+    {
+      "character": "櫛",
+      "codepoint": "U+6ADB",
+      "name": "CJK UNIFIED IDEOGRAPH-6ADB"
+    },
+    {
+      "character": "歇",
+      "codepoint": "U+6B47",
+      "name": "CJK UNIFIED IDEOGRAPH-6B47"
+    },
+    {
+      "character": "汐",
+      "codepoint": "U+6C50",
+      "name": "CJK UNIFIED IDEOGRAPH-6C50"
+    },
+    {
+      "character": "沁",
+      "codepoint": "U+6C81",
+      "name": "CJK UNIFIED IDEOGRAPH-6C81"
+    },
+    {
+      "character": "沅",
+      "codepoint": "U+6C85",
+      "name": "CJK UNIFIED IDEOGRAPH-6C85"
+    },
+    {
+      "character": "沉",
+      "codepoint": "U+6C89",
+      "name": "CJK UNIFIED IDEOGRAPH-6C89"
+    },
+    {
+      "character": "洄",
+      "codepoint": "U+6D04",
+      "name": "CJK UNIFIED IDEOGRAPH-6D04"
+    },
+    {
+      "character": "涅",
+      "codepoint": "U+6D85",
+      "name": "CJK UNIFIED IDEOGRAPH-6D85"
+    },
+    {
+      "character": "涎",
+      "codepoint": "U+6D8E",
+      "name": "CJK UNIFIED IDEOGRAPH-6D8E"
+    },
+    {
+      "character": "淇",
+      "codepoint": "U+6DC7",
+      "name": "CJK UNIFIED IDEOGRAPH-6DC7"
+    },
+    {
+      "character": "淳",
+      "codepoint": "U+6DF3",
+      "name": "CJK UNIFIED IDEOGRAPH-6DF3"
+    },
+    {
+      "character": "淹",
+      "codepoint": "U+6DF9",
+      "name": "CJK UNIFIED IDEOGRAPH-6DF9"
+    },
+    {
+      "character": "游",
+      "codepoint": "U+6E38",
+      "name": "CJK UNIFIED IDEOGRAPH-6E38"
+    },
+    {
+      "character": "溜",
+      "codepoint": "U+6E9C",
+      "name": "CJK UNIFIED IDEOGRAPH-6E9C"
+    },
+    {
+      "character": "溯",
+      "codepoint": "U+6EAF",
+      "name": "CJK UNIFIED IDEOGRAPH-6EAF"
+    },
+    {
+      "character": "滄",
+      "codepoint": "U+6EC4",
+      "name": "CJK UNIFIED IDEOGRAPH-6EC4"
+    },
+    {
+      "character": "滲",
+      "codepoint": "U+6EF2",
+      "name": "CJK UNIFIED IDEOGRAPH-6EF2"
+    },
+    {
+      "character": "漙",
+      "codepoint": "U+6F19",
+      "name": "CJK UNIFIED IDEOGRAPH-6F19"
+    },
+    {
+      "character": "澈",
+      "codepoint": "U+6F88",
+      "name": "CJK UNIFIED IDEOGRAPH-6F88"
+    },
+    {
+      "character": "澧",
+      "codepoint": "U+6FA7",
+      "name": "CJK UNIFIED IDEOGRAPH-6FA7"
+    },
+    {
+      "character": "瀼",
+      "codepoint": "U+703C",
+      "name": "CJK UNIFIED IDEOGRAPH-703C"
+    },
+    {
+      "character": "灾",
+      "codepoint": "U+707E",
+      "name": "CJK UNIFIED IDEOGRAPH-707E"
+    },
+    {
+      "character": "炯",
+      "codepoint": "U+70AF",
+      "name": "CJK UNIFIED IDEOGRAPH-70AF"
+    },
+    {
+      "character": "煉",
+      "codepoint": "U+7149",
+      "name": "CJK UNIFIED IDEOGRAPH-7149"
+    },
+    {
+      "character": "燈",
+      "codepoint": "U+71C8",
+      "name": "CJK UNIFIED IDEOGRAPH-71C8"
+    },
+    {
+      "character": "燭",
+      "codepoint": "U+71ED",
+      "name": "CJK UNIFIED IDEOGRAPH-71ED"
+    },
+    {
+      "character": "牆",
+      "codepoint": "U+7246",
+      "name": "CJK UNIFIED IDEOGRAPH-7246"
+    },
+    {
+      "character": "牡",
+      "codepoint": "U+7261",
+      "name": "CJK UNIFIED IDEOGRAPH-7261"
+    },
+    {
+      "character": "犀",
+      "codepoint": "U+7280",
+      "name": "CJK UNIFIED IDEOGRAPH-7280"
+    },
+    {
+      "character": "猪",
+      "codepoint": "U+732A",
+      "name": "CJK UNIFIED IDEOGRAPH-732A"
+    },
+    {
+      "character": "珅",
+      "codepoint": "U+73C5",
+      "name": "CJK UNIFIED IDEOGRAPH-73C5"
+    },
+    {
+      "character": "琢",
+      "codepoint": "U+7422",
+      "name": "CJK UNIFIED IDEOGRAPH-7422"
+    },
+    {
+      "character": "琳",
+      "codepoint": "U+7433",
+      "name": "CJK UNIFIED IDEOGRAPH-7433"
+    },
+    {
+      "character": "琵",
+      "codepoint": "U+7435",
+      "name": "CJK UNIFIED IDEOGRAPH-7435"
+    },
+    {
+      "character": "琶",
+      "codepoint": "U+7436",
+      "name": "CJK UNIFIED IDEOGRAPH-7436"
+    },
+    {
+      "character": "瑟",
+      "codepoint": "U+745F",
+      "name": "CJK UNIFIED IDEOGRAPH-745F"
+    },
+    {
+      "character": "甫",
+      "codepoint": "U+752B",
+      "name": "CJK UNIFIED IDEOGRAPH-752B"
+    },
+    {
+      "character": "痒",
+      "codepoint": "U+75D2",
+      "name": "CJK UNIFIED IDEOGRAPH-75D2"
+    },
+    {
+      "character": "皎",
+      "codepoint": "U+768E",
+      "name": "CJK UNIFIED IDEOGRAPH-768E"
+    },
+    {
+      "character": "皓",
+      "codepoint": "U+7693",
+      "name": "CJK UNIFIED IDEOGRAPH-7693"
+    },
+    {
+      "character": "盈",
+      "codepoint": "U+76C8",
+      "name": "CJK UNIFIED IDEOGRAPH-76C8"
+    },
+    {
+      "character": "盔",
+      "codepoint": "U+76D4",
+      "name": "CJK UNIFIED IDEOGRAPH-76D4"
+    },
+    {
+      "character": "盞",
+      "codepoint": "U+76DE",
+      "name": "CJK UNIFIED IDEOGRAPH-76DE"
+    },
+    {
+      "character": "矣",
+      "codepoint": "U+77E3",
+      "name": "CJK UNIFIED IDEOGRAPH-77E3"
+    },
+    {
+      "character": "碧",
+      "codepoint": "U+78A7",
+      "name": "CJK UNIFIED IDEOGRAPH-78A7"
+    },
+    {
+      "character": "碩",
+      "codepoint": "U+78A9",
+      "name": "CJK UNIFIED IDEOGRAPH-78A9"
+    },
+    {
+      "character": "碾",
+      "codepoint": "U+78BE",
+      "name": "CJK UNIFIED IDEOGRAPH-78BE"
+    },
+    {
+      "character": "磐",
+      "codepoint": "U+78D0",
+      "name": "CJK UNIFIED IDEOGRAPH-78D0"
+    },
+    {
+      "character": "磚",
+      "codepoint": "U+78DA",
+      "name": "CJK UNIFIED IDEOGRAPH-78DA"
+    },
+    {
+      "character": "祓",
+      "codepoint": "U+7953",
+      "name": "CJK UNIFIED IDEOGRAPH-7953"
+    },
+    {
+      "character": "祟",
+      "codepoint": "U+795F",
+      "name": "CJK UNIFIED IDEOGRAPH-795F"
+    },
+    {
+      "character": "祠",
+      "codepoint": "U+7960",
+      "name": "CJK UNIFIED IDEOGRAPH-7960"
+    },
+    {
+      "character": "禄",
+      "codepoint": "U+7984",
+      "name": "CJK UNIFIED IDEOGRAPH-7984"
+    },
+    {
+      "character": "禊",
+      "codepoint": "U+798A",
+      "name": "CJK UNIFIED IDEOGRAPH-798A"
+    },
+    {
+      "character": "秣",
+      "codepoint": "U+79E3",
+      "name": "CJK UNIFIED IDEOGRAPH-79E3"
+    },
+    {
+      "character": "秦",
+      "codepoint": "U+79E6",
+      "name": "CJK UNIFIED IDEOGRAPH-79E6"
+    },
+    {
+      "character": "穗",
+      "codepoint": "U+7A57",
+      "name": "CJK UNIFIED IDEOGRAPH-7A57"
+    },
+    {
+      "character": "穿",
+      "codepoint": "U+7A7F",
+      "name": "CJK UNIFIED IDEOGRAPH-7A7F"
+    },
+    {
+      "character": "竭",
+      "codepoint": "U+7AED",
+      "name": "CJK UNIFIED IDEOGRAPH-7AED"
+    },
+    {
+      "character": "笏",
+      "codepoint": "U+7B0F",
+      "name": "CJK UNIFIED IDEOGRAPH-7B0F"
+    },
+    {
+      "character": "筇",
+      "codepoint": "U+7B47",
+      "name": "CJK UNIFIED IDEOGRAPH-7B47"
+    },
+    {
+      "character": "筍",
+      "codepoint": "U+7B4D",
+      "name": "CJK UNIFIED IDEOGRAPH-7B4D"
+    },
+    {
+      "character": "箏",
+      "codepoint": "U+7B8F",
+      "name": "CJK UNIFIED IDEOGRAPH-7B8F"
+    },
+    {
+      "character": "箒",
+      "codepoint": "U+7B92",
+      "name": "CJK UNIFIED IDEOGRAPH-7B92"
+    },
+    {
+      "character": "箭",
+      "codepoint": "U+7BAD",
+      "name": "CJK UNIFIED IDEOGRAPH-7BAD"
+    },
+    {
+      "character": "篇",
+      "codepoint": "U+7BC7",
+      "name": "CJK UNIFIED IDEOGRAPH-7BC7"
+    },
+    {
+      "character": "籟",
+      "codepoint": "U+7C5F",
+      "name": "CJK UNIFIED IDEOGRAPH-7C5F"
+    },
+    {
+      "character": "粥",
+      "codepoint": "U+7CA5",
+      "name": "CJK UNIFIED IDEOGRAPH-7CA5"
+    },
+    {
+      "character": "紈",
+      "codepoint": "U+7D08",
+      "name": "CJK UNIFIED IDEOGRAPH-7D08"
+    },
+    {
+      "character": "紗",
+      "codepoint": "U+7D17",
+      "name": "CJK UNIFIED IDEOGRAPH-7D17"
+    },
+    {
+      "character": "紬",
+      "codepoint": "U+7D2C",
+      "name": "CJK UNIFIED IDEOGRAPH-7D2C"
+    },
+    {
+      "character": "絳",
+      "codepoint": "U+7D73",
+      "name": "CJK UNIFIED IDEOGRAPH-7D73"
+    },
+    {
+      "character": "綾",
+      "codepoint": "U+7DBE",
+      "name": "CJK UNIFIED IDEOGRAPH-7DBE"
+    },
+    {
+      "character": "繍",
+      "codepoint": "U+7E4D",
+      "name": "CJK UNIFIED IDEOGRAPH-7E4D"
+    },
+    {
+      "character": "约",
+      "codepoint": "U+7EA6",
+      "name": "CJK UNIFIED IDEOGRAPH-7EA6"
+    },
+    {
+      "character": "缄",
+      "codepoint": "U+7F04",
+      "name": "CJK UNIFIED IDEOGRAPH-7F04"
+    },
+    {
+      "character": "羲",
+      "codepoint": "U+7FB2",
+      "name": "CJK UNIFIED IDEOGRAPH-7FB2"
+    },
+    {
+      "character": "翩",
+      "codepoint": "U+7FE9",
+      "name": "CJK UNIFIED IDEOGRAPH-7FE9"
+    },
+    {
+      "character": "耘",
+      "codepoint": "U+8018",
+      "name": "CJK UNIFIED IDEOGRAPH-8018"
+    },
+    {
+      "character": "耶",
+      "codepoint": "U+8036",
+      "name": "CJK UNIFIED IDEOGRAPH-8036"
+    },
+    {
+      "character": "耽",
+      "codepoint": "U+803D",
+      "name": "CJK UNIFIED IDEOGRAPH-803D"
+    },
+    {
+      "character": "聚",
+      "codepoint": "U+805A",
+      "name": "CJK UNIFIED IDEOGRAPH-805A"
+    },
+    {
+      "character": "聳",
+      "codepoint": "U+8073",
+      "name": "CJK UNIFIED IDEOGRAPH-8073"
+    },
+    {
+      "character": "腔",
+      "codepoint": "U+8154",
+      "name": "CJK UNIFIED IDEOGRAPH-8154"
+    },
+    {
+      "character": "膩",
+      "codepoint": "U+81A9",
+      "name": "CJK UNIFIED IDEOGRAPH-81A9"
+    },
+    {
+      "character": "臾",
+      "codepoint": "U+81FE",
+      "name": "CJK UNIFIED IDEOGRAPH-81FE"
+    },
+    {
+      "character": "艟",
+      "codepoint": "U+825F",
+      "name": "CJK UNIFIED IDEOGRAPH-825F"
+    },
+    {
+      "character": "艨",
+      "codepoint": "U+8268",
+      "name": "CJK UNIFIED IDEOGRAPH-8268"
+    },
+    {
+      "character": "芦",
+      "codepoint": "U+82A6",
+      "name": "CJK UNIFIED IDEOGRAPH-82A6"
+    },
+    {
+      "character": "芭",
+      "codepoint": "U+82AD",
+      "name": "CJK UNIFIED IDEOGRAPH-82AD"
+    },
+    {
+      "character": "苔",
+      "codepoint": "U+82D4",
+      "name": "CJK UNIFIED IDEOGRAPH-82D4"
+    },
+    {
+      "character": "茅",
+      "codepoint": "U+8305",
+      "name": "CJK UNIFIED IDEOGRAPH-8305"
+    },
+    {
+      "character": "茉",
+      "codepoint": "U+8309",
+      "name": "CJK UNIFIED IDEOGRAPH-8309"
+    },
+    {
+      "character": "茫",
+      "codepoint": "U+832B",
+      "name": "CJK UNIFIED IDEOGRAPH-832B"
+    },
+    {
+      "character": "茸",
+      "codepoint": "U+8338",
+      "name": "CJK UNIFIED IDEOGRAPH-8338"
+    },
+    {
+      "character": "莉",
+      "codepoint": "U+8389",
+      "name": "CJK UNIFIED IDEOGRAPH-8389"
+    },
+    {
+      "character": "萌",
+      "codepoint": "U+840C",
+      "name": "CJK UNIFIED IDEOGRAPH-840C"
+    },
+    {
+      "character": "葭",
+      "codepoint": "U+846D",
+      "name": "CJK UNIFIED IDEOGRAPH-846D"
+    },
+    {
+      "character": "葱",
+      "codepoint": "U+8471",
+      "name": "CJK UNIFIED IDEOGRAPH-8471"
+    },
+    {
+      "character": "葵",
+      "codepoint": "U+8475",
+      "name": "CJK UNIFIED IDEOGRAPH-8475"
+    },
+    {
+      "character": "葺",
+      "codepoint": "U+847A",
+      "name": "CJK UNIFIED IDEOGRAPH-847A"
+    },
+    {
+      "character": "蒹",
+      "codepoint": "U+84B9",
+      "name": "CJK UNIFIED IDEOGRAPH-84B9"
+    },
+    {
+      "character": "蒿",
+      "codepoint": "U+84BF",
+      "name": "CJK UNIFIED IDEOGRAPH-84BF"
+    },
+    {
+      "character": "蓼",
+      "codepoint": "U+84FC",
+      "name": "CJK UNIFIED IDEOGRAPH-84FC"
+    },
+    {
+      "character": "蔗",
+      "codepoint": "U+8517",
+      "name": "CJK UNIFIED IDEOGRAPH-8517"
+    },
+    {
+      "character": "蕉",
+      "codepoint": "U+8549",
+      "name": "CJK UNIFIED IDEOGRAPH-8549"
+    },
+    {
+      "character": "薙",
+      "codepoint": "U+8599",
+      "name": "CJK UNIFIED IDEOGRAPH-8599"
+    },
+    {
+      "character": "藕",
+      "codepoint": "U+85D5",
+      "name": "CJK UNIFIED IDEOGRAPH-85D5"
+    },
+    {
+      "character": "虧",
+      "codepoint": "U+8667",
+      "name": "CJK UNIFIED IDEOGRAPH-8667"
+    },
+    {
+      "character": "蛾",
+      "codepoint": "U+86FE",
+      "name": "CJK UNIFIED IDEOGRAPH-86FE"
+    },
+    {
+      "character": "蜀",
+      "codepoint": "U+8700",
+      "name": "CJK UNIFIED IDEOGRAPH-8700"
+    },
+    {
+      "character": "蝴",
+      "codepoint": "U+8774",
+      "name": "CJK UNIFIED IDEOGRAPH-8774"
+    },
+    {
+      "character": "蝶",
+      "codepoint": "U+8776",
+      "name": "CJK UNIFIED IDEOGRAPH-8776"
+    },
+    {
+      "character": "蟲",
+      "codepoint": "U+87F2",
+      "name": "CJK UNIFIED IDEOGRAPH-87F2"
+    },
+    {
+      "character": "蟾",
+      "codepoint": "U+87FE",
+      "name": "CJK UNIFIED IDEOGRAPH-87FE"
+    },
+    {
+      "character": "袱",
+      "codepoint": "U+88B1",
+      "name": "CJK UNIFIED IDEOGRAPH-88B1"
+    },
+    {
+      "character": "裳",
+      "codepoint": "U+88F3",
+      "name": "CJK UNIFIED IDEOGRAPH-88F3"
+    },
+    {
+      "character": "襪",
+      "codepoint": "U+896A",
+      "name": "CJK UNIFIED IDEOGRAPH-896A"
+    },
+    {
+      "character": "襯",
+      "codepoint": "U+896F",
+      "name": "CJK UNIFIED IDEOGRAPH-896F"
+    },
+    {
+      "character": "豈",
+      "codepoint": "U+8C48",
+      "name": "CJK UNIFIED IDEOGRAPH-8C48"
+    },
+    {
+      "character": "豺",
+      "codepoint": "U+8C7A",
+      "name": "CJK UNIFIED IDEOGRAPH-8C7A"
+    },
+    {
+      "character": "踢",
+      "codepoint": "U+8E22",
+      "name": "CJK UNIFIED IDEOGRAPH-8E22"
+    },
+    {
+      "character": "蹲",
+      "codepoint": "U+8E72",
+      "name": "CJK UNIFIED IDEOGRAPH-8E72"
+    },
+    {
+      "character": "躯",
+      "codepoint": "U+8EAF",
+      "name": "CJK UNIFIED IDEOGRAPH-8EAF"
+    },
+    {
+      "character": "軻",
+      "codepoint": "U+8EFB",
+      "name": "CJK UNIFIED IDEOGRAPH-8EFB"
+    },
+    {
+      "character": "軾",
+      "codepoint": "U+8EFE",
+      "name": "CJK UNIFIED IDEOGRAPH-8EFE"
+    },
+    {
+      "character": "逅",
+      "codepoint": "U+9005",
+      "name": "CJK UNIFIED IDEOGRAPH-9005"
+    },
+    {
+      "character": "逗",
+      "codepoint": "U+9017",
+      "name": "CJK UNIFIED IDEOGRAPH-9017"
+    },
+    {
+      "character": "逢",
+      "codepoint": "U+9022",
+      "name": "CJK UNIFIED IDEOGRAPH-9022"
+    },
+    {
+      "character": "遁",
+      "codepoint": "U+9041",
+      "name": "CJK UNIFIED IDEOGRAPH-9041"
+    },
+    {
+      "character": "遏",
+      "codepoint": "U+904F",
+      "name": "CJK UNIFIED IDEOGRAPH-904F"
+    },
+    {
+      "character": "邂",
+      "codepoint": "U+9082",
+      "name": "CJK UNIFIED IDEOGRAPH-9082"
+    },
+    {
+      "character": "邶",
+      "codepoint": "U+90B6",
+      "name": "CJK UNIFIED IDEOGRAPH-90B6"
+    },
+    {
+      "character": "酥",
+      "codepoint": "U+9165",
+      "name": "CJK UNIFIED IDEOGRAPH-9165"
+    },
+    {
+      "character": "醋",
+      "codepoint": "U+918B",
+      "name": "CJK UNIFIED IDEOGRAPH-918B"
+    },
+    {
+      "character": "醬",
+      "codepoint": "U+91AC",
+      "name": "CJK UNIFIED IDEOGRAPH-91AC"
+    },
+    {
+      "character": "釭",
+      "codepoint": "U+91ED",
+      "name": "CJK UNIFIED IDEOGRAPH-91ED"
+    },
+    {
+      "character": "釵",
+      "codepoint": "U+91F5",
+      "name": "CJK UNIFIED IDEOGRAPH-91F5"
+    },
+    {
+      "character": "鈎",
+      "codepoint": "U+920E",
+      "name": "CJK UNIFIED IDEOGRAPH-920E"
+    },
+    {
+      "character": "鈿",
+      "codepoint": "U+923F",
+      "name": "CJK UNIFIED IDEOGRAPH-923F"
+    },
+    {
+      "character": "鉾",
+      "codepoint": "U+927E",
+      "name": "CJK UNIFIED IDEOGRAPH-927E"
+    },
+    {
+      "character": "鋸",
+      "codepoint": "U+92F8",
+      "name": "CJK UNIFIED IDEOGRAPH-92F8"
+    },
+    {
+      "character": "錘",
+      "codepoint": "U+9318",
+      "name": "CJK UNIFIED IDEOGRAPH-9318"
+    },
+    {
+      "character": "鏤",
+      "codepoint": "U+93E4",
+      "name": "CJK UNIFIED IDEOGRAPH-93E4"
+    },
+    {
+      "character": "鑼",
+      "codepoint": "U+947C",
+      "name": "CJK UNIFIED IDEOGRAPH-947C"
+    },
+    {
+      "character": "闌",
+      "codepoint": "U+95CC",
+      "name": "CJK UNIFIED IDEOGRAPH-95CC"
+    },
+    {
+      "character": "霎",
+      "codepoint": "U+970E",
+      "name": "CJK UNIFIED IDEOGRAPH-970E"
+    },
+    {
+      "character": "靡",
+      "codepoint": "U+9761",
+      "name": "CJK UNIFIED IDEOGRAPH-9761"
+    },
+    {
+      "character": "頌",
+      "codepoint": "U+980C",
+      "name": "CJK UNIFIED IDEOGRAPH-980C"
+    },
+    {
+      "character": "颯",
+      "codepoint": "U+98AF",
+      "name": "CJK UNIFIED IDEOGRAPH-98AF"
+    },
+    {
+      "character": "颸",
+      "codepoint": "U+98B8",
+      "name": "CJK UNIFIED IDEOGRAPH-98B8"
+    },
+    {
+      "character": "餃",
+      "codepoint": "U+9903",
+      "name": "CJK UNIFIED IDEOGRAPH-9903"
+    },
+    {
+      "character": "餡",
+      "codepoint": "U+9921",
+      "name": "CJK UNIFIED IDEOGRAPH-9921"
+    },
+    {
+      "character": "驀",
+      "codepoint": "U+9A40",
+      "name": "CJK UNIFIED IDEOGRAPH-9A40"
+    },
+    {
+      "character": "驱",
+      "codepoint": "U+9A71",
+      "name": "CJK UNIFIED IDEOGRAPH-9A71"
+    },
+    {
+      "character": "魍",
+      "codepoint": "U+9B4D",
+      "name": "CJK UNIFIED IDEOGRAPH-9B4D"
+    },
+    {
+      "character": "魎",
+      "codepoint": "U+9B4E",
+      "name": "CJK UNIFIED IDEOGRAPH-9B4E"
+    },
+    {
+      "character": "魑",
+      "codepoint": "U+9B51",
+      "name": "CJK UNIFIED IDEOGRAPH-9B51"
+    },
+    {
+      "character": "鯛",
+      "codepoint": "U+9BDB",
+      "name": "CJK UNIFIED IDEOGRAPH-9BDB"
+    },
+    {
+      "character": "鳶",
+      "codepoint": "U+9CF6",
+      "name": "CJK UNIFIED IDEOGRAPH-9CF6"
+    },
+    {
+      "character": "鴛",
+      "codepoint": "U+9D1B",
+      "name": "CJK UNIFIED IDEOGRAPH-9D1B"
+    },
+    {
+      "character": "鴣",
+      "codepoint": "U+9D23",
+      "name": "CJK UNIFIED IDEOGRAPH-9D23"
+    },
+    {
+      "character": "鴦",
+      "codepoint": "U+9D26",
+      "name": "CJK UNIFIED IDEOGRAPH-9D26"
+    },
+    {
+      "character": "鵲",
+      "codepoint": "U+9D72",
+      "name": "CJK UNIFIED IDEOGRAPH-9D72"
+    },
+    {
+      "character": "鷓",
+      "codepoint": "U+9DD3",
+      "name": "CJK UNIFIED IDEOGRAPH-9DD3"
+    },
+    {
+      "character": "鸞",
+      "codepoint": "U+9E1E",
+      "name": "CJK UNIFIED IDEOGRAPH-9E1E"
+    },
+    {
+      "character": "麩",
+      "codepoint": "U+9EA9",
+      "name": "CJK UNIFIED IDEOGRAPH-9EA9"
+    },
+    {
+      "character": "麾",
+      "codepoint": "U+9EBE",
+      "name": "CJK UNIFIED IDEOGRAPH-9EBE"
+    },
+    {
+      "character": "黍",
+      "codepoint": "U+9ECD",
+      "name": "CJK UNIFIED IDEOGRAPH-9ECD"
+    },
+    {
+      "character": "黴",
+      "codepoint": "U+9EF4",
+      "name": "CJK UNIFIED IDEOGRAPH-9EF4"
+    },
+    {
+      "character": "＆",
+      "codepoint": "U+FF06",
+      "name": "FULLWIDTH AMPERSAND"
+    },
+    {
+      "character": "＊",
+      "codepoint": "U+FF0A",
+      "name": "FULLWIDTH ASTERISK"
+    },
+    {
+      "character": "＋",
+      "codepoint": "U+FF0B",
+      "name": "FULLWIDTH PLUS SIGN"
+    },
+    {
+      "character": "；",
+      "codepoint": "U+FF1B",
+      "name": "FULLWIDTH SEMICOLON"
+    },
+    {
+      "character": "￥",
+      "codepoint": "U+FFE5",
+      "name": "FULLWIDTH YEN SIGN"
+    }
+  ],
+  "registrationOverrides": [
+    {
+      "file": "interface/core.gfx",
+      "installedSha256": "90D9751FA3DC1FAF0AADD6F2C725D523BDED8CD908DC27F7E6F08E04058BF1BA",
+      "generatedSha256": "706F0F7F6DE5637697C8BF0CE147325496F469BC81BE85E8F590EDFCDA1E2F60",
+      "patchedJapaneseOverrides": 36
+    },
+    {
+      "file": "interface/load_screen_font.gfx",
+      "installedSha256": "F347D95F999D8BCB6D05F44210313CBA5471FDE490B9F58BC81A88D7BA155030",
+      "generatedSha256": "953E713C29EE1EACF7F7CAC4C8412F496FFB825B1E03D9F49EC314B2E85EB227",
+      "patchedJapaneseOverrides": 2
+    }
+  ],
+  "overrides": [
+    {
+      "name": "ToolTip_Font",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_16"
+      ],
+      "fallbackProfile": "yz_jp_extra_s16_b0_i0_lh16_base16"
+    },
+    {
+      "name": "AnimatedMapText",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_18"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "Main_16",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_16_bold"
+      ],
+      "fallbackProfile": "yz_jp_extra_s16_b1_i0_lh16_base16"
+    },
+    {
+      "name": "Main_14",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "Main_14_grey",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "Main_14_black",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14_bold"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b1_i0_lh14_base14"
+    },
+    {
+      "name": "Main_14_bold",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14_bold"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b1_i0_lh14_base14"
+    },
+    {
+      "name": "Main_14_eu",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "garamond_14",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/garamond_14"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "vic_18_black",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/vic_18"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "vic_18",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/vic_18"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "vic_22",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/vic_22"
+      ],
+      "fallbackProfile": "yz_jp_extra_s17_b0_i0_lh17_base17"
+    },
+    {
+      "name": "vic_36_black",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/vic_36"
+      ],
+      "fallbackProfile": "yz_jp_extra_s31_b0_i0_lh31_base31"
+    },
+    {
+      "name": "vic_36",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/vic_36"
+      ],
+      "fallbackProfile": "yz_jp_extra_s31_b0_i0_lh31_base31"
+    },
+    {
+      "name": "hoi_16mbs",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_16mbs"
+      ],
+      "fallbackProfile": "yz_jp_extra_s12_b1_i0_lh14_base12"
+    },
+    {
+      "name": "hoi_18",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_18"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "hoi_18b",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_18b"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b0_i0_lh14_base14"
+    },
+    {
+      "name": "hoi_18mbs",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_18mbs"
+      ],
+      "fallbackProfile": "yz_jp_extra_s14_b1_i0_lh16_base14"
+    },
+    {
+      "name": "hoi_20b",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_20b"
+      ],
+      "fallbackProfile": "yz_jp_extra_s15_b0_i0_lh15_base15"
+    },
+    {
+      "name": "hoi_20bs",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_20bs"
+      ],
+      "fallbackProfile": "yz_jp_extra_s15_b1_i0_lh15_base15"
+    },
+    {
+      "name": "hoi4_typewriter16",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi4_typewriter16"
+      ],
+      "fallbackProfile": "yz_jp_extra_s12_b0_i0_lh14_base12"
+    },
+    {
+      "name": "hoi4_typewriter16_inverted",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi4_typewriter16_inverted"
+      ],
+      "fallbackProfile": "yz_jp_extra_s12_b0_i0_lh14_base12"
+    },
+    {
+      "name": "hoi4_typewriter22",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi4_typewriter22"
+      ],
+      "fallbackProfile": "yz_jp_extra_s17_b0_i0_lh17_base17"
+    },
+    {
+      "name": "hoi4_typewriter22_inverted",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi4_typewriter22_inverted"
+      ],
+      "fallbackProfile": "yz_jp_extra_s17_b0_i0_lh17_base17"
+    },
+    {
+      "name": "hoi_24header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_24header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s18_b0_i0_lh21_base18"
+    },
+    {
+      "name": "nsb_hoi_24header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_24header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s18_b0_i0_lh21_base18"
+    },
+    {
+      "name": "hoi_30header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_30header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s24_b1_i0_lh27_base24"
+    },
+    {
+      "name": "hoi_36header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_36header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s26_b0_i0_lh30_base26"
+    },
+    {
+      "name": "nsb_hoi_36header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_36header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s26_b0_i0_lh30_base26"
+    },
+    {
+      "name": "hoi_22tech",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_22tech"
+      ],
+      "fallbackProfile": "yz_jp_extra_s16_b1_i0_lh16_base16"
+    },
+    {
+      "name": "hoi_22chat",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_22tech"
+      ],
+      "fallbackProfile": "yz_jp_extra_s16_b1_i0_lh16_base16"
+    },
+    {
+      "name": "hoi_33",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_33"
+      ],
+      "fallbackProfile": "yz_jp_extra_s26_b0_i0_lh26_base26"
+    },
+    {
+      "name": "tahoma_60",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_mapfont4_0",
+        "gfx/fonts/japanese/hoi_mapfont4_1"
+      ],
+      "fallbackProfile": "yz_jp_extra_s64_b0_i0_lh64_base64"
+    },
+    {
+      "name": "hoi_30",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_30"
+      ],
+      "fallbackProfile": "yz_jp_extra_s24_b0_i0_lh24_base24"
+    },
+    {
+      "name": "Arial12",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/Arial12"
+      ],
+      "fallbackProfile": "yz_jp_extra_s12_b0_i0_lh16_base12"
+    },
+    {
+      "name": "cg_16b",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/cg_16b"
+      ],
+      "fallbackProfile": "yz_jp_extra_s13_b0_i0_lh13_base13"
+    },
+    {
+      "name": "loadscreen_header",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_30header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s24_b1_i0_lh27_base24"
+    },
+    {
+      "name": "loadscreen_tip",
+      "vanillaFontfiles": [
+        "gfx/fonts/japanese/hoi_24header"
+      ],
+      "fallbackProfile": "yz_jp_extra_s18_b0_i0_lh21_base18"
+    }
+  ],
+  "generatedProfiles": [
+    {
+      "profile": "yz_jp_extra_s12_b0_i0_lh14_base12",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        172
+      ],
+      "fntSha256": "41FB474B0AA9C0B6426227A13FBAED33D5C00AD327E8C3C0E7E62FAC3836D3A7",
+      "ddsSha256": "9E33E11C1A281A39D82F2534C5064D192234DFB350704B42BFD8A9DDD1B95124"
+    },
+    {
+      "profile": "yz_jp_extra_s12_b0_i0_lh16_base12",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        172
+      ],
+      "fntSha256": "BFBAAF8A45544E7AF95B7B4CB78FAE7E3006F06ABEE2F5446F40E5BF738CC9AD",
+      "ddsSha256": "9E33E11C1A281A39D82F2534C5064D192234DFB350704B42BFD8A9DDD1B95124"
+    },
+    {
+      "profile": "yz_jp_extra_s12_b1_i0_lh14_base12",
+      "sourceWeight": "Bold",
+      "atlas": [
+        512,
+        176
+      ],
+      "fntSha256": "CB6885803912C03C15A4AB71F06A606039E366F44448C35037A413F8CDE45CF6",
+      "ddsSha256": "A4901DE03C032DAFB1403D7285CE122CA90123F3DEDEBAC3813384DA77551F03"
+    },
+    {
+      "profile": "yz_jp_extra_s13_b0_i0_lh13_base13",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        180
+      ],
+      "fntSha256": "A0EE0A7442928C5E6DDE56CE0110D51B42C796C0D7091971553C68073FB33126",
+      "ddsSha256": "71C553872AF41012436FA5CDC0B2A236AFD00332B0F78F8918F8514EE3DD16EC"
+    },
+    {
+      "profile": "yz_jp_extra_s14_b0_i0_lh14_base14",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        204
+      ],
+      "fntSha256": "430AA7854192E9F98078504D66F1CB7B01B25FADA08F01377D7435688B78E849",
+      "ddsSha256": "BB7EEDE36404073B257EB14D58BE19AE444ADE34F9510BDD80CA8FC7BDE0EB75"
+    },
+    {
+      "profile": "yz_jp_extra_s14_b1_i0_lh14_base14",
+      "sourceWeight": "Bold",
+      "atlas": [
+        512,
+        212
+      ],
+      "fntSha256": "686C2ED4CC2E4F41F3853C8EC18866840832B06F0038996D1878795CA1D1E33E",
+      "ddsSha256": "E108D78617156F4C014DB45368E8DA4B64F82FBAA917BE712B17406E50DDBDB2"
+    },
+    {
+      "profile": "yz_jp_extra_s14_b1_i0_lh16_base14",
+      "sourceWeight": "Bold",
+      "atlas": [
+        512,
+        212
+      ],
+      "fntSha256": "6B7DC3E7F79BFB004481361EF3A5A9767D725FDA5C071966D828A0970B5D0A6D",
+      "ddsSha256": "E108D78617156F4C014DB45368E8DA4B64F82FBAA917BE712B17406E50DDBDB2"
+    },
+    {
+      "profile": "yz_jp_extra_s15_b0_i0_lh15_base15",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        220
+      ],
+      "fntSha256": "660C62E3A94A98651FB948306EBB6D4302F62E3A795DA15BF9540AA6717987DC",
+      "ddsSha256": "D9078E4091E3D54E12377E23F564D5A279A0D9A524D38AB54A41C00CE3DD5497"
+    },
+    {
+      "profile": "yz_jp_extra_s15_b1_i0_lh15_base15",
+      "sourceWeight": "Bold",
+      "atlas": [
+        512,
+        228
+      ],
+      "fntSha256": "F6D167982F630A2F1D0913FD912C25F46C39AD39BDBD1CB290ED28322100BAFC",
+      "ddsSha256": "46FA169FB4E6BB5B2D9FAD015B60C7BA3C4575B454547C2CD7135692423CE239"
+    },
+    {
+      "profile": "yz_jp_extra_s16_b0_i0_lh16_base16",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        248
+      ],
+      "fntSha256": "239E78BA9925BB9C38B0439D82F6EC99F1FA97B59E54C26F0820C1E9E570CFA6",
+      "ddsSha256": "6B5B4223C56477B7FFB4D029115C51E2B889F2A8F26FB17295F101DE692894DF"
+    },
+    {
+      "profile": "yz_jp_extra_s16_b1_i0_lh16_base16",
+      "sourceWeight": "Bold",
+      "atlas": [
+        512,
+        252
+      ],
+      "fntSha256": "70FBAC199ED7403E681B9CD47F6265BD74D6A8AE6328630D004B34F2B498C595",
+      "ddsSha256": "B32A4DB440864C45533B105FCCFD09A56516431E33B48CB4D373E61EF341DE8A"
+    },
+    {
+      "profile": "yz_jp_extra_s17_b0_i0_lh17_base17",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        260
+      ],
+      "fntSha256": "76CA759CFC013E14F497F75E287DBD375C407AA3DE84FB5B8D57DA94483856A9",
+      "ddsSha256": "7AA54549B16446F63CDB25F2E18FDB942E9060369CC67C5F3DF38734D364D4FA"
+    },
+    {
+      "profile": "yz_jp_extra_s18_b0_i0_lh21_base18",
+      "sourceWeight": "Regular",
+      "atlas": [
+        512,
+        288
+      ],
+      "fntSha256": "024098A1254BD2DBEEB1CA1484B823012810CEAD7FC6027DFDB7F88B9279A567",
+      "ddsSha256": "CEE975BB2973078A86CEB334D43F497778CA92783EE25187F5482A4AA7309378"
+    },
+    {
+      "profile": "yz_jp_extra_s24_b0_i0_lh24_base24",
+      "sourceWeight": "Regular",
+      "atlas": [
+        1024,
+        228
+      ],
+      "fntSha256": "DC1CFEA85A45F056AC995DB7BD5CCC413C3A8BD9D78D509920510EE75FF818B5",
+      "ddsSha256": "1C8B55721FB9F47D7DEE8E0F1210E1B9E8E969BE34F7612667563B1CCCB16EEF"
+    },
+    {
+      "profile": "yz_jp_extra_s24_b1_i0_lh27_base24",
+      "sourceWeight": "Bold",
+      "atlas": [
+        1024,
+        228
+      ],
+      "fntSha256": "25EAF32B6E5510F7140981F77C2BE5DC807EA48E477567D213F5C9B9B4F2DE2A",
+      "ddsSha256": "077EA5E4CC3740941D16AE78932DED5C57207A3F5D18AEE10DA9262E670CE4CA"
+    },
+    {
+      "profile": "yz_jp_extra_s26_b0_i0_lh26_base26",
+      "sourceWeight": "Regular",
+      "atlas": [
+        1024,
+        272
+      ],
+      "fntSha256": "5B927082CA14C9F51AC6DDCDE09FEF111F4BA8046A9B163A9FD0EB52303B194E",
+      "ddsSha256": "CBE67A8E2737B0E9AD165262C909F795AE7F3803169D4B8F7C7B7717CE2CE14E"
+    },
+    {
+      "profile": "yz_jp_extra_s26_b0_i0_lh30_base26",
+      "sourceWeight": "Regular",
+      "atlas": [
+        1024,
+        272
+      ],
+      "fntSha256": "CD499C96376593A3F5C5C1407F75A870680C2985A02EA78946448C15027DD4DD",
+      "ddsSha256": "CBE67A8E2737B0E9AD165262C909F795AE7F3803169D4B8F7C7B7717CE2CE14E"
+    },
+    {
+      "profile": "yz_jp_extra_s31_b0_i0_lh31_base31",
+      "sourceWeight": "Regular",
+      "atlas": [
+        1024,
+        348
+      ],
+      "fntSha256": "AC56A517DEC9EF55783BFF66F3AC059BA560B061C1815C9BBC267AC55916249D",
+      "ddsSha256": "F7D98CAB16E2D8BB56C4E1A83A8FEC01F56580E46424FFE849B5B9380ECFCA30"
+    },
+    {
+      "profile": "yz_jp_extra_s64_b0_i0_lh64_base64",
+      "sourceWeight": "Regular",
+      "atlas": [
+        1024,
+        1260
+      ],
+      "fntSha256": "EFD3E8FDDE2B2594AAD2B3B10190A3EB4BA6C9D1ECFD8184ACAAD5627F093A7B",
+      "ddsSha256": "504EDCB3175909B0C9B2CD6E24B4EAC7B46A5EA1060645E8409A5D56495AD1A5"
+    }
+  ]
+}

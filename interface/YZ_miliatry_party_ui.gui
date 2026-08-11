@@ -75,7 +75,7 @@ guiTypes = {
 				y = -2
 			}
 			font = "hoi_16mbs"
-			text = "柚子战争经济局"
+			text = "yz_gui_label_war_economy"
 			maxHeight = 30
 			maxWidth = 120
 			alwaystransparent = yes
@@ -87,7 +87,7 @@ guiTypes = {
 				y = 75
 			}
 			font = "hoi_16mbs"
-			text = "柚子特别行动处"
+			text = "yz_gui_label_special_ops"
 			maxHeight = 30
 			maxWidth = 120
 			alwaystransparent = yes
@@ -96,7 +96,7 @@ guiTypes = {
 			name = "Yz_cos_title"
 			position = { x = 28 y = 128 }
 			font = "hoi_24header"
-			text = "柚子参谋总长"
+			text = "yz_gui_label_chief_of_staff"
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes

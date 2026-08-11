@@ -47,7 +47,7 @@ guiTypes = {
 			name ="poster_yz_text_1_"
 			position = { x = 10 y = @TEXT_Y_2 }
 			font = "hoi_18mbs"
-			text = "暂无"
+			text = "yz_gui_label_none"
 			format = center
 			maxWidth = 150
 		}
@@ -70,7 +70,7 @@ guiTypes = {
 			name ="poster_yz_text_2_"
 			position = { x = 176 y = @TEXT_Y_2 }
 			font = "hoi_18mbs"
-			text = "暂无"
+			text = "yz_gui_label_none"
 			format = center
 			maxWidth = 150
 		}
@@ -93,7 +93,7 @@ guiTypes = {
 			name ="poster_yz_text_3_"
 			position = { x = 344 y = @TEXT_Y_2 }
 			font = "hoi_18mbs"
-			text = "暂无"
+			text = "yz_gui_label_none"
 			format = center
 			maxWidth = 150
 		}

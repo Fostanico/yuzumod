@@ -1,15 +1,15 @@
 spriteTypes = {
 	spriteType = {   #前三个是基本组件——2025.8.4，17：11，伊尔诺
 		name = "GFX_yuzu_super_event_background"
-		textureFile = "gfx/super_event/Yuzu_Super_Event_Window.dds"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Window.png"
 	}
 	spriteType = {
 		name = "GFX_yuzu_sp_event_underlay"
-		textureFile = "gfx/super_event/Yuzu_Super_Event_Underlay.dds"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Underlay.png"
 	}
 	spriteType = {
 		name = "GFX_yuzu_sp_event_close_button"
-		textureFile = "gfx/super_event/Yuzu_Super_Event_Close_Button.dds"
+		textureFile = "gfx/super_event/Yuzu_Super_Event_Close_Button.png"
 	}
 	#下面是超事件的背景图——2025.8.4，17：29——伊尔诺
 	spriteType = {#穗织的毁灭
@@ -222,6 +222,6 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_super_event_we_have_fukai_omo"
-		textureFile = "gfx/super_event/Super_event_we_have_fukai_omo.dds"
+		textureFile = "gfx/super_event/Super_event_we_have_fukai_omo.png"
 	}
 }

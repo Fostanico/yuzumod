@@ -48,7 +48,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "monvningning"
+            name = monvningning
             picture = GFX_portrait_MON_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -73,7 +73,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "monvningning"
+            name = monvningning
             picture = GFX_portrait_MON_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -98,7 +98,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "monvningning"
+            name = monvningning
             picture = GFX_portrait_MON_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -123,7 +123,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "monvningning"
+            name = monvningning
             picture = GFX_portrait_MON_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -156,7 +156,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "zhifuningning"
+            name = zhifuningning
             picture = GFX_portrait_ADD_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -181,7 +181,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "zhifuningning"
+            name = zhifuningning
             picture = GFX_portrait_ADD_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -206,7 +206,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "zhifuningning"
+            name = zhifuningning
             picture = GFX_portrait_ADD_ningning
             desc = ningning_desc
             expire = "2095.1.1"
@@ -231,7 +231,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "zhifuningning"
+            name = zhifuningning
             picture = GFX_portrait_ADD_ningning
             desc = ningning_desc
             expire = "2095.1.1"

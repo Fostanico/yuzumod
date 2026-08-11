@@ -1,0 +1,22 @@
+leader_traits = {
+    # Stable identity markers used by shared protection and maintenance logic.
+    yz_yuzusoft_character = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+        modifier = {
+            army_attack_factor = 0.01
+            army_defence_factor = 0.01
+        }
+    }
+
+    yz_easter_egg_character = {
+        trait_type = personality_trait
+        type = land
+        new_commander_weight = {
+            factor = 0
+        }
+    }
+}

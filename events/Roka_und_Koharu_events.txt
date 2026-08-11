@@ -22,7 +22,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Roka
-					name = "马庭芦花"
+					name = YZ_character_name_maniva_roka
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -37,6 +37,7 @@ country_event = {
 					corps_commander = {
 						desc = Roka_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_roka_trait
 						}
 						skill=5
@@ -58,7 +59,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Koharu
-					name = "鞍马小春"
+					name = YZ_character_name_kurama_koharu
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -73,6 +74,7 @@ country_event = {
 					corps_commander = {
 						desc = koharu_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_koharu_trait
 						}
 						skill=5
@@ -113,7 +115,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Roka
-					name = "马庭芦花"
+					name = YZ_character_name_maniva_roka
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -128,6 +130,7 @@ country_event = {
 					corps_commander = {
 						desc = Roka_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_roka_trait
 						}
 						skill=5
@@ -144,7 +147,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Koharu
-					name = "鞍马小春"
+					name = YZ_character_name_kurama_koharu
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -159,6 +162,7 @@ country_event = {
 					corps_commander = {
 						desc = koharu_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_koharu_trait
 						}
 						skill=5
@@ -192,7 +196,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Roka
-					name = "马庭芦花"
+					name = YZ_character_name_maniva_roka
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -207,6 +211,7 @@ country_event = {
 					corps_commander = {
 						desc = Roka_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_roka_trait
 						}
 						skill=5
@@ -240,7 +245,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Kurama_Koharu
-					name = "鞍马小春"
+					name = YZ_character_name_kurama_koharu
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -255,6 +260,7 @@ country_event = {
 					corps_commander = {
 						desc = koharu_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_koharu_trait
 						}
 						skill=5

@@ -46,7 +46,7 @@ country_event = {
             text = {
                 generate_character = {
                     token_base = baliu
-                    name = "baliu"
+                    name = baliu
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -61,6 +61,7 @@ country_event = {
                     }
                     field_marshal = {
                         traits={
+                            yz_easter_egg_character
                             tielurenou
                             JAP_communist_sympathizer
                             logistics_wizard
@@ -89,7 +90,7 @@ country_event = {
             text = {
                 generate_character = {
                     token_base = baliu_1
-                    name = "八六"
+                    name = baliu_1
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -104,6 +105,7 @@ country_event = {
                     }
                     field_marshal = {
                         traits={
+                            yz_easter_egg_character
                             tielurenou
                             JAP_communist_sympathizer
                             logistics_wizard
@@ -232,7 +234,7 @@ country_event = {
             text = {
                 generate_character = {
                     token_base = hachiroko_high_command
-                    name = "八六"
+                    name = baliu_1
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -310,7 +312,7 @@ country_event = {
             text = {
                 generate_character = {
                     token_base = baliu_advisor
-                    name = "baliu_1"
+                    name = baliu_1
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -396,7 +398,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "baliu"
+            name = baliu
             picture = "GFX_portrait_LTR_baliu"
             desc = baliu_desc
             expire = "2095.1.1"
@@ -421,7 +423,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "baliu"
+            name = baliu
             picture = "GFX_portrait_LTR_baliu"
             desc = baliu_desc
             expire = "2095.1.1"
@@ -446,7 +448,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "baliu"
+            name = baliu
             picture = "GFX_portrait_LTR_baliu"
             desc = baliu_desc
             expire = "2095.1.1"
@@ -471,7 +473,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "baliu"
+            name = baliu
             picture = "GFX_portrait_LTR_baliu"
             desc = baliu_desc
             expire = "2095.1.1"

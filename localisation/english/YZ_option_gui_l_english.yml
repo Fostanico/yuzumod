@@ -1,0 +1,45 @@
+﻿l_english:
+ YZGalgame_name: "[YZGalgame_name_text]" # 左上角游戏名
+ yuzu_dialog_bg: "[yuzu_dialog_bg_text]" # 跳过对话提示
+ Dialog_text: "[Dialog_text_defined]"       # 对话框内容
+ dialog_gui_option_1_tooltip: "[dialog_gui_option_1_tooltip_text]"   # 选项提示
+ dialog_gui_option_2_tooltip: "[dialog_gui_option_2_tooltip_text]"
+ dialog_gui_option_3_tooltip: "[dialog_gui_option_3_tooltip_text]"
+ YZ_dialog_gui_option_1_text: "[YZ_dialog_gui_option_1_text_defined]"   # 选项内容
+ YZ_dialog_gui_option_2_text: "[YZ_dialog_gui_option_2_text_defined]"
+ YZ_dialog_gui_option_3_text: "[YZ_dialog_gui_option_3_text_defined]"
+
+ ## 对话内容
+ mur_dialog_1: "【Murasame-chan】\nDo you like 【CENSORED】?"
+
+ ## 背景
+ YZ_dialog_bg_images_1: "GFX_yoshino_home_bg"
+
+ ## 立绘
+ mur_image_1: "GFX_murasame_01a"
+ mur_image_1_0: "GFX_murasame_01b"
+
+
+ ##选项
+ mur_option_1: "TRUE"
+ mur_option_tooltip_1: "Choosing this enters the §GMurasame Route§!"
+ mur_option_2: "FALSE"
+ mur_option_tooltip_2: "Nothing happens"
+ mur_option_3: "I'll pass on that question"
+ mur_option_tooltip_3: "Nothing happens?"
+
+ # 游戏标题
+ SR_game_title: "Senren * Banka"
+ SW_game_title: "Sanoba Witch"
+ RJ_game_title: "RIDDLE JOKER!"
+ TS_game_title: "Tenshi☆Souzou RE-BOOT!"
+ CS_game_title: "Cafe Stella and the Reapers' Butterflies"
+ DR_game_title: "DRACU-RIOT!"
+ AI_game_title: "Amairo * Islenauts"
+ NW_game_title: "Noble☆Works"
+ LU_game_title: "Tenshin Ranman Lucky or Unlucky!?"
+ NK_game_title: "Natsuzora Kanata"
+ EE_game_title: "ExE"
+ BB_game_title: "Bra-Ban! ~The bonds of melody~"
+
+ yuzu_dialog_bg_text_0: "Click to skip to the next line~"

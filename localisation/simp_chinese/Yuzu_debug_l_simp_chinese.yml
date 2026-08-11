@@ -32,3 +32,7 @@
  test_yz_yanjiuyuan_1: "debug研发Type-90"
  test_yz_yanjiuyuan_2: "debug创建Type-90"
  remove_training: "移除训练"
+ debug_recruit_suou_kyouhei_operative: "招募特工：周防恭平"
+ debug_recruit_suou_kyouhei_operative_desc: "直接招募使用指定肖像和自定义特质的周防恭平，用于验证特工肖像、图标与修正是否正常生效。"
+ yz_operative_secret_order_ace: "密令王牌"
+ yz_operative_secret_order_ace_desc: "长期执行高层密令的情报专家，擅长潜伏、反间谍、破坏与特种行动。"

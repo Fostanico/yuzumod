@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_portrait_yz_operative_gongping"
+        texturefile = "gfx/leader/gongping.png"
+    }
+
+    spriteType = {
+        name = "GFX_trait_yz_operative_secret_order_ace"
+        texturefile = "gfx/traits/alexander_bartender.PNG"
+    }
+}

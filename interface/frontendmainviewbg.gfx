@@ -84,10 +84,6 @@ spriteTypes = {
 		texturefile = "gfx/traits/maid_ninging_trait.png"
 	}
 	spriteType = {
-		name = "GFX_trait_bad_noa"
-		texturefile = "gfx/traits/bad_noa.png"
-	}
-	spriteType = {
 		name = "GFX_trait_maid_sana_trait"
 		texturefile = "gfx/traits/maid_sana_trait.png"
 	}
@@ -535,7 +531,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_A_voice_from_wonderful_future"
-		textureFile = "gfx/traits/A_voice_from_wonderful_future.dds"
+		textureFile = "gfx/traits/A_voice_from_wonderful_future.png"
 	}
 	spriteType = {
 		name = "GFX_trait_ad_victoriam"
@@ -1042,7 +1038,7 @@ spriteTypes = {
 
 	spriteType = {        #穗织核爆  2025.4.4,17:06,伊尔诺
 		name = "GFX_nuke_hoori"
-		texturefile = "gfx/event_pictures/news_event_hoori_nuke.dds"
+		texturefile = "gfx/event_pictures/news_event_hoori_nuke.png"
 	}
 	spriteType = {
 		name = "GFX_nuke_washizu"
@@ -1160,10 +1156,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_yoshino_event103"
 		texturefile = "gfx/event_pictures/noa_event103.png"
-	}
-	spriteType = {
-		name = "GFX_yoshino_event7"
-		texturefile = "gfx/event_pictures/yoshino_event7.png"
 	}
 	spriteType = {
 		name = "GFX_yoshino_event8"

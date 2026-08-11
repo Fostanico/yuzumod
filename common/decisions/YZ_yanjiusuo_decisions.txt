@@ -13,7 +13,6 @@ YZS_scientist_category = {
         }
         complete_effect = {
             root = {
-                country_event = yz_type90_event.1
                 set_technology = {
                     tech_YZ_type90 = 1
                 }
@@ -167,7 +166,7 @@ YZS_scientist_category = {
             }
             add_to_variable = { facility_guimo = 1  tooltip = facility_guimo_tt }
             custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-            add_to_variable = { yz_721_research_research_speed_factor = 0.05  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_research_speed_factor = 0.05  tooltip = YZ_research_speed_factor_tt }
             add_to_variable = { yz_721_research_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
         }
     }
@@ -204,7 +203,7 @@ YZS_scientist_category = {
             }
             add_to_variable = { facility_guimo = -1  tooltip = facility_guimo_tt_1 }
             custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-            add_to_variable = { yz_721_research_research_speed_factor = -0.05  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_research_speed_factor = -0.05  tooltip = YZ_research_speed_factor_tt }
             add_to_variable = { yz_721_research_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
         }
     }
@@ -254,7 +253,7 @@ YZS_scientist_category = {
 
         remove_effect = {
             custom_effect_tooltip = yz_721_research_facility_dynamic_modifier_tt
-            add_to_variable = { yz_721_research_research_speed_factor = 0.04  tooltip = research_speed_factor_tt }
+            add_to_variable = { yz_721_research_research_speed_factor = 0.04  tooltip = YZ_research_speed_factor_tt }
             add_to_variable = { yz_721_research_consumer_goods_factor = 0.01 tooltip = consumer_goods_factor_tt }
             set_country_flag = used_mayu
         }
@@ -971,7 +970,7 @@ YZS_scientist_category = {
                 text = {
                     generate_character = {
                         token_base = shirayuki_noa_advisor
-                        name = "白雪乃爱"
+                        name = Noa
                         gender = female
                         nationality = JAP
                         portraits = {
@@ -1188,7 +1187,7 @@ YZS_scientist_category = {
 
                     generate_character = {
                         token_base = ATRI
-                        name = "亚托莉酱"
+                        name = YZ_character_name_atri_chan
                         can_be_captured = no
                         gender = female
                         nationality = JAP
@@ -1203,6 +1202,7 @@ YZS_scientist_category = {
                         }
                         corps_commander = {
                             traits = {
+                                yz_easter_egg_character
                                 brilliant_strategist
                                 career_officer
                                 bearer_of_artillery

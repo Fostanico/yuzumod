@@ -802,7 +802,7 @@ ideas = {
 			}
 		}
 		bupingheng = {
-			picture = GFX_agricultural_mechanization
+			picture = agricultural_mechanization
 			allowed_civil_war = {
 				is_ai = no
 			}
@@ -814,7 +814,7 @@ ideas = {
 			}
 		}
 		manglujianshe = {
-			picture = GFX_agricultural_mechanization
+			picture = agricultural_mechanization
 			allowed_civil_war = {
 				is_ai = no
 			}

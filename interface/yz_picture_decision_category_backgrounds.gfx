@@ -1,0 +1,16 @@
+spriteTypes = {
+    # The 50%-brightness treatment was selected for these two backgrounds.
+    # Alternate treatments are retained in the external asset backup only.
+    spriteType = {
+        name = "GFX_yz_recruit_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_recruit_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_roka_koharu_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_roka_koharu_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_cultural_department_category_bg_brightness_25"
+        texturefile = "gfx/decision/yz_cultural_department_category_bg_brightness_25.png"
+    }
+}

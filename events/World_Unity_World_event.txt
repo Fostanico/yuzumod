@@ -40,7 +40,7 @@ country_event = {
 	id = World_event.4
 	title = World_event.4.t
 	desc = World_event.4.d
-	picture = GFX_World_event.4_event
+	picture = GFX_World_event.3_event
 	is_triggered_only = yes
 
 	option = {

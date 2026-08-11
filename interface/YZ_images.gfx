@@ -12,10 +12,6 @@ spriteTypes = {
 		texturefile = "gfx/addleaders_decisions.png"
 	}
 	spriteType = {
-		name = "GFX_update"
-		texturefile = "gfx/update.png"
-	}
-	spriteType = {
 		name = "GFX_yz_start_qrcode"
 		texturefile = "gfx/yz_start_qrcode.png"
 	}
@@ -79,10 +75,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_maid_noa3_trait"
 		texturefile = "gfx/traits/maid_ninging_trait.png"
-	}
-	spriteType = {
-		name = "GFX_trait_bad_noa"
-		texturefile = "gfx/traits/bad_noa.png"
 	}
 	spriteType = {
 		name = "GFX_trait_maid_sana_trait"
@@ -470,10 +462,6 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/noa_event103.png"
 	}
 	spriteType = {
-		name = "GFX_yoshino_event7"
-		texturefile = "gfx/event_pictures/yoshino_event7.png"
-	}
-	spriteType = {
 		name = "GFX_yoshino_event8"
 		texturefile = "gfx/event_pictures/yoshino_event8.png"
 	}
@@ -686,9 +674,5 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_World_event.3_event"
 		texturefile = "gfx/event_pictures/World_event.3_event.png"
-	}
-	spriteType = {
-		name = "GFX_World_event.4_event"
-		texturefile = "gfx/event_pictures/World_event.4_event.png"
 	}
 }

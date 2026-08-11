@@ -3,236 +3,236 @@ spriteTypes = {
 	# Keep generic fallbacks, then cover the most commonly played vanilla and MD tags.
 	spriteType = {
 		name = "GFX_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# United States
 	spriteType = {
 		name = "GFX_USA_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_USA_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_USA_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Soviet Union / Millennium Dawn Russia
 	spriteType = {
 		name = "GFX_SOV_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_SOV_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_SOV_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# United Kingdom
 	spriteType = {
 		name = "GFX_ENG_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ENG_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ENG_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# France
 	spriteType = {
 		name = "GFX_FRA_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_FRA_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_FRA_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Germany
 	spriteType = {
 		name = "GFX_GER_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_GER_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_GER_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Italy
 	spriteType = {
 		name = "GFX_ITA_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ITA_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_ITA_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Japan
 	spriteType = {
 		name = "GFX_JAP_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_JAP_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_JAP_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# China and Communist China
 	spriteType = {
 		name = "GFX_CHI_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_CHI_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_CHI_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 	spriteType = {
 		name = "GFX_PRC_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_PRC_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_PRC_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# India
 	spriteType = {
 		name = "GFX_RAJ_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_RAJ_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_RAJ_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Canada
 	spriteType = {
 		name = "GFX_CAN_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_CAN_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_CAN_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Australia
 	spriteType = {
 		name = "GFX_AST_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_AST_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_AST_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Brazil
 	spriteType = {
 		name = "GFX_BRA_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_BRA_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_BRA_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Turkey
 	spriteType = {
 		name = "GFX_TUR_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_TUR_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_TUR_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Poland
 	spriteType = {
 		name = "GFX_POL_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_POL_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_POL_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 
 	# Korea
 	spriteType = {
 		name = "GFX_KOR_ace_Strider_1"
-		texturefile = "gfx/aces/yz_ac7_trigger_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_trigger_ace.png"
 	}
 	spriteType = {
 		name = "GFX_KOR_ace_Strider_2"
-		texturefile = "gfx/aces/yz_ac7_count_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_count_ace.png"
 	}
 	spriteType = {
 		name = "GFX_KOR_ace_Cyclops_1"
-		texturefile = "gfx/aces/yz_ac7_wiseman_ace.dds"
+		texturefile = "gfx/aces/yz_ac7_wiseman_ace.png"
 	}
 }

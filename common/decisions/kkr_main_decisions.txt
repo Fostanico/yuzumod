@@ -66,7 +66,7 @@ Kukuru_coming_decision_category = {
 
 					generate_character = {
 						token_base = Kukuru
-						name = "夜刀玖玖瑠"
+						name = YZ_character_name_yato_kukuru
 						can_be_captured = no
 						gender = female
 						nationality = JAP
@@ -81,6 +81,7 @@ Kukuru_coming_decision_category = {
 						}
 						corps_commander = {
 							traits = {
+							    yz_easter_egg_character
 								brilliant_strategist
 								career_officer
 								bearer_of_artillery
@@ -281,9 +282,9 @@ Kukuru_main_decision_category = {
 					has_government = democratic
 				}
 				create_country_leader = {
-					name = "夜刀 玖玖瑠"
+					name = YZ_character_name_yato_kukuru
 					picture = "gfx/leader/kukuru_leader.png"
-					desc = kkr_leader_desc
+						desc = kkr_character_desc
 					expire = "2095.1.1"
 					ideology = conservatism
 					traits = {
@@ -298,9 +299,9 @@ Kukuru_main_decision_category = {
 					has_government = fascism
 				}
 				create_country_leader = {
-					name = "夜刀 玖玖瑠"
+					name = YZ_character_name_yato_kukuru
 					picture = "gfx/leader/kukuru_leader.png"
-					desc = kkr_leader_desc
+						desc = kkr_character_desc
 					expire = "2095.1.1"
 					ideology = fascism_ideology
 					traits = {
@@ -315,9 +316,9 @@ Kukuru_main_decision_category = {
 					has_government = neutrality
 				}
 				create_country_leader = {
-					name = "夜刀 玖玖瑠"
+					name = YZ_character_name_yato_kukuru
 					picture = "gfx/leader/kukuru_leader.png"
-					desc = kkr_leader_desc
+						desc = kkr_character_desc
 					expire = "2095.1.1"
 					ideology = despotism
 					traits = {
@@ -332,9 +333,9 @@ Kukuru_main_decision_category = {
 					has_government = communism
 				}
 				create_country_leader = {
-					name = "夜刀 玖玖瑠"
+					name = YZ_character_name_yato_kukuru
 					picture = "gfx/leader/kukuru_leader.png"
-					desc = kkr_leader_desc
+						desc = kkr_character_desc
 					expire = "2095.1.1"
 					ideology = marxism
 					traits = {
@@ -399,7 +400,7 @@ Kukuru_debug_decision_category = {
 
 					generate_character = {
 						token_base = Kukuru_advisor_1
-						name = "夜刀玖玖瑠"
+						name = YZ_character_name_yato_kukuru
 						gender = female
 						nationality = JAP
 						portraits = {
@@ -449,7 +450,7 @@ Kukuru_debug_decision_category = {
 
 					generate_character = {
 						token_base = Kukuru_advisor_2
-						name = "夜刀玖玖瑠"
+						name = YZ_character_name_yato_kukuru
 						gender = female
 						nationality = JAP
 						portraits = {

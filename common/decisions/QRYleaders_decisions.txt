@@ -32,7 +32,7 @@ QRYleaders_category = {
 		}
 		complete_effect = {
 			create_navy_leader = {
-				name = "伊尔诺"
+				name = YZ_character_name_iruno
 				gfx = "GFX_portrait_sirno_capital"
 				traits = {
 					ad_victorian_in_see

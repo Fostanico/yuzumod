@@ -1,0 +1,135 @@
+guiTypes = {
+    # The decision category's built-in description renderer does not reserve
+    # space for arbitrary picture sizes. These windows own both image and text.
+    containerWindowType = {
+        name = "yz_roka_koharu_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_roka_koharu_category_background"
+            quadTextureSprite = "GFX_yz_roka_koharu_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_roka_koharu_category_text"
+            position = { x = 15 y = 0 }
+            font = "hoi_16mbs"
+            text = "Roka_Koharu_decision_category_gui_desc"
+            maxWidth = 470
+            maxHeight = 200
+            format = center
+            vertical_alignment = center
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "yz_add_general_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_add_general_category_background"
+            quadTextureSprite = "GFX_yz_recruit_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_add_general_category_text"
+            position = { x = 15 y = 0 }
+            font = "hoi_16mbs"
+            text = "add_youzi_general_category_gui_desc"
+            maxWidth = 470
+            maxHeight = 200
+            format = center
+            vertical_alignment = center
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "yz_cultural_department_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_cultural_department_category_background"
+            quadTextureSprite = "GFX_yz_cultural_department_category_bg_brightness_25"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_cultural_department_category_text"
+            position = { x = 15 y = -15 }
+            font = "hoi_16mbs"
+            text = "yuzu_cultural_department_category_gui_desc"
+            maxWidth = 470
+            maxHeight = 220
+            format = center
+            vertical_alignment = center
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "yz_megulu_industry_category_window"
+        position = { x = 0 y = -22 }
+        size = { width = 500 height = 255 }
+        clipping = no
+
+        background = {
+            name = "yz_megulu_industry_category_background"
+            quadTextureSprite = "GFX_meigulu_2"
+            position = { x = 4 y = -11 }
+        }
+        instantTextBoxType = {
+            name = "yz_megulu_industry_category_text"
+            position = { x = 190 y = 0 }
+            font = "hoi_16mbs"
+            text = "Megulu_industry_category_gui_desc"
+            maxWidth = 305
+            maxHeight = 125
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "yz_megulu_industry_category_progress"
+            position = { x = 190 y = 128 }
+            font = "hoi_16mbs"
+            text = "Megulu_industry_category_gui_progress"
+            maxWidth = 305
+            maxHeight = 125
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "yz_world_unity_category_window"
+        position = { x = 0 y = 0 }
+        size = { width = 500 height = 190 }
+        clipping = no
+
+        iconType = {
+            name = "yz_world_unity_category_background"
+            spriteType = "GFX_World_neutrality"
+            position = { x = 4 y = -11 }
+            orientation = UPPER_LEFT
+        }
+        instantTextBoxType = {
+            name = "yz_world_unity_category_text"
+            position = { x = 145 y = 0 }
+            font = "hoi_16mbs"
+            text = "World_Unity_gui_desc"
+            maxWidth = 355
+            maxHeight = 185
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+}

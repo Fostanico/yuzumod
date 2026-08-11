@@ -2,7 +2,7 @@ add_namespace = tongyong_event      ##当时名字乱取的，现在懒得改了
 
 country_event= {
     id = tongyong_event.1
-    picture = GFX_tongyong_event.1
+    picture = GFX_report_event_generic_read_write
     title = tongyong_event.1.t
     desc = tongyong_event.1.d
     is_triggered_only = yes
@@ -29,7 +29,7 @@ country_event= {
 
 country_event= {            ###准备婚礼
     id = tongyong_event.2
-    picture = GFX_tongyong_event.2
+    picture = GFX_report_event_generic_read_write
     title = tongyong_event.2.t
     desc = tongyong_event.2.d
     is_triggered_only = yes
@@ -395,7 +395,7 @@ country_event= {            ###枣子姐的婚礼
 }
 country_event= {            ###公屏的婚礼
     id = tongyong_event.15
-    picture = GFX_gongping_wedding
+    picture = GFX_report_event_generic_read_write
     title = tongyong_event.15.t
     desc = tongyong_event.15.d
     is_triggered_only = yes
@@ -1151,7 +1151,7 @@ country_event= {            ##千咲的婚礼
         }
     }
 }
-country_event= {            ##千咲的婚礼
+country_event= {            ##乌羽紫的婚礼
     id = tongyong_event.45
     picture = GFX_yukari_wedding
     title = tongyong_event.45.t

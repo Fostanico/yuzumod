@@ -242,13 +242,13 @@ country_event= {           #小隐藏1
             text = {
                 generate_character = {
                     token_base = YzBaichazuichangyan
-                    name = "白茶醉长烟"
+                    name = YZ_character_name_baicha_zuichangyan
                     gender = male
                     nationality = PRC
                     portraits = {
                         civilian = {
                             large = "gfx/leader/baichazuichangyan.png"
-                            small = "gfx/leader/baichazuichangyan2.png"
+                            small = "gfx/leader/baichazuichangyan.png"
                         }
                     }
                     allowed_civil_war = {
@@ -256,6 +256,7 @@ country_event= {           #小隐藏1
                     }
                     corps_commander = {
                         traits={
+                            yz_easter_egg_character
                             caidan_trait_baicha
                         }
                         skill=99
@@ -294,7 +295,7 @@ country_event= {           #小隐藏2
                 text = {
                     generate_character = {
                         token_base = YzIron
-                        name = "伊尔诺"
+                        name = YZ_character_name_iruno
                         gender = male
                         nationality = PRC
                         portraits = {
@@ -308,6 +309,7 @@ country_event= {           #小隐藏2
                         }
                         corps_commander = {
                             traits={
+                                yz_easter_egg_character
                                 caidan_trait_iron
                                 A_voice_from_wonderful_future
                                 First_Air_Transport_Special_Operations_Brigade
@@ -343,7 +345,7 @@ country_event= {           #大隐藏
                 text = {
                     generate_character = {
                         token_base = sana
-                        name = "千岁佐奈"
+                        name = qiansuizuonai
                         gender = female
                         nationality = JAP
                         portraits = {
@@ -357,6 +359,7 @@ country_event= {           #大隐藏
                         }
                         corps_commander = {
                             traits={
+                                yz_yuzusoft_character
                                 maid_sana_trait trait_reckless infantry_officer
                             }
                             skill=15

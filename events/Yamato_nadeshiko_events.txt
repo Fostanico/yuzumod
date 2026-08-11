@@ -20,7 +20,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "ertiaoyuanyuyue"
+			name = ertiaoyuanyuyue
 			picture = GFX_portrait_ADD_yuyue
 			desc = yuyue_desc
 			expire = "2095.1.1"
@@ -44,7 +44,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "ertiaoyuanyuyue"
+			name = ertiaoyuanyuyue
 			picture = GFX_portrait_ADD_yuyue
 			desc = yuyue_desc
 			expire = "2095.1.1"
@@ -68,7 +68,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "ertiaoyuanyuyue"
+			name = ertiaoyuanyuyue
 			picture = GFX_portrait_ADD_yuyue
 			desc = yuyue_desc
 			expire = "2095.1.1"
@@ -92,7 +92,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "ertiaoyuanyuyue"
+			name = ertiaoyuanyuyue
 			picture = GFX_portrait_ADD_yuyue
 			desc = yuyue_desc
 			expire = "2095.1.1"

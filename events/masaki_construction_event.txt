@@ -4,7 +4,7 @@ add_namespace = masaki_event
 
 country_event= {
     id = masaki_event.1
-    picture = GFX_masaki_event.1
+	picture = GFX_report_event_generic_read_write
     title = masaki_event.1.t
     desc = masaki_event.1.d
     is_triggered_only = yes

@@ -1,0 +1,20 @@
+﻿l_english:
+#大概以后每次更新加的内容我都加到新的本地化文件里了（出于不要动一些可以运行的代码的原则）——伊尔诺，2025.3.10
+ play_the_song_of_hachiroku_effect_tooltip: "Play §RThe Wheels Begin to Turn§!"
+ debug_love_sana_everyday: "Today is Sana's birthday! (June 8th every year!)"
+ yuri_s_Revenge_occupation: "Yuri's Revenge"
+ loc_yuri_occupation: "They don't even fear Yuzu fans — these are no ordinary mobs. We must strike back hard! (When auto-switching laws, this law is automatically applied in areas with resistance above 40%.)"
+ hoori_style_occupation: "Hoori-Style Management Model"
+ loc_hoori_occupation: "Having witnessed the glorious achievements of the Hoori nation's great rejuvenation, we can extend this successful model to our vast rural colonies. (When auto-switching laws, this law is applied in rural areas.)"
+ washizu_style_occupation: "Washizu-Style Management Model"
+ loc_washizu_occupation: "Comrade Ayase transformed Washizu City from a mid-sized city into an international metropolis. We can draw on her successful experience. (When auto-switching laws, this law is applied in urban areas.)"
+ let_them_fly_occupation: "Take Them Public!"                                        #不一定出现在正式版中
+ auto_switch_occupation_law: "Auto-Switch Occupation Laws (Yuzu Laws Only)"
+ auto_switch_occupation_law_desc: "If we spend one Yuzu Gold, our Cultural Department staff will work hard to help us govern our vast colonies. (You can turn off auto-switching, and turning it back on costs no Yuzu Gold.)"
+ Yuzu_occupation_law_fund_subtract_tt: "One Yuzu Gold to make the Cultural Department staff work hard"
+ auto_switch_occupation_law_descision_effect_tooltip: "Our Cultural Department will apply the appropriate occupation law in each suitable area"
+ #let_usa_fly: "§R让美国人飞起来！§!"                                            #不一定出现在正式版中
+ #let_usa_fly_desc: "把所有美国的核心领土占领法案切换成把他们上市！"               #不一定出现在正式版中
+ #auto_switch_occupation_law_in_usa_descision_effect_tooltip: "把美国人上市"     #不一定出现在正式版中
+ auto_switch_occupation_off: "Turn Off Auto-Switch Occupation Laws"
+ auto_switch_occupation_again: "Turn Auto-Switch Occupation Laws Back On"

@@ -15,7 +15,7 @@
  HBDPR: "荷包蛋贫乳☆"
  GJJWZX: "国家计委主席"
  GJKXYZ: "国家科学院长"
- kkr_leader_desc: "夜刀空空瑠（描述待补充）"
+ kkr_character_desc: "夜刀空空瑠（描述待补充）"
 
  #GUI
  kkr_R_text_1: "好感[?kkr_favor|+0] 好感每周变化[?weekly_kkr_favor|+0] \n研究进度[?kkr_research_progress|+0] 研究进度每周变化[?weekly_kkr_research_progress|+0]"
@@ -134,9 +134,6 @@
  kkr_event.13.t: "研究完成"
  kkr_event.13.d: "（空）"
  kkr_event.13.a: "（空）"
- kkr_event.14.t: "额外的成果"
- kkr_event.14.d: "（空）"
- kkr_event.14.a: "“我是高性能的啦！”"
 
  kkr_event.101.t: "与玖玖瑠的婚礼"
  #: ""

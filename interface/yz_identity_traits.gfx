@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_yz_yuzusoft_character"
+        texturefile = "gfx/traits/yuzusoft_fans_girl.png"
+    }
+
+    spriteType = {
+        name = "GFX_trait_yz_easter_egg_character"
+        texturefile = "gfx/traits/seven_girl.png"
+    }
+}

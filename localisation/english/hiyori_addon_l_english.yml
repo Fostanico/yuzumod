@@ -1,0 +1,98 @@
+﻿l_english:
+ hiyori_radio: "Hiyori Radio"
+ ABILITY_hiyoriradio: "Hiyori Radio"
+ ABILITY_hiyoriradio_desc: "Let Hiyori work on the front line she knows best, boosting army morale"
+ ability_hiyoriradio_tt: "\nThe \"Hiyori Radio\" was a non-military front-line broadcast initiated by Izumi Hiyori during the war, carrying news, poetry, music, and even letters from home, and it proved to greatly boost front-line morale.\n\nTurn on the radio, forget the mud, blood, and death before you for a while, and let your thoughts fly back to that distant hometown."
+  #妃爱-内阁/将领特质
+ super_hiyori_together: "A Broadcasting Star\nOn the Rise"
+ super_hiyori_together_desc: "As long as she's by your side, Hiyori is happy"
+ Heart_Creation: "Heart Creation"
+ hiyohiyo: "hiyohiyo~"
+  #事件链
+ bonus_hiyori_calling: "Hold a \"Table-Side Chat\""
+ bonus_hiyori_calling_desc: "\"Fireside chats\" were a series of broadcasts by President Franklin D. Roosevelt after taking office — warm and effective. We should follow his example and invite Ayachi Nene for a table-side chat, explaining our actions — reforms, appropriations, construction, and so on — to the public, to reduce resistance to our policies and win greater support. \"As natural as chatting by the corner of a table.\""
+ hiyori_event.1.t: "A Little Episode"
+ hiyori_event.1.d: "Nene looked flustered after receiving the invitation and refused our request for a radio interview in the library. But Tokusa Tomoka, who handles press releases, had already rushed to announce that the government would soon conduct a radio interview — so we need to decide on a broadcaster quickly. While everyone was at a loss, Kohibari Kurumi brought a cute blonde girl into the meeting room, saying she had found a child in the room who was unfamiliar yet strangely familiar. The girl then politely introduced herself (though everyone initially thought it was Kurumi speaking), and met your eyes. Though a host of questions still swirled in your mind, you realized that Hiyori was the perfect choice for the broadcast."
+ hiyori_event.1.a: "Then it's Hiyori!"
+ hiyori_event_1_a_tt: "Wait! Why is Hiyori here too? Begin the Hiyori event chain. Hiyohiyo~☆ *Note: the writing is not yet complete — more events are coming\nI like to see characters and voice actresses overlapping — Lena Liechtenauer"
+ hiyori_event.1.b: "Whoever caused the mess should take responsibility!"
+ hiyori_1_b_tt: "End the Hiyori event chain"
+ hiyori_event.2.t: "Time Off, Night Talk"
+ hiyori_event.2.d: ""
+ hiyori_event.2.a: "Together, forever and ever"
+ hiyori_event.2.b: "Even brother and sister can't stay glued together forever"
+ hiyori_event_2_b_tt: "End the Hiyori event chain; you can still get the general and advisor"
+ hiyori_event.3.t: "Attack?"
+ hiyori_event.3.d: "The sweeping reforms were not without opposition. As the literary scene gradually came under Yuzu's sway, some opponents began making moves. Scandalous gossip, rumors, and scathing criticism of broadcast blunders all poured in on Hiyori. At an offline event, Hiyori was unfortunately hit by an egg; later, security personnel at the scene reportedly also found a firearm of unknown origin. Back home, Hiyori could no longer hold back her emotions."
+ hiyori_event.3.a: "*Comfort Hiyori*"
+ hiyori_3_a_tt: "Anyone who dares to attack Hiyori is no ordinary audience member — we must strike hard!"
+ hiyori_event.4.t: "A Recital in the Trenches"
+ hiyori_event.4.d: ""
+ hiyori_event.4.a: "*Enthusiastic applause*"
+ hiyori_event.5.t: "Everyday Life"
+ hiyori_event.5.d: ""
+ hiyori_event.5.a: "Beautiful days, continuing one after another"
+ hiyori_event.6.t: "Never Imagined"
+ hiyori_event.6.d: ""
+ hiyori_event.6.a: "Please take care of me from now on"
+#技能-立绘
+  hiyori_Skin_Ability_1: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_1_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_2: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_2_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_3: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_3_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_4: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_4_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_5: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_5_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_6: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_6_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_7: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_7_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_8: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_8_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_9: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_9_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_10: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_10_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_11: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_11_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_12: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_12_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_13: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_13_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_14: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_14_desc: "Fifteen variations in total, not random"
+
+  hiyori_Skin_Ability_15: "Hiyori - Change Portrait"
+  hiyori_Skin_Ability_15_desc: "Fifteen variations in total, not random"
+
+ hiy_1: "GFX_hiy_1"
+ hiy_2: "GFX_hiy_2"
+ hiy_3: "GFX_hiy_3"
+ hiy_4: "GFX_hiy_4"
+ hiy_5: "GFX_hiy_5"
+ hiy_6: "GFX_hiy_6"
+ hiy_7: "GFX_hiy_7"
+ hiy_8: "GFX_hiy_8"
+ hiy_9: "GFX_hiy_9"
+ hiy_10: "GFX_hiy_10"
+ hiy_11: "GFX_hiy_11"
+ hiy_12: "GFX_hiy_12"
+ hiy_13: "GFX_hiy_13"
+ hiy_14: "GFX_hiy_14"
+ hiy_15: "GFX_hiy_15"

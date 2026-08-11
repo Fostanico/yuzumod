@@ -4,6 +4,7 @@ yuzu_cultural_department_category = {
 		has_country_flag = qiyong_yuzu_culture_department
 	}
 	icon = GFX_Category_decision
+	scripted_gui = yz_cultural_department_category_gui
 	priority = 10
 }
 yuzu_economy_department_category = {

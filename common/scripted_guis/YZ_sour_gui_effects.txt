@@ -50,7 +50,7 @@ scripted_gui = {
                     text = {
                         generate_character = {
                             token_base = ibaraki_rino
-                            name = "茨木梨乃"
+                            name = YZ_character_name_ibaraki_rino
                             can_be_captured = no
                             gender = female
                             nationality = JAP
@@ -64,6 +64,7 @@ scripted_gui = {
                             corps_commander = {
                                 desc = ibaraki_rino_corps_desc
                                 traits = {
+                                    yz_yuzusoft_character
                                     ibaraki_rino_only_at_night
                                     bmi_device
                                 }
@@ -80,7 +81,7 @@ scripted_gui = {
                     text = {
                         generate_character = {
                             token_base = kido_tsubasa
-                            name = "城门翼"
+                            name = YZ_character_name_kido_tsubasa
                             can_be_captured = no
                             gender = female
                             nationality = JAP
@@ -94,6 +95,7 @@ scripted_gui = {
                             corps_commander = {
                                 desc = kido_tsubasa_corps_desc
                                 traits = {
+                                    yz_yuzusoft_character
                                     yasaidaburuninnikuaboramashimashibaagaa_trait
                                     kido_tsubasa_only_at_sun
                                     bmi_device

@@ -18,7 +18,7 @@ country_event= {
             text = {
                 generate_character = {
                     token_base = Kukuru
-                    name = "夜刀玖玖瑠"
+                    name = YZ_character_name_yato_kukuru
                     can_be_captured = no
                     gender = female
                     nationality = JAP
@@ -33,6 +33,7 @@ country_event= {
                     }
                     corps_commander = {
                         traits = {
+                            yz_easter_egg_character
                             brilliant_strategist
                             career_officer
                             bearer_of_artillery
@@ -81,7 +82,7 @@ country_event= {        #申请试验
 
                 generate_character = {
                     token_base = Kukuru_scientist_1
-                    name = "夜刀玖玖瑠"
+                    name = YZ_character_name_yato_kukuru
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -105,7 +106,7 @@ country_event= {        #申请试验
                 }
                 generate_character = {
                     token_base = Kukuru_scientist_2
-                    name = "夜刀玖玖瑠"
+                    name = YZ_character_name_yato_kukuru
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -129,7 +130,7 @@ country_event= {        #申请试验
                 }
                 generate_character = {
                     token_base = Kukuru_scientist_3
-                    name = "夜刀玖玖瑠"
+                    name = YZ_character_name_yato_kukuru
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -153,7 +154,7 @@ country_event= {        #申请试验
                 }
                 generate_character = {
                     token_base = Kukuru_scientist_4
-                    name = "夜刀玖玖瑠"
+                    name = YZ_character_name_yato_kukuru
                     gender = female
                     nationality = JAP
                     portraits = {
@@ -224,7 +225,7 @@ country_event= {        #素体准备完成
     option = {
         name = kkr_event.4.a
         custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
-        add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+        add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = YZ_research_speed_factor_tt }
         add_tech_bonus = {
             bonus = 1
             ahead_reduction = 2
@@ -254,7 +255,7 @@ country_event= {        #AI重构准备完成
         }
         kkr_refresh_favor_outputs = yes
         custom_effect_tooltip = Kukuru_atri_research_dynamic_modifier_tt
-        add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+        add_to_variable = { KKR_atri_research_research_speed_factor = 0.05 tooltip = YZ_research_speed_factor_tt }
         add_tech_bonus = {
             bonus = 2
             ahead_reduction = 5
@@ -450,7 +451,6 @@ country_event= {        #完成研究
         }
         set_country_flag = kkr_finished_research
         hidden_effect = {
-            country_event = { id = kkr_event.14 days = 30 }
         }
 
     }

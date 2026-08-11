@@ -19,7 +19,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Ayase
-					name = "三司绫濑"
+					name = sansilinglai
 					can_be_captured = no
 					gender = female
 					nationality = JAP
@@ -46,6 +46,7 @@ country_event = {
 					corps_commander = {
 						desc = Ayase_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							organizer
 							panzer_leader
 							media_personality
@@ -78,7 +79,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = ayase_1
-					name = "三司绫濑"
+					name = sansilinglai
 					can_be_captured = no
 					gender = female
 					nationality = JAP
@@ -105,6 +106,7 @@ country_event = {
 					corps_commander = {
 						desc = Ayase_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							organizer
 							panzer_leader
 							politically_connected

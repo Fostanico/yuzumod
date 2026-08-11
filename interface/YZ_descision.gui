@@ -14,7 +14,7 @@ guiTypes = {
 			name = "Yzleader_title"
 			position = { x = 150 y = -10 }
 			font = "hoi_36header"
-			text = "柚子社核心圈子"
+			text = "yz_gui_label_core_circle"
 			maxWidth = 200
 			maxHeight = 40
 			alwaystransparent = yes
@@ -129,7 +129,7 @@ guiTypes = {
 			name = "Yzleader_title1"
 			position = { x = 175 y = 160 }
 			font = "hoi_24header"
-			text = "柚子社主席"
+			text = "yz_gui_label_chair"
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
@@ -139,7 +139,7 @@ guiTypes = {
 			name = "Yzleader_title2"
 			position = { x = 52 y = 188 }
 			font = "hoi_24header"
-			text = "柚子社副主席"
+			text = "yz_gui_label_vice_chair"
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
@@ -149,7 +149,7 @@ guiTypes = {
 			name = "Yzleader_title3"
 			position = { x = 312 y = 188 }
 			font = "hoi_24header"
-			text = "柚子社第一书记"
+			text = "yz_gui_label_first_secretary"
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
@@ -289,10 +289,10 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "yz_economic_policy_title_1_text"
-			position = { x = 68 y = 68 }  
+			position = { x = 28 y = 68 }
 			font = "hoi_18mbs"
 			text = "yz_economic_policy_title_1_text"
-			maxWidth = 70
+			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
 			format = center 
@@ -307,10 +307,10 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "yz_economic_policy_title_2_text"
-			position = { x = 68 y = 108 } 
+			position = { x = 28 y = 108 }
 			font = "hoi_18mbs"
 			text = "yz_economic_policy_title_2_text"
-			maxWidth = 70
+			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
 			format = center 
@@ -325,10 +325,10 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "yz_economic_policy_title_3_text"
-			position = { x = 55 y = 148 } 
+			position = { x = 28 y = 148 }
 			font = "hoi_18mbs"
 			text = "yz_economic_policy_title_3_text"
-			maxWidth = 100
+			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
 			format = center 

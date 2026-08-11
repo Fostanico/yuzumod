@@ -32,7 +32,7 @@ country_event= {
 			text = {
 				generate_character = {
 					token_base = airi_cheif
-					name = "白鹿爱莉"
+					name = YZ_character_name_shiraga_airi
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -85,7 +85,7 @@ country_event= {
 			text = {
 				generate_character = {
 					token_base = Shiraga_Airi
-					name = "白鹿爱莉"
+					name = YZ_character_name_shiraga_airi
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -100,6 +100,7 @@ country_event= {
 					corps_commander = {
 						desc = Airi_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							yz_airi_trait
 							trait_reckless
 							trait_cautious

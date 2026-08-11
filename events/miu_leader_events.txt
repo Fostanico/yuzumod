@@ -21,7 +21,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "矢来美羽"
+            name = Yuzu_miu
             picture = "GFX_portrait_ADD_meiyu"
             desc = miu_desc
             expire = "2095.1.1"
@@ -45,7 +45,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "矢来美羽"
+            name = Yuzu_miu
             picture = "GFX_portrait_ADD_meiyu"
             desc = miu_desc
             expire = "2095.1.1"
@@ -69,7 +69,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "矢来美羽"
+            name = Yuzu_miu
             picture = "GFX_portrait_ADD_meiyu"
             desc = miu_desc
             expire = "2095.1.1"
@@ -93,7 +93,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "矢来美羽"
+            name = Yuzu_miu
             picture = "GFX_portrait_ADD_meiyu"
             desc = miu_desc
             expire = "2095.1.1"

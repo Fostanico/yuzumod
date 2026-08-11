@@ -1,0 +1,111 @@
+﻿l_english:
+ yz_auto_recruit: "\n§4Because you have not obtained the required generals, the following generals are §4automatically recruited§!, with these effects:§!"
+ #千恋万花#"
+ recruit_mako: "§CHitachi Mako§!\n§YLevel: 5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:7  £trait_logistics:8\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_yoshino: "Tomotake Yoshino\n§YLevel: 5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§tBegins the Yoshino event chain§!\n§YUnlocks the Yoshino Industrialization decision group\nCan be chosen as §Yleader§!\nUnlocks cabinet options§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_murasame: "§GMurasame-chan§!\n§YLevel: 5§!\n £trait_attack:7  £trait_defense:5\n £trait_planning:3  £trait_logistics:5\nCan be chosen as §Yleader§!\n§YUnlocks the Murasame advisor decisions\nGain army chief§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_lena: "§HLena Liechtenauer§!\n§YLevel: 5 §!\n £trait_attack:3  £trait_defense:6 \n £trait_planning:3  £trait_logistics:6\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_luchun: "[recruit_luchun_text]"
+ recruit_luchun_1: "Maniwa Roka, Kurama Koharu\n\n§tSpecial recruitment!§!\nUnlocks the decision: §YThe Sisters' Love Battlefield§!\n(The generals will be unlocked through §Ysubsequent decisions and events!§!)\n\nCost: £GFX_pol_power §Y20§!"
+ recruit_luchun_2: "§YManiwa Roka§!\n§YLevel: 5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n§YKurama Koharu§!\n§YLevel: 5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5\n\nCost: £GFX_pol_power §Y20§!"
+ recruit_title: "§G Senren * Banka! §!\nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ SR: "§G Senren * Banka! §!"
+
+ #魔宴#
+ recruit_nene: "Ayachi Nene\n§YLevel: 5 §!\n £trait_attack:7  £trait_defense:2 \n £trait_planning:1  £trait_logistics:6\nUnlocks the §Y721 Research Institute and cabinet§! decision group\nCan be chosen as §Yleader§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_megulu: "§OInaba Meguru§!\n§YLevel: 5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§YUnlocks the Meguru Industrialization decision group and cabinet options§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_chou: "Shiiba Tsumugi\n§YLevel: 5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:6\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_toko: "Togakushi Touko\n§YLevel: 6 §!\n £trait_attack:3£trait_defense:5 \n £trait_planning:5  £trait_logistics:8\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_wakana: "§OKariya Wakana§!\n§YLevel: 4 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:3  £trait_logistics:5\n\nCost: £GFX_pol_power §Y10§!"
+ SW_recruit_title: "§0Sabbita of the witch!!!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ SW: "§0Sabbita of the witch!!!§!"
+
+ #RJ#
+ recruit_ayase: "§tMitsukasa Ayase§!\n§YLevel: 5 §!\n £trait_attack:6  £trait_defense:3 \n £trait_planning:4  £trait_logistics:5\nUnlocks the §Yconcert and cabinet§! decisions\nCan be chosen as §Yleader§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_nanami: "§YArihara Nanami§!\n§YLevel: 5 §!\n £trait_attack:6  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \nUnlocks the §Ycabinet and army chief§! decisions\nCan obtain a §Yspecial support company§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_nijouin_hazuki: "§CNijouin Hazuki§!\n§YLevel: 5 §!\n £trait_attack:6  £trait_defense:5 \n £trait_planning:4  £trait_logistics:3\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_mayu: "Shikibe Mayu\n§YLevel: 5 §!\n £trait_attack:4£trait_defense:4 \n £trait_planning:6  £trait_logistics:5\nUnlocks the §Yscientist§!, and you can have §YMayu§! serve at the §Y721 Research Institute§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_chisaki: "§1Mibu Chisaki§!\n§YLevel: 5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:5\n\nCost: £GFX_pol_power §Y10§!"
+ RJ_recruit_title: "§2 RIDDLE JOKER!!! §! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ RJ: "§2 RIDDLE JOKER!!! §!"
+
+ #咖啡馆#
+ recruit_kanna: "§CAkizuki Kanna§!\n§YLevel: 5 §!\n £trait_attack:4  £trait_defense:8 \n £trait_planning:7  £trait_logistics:5\nUnlocks the §Ymake sweets decisions§!\nThrough these decisions you can recruit §YSuzune§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_nozomi: "§YSumizome Nozomi§!\n§YLevel: 5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:5  £trait_logistics:5\nUnlocks the §Ymake sweets decisions§!\nThrough these decisions you can recruit §YSuzune§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_zaozi: "§RShiki Natsume§!\n§YLevel: 5 §!\n £trait_attack:7  £trait_defense:3 \n £trait_planning:3  £trait_logistics:7\nUnlocks the §Ymake sweets decisions§!\nThrough these decisions you can recruit §YSuzune§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_suzune: "Shioyama Suzune\n§YLevel: 5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:3 £trait_logistics:9\n§tSpecial recruitment!§!\nAfter recruiting §YNatsume§!, §YKanna§! and §YNozomi§!\nrecruit Sister Suzune through the §Ymake sweets decisions§!!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_mei: "§7Hiuchidani Mei§!\n§YLevel: 5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:6\n\n\nCost: £GFX_pol_power §Y10§!"
+ CS_recruit_title: " Cafe Stella and the Reapers' Butterflies!!! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§!  "
+ CS: " Cafe Stella and the Reapers' Butterflies!!! "
+ CS_neko: "[CS_neko_text]"
+ CS_neko1: "Clicking has a 2.5% chance to drop §Ycat food§! (£GFX_pol_power §Y5§!)!"
+ CS_neko2: "§YCat food§! is all gone!"
+
+ #天使纷扰#
+ recruit_amane: "§CTanikaze Amane§!\n§YLevel: 5 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:5  £trait_logistics:6\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_fumika: "§tOzato Fumika§!\n§YLevel: 5 §!\n £trait_attack:5  £trait_defense:2 \n £trait_planning:6  £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_kaguya: "§bKaguya§!\n§YLevel: 5 §!\n £trait_attack:6  £trait_defense:4 \n £trait_planning:8  £trait_logistics:3\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_kurumi: "§CKohibari Kurume§!\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:5\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_noa: "§YShirayuki Noa§!\n§YLevel: 5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:6 £trait_logistics:5\n§tCan choose to enter the §YNoa route§!§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_ori: "§GOrie Lewak§!\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:8 £trait_logistics:8\n\nCost: £GFX_pol_power §Y10§!"
+ TS_recruit_title: " §CTenshi☆Souzou RE-BOOT!!!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§!  "
+ TS: " §CTenshi☆Souzou RE-BOOT!!!§! "
+
+ #天色幻想岛#
+ recruit_airi: "§4Shiraga Airi§!\n[!recruit_airi_click]\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_xiali: "§YShirley Warwick§!\n§YLevel: 5 §!\n £trait_attack:1 £trait_defense:8 \n £trait_planning:1 £trait_logistics:8\n§YLine-holding specialist general, high leadership cap!§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_zhenxiao: "§RMasaki Gaillard!§!\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\nUnlocks the §YMasaki chain store§! decisions for rapid construction of §Ysupply depots§! and §Ybonus Yuzu Coins§!!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_xiyin: "Amagiri Yune\n§tLevel: 7 §!\n £trait_attack:11 £trait_defense:5 \n £trait_planning:5 £trait_logistics:9\nYo yo yo......§! \n\nCost: £GFX_pol_power §Y10§!"
+ recruit_munaixiang: "§WKonoka§!\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_diya: "§GTia Hohenwerfen§!\n§tLevel: 5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:9 £trait_logistics:4\nI... I'm not some kind of H teacher!§!\n\nCost: £GFX_pol_power §Y10§!"
+ AIN_recruit_title: "§4Amairo * Islenauts!!!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ AIN: "§4Amairo * Islenauts!!!§!"
+
+ #DRACU-RIOT!#
+ recruit_miu: "§RYarai Miu§!\n§YLevel: 5 §!\n £trait_attack:7 £trait_defense:2 \n £trait_planning:3 £trait_logistics:4\n[!recruit_miu_click]\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_hiyori: "§WOofusa Hiyori§!\n§YLevel: 5§!\n  £trait_attack:4 £trait_defense:4 \n £trait_planning:6 £trait_logistics:8\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_elina: "§RElina Olegovna Oven§!\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:2 \n £trait_planning:6 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_liyin: "§CInamura Rio§!\n§YLevel: 6 §!\n £trait_attack:6 £trait_defense:3 \n £trait_planning:3 £trait_logistics:4\n[!recruit_liyin_click]\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_buliangzi: "Mera Azusa\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_nigula: "§YNicola Cepheus\n§YLevel: 5 §!\n £trait_attack:5 £trait_defense:5 \n £trait_planning:5 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_DR_title: "§RDRACU-RIOT!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y60§! "
+ DR: "§RDRACU-RIOT!§!"
+
+ #nobleworks#
+ recruit_maya: "§BNagamitsu Maya§!\n£trait_attack:8 £trait_defense:6 \n £trait_planning:3 £trait_logistics:3 \n\nCost: £GFX_pol_power §Y10§!"
+ recruit_akari: "§YKanemoto Akari§!\n£trait_attack:3 £trait_defense:6 \n £trait_planning:8 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_hinata: "§YKunihiro Hinata§!\n£trait_attack:7 £trait_defense:1 \n £trait_planning:3 £trait_logistics:9\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_shizuru: "§WMasamune Shizuru§!\n£trait_attack:8 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_sena: "§7Tsukiyama Sena§!\n£trait_attack:5 £trait_defense:5 \n £trait_planning:3 £trait_logistics:13\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_NW_titile: "§YNOBLEWORKS!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ NW: "§YNOBLEWORKS!§!"
+
+ #夏空彼方#
+ recruit_chihaya: "Chihaya\nHas a §Ydedicated general upgrade decision chain!§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_sasara: "§WShichijou Sasara§!\n§tThis general is still undeveloped, with only simple stats and no exclusive trait yet§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_yuiko: "§OMiyoshi Yuiko§!\n§tThis general is still undeveloped, with only simple stats and no exclusive trait yet§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_NK_title: "§4Natsuzora Kanata§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ NK: "§4Natsuzora Kanata§!"
+
+ #天神乱漫#
+ recruit_sakuyahime: "§RUnohana no Sakuya Hime§!\n§YLevel: 5 §!\n £trait_attack:7 £trait_defense:3 \n £trait_planning:5 £trait_logistics:4\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_ruri: "§WRindou Ruri§!\nLevel: 5 §!\n £trait_attack:15 £trait_defense:1 \n £trait_planning:1 £trait_logistics:1\nFoxy huff!§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_aoi: "§RYamabuki Aoi§!\n§YLevel: 5 §!\n £trait_attack:3 £trait_defense:4 \n £trait_planning:7 £trait_logistics:7\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_sana: "§YChitose Sana§!\n§YLevel: 5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6\n\nOn Sana's birthday, June 8 every year, you can use the §Ydecision§! to §Ycelebrate Sana's birthday§! and gain a §Ymassive bonus§!!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_mahiro: "§WTokiwa Mahiro§!\n§tThis general is still undeveloped, with only simple stats and no exclusive trait yet§!\n\nCost: £GFX_pol_power §Y10§!"
+ recruit_yukari: "§RKarasuba Yukari§!\n§tThis general is still undeveloped, with only simple stats and no exclusive trait yet§!\n\nCost: £GFX_pol_power §Y10§!"
+ TL_recruit_title: "§YTenshin Ranman LUCKY or UNLUCKY?!§! \nClick this title to §Yrecruit all characters§! of this work §Ywith one click!§!\nCost: £GFX_pol_power §Y50§! "
+ TL: "§YTenshin Ranman LUCKY or UNLUCKY?!§!"
+
+ baibanjiang: "§tThis general is still undeveloped, with only simple stats and no exclusive trait yet§!"
+ YZrecruit: "Open the §YYuzusoft Recruitment Panel§!"
+ YZ_recruit_drag_tooltip: "Click and drag the background to move the recruitment button"
+
+#聚光灯柠檬果酱#
+ LLLJ: "§OLimeLight Lemonade Jam!!!§! "
+ recruit_ena: "§tHinami Enagi§!\n§YLevel: 5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:3 £trait_logistics:5\nThanks, thanks!!"
+ recruit_anju: "§0Kakushi Anzu§!\n§YLevel: 5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:5\nFlashbang for B site, coming up!"
+ recruit_tsukimi: "§YShimagoe Tsukimi§!\n§YLevel: 5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6"
+ recruit_ririko: "§RFutamihara Ririko§!\n§YLevel: 5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\nAfter all, I'm a good woman~"
+ recruit_nayuka: "§1Chaen Nayuka§!\n§YLevel: 5 §!\n £trait_attack:4 £trait_defense:4 \n £trait_planning:5 £trait_logistics:6"
+ recruit_miku: "§gRekikawa Miku§!\n§YLevel: 5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:4 £trait_logistics:4"

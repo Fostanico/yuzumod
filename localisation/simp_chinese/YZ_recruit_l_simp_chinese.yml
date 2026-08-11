@@ -14,7 +14,7 @@
  #魔宴#
  recruit_nene: "绫地宁宁\n§Y等级:5 §!\n £trait_attack:7  £trait_defense:2 \n £trait_planning:1  £trait_logistics:6\n将解锁§Y721研究所及内阁§!决议组\n可选§Y领导人§!\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_megulu: "§O因幡爱瑠§!\n§Y等级:5 §!\n £trait_attack:5  £trait_defense:3 \n £trait_planning:6  £trait_logistics:5 \n§Y将解锁美咕噜工业化决议组及内阁选项§!\n\n将花费 £GFX_pol_power §Y10§!"
- recruit_chou: "椎叶䌷\n§Y等级:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:6\n\n将花费 £GFX_pol_power §Y10§!"
+ recruit_chou: "椎叶紬\n§Y等级:5 §!\n £trait_attack:4  £trait_defense:5 \n £trait_planning:4  £trait_logistics:6\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_toko: "户隐憧子\n§Y等级:6 §!\n £trait_attack:3£trait_defense:5 \n £trait_planning:5  £trait_logistics:8\n\n将花费 £GFX_pol_power §Y10§!"
  recruit_wakana: "§O仮屋和奏§!\n§Y等级:4 §!\n £trait_attack:4  £trait_defense:4 \n £trait_planning:3  £trait_logistics:5\n\n将花费 £GFX_pol_power §Y10§!"
  SW_recruit_title: "§0Sabbita of the witch!!!§! \n点击此标题§Y一键招募§!本作品§Y所有角色！§!\n将花费 £GFX_pol_power §Y50§! "
@@ -102,13 +102,13 @@
  YZ_recruit_drag_tooltip: "点击背景以拖动招募按钮"
 
 #聚光灯柠檬果酱#
-LLLJ: "§O聚光灯柠檬果酱!!!§! " #暂定
-recruit_ena: "§t阳见惠凪§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:3 £trait_logistics:5\n花Q花Q！！"
-recruit_anju: "§0隐杏株§!\n§Y等级:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:5\nB点高闪来一个！"
-recruit_tsukimi: "§Y嶌越月望§!\n§Y等级:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6"
-recruit_ririko: "§R二见原莉莉子§!\n§Y等级:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n毕竟我可是好女人嘛~"
-recruit_nayuka: "§1茶园那优花§!\n§Y等级:5 §!\n £trait_attack:4 £trait_defense:4 \n £trait_planning:5 £trait_logistics:6"
-recruit_miku: "§g砾川美玖§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:4 £trait_logistics:4"
+ LLLJ: "§O聚光灯柠檬果酱!!!§! " #暂定
+ recruit_ena: "§t阳见惠凪§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:3 £trait_logistics:5\n花Q花Q！！"
+ recruit_anju: "§0隐杏株§!\n§Y等级:5 §!\n £trait_attack:8 £trait_defense:2 \n £trait_planning:2 £trait_logistics:5\nB点高闪来一个！"
+ recruit_tsukimi: "§Y嶌越月望§!\n§Y等级:5 §!\n £trait_attack:2 £trait_defense:8 \n £trait_planning:3 £trait_logistics:6"
+ recruit_ririko: "§R二见原莉莉子§!\n§Y等级:5 §!\n £trait_attack:3 £trait_defense:3 \n £trait_planning:7 £trait_logistics:7\n毕竟我可是好女人嘛~"
+ recruit_nayuka: "§1茶园那优花§!\n§Y等级:5 §!\n £trait_attack:4 £trait_defense:4 \n £trait_planning:5 £trait_logistics:6"
+ recruit_miku: "§g砾川美玖§!\n§Y等级:5 §!\n £trait_attack:6 £trait_defense:5 \n £trait_planning:4 £trait_logistics:4"
 
 
 

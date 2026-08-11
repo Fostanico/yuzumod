@@ -15,7 +15,7 @@ country_event = { 		##
 			text = {
 				generate_character = {
 					token_base = suzune
-					name = "汐山凉音"
+					name = YZ_character_name_shioyama_suzune
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -41,6 +41,7 @@ country_event = { 		##
 					corps_commander = {
 						desc = suzune_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							maid_suzune_trait
 							organisational_leader
 							adaptable
@@ -80,7 +81,7 @@ country_event = { 		##
 			text = {
 				generate_character = {
 					token_base = suzune
-					name = "汐山凉音"
+					name = YZ_character_name_shioyama_suzune
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -106,6 +107,7 @@ country_event = { 		##
 					corps_commander = {
 						desc = suzune_corps_desc
 						traits={
+						    yz_yuzusoft_character
 							maid_suzune_trait
 							organisational_leader
 							adaptable

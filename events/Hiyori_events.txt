@@ -14,7 +14,7 @@ country_event = {
 			text = {
 				generate_character = {
 					token_base = Izumi_hiyori
-					name = "和泉妃爱"
+					name = YZ_character_name_izumi_hia
 					gender = female
 					nationality = JAP
 					portraits = {
@@ -38,6 +38,7 @@ country_event = {
 					}
 					corps_commander = {
 						traits={
+						    yz_easter_egg_character
 							media_personality
 							JAP_communist_sympathizer
 							brilliant_strategist

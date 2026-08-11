@@ -1,9 +1,5 @@
 spriteTypes = {
 	#gui相关
-	spriteType = {
-		name = "GFX_yuzusoft_sour"
-		textureFile = "gfx/guis/yzsoft_sour.png"
-	}
 	spriteType = {                                     #这两个是我当时备选的酸柚子图标，2025.5.29,20:39，伊尔诺（其实是昨天写的，
 		name = "GFX_yuzusoft_sour_2"                   #但是忘记写注释了）
 		textureFile = "gfx/guis/yzsoft_sour_2.png"

@@ -15,7 +15,9 @@ on_actions = {
                 }
                 every_navy_leader = {
                     limit = {
-                        yz_general = yes
+                        # Naval identity remains a character flag because land personality traits
+                        # cannot be assigned to admiral roles.
+                        has_character_flag = yz_navy_flag
                     }
                     set_character_flag = SOV_safe_from_purge_flag
                 }
@@ -233,15 +235,16 @@ on_actions = {
         }
     }
 
-    on_deployed_leader_defeated = {         #KR里搬过来的喵，KR的代码就是比蠢驴的代码好用喵 ——huhu 2026.7.13 21:26
-        effect = {              #将领防抓小机制，但是直接范围覆盖全游戏了，原版将也不会被抓了
+    on_deployed_leader_defeated = {
+        effect = {
             log = "on_deployed_leader_defeated [GetLogThis] [GetLogRoot] [GetLogFrom]"
-			#if = { #TODO: DECIDE WITH TEAM WHETHER GENERAL CAPTURES SHOULD BE ALLOWED
-			#	limit = { can_be_captured = yes }
-			#	capture_by = FROM
-			#}
+            # can_be_captured = no does not prevent every defeat path. Only this mod's
+            # identity-marked land leaders receive the wounded fallback instead.
             if = {
-                limit = { NOT = { has_trait = wounded } }
+                limit = {
+                    yz_general = yes
+                    NOT = { has_trait = wounded }
+                }
                 add_timed_unit_leader_trait = {
                     trait = wounded
                     days = 90

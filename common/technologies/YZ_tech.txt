@@ -370,7 +370,7 @@ technologies = {
 			factor = 0
 		}
 		light_armor = {
-			fuel_consumption_factor = -0.5
+			fuel_consumption_factor = -0.025
 			forest = {
 				attack = 0.15
 				defence = 0.15
@@ -409,7 +409,7 @@ technologies = {
 			}
 		}
 		armored_car = {
-			fuel_consumption_factor = -0.5
+			fuel_consumption_factor = -0.025
 			forest = {
 				attack = 0.15
 				defence = 0.15
@@ -448,7 +448,7 @@ technologies = {
 			}
 		}
 		motorized = {
-			fuel_consumption_factor = -0.5
+			fuel_consumption_factor = -0.025
 			forest = {
 				attack = 0.15
 				defence = 0.15
@@ -678,7 +678,7 @@ technologies = {
 			soft_attack = 0.2
 			hard_attack = 0.2
 			defense = 0.1
-			supply_consumption_factor = -0.08
+			supply_consumption_factor = -0.02
 		}
 	}
 	yz_mechanized_3 = {
@@ -732,20 +732,20 @@ technologies = {
 			factor = 0
 		}
 		light_armor = {
-			fuel_consumption_factor = -0.3
-			supply_consumption_factor = -0.3
+			fuel_consumption_factor = -0.02
+			supply_consumption_factor = -0.01
 		}
 		medium_armor = {
-			fuel_consumption_factor = -0.3
-			supply_consumption_factor = -0.3
+			fuel_consumption_factor = -0.02
+			supply_consumption_factor = -0.01
 		}
 		heavy_armor = {
-			fuel_consumption_factor = -0.3
-			supply_consumption_factor = -0.3
+			fuel_consumption_factor = -0.02
+			supply_consumption_factor = -0.01
 		}
 		modern_armor = {
-			fuel_consumption_factor = -0.3
-			supply_consumption_factor = -0.3
+			fuel_consumption_factor = -0.02
+			supply_consumption_factor = -0.01
 		}
 	}
 	yz_blitzkrieg_3 = {

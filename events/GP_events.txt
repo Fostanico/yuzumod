@@ -4,7 +4,7 @@ country_event = {
 	id = GP_event.1
 	title = GP_event.1.t
 	desc = GP_event.1.d
-	picture = GFX_GP_event0
+	picture = GFX_report_event_generic_read_write
 
 	is_triggered_only = yes
 
@@ -21,7 +21,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "恭平"
+			name = gongping
 			picture = "GFX_portrait_ADD_gongping"
 			expire = "2095.1.1"
 			ideology = marxism
@@ -44,7 +44,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "恭平"
+			name = gongping
 			picture = "GFX_portrait_ADD_gongping"
 			expire = "2095.1.1"
 			ideology = conservatism
@@ -67,7 +67,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "恭平"
+			name = gongping
 			picture = "GFX_portrait_ADD_gongping"
 			expire = "2095.1.1"
 			ideology = fascism_ideology
@@ -90,7 +90,7 @@ country_event = {
 		hidden_effect = {
 		}
 		create_country_leader = {
-			name = "恭平"
+			name = gongping
 			picture = "GFX_portrait_ADD_gongping"
 			expire = "2095.1.1"
 			ideology = despotism

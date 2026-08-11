@@ -4,7 +4,7 @@ country_event = {
     id = military_reform_event.1
     title = military_reform_event.1.t
     desc = military_reform_event.1.d
-    picture = GFX_report_event_generic_read
+	picture = GFX_report_event_generic_read_write
     
     is_triggered_only = yes
     
@@ -22,7 +22,7 @@ country_event = {
     id = military_reform_event.2
     title = military_reform_event.2.t
     desc = military_reform_event.2.d
-    picture = GFX_report_event_generic_read
+    picture = GFX_report_event_generic_read_write
     
     is_triggered_only = yes
     

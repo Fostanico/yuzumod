@@ -766,4 +766,35 @@ debug_yuzu_they_will_know_fear = {
             }
         }
     }
+
+    debug_recruit_suou_kyouhei_operative = {
+        icon = GFX_decision_onmap_recruit_operative
+        priority = 1000000
+
+        visible = {
+            is_debug = yes
+        }
+
+        available = {
+            has_dlc = "La Resistance"
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            # Direct recruitment bypasses the normal operative candidate pool.
+            create_operative_leader = {
+                name = Kyouhei
+                GFX = GFX_portrait_yz_operative_gongping
+                traits = { yz_operative_secret_order_ace }
+                bypass_recruitment = yes
+                female = no
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
 }

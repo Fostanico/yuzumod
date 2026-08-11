@@ -1,0 +1,98 @@
+﻿l_japanese:
+ hiyori_radio: "妃愛ラジオ"
+ ABILITY_hiyoriradio: "妃愛ラジオ"
+ ABILITY_hiyoriradio_desc: "妃愛に最も慣れ親しんだ戦線で働かせ、軍の士気を高める"
+ ability_hiyoriradio_tt: "\n「妃愛ラジオ」とは、大戦中に和泉妃愛が中心となって始めた前線向けの非軍事放送で、ニュース、詩、音楽、さらには家書までを放送し、前線の士気を大いに高めたことが証明されている。\n\nラジオを開けば、しばらく目の前の泥と血と死を忘れて、思いを遠い故郷へと馳せることができる。"
+  #妃爱-内阁/将领特质
+ super_hiyori_together: "放送の新星\n昇りゆく"
+ super_hiyori_together_desc: "あなたのそばにいられるだけで、妃愛は嬉しい"
+ Heart_Creation: "Heart Creation"
+ hiyohiyo: "hiyohiyo~"
+  #事件链
+ bonus_hiyori_calling: "「卓辺談話」を行う"
+ bonus_hiyori_calling_desc: "「炉辺談話」とは、フランクリン・ルーズベルト大統領が就任後に行った一連の全国放送演説であり、親しみやすく効果的だった。我々も彼に倣い、綾地寧々を招いて卓辺談話を行い、改革や予算、建設などの我々の行動を大衆に説明しよう。政策への抵抗を減らし、より大きな支持を得るためだ。「卓の隅で話すように自然に」"
+ hiyori_event.1.t: "小さな出来事"
+ hiyori_event.1.d: "招待を受けた寧々はひどく慌てた様子で、図書室でのラジオ取材の申し出を断った。しかし報道担当の木賊朋花は、政府がまもなくラジオインタビューを行うという情報を待ちきれずに発表してしまった。早急に放送の担当者を決めなければならない。皆が途方に暮れていると、小雲雀来海が可愛い金髪の女の子を連れて会議室にやって来て、部屋の中で見つけた見覚えはないけれど妙に懐かしい子だと言った。その子はその後、丁寧に自己紹介をし（最初は皆、来海が話しているのだと思ったが）、あなたと目が合った。頭の中にはまだ沢山の疑問が渦巻いていたが、あなたは妃愛こそ放送番組の最適任者だと気づいた。"
+ hiyori_event.1.a: "それなら妃愛だ！"
+ hiyori_event_1_a_tt: "ちょっと待って！なぜ妃愛も来ているの？ 妃愛イベントチェーンを開始。Hiyohiyo~☆ ※注：テキスト作業は未完了です。続きのイベントにご期待ください\n私はキャラクターと声優を重ねて見るのが好きなんだ————レナ・リヒテナウアー"
+ hiyori_event.1.b: "起こした問題は自分で責任を取れ！"
+ hiyori_1_b_tt: "妃愛イベントチェーンを終了"
+ hiyori_event.2.t: "休暇、夜の語らい"
+ hiyori_event.2.d: ""
+ hiyori_event.2.a: "ずっと、ずっと一緒に"
+ hiyori_event.2.b: "兄妹でもずっとくっついているわけにはいかないよ"
+ hiyori_event_2_b_tt: "妃愛イベントチェーンを終了。将軍と顧問は引き続き獲得できます"
+ hiyori_event.3.t: "襲撃？"
+ hiyori_event.3.d: "思い切った改革に反対がなかったわけではない。文芸界の風向きも次第にゆず派が主導するようになると、一部の反対派は動き始めた。スキャンダル、噂話、放送の失敗への辛辣な批判などが、次々と妃愛に降りかかった。あるオフラインイベントで妃愛は不運にも卵をぶつけられ、後に駆けつけた警備員の話によると、現場からは出所不明の銃器も見つかったという。家に帰った妃愛は、もはや感情を抑えきれなかった。"
+ hiyori_event.3.a: "*妃愛をなだめる*"
+ hiyori_3_a_tt: "妃愛にまで手を出すとは、ただの観客ではない。本気で殴りかかるしかない！"
+ hiyori_event.4.t: "塹壕の中の朗読劇"
+ hiyori_event.4.d: ""
+ hiyori_event.4.a: "*大きな拍手*"
+ hiyori_event.5.t: "日常"
+ hiyori_event.5.d: ""
+ hiyori_event.5.a: "素晴らしい日々が 続いていく"
+ hiyori_event.6.t: "思いもよらず"
+ hiyori_event.6.d: ""
+ hiyori_event.6.a: "これからもよろしくお願いします"
+#技能-立绘
+  hiyori_Skin_Ability_1: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_1_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_2: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_2_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_3: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_3_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_4: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_4_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_5: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_5_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_6: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_6_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_7: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_7_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_8: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_8_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_9: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_9_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_10: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_10_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_11: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_11_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_12: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_12_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_13: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_13_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_14: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_14_desc: "全15枚の差分。ランダムではありません"
+
+  hiyori_Skin_Ability_15: "妃愛-立ち絵変更"
+  hiyori_Skin_Ability_15_desc: "全15枚の差分。ランダムではありません"
+
+ hiy_1: "GFX_hiy_1"
+ hiy_2: "GFX_hiy_2"
+ hiy_3: "GFX_hiy_3"
+ hiy_4: "GFX_hiy_4"
+ hiy_5: "GFX_hiy_5"
+ hiy_6: "GFX_hiy_6"
+ hiy_7: "GFX_hiy_7"
+ hiy_8: "GFX_hiy_8"
+ hiy_9: "GFX_hiy_9"
+ hiy_10: "GFX_hiy_10"
+ hiy_11: "GFX_hiy_11"
+ hiy_12: "GFX_hiy_12"
+ hiy_13: "GFX_hiy_13"
+ hiy_14: "GFX_hiy_14"
+ hiy_15: "GFX_hiy_15"

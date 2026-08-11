@@ -32,7 +32,7 @@ country_event= {           #抽到真琴
                 text = {
                     generate_character = {
                         token_base = Yzmisakamakoto
-                        name = "御坂真琴"
+                        name = YZ_character_name_misaka_makoto
                         gender = female
                         nationality = PRC
                         portraits = {
@@ -47,6 +47,7 @@ country_event= {           #抽到真琴
                         corps_commander = {
                             desc = misaka_makoto_desc_commander
                             traits={
+                                yz_easter_egg_character
                                 futsuuna_shoujo_no_kokoro
                                 strong_ai
                                 world_type_maho
@@ -78,7 +79,7 @@ country_event= {           #抽到市杵宍姬命——2026.5.28，22：47，御
                 text = {
                     generate_character = {
                         token_base = Yzitsukishishihimenomikoto
-                        name = "市杵宍姬命"
+                        name = YZ_character_name_ichikishima_hime
                         can_be_captured = no
                         gender = female
                         nationality = JAP
@@ -94,6 +95,7 @@ country_event= {           #抽到市杵宍姬命——2026.5.28，22：47，御
                         corps_commander = {
                             desc = itsukishishishihimenomikoto_desc_commander
                             traits={
+                                yz_easter_egg_character
                                 super_big_big_sister
                                 super_shake_sm
                                 god_who_collect_the_pollution

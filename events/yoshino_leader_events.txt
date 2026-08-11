@@ -4,7 +4,7 @@ country_event = {
     id = cwfn_event.1
     title = cwfn_event.1.t
     desc = cwfn_event.1.d
-    picture = GFX_cwfn_event0
+    picture = GFX_report_event_generic_read_write
 
     is_triggered_only = yes
 
@@ -21,7 +21,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "朝武芳乃"
+            name = chaowufangnai
             picture = "GFX_portrait_ADD_chaowufangnai"
             desc = chaowufangnai_desc
             expire = "2095.1.1"
@@ -46,7 +46,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "朝武芳乃"
+            name = chaowufangnai
             picture = "GFX_portrait_ADD_chaowufangnai"
             desc = chaowufangnai_desc
             expire = "2095.1.1"
@@ -71,7 +71,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "朝武芳乃"
+            name = chaowufangnai
             picture = "GFX_portrait_ADD_chaowufangnai"
             desc = chaowufangnai_desc
             expire = "2095.1.1"
@@ -96,7 +96,7 @@ country_event = {
         hidden_effect = {
         }
         create_country_leader = {
-            name = "朝武芳乃"
+            name = chaowufangnai
             picture = "GFX_portrait_ADD_chaowufangnai"
             desc = chaowufangnai_desc
             expire = "2095.1.1"

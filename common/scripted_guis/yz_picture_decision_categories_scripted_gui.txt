@@ -1,0 +1,30 @@
+scripted_gui = {
+    # Each GUI is attached to exactly one decision category, so visibility and
+    # lifecycle continue to come from that category's existing definition.
+    yz_roka_koharu_category_gui = {
+        context_type = decision_category
+        window_name = "yz_roka_koharu_category_window"
+    }
+    yz_add_general_category_gui = {
+        context_type = decision_category
+        window_name = "yz_add_general_category_window"
+    }
+    yz_cultural_department_category_gui = {
+        context_type = decision_category
+        window_name = "yz_cultural_department_category_window"
+    }
+    yz_megulu_industry_category_gui = {
+        context_type = decision_category
+        window_name = "yz_megulu_industry_category_window"
+    }
+    yz_world_unity_category_gui = {
+        context_type = decision_category
+        window_name = "yz_world_unity_category_window"
+        properties = {
+            # Reuse the four former category pictures without duplicating assets.
+            yz_world_unity_category_background = {
+                image = "[yz_world_unity_category_image]"
+            }
+        }
+    }
+}

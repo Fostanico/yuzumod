@@ -1,0 +1,138 @@
+# These texts report the next unfinished mission in each independent automatic
+# branch. They read existing flags only and therefore add no periodic script.
+defined_text = {
+    name = yz_megulu_industry_progress_panel
+    text = {
+        trigger = {
+            not = { has_country_flag = Megulu_industry_five_year_yes }
+        }
+        localization_key = Megulu_industry_category_gui_progress_not_started
+    }
+    text = {
+        localization_key = Megulu_industry_category_gui_progress_active
+    }
+}
+
+defined_text = {
+    name = yz_megulu_factory_progress
+    text = {
+        trigger = { has_country_flag = megulu_industry_3 }
+        localization_key = yz_megulu_progress_completed
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_2 }
+        localization_key = Megulu_industry_3
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_1 }
+        localization_key = Megulu_industry_2
+    }
+    text = { localization_key = Megulu_industry_1 }
+}
+
+defined_text = {
+    name = yz_megulu_production_progress
+    text = {
+        trigger = { has_country_flag = megulu_industry_6 }
+        localization_key = yz_megulu_progress_completed
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_5 }
+        localization_key = Megulu_industry_6
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_4 }
+        localization_key = Megulu_industry_5
+    }
+    text = { localization_key = Megulu_industry_4 }
+}
+
+defined_text = {
+    name = yz_megulu_mobilization_progress
+    text = {
+        trigger = {
+            has_country_flag = megulu_industry_9
+            has_country_flag = megulu_industry_10
+        }
+        localization_key = yz_megulu_progress_completed
+    }
+    text = {
+        trigger = {
+            has_country_flag = megulu_industry_9
+            not = { has_country_flag = megulu_industry_10 }
+        }
+        localization_key = Megulu_industry_10
+    }
+    text = {
+        trigger = {
+            has_country_flag = megulu_industry_10
+            not = { has_country_flag = megulu_industry_9 }
+        }
+        localization_key = Megulu_industry_9
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_8 }
+        localization_key = yz_megulu_progress_9_and_10
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_7 }
+        localization_key = Megulu_industry_8
+    }
+    text = { localization_key = Megulu_industry_7 }
+}
+
+defined_text = {
+    name = yz_megulu_resource_progress
+    text = {
+        trigger = { has_country_flag = megulu_industry_17 }
+        localization_key = yz_megulu_progress_completed
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_16 }
+        localization_key = Megulu_industry_17
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_15 }
+        localization_key = Megulu_industry_16
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_14 }
+        localization_key = Megulu_industry_15
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_13 }
+        localization_key = Megulu_industry_14
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_12 }
+        localization_key = Megulu_industry_13
+    }
+    text = { localization_key = Megulu_industry_12 }
+}
+
+defined_text = {
+    name = yz_megulu_final_progress
+    text = {
+        trigger = { has_country_flag = finished_megulu_industry }
+        localization_key = yz_megulu_progress_completed
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_18 }
+        localization_key = Megulu_industry_18
+    }
+    text = {
+        trigger = { has_country_flag = megulu_industry_19 }
+        localization_key = Megulu_industry_19
+    }
+    text = {
+        trigger = {
+            has_country_flag = megulu_industry_3
+            has_country_flag = megulu_industry_6
+            has_country_flag = megulu_industry_9
+            has_country_flag = megulu_industry_10
+            has_country_flag = megulu_industry_12
+        }
+        localization_key = yz_megulu_progress_choose_final
+    }
+    text = { localization_key = yz_megulu_progress_waiting_for_branches }
+}

@@ -26,7 +26,7 @@ qiyong_youzi_general_category = {
 }
 Roka_Koharu_decision_category = {
 	icon = GFX_roko
-	picture = GFX_roko_d_desc
+	scripted_gui = yz_roka_koharu_category_gui
 	priority = 2
 }
 general_develpomen_decision_category = {
@@ -35,7 +35,7 @@ general_develpomen_decision_category = {
 }
 add_youzi_general_category = {
 	icon = GFX_Category_decision
-	picture = GFX_add_leaders_decisions
+	scripted_gui = yz_add_general_category_gui
 	priority = 0
 }
 JCLleaders_category = {
@@ -48,8 +48,8 @@ JCL_industry_category = {
 	priority = 2
 }
 Megulu_industry_category = {
-	picture = GFX_meigulu_2
 	icon = GFX_meigulu
+	scripted_gui = yz_megulu_industry_category_gui
 	priority = 2
 }
 YZS_scientist_category = {
@@ -93,12 +93,13 @@ atri_heading_utopia = {
 	priority = 10
 }
 QRYleaders_category = {
-	picture = GFX_QRYleaders_decisions
+	picture = GFX_decision_category_generic
 	icon = GFX_Category_decision
 	priority = 0
 }
-World_Unity_communism = {
-	picture = GFX_World_Communism
+World_Unity = {
+	icon = GFX_decision_category_generic
+	scripted_gui = yz_world_unity_category_gui
 	priority = 1000
 	allowed = {
 		is_ai = no
@@ -112,55 +113,10 @@ World_Unity_communism = {
 		}
 		or = {
 			has_government = communism
+			has_government = fascism
+			has_government = democratic
+			has_government = neutrality
 		}
-	}
-}
-World_Unity_fascism = {
-	picture = GFX_World_fascism
-	priority = 999
-	allowed = {
-		is_ai = no
-	}
-	visible = {
-		is_ai = no
-		or = {
-			has_country_flag = qiyong_youzi_1
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = qiyong_youzi_3
-		}
-		has_government = fascism
-	}
-}
-World_Unity_democratic = {
-	picture = GFX_World_democratic
-	priority = 998
-	allowed = {
-		is_ai = no
-	}
-	visible = {
-		is_ai = no
-		or = {
-			has_country_flag = qiyong_youzi_1
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = qiyong_youzi_3
-		}
-		has_government = democratic
-	}
-}
-World_Unity_neutrality = {
-	picture = GFX_World_neutrality
-	priority = 997
-	allowed = {
-		is_ai = no
-	}
-	visible = {
-		is_ai = no
-		or = {
-			has_country_flag = qiyong_youzi_1
-			has_country_flag = qiyong_youzi_2
-			has_country_flag = qiyong_youzi_3
-		}
-		has_government = neutrality
 	}
 }
 
