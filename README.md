@@ -1,3 +1,10 @@
+<p align="center">
+  <strong>语言：</strong>
+  <a href="./README.md">简体中文</a> ·
+  <a href="./README_EN.md">English</a> ·
+  <a href="./README_JA.md">日本語</a>
+</p>
+
 # 柚子社将领包 / Yuzusoft Generals Pack
 
 <p align="center">
@@ -40,7 +47,7 @@
 | 项目 | 信息 |
 |---|---|
 | Mod 名称 | 柚子社将领包 |
-| Mod Version | `1.181` |
+| Mod Version | `1.85` |
 | HOI4 `supported_version` | `1.19.2.0` |
 | Steam Workshop ID | `3303751918` |
 | GitHub 分支 | `main` |
