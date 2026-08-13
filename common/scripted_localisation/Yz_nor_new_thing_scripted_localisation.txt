@@ -16,23 +16,6 @@
 #		localization_key = rob_the_yz_gold_description_2
 #	}
 #}
-defined_text = {      #这个是柚子债券决议组的描述
-	name = yz_economy_department_category_describe
-	text = {
-		trigger = {
-			NOT = {
-				has_country_flag = Yoshino_industry_long_term_invest_now_start
-			}
-		}
-		localization_key = we_dont_start_yz_invest
-	}
-	text = {
-		trigger = {
-			has_country_flag = Yoshino_industry_long_term_invest_now_start
-		}
-		localization_key = we_now_start_yoshino_industry_long_term_invest
-	}
-}
 defined_text = {       #这个是柚子社文化局的传播柚子文化条件的描述
 	name = Yuzu_can_form_yuzu_land_describe
 	text = {

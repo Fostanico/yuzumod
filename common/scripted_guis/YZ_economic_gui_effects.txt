@@ -1,57 +1,219 @@
 scripted_gui = {
-    yz_economic_gui = {
-        window_name = "Yuzusoft_economic_describe"
-        context_type = decision_category
-        visible = {
-            or = {
-                has_country_flag = qiyong_youzi_1
-                has_country_flag = qiyong_youzi_2
-                has_country_flag = qiyong_youzi_3
-            }
-            #is_debug = yes
-        }
-        effects = {
-            open_yz_economic_operation_click = {
-                if = {
-                    limit = {
-                        has_country_flag = show_yz_bonds_ui
-                    }
-                    clr_country_flag = show_yz_bonds_ui
-                }
-                else = {
-                    set_country_flag = show_yz_bonds_ui
-                }
-            }
-            open_yz_invest_ui_click = {
-                if = {
-                    limit = {
-                        has_country_flag = show_yoshino_invest_ui
-                    }
-                    clr_country_flag = show_yoshino_invest_ui
-                }
-                else = {
-                    set_country_flag = show_yoshino_invest_ui
-                }
-            }
-        }
-        triggers = {
-            open_yz_economic_operation_click_enable = {
-                NOT = {
-                    has_country_flag = finished_repayment_of_bonds
-                }
-            }
-        }
-    }
+	# Detailed bond window: player input is routed into reusable effects so the
+	# category dashboard and this window always mutate the same contract state.
     yz_bonds_operations_gui = {
         window_name = "yz_bonds_operations_ui"
         context_type = player_context
+		dirty = yz_bond_graph_dirty
         visible = {
             has_country_flag = show_yz_bonds_ui
+            has_country_flag = yz_bond_system_initialized
         }
         effects = {
             yz_bonds_ui_close_button_click = {
                 clr_country_flag = show_yz_bonds_ui
+                clr_country_flag = show_yz_bond_help_ui
             }
+			yz_bond_detail_help_button_click = {
+				if = {
+					limit = { has_country_flag = show_yz_bond_help_ui }
+					clr_country_flag = show_yz_bond_help_ui
+				}
+				else = {
+					set_country_flag = show_yz_bond_help_ui
+				}
+			}
+			yz_bond_payment_decrease_button_click = { yz_bond_decrease_planned_payment = yes }
+			yz_bond_payment_increase_button_click = { yz_bond_increase_planned_payment = yes }
+			yz_bond_next_issue_decrease_button_click = { yz_bond_decrease_next_issue_amount = yes }
+			yz_bond_next_issue_increase_button_click = { yz_bond_increase_next_issue_amount = yes }
+			yz_bond_promised_rate_decrease_button_click = { yz_bond_decrease_promised_rate = yes }
+			yz_bond_promised_rate_increase_button_click = { yz_bond_increase_promised_rate = yes }
+			yz_bond_actual_rate_decrease_button_click = { yz_bond_decrease_actual_rate = yes }
+			yz_bond_actual_rate_increase_button_click = { yz_bond_increase_actual_rate = yes }
+			yz_bond_reserve_decrease_button_click = { yz_bond_decrease_cash_reserve = yes }
+			yz_bond_reserve_increase_button_click = { yz_bond_increase_cash_reserve = yes }
+			yz_bond_detail_auto_button_click = { yz_bond_toggle_automation = yes }
+			yz_bond_auto_issue_preference_button_click = { yz_bond_cycle_auto_issue_preference = yes }
+			yz_bond_payment_holiday_button_click = { yz_bond_request_payment_holiday = yes }
+			yz_bond_additional_sale_button_click = { yz_bond_additional_sale = yes }
+			yz_bond_ideology_button_click = {
+				if = {
+					limit = {
+						has_country_flag = yz_bond_active
+						has_government = democratic
+						NOT = { has_country_flag = yz_bond_democratic_operation_cooldown }
+					}
+					yz_bond_democratic_market_operation = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = yz_bond_active
+						has_government = communism
+						NOT = { has_country_flag = yz_bond_communist_operation_cooldown }
+					}
+					yz_bond_communist_industrial_repayment = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = yz_bond_active
+						has_government = neutrality
+						NOT = { has_country_flag = yz_bond_neutrality_operation_cooldown }
+						check_variable = {
+							var = yz_bond_credit_score
+							value = 15
+							compare = greater_than_or_equals
+						}
+					}
+					yz_bond_neutrality_arrest_creditors = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = yz_bond_active
+						has_government = fascism
+						has_war = yes
+						NOT = { has_country_flag = yz_bond_war_bonds_active }
+						NOT = { has_country_flag = yz_bond_fascist_operation_cooldown }
+					}
+					yz_bond_start_war_bonds_operation = yes
+				}
+			}
         }
+		triggers = {
+			yz_bond_payment_decrease_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = {
+					var = yz_bond_monthly_payment
+					value = var:yz_bond_contract_payment_floor
+					compare = greater_than
+				}
+			}
+			yz_bond_payment_increase_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_monthly_payment < 2000 }
+			}
+			yz_bond_next_issue_decrease_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_next_issue_amount > 2500 }
+			}
+			yz_bond_next_issue_increase_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_next_issue_amount < 15000 }
+			}
+			yz_bond_promised_rate_decrease_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = {
+					var = yz_bond_next_promised_rate
+					value = var:yz_bond_market_rate_floor
+					compare = greater_than
+				}
+			}
+			yz_bond_promised_rate_increase_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_next_promised_rate < 15 }
+			}
+			yz_bond_actual_rate_decrease_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_automation_enabled }
+				check_variable = { yz_bond_actual_rate > 0 }
+			}
+			yz_bond_actual_rate_increase_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_automation_enabled }
+				check_variable = { yz_bond_actual_rate < 20 }
+			}
+			yz_bond_reserve_decrease_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_cash_reserve_target > 0 }
+			}
+			yz_bond_reserve_increase_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_cash_reserve_target < 5000 }
+			}
+			yz_bond_detail_auto_button_click_enabled = {
+				has_country_flag = yz_bond_system_initialized
+			}
+			yz_bond_auto_issue_preference_button_click_enabled = {
+				has_country_flag = yz_bond_system_initialized
+			}
+			yz_bond_payment_holiday_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_payment_holiday }
+				NOT = { has_country_flag = yz_bond_payment_holiday_cooldown }
+			}
+			yz_bond_additional_sale_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_additional_sale_cooldown }
+				check_variable = {
+					var = yz_bond_credit_score
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			yz_bond_ideology_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				OR = {
+					AND = {
+						has_government = democratic
+						NOT = { has_country_flag = yz_bond_democratic_operation_cooldown }
+					}
+					AND = {
+						has_government = communism
+						NOT = { has_country_flag = yz_bond_communist_operation_cooldown }
+					}
+					AND = {
+						has_government = neutrality
+						NOT = { has_country_flag = yz_bond_neutrality_operation_cooldown }
+						check_variable = {
+							var = yz_bond_credit_score
+							value = 15
+							compare = greater_than_or_equals
+						}
+					}
+					AND = {
+						has_government = fascism
+						has_war = yes
+						NOT = { has_country_flag = yz_bond_war_bonds_active }
+						NOT = { has_country_flag = yz_bond_fascist_operation_cooldown }
+					}
+				}
+			}
+		}
+		dynamic_lists = {
+			yz_bond_graph_lines = {
+				array = yz_bond_graph_offsets
+				change_scope = no
+				entry_container = yz_bond_graph_line_segment
+				index = yz_bond_graph_segment_index
+			}
+		}
+		# The toggle sprite is a two-frame strip: frame 0 manual, frame 1 automatic.
+		properties = {
+			yz_bond_detail_auto_button = {
+				frame = yz_bond_automation_frame
+			}
+			yz_bond_graph_lines = {
+				x = yz_bond_graph_start_x
+			}
+			yz_bond_graph_segment = {
+				y = yz_bond_graph_offsets^yz_bond_graph_segment_index
+				frame = yz_bond_graph_slopes^yz_bond_graph_segment_index
+			}
+		}
     }
+
+	yz_bond_help_gui = {
+		window_name = "yz_bond_help_ui"
+		context_type = player_context
+		visible = {
+			has_country_flag = show_yz_bond_help_ui
+		}
+		effects = {
+			yz_bond_help_close_button_click = {
+				clr_country_flag = show_yz_bond_help_ui
+			}
+		}
+	}
 }

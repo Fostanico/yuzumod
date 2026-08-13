@@ -1,0 +1,21 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_yz_md_reform_armor"
+		texturefile = "gfx/interface/decisions/yz_md_military_reform/tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_reform_helicopter"
+		texturefile = "gfx/interface/decisions/yz_md_military_reform/air_force.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_reform_drone"
+		texturefile = "gfx/interface/decisions/yz_md_military_reform/uav.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yz_md_reform_joint_force"
+		texturefile = "gfx/interface/decisions/yz_md_military_reform/army_reform.dds"
+	}
+}

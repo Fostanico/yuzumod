@@ -87,6 +87,23 @@ Yoshino_industry_finished_dynamic_modifier = {
 	min_export = Yoshino_min_export #可出口资源
 }
 
+# One national spirit owns every economic modifier produced by the bond system.
+# Contract types and temporary ideology policies only update the variables below;
+# they must not add separate stacking ideas.
+yz_bond_economy_department_dynamic_modifier = {
+	icon = GFX_gloden_ten_years
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	stability_factor = yz_bond_department_stability_factor
+	war_support_factor = yz_bond_department_war_support_factor
+	consumer_goods_factor = yz_bond_department_consumer_goods_factor
+	political_power_factor = yz_bond_department_political_power_factor
+	production_speed_buildings_factor = yz_bond_department_construction_factor
+	industrial_capacity_factory = yz_bond_department_factory_output_factor
+	industrial_capacity_dockyard = yz_bond_department_dockyard_output_factor
+}
+
 Megulu_industry_dynamic_modifier = {
 	icon =  GFX_industry_buliding
 	enable = { always = yes } 

@@ -1,232 +1,656 @@
 guiTypes = {
-    containerWindowType = {
-        name = "Yuzusoft_economic_describe"
-        position = {
-            x = 0
-            y = 0
-        }
-        size = {
-            width = 500
-            height = 150
-        }
-        #background = {
-        #   name = "YZrecruit_BG"
-        #    quadTextureSprite = "GFX_mini_tooltip"
-        #}
-        instantTextBoxType = {
-            name = "yz_economic_department_category_describe_left"                     #上一轮债券的描述
-            position = {
-                x = 0
-                y = 0
-            }
-            font = "hoi_16mbs"
-            text = "yz_economic_department_category_describe_left_text"
-            maxHeight = 80
-            maxWidth = 250
-            pdx_tooltip = "yz_not_instand_show_explain"
-        }
-        instantTextBoxType = {
-            name = "yz_economic_department_category_describe_right"
-            position = {
-                x = 300
-                y = 0
-            }
-            font = "hoi_16mbs"
-            text = "yz_economic_department_category_describe_right_text"
-            maxHeight = 80
-            maxWidth = 250
-            pdx_tooltip = "yz_not_instand_show_explain"
-        }
-        buttonType = {                               #其实我一开始就想的是直接用按钮上显示文本，后面发现不行——2025.6.2，18：08，伊尔诺
-            name = "open_yz_economic_operation"
-            position = {
-                x = 30
-                y = 100
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_yz_button_long"     #"GFX_yz_button_long"
-            scale = 0.6
-            #pdx_tooltip = "Yuzusoft_sour_recurit_tooltip"
-        }
-        instantTextBoxType = {
-            name = "open_yz_economic_operation_text"
-            position = { x = 25 y = 113 }
-            font = "hoi_18mbs"
-            text = "open_yz_economic_operation_text_show"
-            maxWidth = 200
-            maxHeight = 30
-            alwaystransparent = yes
-            format = center
-        }
-        buttonType = {
-            name = "open_yz_invest_ui"
-            position = {
-                x = 270
-                y = 100
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_yz_button_long"
-            scale = 0.6
-        }
-        instantTextBoxType = {
-            name = "open_yz_invest_ui_text"
-            position = { x = 265 y = 113 }
-            font = "hoi_18mbs"
-            text = "open_yz_invest_ui_text_show"
-            maxWidth = 200
-            maxHeight = 30
-            alwaystransparent = yes
-            format = center
-        }
-    }
-    containerWindowType = {                     #经济操作ui
-        name = "yz_bonds_operations_ui"
-        position = {
-            x = -480
-            y = -270
-        }
-        orientation = CENTER
-        size = {
-            width = 960
-            height = 540
-        }
-        background = {
-            name = "YZ_bonds_operation_ui_background"
-            quadTextureSprite = "GFX_tiled_decisions_bg_small"      #GFX_mini_bg_grey     #GFX_tiled_window_small
-        }
-        moveable = yes
-        buttonType = {                                   #关闭键
-            name = "yz_bonds_ui_close_button"
-            position = {
-                x = -40
-                y = 6
-            }
-            quadTextureSprite ="GFX_closebutton"
-            buttonFont = "Main_14_black"
-            Orientation = "UPPER_RIGHT"
-            clicksound = click_close
-            pdx_tooltip = "CLOSE"
-        }
-        instantTextBoxType = {                                  #标题
-            name = "yz_bonds_operations_ui_title"
-            position = {
-                x = -180
-                y = 0
-            }
-            orientation = CENTER_UP
-            maxHeight = 30
-            maxWidth = 360
-            font = "hoi_33"
-            text = "yz_bonds_operations_ui_title_text"
-            pdx_tooltip = "suggestion_for_this_yz_part"
-        }
-        instantTextBoxType = {                         #信用评级
-            name = "yz_national_credit_rating"
-            position = {
-                x = 160
-                y = 40
-            }
-            maxHeight = 30
-            maxWidth = 230
-            font = "hoi_33"
-            text = "yz_national_credit_rating_text"
-            pdx_tooltip = "yz_national_credit_rating_describe_tooltip"
-        }
-        #buttonType = {                                      #这个按钮纯是用来写信用评级的描述的
-        #   name = "yz_national_credit_rating_describe"      #仔细想想还是不用这个了——2025.6.3，17：40，伊尔诺
-        #    position = {
-        #        x = 40
-        #        y = 40
-        #    } 
-        #    size = {
-        #        width = 250
-        #        height = 40
-        #    }
-        #    quadTextureSprite = "GFX_tiled_decisions_bg_small"
-        #    buttonFont = "hoi_33"
-        #    buttonText = "yz_national_credit_rating_text"
-        #    pdx_tooltip = "yz_national_credit_rating_describe_tooltip"
-        #}
-        #buttonType = {              #纯测试用按钮
-        #    name = "test"
-        #    position = {
-        #        x = 80
-        #        y = 80
-        #    }
-        #    size = {
-        #        width = 80
-        #        height = 20
-        #    }
-        #    spriteType = "GFX_button_221x34"
-        #    buttonFont = "hoi_20b"
-        #    #quadTextureSprite = "GFX_button_221x34"
-        #}
-        instantTextBoxType = {     #工业发展度显示
-            name = "yz_weekly_show_how_much_we_developed_in_industry"
-            position = {
-                x = 480
-                y = 40
-            }
-            maxHeight = 30
-            maxWidth = 450
-            font = "hoi_33"
-            text = "yz_weekly_show_how_much_we_developed_in_industry_text"
-            pdx_tooltip = "another_yz_explain"
-        }
-        instantTextBoxType = {   #标题，就只显示“上一轮债券”
-            name = "last_bond_title"
-            position = {
-                x = 60
-                y = 80
-            }
-            maxHeight = 30
-            maxWidth = 200
-            font = "hoi_33"
-            text = "benlunzhaiquan"
-        }
-        #iconType = {                    算了——2025.6.5，15：11.伊尔诺
-        #    name = "control_real_interest_background"
-        #    position = {
-        #        x = 100
-        #        y = 120
-        #    }
-        #}
-        instantTextBoxType = {
-            name = "information_of_last_yz_bond"
-            position = {
-                x = 100
-                y = 120
-            }
-            maxHeight = 100
-            maxWidth = 270
-            font = "hoi_24header"
-            text = "information_of_last_yz_bond_text"
-        }
-        iconType = {
-            name = "control_real_interest_background"
-            position = {
-                x = 100
-                y = 220
-            }
-            spriteType = "GFX_generic_bg2"
-        }
-        instantTextBoxType = {       #操作债券的文本
-            name = "control_real_interest_showtext"
-            position = {
-                x = 100
-                y = 220
-            }
-            maxHeight = 30
-            maxWidth = 430
-            font = "hoi_24header"
-            text = "control_real_interest_text"
-        }
+	# Opened from the Economic Department decision category. Frequent contract
+	# actions remain ordinary decisions; this window controls repayment parameters
+	# and presents contract history without adding another periodic callback.
+	containerWindowType = {
+		name = "yz_bonds_operations_ui"
+		position = { x = -490 y = -325 }
+		orientation = CENTER
+		size = { width = 980 height = 650 }
+		moveable = yes
+		click_to_front = yes
 
-    }
+		background = {
+			name = "yz_bonds_operation_ui_background"
+			quadTextureSprite = "GFX_yz_bond_operations_framed"
+		}
+		buttonType = {
+			name = "yz_bonds_ui_close_button"
+			position = { x = -52 y = 14 }
+			orientation = UPPER_RIGHT
+			quadTextureSprite = "GFX_closebutton"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		buttonType = {
+			name = "yz_bond_detail_help_button"
+			position = { x = -88 y = 15 }
+			orientation = UPPER_RIGHT
+			quadTextureSprite = "GFX_help_button"
+			buttonText = ""
+			buttonFont = "Main_14_black"
+			clicksound = click_ok
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_help_button_tt"
+		}
+		buttonType = {
+			name = "yz_bond_detail_auto_button"
+			# Match the centre of the adjacent 24px help icon.
+			position = { x = -124 y = 11 }
+			orientation = UPPER_RIGHT
+			quadTextureSprite = "GFX_yz_bond_automation_toggle"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_auto_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bonds_operations_ui_title"
+			position = { x = -300 y = 16 }
+			orientation = CENTER_UP
+			font = "hoi_36header"
+			text = "yz_bonds_operations_ui_title_text"
+			maxWidth = 600
+			maxHeight = 46
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_current_contract_title"
+			position = { x = 34 y = 90 }
+			font = "hoi_24header"
+			text = "yz_bond_detail_current_title"
+			maxWidth = 250
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_current_contract_text"
+			position = { x = 34 y = 120 }
+			font = "hoi_18mbs"
+			text = "yz_bond_detail_current_text"
+			maxWidth = 272
+			maxHeight = 175
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_lifetime_statistics_title"
+			position = { x = 337 y = 90 }
+			font = "hoi_24header"
+			text = "yz_bond_detail_statistics_title"
+			maxWidth = 270
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_lifetime_statistics_text"
+			position = { x = 337 y = 120 }
+			font = "hoi_18mbs"
+			text = "yz_bond_detail_statistics_text"
+			maxWidth = 270
+			maxHeight = 175
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_controls_title"
+			position = { x = 643 y = 90 }
+			font = "hoi_24header"
+			text = "yz_bond_controls_title"
+			maxWidth = 300
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_controls_status"
+			position = { x = 643 y = 120 }
+			font = "hoi_16mbs"
+			text = "yz_bond_controls_status"
+			maxWidth = 300
+			maxHeight = 36
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_payment_adjust_title"
+			position = { x = 643 y = 153 }
+			font = "hoi_16mbs"
+			text = "yz_bond_payment_adjust_title"
+			maxWidth = 300
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_payment_decrease_button"
+			position = { x = 648 y = 175 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_payment_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_payment_adjust_value"
+			position = { x = 690 y = 178 }
+			font = "hoi_20b"
+			text = "yz_bond_payment_adjust_value_text"
+			maxWidth = 205
+			maxHeight = 25
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_payment_increase_button"
+			position = { x = 910 y = 175 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_payment_increase_button_tt"
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_next_issue_title"
+			position = { x = 643 y = 201 }
+			font = "hoi_16mbs"
+			text = "yz_bond_next_issue_title"
+			maxWidth = 300
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_next_issue_decrease_button"
+			position = { x = 648 y = 223 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_next_issue_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_next_issue_value"
+			position = { x = 690 y = 226 }
+			font = "hoi_20b"
+			text = "yz_bond_next_issue_value_text"
+			maxWidth = 205
+			maxHeight = 25
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_next_issue_increase_button"
+			position = { x = 910 y = 223 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_next_issue_increase_button_tt"
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_promised_rate_title"
+			position = { x = 643 y = 249 }
+			font = "hoi_16mbs"
+			text = "yz_bond_promised_rate_title"
+			maxWidth = 300
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_promised_rate_decrease_button"
+			position = { x = 648 y = 271 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_promised_rate_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_promised_rate_value"
+			position = { x = 690 y = 274 }
+			font = "hoi_20b"
+			text = "yz_bond_promised_rate_value_text"
+			maxWidth = 205
+			maxHeight = 25
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_promised_rate_increase_button"
+			position = { x = 910 y = 271 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_promised_rate_increase_button_tt"
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_graph_title"
+			position = { x = 36 y = 334 }
+			font = "hoi_24header"
+			text = "yz_bond_graph_title"
+			maxWidth = 570
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "yz_bond_graph_panel"
+			position = { x = 36 y = 365 }
+			# Keep the nested chart clear of the baseplate's central divider.
+			size = { width = 546 height = 210 }
+			background = {
+				name = "yz_bond_graph_panel_background"
+				quadTextureSprite = "GFX_tiled_window2_1b_border"
+			}
+			gridboxtype = {
+				name = "yz_bond_graph_lines"
+				# The shader draws through the midpoint of its 200px segment. A
+				# 0-100 negative offset therefore maps the line to y=125..25.
+				position = { x = 88 y = 25 }
+				size = { width = 0 height = 200 }
+				slotsize = { width = 8 height = 200 }
+				max_slots_horizontal = 48
+				add_horizontal = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_100_label"
+				position = { x = 10 y = 25 }
+				font = "hoi_16mbs"
+				text = "[?yz_bond_graph_100|0]"
+				maxWidth = 70
+				format = right
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_75_label"
+				position = { x = 10 y = 50 }
+				font = "hoi_16mbs"
+				text = "[?yz_bond_graph_75|0]"
+				maxWidth = 70
+				format = right
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_50_label"
+				position = { x = 10 y = 75 }
+				font = "hoi_16mbs"
+				text = "[?yz_bond_graph_50|0]"
+				maxWidth = 70
+				format = right
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_25_label"
+				position = { x = 10 y = 100 }
+				font = "hoi_16mbs"
+				text = "[?yz_bond_graph_25|0]"
+				maxWidth = 70
+				format = right
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_zero_label"
+				position = { x = 10 y = 125 }
+				font = "hoi_16mbs"
+				text = "0"
+				maxWidth = 70
+				format = right
+				alwaystransparent = yes
+			}
+			# The history array is oldest-to-newest. These fixed labels describe the
+			# 49-month rolling window without storing a second date-history array.
+			instantTextBoxType = {
+				name = "yz_bond_graph_x_48_label"
+				position = { x = 53 y = 148 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_x_48"
+				maxWidth = 70
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_x_36_label"
+				position = { x = 149 y = 148 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_x_36"
+				maxWidth = 70
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_x_24_label"
+				position = { x = 245 y = 148 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_x_24"
+				maxWidth = 70
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_x_12_label"
+				position = { x = 341 y = 148 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_x_12"
+				maxWidth = 70
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_x_now_label"
+				position = { x = 437 y = 148 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_x_now"
+				maxWidth = 70
+				format = center
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "yz_bond_graph_caption"
+				position = { x = 60 y = 178 }
+				font = "hoi_16mbs"
+				text = "yz_bond_graph_caption"
+				maxWidth = 440
+				maxHeight = 24
+				format = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_operations_title"
+			position = { x = 643 y = 334 }
+			font = "hoi_24header"
+			text = "yz_bond_operations_title"
+			maxWidth = 300
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_manager_report"
+			position = { x = 643 y = 362 }
+			font = "hoi_16mbs"
+			text = "yz_bond_manager_report_text"
+			maxWidth = 300
+			maxHeight = 52
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_actual_rate_title"
+			position = { x = 643 y = 455 }
+			font = "hoi_16mbs"
+			text = "yz_bond_actual_rate_title"
+			maxWidth = 142
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_actual_rate_decrease_button"
+			position = { x = 790 y = 448 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_actual_rate_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_actual_rate_value"
+			position = { x = 818 y = 455 }
+			font = "hoi_20b"
+			text = "yz_bond_actual_rate_value_text"
+			maxWidth = 88
+			maxHeight = 25
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_actual_rate_increase_button"
+			position = { x = 915 y = 448 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_actual_rate_increase_button_tt"
+		}
+
+		instantTextBoxType = {
+			name = "yz_bond_reserve_title"
+			position = { x = 643 y = 490 }
+			font = "hoi_16mbs"
+			text = "yz_bond_reserve_title"
+			maxWidth = 142
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_reserve_decrease_button"
+			position = { x = 790 y = 483 }
+			quadTextureSprite = "GFX_subtract_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_reserve_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_reserve_adjust_value"
+			position = { x = 818 y = 490 }
+			font = "hoi_20b"
+			text = "yz_bond_reserve_adjust_value_text"
+			maxWidth = 88
+			maxHeight = 25
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_reserve_increase_button"
+			position = { x = 915 y = 483 }
+			quadTextureSprite = "GFX_add_one"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_reserve_increase_button_tt"
+		}
+
+		buttonType = {
+			name = "yz_bond_payment_holiday_button"
+			position = { x = 643 y = 524 }
+			quadTextureSprite = "GFX_yz_button_long"
+			scale = 0.46
+			buttonText = ""
+			pdx_tooltip = "yz_bond_payment_holiday_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_payment_holiday_button_label"
+			position = { x = 643 y = 530 }
+			font = "hoi_16mbs"
+			text = "yz_bond_payment_holiday_button_text"
+			maxWidth = 143
+			maxHeight = 22
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_additional_sale_button"
+			position = { x = 800 y = 524 }
+			quadTextureSprite = "GFX_yz_button_long"
+			scale = 0.46
+			buttonText = ""
+			pdx_tooltip = "yz_bond_additional_sale_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_additional_sale_button_label"
+			position = { x = 800 y = 530 }
+			font = "hoi_16mbs"
+			text = "yz_bond_additional_sale_button_text"
+			maxWidth = 143
+			maxHeight = 22
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_auto_issue_preference_title"
+			position = { x = 643 y = 420 }
+			font = "hoi_16mbs"
+			text = "yz_bond_auto_issue_preference_title"
+			maxWidth = 112
+			maxHeight = 30
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_auto_issue_preference_button"
+			position = { x = 775 y = 412 }
+			quadTextureSprite = "GFX_yz_button_long"
+			scale = 0.52
+			buttonText = ""
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_auto_issue_preference_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_auto_issue_preference_button_label"
+			position = { x = 775 y = 420 }
+			font = "hoi_16mbs"
+			text = "yz_bond_auto_issue_preference_button_text"
+			maxWidth = 161
+			maxHeight = 22
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_ideology_button"
+			position = { x = 715 y = 561 }
+			quadTextureSprite = "GFX_yz_button_long"
+			scale = 0.50
+			buttonText = ""
+			pdx_tooltip = "yz_bond_ideology_button_dynamic_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_ideology_button_label"
+			position = { x = 715 y = 569 }
+			font = "hoi_18mbs"
+			text = "yz_bond_ideology_button_dynamic_text"
+			maxWidth = 155
+			maxHeight = 24
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_operation_status"
+			position = { x = 643 y = 598 }
+			font = "hoi_16mbs"
+			text = "yz_bond_operation_status_text"
+			maxWidth = 300
+			maxHeight = 16
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_detail_footer"
+			position = { x = 40 y = 576 }
+			font = "hoi_16mbs"
+			text = "yz_bond_detail_footer_text"
+			maxWidth = 550
+			maxHeight = 34
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+
+	# Both question-mark buttons toggle this shared modal. Keeping help in one
+	# window prevents the category summary and the detailed view from drifting.
+	containerWindowType = {
+		name = "yz_bond_help_ui"
+		position = { x = -490 y = -325 }
+		orientation = CENTER
+		size = { width = 980 height = 650 }
+		moveable = yes
+		click_to_front = yes
+
+		background = {
+			name = "yz_bond_help_ui_background"
+			quadTextureSprite = "GFX_tiled_decisions_bg_small"
+		}
+		buttonType = {
+			name = "yz_bond_help_close_button"
+			position = { x = -40 y = 6 }
+			orientation = UPPER_RIGHT
+			quadTextureSprite = "GFX_closebutton"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_help_title"
+			position = { x = -390 y = 10 }
+			orientation = CENTER_UP
+			font = "hoi_30header"
+			text = "yz_bond_help_title_text"
+			maxWidth = 780
+			maxHeight = 42
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_help_left_body"
+			position = { x = 28 y = 58 }
+			font = "hoi_16mbs"
+			text = "yz_bond_help_left_text"
+			maxWidth = 292
+			maxHeight = 560
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_help_middle_body"
+			position = { x = 344 y = 58 }
+			font = "hoi_16mbs"
+			text = "yz_bond_help_middle_text"
+			maxWidth = 292
+			maxHeight = 560
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "yz_bond_help_right_body"
+			position = { x = 660 y = 58 }
+			font = "hoi_16mbs"
+			text = "yz_bond_help_right_text"
+			maxWidth = 292
+			maxHeight = 560
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+
+	# One dynamically generated segment joins each pair of monthly observations.
+	containerWindowType = {
+		name = "yz_bond_graph_line_segment"
+		size = { width = 8 height = 200 }
+		position = { x = 0 y = 0 }
+		iconType = {
+			name = "yz_bond_graph_segment"
+			spriteType = "GFX_yz_bond_graph_line_segment"
+			position = { x = 0 y = 0 }
+			frame = 50
+		}
+	}
 }

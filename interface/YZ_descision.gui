@@ -203,7 +203,6 @@ guiTypes = {
 				alwaystransparent = yes
 				format = center 
 			}
-			
 			instantTextBoxType = {
 				name = "yz_money_title"
 				position = { x = 230 y = -0 }
@@ -281,7 +280,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "yz_economic_policy_1_btn"
-			position = { x = 18 y = 60 } 
+			position = { x = 18 y = 60 }
 			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
@@ -295,11 +294,11 @@ guiTypes = {
 			maxWidth = 150
 			maxHeight = 30
 			alwaystransparent = yes
-			format = center 
+			format = center
 		}
 		buttonType = {
 			name = "yz_economic_policy_2_btn"
-			position = { x = 18 y = 100 } 
+			position = { x = 18 y = 100 }
 			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55
@@ -317,7 +316,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "yz_economic_policy_3_btn"
-			position = { x = 18 y = 140 } 
+			position = { x = 18 y = 140 }
 			size = { x = 70 y = 30 }
 			quadTextureSprite = "GFX_yz_button_long"
 			scale = 0.55

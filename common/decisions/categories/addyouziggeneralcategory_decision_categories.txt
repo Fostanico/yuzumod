@@ -45,6 +45,7 @@ JCLleaders_category = {
 }
 JCL_industry_category = {
 	icon = GFX_yoshino
+	scripted_gui = yz_yoshino_industry_category_gui
 	priority = 2
 }
 Megulu_industry_category = {

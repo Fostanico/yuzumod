@@ -10,6 +10,7 @@ yuzu_economy_department_category = {
 		}
 		complete_effect = {
 			set_country_flag = yz_economy_department_category_close_flag
+			clr_country_flag = show_yz_bonds_ui
 		}
 	}
 	Yoshino_industry_debt_cycle = {  #债务周期——2025.3.17，16：12，伊尔诺      ——2025.3.20,16:17,伊尔诺 移植这里
@@ -270,6 +271,7 @@ yuzu_economy_department_category = {
 	start_rob_the_yz_gold_of_the_land = {
 		priority = 2
 		visible = {
+			NOT = { has_country_flag = yz_bond_system_initialized }
 			NOT = {
 				has_country_flag = yz_rob_start_flag
 			}
@@ -281,6 +283,7 @@ yuzu_economy_department_category = {
 	close_rob_the_yz_gold = {
 		priority = 2
 		visible = {
+			NOT = { has_country_flag = yz_bond_system_initialized }
 			#NOT = {
 			has_country_flag = yz_rob_start_flag
 			#}
@@ -296,6 +299,7 @@ yuzu_economy_department_category = {
 			has_country_flag = now_we_issuing_bonds
 		}
 		visible = {
+			NOT = { has_country_flag = yz_bond_system_initialized }
 			has_country_flag = yz_rob_start_flag
 		}
 		target_trigger = {
@@ -691,5 +695,302 @@ yuzu_economy_department_category = {
 			}
 			yz_recalculate_monthly_money_ledger = yes
 		}
+	}
+
+	#######################################################################################################
+	# 柚子债券 v2：与长期投资共用经济部分类，月供由财政月结算统一处理。
+	yz_bond_migrate_legacy_ledger = {
+		icon = GFX_decision_generic_industry
+		priority = 900
+		cost = 0
+		visible = {
+			is_ai = no
+			OR = {
+				has_country_flag = Yoshino_industry_five_year_yes_by_loan
+				has_country_flag = finished_yoshino_industry
+			}
+			NOT = { has_country_flag = yz_bond_system_initialized }
+		}
+		complete_effect = {
+			yz_bond_migrate_legacy_system = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_maturity_cycle = {
+		priority = 850
+		activation = {
+			has_country_flag = yz_bond_active
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 300
+		is_good = no
+		timeout_effect = {
+			yz_bond_resolve_initial_maturity = yes
+		}
+	}
+
+	yz_bond_restructured_maturity_cycle = {
+		priority = 849
+		activation = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_restructured
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = no
+		timeout_effect = {
+			yz_bond_resolve_restructured_maturity = yes
+		}
+	}
+
+	yz_bond_war_bonds_mission = {
+		priority = 848
+		activation = {
+			has_country_flag = yz_bond_war_bonds_active
+		}
+		available = { always = no }
+		days_mission_timeout = 120
+		is_good = no
+		timeout_effect = {
+			yz_bond_war_bonds_failure = yes
+		}
+	}
+
+	yz_issue_steady_bond_decision = {
+		icon = GFX_decision_generic_industry
+		priority = 760
+		cost = 25
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_system_initialized
+			NOT = { has_country_flag = yz_bond_active }
+		}
+		available = {
+			check_variable = { var = yz_bond_credit_score value = 20 compare = greater_than_or_equals }
+		}
+		complete_effect = {
+			yz_issue_steady_bond = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_issue_development_bond_decision = {
+		icon = GFX_decision_generic_industry
+		priority = 759
+		cost = 50
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_system_initialized
+			NOT = { has_country_flag = yz_bond_active }
+		}
+		available = {
+			check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+		}
+		complete_effect = {
+			yz_issue_development_bond = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_issue_emergency_bond_decision = {
+		icon = GFX_decision_generic_industry
+		priority = 758
+		cost = 75
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_system_initialized
+			NOT = { has_country_flag = yz_bond_active }
+		}
+		available = {
+			has_war = yes
+			check_variable = { var = yz_bond_credit_score value = 30 compare = greater_than_or_equals }
+		}
+		complete_effect = {
+			yz_issue_emergency_bond = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_partial_repayment = {
+		icon = GFX_decision_generic_industry
+		priority = 740
+		cost = 10
+		days_re_enable = 30
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_active
+		}
+		available = {
+			check_variable = { var = yz_money value = 1000 compare = greater_than_or_equals }
+			check_variable = { var = bond_we_need_to_repay value = 1000 compare = greater_than_or_equals }
+		}
+		complete_effect = {
+			subtract_from_variable = { yz_money = 1000 }
+			subtract_from_variable = { bond_we_need_to_repay = 1000 }
+			add_to_variable = { yz_bond_lifetime_repaid = 1000 }
+			add_to_variable = { yz_bond_credit_score = 2 }
+			clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_full_repayment = {
+		icon = GFX_decision_generic_industry
+		priority = 739
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_active
+		}
+		available = {
+			check_variable = {
+				var = yz_money
+				value = var:bond_we_need_to_repay
+				compare = greater_than_or_equals
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = yz_bond_lifetime_repaid
+				value = bond_we_need_to_repay
+			}
+			subtract_from_variable = {
+				var = yz_money
+				value = bond_we_need_to_repay
+			}
+			yz_bond_honour_contract = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_domestic_game_campaign = {
+		icon = GFX_category
+		priority = 720
+		cost = 75
+		days_re_enable = 180
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_active
+		}
+		available = {
+			has_stability > 0.35
+		}
+		complete_effect = {
+			add_to_variable = { yz_money = 2000 }
+			add_to_variable = { yz_bond_domestic_campaign_revenue = 2000 }
+			clamp_variable = { var = yz_money min = 0 max = yz_money_max }
+			add_stability = -0.04
+			add_timed_idea = {
+				idea = yz_domestic_game_purchase_campaign
+				days = 180
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_open_occupation_campaign = {
+		icon = GFX_decision_generic_civil_support
+		priority = 710
+		cost = 25
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_active
+			NOT = { has_country_flag = yz_bond_occupation_campaign }
+		}
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		complete_effect = {
+			set_country_flag = yz_bond_occupation_campaign
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_close_occupation_campaign = {
+		icon = GFX_decision_generic_civil_support
+		priority = 710
+		cost = 0
+		visible = {
+			is_ai = no
+			has_country_flag = yz_bond_occupation_campaign
+		}
+		complete_effect = {
+			clr_country_flag = yz_bond_occupation_campaign
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	yz_bond_occupied_state_sales = {
+		icon = GFX_decision_generic_confiscation
+		priority = 700
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		cost = 20
+		target_root_trigger = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_occupation_campaign
+		}
+		visible = {
+			has_country_flag = yz_bond_occupation_campaign
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = obsessed_in_yuzu_galgame
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_temp_variable = { yz_bond_occupation_revenue = FROM.state_population_k }
+			divide_temp_variable = { yz_bond_occupation_revenue = 10 }
+			clamp_temp_variable = { var = yz_bond_occupation_revenue min = 100 max = 750 }
+			if = {
+				limit = {
+					check_variable = {
+						var = bond_we_need_to_repay
+						value = var:yz_bond_occupation_revenue
+						compare = less_than_or_equals
+					}
+				}
+				set_temp_variable = { yz_bond_occupation_revenue = bond_we_need_to_repay }
+			}
+			subtract_from_variable = {
+				var = bond_we_need_to_repay
+				value = yz_bond_occupation_revenue
+				tooltip = yz_bond_occupation_revenue_tt
+			}
+			add_to_variable = {
+				var = yz_bond_lifetime_repaid
+				value = yz_bond_occupation_revenue
+			}
+			add_to_variable = {
+				var = yz_bond_occupation_campaign_revenue
+				value = yz_bond_occupation_revenue
+			}
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = obsessed_in_yuzu_galgame
+					days = 120
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { var = bond_we_need_to_repay value = 0 compare = less_than_or_equals }
+				}
+				yz_bond_honour_contract = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
 	}
 }

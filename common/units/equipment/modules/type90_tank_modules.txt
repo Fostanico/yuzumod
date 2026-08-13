@@ -5,7 +5,7 @@ equipment_modules = {
 ### Engine Types
 	type90_Mitsubishi_10ZG32WT_engine = {
 		abbreviation = "type90_EG"
-		category = tank_engine_type
+		category = yz_type90_engine_type
 		sfx = sfx_ui_sd_module_engine
 
 		add_stats = {
@@ -22,9 +22,9 @@ equipment_modules = {
 
 	###Armor Types
 
-	type90_composite_armor = {	#复合装甲
+	type90_composite_armor = {	# Composite armor
 		abbreviation = "type90_AM"
-		category = tank_armor_type
+		category = yz_type90_armor_type
 		sfx = sfx_ui_sd_module_sonar
 
 		add_stats = {
@@ -42,7 +42,7 @@ equipment_modules = {
 
 	type90_hydropneumatic_suspension = {
 		abbreviation = "type90_SPS"
-		category = tank_suspension_type
+		category = yz_type90_suspension_type
 		sfx = sfx_ui_sd_module_sonar
 
 		add_stats = {
@@ -62,12 +62,12 @@ equipment_modules = {
 	###Turret Types
 	type90_tank_turret = {
 		abbreviation = "type90_TUR"
-		category = tank_modern_turret_type
+		category = yz_type90_turret_type
 		sfx = sfx_ui_sd_module_turret
 
 		allowed_module_categories = {
 			main_armament_slot = {
-				tank_heavy_main_armament
+				yz_type90_main_armament
 			}
 		}
 		add_stats = {
@@ -86,7 +86,7 @@ equipment_modules = {
 	###Weapons
 	type90_Rh_120_120mm_gun = {
 		abbreviation = "type90_ARM"
-		category = tank_heavy_main_armament
+		category = yz_type90_main_armament
 		sfx = sfx_ui_sd_module_turret
 
 		dismantle_cost_ic = 10
@@ -111,7 +111,7 @@ equipment_modules = {
 	###Special Modules
 	type90_modern_electronic_equipment = {
 		abbreviation = "type90_MEE"
-		category = tank_radio_module
+		category = yz_type90_special_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -129,7 +129,7 @@ equipment_modules = {
 
 	type90_auto_loader = {
 		abbreviation = "type90_AL"
-		category = tank_special_module
+		category = yz_type90_special_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -146,7 +146,7 @@ equipment_modules = {
 
 	type90_fire_control_system = {
 		abbreviation = "type90_FCS"
-		category = tank_special_module
+		category = yz_type90_special_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -165,7 +165,7 @@ equipment_modules = {
 
 	type90_machine_guns = {
 		abbreviation = "type90_MG"
-		category = tank_special_module
+		category = yz_type90_special_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {

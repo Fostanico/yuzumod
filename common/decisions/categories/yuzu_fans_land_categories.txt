@@ -10,14 +10,16 @@ yuzu_cultural_department_category = {
 yuzu_economy_department_category = {
 	priority = 3
 	icon = GFX_Category_decision
+	scripted_gui = yz_bond_category_gui
 	visible = {
 		has_country_flag = qiyong_youzi_2
 		or = {
 			has_country_flag = Yoshino_industry_five_year_yes_by_loan
+			has_country_flag = finished_yoshino_industry
+			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			has_country_flag = yz_bond_system_initialized
 		}
-		has_country_flag = now_we_issuing_bonds
 		NOT = {
-			has_country_flag = finished_repayment_of_bonds
 			has_country_flag = yz_economy_department_category_close_flag
 		}
 	}

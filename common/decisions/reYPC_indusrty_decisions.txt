@@ -2148,29 +2148,15 @@ JCL_industry_category = {
 			force_update_dynamic_modifier = yes
 			set_country_flag = Yoshino_industry_five_year_yes_by_loan
 			set_country_flag = doing_Yoshino_industry_by_bonds
-			set_country_flag = now_we_issuing_bonds
 			if = {
 				limit = {
 					has_country_flag = doing_Megulu_industry
 				}
 				add_ideas = manglujianshe
 			}
-			add_to_variable = {
-				yz_money = 4000
-				tooltip = bond_we_issuing_tooltip
-			}
-			add_to_variable = {
-				var = bond_we_need_to_repay
-				value = 1000
-			}
-			add_to_variable = {
-				var = yz_interest_rate
-				value = 100.05
-			}
-			add_to_variable = {
-				var = yz_interest_rate_we_can_see
-				value = 0.05
-			}
+			# The industrial plan now opens a standard development bond instead
+			# of the legacy compounding-interest prototype.
+			yz_issue_development_bond = yes
 		}
 	}
 	yuzu_auto_industrialization = {

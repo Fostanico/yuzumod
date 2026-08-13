@@ -35,3 +35,41 @@ country_event = {
         name = military_reform_event.2.b 
     }
 }
+
+# Millennium Dawn replaces the vanilla eight-branch guide with the four modern
+# reforms that are actually visible when yz_md_startup_detected is set.
+country_event = {
+    id = military_reform_event.3
+    title = military_reform_event.3.t
+    desc = military_reform_event.3.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = {
+        name = military_reform_event.1.a
+        country_event = { id = military_reform_event.4 }
+    }
+
+    option = {
+        name = military_reform_event.1.b
+    }
+}
+
+country_event = {
+    id = military_reform_event.4
+    title = military_reform_event.4.t
+    desc = military_reform_event.4.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = {
+        name = military_reform_event.2.a
+        country_event = { id = military_reform_event.3 }
+    }
+
+    option = {
+        name = military_reform_event.2.b
+    }
+}

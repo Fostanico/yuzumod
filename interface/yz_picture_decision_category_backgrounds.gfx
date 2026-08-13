@@ -13,4 +13,8 @@ spriteTypes = {
         name = "GFX_yz_cultural_department_category_bg_brightness_25"
         texturefile = "gfx/decision/yz_cultural_department_category_bg_brightness_25.png"
     }
+    spriteType = {
+        name = "GFX_yz_bond_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_bond_category_bg_brightness_50.png"
+    }
 }

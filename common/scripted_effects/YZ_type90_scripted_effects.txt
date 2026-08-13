@@ -1,0 +1,39 @@
+# Shared by the special-project reward, the non-Gotterdammerung fallback,
+# and the debug decision so every entry point creates the same valid model.
+yz_unlock_type90_equipment = {
+	set_technology = {
+		tech_YZ_type90 = 1
+	}
+
+	create_equipment_variant = {
+		name = "YIWG Type 90 MBT"
+		type = type90_tank_chassis_1
+		parent_version = 0
+		modules = {
+			turret_type_slot = type90_tank_turret
+			main_armament_slot = type90_Rh_120_120mm_gun
+			suspension_type_slot = type90_hydropneumatic_suspension
+			armor_type_slot = type90_composite_armor
+			engine_type_slot = type90_Mitsubishi_10ZG32WT_engine
+			special_type_slot_1 = type90_modern_electronic_equipment
+			special_type_slot_2 = type90_machine_guns
+			special_type_slot_3 = type90_fire_control_system
+			special_type_slot_4 = type90_auto_loader
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 20
+		}
+		icon = "gfx/counters/YZ_TYPE90_ICON.png"
+	}
+
+	# Seed a production line without binding it to a country-specific MIO.
+	add_equipment_production = {
+		equipment = {
+			type = type90_tank_chassis_1
+			version_name = "YIWG Type 90 MBT"
+		}
+		requested_factories = 1
+	}
+
+}

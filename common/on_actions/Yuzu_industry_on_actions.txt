@@ -1,5 +1,5 @@
-# 芳乃工业这里只维护债券利率与债务。长期投资的柚子币扣款已并入
-# YZ_on_actions.txt 的唯一月结算入口；不得在此恢复第二次月度扣款。
+# 旧债券系统的兼容入口。新版债券只使用 YZ_bond_on_actions.txt 的每月偿付；
+# 本文件不得处理新版合同，也不得恢复长期投资的第二次月度扣款。
 on_actions = {
 	on_weekly = {        #每周统一结算债券利率和需要偿还的金额
 		effect = {
@@ -96,6 +96,7 @@ on_actions = {
 			if = {
 				limit = { 
 					has_country_flag = now_we_issuing_bonds
+					NOT = { has_country_flag = yz_bond_system_initialized }
 					NOT = {
 						has_country_flag = finished_repayment_of_bonds
 					}

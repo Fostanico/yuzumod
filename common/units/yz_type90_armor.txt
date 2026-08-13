@@ -1,0 +1,73 @@
+sub_units = {
+	yz_type90_armor = {
+		abbreviation = "Y90"
+		# This selects the vanilla-compatible 3D map entity. Division-designer
+		# icons are resolved separately from the sub-unit key yz_type90_armor.
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 2511
+		ai_priority = 3511
+		active = no
+
+		type = {
+			armor
+		}
+
+		group = armor
+
+		# Keep the battalion in vanilla tank bonus categories while requiring only
+		# the project-owned Type 90 equipment archetype.
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+		combat_width = 2
+
+		need = {
+			type90_tank_chassis = 50
+		}
+		manpower = 500
+		max_organisation = 10
+		max_strength = 2
+		default_morale = 0.3
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.25
+
+		breakthrough = 0.15
+		suppression = 2.5
+
+		forest = {
+			attack = -0.3
+			movement = -0.4
+		}
+		hills = {
+			attack = -0.1
+		}
+		mountain = {
+			attack = -0.2
+		}
+		jungle = {
+			attack = -0.4
+			movement = -0.4
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.7
+		}
+	}
+}

@@ -76,12 +76,8 @@ scripted_gui = {
 		}
 
 		triggers = {
-			yz_economic_policy_1_btn_click_enabled = { ## 上三个
+			yz_economic_policy_1_btn_click_enabled = {
 				NOT = { has_idea = yzguozhai }
-				check_variable = {
-					yz_money < yz_money_max
-					tooltip = yz_money_tooltip_compare_less
-				}
 				check_variable = {
 					yz_money < yz_money_max
 					tooltip = yz_money_tooltip_compare_less
@@ -130,22 +126,19 @@ scripted_gui = {
 			yz_money_button_close_click = {
 				clr_country_flag = show_yz_money_window
 			}
-			yz_economic_policy_1_btn_click = { ## 上三个
-				add_to_variable = { 	#国债
+			yz_economic_policy_1_btn_click = {
+				# This legacy policy is intentionally not a debt contract: it converts
+				# political capital into a one-off funding windfall with a long cooldown.
+				add_to_variable = {
 					yz_money = 1000
 					tooltip = add_to_yz_money
 				}
-				clamp_variable = {		#范围
-					var = yz_money
-					#min = 0
-					max = yz_money_max
-				}
+				clamp_variable = { var = yz_money max = yz_money_max }
 				add_political_power = -25
 				add_timed_idea = {
 					idea = yzguozhai
 					days = 365
 				}
-				# 隐藏民族精神仍控制冷却；同期 flag 仅向 GUI 提供可读的剩余天数。
 				set_country_flag = {
 					flag = yz_economic_policy_1_cooldown_flag
 					value = 1

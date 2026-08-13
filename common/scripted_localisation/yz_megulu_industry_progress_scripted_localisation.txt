@@ -136,3 +136,199 @@ defined_text = {
     }
     text = { localization_key = yz_megulu_progress_waiting_for_branches }
 }
+
+# Yoshino's four lines exist in ordinary and bond-financed variants. The GUI
+# deliberately reports shared stage numbers so both implementations remain one
+# player-facing plan and no monthly polling is required.
+defined_text = {
+    name = yz_yoshino_industry_progress_panel
+    text = {
+        trigger = { has_country_flag = finished_yoshino_industry }
+        localization_key = yz_yoshino_industry_progress_completed
+    }
+    text = {
+        trigger = {
+            NOT = {
+                OR = {
+                    has_country_flag = Yoshino_industry_five_year_yes
+                    has_country_flag = Yoshino_industry_five_year_yes_by_loan
+                }
+            }
+        }
+        localization_key = yz_yoshino_industry_progress_not_started
+    }
+    text = { localization_key = yz_yoshino_industry_progress_active }
+}
+
+defined_text = {
+    name = yz_yoshino_civil_progress
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_industrial_complex_3
+                has_country_flag = yoshino_industrial_complex_by_bonds_3
+            }
+        }
+        localization_key = yz_yoshino_progress_completed
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_industrial_complex_2
+                has_country_flag = yoshino_industrial_complex_by_bonds_2
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_3
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_industrial_complex_1
+                has_country_flag = yoshino_industrial_complex_by_bonds_1
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_2
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = industry_industrial_complex_line
+                has_country_flag = industry_industrial_complex_line_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_1
+    }
+    text = { localization_key = yz_yoshino_progress_waiting }
+}
+
+defined_text = {
+    name = yz_yoshino_infrastructure_progress
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_infrastructure_3
+                has_country_flag = yoshino_infrastructure_by_bonds_3
+            }
+        }
+        localization_key = yz_yoshino_progress_completed
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_infrastructure_2
+                has_country_flag = yoshino_infrastructure_by_bonds_2
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_3
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_infrastructure_1
+                has_country_flag = yoshino_infrastructure_by_bonds_1
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_2
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = industry_infrastructure_line
+                has_country_flag = industry_infrastructure_line_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_1
+    }
+    text = { localization_key = yz_yoshino_progress_waiting }
+}
+
+defined_text = {
+    name = yz_yoshino_region_progress
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_state_category_3
+                has_country_flag = yoshino_state_category_by_bonds_3
+            }
+        }
+        localization_key = yz_yoshino_progress_completed
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_state_category_2
+                has_country_flag = yoshino_state_category_by_bonds_2
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_3
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_state_category_1
+                has_country_flag = yoshino_state_category_by_bonds_1
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_2
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = industry_state_category_line
+                has_country_flag = industry_state_category_line_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_1
+    }
+    text = { localization_key = yz_yoshino_progress_waiting }
+}
+
+defined_text = {
+    name = yz_yoshino_coordination_progress
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_20
+                has_country_flag = yoshino_20_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_completed
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_5
+                has_country_flag = yoshino_5_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_4
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_4
+                has_country_flag = yoshino_4_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_3
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = yoshino_steels
+                has_country_flag = yoshino_steels_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_2
+    }
+    text = {
+        trigger = {
+            OR = {
+                has_country_flag = industry_auto_others_line
+                has_country_flag = industry_auto_others_line_by_bonds
+            }
+        }
+        localization_key = yz_yoshino_progress_stage_1
+    }
+    text = { localization_key = yz_yoshino_progress_waiting }
+}

@@ -145,6 +145,80 @@ country_event = {
 		yz_recalculate_monthly_money_ledger = yes
 	}
 }
+
+# 新版债券到期事件；命名空间由本文件开头统一注册。
+# Maturity is the only mandatory bond interaction. Monthly servicing remains
+# automatic so the system does not become a recurring click chore. The namespace
+# remains registered once in the legacy yzbonds_event.txt file.
+
+country_event = {
+	id = yzbonds_event.10
+	title = yzbonds_event.10.t
+	desc = yzbonds_event.10.d
+	is_triggered_only = yes
+
+	option = {
+		name = yzbonds_event.10.a
+		trigger = {
+			check_variable = {
+				var = yz_money
+				value = var:bond_we_need_to_repay
+				compare = greater_than_or_equals
+			}
+		}
+		yz_bond_pay_remaining_balance = yes
+	}
+
+	option = {
+		name = yzbonds_event.10.b
+		trigger = {
+			NOT = { has_country_flag = yz_bond_restructured }
+		}
+		yz_bond_extend_contract = yes
+	}
+
+	option = {
+		name = yzbonds_event.10.c
+		yz_bond_managed_default = yes
+	}
+}
+
+country_event = {
+	id = yzbonds_event.11
+	title = yzbonds_event.11.t
+	desc = yzbonds_event.11.d
+	is_triggered_only = yes
+
+	option = {
+		name = yzbonds_event.11.a
+		trigger = {
+			check_variable = {
+				var = yz_money
+				value = var:bond_we_need_to_repay
+				compare = greater_than_or_equals
+			}
+		}
+		yz_bond_pay_remaining_balance = yes
+	}
+
+	option = {
+		name = yzbonds_event.11.b
+		yz_bond_managed_default = yes
+	}
+}
+
+# Democratic market intervention resolves immediately, then this single event
+# reports the selected weighted outcome without multiplying event definitions.
+country_event = {
+	id = yzbonds_event.20
+	title = yzbonds_event.20.t
+	desc = yzbonds_event.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = yzbonds_event.20.a
+	}
+}
 country_event = {
 	id = yzbonds_event.4
 	title = yzbonds_event.4.t

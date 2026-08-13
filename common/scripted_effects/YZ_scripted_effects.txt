@@ -137,6 +137,11 @@ yz_recalculate_monthly_money_ledger = {
 
 	set_variable = { monthly_YZ_money_total_outcome = YzMoneyOutcome_var }
 	add_to_variable = { monthly_YZ_money_total_outcome = monthly_YZ_money_industry_outcome }
+	if = {
+		limit = { has_country_flag = yz_bond_active }
+		yz_bond_refresh_monthly_projection = yes
+		add_to_variable = { monthly_YZ_money_total_outcome = yz_bond_expected_monthly_outflow }
+	}
 	set_variable = { monly_YZ_money_visible = monthly_YZ_money_income }
 	subtract_from_variable = { monly_YZ_money_visible = monthly_YZ_money_total_outcome }
 }
@@ -1082,5 +1087,1637 @@ clean_all_traits_and_desc = {
 				traits = {  }
 			}
 		}
+	}
+}
+
+# 柚子债券 v2 状态机与统计。
+# Yuzu bond market state machine.
+# Debt service runs monthly; decisions and maturity events are the only manual
+# entry points. Keep this isolated from the Yoshino industrial construction chains.
+
+# Rebuild the single Economic Department spirit from contract and temporary
+# policy state. This runs on state changes plus the existing player-only monthly
+# hook so expired timed flags disappear without any daily polling.
+yz_bond_refresh_department_modifier = {
+	set_variable = { yz_bond_department_stability_factor = 0 }
+	set_variable = { yz_bond_department_war_support_factor = 0 }
+	set_variable = { yz_bond_department_consumer_goods_factor = 0 }
+	set_variable = { yz_bond_department_political_power_factor = 0 }
+	set_variable = { yz_bond_department_construction_factor = 0 }
+	set_variable = { yz_bond_department_factory_output_factor = 0 }
+	set_variable = { yz_bond_department_dockyard_output_factor = 0 }
+
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_plan_steady
+		}
+		set_variable = { yz_bond_department_stability_factor = 0.08 }
+		set_variable = { yz_bond_department_consumer_goods_factor = -0.05 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_plan_development
+		}
+		set_variable = { yz_bond_department_construction_factor = 0.12 }
+		set_variable = { yz_bond_department_factory_output_factor = 0.08 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_plan_emergency
+		}
+		set_variable = { yz_bond_department_war_support_factor = 0.10 }
+		set_variable = { yz_bond_department_factory_output_factor = 0.12 }
+		set_variable = { yz_bond_department_dockyard_output_factor = 0.12 }
+	}
+
+	# Planned industrial repayment raises civilian demand but redirects part of
+	# that demand into productive capacity for its six-month duration.
+	if = {
+		limit = { has_country_flag = yz_bond_communist_industrial_policy }
+		add_to_variable = { yz_bond_department_consumer_goods_factor = 0.08 }
+		add_to_variable = { yz_bond_department_factory_output_factor = 0.02 }
+	}
+	# Coercive conversion hurts administrative legitimacy while the settlement
+	# is enforced. The penalty expires with its four-month timed flag.
+	if = {
+		limit = { has_country_flag = yz_bond_neutrality_conversion_policy }
+		add_to_variable = { yz_bond_department_political_power_factor = -0.10 }
+	}
+	# Active victory bonds help the war effort but expose the remaining debt to
+	# the mission's success-or-failure settlement.
+	if = {
+		limit = { has_country_flag = yz_bond_war_bonds_active }
+		add_to_variable = { yz_bond_department_war_support_factor = 0.03 }
+		add_to_variable = { yz_bond_department_factory_output_factor = 0.03 }
+		add_to_variable = { yz_bond_department_dockyard_output_factor = 0.03 }
+	}
+
+	# One-time save migration: the former ordinary ideas are now represented by
+	# the economic department dynamic modifier; their definitions remain as
+	# empty compatibility shells.
+	if = {
+		limit = { NOT = { has_country_flag = yz_bond_legacy_ideas_removed } }
+		remove_ideas = yz_bond_steady_type
+		remove_ideas = yz_bond_development_type
+		remove_ideas = yz_bond_emergency_type
+		remove_ideas = yz_bond_state_industrial_repayment
+		set_country_flag = yz_bond_legacy_ideas_removed
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = yz_bond_economy_department_dynamic_modifier
+				}
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = yz_bond_economy_department_dynamic_modifier
+		}
+	}
+	force_update_dynamic_modifier = yes
+}
+
+yz_bond_initialize_system = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = yz_bond_system_initialized }
+		}
+		set_country_flag = yz_bond_system_initialized
+		set_variable = { yz_bond_credit_score = 60 }
+		set_variable = { bond_we_need_to_repay = 0 }
+		set_variable = { yz_bond_monthly_payment = 0 }
+		set_variable = { yz_bond_contract_payment_floor = 0 }
+		set_variable = { yz_bond_missed_payments = 0 }
+		set_variable = { yz_bond_current_issued = 0 }
+		set_variable = { yz_bond_current_initial_principal = 0 }
+		set_country_flag = yz_bond_controls_initialized
+		set_variable = { yz_bond_cash_reserve_target = 1000 }
+		set_variable = { yz_bond_next_issue_amount = 5000 }
+		set_variable = { yz_bond_next_promised_rate = 6 }
+		set_variable = { yz_bond_auto_issue_preference = 0 }
+		set_variable = { yz_bond_manager_posture = 2 }
+		set_variable = { yz_bond_manager_last_action = 0 }
+		set_variable = { yz_bond_manager_base_expense = 0 }
+		set_variable = { yz_bond_manager_base_cashflow = 0 }
+		set_variable = { yz_bond_manager_target_reserve = 1000 }
+		set_variable = { yz_bond_manager_liquidity_target = 5000 }
+		set_variable = { yz_bond_market_rate_floor = 4 }
+		set_variable = { yz_bond_contract_promised_rate = 0 }
+		set_variable = { yz_bond_actual_rate = 0 }
+		set_variable = { yz_bond_last_factory_count = num_of_factories }
+		set_variable = { yz_bond_current_factory_count = num_of_factories }
+		set_variable = { yz_bond_prior_factory_count = num_of_factories }
+		set_country_flag = yz_bond_automation_enabled
+		set_variable = { yz_bond_automation_frame = 1 }
+		# Disable the legacy weekly-interest state before v2 starts servicing monthly.
+		clr_country_flag = now_we_issuing_bonds
+		clr_country_flag = finished_repayment_of_bonds
+		clr_country_flag = yz_debt_collapse
+		clr_country_flag = yz_rob_start_flag
+		set_variable = { yz_interest_rate = 0 }
+		set_variable = { yz_interest_rate_we_can_see = 0 }
+	}
+	yz_bond_refresh_issue_preview = yes
+	yz_bond_refresh_department_modifier = yes
+}
+
+yz_bond_migrate_legacy_system = {
+	# Preserve outstanding principal from an old save, but convert its changing
+	# weekly interest into the predictable development-bond repayment schedule.
+	set_temp_variable = { yz_bond_legacy_debt = bond_we_need_to_repay }
+	yz_bond_initialize_system = yes
+	if = {
+		limit = {
+			check_variable = { var = yz_bond_legacy_debt value = 0 compare = greater_than }
+		}
+		set_country_flag = yz_bond_active
+		set_country_flag = yz_bond_plan_development
+		set_variable = { yz_bond_current_issued = 0 }
+		set_variable = {
+			var = yz_bond_current_initial_principal
+			value = yz_bond_legacy_debt
+		}
+		set_variable = {
+			var = bond_we_need_to_repay
+			value = yz_bond_legacy_debt
+		}
+		set_variable = { yz_bond_contract_payment_floor = 175 }
+		set_variable = { yz_bond_monthly_payment = 175 }
+		set_variable = { yz_bond_contract_promised_rate = 6 }
+		set_variable = { yz_bond_actual_rate = 6 }
+		set_variable = { yz_bond_credit_score = 50 }
+		activate_mission = yz_bond_maturity_cycle
+	}
+	yz_bond_refresh_department_modifier = yes
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_prepare_new_issue = {
+	yz_bond_initialize_system = yes
+	yz_bond_enforce_market_rate_floor = yes
+	yz_bond_refresh_issue_preview = yes
+	set_country_flag = yz_bond_active
+	clr_country_flag = yz_bond_restructured
+	clr_country_flag = yz_bond_occupation_campaign
+	clr_country_flag = yz_bond_arrears_notice
+	remove_ideas = yz_bond_arrears
+	clr_country_flag = yz_bond_arrears_notice
+	set_variable = { yz_bond_missed_payments = 0 }
+	set_variable = {
+		var = yz_bond_current_issued
+		value = yz_bond_next_issue_proceeds
+	}
+	set_variable = {
+		var = yz_bond_current_initial_principal
+		value = yz_bond_next_issue_proceeds
+	}
+	set_variable = {
+		var = bond_we_need_to_repay
+		value = yz_bond_next_issue_proceeds
+	}
+	set_variable = {
+		var = yz_bond_contract_promised_rate
+		value = yz_bond_next_promised_rate
+	}
+	set_variable = {
+		var = yz_bond_actual_rate
+		value = yz_bond_next_promised_rate
+	}
+	set_variable = {
+		var = yz_bond_contract_payment_floor
+		value = yz_bond_next_issue_proceeds
+	}
+	multiply_variable = { yz_bond_contract_payment_floor = 0.035 }
+	round_variable = yz_bond_contract_payment_floor
+	clamp_variable = { var = yz_bond_contract_payment_floor min = 100 max = 2000 }
+	set_variable = {
+		var = yz_bond_monthly_payment
+		value = yz_bond_contract_payment_floor
+	}
+	add_to_variable = {
+		var = yz_bond_lifetime_issued
+		value = yz_bond_next_issue_proceeds
+	}
+	add_to_variable = {
+		var = yz_bond_lifetime_principal
+		value = yz_bond_next_issue_proceeds
+	}
+	add_to_variable = {
+		var = yz_money
+		value = yz_bond_next_issue_proceeds
+	}
+	clamp_variable = { var = yz_money min = 0 max = yz_money_max }
+	activate_mission = yz_bond_maturity_cycle
+}
+
+yz_issue_steady_bond = {
+	yz_bond_prepare_new_issue = yes
+	set_country_flag = yz_bond_plan_steady
+	clr_country_flag = yz_bond_plan_development
+	clr_country_flag = yz_bond_plan_emergency
+	yz_bond_refresh_department_modifier = yes
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_issue_development_bond = {
+	yz_bond_prepare_new_issue = yes
+	clr_country_flag = yz_bond_plan_steady
+	set_country_flag = yz_bond_plan_development
+	clr_country_flag = yz_bond_plan_emergency
+	yz_bond_refresh_department_modifier = yes
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_issue_emergency_bond = {
+	yz_bond_prepare_new_issue = yes
+	clr_country_flag = yz_bond_plan_steady
+	clr_country_flag = yz_bond_plan_development
+	set_country_flag = yz_bond_plan_emergency
+	yz_bond_refresh_department_modifier = yes
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_clear_contract = {
+	clr_country_flag = yz_bond_active
+	clr_country_flag = yz_bond_plan_steady
+	clr_country_flag = yz_bond_plan_development
+	clr_country_flag = yz_bond_plan_emergency
+	clr_country_flag = yz_bond_restructured
+	clr_country_flag = yz_bond_occupation_campaign
+	clr_country_flag = yz_bond_payment_holiday
+	clr_country_flag = yz_bond_war_bonds_active
+	set_variable = { bond_we_need_to_repay = 0 }
+	set_variable = { yz_bond_monthly_payment = 0 }
+	set_variable = { yz_bond_contract_payment_floor = 0 }
+	set_variable = { yz_bond_missed_payments = 0 }
+	set_variable = { yz_bond_current_issued = 0 }
+	set_variable = { yz_bond_current_initial_principal = 0 }
+	set_variable = { yz_bond_contract_promised_rate = 0 }
+	set_variable = { yz_bond_actual_rate = 0 }
+	set_variable = { yz_bond_expected_monthly_outflow = 0 }
+	remove_mission = yz_bond_maturity_cycle
+	remove_mission = yz_bond_restructured_maturity_cycle
+	remove_mission = yz_bond_war_bonds_mission
+	yz_bond_refresh_department_modifier = yes
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_honour_contract = {
+	add_to_variable = { yz_bond_contracts_honoured = 1 }
+	yz_bond_clear_contract = yes
+	add_to_variable = { yz_bond_credit_score = 8 }
+	clamp_variable = { var = yz_bond_credit_score min = 20 max = 100 }
+}
+
+yz_bond_managed_default = {
+	# A single visible crisis replaces the old repeated collapse event.
+	set_variable = { yz_money = 0 }
+	add_to_variable = { yz_bond_contracts_defaulted = 1 }
+	yz_bond_clear_contract = yes
+	set_variable = { yz_bond_credit_score = 20 }
+	add_stability = -0.08
+	add_political_power = -100
+	add_timed_idea = {
+		idea = yz_bond_default_crisis
+		days = 365
+	}
+}
+
+# Shared maturity operations keep manual event choices and full automation on
+# the same accounting path. Full automation may extend once, but it never
+# conceals a second failure behind another extension.
+yz_bond_pay_remaining_balance = {
+	add_to_variable = {
+		var = yz_bond_lifetime_repaid
+		value = bond_we_need_to_repay
+	}
+	subtract_from_variable = {
+		var = yz_money
+		value = bond_we_need_to_repay
+	}
+	yz_bond_honour_contract = yes
+}
+
+yz_bond_extend_contract = {
+	set_country_flag = yz_bond_restructured
+	add_to_variable = { yz_bond_contract_extensions = 1 }
+	multiply_variable = { bond_we_need_to_repay = 1.15 }
+	multiply_variable = { yz_bond_contract_payment_floor = 1.5 }
+	multiply_variable = { yz_bond_monthly_payment = 1.5 }
+	round_variable = bond_we_need_to_repay
+	round_variable = yz_bond_contract_payment_floor
+	round_variable = yz_bond_monthly_payment
+	subtract_from_variable = { yz_bond_credit_score = 15 }
+	clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+	yz_recalculate_monthly_money_ledger = yes
+	activate_mission = yz_bond_restructured_maturity_cycle
+}
+
+yz_bond_resolve_initial_maturity = {
+	if = {
+		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		# A professional manager does not empty the treasury merely because the
+		# principal is technically payable. Preserve the operating reserve and use
+		# the contract's single extension when settlement would break it.
+		set_temp_variable = { yz_bond_maturity_cash_needed = bond_we_need_to_repay }
+		add_to_temp_variable = {
+			var = yz_bond_maturity_cash_needed
+			value = yz_bond_cash_reserve_target
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_maturity_cash_needed
+					compare = greater_than_or_equals
+				}
+			}
+			yz_bond_pay_remaining_balance = yes
+		}
+		else = { yz_bond_extend_contract = yes }
+	}
+	else = { country_event = yzbonds_event.10 }
+}
+
+yz_bond_resolve_restructured_maturity = {
+	if = {
+		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_money
+					value = var:bond_we_need_to_repay
+					compare = greater_than_or_equals
+				}
+			}
+			yz_bond_pay_remaining_balance = yes
+		}
+		else = { yz_bond_managed_default = yes }
+	}
+	else = { country_event = yzbonds_event.11 }
+}
+
+# The player can tune the exact planned monthly payment and liquidity reserve.
+# The contract floor remains mandatory; the reserve only limits the optional
+# portion above that floor. Settings are stored as country variables.
+yz_bond_ensure_control_state = {
+	if = {
+		limit = { NOT = { has_country_flag = yz_bond_controls_initialized } }
+		set_country_flag = yz_bond_controls_initialized
+		set_variable = { yz_bond_cash_reserve_target = 1000 }
+		set_variable = { yz_bond_next_issue_amount = 5000 }
+		set_variable = { yz_bond_next_promised_rate = 6 }
+		set_variable = { yz_bond_auto_issue_preference = 0 }
+		set_country_flag = yz_bond_automation_enabled
+		set_variable = { yz_bond_automation_frame = 1 }
+		if = {
+			limit = {
+				has_country_flag = yz_bond_active
+				check_variable = { yz_bond_contract_payment_floor < 1 }
+			}
+			set_variable = {
+				var = yz_bond_contract_payment_floor
+				value = var:yz_bond_monthly_payment
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = yz_bond_manager_posture } }
+		set_variable = { yz_bond_manager_posture = 2 }
+		set_variable = { yz_bond_manager_last_action = 0 }
+		set_variable = { yz_bond_manager_base_expense = 0 }
+		set_variable = { yz_bond_manager_base_cashflow = 0 }
+		set_variable = { yz_bond_manager_target_reserve = 1000 }
+		set_variable = { yz_bond_manager_liquidity_target = 5000 }
+	}
+	if = {
+		limit = { check_variable = { yz_bond_next_issue_amount < 2500 } }
+		set_variable = { yz_bond_next_issue_amount = 5000 }
+	}
+	if = {
+		limit = { check_variable = { yz_bond_next_promised_rate < 2 } }
+		set_variable = { yz_bond_next_promised_rate = 6 }
+	}
+	yz_bond_enforce_market_rate_floor = yes
+	yz_bond_refresh_issue_preview = yes
+	yz_bond_refresh_graph_anchor = yes
+	yz_bond_refresh_monthly_projection = yes
+}
+
+# Better credit permits a lower promised rate on the next contract. The floor
+# prevents the configurable rate from becoming a no-cost dominant choice.
+yz_bond_enforce_market_rate_floor = {
+	set_variable = { yz_bond_market_rate_floor = 10 }
+	if = {
+		limit = { check_variable = { var = yz_bond_credit_score value = 25 compare = greater_than_or_equals } }
+		set_variable = { yz_bond_market_rate_floor = 6 }
+	}
+	if = {
+		limit = { check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals } }
+		set_variable = { yz_bond_market_rate_floor = 4 }
+	}
+	if = {
+		limit = { check_variable = { var = yz_bond_credit_score value = 75 compare = greater_than_or_equals } }
+		set_variable = { yz_bond_market_rate_floor = 2 }
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = yz_bond_next_promised_rate
+				value = var:yz_bond_market_rate_floor
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = yz_bond_next_promised_rate
+			value = yz_bond_market_rate_floor
+		}
+	}
+}
+
+# The promised APR determines how much of the target issue the market actually
+# subscribes. Proceeds and new principal are always equal, so higher rates buy
+# immediate liquidity rather than free premium cash. Six percent fills 100% of
+# the target; the 2%-15% range fills 60%-190%.
+yz_bond_refresh_issue_preview = {
+	set_variable = {
+		var = yz_bond_subscription_ratio
+		value = yz_bond_next_promised_rate
+	}
+	multiply_variable = { yz_bond_subscription_ratio = 0.10 }
+	add_to_variable = { yz_bond_subscription_ratio = 0.40 }
+	clamp_variable = { var = yz_bond_subscription_ratio min = 0.6 max = 1.9 }
+	set_variable = {
+		var = yz_bond_next_issue_proceeds
+		value = yz_bond_next_issue_amount
+	}
+	multiply_variable = {
+		var = yz_bond_next_issue_proceeds
+		value = yz_bond_subscription_ratio
+	}
+	round_variable = yz_bond_next_issue_proceeds
+}
+
+# Forecast principal repayment plus the coupon selected by the player. This is
+# reused by the fiscal ledger so the GUI forecast matches the monthly service.
+yz_bond_refresh_monthly_projection = {
+	set_variable = { yz_bond_expected_monthly_outflow = 0 }
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			NOT = { has_country_flag = yz_bond_payment_holiday }
+		}
+		set_variable = {
+			var = yz_bond_expected_monthly_outflow
+			value = bond_we_need_to_repay
+		}
+		multiply_variable = {
+			var = yz_bond_expected_monthly_outflow
+			value = yz_bond_actual_rate
+		}
+		divide_variable = { yz_bond_expected_monthly_outflow = 1200 }
+		round_variable = yz_bond_expected_monthly_outflow
+		set_temp_variable = { yz_bond_projected_principal = yz_bond_monthly_payment }
+		if = {
+			limit = {
+				check_variable = {
+					var = bond_we_need_to_repay
+					value = var:yz_bond_projected_principal
+					compare = less_than
+				}
+			}
+			set_temp_variable = { yz_bond_projected_principal = bond_we_need_to_repay }
+		}
+		add_to_variable = {
+			var = yz_bond_expected_monthly_outflow
+			value = yz_bond_projected_principal
+		}
+	}
+}
+
+# Keep the newest observation aligned with the right-hand "current month"
+# label even before the rolling history reaches its full 49 observations.
+yz_bond_refresh_graph_anchor = {
+	set_variable = { yz_bond_graph_start_x = 472 }
+	if = {
+		limit = { check_variable = { yz_bond_history_count > 1 } }
+		set_temp_variable = { yz_bond_graph_used_width = yz_bond_history_count }
+		add_to_temp_variable = { yz_bond_graph_used_width = -1 }
+		multiply_temp_variable = { yz_bond_graph_used_width = 8 }
+		subtract_from_variable = {
+			var = yz_bond_graph_start_x
+			value = yz_bond_graph_used_width
+		}
+	}
+}
+
+yz_bond_decrease_planned_payment = {
+	add_to_variable = { yz_bond_monthly_payment = -25 }
+	if = {
+		limit = {
+			check_variable = {
+				var = yz_bond_monthly_payment
+				value = var:yz_bond_contract_payment_floor
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = yz_bond_monthly_payment
+			value = yz_bond_contract_payment_floor
+		}
+	}
+	yz_recalculate_monthly_money_ledger = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_increase_planned_payment = {
+	add_to_variable = { yz_bond_monthly_payment = 25 }
+	clamp_variable = { var = yz_bond_monthly_payment min = 0 max = 2000 }
+	yz_recalculate_monthly_money_ledger = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_decrease_next_issue_amount = {
+	add_to_variable = { yz_bond_next_issue_amount = -500 }
+	clamp_variable = { var = yz_bond_next_issue_amount min = 2500 max = 15000 }
+	yz_bond_refresh_issue_preview = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_increase_next_issue_amount = {
+	add_to_variable = { yz_bond_next_issue_amount = 500 }
+	clamp_variable = { var = yz_bond_next_issue_amount min = 2500 max = 15000 }
+	yz_bond_refresh_issue_preview = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_decrease_promised_rate = {
+	add_to_variable = { yz_bond_next_promised_rate = -0.5 }
+	clamp_variable = { var = yz_bond_next_promised_rate min = 2 max = 15 }
+	yz_bond_enforce_market_rate_floor = yes
+	yz_bond_refresh_issue_preview = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_increase_promised_rate = {
+	add_to_variable = { yz_bond_next_promised_rate = 0.5 }
+	clamp_variable = { var = yz_bond_next_promised_rate min = 2 max = 15 }
+	yz_bond_refresh_issue_preview = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_decrease_actual_rate = {
+	add_to_variable = { yz_bond_actual_rate = -0.5 }
+	clamp_variable = { var = yz_bond_actual_rate min = 0 max = 20 }
+	yz_recalculate_monthly_money_ledger = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_increase_actual_rate = {
+	add_to_variable = { yz_bond_actual_rate = 0.5 }
+	clamp_variable = { var = yz_bond_actual_rate min = 0 max = 20 }
+	yz_recalculate_monthly_money_ledger = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_toggle_automation = {
+	if = {
+		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		clr_country_flag = yz_bond_full_automation_enabled
+		clr_country_flag = yz_bond_automation_enabled
+		set_variable = { yz_bond_automation_frame = 0 }
+	}
+	else_if = {
+		limit = { has_country_flag = yz_bond_automation_enabled }
+		set_country_flag = yz_bond_full_automation_enabled
+		set_variable = { yz_bond_automation_frame = 1 }
+	}
+	else = {
+		set_country_flag = yz_bond_automation_enabled
+		clr_country_flag = yz_bond_full_automation_enabled
+		set_variable = { yz_bond_automation_frame = 1 }
+	}
+	yz_recalculate_monthly_money_ledger = yes
+	yz_bond_run_automation = yes
+	if = {
+		limit = {
+			has_country_flag = yz_bond_full_automation_enabled
+			NOT = { has_country_flag = yz_bond_active }
+		}
+		yz_bond_full_auto_assess_country = yes
+	}
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+# Cycle the high-level mandate used by Full Auto. The manager still overrides
+# the mandate when liquidity is critical or the country is at war; this is a
+# risk preference, not a request to issue one fixed product forever.
+yz_bond_cycle_auto_issue_preference = {
+	add_to_variable = { yz_bond_auto_issue_preference = 1 }
+	if = {
+		limit = { check_variable = { yz_bond_auto_issue_preference > 3 } }
+		set_variable = { yz_bond_auto_issue_preference = 0 }
+	}
+	if = {
+		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		yz_bond_full_auto_assess_country = yes
+	}
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+# Build a compact monthly balance sheet from values the fiscal ledger already
+# calculated. This is called only from the existing player monthly hook and
+# therefore adds no global or daily polling.
+yz_bond_full_auto_assess_country = {
+	set_variable = { yz_bond_manager_base_expense = YzMoneyOutcome_var }
+	add_to_variable = {
+		var = yz_bond_manager_base_expense
+		value = monthly_YZ_money_industry_outcome
+	}
+	clamp_variable = { var = yz_bond_manager_base_expense min = 0 max = 100000 }
+	set_variable = { yz_bond_manager_base_cashflow = monthly_YZ_money_income }
+	subtract_from_variable = {
+		var = yz_bond_manager_base_cashflow
+		value = yz_bond_manager_base_expense
+	}
+	set_variable = { yz_bond_manager_debt_limit = monthly_YZ_money_income }
+	multiply_variable = { yz_bond_manager_debt_limit = 6 }
+	clamp_variable = { var = yz_bond_manager_debt_limit min = 2500 max = 100000 }
+
+	# Postures: 1 liquidity defence, 2 balanced, 3 expansion, 4 wartime,
+	# 5 deleveraging. Distress and war always outrank a peacetime mandate.
+	set_variable = { yz_bond_manager_posture = 2 }
+	if = {
+		limit = {
+			OR = {
+				check_variable = { yz_bond_missed_payments > 0 }
+				check_variable = { yz_bond_credit_score < 25 }
+				check_variable = { yz_bond_manager_base_cashflow < 0 }
+			}
+		}
+		set_variable = { yz_bond_manager_posture = 1 }
+	}
+	else_if = {
+		limit = { has_war = yes }
+		set_variable = { yz_bond_manager_posture = 4 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			check_variable = {
+				var = bond_we_need_to_repay
+				value = var:yz_bond_manager_debt_limit
+				compare = greater_than
+			}
+		}
+		set_variable = { yz_bond_manager_posture = 5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+			OR = {
+				has_country_flag = Yoshino_industry_long_term_invest_now_start
+				check_variable = { yz_bond_last_credit_growth > 0 }
+			}
+		}
+		set_variable = { yz_bond_manager_posture = 3 }
+	}
+
+	# The optional mandate nudges healthy peacetime policy, but cannot order the
+	# manager to ignore a liquidity crisis or wartime demand.
+	if = {
+		limit = {
+			OR = {
+				check_variable = { yz_bond_manager_posture = 2 }
+				check_variable = { yz_bond_manager_posture = 3 }
+			}
+			check_variable = { yz_bond_auto_issue_preference = 1 }
+		}
+		if = {
+			limit = { has_country_flag = yz_bond_active }
+			set_variable = { yz_bond_manager_posture = 5 }
+		}
+		else = { set_variable = { yz_bond_manager_posture = 1 } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { yz_bond_manager_posture = 2 }
+				check_variable = { yz_bond_manager_posture = 3 }
+			}
+			check_variable = { yz_bond_auto_issue_preference = 2 }
+		}
+		set_variable = { yz_bond_manager_posture = 2 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { yz_bond_manager_posture = 2 }
+				check_variable = { yz_bond_manager_posture = 3 }
+			}
+			check_variable = { yz_bond_auto_issue_preference = 3 }
+			check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+		}
+		set_variable = { yz_bond_manager_posture = 3 }
+	}
+
+	# Reserve is an operating buffer measured from recurring non-debt spending.
+	# The posture changes the coverage multiple, with a hard 1000-5000 band so
+	# tiny and very large countries both remain usable under the existing UI.
+	set_variable = {
+		var = yz_bond_manager_target_reserve
+		value = yz_bond_manager_base_expense
+	}
+	if = {
+		limit = { check_variable = { yz_bond_manager_posture = 1 } }
+		multiply_variable = { yz_bond_manager_target_reserve = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { yz_bond_manager_posture = 4 } }
+		multiply_variable = { yz_bond_manager_target_reserve = 2.5 }
+	}
+	else_if = {
+		limit = { check_variable = { yz_bond_manager_posture = 5 } }
+		multiply_variable = { yz_bond_manager_target_reserve = 2.5 }
+	}
+	else_if = {
+		limit = { check_variable = { yz_bond_manager_posture = 3 } }
+		multiply_variable = { yz_bond_manager_target_reserve = 1.5 }
+	}
+	else = { multiply_variable = { yz_bond_manager_target_reserve = 2 } }
+	if = {
+		limit = { check_variable = { yz_bond_credit_score < 50 } }
+		add_to_variable = { yz_bond_manager_target_reserve = 500 }
+	}
+	round_variable = yz_bond_manager_target_reserve
+	clamp_variable = { var = yz_bond_manager_target_reserve min = 1000 max = 5000 }
+	set_variable = {
+		var = yz_bond_cash_reserve_target
+		value = yz_bond_manager_target_reserve
+	}
+
+	# Desired liquidity covers the reserve plus three months of ordinary costs.
+	# Expansion and war add a purpose-built capital envelope rather than blindly
+	# issuing the maximum permitted contract.
+	set_variable = {
+		var = yz_bond_manager_liquidity_target
+		value = yz_bond_manager_base_expense
+	}
+	multiply_variable = { yz_bond_manager_liquidity_target = 3 }
+	add_to_variable = {
+		var = yz_bond_manager_liquidity_target
+		value = yz_bond_manager_target_reserve
+	}
+	if = {
+		limit = { check_variable = { yz_bond_manager_posture = 3 } }
+		add_to_variable = { yz_bond_manager_liquidity_target = 2500 }
+	}
+	else_if = {
+		limit = { check_variable = { yz_bond_manager_posture = 4 } }
+		add_to_variable = { yz_bond_manager_liquidity_target = 4000 }
+	}
+	round_variable = yz_bond_manager_liquidity_target
+	clamp_variable = { var = yz_bond_manager_liquidity_target min = 2500 max = yz_money_max }
+}
+
+# Full Auto actively manages the current contract. It protects the operating
+# reserve, accelerates principal when debt is heavy, repairs credit only when
+# cash is comfortable, and uses the contractual holiday before a preventable
+# missed payment. Standard Auto Repayment remains the manual-parameter mode.
+yz_bond_full_auto_manage_active_contract = {
+	yz_bond_full_auto_assess_country = yes
+	yz_bond_refresh_issue_preview = yes
+	set_variable = { yz_bond_manager_last_action = 1 }
+	set_variable = {
+		var = yz_bond_actual_rate
+		value = yz_bond_contract_promised_rate
+	}
+	set_temp_variable = { yz_bond_manager_liquid_excess = yz_money }
+	subtract_from_temp_variable = {
+		var = yz_bond_manager_liquid_excess
+		value = yz_bond_manager_target_reserve
+	}
+	set_temp_variable = { yz_bond_manager_credit_repair_threshold = yz_bond_contract_payment_floor }
+	multiply_temp_variable = { yz_bond_manager_credit_repair_threshold = 4 }
+	set_temp_variable = { yz_bond_manager_sale_proceeds = yz_bond_next_issue_proceeds }
+	multiply_temp_variable = { yz_bond_manager_sale_proceeds = 0.2 }
+	round_temp_variable = yz_bond_manager_sale_proceeds
+	set_temp_variable = { yz_bond_manager_cash_after_sale = yz_money }
+	add_to_temp_variable = {
+		var = yz_bond_manager_cash_after_sale
+		value = yz_bond_manager_sale_proceeds
+	}
+	set_temp_variable = { yz_bond_manager_sale_headroom = yz_money_max }
+	subtract_from_temp_variable = {
+		var = yz_bond_manager_sale_headroom
+		value = yz_bond_manager_sale_proceeds
+	}
+	if = {
+		limit = {
+			check_variable = { yz_bond_credit_score < 50 }
+			check_variable = { yz_bond_manager_base_cashflow > 0 }
+			check_variable = {
+				var = yz_bond_manager_liquid_excess
+				value = var:yz_bond_manager_credit_repair_threshold
+				compare = greater_than
+			}
+		}
+		add_to_variable = { yz_bond_actual_rate = 1 }
+		clamp_variable = { var = yz_bond_actual_rate min = 0 max = 20 }
+	}
+
+	set_temp_variable = { yz_bond_manager_coupon = bond_we_need_to_repay }
+	multiply_temp_variable = {
+		var = yz_bond_manager_coupon
+		value = yz_bond_actual_rate
+	}
+	divide_temp_variable = { yz_bond_manager_coupon = 1200 }
+	round_temp_variable = yz_bond_manager_coupon
+	set_temp_variable = { yz_bond_manager_required_minimum = yz_bond_contract_payment_floor }
+	add_to_temp_variable = {
+		var = yz_bond_manager_required_minimum
+		value = yz_bond_manager_coupon
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = yz_money
+				value = var:yz_bond_manager_required_minimum
+				compare = less_than
+			}
+			NOT = { has_country_flag = yz_bond_payment_holiday }
+			NOT = { has_country_flag = yz_bond_payment_holiday_cooldown }
+		}
+		yz_bond_request_payment_holiday = yes
+		set_variable = { yz_bond_manager_last_action = 7 }
+	}
+	else = {
+		# If a holiday is unavailable, a solvent manager may use the existing
+		# additional-sale instrument only when it fully prevents the missed payment
+		# and the currency cap can hold the proceeds.
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_required_minimum
+					compare = less_than
+				}
+				NOT = { has_country_flag = yz_bond_additional_sale_cooldown }
+				check_variable = { var = yz_bond_credit_score value = 30 compare = greater_than_or_equals }
+				check_variable = {
+					var = yz_bond_manager_cash_after_sale
+					value = var:yz_bond_manager_required_minimum
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_sale_headroom
+					compare = less_than_or_equals
+				}
+			}
+			yz_bond_additional_sale = yes
+			set_variable = { yz_bond_manager_last_action = 8 }
+		}
+		set_variable = {
+			var = yz_bond_monthly_payment
+			value = yz_bond_contract_payment_floor
+		}
+		set_temp_variable = { yz_bond_manager_optional_capacity = yz_money }
+		subtract_from_temp_variable = {
+			var = yz_bond_manager_optional_capacity
+			value = yz_bond_manager_target_reserve
+		}
+		subtract_from_temp_variable = {
+			var = yz_bond_manager_optional_capacity
+			value = yz_bond_manager_coupon
+		}
+		subtract_from_temp_variable = {
+			var = yz_bond_manager_optional_capacity
+			value = yz_bond_contract_payment_floor
+		}
+		if = {
+			limit = { check_variable = { yz_bond_manager_optional_capacity > 0 } }
+			if = {
+				limit = { check_variable = { yz_bond_manager_posture = 1 } }
+				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.10 }
+			}
+			else_if = {
+				limit = { check_variable = { yz_bond_manager_posture = 4 } }
+				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.20 }
+			}
+			else_if = {
+				limit = { check_variable = { yz_bond_manager_posture = 5 } }
+				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.60 }
+			}
+			else_if = {
+				limit = { check_variable = { yz_bond_manager_posture = 3 } }
+				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.25 }
+			}
+			else = { multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.35 } }
+			round_temp_variable = yz_bond_manager_optional_capacity
+			add_to_variable = {
+				var = yz_bond_monthly_payment
+				value = yz_bond_manager_optional_capacity
+			}
+		}
+		clamp_variable = { var = yz_bond_monthly_payment min = 0 max = 2000 }
+		if = {
+			limit = {
+				NOT = { check_variable = { yz_bond_manager_last_action = 8 } }
+				check_variable = {
+					var = yz_bond_monthly_payment
+					value = var:bond_we_need_to_repay
+					compare = greater_than
+				}
+			}
+			set_variable = {
+				var = yz_bond_monthly_payment
+				value = bond_we_need_to_repay
+			}
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { yz_bond_manager_last_action = 8 } }
+				check_variable = {
+					var = yz_bond_monthly_payment
+					value = var:yz_bond_contract_payment_floor
+					compare = greater_than
+				}
+			}
+			set_variable = { yz_bond_manager_last_action = 2 }
+		}
+	}
+	yz_bond_refresh_monthly_projection = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+# Automatic repayment locks the actual coupon to the promise while leaving the
+# low-level plan under player control. Full Auto instead delegates those values
+# to the manager above.
+yz_bond_run_automation = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_full_automation_enabled
+		}
+		yz_bond_full_auto_manage_active_contract = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_country_flag = yz_bond_automation_enabled
+		}
+		set_variable = {
+			var = yz_bond_actual_rate
+			value = yz_bond_contract_promised_rate
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_bond_monthly_payment
+					value = var:yz_bond_contract_payment_floor
+					compare = less_than
+				}
+			}
+			set_variable = {
+				var = yz_bond_monthly_payment
+				value = yz_bond_contract_payment_floor
+			}
+		}
+		clamp_variable = { var = yz_bond_monthly_payment min = 0 max = 2000 }
+		yz_bond_refresh_monthly_projection = yes
+	}
+}
+
+# Full automation opens a contract only when the balance-sheet assessment finds
+# a real liquidity, investment, or wartime need. It sizes the issue to the cash
+# gap, chooses a risk-aware coupon and selects the appropriate product. The
+# player may leave the default adaptive mandate untouched.
+yz_bond_run_full_automation = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_full_automation_enabled
+			NOT = { has_country_flag = yz_bond_active }
+			NOT = { has_idea = yz_bond_default_crisis }
+		}
+		yz_bond_full_auto_assess_country = yes
+		set_variable = { yz_bond_manager_last_action = 0 }
+		yz_bond_enforce_market_rate_floor = yes
+		set_variable = {
+			var = yz_bond_next_promised_rate
+			value = yz_bond_market_rate_floor
+		}
+		if = {
+			limit = { check_variable = { yz_bond_manager_posture = 1 } }
+			add_to_variable = { yz_bond_next_promised_rate = 1.5 }
+		}
+		else_if = {
+			limit = { check_variable = { yz_bond_manager_posture = 4 } }
+			add_to_variable = { yz_bond_next_promised_rate = 2 }
+		}
+		if = {
+			limit = { check_variable = { yz_bond_credit_score < 25 } }
+			add_to_variable = { yz_bond_next_promised_rate = 2 }
+		}
+		clamp_variable = { var = yz_bond_next_promised_rate min = 2 max = 15 }
+		yz_bond_refresh_issue_preview = yes
+
+		set_temp_variable = { yz_bond_manager_should_issue = 0 }
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_target_reserve
+					compare = less_than
+				}
+			}
+			set_temp_variable = { yz_bond_manager_should_issue = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { yz_bond_manager_posture = 4 }
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_liquidity_target
+					compare = less_than
+				}
+			}
+			set_temp_variable = { yz_bond_manager_should_issue = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { yz_bond_manager_posture = 3 }
+				check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_liquidity_target
+					compare = less_than
+				}
+			}
+			set_temp_variable = { yz_bond_manager_should_issue = 1 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = Yoshino_industry_long_term_invest_now_start
+				check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_liquidity_target
+					compare = less_than
+				}
+			}
+			set_temp_variable = { yz_bond_manager_should_issue = 1 }
+		}
+
+		if = {
+			limit = { check_variable = { yz_bond_manager_should_issue = 1 } }
+			set_variable = {
+				var = yz_bond_next_issue_amount
+				value = yz_bond_manager_liquidity_target
+			}
+			subtract_from_variable = {
+				var = yz_bond_next_issue_amount
+				value = yz_money
+			}
+			clamp_variable = { var = yz_bond_next_issue_amount min = 2500 max = 28500 }
+			divide_variable = {
+				var = yz_bond_next_issue_amount
+				value = yz_bond_subscription_ratio
+			}
+			divide_variable = { yz_bond_next_issue_amount = 500 }
+			round_variable = yz_bond_next_issue_amount
+			multiply_variable = { yz_bond_next_issue_amount = 500 }
+			clamp_variable = { var = yz_bond_next_issue_amount min = 2500 max = 15000 }
+			yz_bond_refresh_issue_preview = yes
+		}
+
+		set_temp_variable = { yz_bond_auto_issue_headroom = yz_money_max }
+		subtract_from_temp_variable = {
+			var = yz_bond_auto_issue_headroom
+			value = yz_bond_next_issue_proceeds
+		}
+		set_temp_variable = { yz_bond_auto_selected_plan = 0 }
+		if = {
+			limit = {
+				check_variable = { yz_bond_manager_should_issue = 1 }
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_auto_issue_headroom
+					compare = less_than_or_equals
+				}
+			}
+			# Product follows current conditions, not a fixed preference. Wartime
+			# liquidity comes first; healthy expansion receives development capital;
+			# every other eligible case falls back to the lower-cost steady contract.
+			if = {
+				limit = {
+					check_variable = { yz_bond_manager_posture = 4 }
+					has_war = yes
+					has_political_power > 74
+					check_variable = { var = yz_bond_credit_score value = 30 compare = greater_than_or_equals }
+				}
+				set_temp_variable = { yz_bond_auto_selected_plan = 3 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { yz_bond_manager_posture = 3 }
+					has_political_power > 49
+					check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
+				}
+				set_temp_variable = { yz_bond_auto_selected_plan = 2 }
+			}
+			if = {
+				limit = {
+					check_variable = { yz_bond_auto_selected_plan = 0 }
+					has_political_power > 24
+					check_variable = { var = yz_bond_credit_score value = 20 compare = greater_than_or_equals }
+				}
+				set_temp_variable = { yz_bond_auto_selected_plan = 1 }
+			}
+
+			if = {
+				limit = { check_variable = { yz_bond_auto_selected_plan = 3 } }
+				add_political_power = -75
+				yz_issue_emergency_bond = yes
+				set_variable = { yz_bond_manager_last_action = 5 }
+			}
+			else_if = {
+				limit = { check_variable = { yz_bond_auto_selected_plan = 2 } }
+				add_political_power = -50
+				yz_issue_development_bond = yes
+				set_variable = { yz_bond_manager_last_action = 4 }
+			}
+			else_if = {
+				limit = { check_variable = { yz_bond_auto_selected_plan = 1 } }
+				add_political_power = -25
+				yz_issue_steady_bond = yes
+				set_variable = { yz_bond_manager_last_action = 3 }
+			}
+			else = { set_variable = { yz_bond_manager_last_action = 6 } }
+		}
+	}
+}
+
+yz_bond_decrease_cash_reserve = {
+	add_to_variable = { yz_bond_cash_reserve_target = -250 }
+	clamp_variable = { var = yz_bond_cash_reserve_target min = 0 max = 5000 }
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_increase_cash_reserve = {
+	add_to_variable = { yz_bond_cash_reserve_target = 250 }
+	clamp_variable = { var = yz_bond_cash_reserve_target min = 0 max = 5000 }
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_request_payment_holiday = {
+	set_country_flag = yz_bond_payment_holiday
+	set_country_flag = { flag = yz_bond_payment_holiday_cooldown days = 90 }
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+}
+
+yz_bond_additional_sale = {
+	set_temp_variable = { yz_bond_sale_proceeds = yz_bond_next_issue_proceeds }
+	multiply_temp_variable = { yz_bond_sale_proceeds = 0.2 }
+	round_temp_variable = yz_bond_sale_proceeds
+	set_temp_variable = { yz_bond_sale_principal = yz_bond_sale_proceeds }
+	multiply_temp_variable = { yz_bond_sale_principal = 1.1 }
+	round_temp_variable = yz_bond_sale_principal
+	add_to_variable = { var = yz_money value = yz_bond_sale_proceeds }
+	add_to_variable = { var = bond_we_need_to_repay value = yz_bond_sale_principal }
+	add_to_variable = { var = yz_bond_lifetime_issued value = yz_bond_sale_proceeds }
+	add_to_variable = { var = yz_bond_lifetime_principal value = yz_bond_sale_principal }
+	add_to_variable = { var = yz_bond_current_issued value = yz_bond_sale_proceeds }
+	add_to_variable = { var = yz_bond_current_initial_principal value = yz_bond_sale_principal }
+	set_temp_variable = { yz_bond_sale_floor = yz_bond_sale_proceeds }
+	multiply_temp_variable = { yz_bond_sale_floor = 0.035 }
+	round_temp_variable = yz_bond_sale_floor
+	add_to_variable = { var = yz_bond_contract_payment_floor value = yz_bond_sale_floor }
+	if = {
+		limit = {
+			check_variable = {
+				var = yz_bond_monthly_payment
+				value = var:yz_bond_contract_payment_floor
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = yz_bond_monthly_payment
+			value = yz_bond_contract_payment_floor
+		}
+	}
+	subtract_from_variable = { yz_bond_credit_score = 2 }
+	clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+	set_country_flag = { flag = yz_bond_additional_sale_cooldown days = 90 }
+	clamp_variable = { var = yz_money min = 0 max = yz_money_max }
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_democratic_market_operation = {
+	# Scripted-GUI enabled state can remain cached for a frame. Recheck the
+	# contract and cooldown here so rapid clicks cannot execute the operation.
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_government = democratic
+			NOT = { has_country_flag = yz_bond_democratic_operation_cooldown }
+		}
+	set_variable = {
+		var = yz_bond_democratic_debt_before
+		value = bond_we_need_to_repay
+	}
+	# Eight outcomes deliberately average to 1.10 times the starting debt:
+	# 2%*0 + 8%*.5 + 15%*.8 + 20%*.95 + 20%*1.1 +
+	# 15%*1.3 + 10%*1.35 + 10%*2 = 1.10.
+	random_list = {
+		2 = {
+			set_variable = { yz_bond_democratic_result = 1 }
+			set_variable = { bond_we_need_to_repay = 0 }
+		}
+		8 = {
+			set_variable = { yz_bond_democratic_result = 2 }
+			multiply_variable = { bond_we_need_to_repay = 0.5 }
+		}
+		15 = {
+			set_variable = { yz_bond_democratic_result = 3 }
+			multiply_variable = { bond_we_need_to_repay = 0.8 }
+		}
+		20 = {
+			set_variable = { yz_bond_democratic_result = 4 }
+			multiply_variable = { bond_we_need_to_repay = 0.95 }
+		}
+		20 = {
+			set_variable = { yz_bond_democratic_result = 5 }
+			multiply_variable = { bond_we_need_to_repay = 1.1 }
+		}
+		15 = {
+			set_variable = { yz_bond_democratic_result = 6 }
+			multiply_variable = { bond_we_need_to_repay = 1.3 }
+		}
+		10 = {
+			set_variable = { yz_bond_democratic_result = 7 }
+			multiply_variable = { bond_we_need_to_repay = 1.35 }
+		}
+		10 = {
+			set_variable = { yz_bond_democratic_result = 8 }
+			multiply_variable = { bond_we_need_to_repay = 2 }
+		}
+	}
+	round_variable = bond_we_need_to_repay
+	set_variable = {
+		var = yz_bond_democratic_debt_after
+		value = bond_we_need_to_repay
+	}
+	if = {
+		limit = { check_variable = { bond_we_need_to_repay < 1 } }
+		yz_bond_honour_contract = yes
+	}
+	set_country_flag = { flag = yz_bond_democratic_operation_cooldown days = 180 }
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	yz_recalculate_monthly_money_ledger = yes
+	country_event = yzbonds_event.20
+	}
+}
+
+yz_bond_communist_industrial_repayment = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_government = communism
+			NOT = { has_country_flag = yz_bond_communist_operation_cooldown }
+		}
+	multiply_variable = { bond_we_need_to_repay = 0.8 }
+	round_variable = bond_we_need_to_repay
+	set_country_flag = { flag = yz_bond_communist_industrial_policy days = 180 }
+	set_country_flag = { flag = yz_bond_communist_operation_cooldown days = 180 }
+	yz_bond_refresh_department_modifier = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	yz_recalculate_monthly_money_ledger = yes
+	}
+}
+
+yz_bond_neutrality_arrest_creditors = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_government = neutrality
+			NOT = { has_country_flag = yz_bond_neutrality_operation_cooldown }
+			check_variable = {
+				var = yz_bond_credit_score
+				value = 15
+				compare = greater_than_or_equals
+			}
+		}
+	multiply_variable = { bond_we_need_to_repay = 0.8 }
+	round_variable = bond_we_need_to_repay
+	subtract_from_variable = { yz_bond_credit_score = 15 }
+	clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+	set_country_flag = { flag = yz_bond_neutrality_conversion_policy days = 120 }
+	set_country_flag = { flag = yz_bond_neutrality_operation_cooldown days = 120 }
+	yz_bond_refresh_department_modifier = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	yz_recalculate_monthly_money_ledger = yes
+	}
+}
+
+yz_bond_start_war_bonds_operation = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+			has_government = fascism
+			has_war = yes
+			NOT = { has_country_flag = yz_bond_war_bonds_active }
+			NOT = { has_country_flag = yz_bond_fascist_operation_cooldown }
+		}
+	set_country_flag = yz_bond_war_bonds_active
+	activate_mission = yz_bond_war_bonds_mission
+	yz_bond_refresh_department_modifier = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	}
+}
+
+yz_bond_war_bonds_success = {
+	clr_country_flag = yz_bond_war_bonds_active
+	remove_mission = yz_bond_war_bonds_mission
+	multiply_variable = { bond_we_need_to_repay = 0.5 }
+	round_variable = bond_we_need_to_repay
+	add_to_variable = { yz_bond_credit_score = 5 }
+	clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+	set_country_flag = { flag = yz_bond_fascist_operation_cooldown days = 90 }
+	yz_bond_refresh_department_modifier = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_war_bonds_failure = {
+	clr_country_flag = yz_bond_war_bonds_active
+	multiply_variable = { bond_we_need_to_repay = 1.5 }
+	round_variable = bond_we_need_to_repay
+	subtract_from_variable = { yz_bond_credit_score = 15 }
+	clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+	set_country_flag = { flag = yz_bond_fascist_operation_cooldown days = 90 }
+	yz_bond_refresh_department_modifier = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
+	yz_recalculate_monthly_money_ledger = yes
+}
+
+yz_bond_monthly_service = {
+	if = {
+		limit = {
+			has_country_flag = yz_bond_active
+		}
+		yz_bond_ensure_control_state = yes
+		set_variable = { yz_bond_last_credit_payment = 0 }
+		set_variable = { yz_bond_last_credit_rate = 0 }
+		set_temp_variable = { yz_bond_promised_coupon = bond_we_need_to_repay }
+		multiply_temp_variable = {
+			var = yz_bond_promised_coupon
+			value = yz_bond_contract_promised_rate
+		}
+		divide_temp_variable = { yz_bond_promised_coupon = 1200 }
+		round_temp_variable = yz_bond_promised_coupon
+		set_temp_variable = { yz_bond_actual_coupon = bond_we_need_to_repay }
+		multiply_temp_variable = {
+			var = yz_bond_actual_coupon
+			value = yz_bond_actual_rate
+		}
+		divide_temp_variable = { yz_bond_actual_coupon = 1200 }
+		round_temp_variable = yz_bond_actual_coupon
+		if = {
+			limit = { has_country_flag = yz_bond_payment_holiday }
+			clr_country_flag = yz_bond_payment_holiday
+			add_to_variable = { var = bond_we_need_to_repay value = yz_bond_promised_coupon }
+			add_to_variable = { var = yz_bond_lifetime_capitalized value = yz_bond_promised_coupon }
+			set_variable = { yz_bond_last_credit_payment = -2 }
+		}
+		else = {
+			set_temp_variable = { yz_bond_mandatory_principal = yz_bond_contract_payment_floor }
+			if = {
+				limit = {
+					check_variable = {
+						var = bond_we_need_to_repay
+						value = var:yz_bond_mandatory_principal
+						compare = less_than_or_equals
+					}
+				}
+				set_temp_variable = { yz_bond_mandatory_principal = bond_we_need_to_repay }
+			}
+			set_temp_variable = { yz_bond_required_cash = yz_bond_mandatory_principal }
+			add_to_temp_variable = { var = yz_bond_required_cash value = yz_bond_actual_coupon }
+			if = {
+				limit = {
+					check_variable = {
+						var = yz_money
+						value = var:yz_bond_required_cash
+						compare = greater_than_or_equals
+					}
+				}
+				set_temp_variable = { yz_bond_principal_paid = yz_bond_monthly_payment }
+				if = {
+					limit = {
+						check_variable = {
+							var = bond_we_need_to_repay
+							value = var:yz_bond_principal_paid
+							compare = less_than_or_equals
+						}
+					}
+					set_temp_variable = { yz_bond_principal_paid = bond_we_need_to_repay }
+				}
+				set_temp_variable = { yz_bond_payment_with_reserve = yz_bond_principal_paid }
+				add_to_temp_variable = { var = yz_bond_payment_with_reserve value = yz_bond_actual_coupon }
+				add_to_temp_variable = { var = yz_bond_payment_with_reserve value = yz_bond_cash_reserve_target }
+				if = {
+					limit = {
+						check_variable = {
+							var = yz_money
+							value = var:yz_bond_payment_with_reserve
+							compare = less_than
+						}
+					}
+					set_temp_variable = { yz_bond_principal_paid = yz_bond_mandatory_principal }
+				}
+				set_temp_variable = { yz_bond_cash_paid = yz_bond_principal_paid }
+				add_to_temp_variable = { var = yz_bond_cash_paid value = yz_bond_actual_coupon }
+				subtract_from_variable = { var = yz_money value = yz_bond_cash_paid }
+				subtract_from_variable = { var = bond_we_need_to_repay value = yz_bond_principal_paid }
+				add_to_variable = { var = yz_bond_lifetime_repaid value = yz_bond_cash_paid }
+				add_to_variable = { var = yz_bond_lifetime_interest_paid value = yz_bond_actual_coupon }
+				set_variable = { yz_bond_last_credit_payment = 1 }
+				if = {
+					limit = {
+						check_variable = {
+							var = yz_bond_actual_rate
+							value = var:yz_bond_contract_promised_rate
+							compare = greater_than
+						}
+					}
+					set_variable = { yz_bond_last_credit_rate = 2 }
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = yz_bond_actual_rate
+							value = var:yz_bond_contract_promised_rate
+							compare = less_than
+						}
+					}
+					set_variable = { yz_bond_last_credit_rate = -2 }
+					set_temp_variable = { yz_bond_unpaid_coupon = yz_bond_promised_coupon }
+					subtract_from_temp_variable = { var = yz_bond_unpaid_coupon value = yz_bond_actual_coupon }
+					add_to_variable = { var = bond_we_need_to_repay value = yz_bond_unpaid_coupon }
+					add_to_variable = { var = yz_bond_lifetime_capitalized value = yz_bond_unpaid_coupon }
+				}
+				clamp_variable = { var = bond_we_need_to_repay min = 0 }
+			}
+			else = {
+				set_temp_variable = { yz_bond_capitalized_due = yz_bond_mandatory_principal }
+				add_to_temp_variable = { var = yz_bond_capitalized_due value = yz_bond_promised_coupon }
+				add_to_variable = { var = bond_we_need_to_repay value = yz_bond_capitalized_due }
+				add_to_variable = { var = yz_bond_lifetime_capitalized value = yz_bond_capitalized_due }
+				add_to_variable = { yz_bond_missed_payments = 1 }
+				set_variable = { yz_bond_last_credit_payment = -5 }
+				set_variable = { yz_bond_last_credit_rate = -2 }
+				clr_country_flag = yz_bond_arrears_notice
+				set_country_flag = { flag = yz_bond_arrears_notice value = 1 days = 90 }
+				remove_ideas = yz_bond_arrears
+				add_timed_idea = { idea = yz_bond_arrears days = 90 }
+			}
+		}
+		add_to_variable = { var = yz_bond_credit_score value = yz_bond_last_credit_payment }
+		add_to_variable = { var = yz_bond_credit_score value = yz_bond_last_credit_rate }
+		clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+		if = {
+			limit = { check_variable = { var = bond_we_need_to_repay value = 0 compare = less_than_or_equals } }
+			yz_bond_honour_contract = yes
+		}
+		yz_recalculate_monthly_money_ledger = yes
+	}
+}
+
+# Credit reacts once per month to productive capacity, using the current
+# country's own factory total as verified in vanilla scripted effects.
+yz_bond_monthly_credit_growth = {
+	if = {
+		limit = { has_country_flag = yz_bond_system_initialized }
+		set_variable = { yz_bond_current_factory_count = num_of_factories }
+		set_variable = {
+			var = yz_bond_prior_factory_count
+			value = yz_bond_last_factory_count
+		}
+		set_variable = { yz_bond_last_credit_growth = 0 }
+		if = {
+			limit = {
+				has_country_flag = yz_bond_active
+				check_variable = {
+					var = yz_bond_current_factory_count
+					value = var:yz_bond_last_factory_count
+					compare = greater_than
+				}
+			}
+			set_variable = { yz_bond_last_credit_growth = 1 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = yz_bond_active
+				check_variable = {
+					var = yz_bond_current_factory_count
+					value = var:yz_bond_last_factory_count
+					compare = less_than
+				}
+			}
+			set_variable = { yz_bond_last_credit_growth = -1 }
+		}
+		add_to_variable = { var = yz_bond_credit_score value = yz_bond_last_credit_growth }
+		clamp_variable = { var = yz_bond_credit_score min = 0 max = 100 }
+		yz_bond_enforce_market_rate_floor = yes
+		yz_bond_refresh_issue_preview = yes
+		set_variable = {
+			var = yz_bond_last_factory_count
+			value = yz_bond_current_factory_count
+		}
+		yz_bond_refresh_department_modifier = yes
+	}
+}
+
+# Store at most 49 monthly debt observations, producing 48 line segments. This
+# effect is called only for the player from the existing fiscal on_monthly path.
+yz_bond_record_monthly_snapshot = {
+	if = {
+		limit = { has_country_flag = yz_bond_system_initialized }
+		add_to_array = { yz_bond_debt_history = bond_we_need_to_repay }
+		add_to_variable = { yz_bond_history_count = 1 }
+		if = {
+			limit = { check_variable = { yz_bond_history_count > 49 } }
+			remove_from_array = { array = yz_bond_debt_history index = 0 }
+			set_variable = { yz_bond_history_count = 49 }
+		}
+		yz_bond_refresh_graph_anchor = yes
+
+		find_highest_in_array = {
+			array = yz_bond_debt_history
+			value = yz_bond_graph_maximum
+			index = yz_bond_graph_maximum_index
+		}
+		if = {
+			limit = { check_variable = { yz_bond_graph_maximum < 100 } }
+			set_variable = { yz_bond_graph_maximum = 100 }
+		}
+		set_variable = { yz_bond_graph_100 = yz_bond_graph_maximum }
+		set_variable = { yz_bond_graph_75 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_75 = 0.75 }
+		set_variable = { yz_bond_graph_50 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_50 = 0.5 }
+		set_variable = { yz_bond_graph_25 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_25 = 0.25 }
+		round_variable = yz_bond_graph_100
+		round_variable = yz_bond_graph_75
+		round_variable = yz_bond_graph_50
+		round_variable = yz_bond_graph_25
+
+		clear_array = yz_bond_graph_offsets
+		clear_array = yz_bond_graph_slopes
+		for_each_loop = {
+			array = yz_bond_debt_history
+			index = yz_bond_history_index
+			set_variable = {
+				var = yz_bond_graph_y_position
+				value = yz_bond_debt_history^yz_bond_history_index
+			}
+			divide_variable = {
+				var = yz_bond_graph_y_position
+				value = yz_bond_graph_maximum
+			}
+			multiply_variable = { yz_bond_graph_y_position = 100 }
+			round_variable = yz_bond_graph_y_position
+			if = {
+				limit = { check_variable = { yz_bond_history_index > 0 } }
+				set_temp_variable = { yz_bond_graph_offset = yz_bond_graph_last_y_position }
+				multiply_temp_variable = { yz_bond_graph_offset = -1 }
+				add_to_array = {
+					array = yz_bond_graph_offsets
+					value = yz_bond_graph_offset
+				}
+				set_temp_variable = { yz_bond_graph_slope = yz_bond_graph_y_position }
+				subtract_from_temp_variable = {
+					var = yz_bond_graph_slope
+					value = yz_bond_graph_last_y_position
+				}
+				divide_temp_variable = { yz_bond_graph_slope = 2 }
+				add_to_temp_variable = { yz_bond_graph_slope = 50 }
+				add_to_array = {
+					array = yz_bond_graph_slopes
+					value = yz_bond_graph_slope
+				}
+			}
+			set_variable = {
+				var = yz_bond_graph_last_y_position
+				value = yz_bond_graph_y_position
+			}
+		}
+		add_to_variable = { yz_bond_graph_dirty = 1 }
 	}
 }

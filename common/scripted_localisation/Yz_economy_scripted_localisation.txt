@@ -17,22 +17,337 @@
 #	}
 #}
 defined_text = {
-	name = yz_economy_department_category_describe
+	name = YZ_bond_credit_rating
 	text = {
 		trigger = {
-			NOT = {
-				has_country_flag = Yoshino_industry_long_term_invest_now_start
-			}
+			check_variable = { var = yz_bond_credit_score value = 75 compare = greater_than_or_equals }
 		}
-		localization_key = we_dont_start_yz_invest
+		localization_key = yz_bond_credit_rating_a
 	}
 	text = {
 		trigger = {
-			has_country_flag = Yoshino_industry_long_term_invest_now_start
+			check_variable = { var = yz_bond_credit_score value = 50 compare = greater_than_or_equals }
 		}
-		localization_key = we_now_start_yoshino_industry_long_term_invest
+		localization_key = yz_bond_credit_rating_b
+	}
+	text = {
+		trigger = {
+			check_variable = { var = yz_bond_credit_score value = 25 compare = greater_than_or_equals }
+		}
+		localization_key = yz_bond_credit_rating_c
+	}
+	text = {
+		localization_key = yz_bond_credit_rating_d
 	}
 }
+defined_text = {
+	name = YZ_bond_market_status
+	text = {
+		trigger = { NOT = { has_country_flag = yz_bond_system_initialized } }
+		localization_key = yz_bond_market_uninitialized_status
+	}
+	text = {
+		trigger = { has_country_flag = yz_bond_active }
+		localization_key = yz_bond_market_active_status
+	}
+	text = {
+		localization_key = yz_bond_market_idle_status
+	}
+}
+defined_text = {
+	name = YZ_bond_long_term_status
+	text = {
+		trigger = { NOT = { has_country_flag = finished_yoshino_industry } }
+		localization_key = yz_bond_long_term_locked_status
+	}
+	text = {
+		trigger = {
+			has_country_flag = finished_yoshino_industry
+			NOT = { has_country_flag = Yoshino_industry_long_term_invest_now_start }
+		}
+		localization_key = yz_bond_long_term_ready_status
+	}
+	text = {
+		localization_key = yz_bond_long_term_active_status
+	}
+}
+defined_text = {
+	name = YZ_bond_current_plan
+	text = {
+		trigger = { has_country_flag = yz_bond_plan_steady }
+		localization_key = yz_bond_plan_steady_name
+	}
+	text = {
+		trigger = { has_country_flag = yz_bond_plan_development }
+		localization_key = yz_bond_plan_development_name
+	}
+	text = {
+		trigger = { has_country_flag = yz_bond_plan_emergency }
+		localization_key = yz_bond_plan_emergency_name
+	}
+	text = {
+		localization_key = yz_bond_plan_none_name
+	}
+}
+
+# Player-facing contract pricing now separates the locked promise from the
+# coupon actually paid each month.
+defined_text = {
+	name = YZ_bond_current_cost_rate
+	text = {
+		trigger = { has_country_flag = yz_bond_active }
+		localization_key = yz_bond_cost_rate_active
+	}
+	text = {
+		localization_key = yz_bond_cost_rate_none
+	}
+}
+
+defined_text = {
+	name = YZ_bond_automation_status
+	text = {
+		trigger = { has_country_flag = yz_bond_full_automation_enabled }
+		localization_key = yz_bond_automation_full
+	}
+	text = {
+		trigger = { has_country_flag = yz_bond_automation_enabled }
+		localization_key = yz_bond_automation_on
+	}
+	text = { localization_key = yz_bond_automation_off }
+}
+
+defined_text = {
+	name = YZ_bond_auto_issue_preference
+	text = {
+		trigger = { check_variable = { yz_bond_auto_issue_preference = 1 } }
+		localization_key = yz_bond_auto_issue_preference_steady
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_auto_issue_preference = 2 } }
+		localization_key = yz_bond_auto_issue_preference_development
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_auto_issue_preference = 3 } }
+		localization_key = yz_bond_auto_issue_preference_emergency
+	}
+	text = { localization_key = yz_bond_auto_issue_preference_smart }
+}
+
+# The automation algorithm is shared, but its player-facing institution follows
+# the country's political system. Internal manager variables remain stable for saves.
+defined_text = {
+	name = YZ_bond_management_institution
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = yz_bond_institution_democratic
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = yz_bond_institution_communist
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = yz_bond_institution_neutrality
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = yz_bond_institution_fascist
+	}
+	text = { localization_key = yz_bond_institution_default }
+}
+
+defined_text = {
+	name = YZ_bond_manager_posture
+	text = {
+		trigger = { check_variable = { yz_bond_manager_posture = 1 } }
+		localization_key = yz_bond_manager_posture_liquidity
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_posture = 3 } }
+		localization_key = yz_bond_manager_posture_expansion
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_posture = 4 } }
+		localization_key = yz_bond_manager_posture_wartime
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_posture = 5 } }
+		localization_key = yz_bond_manager_posture_deleveraging
+	}
+	text = { localization_key = yz_bond_manager_posture_balanced }
+}
+
+defined_text = {
+	name = YZ_bond_manager_last_action
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 1 } }
+		localization_key = yz_bond_manager_action_floor
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 2 } }
+		localization_key = yz_bond_manager_action_accelerate
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 3 } }
+		localization_key = yz_bond_manager_action_issue_steady
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 4 } }
+		localization_key = yz_bond_manager_action_issue_development
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 5 } }
+		localization_key = yz_bond_manager_action_issue_emergency
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 6 } }
+		localization_key = yz_bond_manager_action_waiting_market
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 7 } }
+		localization_key = yz_bond_manager_action_holiday
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_manager_last_action = 8 } }
+		localization_key = yz_bond_manager_action_additional_sale
+	}
+	text = { localization_key = yz_bond_manager_action_observing }
+}
+
+defined_text = {
+	name = YZ_bond_manager_report
+	text = {
+		trigger = { has_country_flag = yz_bond_full_automation_enabled }
+		localization_key = yz_bond_manager_report_active
+	}
+	text = { localization_key = yz_bond_manager_report_inactive }
+}
+
+defined_text = {
+	name = YZ_bond_manager_category_status
+	text = {
+		trigger = { has_country_flag = yz_bond_full_automation_enabled }
+		localization_key = yz_bond_manager_category_active
+	}
+	text = { localization_key = yz_bond_manager_category_inactive }
+}
+
+defined_text = {
+	name = YZ_bond_ideology_action_name
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = yz_bond_democratic_action_name
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = yz_bond_communist_action_name
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = yz_bond_neutrality_action_name
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = yz_bond_fascist_action_name
+	}
+	text = { localization_key = yz_bond_ideology_action_unknown }
+}
+
+defined_text = {
+	name = YZ_bond_ideology_action_tooltip
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = yz_bond_democratic_action_tt
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = yz_bond_communist_action_tt
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = yz_bond_neutrality_action_tt
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = yz_bond_fascist_action_tt
+	}
+	text = { localization_key = yz_bond_ideology_action_unknown_tt }
+}
+
+defined_text = {
+	name = YZ_bond_operation_status
+	text = {
+		trigger = { has_country_flag = yz_bond_war_bonds_active }
+		localization_key = yz_bond_operation_war_active
+	}
+	text = {
+		trigger = { has_country_flag = yz_bond_payment_holiday }
+		localization_key = yz_bond_operation_holiday_pending
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					has_government = democratic
+					has_country_flag = yz_bond_democratic_operation_cooldown
+				}
+				AND = {
+					has_government = communism
+					has_country_flag = yz_bond_communist_operation_cooldown
+				}
+				AND = {
+					has_government = neutrality
+					has_country_flag = yz_bond_neutrality_operation_cooldown
+				}
+				AND = {
+					has_government = fascism
+					has_country_flag = yz_bond_fascist_operation_cooldown
+				}
+			}
+		}
+		localization_key = yz_bond_operation_cooldown
+	}
+	text = { localization_key = yz_bond_operation_ready }
+}
+
+# One event reports which of the eight democratic market outcomes was drawn.
+defined_text = {
+	name = YZ_bond_democratic_result_text
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 1 } }
+		localization_key = yz_bond_democratic_result_1
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 2 } }
+		localization_key = yz_bond_democratic_result_2
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 3 } }
+		localization_key = yz_bond_democratic_result_3
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 4 } }
+		localization_key = yz_bond_democratic_result_4
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 5 } }
+		localization_key = yz_bond_democratic_result_5
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 6 } }
+		localization_key = yz_bond_democratic_result_6
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 7 } }
+		localization_key = yz_bond_democratic_result_7
+	}
+	text = {
+		trigger = { check_variable = { yz_bond_democratic_result = 8 } }
+		localization_key = yz_bond_democratic_result_8
+	}
+	text = { localization_key = yz_bond_democratic_result_unknown }
+}
+
 defined_text = {
 	name = Yuzu_can_form_yuzu_land_describe
 	text = {

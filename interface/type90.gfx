@@ -4,5 +4,36 @@ spriteTypes = {
 		name = "GFX_type90_tank_chassis_medium"
 		texturefile = "gfx/counters/YZ_TYPE90_ICON.png"
 	}
+
+	# Sub-unit icons are looked up by the battalion key, not its 3D sprite.
+	# Register Type 90 aliases while reusing the proven Yuzusoft Guard assets.
+	spriteType = {
+		name = "GFX_unit_yz_type90_armor_icon_medium"
+		texturefile = "gfx/counters/yzc_units/unit_yzc_modern_armor_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_yz_type90_armor_icon_medium_white"
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_yz_type90_armor_icon_small"
+		texturefile = "gfx/counters/yzc_units/onmap_unit_yzc_modern_armor_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_yz_type90_project_decision"
+		texturefile = "gfx/decision/yz_type90_project.png"
+	}
+
+	spriteType = {
+		name = "GFX_sp_land_yz_type_90"
+		texturefile = "gfx/interface/special_project/project_icons/sp_land_yz_type_90.png"
+	}
 	
 }

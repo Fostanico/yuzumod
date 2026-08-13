@@ -7,6 +7,7 @@ equipments = {
 	type90_tank_chassis = {
 		year = 1936
 		is_archetype = yes
+		is_buildable = no
 		
 		type = {
 			armor
@@ -14,82 +15,70 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-		#picture = GFX_type90_tank_chassis_medium	
+		picture = GFX_type90_tank_chassis_medium
 
 		module_slots = {
 
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_modern_turret_type
+					yz_type90_turret_type
 				}
 			}
 			
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_heavy_main_armament
+					yz_type90_main_armament
 				}
 			}
 
 			suspension_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_suspension_type
+					yz_type90_suspension_type
 				}
 			}
 
 			armor_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_armor_type
+					yz_type90_armor_type
 				}
 			}
 
 			engine_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_engine_type
-				}
-			}
-
-			# Millennium Dawn weapon modules extend this slot with their required
-			# ammunition categories. It stays optional and empty in vanilla.
-			ammunition_load_slot = {
-				required = no
-				allowed_module_categories = {
+					yz_type90_engine_type
 				}
 			}
 
 			special_type_slot_1 = {
 				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
+					yz_type90_special_module
 				}
 			}
 
 			special_type_slot_2 = {
 				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
+					yz_type90_special_module
 				}
 			}
 
 			special_type_slot_3 = {
 				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
+					yz_type90_special_module
 				}
 			}
 
 			special_type_slot_4 = {
 				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
+					yz_type90_special_module
 				}
 			}
 
@@ -124,10 +113,10 @@ equipments = {
 			suspension_type_slot = type90_hydropneumatic_suspension
 			armor_type_slot = type90_composite_armor
 			engine_type_slot = type90_Mitsubishi_10ZG32WT_engine
-			#special_type_slot_1 = type90_modern_electronic_equipment
-			#special_type_slot_2 = type90_machine_guns
-			#special_type_slot_3 = type90_fire_control_system
-			#special_type_slot_4 = type90_auto_loader
+			special_type_slot_1 = type90_modern_electronic_equipment
+			special_type_slot_2 = type90_machine_guns
+			special_type_slot_3 = type90_fire_control_system
+			special_type_slot_4 = type90_auto_loader
 		}
 
 		fuel_consumption = 2.5
@@ -135,7 +124,8 @@ equipments = {
 		build_cost_ic = 50
 		reliability = 1.2
 		armor_value = 150
-		hardness = 15
+		# Equipment hardness is a ratio. Values above 1 overflow the intended scale.
+		hardness = 0.95
 		resources = {
 			steel = 3
 			chromium = 2
@@ -144,8 +134,6 @@ equipments = {
 		}
 
 		lend_lease_cost = 1
-
-		manpower = 1
 
 	}
 

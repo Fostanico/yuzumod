@@ -1,9 +1,24 @@
 technologies = {
 
 	tech_YZ_type90 = { 
+		show_equipment_icon = yes
 
 		enable_equipments = {
 			type90_tank_chassis_1
+		}
+		enable_equipment_modules = {
+			type90_Rh_120_120mm_gun
+			type90_tank_turret
+			type90_hydropneumatic_suspension
+			type90_composite_armor
+			type90_Mitsubishi_10ZG32WT_engine
+			type90_modern_electronic_equipment
+			type90_machine_guns
+			type90_fire_control_system
+			type90_auto_loader
+		}
+		enable_subunits = {
+			yz_type90_armor
 		}
 
 		research_cost = 1.5

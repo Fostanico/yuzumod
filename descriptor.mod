@@ -1,4 +1,4 @@
-version="1.181"
+version="1.185"
 tags={
 	"Balance"
 	"Utilities"
@@ -15,6 +15,7 @@ dependencies={
 	"KaiserreduX"
 	"Millennium Dawn: A Beta Test Mod"
 	"Millennium Dawn: A Modern Day Mod"
+	"Millennium Dawn: Developer Version"
 	"Novum Vexillum"
 	"Old World Blues"
 	"Pax Britannica: An Imperial Timeline"

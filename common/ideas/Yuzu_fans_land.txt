@@ -28,6 +28,49 @@ ideas = {
                 production_speed_buildings_factor = -0.1
             }
         }
+        yz_bond_arrears = {
+            name = yz_bond_arrears
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                consumer_goods_factor = 0.10
+                production_speed_buildings_factor = -0.05
+            }
+        }
+        yz_domestic_game_purchase_campaign = {
+            name = yz_domestic_game_purchase_campaign
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                consumer_goods_factor = 0.08
+            }
+        }
+        yz_bond_default_crisis = {
+            name = yz_bond_default_crisis
+            picture = idea_yuzu_fans_land_ide
+            modifier = {
+                consumer_goods_factor = 0.15
+                political_power_factor = -0.10
+                production_speed_buildings_factor = -0.08
+            }
+        }
+		# Compatibility shells for saves created before the Economic Department
+		# dynamic spirit migration. New code removes these ideas and applies every
+		# bond modifier through yz_bond_economy_department_dynamic_modifier.
+		yz_bond_steady_type = {
+			name = yz_bond_steady_type
+			picture = idea_yuzu_fans_land_ide
+		}
+		yz_bond_development_type = {
+			name = yz_bond_development_type
+			picture = idea_yuzu_super_vip
+		}
+		yz_bond_emergency_type = {
+			name = yz_bond_emergency_type
+			picture = ship_making_brand_standinglized
+		}
+		yz_bond_state_industrial_repayment = {
+			name = yz_bond_state_industrial_repayment
+			picture = idea_yuzu_fans_land_ide
+		}
         ship_making_brand_standinglized = {
             name = ship_making_brand_standinglized
             picture = ship_making_brand_standinglized

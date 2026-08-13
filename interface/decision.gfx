@@ -904,4 +904,29 @@ spriteTypes = {
 		name = "GFX_yzmanpower_texticon_1"
 		texturefile = "gfx/texticons/yzmanpower_texticon_1.png"
 	}
+	# Monthly bond-history line. The paired textures and slope shader are derived
+	# from the MIT-licensed Simple GDP Graph implementation; see the guide notice.
+	progressbartype = {
+		name = "GFX_yz_bond_graph_line_segment"
+		textureFile1 = "gfx/guis/yz_bond_graph_line_full.dds"
+		textureFile2 = "gfx/guis/yz_bond_graph_line_empty.dds"
+		size = { x = 8 y = 200 }
+		effectFile = "gfx/FX/yz_bond_graph.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_yz_bond_automation_toggle"
+		texturefile = "gfx/guis/yz_bond_automation_toggle.png"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_yz_bond_operations_bg_brightness_22"
+		texturefile = "gfx/guis/yz_bond_operations_bg_brightness_22.png"
+	}
+	spriteType = {
+		name = "GFX_yz_bond_operations_framed"
+		texturefile = "gfx/guis/yz_bond_operations_framed.png"
+		transparencecheck = yes
+	}
 }

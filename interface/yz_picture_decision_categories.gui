@@ -109,6 +109,42 @@ guiTypes = {
         }
     }
 
+    # Yoshino's revitalization plan shares the established Economy Bureau art.
+    # The right-hand copy mirrors Meguru's plan overview and reports all four
+    # independent investment lines without introducing another image asset.
+    containerWindowType = {
+        name = "yz_yoshino_industry_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_yoshino_industry_category_background"
+            quadTextureSprite = "GFX_yz_bond_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_yoshino_industry_category_text"
+            position = { x = 225 y = -4 }
+            font = "hoi_16mbs"
+            text = "yz_yoshino_industry_category_gui_desc"
+            maxWidth = 270
+            maxHeight = 120
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "yz_yoshino_industry_category_progress"
+            position = { x = 225 y = 118 }
+            font = "hoi_16mbs"
+            text = "yz_yoshino_industry_category_gui_progress"
+            maxWidth = 270
+            maxHeight = 92
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
     containerWindowType = {
         name = "yz_world_unity_category_window"
         position = { x = 0 y = 0 }
@@ -131,5 +167,158 @@ guiTypes = {
             fixedsize = yes
             alwaystransparent = yes
         }
+    }
+
+    # Economic Department dashboard. Contract actions remain ordinary decisions;
+    # this category owns the single entry to the detailed debt-management window.
+    containerWindowType = {
+        name = "yz_bond_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_bond_category_background"
+            quadTextureSprite = "GFX_yz_bond_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        buttonType = {
+            name = "yz_bond_category_help_button"
+            position = { x = -42 y = -4 }
+            orientation = UPPER_RIGHT
+            quadTextureSprite = "GFX_help_button"
+            buttonText = ""
+            buttonFont = "Main_14_black"
+            clicksound = click_ok
+            oversound = ui_menu_over
+            pdx_tooltip = "yz_bond_help_button_tt"
+        }
+		buttonType = {
+			name = "yz_bond_category_auto_button"
+			# The automation sprite is 32px high while the help icon is 24px.
+			# Raising it by four pixels aligns their visual centres.
+			position = { x = -78 y = -8 }
+			orientation = UPPER_RIGHT
+			quadTextureSprite = "GFX_yz_bond_automation_toggle"
+			clicksound = click_default
+			oversound = ui_menu_over
+			pdx_tooltip = "yz_bond_auto_button_tt"
+		}
+        instantTextBoxType = {
+            name = "yz_bond_category_title"
+            position = { x = 230 y = -10 }
+            font = "hoi_20bs"
+            text = "yz_bond_category_gui_title"
+            maxWidth = 190
+            maxHeight = 25
+            format = center
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "yz_bond_category_summary"
+            position = { x = 240 y = 12 }
+            font = "hoi_16mbs"
+            text = "yz_bond_category_gui_summary"
+            maxWidth = 250
+            maxHeight = 72
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "yz_bond_category_investment"
+            position = { x = 240 y = 85 }
+            font = "hoi_16mbs"
+            text = "yz_bond_category_gui_investment"
+            maxWidth = 250
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+		instantTextBoxType = {
+			name = "yz_bond_category_payment_label"
+			position = { x = 240 y = 108 }
+			font = "hoi_16mbs"
+			text = "yz_bond_category_payment_label"
+			maxWidth = 104
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_category_payment_decrease_button"
+			position = { x = 348 y = 105 }
+			quadTextureSprite = "GFX_subtract_one"
+			pdx_tooltip = "yz_bond_payment_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_category_payment_value"
+			position = { x = 382 y = 108 }
+			font = "hoi_16mbs"
+			text = "yz_bond_category_payment_value"
+			maxWidth = 72
+			maxHeight = 22
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_category_payment_increase_button"
+			position = { x = 462 y = 105 }
+			quadTextureSprite = "GFX_add_one"
+			pdx_tooltip = "yz_bond_payment_increase_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_category_issue_label"
+			position = { x = 240 y = 135 }
+			font = "hoi_16mbs"
+			text = "yz_bond_category_issue_label"
+			maxWidth = 104
+			maxHeight = 22
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_category_issue_decrease_button"
+			position = { x = 348 y = 132 }
+			quadTextureSprite = "GFX_subtract_one"
+			pdx_tooltip = "yz_bond_next_issue_decrease_button_tt"
+		}
+		instantTextBoxType = {
+			name = "yz_bond_category_issue_value"
+			position = { x = 382 y = 135 }
+			font = "hoi_16mbs"
+			text = "yz_bond_category_issue_value"
+			maxWidth = 72
+			maxHeight = 22
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "yz_bond_category_issue_increase_button"
+			position = { x = 462 y = 132 }
+			quadTextureSprite = "GFX_add_one"
+			pdx_tooltip = "yz_bond_next_issue_increase_button_tt"
+		}
+        buttonType = {
+            name = "yz_bond_details_button"
+            position = { x = 290 y = 159 }
+            quadTextureSprite = "GFX_yz_button_long"
+            scale = 0.45
+			buttonText = ""
+            pdx_tooltip = "yz_bond_details_button_tt"
+        }
+		instantTextBoxType = {
+			name = "yz_bond_details_button_label"
+			position = { x = 290 y = 166 }
+			font = "hoi_16mbs"
+			text = "yz_bond_details_button_text"
+			maxWidth = 140
+			maxHeight = 20
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
     }
 }

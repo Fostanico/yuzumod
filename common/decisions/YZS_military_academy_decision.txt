@@ -3761,10 +3761,16 @@ YZS_military_academy_category = {
         fire_only_once = no
         days_re_enable = 1
         
-        # 点击后立即执行的效果：触发第一页事件
-        complete_effect = {
-            country_event = { id = military_reform_event.1 }
-        }
+		# Millennium Dawn uses a compact four-stage reform track, so show its own guide.
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = yz_md_startup_detected }
+				country_event = { id = military_reform_event.3 }
+			}
+			else = {
+				country_event = { id = military_reform_event.1 }
+			}
+		}
     }
 	huhu_s_help = {
 		priority = 1
@@ -3797,6 +3803,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_7
 			has_country_flag = huhu_help_you
@@ -3848,6 +3855,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_infantry_1
 			is_ai = no
 			or = {
@@ -3892,6 +3900,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_infantry_2
 			is_ai = no
 			or = {
@@ -3939,6 +3948,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_infantry_3
 			is_ai = no
 			or = {
@@ -3986,6 +3996,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_infantry_4
 			is_ai = no
 			or = {
@@ -4037,6 +4048,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_7
 			has_country_flag = huhu_help_you
@@ -4088,6 +4100,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_artillery_1
 			is_ai = no
 			or = {
@@ -4135,6 +4148,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_artillery_2
 			is_ai = no
 			or = {
@@ -4183,6 +4197,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_artillery_3
 			is_ai = no
 			or = {
@@ -4231,6 +4246,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_artillery_4
 			is_ai = no
 			or = {
@@ -4278,6 +4294,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_7
 			has_country_flag = huhu_help_you
@@ -4329,6 +4346,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_cavalry_1
 			is_ai = no
 			or = {
@@ -4373,6 +4391,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_cavalry_2
 			is_ai = no
 			or = {
@@ -4419,6 +4438,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_cavalry_3
 			is_ai = no
 			or = {
@@ -4465,6 +4485,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_cavalry_4
 			is_ai = no
 			or = {
@@ -4514,6 +4535,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 				has_country_flag = youzu_army_7
 				has_country_flag = youzu_army_8
@@ -4565,6 +4587,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_light_armor_1
 			is_ai = no
 			or = {
@@ -4611,6 +4634,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_light_armor_2
 			is_ai = no
 			or = {
@@ -4658,6 +4682,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_light_armor_3
 			is_ai = no
 			or = {
@@ -4704,6 +4729,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_light_armor_4
 			is_ai = no
 			or = {
@@ -4753,6 +4779,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_light_armor_3
 			is_ai = no
 			or = {
@@ -4779,6 +4806,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 				has_country_flag = youzu_army_7
 				has_country_flag = youzu_army_8
@@ -4831,6 +4859,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_support_1
 			is_ai = no
 			or = {
@@ -4877,6 +4906,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_support_2
 			is_ai = no
 			or = {
@@ -4922,6 +4952,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_support_3
 			is_ai = no
 			or = {
@@ -4968,6 +4999,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_support_4
 			is_ai = no
 			or = {
@@ -5014,6 +5046,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_support_3
 			is_ai = no
 			or = {
@@ -5039,6 +5072,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_8
 			has_country_flag = huhu_help_you
@@ -5088,6 +5122,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_mechanized_1
 			is_ai = no
 			or = {
@@ -5134,6 +5169,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_mechanized_2
 			is_ai = no
 			or = {
@@ -5181,6 +5217,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_mechanized_3
 			is_ai = no
 			or = {
@@ -5231,6 +5268,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_mechanized_4
 			is_ai = no
 			or = {
@@ -5282,6 +5320,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_8
 			has_country_flag = huhu_help_you
@@ -5331,6 +5370,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_blitzkrieg_1
 			is_ai = no
 			or = {
@@ -5379,6 +5419,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_blitzkrieg_2
 			is_ai = no
 			or = {
@@ -5424,6 +5465,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_blitzkrieg_3
 			is_ai = no
 			or = {
@@ -5470,6 +5512,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_blitzkrieg_4
 			is_ai = no
 			or = {
@@ -5518,6 +5561,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			or = {
 			has_country_flag = youzu_army_8
 			has_country_flag = huhu_help_you
@@ -5567,6 +5611,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_air_land_1
 			is_ai = no
 			or = {
@@ -5612,6 +5657,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_air_land_2
 			is_ai = no
 			or = {
@@ -5660,6 +5706,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_air_land_3
 			is_ai = no
 			or = {
@@ -5705,6 +5752,7 @@ YZS_military_academy_category = {
 		days_remove = 30
 		cost = 100
 		visible = {
+			NOT = { has_global_flag = yz_md_startup_detected }
 			has_country_flag = have_air_land_4
 			is_ai = no
 			or = {
@@ -5746,6 +5794,163 @@ YZS_military_academy_category = {
 			clr_country_flag = army_streamline_underway
 		}
 	}
+
+	# Millennium Dawn uses its own armor, helicopter and drone unit categories.
+	# This linear extension keeps those dependency-only tokens behind the startup flag.
+	youzu_md_military_reform_1 = {
+		priority = 1
+		icon = GFX_yz_md_reform_armor
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+		visible = {
+			has_global_flag = yz_md_startup_detected
+			or = {
+				has_country_flag = youzu_army_7
+				has_country_flag = youzu_army_8
+			}
+			is_ai = no
+			not = { has_country_flag = army_streamline_underway }
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			not = { has_country_flag = yz_bad_end }
+		}
+		available = {
+			command_power > 39.99
+			has_army_experience > 49.99
+			check_variable = {
+				yz_money > 1000
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		complete_effect = {
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			set_country_flag = army_streamline_underway
+			turn_to_yzc = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = yz_md_military_reform_1_effect_tt
+			set_technology = { yz_md_military_reform_1 = 1 }
+			set_country_flag = have_yz_md_military_reform_1
+		}
+	}
+
+	youzu_md_military_reform_2 = {
+		priority = 1
+		icon = GFX_yz_md_reform_helicopter
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+		visible = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_1
+			is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			not = { has_country_flag = yz_bad_end }
+		}
+		available = {
+			command_power > 39.99
+			has_army_experience > 49.99
+			check_variable = {
+				yz_money > 1000
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		complete_effect = {
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			turn_to_yzc = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = yz_md_military_reform_2_effect_tt
+			set_technology = { yz_md_military_reform_2 = 1 }
+			set_country_flag = have_yz_md_military_reform_2
+		}
+	}
+
+	youzu_md_military_reform_3 = {
+		priority = 1
+		icon = GFX_yz_md_reform_drone
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+		visible = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_2
+			is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			not = { has_country_flag = yz_bad_end }
+		}
+		available = {
+			command_power > 39.99
+			has_army_experience > 49.99
+			check_variable = {
+				yz_money > 1000
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		complete_effect = {
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			turn_to_yzc = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = yz_md_military_reform_3_effect_tt
+			set_technology = { yz_md_military_reform_3 = 1 }
+			set_country_flag = have_yz_md_military_reform_3
+		}
+	}
+
+	youzu_md_military_reform_4 = {
+		priority = 1
+		icon = GFX_yz_md_reform_joint_force
+		fire_only_once = yes
+		days_remove = 30
+		cost = 100
+		visible = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_3
+			is_ai = no
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			not = { has_country_flag = yz_bad_end }
+		}
+		available = {
+			command_power > 39.99
+			has_army_experience > 49.99
+			check_variable = {
+				yz_money > 1000
+				tooltip = yz_money_tooltip_compare
+			}
+		}
+		complete_effect = {
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
+			turn_to_yzc = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = yz_md_military_reform_4_effect_tt
+			set_technology = { yz_md_military_reform_4 = 1 }
+			set_country_flag = have_yz_md_military_reform_4
+			clr_country_flag = army_streamline_underway
+		}
+	}
+
 	create_yzc_units = {
 		icon = GFX_yz_manpower
 
@@ -6032,9 +6237,6 @@ YZS_military_academy_category = {
 		}
 	}
 }
-
-
-
 
 
 

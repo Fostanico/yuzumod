@@ -17,6 +17,10 @@ scripted_gui = {
         context_type = decision_category
         window_name = "yz_megulu_industry_category_window"
     }
+    yz_yoshino_industry_category_gui = {
+        context_type = decision_category
+        window_name = "yz_yoshino_industry_category_window"
+    }
     yz_world_unity_category_gui = {
         context_type = decision_category
         window_name = "yz_world_unity_category_window"
@@ -26,5 +30,80 @@ scripted_gui = {
                 image = "[yz_world_unity_category_image]"
             }
         }
+    }
+    yz_bond_category_gui = {
+        context_type = decision_category
+        window_name = "yz_bond_category_window"
+        effects = {
+            yz_bond_details_button_click = {
+                if = {
+                    limit = { has_country_flag = show_yz_bonds_ui }
+                    clr_country_flag = show_yz_bonds_ui
+                    clr_country_flag = show_yz_bond_help_ui
+                }
+                else = {
+                    yz_bond_ensure_control_state = yes
+					if = {
+						limit = { has_country_flag = yz_bond_full_automation_enabled }
+						yz_recalculate_monthly_money_ledger = yes
+						yz_bond_full_auto_assess_country = yes
+					}
+                    if = {
+                        limit = { check_variable = { yz_bond_history_count < 1 } }
+                        yz_bond_record_monthly_snapshot = yes
+                    }
+                    set_country_flag = show_yz_bonds_ui
+                }
+            }
+            yz_bond_category_help_button_click = {
+                if = {
+                    limit = { has_country_flag = show_yz_bond_help_ui }
+                    clr_country_flag = show_yz_bond_help_ui
+                }
+                else = {
+                    set_country_flag = show_yz_bond_help_ui
+                }
+            }
+			yz_bond_category_payment_decrease_button_click = { yz_bond_decrease_planned_payment = yes }
+			yz_bond_category_payment_increase_button_click = { yz_bond_increase_planned_payment = yes }
+			yz_bond_category_issue_decrease_button_click = { yz_bond_decrease_next_issue_amount = yes }
+			yz_bond_category_issue_increase_button_click = { yz_bond_increase_next_issue_amount = yes }
+			yz_bond_category_auto_button_click = { yz_bond_toggle_automation = yes }
+        }
+        triggers = {
+            yz_bond_details_button_click_enabled = {
+                has_country_flag = yz_bond_system_initialized
+            }
+			yz_bond_category_payment_decrease_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = {
+					var = yz_bond_monthly_payment
+					value = var:yz_bond_contract_payment_floor
+					compare = greater_than
+				}
+			}
+			yz_bond_category_payment_increase_button_click_enabled = {
+				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_monthly_payment < 2000 }
+			}
+			yz_bond_category_issue_decrease_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_next_issue_amount > 2500 }
+			}
+			yz_bond_category_issue_increase_button_click_enabled = {
+				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				check_variable = { yz_bond_next_issue_amount < 15000 }
+			}
+			yz_bond_category_auto_button_click_enabled = {
+				has_country_flag = yz_bond_system_initialized
+			}
+        }
+		properties = {
+			yz_bond_category_auto_button = {
+				frame = yz_bond_automation_frame
+			}
+		}
     }
 }
