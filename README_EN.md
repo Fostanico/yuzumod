@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3303751918">Steam Workshop</a>
   ·
-  <a href="https://github.com/Fostanico/yuzumod">GitHub Release Repository</a>
+  <a href="https://github.com/Fostanico/Yuzusoft-Generals-Pack">GitHub Release Repository</a>
   ·
   <a href="https://docs.qq.com/doc/DZVpkdWRBQ2hITFV2">Bug Reports / Suggestions</a>
 </p>
@@ -104,7 +104,7 @@ You can:
 You can also use:
 
 ```bash
-git clone https://github.com/Fostanico/yuzumod.git
+git clone https://github.com/Fostanico/Yuzusoft-Generals-Pack.git
 ```
 
 > [!WARNING]

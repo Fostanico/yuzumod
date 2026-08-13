@@ -60,7 +60,7 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			quadTextureSprite = "GFX_start_ui_buttom_down_one"
 			clicksound = click_ok
-			web_link = "https://fostanico.github.io/yuzumod/"
+			web_link = "https://fostanico.github.io/Yuzusoft-Generals-Pack/"
 		}
 		instantTextBoxType = {
 			name = "YZ_start_ui_credits_button_text"

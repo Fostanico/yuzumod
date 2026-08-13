@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3303751918">Steam Workshop</a>
   ·
-  <a href="https://github.com/Fostanico/yuzumod">GitHub公開リポジトリ</a>
+  <a href="https://github.com/Fostanico/Yuzusoft-Generals-Pack">GitHub公開リポジトリ</a>
   ·
   <a href="https://docs.qq.com/doc/DZVpkdWRBQ2hITFV2">不具合報告 / ご意見</a>
 </p>
@@ -104,7 +104,7 @@ Steamが自動的にダウンロードと更新を行うため、ほとんどの
 次のコマンドも利用できます。
 
 ```bash
-git clone https://github.com/Fostanico/yuzumod.git
+git clone https://github.com/Fostanico/Yuzusoft-Generals-Pack.git
 ```
 
 > [!WARNING]
