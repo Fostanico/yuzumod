@@ -178,6 +178,7 @@
 | 政治力 / 政治点 | Political Power | 政治力 | `LOCKED`，当前 HOI4 |
 | 稳定度 | Stability | 安定度 | `LOCKED`，当前 HOI4 |
 | 战争支持度 | War Support | 戦争協力度 | `LOCKED`，当前 HOI4 |
+| 排名有可能不分先后 | ranking may possibly be in no particular order | 順不同かもしれない | `LOCKED`，鸣谢名单玩笑；不得压成确定的 in no particular order / 順不同 |
 
 PARQUET 的标题、英文姓名顺序和日文姓名可用以下官方商店页复核：
 
@@ -237,6 +238,7 @@ D:/SteamLibrary/steamapps/common/Hearts of Iron IV/localisation/japanese/
 |---|---|---|
 | 角色口癖 | 依据语气卡和相邻对白保持一致 | 根据动物或性别自动套模板 |
 | 中文网络梗 | 保留笑点、夸张、反讽或传播语感 | 编造所谓目标语言“常用梗” |
+| 排名有可能不分先后 | 保留「有可能」的不确定语气 | 译成确定的排名不分先后 |
 | 外语出处梗 | 有可靠出处时回扣原表达 | 仅凭记忆伪造名句 |
 | 政治宣传戏仿 | 保留修辞、节奏和讽刺关系 | 当作事实主张扩写 |
 | 性暗示、暴力和宗教 | 忠实翻译并保持强度 | 自行审查、淡化、加码或说教 |
