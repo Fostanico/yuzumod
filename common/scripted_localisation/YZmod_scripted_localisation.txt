@@ -214,6 +214,61 @@ defined_text = {	#研究院
 	}
 }
 
+# The 721 header changes its briefing when Millennium Dawn content is active.
+defined_text = {
+	name = GetYz721CategoryGuiDesc
+	text = {
+		trigger = {
+			NOT = { has_global_flag = yz_md_startup_detected }
+		}
+		localization_key = yz_721_research_category_gui_desc_vanilla
+	}
+	text = {
+		trigger = { has_global_flag = yz_md_startup_detected }
+		localization_key = yz_721_research_category_gui_desc_md
+	}
+}
+
+defined_text = {
+	name = GetYz721AstralStatus
+	text = {
+		trigger = {
+			NOT = { has_country_flag = has_astral_research_academy }
+		}
+		localization_key = yz_721_astral_status_locked
+	}
+	text = {
+		trigger = { has_country_flag = has_astral_research_academy }
+		localization_key = yz_721_astral_status_active
+	}
+}
+
+# C.I.A.L.L.O may mark several countries at once. Keep the compact header
+# readable by showing at most the first three names and the full target count.
+defined_text = {
+	name = GetYzCialloTargetCountries
+	text = {
+		trigger = { check_variable = { YzOpreative_target_countries^num = 0 } }
+		localization_key = yz_ciallo_targets_none
+	}
+	text = {
+		trigger = { check_variable = { YzOpreative_target_countries^num = 1 } }
+		localization_key = yz_ciallo_targets_1
+	}
+	text = {
+		trigger = { check_variable = { YzOpreative_target_countries^num = 2 } }
+		localization_key = yz_ciallo_targets_2
+	}
+	text = {
+		trigger = { check_variable = { YzOpreative_target_countries^num = 3 } }
+		localization_key = yz_ciallo_targets_3
+	}
+	text = {
+		trigger = { check_variable = { YzOpreative_target_countries^num > 3 } }
+		localization_key = yz_ciallo_targets_many
+	}
+}
+
 defined_text = {	#控制面板
 	name = scr_text_1		
 	text = {

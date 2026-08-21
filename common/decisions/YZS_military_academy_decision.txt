@@ -227,23 +227,23 @@ YZS_military_academy_category = {
 		}
 
 	}
-	#revenge_for_SPG = {		#自火复活赛打赢了，这个可以暂时不上了——huhu
-		#priority = 20
-		#cost = 0
-		#visible = {
-			#or = {
-				#has_country_flag = qiyong_youzi_2
-				#has_country_flag = qiyong_youzi_3
-			#}
-			#has_country_flag = open_YZS_military_academy
-		#}
-		#fire_only_once = yes
-		#complete_effect = {
-			#set_technology = {
-				#SPG_back_to_light = 1
-			#}
-		#}
-	#}
+	revenge_for_SPG = {		#自火复活赛打赢了，这个可以暂时不上了——huhu		#自火复活赛又打输了，没肘过牢大，还是弄回来吧
+		priority = 20
+		cost = 0
+		visible = {
+			or = {
+				has_country_flag = qiyong_youzi_2
+				has_country_flag = qiyong_youzi_3
+			}
+			has_country_flag = open_YZS_military_academy
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_technology = {
+				SPG_back_to_light = 1
+			}
+		}
+	}
 
 	ship_making_standardlized = {
 		priority = 20
@@ -507,6 +507,7 @@ YZS_military_academy_category = {
 				remove_trait = {
 					trait = yz_training_trait
 				}
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -529,7 +530,7 @@ YZS_military_academy_category = {
 	}
 
 	choose_general = {		#选将领
-		priority = 9
+		priority = 20
 		cost = 0
 		days_remove = 0
 
@@ -559,11 +560,12 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			set_country_flag = is_choosing_general
+			yz_academy_clear_choose_work_flags = yes
 		}
 	}
 
 	cancel_choose_general = {		#不选将领
-		priority = 9
+		priority = 19
 		cost = 0
 		days_remove = 0
 
@@ -575,22 +577,296 @@ YZS_military_academy_category = {
 			not = { has_country_flag = yz_bad_end }
 			has_yz_general = yes
 			has_country_flag = open_YZS_military_academy
-
-			any_army_leader = {
-				has_character_flag = have_been_chosen
+			or = {
+				has_country_flag = is_choosing_general
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+				}
 			}
 		}
 
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			hidden_effect = {
 				every_army_leader = {
 					limit = {
 						has_character_flag = have_been_chosen
 					}
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
+		}
+	}
+
+
+	# 选将二级菜单：先选作品，再选该作已招募角色。
+	yz_academy_choose_work_back = {
+		priority = 18
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			yz_academy_choose_work_menu_open = yes
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+		}
+	}
+
+	yz_academy_choose_work_QL = {
+		priority = 16
+		icon = GFX_ql
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_mako
+				has_country_flag = have_murasame
+				has_country_flag = have_lena
+				has_country_flag = have_yoshino
+				has_country_flag = have_luchun
+				has_country_flag = have_roka
+				has_country_flag = have_koharu
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_QL
+		}
+	}
+
+	yz_academy_choose_work_SW = {
+		priority = 16
+		icon = GFX_sw
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_ningning
+				has_country_flag = have_meigulu
+				has_country_flag = have_chou
+				has_country_flag = have_toko
+				has_country_flag = have_wakana
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_SW
+		}
+	}
+
+	yz_academy_choose_work_RJ = {
+		priority = 16
+		icon = GFX_rj
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_0nai
+				has_country_flag = have_nanami
+				has_country_flag = have_chisaki
+				has_country_flag = have_Mayu
+				has_country_flag = have_hazuki
+				has_country_flag = have_kotori
+				has_country_flag = have_gongping
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_RJ
+		}
+	}
+
+	yz_academy_choose_work_CS = {
+		priority = 16
+		icon = GFX_cs
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_kanna
+				has_country_flag = have_zaozi
+				has_country_flag = have_nozomi
+				has_country_flag = have_mei
+				has_country_flag = have_suzune
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_CS
+		}
+	}
+
+	yz_academy_choose_work_TS = {
+		priority = 16
+		icon = GFX_ts
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_noa
+				has_country_flag = have_amane
+				has_country_flag = have_kaguya
+				has_country_flag = have_fumika
+				has_country_flag = have_kurumi
+				has_country_flag = have_orie
+				has_country_flag = have_sairi
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_TS
+		}
+	}
+
+	yz_academy_choose_work_AIN = {
+		priority = 16
+		icon = GFX_ain_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_airi
+				has_country_flag = have_shirley
+				has_country_flag = have_tia
+				has_country_flag = have_yune
+				has_country_flag = have_masaki
+				has_country_flag = have_konoka
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_AIN
+		}
+	}
+
+	yz_academy_choose_work_DR = {
+		priority = 16
+		icon = GFX_dr_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_rio
+				has_country_flag = have_elina_owen
+				has_country_flag = have_nicola
+				has_country_flag = have_bighouse
+				has_country_flag = have_miu
+				has_country_flag = have_mera_azusa
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_DR
+		}
+	}
+
+	yz_academy_choose_work_NW = {
+		priority = 16
+		icon = GFX_nw_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_shizuru
+				has_country_flag = have_hinata
+				has_country_flag = have_akari
+				has_country_flag = have_maya
+				has_country_flag = have_sena
+				has_country_flag = have_yuki
+				has_country_flag = have_sumi
+				has_country_flag = have_noriko
+				has_country_flag = have_tae
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_NW
+		}
+	}
+
+	yz_academy_choose_work_TL = {
+		priority = 16
+		icon = GFX_tl_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_sakuyahime
+				has_country_flag = have_aoi
+				has_country_flag = have_sana
+				has_country_flag = have_mahiro
+				has_country_flag = have_yukari
+				has_country_flag = have_ruri
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_TL
+		}
+	}
+
+	yz_academy_choose_work_NK = {
+		priority = 16
+		icon = GFX_nk_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_sasara
+				has_country_flag = have_chihaya
+				has_country_flag = have_yuiko
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_NK
+		}
+	}
+
+	yz_academy_choose_work_LLLJ = {
+		priority = 16
+		icon = GFX_LLLJ_title
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = is_choosing_general
+			not = { yz_academy_choose_work_menu_open = yes }
+			or = {
+				has_country_flag = have_ena
+				has_country_flag = have_anju
+				has_country_flag = have_ririko
+				has_country_flag = have_tsukimi
+				has_country_flag = have_nayuka
+				has_country_flag = have_miku
+				has_country_flag = have_ebihara_minase
+			}
+		}
+		complete_effect = {
+			yz_academy_clear_choose_work_flags = yes
+			set_country_flag = yz_academy_choose_work_LLLJ
 		}
 	}
 
@@ -653,6 +929,7 @@ YZS_military_academy_category = {
 						not = { has_trait = yz_training_trait }
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -663,6 +940,7 @@ YZS_military_academy_category = {
 						not = { has_trait = yz_training_trait }
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -684,7 +962,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = infantry_leader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -699,6 +979,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = infantry_leader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -763,6 +1044,7 @@ YZS_military_academy_category = {
 						not = { has_trait = yz_training_trait }
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -773,6 +1055,7 @@ YZS_military_academy_category = {
 						not = { has_trait = yz_training_trait }
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -794,7 +1077,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = panzer_leader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -809,6 +1094,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = panzer_leader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -875,6 +1161,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -888,6 +1175,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -908,7 +1196,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = bearer_of_artillery }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -922,6 +1212,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = bearer_of_artillery }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -988,6 +1279,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1001,6 +1293,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1021,7 +1314,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = trait_engineer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1035,6 +1330,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = trait_engineer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1101,6 +1397,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1114,6 +1411,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1134,7 +1432,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = organizer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1148,6 +1448,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = organizer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1214,6 +1515,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1227,6 +1529,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1247,7 +1550,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = trickster }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1261,6 +1566,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = trickster }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1326,6 +1632,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1339,6 +1646,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1359,7 +1667,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = commando }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1373,6 +1683,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = commando }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1441,6 +1752,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1454,6 +1766,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1474,7 +1787,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = naval_invader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1488,6 +1803,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = naval_invader }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1554,6 +1870,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1567,6 +1884,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1587,7 +1905,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = skilled_staffer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1601,6 +1921,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = skilled_staffer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1667,6 +1988,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1680,6 +2002,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1700,7 +2023,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = trait_mountaineer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1714,6 +2039,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = trait_mountaineer }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1780,6 +2106,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1793,6 +2120,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1813,7 +2141,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = winter_specialist }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1827,6 +2157,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = winter_specialist }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1893,6 +2224,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1906,6 +2238,7 @@ YZS_military_academy_category = {
 						#
 					}
 					add_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1926,7 +2259,9 @@ YZS_military_academy_category = {
 					add_trait = { trait = urban_assault_specialist }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 					clr_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 			else_if = {
@@ -1940,6 +2275,7 @@ YZS_military_academy_category = {
 					add_trait = { trait = urban_assault_specialist }
 					#
 					remove_trait = { trait = yz_training_trait }
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1961,6 +2297,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_0nai
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -1971,12 +2308,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_cuodao_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -1991,6 +2329,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_chihaya
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NK
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2001,12 +2340,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						chihaya_trait = yes
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2021,6 +2361,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_kanna
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_CS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2031,12 +2372,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_kanna_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2051,6 +2393,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_meigulu
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_SW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2061,12 +2404,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_meigulu_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2081,6 +2425,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_murasame
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2091,12 +2436,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_congyu_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2111,6 +2457,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_nanami
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2121,12 +2468,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_qihai_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2141,6 +2489,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_ningning
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_SW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2151,12 +2500,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_ninging_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2171,6 +2521,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_noa
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2181,12 +2532,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_noa_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2201,6 +2553,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_nozomi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_CS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2211,12 +2564,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_nozomi_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2231,6 +2585,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_rio
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2244,7 +2599,7 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						or = {
@@ -2253,6 +2608,7 @@ YZS_military_academy_category = {
 						}
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2267,6 +2623,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_suzune
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_CS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2277,12 +2634,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_suzune_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2297,6 +2655,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_yoshino
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2307,12 +2666,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_fangnai_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2325,6 +2685,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_roka
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2333,10 +2694,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_roka_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2348,6 +2710,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_koharu
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2356,10 +2719,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_koharu_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2373,6 +2737,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_zaozi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_CS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2383,12 +2748,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_zaozi_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2403,6 +2769,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_chou
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_SW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2413,12 +2780,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_chou_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2433,6 +2801,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_amane
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2443,12 +2812,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_amane_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2463,6 +2833,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_fumika
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2473,12 +2844,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_fumika_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2493,6 +2865,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_gongping
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2503,12 +2876,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_gongping_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2523,6 +2897,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_hazuki
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2533,12 +2908,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_hazuki_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2553,6 +2929,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_kurumi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2567,12 +2944,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_kurumi_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2587,6 +2965,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_mako
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2597,12 +2976,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_mozi_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2617,6 +2997,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_sana
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2627,12 +3008,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_sana_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2647,6 +3029,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_toko
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_SW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2657,12 +3040,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_toko_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2677,6 +3061,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_wakana
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_SW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2687,12 +3072,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_wakana_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2707,6 +3093,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_sairi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2717,12 +3104,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_sairi_trait_2
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2734,8 +3122,9 @@ YZS_military_academy_category = {
 		days_remove = 0
 
 		visible = {
-			has_country_flag = have_Masaki
+			has_country_flag = have_masaki
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2746,12 +3135,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_masaki_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2765,6 +3155,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_miu
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2775,12 +3166,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_miu_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2794,6 +3186,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_Mayu
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2804,12 +3197,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_Mayu_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2823,6 +3217,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_kotori
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2833,12 +3228,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_kotori_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2852,6 +3248,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_shirley
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2862,12 +3259,13 @@ YZS_military_academy_category = {
 
 		complete_effect = {
 			hidden_effect = {
-				clr_country_flag = is_choosing_general
+				yz_academy_close_choose_menu = yes
 				random_army_leader = {
 					limit = {
 						has_trait = maid_shirley_trait
 					}
 					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
 				}
 			}
 		}
@@ -2880,6 +3278,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_ebihara_minase
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2888,10 +3287,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_ebihara_minase_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2904,6 +3304,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_elina_owen
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2912,10 +3313,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_elina_owen_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2926,6 +3328,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_mera_azusa
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2934,10 +3337,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_mera_azusa_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2948,6 +3352,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_airi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2956,10 +3361,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_airi_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2970,6 +3376,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_sakuyahime
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -2978,10 +3385,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_sakuyahime_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -2992,6 +3400,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_ruri
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3000,10 +3409,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_ruri_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3014,6 +3424,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_aoi
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3022,10 +3433,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_aoi_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3036,6 +3448,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_yuiko
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NK
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3044,10 +3457,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_yuiko_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3058,6 +3472,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_sasara
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NK
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3066,10 +3481,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_sasara_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3080,6 +3496,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_yune
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3088,10 +3505,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_yune_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3102,6 +3520,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_hinata
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3110,10 +3529,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_hinata_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3124,6 +3544,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_maya
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3132,10 +3553,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_maya_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3146,6 +3568,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_sena
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3154,10 +3577,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_sena_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3168,6 +3592,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_akari
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3176,10 +3601,11 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_akari_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
@@ -3190,6 +3616,7 @@ YZS_military_academy_category = {
 		visible = {
 			has_country_flag = have_shizuru
 			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
 			not = {
 				any_army_leader = {
 					has_character_flag = have_been_chosen
@@ -3198,14 +3625,645 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = is_choosing_general
+			yz_academy_close_choose_menu = yes
 			random_army_leader = {
 				limit = {has_trait = yz_shizuru_trait}
 				set_character_flag = have_been_chosen
+				yz_academy_refresh_selected_leader_display = yes
 			}
 		}
 	}
 
+
+	# 补齐招募里已有、军校选将里还没有的柚子社角色。
+
+	choose_lena = {
+		priority = 9
+		icon = GFX_lena
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_lena
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_QL
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = maid_lena_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = maid_lena_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_chisaki = {
+		priority = 9
+		icon = GFX_chisaki
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_chisaki
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_RJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = maid_chisaki_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = maid_chisaki_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_mei = {
+		priority = 9
+		icon = GFX_mei
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_mei
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_CS
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_mei_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_mei_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_kaguya = {
+		priority = 9
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_kaguya
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = maid_kaguya_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = maid_kaguya_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_orie = {
+		priority = 9
+		icon = GFX_orie
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_orie
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TS
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_orie_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_orie_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_tia = {
+		priority = 9
+		icon = GFX_tia
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_tia
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_tia_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_tia_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_konoka = {
+		priority = 9
+		icon = GFX_konoka
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_konoka
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_AIN
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_konoka_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_konoka_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_nicola = {
+		priority = 9
+		icon = GFX_nicola
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_nicola
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_nicola_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_nicola_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_hiyori = {
+		priority = 9
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_bighouse
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_DR
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = alexander_bartender
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = alexander_bartender
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_yuki = {
+		priority = 9
+		icon = GFX_yuki
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_yuki
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_yuki_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_yuki_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_sumi = {
+		priority = 9
+		icon = GFX_sumi
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_sumi
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_sumi_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_sumi_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_noriko = {
+		priority = 9
+		icon = GFX_noriko
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_noriko
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_noriko_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_noriko_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_tae = {
+		priority = 9
+		icon = GFX_tae
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_tae
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_NW
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_tae_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_tae_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_mahiro = {
+		priority = 9
+		icon = GFX_mahiro
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_mahiro
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_mahiro_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_mahiro_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_yukari = {
+		priority = 9
+		icon = GFX_yukari
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_yukari
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_TL
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yz_yukari_trait
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yz_yukari_trait
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_ena = {
+		priority = 9
+		icon = GFX_ena
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_ena
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = hanakyu
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = hanakyu
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_anju = {
+		priority = 9
+		icon = GFX_anju
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_anju
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = give_me_a_shining_at_b_point
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = give_me_a_shining_at_b_point
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_ririko = {
+		priority = 9
+		icon = GFX_ririko
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_ririko
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = good_woman_ririko
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = good_woman_ririko
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_tsukimi = {
+		priority = 9
+		icon = GFX_tsukimi
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_tsukimi
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = yuzusoft_fans_girl
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = yuzusoft_fans_girl
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_nayuka = {
+		priority = 9
+		icon = GFX_nayuka
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_nayuka
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = best_music_maker
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = best_music_maker
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
+
+	choose_miku = {
+		priority = 9
+		icon = GFX_miku
+		cost = 0
+		days_remove = 0
+		visible = {
+			has_country_flag = have_miku
+			has_country_flag = is_choosing_general
+			has_country_flag = yz_academy_choose_work_LLLJ
+			not = {
+				any_army_leader = {
+					has_character_flag = have_been_chosen
+					has_trait = internet_oppose_line_little_princess
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				yz_academy_close_choose_menu = yes
+				random_army_leader = {
+					limit = {
+						has_trait = internet_oppose_line_little_princess
+					}
+					set_character_flag = have_been_chosen
+					yz_academy_refresh_selected_leader_display = yes
+				}
+			}
+		}
+	}
 
 ##    ## ##     ## ######## ##     ##       ###    ########  ##     ## ##    ## 
  ##  ##  ##     ##      ##  ##     ##      ## ##   ##     ## ###   ###  ##  ##  
@@ -3828,16 +4886,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -3876,16 +4927,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -3921,16 +4965,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -3969,16 +5006,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4017,16 +5047,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4073,16 +5096,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -4121,16 +5137,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4169,16 +5178,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4218,16 +5220,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4267,16 +5262,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4319,16 +5307,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -4367,16 +5348,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4412,16 +5386,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4459,16 +5426,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4506,16 +5466,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4560,16 +5513,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -4608,16 +5554,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4655,16 +5594,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4703,16 +5635,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4750,16 +5675,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4831,16 +5749,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -4880,16 +5791,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4927,16 +5831,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -4973,16 +5870,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5020,16 +5910,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5097,16 +5980,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -5143,16 +6019,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5190,16 +6059,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5238,16 +6100,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5289,16 +6144,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5345,16 +6193,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -5391,16 +6232,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5440,16 +6274,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5486,16 +6313,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5533,16 +6353,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5586,16 +6399,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			set_country_flag = army_streamline_underway
 			turn_to_yzc = yes
 		}
@@ -5632,16 +6438,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5678,16 +6477,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5727,16 +6519,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -5773,16 +6558,9 @@ YZS_military_academy_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
-			else = {
-				add_command_power = -40
-				army_experience = -50
-				add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
-			}
+			add_command_power = -40
+			army_experience = -50
+			add_to_variable = { yz_money = -1000 tooltip = yz_money_tooltip_subtain }
 			turn_to_yzc = yes
 		}
 		remove_effect = {
@@ -6237,7 +7015,5 @@ YZS_military_academy_category = {
 		}
 	}
 }
-
-
 
 

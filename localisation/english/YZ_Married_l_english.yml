@@ -52,6 +52,8 @@
  get_married_elina_owen: "Prepare the Wedding with Elina Owen"
  get_married_mera_azusa: "Prepare the Wedding with Mera Azusa"
  general_married_decision_category: "Marriage"
+ general_married_decision_category_desc: " "
+ yz_married_category_gui_desc: "§YThe wedding day§!\nYour hearts already\nknow the answer.\nChoose her, prepare\nthe gifts, and welcome\nthe day together.\n\nSome bonds do not\nstand in each other's\nway."
  preparing_for_the_wedding: "The wedding preparations will take seven days"
  jiesuo_haogan: "I can't wait to marry my favorite character"
 ###结婚事件

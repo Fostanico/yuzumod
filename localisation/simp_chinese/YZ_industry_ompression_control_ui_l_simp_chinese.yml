@@ -23,7 +23,8 @@
  YZ_arma_factories_transfer: "把军工压缩进亚空间"
  YZ_dockyard_factories_transfer: "把船坞压缩进亚空间"
  YZ_indusrty_extra_project: "黄毛“小伙”的神秘炼金工坊"
- YZ_indusrty_extra_project_desc: "提示：如果你玩的mod的工厂不是军工/民工/船坞，这个决议组会导致巨大的问题"
+ YZ_indusrty_extra_project_desc: " "
+ YZ_indusrty_extra_project_gui_desc: "提示：如果你玩的mod的工厂不是军工/民工/船坞，这个决议组会导致巨大的问题"
  learn_ompression_skill_from_ayase: "向绫濑学习无中生有的技巧"
  learn_ompression_skill_from_ayase_desc: "绫濑从宿舍楼出发，一开始带了三层胸垫；\n在游泳馆被冲掉一层，补上的只有半层；\n到在原晓寝室，被锉掉2层，最后绫濑欧派是多少？\n答案是答案是A罩杯A罩杯，为什么呢 为什么呢 因为……§R三司绫濑没有欧派！§!"
  #tooltip

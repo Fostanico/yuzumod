@@ -63,6 +63,8 @@ scripted_gui = {
 						not = { has_country_flag = open_YZS_military_academy }
 					}
 					set_country_flag = open_YZS_military_academy
+					# 打开分类时回填显示数组，修旧档里 flag 已有、数组还空的情况。
+					yz_academy_refresh_selected_leader_display = yes
 				}
 				else = {
 					clr_country_flag = open_YZS_military_academy

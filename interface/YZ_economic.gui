@@ -72,7 +72,7 @@ guiTypes = {
 			font = "hoi_18mbs"
 			text = "yz_bond_detail_current_text"
 			maxWidth = 272
-			maxHeight = 175
+			maxHeight = 200
 			fixedsize = yes
 			alwaystransparent = yes
 		}
@@ -245,65 +245,548 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "yz_bond_graph_panel"
-			position = { x = 36 y = 365 }
-			# Keep the nested chart clear of the baseplate's central divider.
-			size = { width = 546 height = 210 }
-			background = {
-				name = "yz_bond_graph_panel_background"
-				quadTextureSprite = "GFX_tiled_window2_1b_border"
-			}
-			gridboxtype = {
-				name = "yz_bond_graph_lines"
-				# The shader draws through the midpoint of its 200px segment. A
-				# 0-100 negative offset therefore maps the line to y=125..25.
-				position = { x = 88 y = 25 }
-				size = { width = 0 height = 200 }
-				slotsize = { width = 8 height = 200 }
-				max_slots_horizontal = 48
-				add_horizontal = yes
+			position = { x = 24 y = 365 }
+			# Transparent plotting layer: coordinates and points sit directly on the
+			# debt window's own background, with no nested rectangular panel artwork.
+			size = { width = 558 height = 210 }
+			clipping = yes
+			# Millennium Dawn's GDP graph proves ordinary predeclared icons plus
+			# per-icon scripted-GUI x/y. Same engine path here: 49 monthly samples
+			# plus one interpolated midpoint each, so 97 markers at 5px spacing read
+			# as a trend line. Unused icons are parked below this clip.
+			containerWindowType = {
+				name = "yz_bond_graph_points_layer"
+				position = { x = 62 y = 24 }
+				size = { width = 492 height = 112 }
+				clipping = yes
+				iconType = {
+					name = "yz_bond_graph_point_0"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_1"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_2"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_3"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_4"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_5"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_6"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_7"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_8"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_9"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_10"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_11"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_12"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_13"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_14"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_15"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_16"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_17"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_18"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_19"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_20"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_21"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_22"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_23"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_24"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_25"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_26"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_27"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_28"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_29"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_30"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_31"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_32"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_33"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_34"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_35"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_36"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_37"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_38"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_39"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_40"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_41"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_42"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_43"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_44"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_45"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_46"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_47"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_48"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_49"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_50"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_51"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_52"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_53"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_54"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_55"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_56"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_57"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_58"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_59"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_60"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_61"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_62"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_63"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_64"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_65"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_66"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_67"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_68"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_69"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_70"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_71"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_72"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_73"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_74"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_75"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_76"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_77"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_78"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_79"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_80"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_81"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_82"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_83"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_84"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_85"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_86"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_87"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_88"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_89"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_90"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_91"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_92"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_93"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_94"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_95"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
+				iconType = {
+					name = "yz_bond_graph_point_96"
+					quadTextureSprite = "GFX_yz_bond_graph_dot"
+					alwaystransparent = yes
+				}
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_100_label"
-				position = { x = 10 y = 25 }
+				position = { x = 0 y = 24 }
 				font = "hoi_16mbs"
 				text = "[?yz_bond_graph_100|0]"
-				maxWidth = 70
+				maxWidth = 58
 				format = right
 				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_75_label"
-				position = { x = 10 y = 50 }
+				position = { x = 0 y = 49 }
 				font = "hoi_16mbs"
 				text = "[?yz_bond_graph_75|0]"
-				maxWidth = 70
+				maxWidth = 58
 				format = right
 				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_50_label"
-				position = { x = 10 y = 75 }
+				position = { x = 0 y = 74 }
 				font = "hoi_16mbs"
 				text = "[?yz_bond_graph_50|0]"
-				maxWidth = 70
+				maxWidth = 58
 				format = right
 				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_25_label"
-				position = { x = 10 y = 100 }
+				position = { x = 0 y = 99 }
 				font = "hoi_16mbs"
 				text = "[?yz_bond_graph_25|0]"
-				maxWidth = 70
+				maxWidth = 58
 				format = right
 				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_zero_label"
-				position = { x = 10 y = 125 }
+				position = { x = 0 y = 124 }
 				font = "hoi_16mbs"
 				text = "0"
-				maxWidth = 70
+				maxWidth = 58
 				format = right
 				alwaystransparent = yes
 			}
@@ -311,7 +794,7 @@ guiTypes = {
 			# 49-month rolling window without storing a second date-history array.
 			instantTextBoxType = {
 				name = "yz_bond_graph_x_48_label"
-				position = { x = 53 y = 148 }
+				position = { x = 33 y = 148 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_x_48"
 				maxWidth = 70
@@ -320,7 +803,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_x_36_label"
-				position = { x = 149 y = 148 }
+				position = { x = 153 y = 148 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_x_36"
 				maxWidth = 70
@@ -329,7 +812,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_x_24_label"
-				position = { x = 245 y = 148 }
+				position = { x = 273 y = 148 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_x_24"
 				maxWidth = 70
@@ -338,7 +821,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_x_12_label"
-				position = { x = 341 y = 148 }
+				position = { x = 393 y = 148 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_x_12"
 				maxWidth = 70
@@ -347,19 +830,19 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_x_now_label"
-				position = { x = 437 y = 148 }
+				position = { x = 488 y = 148 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_x_now"
 				maxWidth = 70
-				format = center
+				format = right
 				alwaystransparent = yes
 			}
 			instantTextBoxType = {
 				name = "yz_bond_graph_caption"
-				position = { x = 60 y = 178 }
+				position = { x = 36 y = 178 }
 				font = "hoi_16mbs"
 				text = "yz_bond_graph_caption"
-				maxWidth = 440
+				maxWidth = 486
 				maxHeight = 24
 				format = center
 				fixedsize = yes
@@ -553,7 +1036,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "yz_bond_operation_status"
-			position = { x = 643 y = 598 }
+			position = { x = 643 y = 590 }
 			font = "hoi_16mbs"
 			text = "yz_bond_operation_status_text"
 			maxWidth = 300
@@ -641,16 +1124,4 @@ guiTypes = {
 		}
 	}
 
-	# One dynamically generated segment joins each pair of monthly observations.
-	containerWindowType = {
-		name = "yz_bond_graph_line_segment"
-		size = { width = 8 height = 200 }
-		position = { x = 0 y = 0 }
-		iconType = {
-			name = "yz_bond_graph_segment"
-			spriteType = "GFX_yz_bond_graph_line_segment"
-			position = { x = 0 y = 0 }
-			frame = 50
-		}
-	}
 }

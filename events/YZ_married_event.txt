@@ -1815,6 +1815,29 @@ country_event = { #那优花的婚礼
         #}
     }
 }
+country_event = { #亚托莉的婚礼
+    id = tongyong_event.73719911
+    picture = GFX_ATRI_wedding
+    title = tongyong_event.73719911.t
+    desc = tongyong_event.73719911.d
+    is_triggered_only = yes
+    option = {
+        name = tongyong_event.73719911.a
+        custom_effect_tooltip = get_married
+        add_political_power = 15
+        add_stability = 0.025
+        add_war_support = 0.025
+        add_ideas = Married
+        remove_ideas = Married_preparing
+        add_to_variable = { marry_love_bonus = 100 }
+        random_army_leader = {
+            limit = {
+                has_trait = ATRI_trait 
+            }
+            add_unit_leader_trait = married_trait
+        }
+    }
+}
 country_event = {
     id = tongyong_event.48472417
     title = tongyong_event.48472417.t

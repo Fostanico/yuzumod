@@ -109,9 +109,9 @@ guiTypes = {
         }
     }
 
-    # Yoshino's revitalization plan shares the established Economy Bureau art.
+    # Yoshino's revitalization plan uses its own restored 500x220 illustration.
     # The right-hand copy mirrors Meguru's plan overview and reports all four
-    # independent investment lines without introducing another image asset.
+    # independent investment lines while the fixed category footprint stays intact.
     containerWindowType = {
         name = "yz_yoshino_industry_category_window"
         position = { x = 0 y = -15 }
@@ -120,7 +120,7 @@ guiTypes = {
 
         background = {
             name = "yz_yoshino_industry_category_background"
-            quadTextureSprite = "GFX_yz_bond_category_bg_brightness_50"
+            quadTextureSprite = "GFX_yz_yoshino_industry_category_bg_brightness_50"
             position = { x = 5 y = -18 }
         }
         instantTextBoxType = {
@@ -145,25 +145,28 @@ guiTypes = {
         }
     }
 
+    # 容器仍是 500x200。四张意识形态图都是 500x220，放在 x=5 y=-18 盖住原生描述框。
+    # 背景必须用 iconType：只有它能按 scripted localisation 换图。
     containerWindowType = {
         name = "yz_world_unity_category_window"
-        position = { x = 0 y = 0 }
-        size = { width = 500 height = 190 }
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
         clipping = no
 
         iconType = {
             name = "yz_world_unity_category_background"
-            spriteType = "GFX_World_neutrality"
-            position = { x = 4 y = -11 }
-            orientation = UPPER_LEFT
+            spriteType = "GFX_yz_world_unity_neutrality_bg_brightness_50"
+            position = { x = 5 y = -18 }
         }
         instantTextBoxType = {
             name = "yz_world_unity_category_text"
-            position = { x = 145 y = 0 }
+            position = { x = 15 y = 0 }
             font = "hoi_16mbs"
             text = "World_Unity_gui_desc"
-            maxWidth = 355
-            maxHeight = 185
+            maxWidth = 470
+            maxHeight = 200
+            format = left
+            vertical_alignment = center
             fixedsize = yes
             alwaystransparent = yes
         }
@@ -320,5 +323,105 @@ guiTypes = {
 			fixedsize = yes
 			alwaystransparent = yes
 		}
+    }
+
+    # 721 Research Institute: read the existing facility scale directly so the
+    # category header never needs a polling or mirrored display variable.
+    containerWindowType = {
+        name = "yz_721_research_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_721_research_category_background"
+            quadTextureSprite = "GFX_yz_721_research_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_721_research_category_text"
+            position = { x = 245 y = 12 }
+            font = "hoi_16mbs"
+            text = "yz_721_research_category_gui_desc"
+            maxWidth = 248
+            maxHeight = 188
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    # C.I.A.L.L.O Bureau: the portrait occupies the centre-right, leaving the
+    # left intelligence display as a stable text region.
+    containerWindowType = {
+        name = "yz_ciallo_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_ciallo_category_background"
+            quadTextureSprite = "GFX_yz_ciallo_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_ciallo_category_text"
+            position = { x = 18 y = 13 }
+            font = "hoi_16mbs"
+            text = "yz_ciallo_category_gui_desc"
+            maxWidth = 210
+            maxHeight = 187
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    # Marriage decisions retain their existing rules; this GUI only relocates
+    # the category explanation onto the full-cover wedding illustration.
+    containerWindowType = {
+        name = "yz_married_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_married_category_background"
+            quadTextureSprite = "GFX_yz_married_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_married_category_text"
+            position = { x = 378 y = 22 }
+            font = "hoi_16mbs"
+            text = "yz_married_category_gui_desc"
+            maxWidth = 115
+            maxHeight = 175
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+
+    # 角色铺满画面，正文放左栏。覆盖图仍是 500x220，放在 x=5 y=-18。
+    # 旧 COS 立绘 GUI YZ_miliatry_party_ui 保持注释，不要接回这个分类。
+    containerWindowType = {
+        name = "yz_military_academy_category_window"
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
+        background = {
+            name = "yz_military_academy_category_background"
+            quadTextureSprite = "GFX_yz_military_academy_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
+        }
+        instantTextBoxType = {
+            name = "yz_military_academy_category_text"
+            position = { x = 18 y = 8 }
+            font = "hoi_16mbs"
+            text = "YZS_military_academy_category_gui_desc"
+            maxWidth = 240
+            maxHeight = 184
+            fixedsize = yes
+            alwaystransparent = yes
+        }
     }
 }

@@ -14,67 +14,15 @@
 # 
 #	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR THE CHI TAG
 
-has_yz_general = { #Does not include sinkiang
-	or = {
-		has_country_flag = have_0nai
-		has_country_flag = have_chihaya
-		has_country_flag = have_kanna
-		has_country_flag = have_meigulu
-		has_country_flag = have_murasame
-		has_country_flag = have_nanami
-		has_country_flag = have_ningning
-		has_country_flag = have_noa
-		has_country_flag = have_nozomi
-		has_country_flag = have_rio
-		has_country_flag = have_suzune
-		has_country_flag = have_yoshino
-		has_country_flag = have_zaozi
-		has_country_flag = have_chou
-		has_country_flag = have_amane
-		has_country_flag = have_fumika
-		has_country_flag = have_gongping
-		has_country_flag = have_hazuki
-		has_country_flag = have_kurumi
-		has_country_flag = have_mako
-		has_country_flag = have_sana
-		has_country_flag = have_toko
-		has_country_flag = have_wakana
-		has_country_flag = have_sairi
-		has_country_flag = have_masaki
-		has_country_flag = have_miu
-		has_country_flag = have_Mayu
-		has_country_flag = have_shizuru
-		has_country_flag = have_akari
-		has_country_flag = have_sena
-		has_country_flag = have_maya
-		has_country_flag = have_hinata
-		has_country_flag = have_yune
-		has_country_flag = have_sasara
-		has_country_flag = have_yuiko
-		has_country_flag = have_aoi
-		has_country_flag = have_ruri
-		has_country_flag = have_sakuyahime
-		has_country_flag = have_roka
-		has_country_flag = have_koharu
-		has_country_flag = have_yukari
-		has_country_flag = have_konoka
-		has_country_flag = have_mahiro
-		has_country_flag = have_mei
-		has_country_flag = have_tia
-		has_country_flag = have_orie
-		has_country_flag = have_nicola
-		has_country_flag = have_tae
-		has_country_flag = have_noriko
-		has_country_flag = have_sumi
-		has_country_flag = have_yuki
-
-#神秘标记点@@
-		has_country_flag = have_ebihara_minase
-		has_country_flag = have_mera_azusa
-		has_country_flag = have_elina_owen
-		has_country_flag = have_aragami_sayo     #伊尔诺，时间不记得了
+# 国家 scope。军校入口只看是否已有柚子社将领，不枚举 have_*。
+# 彩蛋角色走 yz_easter_egg_character，不计入这里。
+has_yz_general = {
+	any_army_leader = {
+		has_trait = yz_yuzusoft_character
 	}
 }
+
+#神秘标记点@@
 
 yz_general = {
 	# Identity traits are stable markers; character-specific traits may be replaced by growth systems.
@@ -97,4 +45,21 @@ chihaya_trait = {
 is_yz_advisor = {
 	has_character_flag = yz_government_flag
 
+}
+
+# 军校选将二级菜单：任一作品页打开时为是。
+yz_academy_choose_work_menu_open = {
+	OR = {
+		has_country_flag = yz_academy_choose_work_QL
+		has_country_flag = yz_academy_choose_work_SW
+		has_country_flag = yz_academy_choose_work_RJ
+		has_country_flag = yz_academy_choose_work_CS
+		has_country_flag = yz_academy_choose_work_TS
+		has_country_flag = yz_academy_choose_work_AIN
+		has_country_flag = yz_academy_choose_work_DR
+		has_country_flag = yz_academy_choose_work_NW
+		has_country_flag = yz_academy_choose_work_NK
+		has_country_flag = yz_academy_choose_work_TL
+		has_country_flag = yz_academy_choose_work_LLLJ
+	}
 }

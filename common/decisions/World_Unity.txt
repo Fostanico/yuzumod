@@ -13,7 +13,10 @@ World_Unity = {
                 AND = {
                     has_government = communism
                     is_faction_leader = yes
-                    all_country = { is_in_faction_with = ROOT }
+                    all_country = {
+                        is_in_faction_with = ROOT
+                        has_government = communism
+                    }
                 }
                 AND = {
                     has_government = communism
@@ -72,7 +75,10 @@ World_Unity = {
                 AND = {
                     has_government = fascism
                     is_faction_leader = yes
-                    all_country = { is_in_faction_with = ROOT }
+                    all_country = {
+                        is_in_faction_with = ROOT
+                        has_government = fascism
+                    }
                 }
                 AND = {
                     has_government = fascism
@@ -131,7 +137,10 @@ World_Unity = {
                 AND = {
                     has_government = democratic
                     is_faction_leader = yes
-                    all_country = { is_in_faction_with = ROOT }
+                    all_country = {
+                        is_in_faction_with = ROOT
+                        has_government = democratic
+                    }
                 }
                 AND = {
                     has_government = democratic
@@ -190,7 +199,10 @@ World_Unity = {
                 AND = {
                     has_government = neutrality
                     is_faction_leader = yes
-                    all_country = { is_in_faction_with = ROOT }
+                    all_country = {
+                        is_in_faction_with = ROOT
+                        has_government = neutrality
+                    }
                 }
                 AND = {
                     has_government = neutrality

@@ -1,0 +1,48 @@
+# 国家 scope。显示数组只给 GUI 读姓名；权威状态仍是 have_been_chosen / yz_training_trait。
+# 选择、取消、开课、结业时调用。不得改成周期轮询。
+yz_academy_clear_choose_work_flags = {
+	clr_country_flag = yz_academy_choose_work_QL
+	clr_country_flag = yz_academy_choose_work_SW
+	clr_country_flag = yz_academy_choose_work_RJ
+	clr_country_flag = yz_academy_choose_work_CS
+	clr_country_flag = yz_academy_choose_work_TS
+	clr_country_flag = yz_academy_choose_work_AIN
+	clr_country_flag = yz_academy_choose_work_DR
+	clr_country_flag = yz_academy_choose_work_NW
+	clr_country_flag = yz_academy_choose_work_NK
+	clr_country_flag = yz_academy_choose_work_TL
+	clr_country_flag = yz_academy_choose_work_LLLJ
+}
+
+# 关掉整棵选将菜单。点定将领或取消指定时调用。
+yz_academy_close_choose_menu = {
+	clr_country_flag = is_choosing_general
+	yz_academy_clear_choose_work_flags = yes
+}
+
+yz_academy_refresh_selected_leader_display = {
+	ROOT = {
+		clear_array = yz_academy_selected_leaders
+		every_army_leader = {
+			limit = { has_character_flag = have_been_chosen }
+			ROOT = {
+				add_to_array = {
+					array = yz_academy_selected_leaders
+					value = PREV
+				}
+			}
+		}
+		if = {
+			limit = { check_variable = { yz_academy_selected_leaders^num < 1 } }
+			every_army_leader = {
+				limit = { has_trait = yz_training_trait }
+				ROOT = {
+					add_to_array = {
+						array = yz_academy_selected_leaders
+						value = PREV
+					}
+				}
+			}
+		}
+	}
+}

@@ -904,15 +904,13 @@ spriteTypes = {
 		name = "GFX_yzmanpower_texticon_1"
 		texturefile = "gfx/texticons/yzmanpower_texticon_1.png"
 	}
-	# Monthly bond-history line. The paired textures and slope shader are derived
-	# from the MIT-licensed Simple GDP Graph implementation; see the guide notice.
-	progressbartype = {
-		name = "GFX_yz_bond_graph_line_segment"
-		textureFile1 = "gfx/guis/yz_bond_graph_line_full.dds"
-		textureFile2 = "gfx/guis/yz_bond_graph_line_empty.dds"
-		size = { x = 8 y = 200 }
-		effectFile = "gfx/FX/yz_bond_graph.lua"
-		horizontal = yes
+	# 12px rose-gold diamond marker for the debt scatter plot. A dedicated sprite at
+	# native size avoids both custom font glyphs and GUI scaling of a vanilla dot,
+	# and it stays readable over the light and dark areas of the window artwork.
+	spriteType = {
+		name = "GFX_yz_bond_graph_dot"
+		texturefile = "gfx/guis/yz_bond_graph_dot.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_yz_bond_automation_toggle"

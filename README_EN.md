@@ -205,7 +205,7 @@ This project uses **OpenAI ChatGPT and OpenAI Codex** as development and mainten
 Team credits:
 
 1. 牢八
-2. 御坂真琴
+2. 井向真琴
 3. **伊尔诺** — Corresponding / Project coordination
 4. VAN
 5. 岛主

@@ -17,4 +17,44 @@ spriteTypes = {
         name = "GFX_yz_bond_category_bg_brightness_50"
         texturefile = "gfx/decision/yz_bond_category_bg_brightness_50.png"
     }
+    spriteType = {
+        name = "GFX_yz_yoshino_industry_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_yoshino_industry_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_721_research_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_721_research_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_ciallo_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_ciallo_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_married_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_married_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_world_unity_communism_bg_brightness_50"
+        texturefile = "gfx/decision/yz_world_unity_communism_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_world_unity_fascism_bg_brightness_50"
+        texturefile = "gfx/decision/yz_world_unity_fascism_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_world_unity_democratic_bg_brightness_50"
+        texturefile = "gfx/decision/yz_world_unity_democratic_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_world_unity_neutrality_bg_brightness_50"
+        texturefile = "gfx/decision/yz_world_unity_neutrality_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_industry_ompression_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_industry_ompression_category_bg_brightness_50.png"
+    }
+    spriteType = {
+        name = "GFX_yz_military_academy_category_bg_brightness_50"
+        texturefile = "gfx/decision/yz_military_academy_category_bg_brightness_50.png"
+    }
 }

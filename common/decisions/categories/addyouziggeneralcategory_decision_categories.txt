@@ -55,6 +55,7 @@ Megulu_industry_category = {
 }
 YZS_scientist_category = {
 	icon = GFX_Category_decision
+	scripted_gui = yz_721_research_category_gui
 	visible = {
 		has_country_flag = YZS_scientist_category_show        #2025.3.29,16:02,伊尔诺
 	}
@@ -74,15 +75,17 @@ YZS_military_academy_category = {
 	}
 	icon = GFX_fumika
 	priority = 2
+	scripted_gui = yz_military_academy_category_gui
 	#scripted_gui = YZ_miliatry_party_ui
 }
 general_married_decision_category = {
 	icon = GFX_Category_decision
+	scripted_gui = yz_married_category_gui
 	priority = 0
 }
 YzOpreative_category = {
-	picture = GFX_nanami_2
 	icon = GFX_qihai
+	scripted_gui = yz_ciallo_category_gui
 	priority = 2
 }
 establish_the_atri_special_brigade = {

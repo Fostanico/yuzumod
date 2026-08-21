@@ -2738,7 +2738,7 @@ yzrecruit_irno_full = {
     }
 }
 
-# 要点：统一封装御坂真琴的完整招募结算，供原招募决议与阿诺模式共同调用，保留超级事件旗标、音乐和人物数据。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
+# 要点：统一封装井向真琴的完整招募结算，供原招募决议与阿诺模式共同调用，保留超级事件旗标、音乐和人物数据。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
 yzrecruit_misaka_makoto_full = {
     hidden_effect = {
         set_country_flag = have_misaka_makoto
@@ -2780,6 +2780,57 @@ yzrecruit_misaka_makoto_full = {
                         defense_skill = 100
                         planning_skill = 100
                         logistics_skill = 100
+                    }
+                }
+            }
+        }
+    }
+}
+
+# 机械战警是伊尔诺与井向真琴共同解锁的彩蛋角色。
+yzrecruit_robocop = {
+    hidden_effect = {
+        set_country_flag = have_yz_robocop
+        meta_effect = {
+            text = {
+                generate_character = {
+                    token_base = YzRoboCop
+                    name = YZ_character_name_robocop
+                    can_be_captured = no
+                    gender = male
+                    nationality = USA
+                    portraits = {
+                        civilian = {
+                            large = "gfx/leader/yz_robocop.png"
+                            small = "gfx/leader/yz_robocop_small.png"
+                        }
+                    }
+                    allowed_civil_war = {
+                        is_ai = no
+                    }
+                    advisor = {
+                        slot = political_advisor
+                        cost = 100
+                        idea_token = yz_robocop_public_security_advisor
+                        desc = yz_robocop_public_security_advisor_desc
+                        traits = { yz_robocop_public_security_advisor }
+                        ai_will_do = {
+                            factor = 0
+                        }
+                    }
+                    corps_commander = {
+                        desc = yz_robocop_corps_desc
+                        traits = {
+                            yz_easter_egg_character
+                            serve_the_public_trust
+                            protect_the_innocent
+                            uphold_the_law
+                        }
+                        skill = 8
+                        attack_skill = 7
+                        defense_skill = 9
+                        planning_skill = 8
+                        logistics_skill = 7
                     }
                 }
             }

@@ -1034,6 +1034,10 @@ spriteTypes = {
 		name = "GFX_luoyi_wedding"
 		texturefile = "gfx/event_pictures/luoyi_wedding.png"
 	}
+	spriteType = {
+		name = "GFX_ATRI_wedding"
+		texturefile = "gfx/event_pictures/ATRI_wedding.png"
+	}
 
 
 	spriteType = {        #穗织核爆  2025.4.4,17:06,伊尔诺

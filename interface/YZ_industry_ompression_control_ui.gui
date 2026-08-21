@@ -1,178 +1,132 @@
 guiTypes = {
+    # 容器 500x200。500x220 覆盖图放在 x=5 y=-18。
+    # 启动前只显示分类说明；启动后同一块区域换成容量和加减按钮。控件名保持原样。
     containerWindowType = {
         name = "YZ_industry_ompression_control_ui"
-        position = {
-            x = 0
-            y = -15
-        }
-        size = {
-            width = 500
-            height = 150
-        }
+        position = { x = 0 y = -15 }
+        size = { width = 500 height = 200 }
+        clipping = no
+
         background = {
             name = "YZ_industry_ompression_control_ui_background"
-            quadTextureSprite = "GFX_YZ_industry_ompression_control_ui_background"
-            position = {
-                x = 4
-                y = 0
-            }
+            quadTextureSprite = "GFX_yz_industry_ompression_category_bg_brightness_50"
+            position = { x = 5 y = -18 }
         }
 
-        instantTextBoxType = {     #信息
+        instantTextBoxType = {
+            name = "yz_industry_ompression_category_text"
+            position = { x = 18 y = 12 }
+            font = "hoi_16mbs"
+            text = "YZ_indusrty_extra_project_gui_desc"
+            maxWidth = 240
+            maxHeight = 176
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+
+        instantTextBoxType = {
             name = "yz_industry_ompression_information"
-            orientation = CENTER_UP
-            position = {
-                x = -125
-                y = 0
-            }
+            position = { x = 18 y = 8 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_describe_text"
-            maxHeight = 80
-            maxWidth = 250
-            #pdx_tooltip = "yz_not_instand_show_explain"
+            maxWidth = 240
+            maxHeight = 72
+            alwaystransparent = yes
         }
-        instantTextBoxType = {            #民工操作
+        instantTextBoxType = {
             name = "yz_industry_ompression_operation_for_civilian_factories_text"
-            position = {
-                x = 120
-                y = 65
-            }
+            position = { x = 18 y = 88 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_for_civilian_factories_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 120
+            maxHeight = 22
+            alwaystransparent = yes
         }
         instantTextBoxType = {
             name = "yuzu_industry_ompression_operation_number_for_civilian_factories"
-            position = {
-                x = 265
-                y = 65
-            }
+            position = { x = 175 y = 88 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_number_for_civilian_factories_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 40
+            maxHeight = 22
+            alwaystransparent = yes
         }
         buttonType = {
             name = "yz_industry_ompression_operation_for_civilian_factories_add"
-            position = {
-                x = 230
-                y = 60
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            position = { x = 140 y = 83 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_add_one"
             pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
         }
         buttonType = {
             name = "yz_industry_ompression_operation_subtract_for_civilian_factories"
-            position = {
-                x = 300
-                y = 60
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            position = { x = 215 y = 83 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_subtract_one"
             pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
         }
-        instantTextBoxType = {            #军工操作
+        instantTextBoxType = {
             name = "yz_industry_ompression_operation_for_arma_factories_text"
-            position = {
-                x = 120
-                y = 85
-            }
+            position = { x = 18 y = 118 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_for_arma_factories_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 120
+            maxHeight = 22
+            alwaystransparent = yes
         }
         instantTextBoxType = {
             name = "yuzu_industry_ompression_operation_number_for_arma_factories"
-            position = {
-                x = 265
-                y = 85
-            }
+            position = { x = 175 y = 118 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_number_for_arma_factories_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 40
+            maxHeight = 22
+            alwaystransparent = yes
         }
         buttonType = {
             name = "yz_industry_ompression_operation_for_arma_factories_add"
-            position = {
-                x = 230
-                y = 80
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            position = { x = 140 y = 113 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_add_one"
             pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
         }
         buttonType = {
             name = "yz_industry_ompression_operation_subtract_for_arma_factories"
-            position = {
-                x = 300
-                y = 80
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            position = { x = 215 y = 113 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_subtract_one"
             pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
         }
-        instantTextBoxType = {            #船坞操作
+        instantTextBoxType = {
             name = "yz_industry_ompression_operation_for_dockyard_text"
-            position = {
-                x = 120
-                y = 105
-            }
+            position = { x = 18 y = 148 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_for_dockyard_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 120
+            maxHeight = 22
+            alwaystransparent = yes
         }
         instantTextBoxType = {
             name = "yuzu_industry_ompression_operation_number_for_dockyard"
-            position = {
-                x = 265
-                y = 105
-            }
+            position = { x = 175 y = 148 }
             font = "hoi_16mbs"
             text = "yz_industry_ompression_operation_number_for_dockyard_text_loc"
-            maxWidth = 200
-            maxHeight = 30
+            maxWidth = 40
+            maxHeight = 22
+            alwaystransparent = yes
         }
         buttonType = {
             name = "yz_industry_ompression_operation_for_dockyard_add"
-            position = {
-                x = 230
-                y = 100
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_add_one"     #"GFX_yz_button_long"
+            position = { x = 140 y = 143 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_add_one"
             pdx_tooltip = "yz_industry_ompression_operation_add_tooltip"
         }
         buttonType = {
             name = "yz_industry_ompression_operation_subtract_for_dockyard"
-            position = {
-                x = 300
-                y = 100
-            }
-            size = {
-                x = 960
-                y = 540
-            }
-            quadTextureSprite = "GFX_subtract_one"     #"GFX_yz_button_long"
+            position = { x = 215 y = 143 }
+            size = { x = 24 y = 24 }
+            quadTextureSprite = "GFX_subtract_one"
             pdx_tooltip = "yz_industry_ompression_operation_subtract_tooltip"
         }
     }

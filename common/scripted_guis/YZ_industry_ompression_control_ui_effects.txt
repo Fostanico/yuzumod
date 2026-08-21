@@ -2,10 +2,50 @@ scripted_gui = {
 	YZ_industry_ompression_control_ui = {
 		window_name = YZ_industry_ompression_control_ui
 		context_type = decision_category
-		visible = {
-			has_country_flag = YZ_industry_ompression_start_flag
-		}
+		# 覆盖层随决议组显示。加减控件仍只在启动 flag 之后出现。
 		triggers = {
+			yz_industry_ompression_category_text_visible = {
+				NOT = { has_country_flag = YZ_industry_ompression_start_flag }
+			}
+			yz_industry_ompression_information_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_civilian_factories_text_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yuzu_industry_ompression_operation_number_for_civilian_factories_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_civilian_factories_add_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_subtract_for_civilian_factories_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_arma_factories_text_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yuzu_industry_ompression_operation_number_for_arma_factories_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_arma_factories_add_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_subtract_for_arma_factories_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_dockyard_text_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yuzu_industry_ompression_operation_number_for_dockyard_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_for_dockyard_add_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
+			yz_industry_ompression_operation_subtract_for_dockyard_visible = {
+				has_country_flag = YZ_industry_ompression_start_flag
+			}
 			#民工
 			yz_industry_ompression_operation_for_civilian_factories_add_click_enable = {
 				ROOT = {

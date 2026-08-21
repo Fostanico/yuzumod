@@ -82,7 +82,7 @@ scripted_gui = {
 		triggers = {
 			yz_bond_payment_decrease_button_click_enabled = {
 				has_country_flag = yz_bond_active
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = {
 					var = yz_bond_monthly_payment
 					value = var:yz_bond_contract_payment_floor
@@ -91,7 +91,7 @@ scripted_gui = {
 			}
 			yz_bond_payment_increase_button_click_enabled = {
 				has_country_flag = yz_bond_active
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = { yz_bond_monthly_payment < 2000 }
 			}
 			yz_bond_next_issue_decrease_button_click_enabled = {
@@ -125,11 +125,11 @@ scripted_gui = {
 				check_variable = { yz_bond_actual_rate < 20 }
 			}
 			yz_bond_reserve_decrease_button_click_enabled = {
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = { yz_bond_cash_reserve_target > 0 }
 			}
 			yz_bond_reserve_increase_button_click_enabled = {
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = { yz_bond_cash_reserve_target < 5000 }
 			}
 			yz_bond_detail_auto_button_click_enabled = {
@@ -140,11 +140,13 @@ scripted_gui = {
 			}
 			yz_bond_payment_holiday_button_click_enabled = {
 				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				NOT = { has_country_flag = yz_bond_payment_holiday }
 				NOT = { has_country_flag = yz_bond_payment_holiday_cooldown }
 			}
 			yz_bond_additional_sale_button_click_enabled = {
 				has_country_flag = yz_bond_active
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				NOT = { has_country_flag = yz_bond_additional_sale_cooldown }
 				check_variable = {
 					var = yz_bond_credit_score
@@ -181,25 +183,400 @@ scripted_gui = {
 				}
 			}
 		}
-		dynamic_lists = {
-			yz_bond_graph_lines = {
-				array = yz_bond_graph_offsets
-				change_scope = no
-				entry_container = yz_bond_graph_line_segment
-				index = yz_bond_graph_segment_index
-			}
-		}
 		# The toggle sprite is a two-frame strip: frame 0 manual, frame 1 automatic.
 		properties = {
 			yz_bond_detail_auto_button = {
 				frame = yz_bond_automation_frame
 			}
-			yz_bond_graph_lines = {
-				x = yz_bond_graph_start_x
+			# Millennium Dawn writes x and y on each predeclared graph icon.
+			# Do not move the parent clip layer; unused points stay at y = 200.
+			yz_bond_graph_point_0 = {
+				x = yz_bond_graph_xs^0
+				y = yz_bond_graph_offsets^0
 			}
-			yz_bond_graph_segment = {
-				y = yz_bond_graph_offsets^yz_bond_graph_segment_index
-				frame = yz_bond_graph_slopes^yz_bond_graph_segment_index
+			yz_bond_graph_point_1 = {
+				x = yz_bond_graph_xs^1
+				y = yz_bond_graph_offsets^1
+			}
+			yz_bond_graph_point_2 = {
+				x = yz_bond_graph_xs^2
+				y = yz_bond_graph_offsets^2
+			}
+			yz_bond_graph_point_3 = {
+				x = yz_bond_graph_xs^3
+				y = yz_bond_graph_offsets^3
+			}
+			yz_bond_graph_point_4 = {
+				x = yz_bond_graph_xs^4
+				y = yz_bond_graph_offsets^4
+			}
+			yz_bond_graph_point_5 = {
+				x = yz_bond_graph_xs^5
+				y = yz_bond_graph_offsets^5
+			}
+			yz_bond_graph_point_6 = {
+				x = yz_bond_graph_xs^6
+				y = yz_bond_graph_offsets^6
+			}
+			yz_bond_graph_point_7 = {
+				x = yz_bond_graph_xs^7
+				y = yz_bond_graph_offsets^7
+			}
+			yz_bond_graph_point_8 = {
+				x = yz_bond_graph_xs^8
+				y = yz_bond_graph_offsets^8
+			}
+			yz_bond_graph_point_9 = {
+				x = yz_bond_graph_xs^9
+				y = yz_bond_graph_offsets^9
+			}
+			yz_bond_graph_point_10 = {
+				x = yz_bond_graph_xs^10
+				y = yz_bond_graph_offsets^10
+			}
+			yz_bond_graph_point_11 = {
+				x = yz_bond_graph_xs^11
+				y = yz_bond_graph_offsets^11
+			}
+			yz_bond_graph_point_12 = {
+				x = yz_bond_graph_xs^12
+				y = yz_bond_graph_offsets^12
+			}
+			yz_bond_graph_point_13 = {
+				x = yz_bond_graph_xs^13
+				y = yz_bond_graph_offsets^13
+			}
+			yz_bond_graph_point_14 = {
+				x = yz_bond_graph_xs^14
+				y = yz_bond_graph_offsets^14
+			}
+			yz_bond_graph_point_15 = {
+				x = yz_bond_graph_xs^15
+				y = yz_bond_graph_offsets^15
+			}
+			yz_bond_graph_point_16 = {
+				x = yz_bond_graph_xs^16
+				y = yz_bond_graph_offsets^16
+			}
+			yz_bond_graph_point_17 = {
+				x = yz_bond_graph_xs^17
+				y = yz_bond_graph_offsets^17
+			}
+			yz_bond_graph_point_18 = {
+				x = yz_bond_graph_xs^18
+				y = yz_bond_graph_offsets^18
+			}
+			yz_bond_graph_point_19 = {
+				x = yz_bond_graph_xs^19
+				y = yz_bond_graph_offsets^19
+			}
+			yz_bond_graph_point_20 = {
+				x = yz_bond_graph_xs^20
+				y = yz_bond_graph_offsets^20
+			}
+			yz_bond_graph_point_21 = {
+				x = yz_bond_graph_xs^21
+				y = yz_bond_graph_offsets^21
+			}
+			yz_bond_graph_point_22 = {
+				x = yz_bond_graph_xs^22
+				y = yz_bond_graph_offsets^22
+			}
+			yz_bond_graph_point_23 = {
+				x = yz_bond_graph_xs^23
+				y = yz_bond_graph_offsets^23
+			}
+			yz_bond_graph_point_24 = {
+				x = yz_bond_graph_xs^24
+				y = yz_bond_graph_offsets^24
+			}
+			yz_bond_graph_point_25 = {
+				x = yz_bond_graph_xs^25
+				y = yz_bond_graph_offsets^25
+			}
+			yz_bond_graph_point_26 = {
+				x = yz_bond_graph_xs^26
+				y = yz_bond_graph_offsets^26
+			}
+			yz_bond_graph_point_27 = {
+				x = yz_bond_graph_xs^27
+				y = yz_bond_graph_offsets^27
+			}
+			yz_bond_graph_point_28 = {
+				x = yz_bond_graph_xs^28
+				y = yz_bond_graph_offsets^28
+			}
+			yz_bond_graph_point_29 = {
+				x = yz_bond_graph_xs^29
+				y = yz_bond_graph_offsets^29
+			}
+			yz_bond_graph_point_30 = {
+				x = yz_bond_graph_xs^30
+				y = yz_bond_graph_offsets^30
+			}
+			yz_bond_graph_point_31 = {
+				x = yz_bond_graph_xs^31
+				y = yz_bond_graph_offsets^31
+			}
+			yz_bond_graph_point_32 = {
+				x = yz_bond_graph_xs^32
+				y = yz_bond_graph_offsets^32
+			}
+			yz_bond_graph_point_33 = {
+				x = yz_bond_graph_xs^33
+				y = yz_bond_graph_offsets^33
+			}
+			yz_bond_graph_point_34 = {
+				x = yz_bond_graph_xs^34
+				y = yz_bond_graph_offsets^34
+			}
+			yz_bond_graph_point_35 = {
+				x = yz_bond_graph_xs^35
+				y = yz_bond_graph_offsets^35
+			}
+			yz_bond_graph_point_36 = {
+				x = yz_bond_graph_xs^36
+				y = yz_bond_graph_offsets^36
+			}
+			yz_bond_graph_point_37 = {
+				x = yz_bond_graph_xs^37
+				y = yz_bond_graph_offsets^37
+			}
+			yz_bond_graph_point_38 = {
+				x = yz_bond_graph_xs^38
+				y = yz_bond_graph_offsets^38
+			}
+			yz_bond_graph_point_39 = {
+				x = yz_bond_graph_xs^39
+				y = yz_bond_graph_offsets^39
+			}
+			yz_bond_graph_point_40 = {
+				x = yz_bond_graph_xs^40
+				y = yz_bond_graph_offsets^40
+			}
+			yz_bond_graph_point_41 = {
+				x = yz_bond_graph_xs^41
+				y = yz_bond_graph_offsets^41
+			}
+			yz_bond_graph_point_42 = {
+				x = yz_bond_graph_xs^42
+				y = yz_bond_graph_offsets^42
+			}
+			yz_bond_graph_point_43 = {
+				x = yz_bond_graph_xs^43
+				y = yz_bond_graph_offsets^43
+			}
+			yz_bond_graph_point_44 = {
+				x = yz_bond_graph_xs^44
+				y = yz_bond_graph_offsets^44
+			}
+			yz_bond_graph_point_45 = {
+				x = yz_bond_graph_xs^45
+				y = yz_bond_graph_offsets^45
+			}
+			yz_bond_graph_point_46 = {
+				x = yz_bond_graph_xs^46
+				y = yz_bond_graph_offsets^46
+			}
+			yz_bond_graph_point_47 = {
+				x = yz_bond_graph_xs^47
+				y = yz_bond_graph_offsets^47
+			}
+			yz_bond_graph_point_48 = {
+				x = yz_bond_graph_xs^48
+				y = yz_bond_graph_offsets^48
+			}
+			yz_bond_graph_point_49 = {
+				x = yz_bond_graph_xs^49
+				y = yz_bond_graph_offsets^49
+			}
+			yz_bond_graph_point_50 = {
+				x = yz_bond_graph_xs^50
+				y = yz_bond_graph_offsets^50
+			}
+			yz_bond_graph_point_51 = {
+				x = yz_bond_graph_xs^51
+				y = yz_bond_graph_offsets^51
+			}
+			yz_bond_graph_point_52 = {
+				x = yz_bond_graph_xs^52
+				y = yz_bond_graph_offsets^52
+			}
+			yz_bond_graph_point_53 = {
+				x = yz_bond_graph_xs^53
+				y = yz_bond_graph_offsets^53
+			}
+			yz_bond_graph_point_54 = {
+				x = yz_bond_graph_xs^54
+				y = yz_bond_graph_offsets^54
+			}
+			yz_bond_graph_point_55 = {
+				x = yz_bond_graph_xs^55
+				y = yz_bond_graph_offsets^55
+			}
+			yz_bond_graph_point_56 = {
+				x = yz_bond_graph_xs^56
+				y = yz_bond_graph_offsets^56
+			}
+			yz_bond_graph_point_57 = {
+				x = yz_bond_graph_xs^57
+				y = yz_bond_graph_offsets^57
+			}
+			yz_bond_graph_point_58 = {
+				x = yz_bond_graph_xs^58
+				y = yz_bond_graph_offsets^58
+			}
+			yz_bond_graph_point_59 = {
+				x = yz_bond_graph_xs^59
+				y = yz_bond_graph_offsets^59
+			}
+			yz_bond_graph_point_60 = {
+				x = yz_bond_graph_xs^60
+				y = yz_bond_graph_offsets^60
+			}
+			yz_bond_graph_point_61 = {
+				x = yz_bond_graph_xs^61
+				y = yz_bond_graph_offsets^61
+			}
+			yz_bond_graph_point_62 = {
+				x = yz_bond_graph_xs^62
+				y = yz_bond_graph_offsets^62
+			}
+			yz_bond_graph_point_63 = {
+				x = yz_bond_graph_xs^63
+				y = yz_bond_graph_offsets^63
+			}
+			yz_bond_graph_point_64 = {
+				x = yz_bond_graph_xs^64
+				y = yz_bond_graph_offsets^64
+			}
+			yz_bond_graph_point_65 = {
+				x = yz_bond_graph_xs^65
+				y = yz_bond_graph_offsets^65
+			}
+			yz_bond_graph_point_66 = {
+				x = yz_bond_graph_xs^66
+				y = yz_bond_graph_offsets^66
+			}
+			yz_bond_graph_point_67 = {
+				x = yz_bond_graph_xs^67
+				y = yz_bond_graph_offsets^67
+			}
+			yz_bond_graph_point_68 = {
+				x = yz_bond_graph_xs^68
+				y = yz_bond_graph_offsets^68
+			}
+			yz_bond_graph_point_69 = {
+				x = yz_bond_graph_xs^69
+				y = yz_bond_graph_offsets^69
+			}
+			yz_bond_graph_point_70 = {
+				x = yz_bond_graph_xs^70
+				y = yz_bond_graph_offsets^70
+			}
+			yz_bond_graph_point_71 = {
+				x = yz_bond_graph_xs^71
+				y = yz_bond_graph_offsets^71
+			}
+			yz_bond_graph_point_72 = {
+				x = yz_bond_graph_xs^72
+				y = yz_bond_graph_offsets^72
+			}
+			yz_bond_graph_point_73 = {
+				x = yz_bond_graph_xs^73
+				y = yz_bond_graph_offsets^73
+			}
+			yz_bond_graph_point_74 = {
+				x = yz_bond_graph_xs^74
+				y = yz_bond_graph_offsets^74
+			}
+			yz_bond_graph_point_75 = {
+				x = yz_bond_graph_xs^75
+				y = yz_bond_graph_offsets^75
+			}
+			yz_bond_graph_point_76 = {
+				x = yz_bond_graph_xs^76
+				y = yz_bond_graph_offsets^76
+			}
+			yz_bond_graph_point_77 = {
+				x = yz_bond_graph_xs^77
+				y = yz_bond_graph_offsets^77
+			}
+			yz_bond_graph_point_78 = {
+				x = yz_bond_graph_xs^78
+				y = yz_bond_graph_offsets^78
+			}
+			yz_bond_graph_point_79 = {
+				x = yz_bond_graph_xs^79
+				y = yz_bond_graph_offsets^79
+			}
+			yz_bond_graph_point_80 = {
+				x = yz_bond_graph_xs^80
+				y = yz_bond_graph_offsets^80
+			}
+			yz_bond_graph_point_81 = {
+				x = yz_bond_graph_xs^81
+				y = yz_bond_graph_offsets^81
+			}
+			yz_bond_graph_point_82 = {
+				x = yz_bond_graph_xs^82
+				y = yz_bond_graph_offsets^82
+			}
+			yz_bond_graph_point_83 = {
+				x = yz_bond_graph_xs^83
+				y = yz_bond_graph_offsets^83
+			}
+			yz_bond_graph_point_84 = {
+				x = yz_bond_graph_xs^84
+				y = yz_bond_graph_offsets^84
+			}
+			yz_bond_graph_point_85 = {
+				x = yz_bond_graph_xs^85
+				y = yz_bond_graph_offsets^85
+			}
+			yz_bond_graph_point_86 = {
+				x = yz_bond_graph_xs^86
+				y = yz_bond_graph_offsets^86
+			}
+			yz_bond_graph_point_87 = {
+				x = yz_bond_graph_xs^87
+				y = yz_bond_graph_offsets^87
+			}
+			yz_bond_graph_point_88 = {
+				x = yz_bond_graph_xs^88
+				y = yz_bond_graph_offsets^88
+			}
+			yz_bond_graph_point_89 = {
+				x = yz_bond_graph_xs^89
+				y = yz_bond_graph_offsets^89
+			}
+			yz_bond_graph_point_90 = {
+				x = yz_bond_graph_xs^90
+				y = yz_bond_graph_offsets^90
+			}
+			yz_bond_graph_point_91 = {
+				x = yz_bond_graph_xs^91
+				y = yz_bond_graph_offsets^91
+			}
+			yz_bond_graph_point_92 = {
+				x = yz_bond_graph_xs^92
+				y = yz_bond_graph_offsets^92
+			}
+			yz_bond_graph_point_93 = {
+				x = yz_bond_graph_xs^93
+				y = yz_bond_graph_offsets^93
+			}
+			yz_bond_graph_point_94 = {
+				x = yz_bond_graph_xs^94
+				y = yz_bond_graph_offsets^94
+			}
+			yz_bond_graph_point_95 = {
+				x = yz_bond_graph_xs^95
+				y = yz_bond_graph_offsets^95
+			}
+			yz_bond_graph_point_96 = {
+				x = yz_bond_graph_xs^96
+				y = yz_bond_graph_offsets^96
 			}
 		}
     }

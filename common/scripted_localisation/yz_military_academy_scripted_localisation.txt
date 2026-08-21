@@ -1,0 +1,108 @@
+# 无条件兜底只允许放在最后。姓名来自显示数组，不在 GUI 里扫将领。
+defined_text = {
+	name = GetYzAcademySelectedLeader
+	text = {
+		trigger = { check_variable = { yz_academy_selected_leaders^num > 0 } }
+		localization_key = yz_academy_selected_named
+	}
+	text = {
+		trigger = {
+			any_army_leader = { has_character_flag = have_been_chosen }
+		}
+		localization_key = yz_academy_selected_unnamed
+	}
+	text = {
+		trigger = {
+			any_army_leader = { has_trait = yz_training_trait }
+		}
+		localization_key = yz_academy_selected_training_unnamed
+	}
+	text = {
+		localization_key = yz_academy_selected_none
+	}
+}
+
+defined_text = {
+	name = GetYzAcademyTrainingStatus
+	text = {
+		trigger = {
+			any_army_leader = { has_trait = yz_training_trait }
+		}
+		localization_key = yz_academy_training_in_progress
+	}
+	text = {
+		localization_key = yz_academy_training_idle
+	}
+}
+
+# 千禧走四阶段现代军改；原版走 youzu_army_1..6 再在 7/8 里选最终方案。无条件兜底只允许放在最后。
+defined_text = {
+	name = GetYzAcademyReformProgress
+	text = {
+		trigger = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_4
+		}
+		localization_key = yz_academy_reform_md_4
+	}
+	text = {
+		trigger = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_3
+		}
+		localization_key = yz_academy_reform_md_3
+	}
+	text = {
+		trigger = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_2
+		}
+		localization_key = yz_academy_reform_md_2
+	}
+	text = {
+		trigger = {
+			has_global_flag = yz_md_startup_detected
+			has_country_flag = have_yz_md_military_reform_1
+		}
+		localization_key = yz_academy_reform_md_1
+	}
+	text = {
+		trigger = { has_global_flag = yz_md_startup_detected }
+		localization_key = yz_academy_reform_md_0
+	}
+	text = {
+		trigger = { has_country_flag = youzu_army_8 }
+		localization_key = yz_academy_reform_future
+	}
+	text = {
+		trigger = { has_country_flag = youzu_army_7 }
+		localization_key = yz_academy_reform_glory
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_6 }
+		localization_key = yz_academy_reform_6
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_5 }
+		localization_key = yz_academy_reform_5
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_4 }
+		localization_key = yz_academy_reform_4
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_3 }
+		localization_key = yz_academy_reform_3
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_2 }
+		localization_key = yz_academy_reform_2
+	}
+	text = {
+		trigger = { has_country_flag = have_youzu_army_1 }
+		localization_key = yz_academy_reform_1
+	}
+	text = {
+		localization_key = yz_academy_reform_none
+	}
+}

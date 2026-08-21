@@ -226,7 +226,7 @@ ideas = {
             }
         }
         hotaru_eat_every_thing = {
-            name = hotaru_eat_every_thing   #萤技能民族精神——2026.5.2，19：45，御坂真琴
+            name = hotaru_eat_every_thing   #萤技能民族精神——2026.5.2，19：45，井向真琴
             picture = GFX_idea_hotaru_eat_every_thing
             modifier = {
                 supply_consumption_factor = 1000

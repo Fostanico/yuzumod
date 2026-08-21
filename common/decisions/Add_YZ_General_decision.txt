@@ -1926,13 +1926,13 @@ add_youzi_general_category = {
                 has_country_flag = qiyong_youzi_3
             }
             has_country_flag = have_kakka_nor
-			# 要点：阿诺模式可能已经自动招募御坂真琴；存在招募旗标时隐藏原决议，避免再次生成同名人物。 [2026-07-03 23:02] [伊尔诺/GPT5.5]
+			# 要点：阿诺模式可能已经自动招募井向真琴；存在招募旗标时隐藏原决议，避免再次生成同名人物。 [2026-07-03 23:02] [伊尔诺/GPT5.5]
             not = { has_country_flag = have_misaka_makoto }
         }
         cost = 2000
         fire_only_once = yes
         complete_effect = {
-            # 要点：原决议调用与阿诺模式共用的御坂真琴完整招募效果，避免两处人物定义发生偏差。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
+            # 要点：原决议调用与阿诺模式共用的井向真琴完整招募效果，避免两处人物定义发生偏差。 [2026-07-03 23:00] [伊尔诺/GPT5.5]
             yzrecruit_misaka_makoto_full = yes
         }
     }

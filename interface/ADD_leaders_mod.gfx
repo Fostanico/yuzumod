@@ -236,4 +236,25 @@ spriteTypes = {
 		name = "GFX_super_nature_science_house"
 		texturefile = "gfx/ideas/chaoziranyan.png"
 	}
+	# 机械战警：三项指令共用 OCP 徽章，决议使用独立 40x40 缩略图。
+	spriteType = {
+		name = "GFX_trait_serve_the_public_trust"
+		texturefile = "gfx/traits/yz_ocp_prime_directives.png"
+	}
+	spriteType = {
+		name = "GFX_trait_protect_the_innocent"
+		texturefile = "gfx/traits/yz_ocp_prime_directives.png"
+	}
+	spriteType = {
+		name = "GFX_trait_uphold_the_law"
+		texturefile = "gfx/traits/yz_ocp_prime_directives.png"
+	}
+	spriteType = {
+		name = "GFX_yz_recruit_robocop"
+		texturefile = "gfx/decision/yz_recruit_robocop.png"
+	}
+	spriteType = {
+		name = "GFX_decision_yz_recruit_robocop"
+		texturefile = "gfx/decision/yz_recruit_robocop.png"
+	}
 }

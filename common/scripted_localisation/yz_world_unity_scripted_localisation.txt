@@ -1,4 +1,4 @@
-# The merged category keeps the original ideology-specific title and prose.
+# 合并后的分类仍按当前政府切换标题和正文。无条件兜底只允许放在最后。
 defined_text = {
     name = yz_world_unity_category_title
     text = {
@@ -45,8 +45,7 @@ defined_text = {
     }
 }
 
-# The merged category preserves the picture that belonged to each old
-# ideology-specific category. The localisation values resolve to GFX tokens.
+# 本地化值必须是 GFX 名。无条件兜底只允许放在最后。
 defined_text = {
     name = yz_world_unity_category_image
     text = {

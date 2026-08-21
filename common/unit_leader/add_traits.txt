@@ -244,15 +244,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            experience_gain_factor= 0.25
+            experience_gain_factor= 0.5
             army_defence_factor = -0.1
-            sickness_chance = -0.15
-            attrition = -0.1
-            no_supply_grace = 30
-            local_org_regain = 0.1
-            land_night_attack = 0.15
-
+            sickness_chance = -0.5
+            attrition = -0.15
+            no_supply_grace = 72
+            army_org_regain = 0.25
+            land_night_attack = 0.2
+            army_attack_factor = 0.15
         }
+        defense_skill = 4
         new_commander_weight = {
             factor = 0
         }
@@ -261,11 +262,14 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            max_commander_army_size = 10
-            army_org_regain = 0.1
-            recon_factor = 0.1
-            reassignment_duration_factor = -0.5
+            max_commander_army_size = 24
+            max_army_group_size = 5
+            army_org_regain = 0.15
+            recon_factor = 1
+            reassignment_duration_factor = -0.75
+            army_defence_factor = 0.15
         }
+        logistics_skill = 3
         new_commander_weight = {
             factor = 0
         }
@@ -274,13 +278,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            max_dig_in_factor = 0.15							   #堑壕上限
+            max_dig_in_factor = 0.3							   #堑壕上限
+            max_dig_in = 2
             dig_in_speed_factor = -0.15
-            army_infantry_attack_factor = 0.1						#步兵单位攻击
-            army_armor_defence_factor = 0.12				      #装甲单位防御
-            winter_attrition_factor = -0.25
-
+            army_infantry_attack_factor = 0.25						#步兵单位攻击
+            army_armor_defence_factor = 0.3				      #装甲单位防御
+            winter_attrition_factor = -0.5
+            army_attack_factor = 0.1
+            army_defence_factor = 0.1
         }
+        attack_skill = 3
         new_commander_weight = {
             factor = 0
         }
@@ -289,10 +296,13 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            land_reinforce_rate = 0.02								#增援率
-            max_planning = 0.1
+            land_reinforce_rate = 0.1								#增援率
+            max_planning = 0.25
+            max_planning_factor = 0.1
             planning_speed = -0.05
+            equipment_capture_factor = 0.15
         }
+        planning_skill = 4
         new_commander_weight = {
             factor = 0
         }
@@ -303,16 +313,21 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            experience_loss_factor = -0.8
-            attrition = -0.2
-            recon_factor = 0.15
-            planning_speed = 0.1
-            supply_consumption_factor = 0.05
+            experience_loss_factor = -0.1
+            attrition = -0.5
+            recon_factor = 1.5
+            planning_speed = 0.2
+            supply_consumption_factor = 0.1
             army_morale_factor = 0.15
-            army_strength_factor = 0.1
-            max_planning = 0.1
-            wounded_chance_factor = -1.5
+            army_org_regain = 0.4
+            army_strength_factor = 0.25
+            max_planning = 0.15
+            wounded_chance_factor = -1145.14
+            no_supply_grace = 120
+            army_attack_factor = 0.1
+            army_defence_factor = 0.2
         }
+        enable_ability = nanami_ability
         new_commander_weight = {
             factor = 0
         }
@@ -323,12 +338,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_infantry_defence_factor = 0.1
-            pocket_penalty = -0.4
+            army_infantry_defence_factor = 0.25
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+            no_supply_grace = 48
+            pocket_penalty = -1
             land_reinforce_rate = 0.06
-            army_org_regain = 0.1
+            army_org_regain = 0.25
             amphibious_invasion_defence = 0.2   #两栖登陆防御
         }
+        logistics_skill = 5
         corps_commander_modifier = {
             max_commander_army_size = -6
         }
@@ -700,13 +719,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_defence_factor = 0.05
-            recon_factor = 0.25
-            land_reinforce_rate = 0.05
-            coordination_bonus = 0.05
-            amphibious_invasion = 0.15
-            invasion_preparation = -0.2
-            land_night_attack = 0.15
+            army_defence_factor = 0.15
+            recon_factor = 3
+            land_reinforce_rate = 0.15
+            coordination_bonus = 0.1
+            initiative_factor = 0.1
+            amphibious_invasion = 0.5
+            invasion_preparation = -0.5
+            land_night_attack = 0.25
+            special_forces_attack_factor = 0.25
+            naval_invasion_prep_days = -30
             river = {
                 movement = 0.2
                 attack = 0.2
@@ -716,6 +738,7 @@ leader_traits = {
                 attack = 0.4
             }
         }
+        enable_ability = hazuki_ability
         new_commander_weight = {
             factor = 0
         }
@@ -1015,11 +1038,17 @@ leader_traits = {
         modifier = {
             army_armor_attack_factor = 0.25
             army_armor_defence_factor = 0.25
-            army_artillery_attack_factor = 0.35
-            army_artillery_defence_factor = 0.35
+            army_artillery_attack_factor = 0.5
+            army_artillery_defence_factor = 0.5
             equipment_capture = 0.3
-            experience_gain_factor = 0.1
+            experience_gain_factor = 0.5
+            experience_gain_army_unit_factor = 0.25
+            planning_speed = 0.5
+            max_planning = 0.3
         }
+        planning_skill = 5
+        logistics_skill = 4
+        enable_ability = mayu_ability
         new_commander_weight = {
             factor = 0
         }
@@ -1028,12 +1057,17 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_attack_factor = 0.025
-            army_defence_factor=0.05
-            army_org_factor = 0.025
-            supply_consumption_factor = -0.025
-            army_strength_factor = 0.025
+            army_attack_factor = 0.04
+            army_defence_factor=0.08
+            army_org_regain = 0.05
+            supply_consumption_factor = -0.05
+            army_strength_factor = 0.05
+            
         }
+        attack_skill = 1
+        defense_skill = 1
+        planning_skill = 1
+        logistics_skill = 1
         new_commander_weight = {
             factor = 0
         }
@@ -1042,12 +1076,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_attack_factor = 0.05
-            army_defence_factor=0.1
-            army_org_factor = 0.05
-            supply_consumption_factor = -0.05
-            army_strength_factor = 0.05
+            army_attack_factor = 0.08
+            army_defence_factor=0.16
+            army_org_regain = 0.1
+            supply_consumption_factor = -0.1
+            army_strength_factor = 0.1
         }
+        attack_skill = 2
+        defense_skill = 2
+        planning_skill = 2
+        logistics_skill = 2
         new_commander_weight = {
             factor = 0
         }
@@ -1056,12 +1094,16 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_attack_factor = 0.075
-            army_defence_factor=0.15
-            army_org_factor = 0.075
-            supply_consumption_factor = -0.075
-            army_strength_factor = 0.075
+            army_attack_factor = 0.12
+            army_defence_factor= 0.24
+            army_org_regain = 0.15
+            supply_consumption_factor = -0.15
+            army_strength_factor = 0.15
         }
+        attack_skill = 3
+        defense_skill = 3
+        planning_skill = 3
+        logistics_skill = 3
         new_commander_weight = {
             factor = 0
         }
@@ -1117,11 +1159,12 @@ leader_traits = {
         type = land
         trait_type = personality_trait
         modifier = {
-            army_org_factor = 0.15
-            army_strength_factor = 0.1
-            supply_consumption_factor = -0.05
+            army_org_regain = 0.25
+            army_strength_factor = 0.25
+            supply_consumption_factor = -0.15
             air_superiority_bonus_in_combat = 1.8
             cas_damage_reduction = 1
+            air_cas_present_factor = 1
             }
         new_commander_weight = {
             factor = 0
@@ -3582,7 +3625,7 @@ leader_traits = {
     }
     #####################################
     #####################################    以下为其他会社角色特质
-    #####################################    别问我为什么酸柚子的我也放下面了——御坂真琴，2026.4.2，21：37
+    #####################################    别问我为什么酸柚子的我也放下面了——井向真琴，2026.4.2，21：37
     #BMI设备
     bmi_device = {
         type = land
@@ -4111,45 +4154,48 @@ leader_traits = {
         }
         enable_ability = power_of_kami
     }
-    serve_the_public_trust = {    #服务公众
+    # OCP 第一指令：维持组织、补给和持续作战能力。
+    serve_the_public_trust = {
         type = land
         trait_type = personality_trait
         new_commander_weight = {
             factor = 0
         }
         modifier = {
-            army_org_factor = 1
-            army_org_regain = 1
-            org_loss_at_low_org_factor = -1
-            org_loss_when_moving = -1
-            army_org = 100
-            supply_consumption_factor = -1
-            no_supply_grace = 9
-            experience_loss_factor = -1
-            attrition = -2
+            army_morale_factor = 0.15
+            planning_speed = 0.10
+            supply_consumption_factor = -0.10
         }
     }
-    protect_the_innocent = {   #保护无辜
+    # OCP 第二指令：以防御和保存部队实力为核心。
+    protect_the_innocent = {
         type = land
         trait_type = personality_trait
         new_commander_weight = {
             factor = 0
         }
         modifier = {
-
+            defence = 0.20
+            army_strength_factor = 0.10
+            experience_gain_army_unit_factor = 0.10
+            wounded_chance_factor = -0.75
         }
     }
-    uphold_the_law = {     #维护法律
+    # OCP 第三指令：强化识别、突破与有序推进。
+    uphold_the_law = {
         type = land
         trait_type = personality_trait
         new_commander_weight = {
             factor = 0
         }
         modifier = {
-
+            attack = 0.15
+            breakthrough_factor = 0.15
+            recon_factor = 0.15
+            org_loss_when_moving = -0.15
         }
     }
-    injia_good_at_water = {    #茉子海军——2026.4.11 20：24，御坂真琴
+    injia_good_at_water = {    #茉子海军——2026.4.11 20：24，井向真琴
         type = navy
         trait_type = personality_trait
         new_commander_weight = {
@@ -4165,7 +4211,7 @@ leader_traits = {
             navy_anti_air_attack_factor = 0.5
         }
     }
-    best_hacker = {    #七海海军——2026.4.11 20：35，御坂真琴
+    best_hacker = {    #七海海军——2026.4.11 20：35，井向真琴
         type = navy
         trait_type = personality_trait
         new_commander_weight = {
@@ -4180,7 +4226,7 @@ leader_traits = {
             navy_visibility = -0.3
         }
     }
-    little_guy_under_water = {    #宁宁海军——2026.4.11 20：46，御坂真琴
+    little_guy_under_water = {    #宁宁海军——2026.4.11 20：46，井向真琴
         type = navy
         trait_type = personality_trait
         new_commander_weight = {
@@ -4199,7 +4245,7 @@ leader_traits = {
             convoy_raiding_efficiency_factor = 0.3
         }
     }
-    fixible_command = {    #栞那海军——2026.4.11 20：49，御坂真琴
+    fixible_command = {    #栞那海军——2026.4.11 20：49，井向真琴
         type = navy
         trait_type = personality_trait
         new_commander_weight = {
@@ -4263,7 +4309,7 @@ leader_traits = {
             navy_anti_air_attack_factor = 1000
         }
     }
-    makoto_the_great = {   #我的海军——2026.4.28，18：24，御坂真琴
+    makoto_the_great = {   #我的海军——2026.4.28，18：24，井向真琴
         type = navy
         trait_type = personality_trait
         new_commander_weight = {

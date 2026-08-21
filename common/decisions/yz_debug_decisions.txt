@@ -222,7 +222,7 @@ debug_yuzu_they_will_know_fear = {
             }
         }
     }
-    debug_nuke_some_place = {    #选择一些地方  太好玩啦——御坂真琴 2026.4.6，19：30
+    debug_nuke_some_place = {    #选择一些地方  太好玩啦——井向真琴 2026.4.6，19：30
         icon = GFX_prepare_strike_ic
         state_target = yes
         target_root_trigger = {
@@ -311,7 +311,7 @@ debug_yuzu_they_will_know_fear = {
             #}
         }
     }
-    debug_nuke_some_place_H = {    #选择一些地方，进行热核打击  爆！御坂真琴 2026.4.10，11：48
+    debug_nuke_some_place_H = {    #选择一些地方，进行热核打击  爆！井向真琴 2026.4.10，11：48
         icon = GFX_prepare_strike_ic
         state_target = yes
         target_root_trigger = {
@@ -392,7 +392,7 @@ debug_yuzu_they_will_know_fear = {
                     }
                     save_event_target_as = yuzu_current_leader
                     #PREV = {
-                    #    set_portrait = {              #不要试图理解这些被注释的代码是什么——2026.4.12，御坂真琴，23：39
+                    #    set_portrait = {              #不要试图理解这些被注释的代码是什么——2026.4.12，井向真琴，23：39
                     #        character = PREV
                     #        civilian = { large ="GFX_leader_misaka_makoto" }
                     #    }
@@ -409,7 +409,7 @@ debug_yuzu_they_will_know_fear = {
                     ##        large = "gfx/leader/misaka_makoto.png"
                     ##    }
                     ##}
-                    set_character_name = "御坂真琴"
+                    set_character_name = "井向真琴"
                 }
                 meta_effect = {
                     text = {

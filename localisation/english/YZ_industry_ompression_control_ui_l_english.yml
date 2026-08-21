@@ -23,7 +23,8 @@
  YZ_arma_factories_transfer: "Compress Military Industry into the Warp"
  YZ_dockyard_factories_transfer: "Compress Dockyards into the Warp"
  YZ_indusrty_extra_project: "The Blond \"Guy\"'s Mysterious Alchemy Workshop"
- YZ_indusrty_extra_project_desc: "Warning: if the factories in the mod you're playing are not military/civilian/dockyards, this decision group will cause huge problems"
+ YZ_indusrty_extra_project_desc: " "
+ YZ_indusrty_extra_project_gui_desc: "Warning: if the factories in the mod you're playing are not military/civilian/dockyards, this decision group will cause huge problems"
  learn_ompression_skill_from_ayase: "Learn the Art of Creating Something from Nothing from Ayase"
  learn_ompression_skill_from_ayase_desc: "Ayase set out from the dormitory with three layers of chest padding;\nOne layer was washed off at the pool, and only half a layer was added back;\nBy the time she reached Arihara Satoru's room, 2 layers had been filed away — so how much is left of Ayase's bust?\nThe answer is... the answer is an A cup, an A cup. Why, why? Because... §RMitsukasa Ayase has no bust at all!§!"
  #tooltip

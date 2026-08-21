@@ -181,17 +181,18 @@ on_actions = {
                         max = yz_money_max
                     }
 
-					# 债券月供排在常规收入、部门支出与长期投资之后，并共用本月
-					# 已结算余额，避免第二个 on_monthly 的文件顺序改变逾期结果。
-					# Automation only tunes the active contract immediately before service.
-					yz_bond_run_automation = yes
-					yz_bond_monthly_service = yes
-					yz_bond_monthly_credit_growth = yes
-					# Full automation may open a new contract only after the old one has
-					# completed service and this month's credit update.
-					yz_bond_run_full_automation = yes
-					# 只为玩家记录一次月末债务快照；采样与折线重建共用本入口。
-					yz_bond_record_monthly_snapshot = yes
+                    # 债券月供排在常规收入、部门支出与长期投资之后，并共用本月
+                    # 已结算余额，避免第二个 on_monthly 的文件顺序改变逾期结果。
+                    # Auto Repayment and Full Auto tune the active contract immediately
+                    # before service. Only Full Auto may open a new contract afterward.
+                    yz_bond_run_automation = yes
+                    yz_bond_monthly_service = yes
+                    yz_bond_monthly_credit_growth = yes
+                    # Full automation may open a new contract only after the old one has
+                    # completed service and this month's credit update.
+                    yz_bond_run_full_automation = yes
+                    # 只为玩家记录一次月末债务快照；逐月点图缓存共用本入口。
+                    yz_bond_record_monthly_snapshot = yes
                     set_temp_variable = { yz_money_temp_1 = 0 }
                     add_to_temp_variable = { yz_money_temp_1 = YzMonthlyFund_var }
                     multiply_temp_variable = { yz_money_temp_1 = -10 }
@@ -252,16 +253,19 @@ on_actions = {
             log = "on_deployed_leader_defeated [GetLogThis] [GetLogRoot] [GetLogFrom]"
             # can_be_captured = no does not prevent every defeat path. Only this mod's
             # identity-marked land leaders receive the wounded fallback instead.
-            if = {
-                limit = {
-                    yz_general = yes
-                    NOT = { has_trait = wounded }
-                }
-                add_timed_unit_leader_trait = {
-                    trait = wounded
-                    days = 90
+            ROOT = {
+                if = {
+                    limit = {
+                        yz_general = yes
+                        NOT = { has_trait = wounded }
+                    }
+                    add_timed_unit_leader_trait = {
+                        trait = wounded
+                        days = 90
+                    }
                 }
             }
+
         }
     }
 
@@ -302,14 +306,14 @@ on_actions = {
 
     on_capitulation = {
         effect = {
-			every_country = {
-				limit = {
-					is_ai = no
-					has_country_flag = yz_bond_war_bonds_active
-					has_war_with = ROOT
-				}
-				yz_bond_war_bonds_success = yes
-			}
+            every_country = {
+                limit = {
+                    is_ai = no
+                    has_country_flag = yz_bond_war_bonds_active
+                    has_war_with = ROOT
+                }
+                yz_bond_war_bonds_success = yes
+            }
             if = {
                 limit = {
                     has_variable = love_depth

@@ -217,7 +217,7 @@ defined_text = {
 defined_text = {
 	name = YZ_bond_manager_report
 	text = {
-		trigger = { has_country_flag = yz_bond_full_automation_enabled }
+		trigger = { has_country_flag = yz_bond_automation_enabled }
 		localization_key = yz_bond_manager_report_active
 	}
 	text = { localization_key = yz_bond_manager_report_inactive }
@@ -226,7 +226,7 @@ defined_text = {
 defined_text = {
 	name = YZ_bond_manager_category_status
 	text = {
-		trigger = { has_country_flag = yz_bond_full_automation_enabled }
+		trigger = { has_country_flag = yz_bond_automation_enabled }
 		localization_key = yz_bond_manager_category_active
 	}
 	text = { localization_key = yz_bond_manager_category_inactive }

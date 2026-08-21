@@ -52,6 +52,8 @@
  get_married_elina_owen: "エリナ・オーウェンとの結婚式を準備する"
  get_married_mera_azusa: "布良梓との結婚式を準備する"
  general_married_decision_category: "結婚"
+ general_married_decision_category_desc: " "
+ yz_married_category_gui_desc: "§Y彼女と歩く礼堂§!\n想いの答えは、\nもう決まっている。\n彼女を選び、\n贈り物を用意して、\nその日を迎えよう。\n\n邪魔し合わない\n縁だってある。"
  preparing_for_the_wedding: "結婚式の準備には7日間かかります"
  jiesuo_haogan: "一番好きなキャラクターと結婚するのが待ちきれない"
 ###结婚事件

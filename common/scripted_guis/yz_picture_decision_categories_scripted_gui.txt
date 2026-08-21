@@ -21,11 +21,27 @@ scripted_gui = {
         context_type = decision_category
         window_name = "yz_yoshino_industry_category_window"
     }
+    yz_721_research_category_gui = {
+        context_type = decision_category
+        window_name = "yz_721_research_category_window"
+    }
+    yz_ciallo_category_gui = {
+        context_type = decision_category
+        window_name = "yz_ciallo_category_window"
+    }
+    yz_married_category_gui = {
+        context_type = decision_category
+        window_name = "yz_married_category_window"
+    }
+    yz_military_academy_category_gui = {
+        context_type = decision_category
+        window_name = "yz_military_academy_category_window"
+    }
     yz_world_unity_category_gui = {
         context_type = decision_category
         window_name = "yz_world_unity_category_window"
         properties = {
-            # Reuse the four former category pictures without duplicating assets.
+            # 四张 500x220 覆盖图按当前政府切换；无匹配意识形态时落到中立图。
             yz_world_unity_category_background = {
                 image = "[yz_world_unity_category_image]"
             }
@@ -44,7 +60,7 @@ scripted_gui = {
                 else = {
                     yz_bond_ensure_control_state = yes
 					if = {
-						limit = { has_country_flag = yz_bond_full_automation_enabled }
+						limit = { has_country_flag = yz_bond_automation_enabled }
 						yz_recalculate_monthly_money_ledger = yes
 						yz_bond_full_auto_assess_country = yes
 					}
@@ -52,6 +68,10 @@ scripted_gui = {
                         limit = { check_variable = { yz_bond_history_count < 1 } }
                         yz_bond_record_monthly_snapshot = yes
                     }
+					else = {
+						# Rebuild old-save graph caches only when the player opens this cold path.
+						yz_bond_rebuild_graph_display = yes
+					}
                     set_country_flag = show_yz_bonds_ui
                 }
             }
@@ -76,7 +96,7 @@ scripted_gui = {
             }
 			yz_bond_category_payment_decrease_button_click_enabled = {
 				has_country_flag = yz_bond_active
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = {
 					var = yz_bond_monthly_payment
 					value = var:yz_bond_contract_payment_floor
@@ -85,7 +105,7 @@ scripted_gui = {
 			}
 			yz_bond_category_payment_increase_button_click_enabled = {
 				has_country_flag = yz_bond_active
-				NOT = { has_country_flag = yz_bond_full_automation_enabled }
+				NOT = { has_country_flag = yz_bond_automation_enabled }
 				check_variable = { yz_bond_monthly_payment < 2000 }
 			}
 			yz_bond_category_issue_decrease_button_click_enabled = {

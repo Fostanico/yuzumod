@@ -2086,7 +2086,7 @@ general_married_decision_category = {
 		}
 	}
 	get_married_makoto = {
-		#群主的结婚——2026，3.25，19：51，御坂真琴     #现在不是群主了——2026.5.1，23：37，伊尔诺
+		#群主的结婚——2026，3.25，19：51，井向真琴     #现在不是群主了——2026.5.1，23：37，伊尔诺
 		cost = 1
 		days_remove = 7
 		fire_only_once = yes
@@ -2363,6 +2363,26 @@ general_married_decision_category = {
 			set_country_flag = we_marry_with_hotaru
 			hidden_effect = {
 				play_song = give_me_a_alwyas_lie
+			}
+		}
+	}
+	get_married_ATRI = {
+		cost = 10
+		icon = GFX_ATRI_1
+		days_remove = 7
+		fire_only_once = yes
+		visible = {
+			has_country_flag = have_ATRI
+		}
+		complete_effect = {
+			country_event = tongyong_event.2
+		}
+		remove_effect = {
+			custom_effect_tooltip = get_married
+			country_event = tongyong_event.73719911
+			set_country_flag = we_marry_with_ATRI
+			hidden_effect = {
+				play_song = Dear_Moments
 			}
 		}
 	}

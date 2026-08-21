@@ -32,6 +32,35 @@ YZ_CORE_GROUP = {
         }
     }
 
+    # 要点：机械战警是阿诺模式专属彩蛋。除了同时拥有两位制作组角色，还必须由本国在启动 UI
+    # 按 SD 序列 1001011001 解锁阿诺模式；用普通招募决议凑齐两人不算数。三个条件都是国家级
+    # flag，换国家后本来就都不成立，所以新条件不会额外制造读档陷阱。 [2026-08-17] [伊尔诺/Claude]
+    yz_recruit_robocop = {
+        icon = GFX_yz_recruit_robocop
+        priority = 95
+        cost = 100
+        fire_only_once = yes
+        visible = {
+            is_ai = no
+            has_country_flag = set_YzCoreGroup
+            has_country_flag = this_country_in_nor_mode
+            has_country_flag = have_kakka_nor
+            has_country_flag = have_misaka_makoto
+            NOT = { has_country_flag = have_yz_robocop }
+        }
+        available = {
+            has_country_flag = this_country_in_nor_mode
+            has_country_flag = have_kakka_nor
+            has_country_flag = have_misaka_makoto
+        }
+        complete_effect = {
+            custom_effect_tooltip = yz_recruit_robocop_effect_tt
+            hidden_effect = {
+                yzrecruit_robocop = yes
+            }
+        }
+    }
+
     #YzCoreGroup_Research_Institute = {	#成立研究院(YRI
     #	priority = 100
     #	days_remove = 30
@@ -2550,7 +2579,7 @@ YZ_CORE_GROUP = {
             set_country_flag = have_YCG_CM
         }
     }
-    YCG_FS_misaka_makoto = {	#第一书记  御坂真琴核心圈——2026.4.6，22：19，伊尔诺
+    YCG_FS_misaka_makoto = {	#第一书记  井向真琴核心圈——2026.4.6，22：19，伊尔诺
         days_remove = 0
         priority = 10
         visible = {
@@ -2749,7 +2778,7 @@ YZ_CORE_GROUP = {
             set_country_flag = have_YCG_CM
         }
     }
-    YCG_FS_tsumugi = {	#第一书记  紬妈核心圈——2026.5.9，20：38，御坂真琴
+    YCG_FS_tsumugi = {	#第一书记  紬妈核心圈——2026.5.9，20：38，井向真琴
         days_remove = 0
         priority = 10
         visible = {

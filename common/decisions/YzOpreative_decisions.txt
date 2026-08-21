@@ -80,6 +80,18 @@ YzOpreative_category = {
 			not = { has_country_flag = YzOpreative_choose_country_menu_on }
 		}
 		complete_effect = {
+			# Rebuild the display array when the target menu opens. The operation
+			# flags remain authoritative; this also repairs older saves on demand.
+			clear_array = YzOpreative_target_countries
+			every_country = {
+				limit = { has_country_flag = YzOpreative_have_chosen }
+				ROOT = {
+					add_to_array = {
+						array = YzOpreative_target_countries
+						value = PREV
+					}
+				}
+			}
 			set_country_flag =  YzOpreative_choose_country_menu_on
 		}
 	}
@@ -166,6 +178,10 @@ YzOpreative_category = {
 			FROM  = {
 				clr_country_flag = YzOpreative_have_chosen
 			}
+			remove_from_array = {
+				array = YzOpreative_target_countries
+				value = FROM
+			}
 		}
 	}
 
@@ -186,6 +202,10 @@ YzOpreative_category = {
 			FROM  = {
 				set_country_flag = YzOpreative_have_chosen
 			}
+			add_to_array = {
+				array = YzOpreative_target_countries
+				value = FROM
+			}
 		}
 	}
 
@@ -205,6 +225,10 @@ YzOpreative_category = {
 		complete_effect = {
 			FROM  = {
 				set_country_flag = YzOpreative_have_chosen
+			}
+			add_to_array = {
+				array = YzOpreative_target_countries
+				value = FROM
 			}
 		}
 	}
@@ -228,6 +252,10 @@ YzOpreative_category = {
 		complete_effect = {
 			FROM  = {
 				set_country_flag = YzOpreative_have_chosen
+			}
+			add_to_array = {
+				array = YzOpreative_target_countries
+				value = FROM
 			}
 		}
 	}

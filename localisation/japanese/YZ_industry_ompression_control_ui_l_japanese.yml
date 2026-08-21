@@ -23,7 +23,8 @@
  YZ_arma_factories_transfer: "軍需工業を亜空間に圧縮する"
  YZ_dockyard_factories_transfer: "造船所を亜空間に圧縮する"
  YZ_indusrty_extra_project: "金髪の「兄ちゃん」の謎の錬金工房"
- YZ_indusrty_extra_project_desc: "注意：プレイ中のMODの工場が軍需/民間/造船所ではない場合、この決議グループは重大な問題を引き起こします"
+ YZ_indusrty_extra_project_desc: " "
+ YZ_indusrty_extra_project_gui_desc: "注意：プレイ中のMODの工場が軍需/民間/造船所ではない場合、この決議グループは重大な問題を引き起こします"
  learn_ompression_skill_from_ayase: "あやせから無から有を生み出す技を学ぶ"
  learn_ompression_skill_from_ayase_desc: "あやせは寮の部屋を出発するとき、胸パッドを3枚重ねていた。\nプールで1枚流され、補充できたのは半枚だけ。\n在原暁の部屋に着く頃には2枚削られて、さてあやせの胸は結局いくつになったでしょう？\n答えは……答えはAカップ、Aカップ。なぜかって？なぜなら……§R三司あやせには胸がないからだ！§!"
  #tooltip

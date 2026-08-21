@@ -608,4 +608,14 @@ leader_traits = {
     this_character_has_been_clean = {
 
     }
+    # 机械战警作为政治顾问时负责治安、反间谍与降低占领损耗。
+    yz_robocop_public_security_advisor = {
+        random = no
+        stability_factor = 0.10
+        war_support_factor = 0.05
+        compliance_growth = 0.05
+        resistance_damage_to_garrison = -0.15
+        enemy_operative_detection_chance = 0.15
+        intelligence_agency_defense = 0.10
+    }
 }

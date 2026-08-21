@@ -111,7 +111,7 @@ defined_text = {      #小夜吸血鬼特质
 		localization_key = YZ_aragami_sayo_two_hundred_years_vampire_name_n
 	}
 }
-defined_text = {      #参谋总长头像——2026.5.3，12：26，御坂真琴
+defined_text = {      #参谋总长头像——2026.5.3，12：26，井向真琴
 	name = YZ_miliatry_party_cos_guys
 	text = {
 		trigger = {

@@ -1419,10 +1419,11 @@ yz_bond_extend_contract = {
 
 yz_bond_resolve_initial_maturity = {
 	if = {
-		limit = { has_country_flag = yz_bond_full_automation_enabled }
-		# A professional manager does not empty the treasury merely because the
-		# principal is technically payable. Preserve the operating reserve and use
-		# the contract's single extension when settlement would break it.
+		limit = { has_country_flag = yz_bond_automation_enabled }
+		# Auto Repayment and Full Auto share this path. A professional manager
+		# does not empty the treasury merely because the principal is technically
+		# payable. Preserve the operating reserve and use the contract's single
+		# extension when settlement would break it.
 		set_temp_variable = { yz_bond_maturity_cash_needed = bond_we_need_to_repay }
 		add_to_temp_variable = {
 			var = yz_bond_maturity_cash_needed
@@ -1445,7 +1446,7 @@ yz_bond_resolve_initial_maturity = {
 
 yz_bond_resolve_restructured_maturity = {
 	if = {
-		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		limit = { has_country_flag = yz_bond_automation_enabled }
 		if = {
 			limit = {
 				check_variable = {
@@ -1599,20 +1600,147 @@ yz_bond_refresh_monthly_projection = {
 	}
 }
 
-# Keep the newest observation aligned with the right-hand "current month"
-# label even before the rolling history reaches its full 49 observations.
+# Each graph icon owns its own x, exactly like Millennium Dawn's verified GDP
+# graph, instead of sliding a shared parent container. Slot i sits at x = i * 5
+# inside the 492px point layer, so slot 96 (x = 480) is always the current month
+# and the fixed axis labels never drift. Every second slot is an interpolated
+# midpoint, so a real monthly sample lands on every even slot. Right-alignment
+# for a short history is handled by front-padding the y cache in
+# yz_bond_rebuild_graph_display, which also owns the only history loop.
 yz_bond_refresh_graph_anchor = {
-	set_variable = { yz_bond_graph_start_x = 472 }
+	# The x cache never changes once built, so a save that already has all 97
+	# entries skips this loop on every later monthly maintenance pass.
 	if = {
-		limit = { check_variable = { yz_bond_history_count > 1 } }
-		set_temp_variable = { yz_bond_graph_used_width = yz_bond_history_count }
-		add_to_temp_variable = { yz_bond_graph_used_width = -1 }
-		multiply_temp_variable = { yz_bond_graph_used_width = 8 }
-		subtract_from_variable = {
-			var = yz_bond_graph_start_x
-			value = yz_bond_graph_used_width
+		limit = { NOT = { check_variable = { yz_bond_graph_xs^num = 97 } } }
+		clear_array = yz_bond_graph_xs
+		set_temp_variable = { yz_bond_graph_slot = 0 }
+		while_loop_effect = {
+			limit = { check_variable = { yz_bond_graph_slot < 97 } }
+			# Unused slots still keep a valid in-range x; their y = 200 is what
+			# pushes them out of the clipped point layer.
+			set_temp_variable = { yz_bond_graph_point_x = yz_bond_graph_slot }
+			multiply_temp_variable = { yz_bond_graph_point_x = 5 }
+			add_to_array = {
+				array = yz_bond_graph_xs
+				value = yz_bond_graph_point_x
+			}
+			add_to_temp_variable = { yz_bond_graph_slot = 1 }
 		}
 	}
+	# Retire the former parent-offset cache; old saves may still carry it.
+	set_variable = { yz_bond_graph_start_x = 0 }
+}
+
+# Rebuild the lightweight chart cache from saved monthly history. The 49 stored
+# monthly settlements stay the only source of truth; each neighbouring pair also
+# contributes one interpolated midpoint, so the window plots 97 markers and the
+# trend reads as a line instead of widely spaced dots. Reusing the existing
+# offsets array lets old saves repair themselves when the detail window opens.
+# Short history is right-aligned by padding the FRONT of the offsets array with
+# the off-screen y = 200, so the newest sample always lands in the last slot
+# under the fixed "current month" label and no dot piles up at the left edge.
+yz_bond_rebuild_graph_display = {
+	clear_array = yz_bond_graph_offsets
+	# Retire the former line-slope cache without renaming persistent save state.
+	clear_array = yz_bond_graph_slopes
+	# Leading empty slots for a history shorter than the 49-month window.
+	# n samples occupy 2n - 1 slots once midpoints are inserted.
+	set_temp_variable = { yz_bond_graph_pad = 97 }
+	if = {
+		limit = { check_variable = { yz_bond_history_count > 0 } }
+		set_temp_variable = { yz_bond_graph_used = yz_bond_history_count }
+		multiply_temp_variable = { yz_bond_graph_used = 2 }
+		subtract_from_temp_variable = { yz_bond_graph_used = 1 }
+		subtract_from_temp_variable = {
+			var = yz_bond_graph_pad
+			value = yz_bond_graph_used
+		}
+	}
+	clamp_temp_variable = { var = yz_bond_graph_pad min = 0 max = 97 }
+	while_loop_effect = {
+		limit = { check_variable = { yz_bond_graph_pad > 0 } }
+		add_to_array = { array = yz_bond_graph_offsets value = 200 }
+		add_to_temp_variable = { yz_bond_graph_pad = -1 }
+	}
+	if = {
+		limit = { check_variable = { yz_bond_history_count > 0 } }
+		find_highest_in_array = {
+			array = yz_bond_debt_history
+			value = yz_bond_graph_maximum
+			index = yz_bond_graph_maximum_index
+		}
+		if = {
+			limit = { check_variable = { yz_bond_graph_maximum < 100 } }
+			set_variable = { yz_bond_graph_maximum = 100 }
+		}
+		set_variable = { yz_bond_graph_100 = yz_bond_graph_maximum }
+		set_variable = { yz_bond_graph_75 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_75 = 0.75 }
+		set_variable = { yz_bond_graph_50 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_50 = 0.5 }
+		set_variable = { yz_bond_graph_25 = yz_bond_graph_maximum }
+		multiply_variable = { yz_bond_graph_25 = 0.25 }
+		round_variable = yz_bond_graph_100
+		round_variable = yz_bond_graph_75
+		round_variable = yz_bond_graph_50
+		round_variable = yz_bond_graph_25
+
+		set_temp_variable = { yz_bond_graph_previous = 0 }
+		for_each_loop = {
+			array = yz_bond_debt_history
+			index = yz_bond_history_index
+			set_temp_variable = {
+				yz_bond_graph_y_position = yz_bond_debt_history^yz_bond_history_index
+			}
+			divide_temp_variable = {
+				var = yz_bond_graph_y_position
+				value = yz_bond_graph_maximum
+			}
+			# y 4-104 puts each 8px marker centre on its axis label, and keeps the
+			# baseline marker inside the 112px clipped layer.
+			multiply_temp_variable = { yz_bond_graph_y_position = 100 }
+			round_temp_variable = yz_bond_graph_y_position
+			set_temp_variable = { yz_bond_graph_offset = 104 }
+			subtract_from_temp_variable = {
+				var = yz_bond_graph_offset
+				value = yz_bond_graph_y_position
+			}
+			# Halfway marker towards the previous settlement. Purely visual density:
+			# it never enters yz_bond_debt_history, so the saved data stays monthly.
+			if = {
+				limit = { check_variable = { yz_bond_history_index > 0 } }
+				set_temp_variable = { yz_bond_graph_mid = yz_bond_graph_previous }
+				add_to_temp_variable = {
+					var = yz_bond_graph_mid
+					value = yz_bond_graph_offset
+				}
+				divide_temp_variable = { yz_bond_graph_mid = 2 }
+				round_temp_variable = yz_bond_graph_mid
+				add_to_array = {
+					array = yz_bond_graph_offsets
+					value = yz_bond_graph_mid
+				}
+			}
+			add_to_array = {
+				array = yz_bond_graph_offsets
+				value = yz_bond_graph_offset
+			}
+			set_temp_variable = {
+				var = yz_bond_graph_previous
+				value = yz_bond_graph_offset
+			}
+		}
+	}
+	# All 97 fixed GUI icons need a valid index every frame. Any remaining slot is
+	# parked at y = 200, well below the 112px clipped layer, so a partial history
+	# shows no phantom dot.
+	resize_array = {
+		array = yz_bond_graph_offsets
+		value = 200
+		size = 97
+	}
+	yz_bond_refresh_graph_anchor = yes
+	add_to_variable = { yz_bond_graph_dirty = 1 }
 }
 
 yz_bond_decrease_planned_payment = {
@@ -1703,13 +1831,6 @@ yz_bond_toggle_automation = {
 	}
 	yz_recalculate_monthly_money_ledger = yes
 	yz_bond_run_automation = yes
-	if = {
-		limit = {
-			has_country_flag = yz_bond_full_automation_enabled
-			NOT = { has_country_flag = yz_bond_active }
-		}
-		yz_bond_full_auto_assess_country = yes
-	}
 	add_to_variable = { yz_bond_graph_dirty = 1 }
 }
 
@@ -1723,7 +1844,7 @@ yz_bond_cycle_auto_issue_preference = {
 		set_variable = { yz_bond_auto_issue_preference = 0 }
 	}
 	if = {
-		limit = { has_country_flag = yz_bond_full_automation_enabled }
+		limit = { has_country_flag = yz_bond_automation_enabled }
 		yz_bond_full_auto_assess_country = yes
 	}
 	add_to_variable = { yz_bond_graph_dirty = 1 }
@@ -1801,7 +1922,9 @@ yz_bond_full_auto_assess_country = {
 			limit = { has_country_flag = yz_bond_active }
 			set_variable = { yz_bond_manager_posture = 5 }
 		}
-		else = { set_variable = { yz_bond_manager_posture = 1 } }
+		# Without a contract, conservative still means hold cash, not borrow a
+		# thicker reserve that would immediately justify a new issue.
+		else = { set_variable = { yz_bond_manager_posture = 2 } }
 	}
 	else_if = {
 		limit = {
@@ -1877,17 +2000,40 @@ yz_bond_full_auto_assess_country = {
 		add_to_variable = { yz_bond_manager_liquidity_target = 2500 }
 	}
 	else_if = {
-		limit = { check_variable = { yz_bond_manager_posture = 4 } }
+		limit = {
+			OR = {
+				check_variable = { yz_bond_manager_posture = 4 }
+				has_war = yes
+			}
+		}
 		add_to_variable = { yz_bond_manager_liquidity_target = 4000 }
 	}
 	round_variable = yz_bond_manager_liquidity_target
 	clamp_variable = { var = yz_bond_manager_liquidity_target min = 2500 max = yz_money_max }
 }
 
-# Full Auto actively manages the current contract. It protects the operating
-# reserve, accelerates principal when debt is heavy, repairs credit only when
-# cash is comfortable, and uses the contractual holiday before a preventable
-# missed payment. Standard Auto Repayment remains the manual-parameter mode.
+# Shared coupon math for Auto Repayment and Full Auto. Temps only; callers
+# must already have set the actual rate and current principal.
+yz_bond_manager_recalculate_service_temps = {
+	set_temp_variable = { yz_bond_manager_coupon = bond_we_need_to_repay }
+	multiply_temp_variable = {
+		var = yz_bond_manager_coupon
+		value = yz_bond_actual_rate
+	}
+	divide_temp_variable = { yz_bond_manager_coupon = 1200 }
+	round_temp_variable = yz_bond_manager_coupon
+	set_temp_variable = { yz_bond_manager_required_minimum = yz_bond_contract_payment_floor }
+	add_to_temp_variable = {
+		var = yz_bond_manager_required_minimum
+		value = yz_bond_manager_coupon
+	}
+}
+
+# Auto Repayment and Full Auto share this contract manager. It protects the
+# operating reserve, accelerates principal when debt is heavy or maturity is
+# close, repairs credit only when cash still covers the new coupon, and uses
+# the contractual holiday before a preventable missed payment. Full Auto is
+# the only mode that later opens a new contract.
 yz_bond_full_auto_manage_active_contract = {
 	yz_bond_full_auto_assess_country = yes
 	yz_bond_refresh_issue_preview = yes
@@ -1916,6 +2062,7 @@ yz_bond_full_auto_manage_active_contract = {
 		var = yz_bond_manager_sale_headroom
 		value = yz_bond_manager_sale_proceeds
 	}
+	yz_bond_manager_recalculate_service_temps = yes
 	if = {
 		limit = {
 			check_variable = { yz_bond_credit_score < 50 }
@@ -1926,22 +2073,35 @@ yz_bond_full_auto_manage_active_contract = {
 				compare = greater_than
 			}
 		}
-		add_to_variable = { yz_bond_actual_rate = 1 }
-		clamp_variable = { var = yz_bond_actual_rate min = 0 max = 20 }
+		set_temp_variable = { yz_bond_manager_repair_coupon = bond_we_need_to_repay }
+		set_temp_variable = { yz_bond_manager_repair_rate = yz_bond_actual_rate }
+		add_to_temp_variable = { yz_bond_manager_repair_rate = 1 }
+		clamp_temp_variable = { var = yz_bond_manager_repair_rate min = 0 max = 20 }
+		multiply_temp_variable = {
+			var = yz_bond_manager_repair_coupon
+			value = yz_bond_manager_repair_rate
+		}
+		divide_temp_variable = { yz_bond_manager_repair_coupon = 1200 }
+		round_temp_variable = yz_bond_manager_repair_coupon
+		set_temp_variable = { yz_bond_manager_repair_required = yz_bond_contract_payment_floor }
+		add_to_temp_variable = {
+			var = yz_bond_manager_repair_required
+			value = yz_bond_manager_repair_coupon
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = yz_money
+					value = var:yz_bond_manager_repair_required
+					compare = greater_than
+				}
+			}
+			add_to_variable = { yz_bond_actual_rate = 1 }
+			clamp_variable = { var = yz_bond_actual_rate min = 0 max = 20 }
+			yz_bond_manager_recalculate_service_temps = yes
+		}
 	}
 
-	set_temp_variable = { yz_bond_manager_coupon = bond_we_need_to_repay }
-	multiply_temp_variable = {
-		var = yz_bond_manager_coupon
-		value = yz_bond_actual_rate
-	}
-	divide_temp_variable = { yz_bond_manager_coupon = 1200 }
-	round_temp_variable = yz_bond_manager_coupon
-	set_temp_variable = { yz_bond_manager_required_minimum = yz_bond_contract_payment_floor }
-	add_to_temp_variable = {
-		var = yz_bond_manager_required_minimum
-		value = yz_bond_manager_coupon
-	}
 	if = {
 		limit = {
 			check_variable = {
@@ -1981,6 +2141,7 @@ yz_bond_full_auto_manage_active_contract = {
 			}
 			yz_bond_additional_sale = yes
 			set_variable = { yz_bond_manager_last_action = 8 }
+			yz_bond_manager_recalculate_service_temps = yes
 		}
 		set_variable = {
 			var = yz_bond_monthly_payment
@@ -2001,23 +2162,46 @@ yz_bond_full_auto_manage_active_contract = {
 		}
 		if = {
 			limit = { check_variable = { yz_bond_manager_optional_capacity > 0 } }
+			set_temp_variable = { yz_bond_manager_repay_share = 0.35 }
 			if = {
 				limit = { check_variable = { yz_bond_manager_posture = 1 } }
-				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.10 }
+				set_temp_variable = { yz_bond_manager_repay_share = 0.10 }
 			}
 			else_if = {
 				limit = { check_variable = { yz_bond_manager_posture = 4 } }
-				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.20 }
+				set_temp_variable = { yz_bond_manager_repay_share = 0.20 }
 			}
 			else_if = {
 				limit = { check_variable = { yz_bond_manager_posture = 5 } }
-				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.60 }
+				set_temp_variable = { yz_bond_manager_repay_share = 0.60 }
 			}
 			else_if = {
 				limit = { check_variable = { yz_bond_manager_posture = 3 } }
-				multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.25 }
+				set_temp_variable = { yz_bond_manager_repay_share = 0.25 }
 			}
-			else = { multiply_temp_variable = { yz_bond_manager_optional_capacity = 0.35 } }
+			# Near maturity, spend more surplus to avoid a 15% extension, but
+			# never override liquidity defence.
+			if = {
+				limit = {
+					NOT = { check_variable = { yz_bond_manager_posture = 1 } }
+					OR = {
+						AND = {
+							has_active_mission = yz_bond_restructured_maturity_cycle
+							check_variable = { days_mission_timeout@yz_bond_restructured_maturity_cycle < 60 }
+						}
+						AND = {
+							has_active_mission = yz_bond_maturity_cycle
+							check_variable = { days_mission_timeout@yz_bond_maturity_cycle < 90 }
+						}
+					}
+					check_variable = { yz_bond_manager_repay_share < 0.70 }
+				}
+				set_temp_variable = { yz_bond_manager_repay_share = 0.70 }
+			}
+			multiply_temp_variable = {
+				var = yz_bond_manager_optional_capacity
+				value = yz_bond_manager_repay_share
+			}
 			round_temp_variable = yz_bond_manager_optional_capacity
 			add_to_variable = {
 				var = yz_bond_monthly_payment
@@ -2027,7 +2211,6 @@ yz_bond_full_auto_manage_active_contract = {
 		clamp_variable = { var = yz_bond_monthly_payment min = 0 max = 2000 }
 		if = {
 			limit = {
-				NOT = { check_variable = { yz_bond_manager_last_action = 8 } }
 				check_variable = {
 					var = yz_bond_monthly_payment
 					value = var:bond_we_need_to_repay
@@ -2055,41 +2238,20 @@ yz_bond_full_auto_manage_active_contract = {
 	add_to_variable = { yz_bond_graph_dirty = 1 }
 }
 
-# Automatic repayment locks the actual coupon to the promise while leaving the
-# low-level plan under player control. Full Auto instead delegates those values
-# to the manager above.
+# Auto Repayment and Full Auto both run the contract manager. Only Full Auto
+# later opens a new issue. Manual mode never enters this effect.
 yz_bond_run_automation = {
 	if = {
 		limit = {
 			has_country_flag = yz_bond_active
-			has_country_flag = yz_bond_full_automation_enabled
+			has_country_flag = yz_bond_automation_enabled
 		}
 		yz_bond_full_auto_manage_active_contract = yes
 	}
 	else_if = {
-		limit = {
-			has_country_flag = yz_bond_active
-			has_country_flag = yz_bond_automation_enabled
-		}
-		set_variable = {
-			var = yz_bond_actual_rate
-			value = yz_bond_contract_promised_rate
-		}
-		if = {
-			limit = {
-				check_variable = {
-					var = yz_bond_monthly_payment
-					value = var:yz_bond_contract_payment_floor
-					compare = less_than
-				}
-			}
-			set_variable = {
-				var = yz_bond_monthly_payment
-				value = yz_bond_contract_payment_floor
-			}
-		}
-		clamp_variable = { var = yz_bond_monthly_payment min = 0 max = 2000 }
-		yz_bond_refresh_monthly_projection = yes
+		limit = { has_country_flag = yz_bond_automation_enabled }
+		yz_bond_full_auto_assess_country = yes
+		set_variable = { yz_bond_manager_last_action = 0 }
 	}
 }
 
@@ -2139,7 +2301,7 @@ yz_bond_run_full_automation = {
 		}
 		else_if = {
 			limit = {
-				check_variable = { yz_bond_manager_posture = 4 }
+				has_war = yes
 				check_variable = {
 					var = yz_money
 					value = var:yz_bond_manager_liquidity_target
@@ -2211,11 +2373,11 @@ yz_bond_run_full_automation = {
 				}
 			}
 			# Product follows current conditions, not a fixed preference. Wartime
-			# liquidity comes first; healthy expansion receives development capital;
+			# financing uses the war contract even if distress overrode the
+			# wartime posture; healthy expansion receives development capital;
 			# every other eligible case falls back to the lower-cost steady contract.
 			if = {
 				limit = {
-					check_variable = { yz_bond_manager_posture = 4 }
 					has_war = yes
 					has_political_power > 74
 					check_variable = { var = yz_bond_credit_score value = 30 compare = greater_than_or_equals }
@@ -2643,8 +2805,9 @@ yz_bond_monthly_credit_growth = {
 	}
 }
 
-# Store at most 49 monthly debt observations, producing 48 line segments. This
-# effect is called only for the player from the existing fiscal on_monthly path.
+# Store at most 49 monthly debt observations, oldest first. Every retained month
+# gets its own plotted point; the display cache is rebuilt here and when the
+# player opens the detail window, never on a periodic scan.
 yz_bond_record_monthly_snapshot = {
 	if = {
 		limit = { has_country_flag = yz_bond_system_initialized }
@@ -2655,69 +2818,6 @@ yz_bond_record_monthly_snapshot = {
 			remove_from_array = { array = yz_bond_debt_history index = 0 }
 			set_variable = { yz_bond_history_count = 49 }
 		}
-		yz_bond_refresh_graph_anchor = yes
-
-		find_highest_in_array = {
-			array = yz_bond_debt_history
-			value = yz_bond_graph_maximum
-			index = yz_bond_graph_maximum_index
-		}
-		if = {
-			limit = { check_variable = { yz_bond_graph_maximum < 100 } }
-			set_variable = { yz_bond_graph_maximum = 100 }
-		}
-		set_variable = { yz_bond_graph_100 = yz_bond_graph_maximum }
-		set_variable = { yz_bond_graph_75 = yz_bond_graph_maximum }
-		multiply_variable = { yz_bond_graph_75 = 0.75 }
-		set_variable = { yz_bond_graph_50 = yz_bond_graph_maximum }
-		multiply_variable = { yz_bond_graph_50 = 0.5 }
-		set_variable = { yz_bond_graph_25 = yz_bond_graph_maximum }
-		multiply_variable = { yz_bond_graph_25 = 0.25 }
-		round_variable = yz_bond_graph_100
-		round_variable = yz_bond_graph_75
-		round_variable = yz_bond_graph_50
-		round_variable = yz_bond_graph_25
-
-		clear_array = yz_bond_graph_offsets
-		clear_array = yz_bond_graph_slopes
-		for_each_loop = {
-			array = yz_bond_debt_history
-			index = yz_bond_history_index
-			set_variable = {
-				var = yz_bond_graph_y_position
-				value = yz_bond_debt_history^yz_bond_history_index
-			}
-			divide_variable = {
-				var = yz_bond_graph_y_position
-				value = yz_bond_graph_maximum
-			}
-			multiply_variable = { yz_bond_graph_y_position = 100 }
-			round_variable = yz_bond_graph_y_position
-			if = {
-				limit = { check_variable = { yz_bond_history_index > 0 } }
-				set_temp_variable = { yz_bond_graph_offset = yz_bond_graph_last_y_position }
-				multiply_temp_variable = { yz_bond_graph_offset = -1 }
-				add_to_array = {
-					array = yz_bond_graph_offsets
-					value = yz_bond_graph_offset
-				}
-				set_temp_variable = { yz_bond_graph_slope = yz_bond_graph_y_position }
-				subtract_from_temp_variable = {
-					var = yz_bond_graph_slope
-					value = yz_bond_graph_last_y_position
-				}
-				divide_temp_variable = { yz_bond_graph_slope = 2 }
-				add_to_temp_variable = { yz_bond_graph_slope = 50 }
-				add_to_array = {
-					array = yz_bond_graph_slopes
-					value = yz_bond_graph_slope
-				}
-			}
-			set_variable = {
-				var = yz_bond_graph_last_y_position
-				value = yz_bond_graph_y_position
-			}
-		}
-		add_to_variable = { yz_bond_graph_dirty = 1 }
+		yz_bond_rebuild_graph_display = yes
 	}
 }
